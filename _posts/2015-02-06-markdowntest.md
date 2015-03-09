@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 第一篇文章
+title: 测试
 ---
 # {{ page.title }}
 
-我的第一篇文章
+测试
 
 date: {{ page.date | date_to_string }}
 
@@ -12,3 +12,5 @@ date: {{ page.date | date_to_string }}
 
 ![](http://m.yea.im/di/1ZMX/08.jpg)
 [fdfdf](http://codepen.io/bakerz/full/jEayZB)
+
+<a href="dfd" target="_blank">dsd</a>
