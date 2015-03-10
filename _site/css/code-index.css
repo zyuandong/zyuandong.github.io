@@ -2,12 +2,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #fffbe8;
-}
-#header {	
-	height: 50px;
-	width: 100%;
-	background-color: #333333;
+	background-color: #f1f2f2;
 }
 .word-box {
     width: 300px;
@@ -71,7 +66,40 @@ body {
     background-color: #ccc;
 }
 .login-register {
-	width: 250px;
-	height: 600px;
-	box-shadow: 0 0 1px #000;
+    max-width: 300px;
+    height: 350px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 1px #6c6c6c;
+}
+.form-login {
+    display: none;
+}
+.register,
+.login {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+.active {
+    background-color: #ffffff;
+}
+.am-input-group {
+    margin-top: 20px;
+}
+.am-input-group-label {
+    width: 49px;
+}
+.input-group {
+    margin-top: 10px;
+}
+.input-group input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin: 8px 0 0 20px; 
+}
+.btn {
+    margin-top: 20px;
 }
