@@ -13,7 +13,7 @@ body {
     border-radius: 50%;
     padding: 15px 25px 25px;
     width: 210px;
-    background-color: #093552;
+    background-color: #0e90d2;
     position: absolute;
     margin: 0 0 0 45px;
     color: #fff;
@@ -21,7 +21,7 @@ body {
 .tri {
     width: 25px;
     height: 25px;
-    background-color: #093552;
+    background-color: #0e90d2;
     position: absolute;
     bottom: -5px;
     left: 60px;
@@ -31,7 +31,7 @@ body {
     -ms-transform: rotate(60deg);
 }
 .result-content {
-    background-color: #093552;
+    background-color: #0e90d2;
     border: 10px solid #fff;
     border-radius: 5%;
     color: #fff;
