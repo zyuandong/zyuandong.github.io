@@ -1,2 +1,2 @@
 baseurl: /simpleBlog
-markdown: rdiscount
+markdown: kramdown
