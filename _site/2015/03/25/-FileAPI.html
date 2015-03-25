@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="/simpleBlog/js/jquery.js"></script>
+    <script type="text/javascript" src="/simpleBlog/js/amazeui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/simpleBlog/css/amazeui.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="/simpleBlog/css/default.css"></link>
+    <link rel="stylesheet" type="text/css" href="/simpleBlog/css/font-awesome.min.css"></link>
+    <title>HTML5 File API</title>
+</head>
+<body>
+<!--<div id="loading"></div>-->
+
+<h1 id="html5-file-api">HTML5 File API</h1>
+
+<p><code>
+&lt;input type='file' id="file"&gt;
+&lt;input type="button" value="读取图像" onclick="readAsDataURL()"&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+</code></p>
+
+<p>```</p>
+
+<p>var result = document.getElementById(‘result’);
+var file = document.getElementById(‘file’);
+if(typeof FileReader == ‘undefined’){
+	result.innerHTML = “&lt;p&gt;sorry&lt;/p&gt;”;
+}</p>
+
+<p>function readAsDataURL(){
+	var file = document.getElementById(‘file’).files[0];</p>
+
+<pre><code>var reader = new FileReader();
+reader.readAsDataURL(file);
+reader.onload = function(e){
+	var result = document.getElementById('result');
+	result.innerHTML = '&lt;img src="'+this.result+'"/&gt;';
+}; }
+</code></pre>
+
+<p>```</p>
+
+<p><code>
+$('#file').change(function(){
+	var file = $(this).get(0).files[0];
+	var reader = new FileReader();
+	reader.readAsDataURL(file);
+	reader.onload = function(){
+		$('#result').append('&lt;img src="'+this.result+'"&gt;');
+	};
+});
+</code></p>
+
+
+</body>
+</html>
