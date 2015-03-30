@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 测试
+title: markdown语法
 ---
 # {{ page.title }}
 
