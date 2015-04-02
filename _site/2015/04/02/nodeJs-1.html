@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/simpleBlog/css/amazeui.min.css"></link>
     <link rel="stylesheet" type="text/css" href="/simpleBlog/css/default.css"></link>
     <link rel="stylesheet" type="text/css" href="/simpleBlog/css/font-awesome.min.css"></link>
-    <title>资源加载顺序小结</title>
+    <title>nodejs <1></title>
 </head>
 <body>
 <!--<div id="loading"></div>-->
@@ -60,32 +60,28 @@
 		</div>
 	</div>
 </header>
-<h1 id="js">常用加载js方法及区别</h1>
+<h1 id="nodejs">node.js</h1>
 
-<ul>
-  <li><code> &lt;body onload="functionName()"&gt;...&lt;/body&gt;</code></li>
-  <li><code> $(document).ready(function(){...}); </code></li>
-  <li><code> $(function(){...}); </code></li>
-  <li><code> $(window).load(function(){...}); </code></li>
-  <li><code> window.load = function(){...} </code></li>
-  <li><code> document.body.load = function(){...} </code></li>
-</ul>
+<p>node.js是基于Chrome JavaScript运行时建立的一个平台，实际上是对Google Chrome V8引擎进行了封装，主要用于创建快速的、可扩建的网络应用。node.js采用时间驱动和费祖赛I/O模型，使其变得轻量和高效，非常适合构建运行在分布式设备的数据密集型的实时应用。</p>
 
-<p>在chrome浏览器中，Jquery中的$(document).ready(function(){});事件将会在浏览器加载完文本后立即执行，此时，图片尚未加载。因此，在此事件中将无法获正确获取图片的高度和宽度值。但是在ie，firefox流览器中，在些事件中可以获取图片的高度和宽度值 。</p>
+<h1 id="repl">交互环境：REPL</h1>
 
-<p>为了兼容这两种浏览器，可以使用$(window).load(function(evt){});事件来代替。这样将可正确获得图片的宽度和高度值。</p>
+<p>node.js提供了一个交互式运行环境，通过这个环境，可以立即执行JavaScript代码。</p>
 
-<h1 id="section">浏览器之间的区别</h1>
+<h1 id="nodejs-1">node.js模块和包</h1>
 
-<h1 id="section-1">相关链接</h1>
+<h2 id="section">1. 模块</h2>
 
-<p><code> http://www.cnblogs.com/itprogrammer/archive/2010/10/22/1858131.html </code></p>
+<p>node.js提供了很多模块，这些模块分别实现了一种功能，如操作文件的模块fs，构建http服务的http等，
+* 每个模块都是一个JavaScript文件，当然也可以自己编写模块。 *</p>
 
-<p><code> http://www.poluoluo.com/jzxy/201405/275920.html </code></p>
+<h2 id="section-1">2. 包</h2>
 
-<p><code> http://zhangzhaoaaa.iteye.com/blog/2124690 </code></p>
+<p>包可以将多个具有依赖关系的模块组织在一起，封装多个模块，以方便管理。node.js采用了CommonJS规范，根据CommonJS规范规定，一个JavaScript文件就是一个模块，而包是一个文件夹，包内必须包含一个JSON文件，命名为package.json。一般情况下，包内的bin文件夹存放二进制文件，包内的lib文件夹存放JavaScript文件，包内的doc文件夹存放文档，包内的test文件夹存放JavaScript文件，包内的doc文件夹存放文档，包内的test文件夹存放单元测试。</p>
 
-<h1 id="section-2">待总结。。。。</h1>
+<h1 id="npm">npm包管理工具</h1>
+
+<p>npm是node.js的包管理工具，npm定义了包的依赖关系标准，我们使用npm主要用来下载第三方包和管理本地下载的第三方包。</p>
 
 
 </body>
