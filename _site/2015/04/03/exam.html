@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="/simpleBlog/js/jquery.js"></script>
+    <script type="text/javascript" src="/simpleBlog/js/amazeui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/simpleBlog/css/amazeui.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="/simpleBlog/css/default.css"></link>
+    <link rel="stylesheet" type="text/css" href="/simpleBlog/css/font-awesome.min.css"></link>
+    <title>题目</title>
+</head>
+<body>
+<!--<div id="loading"></div>-->
+
+<h3 id="indexof">1.一个数组，输入数组元素，可以得到对应下标，若没有检索到字符，则返回-1，即实现indexOf()方法。</h3>
+
+<blockquote>
+  <blockquote>
+    <p>string.indexOf(str,start); </p>
+  </blockquote>
+</blockquote>
+
+<ul>
+  <li>str：要检索的字符串。</li>
+  <li>start：可选，检索的起始下标位置。氛围0~length-1。</li>
+</ul>
+
+<p>代码：</p>
+
+<pre><code class="language-ruby">class ProductsController &lt; ApplicationController
+  def index
+    @products = Product.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json{ render json:@products }
+    end
+  end
+end
+</code></pre>
+
+<pre><code>var arr = [12,43,5,67,323,224,434,434];
+
+Array.prototype.myindexOf = function(num,start){
+  if(!start) start = 0;
+  var len = this.length;
+  for(var i = start; i &lt; len; i++){
+    if(this[i] == num)
+      return i;
+  }
+  if(i == len)
+    return -1;
+};
+
+console.log(arr.myindexOf(434)); //6
+</code></pre>
+
+<h4 id="stringindexof">扩展：实现String对象的indexOf()方法</h4>
+
+<h3 id="ad2ff3ad2ff3adadffffff">2. 字符串解码，以字母与数字混排的字符串，如“ad2ff3”，编写算法，实现，将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列，“ad2ff3”解码后的便为“adadffffff”。</h3>
+
+
+
+</body>
+</html>
