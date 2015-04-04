@@ -28,18 +28,6 @@
 
 <p>代码：</p>
 
-<pre><code class="language-ruby">class ProductsController &lt; ApplicationController
-  def index
-    @products = Product.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json{ render json:@products }
-    end
-  end
-end
-</code></pre>
-
 <pre><code>var arr = [12,43,5,67,323,224,434,434];
 
 Array.prototype.myindexOf = function(num,start){
@@ -53,12 +41,76 @@ Array.prototype.myindexOf = function(num,start){
     return -1;
 };
 
-console.log(arr.myindexOf(434)); //6
+console.log(arr.myindexOf(434)); // &gt;&gt; 6
 </code></pre>
 
 <h4 id="stringindexof">扩展：实现String对象的indexOf()方法</h4>
 
+<pre><code>
+</code></pre>
+
 <h3 id="ad2ff3ad2ff3adadffffff">2. 字符串解码，以字母与数字混排的字符串，如“ad2ff3”，编写算法，实现，将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列，“ad2ff3”解码后的便为“adadffffff”。</h3>
+
+<p>代码：</p>
+
+<pre><code>var str = "1faAdB2ff3";
+
+function getCode(str){
+  var num_arr = str.match(/\d+/g);
+  var str_arr = str.match(/[A-z]+/g);
+  var str_res = "";
+  if(str.indexOf(num_arr[0]) === 0){
+    //按题意是否需要删除以数字开头的部分
+    for(var i = 0,len = num_arr.length; i &lt; len-1; i++){
+      num_arr[i] = num_arr[i+1];
+    }
+    num_arr.pop();
+  }
+  for(var j = 0, str_len = str_arr.length; j &lt; str_len; j++){
+    if(num_arr[j]){
+      for(var n = 1; n &lt;= num_arr[j]; n++){
+        str_res += str_arr[j];
+      }
+    }else{
+      str_res += str_arr[j];
+    }
+  }
+  return str_res;
+}
+
+console.log(getCode(str));  // &gt;&gt; faAdBfaAdBffffff
+</code></pre>
+
+<h3 id="testtxttxt">3. 设计算法，获取文件名，如“test.txt”的后缀，即“.txt”。</h3>
+
+<p>代码：</p>
+
+<pre><code>var str = "test.txt";
+
+function getFileType(str){
+  var index = str.lastIndexOf(".");
+  var str_res = str.substr(index);
+  return str_res;
+}
+
+console.log(getFileType(str)); // &gt;&gt; .txt
+</code></pre>
+
+<h4 id="section">扩展</h4>
+
+<ul>
+  <li>
+    <p><code>slice(start,end)</code> - 按下标取子字符串<code>[start,end)</code>，参数都可以为负数，但必须保证<code>start</code>对应的下标位置在<code>end</code>对应下标位置的左边，否则，返回“”。</p>
+  </li>
+  <li>
+    <p><code>substr(start,length)</code> - 按长度取子字符串，<code>start</code>可为负数。</p>
+  </li>
+  <li>
+    <p><code>substring(start,end)</code> - 按下标取子字符串<code>[start,end)</code>，参数为负数便会转换为0，若<code>start &gt; end</code>则先调换参数位置，若<code>start = end</code>，返回“”。</p>
+  </li>
+</ul>
+
+<h3 id="jsonhtmljson">4. 遍历json数据，并将其包裹上HTML标签，json数据和遍历后的结果如下：</h3>
 
 
 
