@@ -110,8 +110,115 @@ console.log(getFileType(str)); // &gt;&gt; .txt
   </li>
 </ul>
 
-<h3 id="jsonhtmljson">4. 遍历json数据，并将其包裹上HTML标签，json数据和遍历后的结果如下：</h3>
+<h3 id="html">4. 遍历数组数据，并将其包裹上HTML标签，数组数据和遍历后的结果如下：</h3>
+<p>数组：<code>var item = [{'children':[{'name':'xx','age':12},{'child':[{'name':'gg','age':11}]}]}];</code></p>
 
+<p>遍历后结果：</p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;name&lt;/li&gt;
+  &lt;li&gt;age&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;name&lt;/li&gt;
+      &lt;li&gt;age&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>代码：</p>
+
+<pre><code>var item = [{'children':[{'name':'xx','age':12},{'child':[{'name':'gg','age':11}]}]}];
+
+function getJsonHTML(item){
+  var str = "";
+  for(var i = 0,len1 = item.length; i &lt; len1; i ++){
+    if(item[i].children){
+      for(var j = 0,len2 = item[i].children.length; j &lt; len2; j++){
+        str += '&lt;ul&gt;';
+        if(item[i].children[j].child){
+          str += '&lt;li&gt;&lt;ul&gt;';
+          for(var k = 0,len3 = item[i].children[j].child.length; k &lt; len3; k++){
+            str += '&lt;li&gt;' + item[i].children[j].child[k].name + '&lt;/li&gt;'+
+                   '&lt;li&gt;' + item[i].children[j].child[k].age + '&lt;/li&gt;';
+          }
+          str += '&lt;/ul&gt;&lt;/li&gt;';
+        }else{
+          str += '&lt;li&gt;' + item[i].children[j].name + '&lt;/li&gt;'+
+                 '&lt;li&gt;' + item[i].children[j].age + '&lt;/li&gt;';
+        }
+        str += '&lt;/ul&gt;';
+      }
+    }
+  }
+  return str;
+}
+
+console.log(getJsonHTML(item));
+</code></pre>
+
+<h3 id="js3hello5643hello3hello">5. 取出js数组中重复的元素，如[3,’hello’,5,6,4,3,’hello’]，取出[3,’hello’]</h3>
+
+<p>代码一：</p>
+
+<pre><code>var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
+Array.prototype.duplicate=function() {
+    var tmp = [];
+    this.concat().sort().sort(function(a,b){
+        if(a==b &amp;&amp; tmp.indexOf(a) === -1) tmp.push(a);
+    });
+    return tmp;
+}
+console.log(a.duplicate());
+</code></pre>
+
+<p>代码二：</p>
+
+<pre><code>//适用基础数据类型（空间换时间的方案）
+function duplicates(list) {
+    var cache = {},
+        own   = Object.prototype.hasOwnProperty,
+        r     = []
+    ;
+    for (var i = list.length; --i&gt;=0; ){
+        var 
+            item = list[i],
+            key  = item.toString()
+       ;
+        if (!own.call(cache, key)) {
+            cache[key] = 1;
+        } else {
+            r.push(item);
+        }
+    }
+    return r;
+}
+</code></pre>
+
+<p>代码三：</p>
+
+<pre><code>var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
+
+function duplicate(source) {
+    var ret = [], cache = [];
+    source.concat().sort().sort(function (a, b) {
+        if (a == b) {
+            var key = typeof(a) + ":" + a;
+            if (!cache[key]) {
+                cache[key] = true;
+                ret.push(a);
+            }
+        }
+    });
+    return ret;
+}
+
+// test
+console.log(duplicate(a));
+</code></pre>
 
 
 </body>
