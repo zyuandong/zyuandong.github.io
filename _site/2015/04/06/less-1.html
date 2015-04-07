@@ -15,6 +15,8 @@
 
 <h3 id="less">less是什么</h3>
 
+<p><strong>less is more</strong></p>
+
 <p>less是一种动态样式语言，属于css预处理语言的一种，它使用类似css的语法，为css赋予了动态语言的特性，如变量、继承、运算、函数等，更方便css的编写和维护。</p>
 
 <p>less可以在多语言、多环境中使用。</p>
@@ -23,8 +25,8 @@
 
 <ul>
   <li>Koala，国产，less/sass编译工具，小巧好用</li>
-  <li>node.js库</li>
-  <li>浏览器端使用</li>
+  <li>node.js库，使用npm在服务器上安装less</li>
+  <li>浏览器端使用，加载less.js在浏览器端编译less文件，但不推荐这种做法，因为这样做JavaScript引擎需要额外的时间在处理代码，然后输出编译后的css到浏览器，影响了加载速度。</li>
 </ul>
 
 <h3 id="section-1">注释</h3>
@@ -124,6 +126,105 @@ less:
 	...
 	color:#000000;
 }//这里不管匹配到哪一个，都会加上@_中的样式，@_是固定写法。
+</code></pre>
+
+<h3 id="section-5">运算</h3>
+
+<p>less中任何数字，颜色或者变量都可以参与运算，运算被包裹在括号中</p>
+
+<pre><code>@width:30px;
+.box{
+	width: @width + 20;
+	color: #000 + 20;
+}
+注意单位，只需要其中一个有待单位就ok
+</code></pre>
+
+<h3 id="section-6">嵌套规则</h3>
+
+<p>两种用法：</p>
+
+<ul>
+  <li>&amp; 对伪类使用: hover或focus</li>
+  <li>对连接的使用: &amp;_item</li>
+</ul>
+
+<pre><code>&lt;ul class="list"&gt;
+	&lt;li&gt;
+		&lt;a href=""&gt;&lt;/a&gt;
+		&lt;span&gt;&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+less：
+.list {
+	....
+	li {
+		....
+	}
+	a {
+		...
+		///&amp; 代表它的上一层选择器，即a标签
+		&amp;:hover {
+			...
+		}
+	}
+}
+//这样写可以省略许多原来css的逐级写法，查看代码时容易找到对应模块
+</code></pre>
+
+<pre><code>&lt;div class="box"&gt;
+	&lt;div class="box_nav"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+.box {
+	....
+
+	&amp;_nav {
+		....
+	}
+}
+//&amp;的第二条使用方法，&amp;_nav即代表box_nav
+</code></pre>
+
+<h3 id="arguments">@arguments变量</h3>
+
+<pre><code>.border(@w:20px,@c:#ccc) {
+	border: @arguments;
+}
+.box{
+	.border();
+}
+//arguments即代表border里的所有变量，可以省略书写
+</code></pre>
+
+<h3 id="important">避免编译、!important以及总结</h3>
+
+<p>有时候我们需要输出一些不正确的css语法或者使用一些less不认识的专有语法。
+要输出这样的值，我们可以在字符串前加上一个 ~，如<code>width:~calc'(100%-35)';</code></p>
+
+<pre><code>.test {
+	width: ~'calc(300px - 30px)';
+}
+//calc()原意是需要浏览器去计算，所以需要加上~来防止less的编译，类似情况还有滤镜等。
+</code></pre>
+
+<p><strong>!important</strong></p>
+
+<p>会为所有混合所带来的样式，添加上!important;</p>
+
+<pre><code>.width(@w:30px){
+	width: @w;
+	color: red;
+}
+.box {
+	.width() !important;
+}
+//编译后的css会自动全加上!important
+.box {
+	width: 30px !important;
+	color: red !important;
+}
 </code></pre>
 
 
