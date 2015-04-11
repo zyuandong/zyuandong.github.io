@@ -17,7 +17,7 @@ title: Front-End Enginer summarize
 
 ### 1. 继续深入前端技术
 
-前端绝不是 HTML+JavaScript+CSS。早在09年就诞生了能在后端（脱离浏览器环境）运行JavaScript的运行时环境--node.js；有了自己的MVC框架--angularJs；有了整套完整的前端自动化集成解决方--Yeoman 、Bower 、Grunt|Gulp；等等很多前端技术快速发展所诞生的技术。
+前端绝不是 HTML+JavaScript+CSS。早在09年就诞生了能在后端（脱离浏览器环境）运行JavaScript的运行时环境--node.js；有了自己的MVC框架--angularJs；有了整套完整的前端自动化集成解决方--Yeoman 、Bower 、Grunt / Gulp；等等很多因前端技术快速发展所诞生的技术。
 
 虽然依旧是前端，但也许已慢慢磨砺为高级阶段。
 
