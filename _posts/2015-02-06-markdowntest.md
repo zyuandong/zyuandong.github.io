@@ -2,15 +2,113 @@
 layout: default
 title: markdown语法
 ---
-# {{ page.title }}
 
-测试
+### 标题
 
-date: {{ page.date | date_to_string }}
+# 一号标题
 
-![](/simpleBlog/images/gem install jekyll error.jpg)
+~~~
+# 一号标题
+~~~
 
-![](http://m.yea.im/di/1ZMX/08.jpg)
-[fdfdf](http://codepen.io/bakerz/full/jEayZB)
+## 二号标题
 
-<a href="dfd" target="_blank">dsd</a>
+~~~
+## 二号标题
+~~~
+
+......
+
+###### 六号标题
+
+~~~
+###### 六号标题
+~~~
+
+### 强调
+
+*斜体*
+
+~~~
+*斜体*
+~~~
+
+**粗体**
+
+~~~
+**粗体**
+~~~
+
+### 链接
+
+[百度](http://www.baidu.com/)
+
+~~~
+[百度](http://www.baidu.com/)
+~~~
+
+### 图片
+
+![描述](/simpleBlog/images/gem install jekyll error.jpg)
+
+~~~
+![描述](图片url)
+~~~
+
+### 笔记本
+
+@(笔记本)[标签1, 标签2, 标签3]
+
+//kramdown--markdown解析器的原因
+
+### 列表
+
+1. 有序列表
+2. 有序列表
+
+~~~
+1. 有序列表
+2. 有序列表
+~~~
+
+- 无序列表
+- 无序列表
+
+~~~
+- 无序列表
+- 无序列表
+~~~
+
+### 引用
+
+> 这是引用的文字
+
+~~~
+> 这是引用的文字
+~~~
+
+### 代码
+
+`我是行内代码`
+
+~~~
+`我是行内代码`
+~~~
+
+~~~
+我是代码块
+~~~
+
+~~~
+	~~~
+	我是代码块
+	~~~
+~~~
+
+### 表格
+
+| Item     |    Value |  Qty |
+|:---------|---------:|:----:|
+| 左对齐   |   右对齐 | 居中 |
+
+<a href="http://www.baidu.com/" target="_blank">新打开一页展示百度首页</a>

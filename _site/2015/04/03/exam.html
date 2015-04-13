@@ -355,6 +355,21 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 
 <h3 id="section-5">14. 一个数组为0、1混乱交叉排列，共100个元素，如何在只遍历一次的情况下，整理数组，使之前面所有的数都为0，后边所有的数都为1。</h3>
 
+<h3 id="arrayn">15. 请为Array增加一个原型方法：该方法的功能是删除数组中的某一项n</h3>
+
+<p>代码：</p>
+
+<pre><code>Array.prototype.delKey = function(n){
+  for(var i = n - 1,len=this.length ; i &lt; len; i++){
+    this[i] = this[i+1];
+  }
+    this.pop();
+    var res = this;
+    return res;
+};
+
+</code></pre>
+
 
 </body>
 </html>
