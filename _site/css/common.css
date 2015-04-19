@@ -12,3 +12,12 @@ body {
 .contents {
 	margin-top: 20px;
 }
+
+/* 代码块 */
+pre {
+	padding: 0px;
+}
+code {
+	border-radius: 5px !important;
+}
+/* 代码块 end */
