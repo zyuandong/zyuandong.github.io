@@ -7,6 +7,7 @@ body {
 body {
 	color: #1f3f5f;
 	line-height: 1.5;
+	font-weight: 400;
 	font-family: "Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif
 }
 #loading {	
