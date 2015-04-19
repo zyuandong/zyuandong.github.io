@@ -1,0 +1,14 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f1f2f2;
+}
+#loading {	
+	width: 100%;
+	height: 3px;
+	background-color: red;
+}
+.contents {
+	margin-top: 20px;
+}
