@@ -2,7 +2,12 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #f1f2f2;
+	background-color: #f5f4f3;
+}
+body {
+	color: #1f3f5f;
+	line-height: 1.5;
+	font-family: "Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif
 }
 #loading {	
 	width: 100%;
@@ -12,6 +17,20 @@ body {
 .contents {
 	margin-top: 20px;
 }
+a {
+	color: #4ae8c4;
+	text-decoration: none;
+}
+a:hover {
+	background-color: #4ae8c4;
+	color: #095f8a;
+}
+
+/* 引入 */
+blockquote {
+	font-family: Georgia,"Times New Roman",Times,Kai,"Kaiti SC",KaiTi,BiauKai,FontAwesome,serif;
+}
+/* 引入 end */
 
 /* 代码块 */
 pre {
