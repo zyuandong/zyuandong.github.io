@@ -1,2 +1,2 @@
 # simpleBlog
-jekyll Blog
+bakerz's Blog
