@@ -18,14 +18,16 @@ body {
 .contents {
 	margin-top: 20px;
 }
+/* a标签 */
 a {
 	color: #4ae8c4;
 	text-decoration: none;
 }
 a:hover {
 	background-color: #4ae8c4;
-	color: #095f8a;
+	color: #fff;
 }
+/* a标签 end */
 
 /* 引入 */
 blockquote {
@@ -55,3 +57,14 @@ p code {
 	white-space: nowrap;
 }
 /* 行内代码 end */
+
+/* 选中文本 */
+::selection {
+	background-color: #4ae8c4;
+	color: #fff;
+}
+::-moz-selection {
+	background-color: #4ae8c4;
+	color: #fff;
+};
+/* 选中文本 end */
