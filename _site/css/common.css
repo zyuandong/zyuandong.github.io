@@ -6,6 +6,7 @@ body {
 }
 body {
 	color: #1f3f5f;
+	word-wrap: break-word;
 	line-height: 1.5;
 	font-weight: 400;
 	font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
