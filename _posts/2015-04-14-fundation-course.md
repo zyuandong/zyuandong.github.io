@@ -373,14 +373,22 @@ Host:www.sina.com.cn
 3.1 请求信息2.1得到的响应是:
 
 HTTP/1.1 200 OK                                              //请求成功
+
 Server: Microsoft-IIS/5.0                                    //web服务器
+
 Date: Thu,08 Mar 200707:17:51 GMT
-Connection: Keep-Alive                                 
+
+Connection: Keep-Alive           
+
 Content-Length: 23330
+
 Content-Type: text/html
+
 Expries: Thu,08 Mar 2007 07:16:51 GMT
-Set-Cookie: ASPSESSIONIDQAQBQQQB=BEJCDGKADEDJKLKKAJEOIMMH; path=/
-Cache-control: private
+
+Set-Cookie: ASPSESSIONIDQAQBQQQB=BEJCDGKADEDJKLKKAJEOIMMH; 
+
+path=/Cache-control: private
 
 //资源内容省略
 
