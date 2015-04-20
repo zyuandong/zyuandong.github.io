@@ -8,7 +8,7 @@ body {
 	color: #1f3f5f;
 	line-height: 1.5;
 	font-weight: 400;
-	font-family: "Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif
+	font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
 #loading {	
 	width: 100%;
@@ -29,21 +29,13 @@ a:hover {
 }
 /* a标签 end */
 
-/* 引入 */
-blockquote {
-	border-left: 5px solid #ccc;
-	margin-left: 20px;
-	padding-left: 10px;
-	font-family: Georgia,"Times New Roman",Times,Kai,"Kaiti SC",KaiTi,BiauKai,FontAwesome,serif;
-}
-/* 引入 end */
-
 /* 代码块 */
 pre {
 	padding: 0px;
 }
 pre code {
-	border-radius: 5px !important;
+	border-radius: 5px;
+	font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* 代码块 end */
 
@@ -51,12 +43,21 @@ pre code {
 li code,
 p code {
 	padding: 2px 4px;
-//	font-size: 1rem;
 	color: #c7254e;
 	background-color: #ccc;
 	white-space: nowrap;
+	font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* 行内代码 end */
+
+/* 引入 */
+blockquote {
+	border-left: 5px solid #ccc;
+	margin-left: 20px;
+	padding-left: 10px;
+	font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
+}
+/* 引入 end */
 
 /* 选中文本 */
 ::selection {
