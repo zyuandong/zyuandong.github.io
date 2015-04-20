@@ -2,7 +2,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #f3f3f3;
+	background-color: #eee;
 }
 body {
 	color: #1f3f5f;
@@ -53,7 +53,7 @@ p code {
 	padding: 2px 4px;
 //	font-size: 1rem;
 	color: #c7254e;
-	background-color: #f8f8f8;
+	background-color: #ccc;
 	white-space: nowrap;
 }
 /* 行内代码 end */
@@ -71,7 +71,22 @@ p code {
 
 /* table */
 table {
-	width: 100%;
+	margin-left: 30px;
 	border: 1px solid #ccc;
+	border-collapse:collapse;
+}
+thead {
+	background-color: #6ec8c9;
+}
+tbody {
+	background-color: #d0edee;
+}
+th,
+td {
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+}
+tbody tr:hover {
+	background-color: #6ec8c9;
 }
 /* table end */
