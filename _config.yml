@@ -1,2 +1,7 @@
+# Site settings
+title: bakerz
+description: "bakerz's blog"
 baseurl: /blog
+
+#Build settings
 markdown: kramdown

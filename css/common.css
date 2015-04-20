@@ -2,7 +2,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #f5f4f3;
+	background-color: #f3f3f3;
 }
 body {
 	color: #1f3f5f;
@@ -66,5 +66,12 @@ p code {
 ::-moz-selection {
 	background-color: #4ae8c4;
 	color: #fff;
-};
+}
 /* 选中文本 end */
+
+/* table */
+table {
+	width: 100%;
+	border: 1px solid #ccc;
+}
+/* table end */

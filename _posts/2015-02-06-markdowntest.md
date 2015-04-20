@@ -107,8 +107,8 @@ title: markdown语法
 
 ### 表格
 
-| Item     |    Value |  Qty |
+|Item|Value|Qty|
 |:---------|---------:|:----:|
-| 左对齐   |   右对齐 | 居中 |
+|左对齐|右对齐|居中|
 
 <a href="http://www.baidu.com/" target="_blank">新打开一页展示百度首页</a>
