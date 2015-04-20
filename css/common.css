@@ -40,7 +40,18 @@ blockquote {
 pre {
 	padding: 0px;
 }
-code {
+pre code {
 	border-radius: 5px !important;
 }
 /* 代码块 end */
+
+/* 行内代码 */
+li code,
+p code {
+	padding: 2px 4px;
+//	font-size: 1rem;
+	color: #c7254e;
+	background-color: #f8f8f8;
+	white-space: nowrap;
+}
+/* 行内代码 end */
