@@ -1,3 +1,3 @@
 $(function(){
-	$("#slide-panel").css('height', $(window).get(0).innerHeight);
+	$("body").css('height', $(window).get(0).innerHeight);
 });
