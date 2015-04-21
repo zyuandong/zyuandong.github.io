@@ -91,3 +91,39 @@ tbody tr:hover {
 	background-color: #6ec8c9;
 }
 /* table end */
+
+/* 文章目录 */
+#slide-panel {
+	width: 520px;
+	height: 500px;
+	float: left;
+}
+.guid {
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: #272727;
+}
+.head-img {
+	width: 180px;
+	height: 180px;
+}
+.file-list {
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: #ccc;
+}
+.file-list ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* 文章目录 end */
+
+/* 文章显示 */
+#contents {
+	margin: 0;
+}
+/* 文章显示 end */
+

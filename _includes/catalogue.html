@@ -1,0 +1,25 @@
+<div id="slide-panel">
+	<div class="guid">
+		<img src="http://i2.tietuku.com/b89543283e76dfaa.jpg" alt="bakerz" class="head-img">
+		<ul>
+			<li>所有文章</li>
+			<li>技术</li>
+			<li>JavaScript</li>
+			<li>nodeJs</li>
+			<li>CSS</li>
+			<li>杂记</li>
+		</ul>
+	</div>
+	<div class="file-list">
+		<ul>
+		    {% for post in site.posts %}
+		    <li>
+		    	{{ post.date | date_to_string }}
+		        <a href="{{ site.baseurl }}{{ post.url }}">
+		        	{{ post.title }}
+		        </a>
+		    </li>
+		    {% endfor %}
+		</ul>
+	</div>
+</div>
