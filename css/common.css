@@ -137,6 +137,9 @@ tbody tr:hover {
 	padding: 0;
 	list-style: none;
 }
+.file-list .date {
+	color: #72aea4;
+}
 .file-list a {
 	color: #1f3f5f;
 }

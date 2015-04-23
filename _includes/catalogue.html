@@ -17,7 +17,9 @@
 		<ul>
 		    {% for post in site.posts %}
 		    <li>
-		    	{{ post.date | date_to_string }}
+		    	<span class="date">
+		    		{{ post.date | date: "%b %d" }}
+		    	</span>
 		        <a href="{{ site.baseurl }}{{ post.url }}">
 		        	{{ post.title }}
 		        </a>
