@@ -106,14 +106,12 @@ tbody tr:hover {
 	color: #ccc;
 	background-color: #1f3f5f;
 }
-.guid a {
-	display: block;
-	width: 180px;
-	height: 180px;
+.guid a:hover {
+	background-color: #1f3f5f;
 }
 .head-img {
-	width: 100%;
-	height: 100%;
+	width: 180px;
+	height: 180px;
 }
 .guid ul {
 	margin: 10px 0;
