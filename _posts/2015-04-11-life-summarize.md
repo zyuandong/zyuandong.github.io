@@ -47,4 +47,56 @@ title: Front-End Enginer summarize
 
 最后对于我来说，我会依照每一点严格要求自己，毕竟互联网更新换代这么快，谁会知道多年后又是怎样一番景象，珍惜眼前的时光，不虚度才是最重要的。
 
-过去的机会没有了，抱怨再多也没人会在意；以后的机会还有很多，虽然会很难，但那就是看自己的本事了。
+最后是看了一篇介绍前端工程师的文章，自己的截取的精华部分：
+
+# 大多人心中的前端工程师
+
+1. 把Photoshop文件、图片或者线框放进一个网页；
+2. 偶尔设计Photoshop文件、图片或者线框；
+3. 用js编程，为网页制作动画，过渡效果；
+4. 用html+css编程，确定网页的内容和形式。
+
+# 事实上，前端工程师在做的是：
+
+1. 在设计师和工程师之间创建可视化的语言；
+2. 用可视化的设计，定义一组代表内容、品牌和功能的组件；
+3. 为web应用程序的公约、框架、需求、可视化的语言和规格设定底线；
+4. 定义web应用程序的设备、浏览器、屏幕、动画的范围；
+5. 开发一个质量保证指南来确保品牌忠诚度、代码质量、产品标准；
+6. 为web应用程序设定适当的行距、字体、标题、图标、余量、填充等；
+7. 为web应用程序设定多种分辨率的图像，设备为主的实体模型，同时维护设计指南；
+8. 用account semantics, accessibility, SEO, schemas, microformats标记web应用程序；
+9. 用一种友好的，消耗小的，设备和客户端感知的方式连接API，获取内容；
+10. 开发客户端代码来显示流畅的动画、过渡、延迟加载、交互、应用工作流程，大多数时间用来考虑渐进增强和向后兼容的标准；
+11. 保证后台连接安全， 采取跨地资源共享（CORS）的程序考虑，防止跨站点脚本（XSS）和跨站点请求伪造（CSRF）；
+12. 最重要的是，尽管有严格的期限、利益相关者的要求，以及设备的限制，无论现在还是将来永远是【客户第一】。
+
+# 糟糕的前端工程师是这样做事的：
+
+1. 滥用js库，因为他们实际上并不了解js的内部；
+2. 滥用js插件，抄别人的代码哪怕自己根本读不懂；
+3. 给web应用程序添加css框架，却只用到css/js的5%，没有看到任何需求、设计或者比较和评价；
+4. 认为只要添加了css框架，网站就可以【有求必应】；
+5. 一边在说着【响应式web设计】，却对服务器端技术一无所知；
+6. 用css编程时不管预处理器、命名规范等，却用不合适的selector/ids/magic unmbers等；
+7. 忽视表现，内存泄露（并不理解内存泄露的真正含义），不会检测代码；
+8. 不会用指标衡量一个产品，或者这种指标在自己的电脑、浏览器、设备有效；
+9.忽视软件技术。
+
+> 要知道，入门容易精通难，计算机和软件的基础对你用js或浏览器编程都非常重要。web可能是最有影响力的平台和环境之一，在那里执行的程序必须被小心对待。一位优秀的前端工程师不仅要考虑web技术和语言，并且还要了解所有不同的组件、系统和概念。
+
+# 优秀的前端工程师在即时面对普通的任务也会做的事情
+
+1. DNS解析、使用CDN和关于multiple HostNames as part of resources request；
+2. HTTP Headers (Expires, CacheControl, if-modified-since);
+3. Steve Souders的所有规则（High Performance Websites）
+4. 如何解决PageSpeed, YSlow, Chrome Dev Tools Audit, Chrome Dev Tools Timeline显示的所有问题；
+5. 何时把任务传到服务器和客户端；
+6. 缓存，预取和负荷技术的使用；
+7. Native js，知道何时从头开始做，何时查找别人的代码，同时可以评估这样做的优缺点；
+8. modern MVC javascript libraries（e.g. AngularJS, EmberJS, ReactJS）。graphic librarise（e.g. D3, SnapSVG）。DOM manipulation libraries（e.g. jQuery, Zepto）。 lazy loading or package management libraries （e.g. RequireJS, CommonJS）。 package managers（e.g. Bower, ComponentJS）。and testing（e.g. Protractor, Selenium）的相关知识和用法；
+10. js的电脑知识（内存管理、单线程的性质、垃圾收集算法、超时、范围、提升、模式）
+
+换句话说，如果说精通html+css+js，了解后端知识，只是60分的合格前端；那么要想成为受追捧、拿高薪的80分优秀前端，要求对业务需求和架构设计有真正的运用；而100分的顶级前端，则必须要能够兼顾技术和设计，更接近【以前端开发为主的全栈工程师】了。
+
+加油吧，前端！
