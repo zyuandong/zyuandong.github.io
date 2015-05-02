@@ -136,7 +136,7 @@ tbody tr:hover {
 	list-style: none;
 }
 .file-list .date {
-	color: #72aea4;
+	color: #4ae8c4;
 }
 .file-list a {
 	color: #1f3f5f;
@@ -154,3 +154,20 @@ tbody tr:hover {
 	overflow-y: scroll; 
 }
 /* 文章显示 end */
+
+/* 切换按钮 */
+#slider {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	background-color: #000;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50px;
+	opacity: 0.5;
+}
+/* 切换按钮 end */
