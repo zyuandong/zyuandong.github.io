@@ -31,6 +31,12 @@ a:hover {
 }
 /* a标签 end */
 
+/* h1~h6 */
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+/* h1~h6 end */
+
 /* 代码块 */
 pre {
 	padding: 0px;
