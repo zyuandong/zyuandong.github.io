@@ -232,7 +232,32 @@
 
 <h1 id="python-1">通过Python连接数据库</h1>
 
-<p>既然不是教学篇，那我就直接跳过大篇幅的介绍，直接通过Python+MySQL，来实现Python连接数据库的一个小示例，以熟悉Python的语法特点。</p>
+<p>既然不是教学篇，那我就直接跳过大篇幅的介绍，使用SQLite，来实现Python连接数据库的一个小示例，以熟悉Python的语法特点。</p>
+
+<p>SQLite是一种嵌入式数据库，它的数据就是一个文件。Python就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。</p>
+
+<p>通过Python的交互式命令行试验一下：</p>
+
+<pre><code>
+&gt;&gt;&gt; import sqlite3
+
+&gt;&gt;&gt; con = sqlite3.connect('test.db')
+
+&gt;&gt;&gt; cursor = con.cursor()
+
+&gt;&gt;&gt; cursor.execute('create table user (id, varchar(20) primary key, name varchar(20))')
+
+&gt;&gt;&gt; cursor.execute('insert into user (id, name) values (\'1\', \'bakerz\')')
+
+&gt;&gt;&gt; cursor.rowcount
+
+&gt;&gt;&gt; cursor.close()
+
+&gt;&gt;&gt; con.commit()
+
+&gt;&gt;&gt; com.close()
+</code></pre>
+
 
 </div>
 
