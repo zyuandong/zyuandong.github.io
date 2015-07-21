@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>web前端安全</title>
+    <title>nodejs <1></title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -231,29 +231,28 @@
 </div>
 
 <div id="contents">
-    <h1 id="section">常见的前端安全策略</h1>
+    <h1 id="nodejs">node.js</h1>
 
-<ol>
-  <li>DOM check</li>
-  <li>HTTPS</li>
-  <li>csp</li>
-</ol>
+<p>node.js是基于Chrome JavaScript运行时建立的一个平台，实际上是对Google Chrome V8引擎进行了封装，主要用于创建快速的、可扩建的网络应用。node.js采用时间驱动和费祖赛I/O模型，使其变得轻量和高效，非常适合构建运行在分布式设备的数据密集型的实时应用。</p>
 
-<h1 id="section-1">比较</h1>
+<h1 id="repl">交互环境：REPL</h1>
 
-<p><strong>DOM check</strong></p>
+<p>node.js提供了一个交互式运行环境，通过这个环境，可以立即执行JavaScript代码。</p>
 
-<p>维护成本大，很难彻底解决攻击</p>
+<h1 id="nodejs-1">node.js模块和包</h1>
 
-<p><strong>HTTPS</strong></p>
+<h2 id="section">1. 模块</h2>
 
-<p>从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。</p>
+<p>node.js提供了很多模块，这些模块分别实现了一种功能，如操作文件的模块fs，构建http服务的http等，
+* 每个模块都是一个JavaScript文件，当然也可以自己编写模块。 *</p>
 
-<p><strong>csp</strong></p>
+<h2 id="section-1">2. 包</h2>
 
-<p>一种代价小，回报大的安全策略，但是兼容性不好。</p>
+<p>包可以将多个具有依赖关系的模块组织在一起，封装多个模块，以方便管理。node.js采用了CommonJS规范，根据CommonJS规范规定，一个JavaScript文件就是一个模块，而包是一个文件夹，包内必须包含一个JSON文件，命名为package.json。一般情况下，包内的bin文件夹存放二进制文件，包内的lib文件夹存放JavaScript文件，包内的doc文件夹存放文档，包内的test文件夹存放JavaScript文件，包内的doc文件夹存放文档，包内的test文件夹存放单元测试。</p>
 
-<p>……</p>
+<h1 id="npm">npm包管理工具</h1>
+
+<p>npm是node.js的包管理工具，npm定义了包的依赖关系标准，我们使用npm主要用来下载第三方包和管理本地下载的第三方包。</p>
 
 </div>
 

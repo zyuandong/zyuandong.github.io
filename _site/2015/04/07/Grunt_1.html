@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>web前端安全</title>
+    <title>学习Grunt</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -231,29 +231,106 @@
 </div>
 
 <div id="contents">
-    <h1 id="section">常见的前端安全策略</h1>
+    <h3 id="section">前端集成解决方案</h3>
 
-<ol>
-  <li>DOM check</li>
-  <li>HTTPS</li>
-  <li>csp</li>
-</ol>
+<p>解决前端工程的根本问题。一套包含框架和工具，便于开发者快速构建美丽实用的web应用程序的工作流，同时这套工作流必须是文件强壮的。</p>
 
-<h1 id="section-1">比较</h1>
+<h3 id="section-1">解决的前端问题</h3>
 
-<p><strong>DOM check</strong></p>
+<ul>
+  <li>开发团队代码风格不统一，如何强制开发规范；</li>
+  <li>前期开发的组件库如何维护和使用；</li>
+  <li>如何模块化前端项目；</li>
+  <li>服务器部署前必须的压缩，检查流程如何简化，流程如何完善；</li>
+</ul>
 
-<p>维护成本大，很难彻底解决攻击</p>
+<h3 id="section-2">常见的前端集成解决方案</h3>
 
-<p><strong>HTTPS</strong></p>
+<p>Yeoman –&gt; Bower –&gt; Grunt/Gulp </p>
 
-<p>从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。</p>
+<p>mac平台: CodeKit</p>
 
-<p><strong>csp</strong></p>
+<p>百度: FIS</p>
 
-<p>一种代价小，回报大的安全策略，但是兼容性不好。</p>
+<p>腾讯Alloyteam: Spirit</p>
 
-<p>……</p>
+<h3 id="build-tool">Build tool(编译一个程序的新版本时所使用的编译工具)</h3>
+
+<ul>
+  <li>ant(java)</li>
+  <li>Yeoman、Grunt、Buildy(node.js)</li>
+  <li>jasy(Python)</li>
+  <li>Gmake(Ruby)</li>
+  <li>Rake(Ruby,类Gmake)</li>
+  <li>Sprockets(Rack)</li>
+</ul>
+
+<h3 id="section-3">学习基础</h3>
+
+<ul>
+  <li>html </li>
+  <li>css</li>
+  <li>JavaScript基础知识</li>
+  <li>了解node.js</li>
+</ul>
+
+<h3 id="nodejs">了解node.js</h3>
+
+<h4 id="node">1. node环境安装</h4>
+
+<p>node.js官网： http://nodejs.org/</p>
+
+<p><em>安装node程序包时路径不要有空格</em></p>
+
+<h4 id="npmnode-package-managernodea">2. npm(Node Package Manager)nodea包管理和分发工具</h4>
+
+<p>类似：
+gem(ruby)</p>
+
+<p>pypi / setuptools(python)</p>
+
+<p>pear(php)</p>
+
+<h4 id="section-4">3. 命令行工具：</h4>
+
+<p>windows：cmd窗口不支持bash脚本，可安装Git，Git提供了git bash shell</p>
+
+<p>mac: iTerm可替代原生的控制台</p>
+
+<h4 id="node-1">4. node项目的基本结构</h4>
+
+<pre><code>
+</code></pre>
+
+<h3 id="grunt">安装Grunt</h3>
+
+<p>官网：<code>http://gruntjs.com/</code></p>
+
+<p>安装指令：<code>npm install -g grunt-cli</code></p>
+
+<p>验证方法：<code>grunt</code></p>
+
+<p>grunt：自动化，减少压缩、编译、单元测试，代码校验这种重复且无业务关联的工作。</p>
+
+<h3 id="yeoman">安装Yeoman</h3>
+
+<p>官网：<code>http://yeoman.io/</code></p>
+
+<p>安装指令：<code>npm install -g yo</code></p>
+
+<p>验证方法：<code>yo -v</code></p>
+
+<p>Yeoman：现代web App的<code>脚手架</code>工具。 在web项目的立项阶段，使用Yeoman来生成项目的文件，代码结构。Yeoman自动将最佳实践和工具整合进来，大大加速和方便我们后续的开发。保留了代码校验、测试、压缩等基本工作流程。</p>
+
+<p>安装好Yeoman还需要安装自己所需的Generator(生成器)</p>
+
+<h3 id="bower">安装Bower</h3>
+
+<p>官网：<code>http://bower.io/</code>
+安装指令： <code>npm install -g bower</code>
+验证方法： <code>bower -v</code></p>
+
+<p>Bower： web的包管理器。</p>
 
 </div>
 

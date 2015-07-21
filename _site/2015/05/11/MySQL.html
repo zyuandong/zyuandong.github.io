@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>web前端安全</title>
+    <title>MySQL小技巧</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -231,29 +231,84 @@
 </div>
 
 <div id="contents">
-    <h1 id="section">常见的前端安全策略</h1>
+    <h1 id="mysql">MySQL小技巧总结</h1>
+
+<h2 id="cmdmysql">使用cmd命令终端登录MySQL</h2>
+
+<p>方法一：如果添加了MySQL环境变量，可以直接使用命令<code>mysql -uroot -p***(***是用户密码)</code>，回车便可以登录</p>
+
+<p>方法二：未添加MySQL环境变量，可以将MySQL安装目录下的bin目录添加到系统环境变量，即可参照方法一继续进行；也可切换到MySQL的安装目录下的bin目录，再使用方法一</p>
+
+<h2 id="mysql-1">连接到远程主机上的MySQL</h2>
+
+<p>假设远程主机IP为：110.110.110.110，用户名为：root，密码为：123456。则命令为：</p>
+
+<p><code>mysql -h110.110.110.110 -uroot -p123456</code></p>
+
+<h2 id="mysql-2">查看MySQL字符编码</h2>
+
+<p>MySQL命令模式下，输入<code>show variables like '%char%';</code></p>
+
+<p><code>show variables like 'character_set_%';</code></p>
+
+<h2 id="mysql-3">解决MySQL命令模式下，展示数据乱码</h2>
+
+<p>输入<code>set names utf8;</code></p>
+
+<p>查看MySQL编码结果为</p>
+
+<pre><code>set character_set_client=utf8;
+
+set character_set_results=utf8;
+
+set character_set_connection=utf8;
+</code></pre>
+
+<p>在命令行插入、查询数据前，执行命令<code>set names gbk;</code>或者<code>set names gb2312;</code></p>
+
+<p>插入、查询结束后再<code>set names utf8;</code></p>
+
+<p>这样就能正常插入和查询中文并且保持数据库编码为utf8</p>
+
+<h2 id="section">修改密码</h2>
+
+<p><code>mysqladmin -u 用户名 -p 旧密码 password 新密码</code></p>
 
 <ol>
-  <li>DOM check</li>
-  <li>HTTPS</li>
-  <li>csp</li>
+  <li>给root加个密码ab12</li>
 </ol>
 
-<h1 id="section-1">比较</h1>
+<p>首先在DOS下进入目录mysql\bin，然后键入以下命令:</p>
 
-<p><strong>DOM check</strong></p>
+<p><code>mysqladmin -u root -password ab12</code>(注：因为开始时root没有密码，所以-p旧密码一项就可以省略了)</p>
 
-<p>维护成本大，很难彻底解决攻击</p>
+<ol>
+  <li>再将root的密码改为qwe123</li>
+</ol>
 
-<p><strong>HTTPS</strong></p>
+<p><code>mysqladmin -u root -p ab12 password qwe123</code>;</p>
 
-<p>从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。</p>
+<h2 id="section-1">创建数据库</h2>
 
-<p><strong>csp</strong></p>
+<p>创建一个名为qwer的数据库—<code>create database qwer;</code></p>
 
-<p>一种代价小，回报大的安全策略，但是兼容性不好。</p>
+<h2 id="section-2">显示数据库</h2>
 
-<p>……</p>
+<p><code>show databases;</code></p>
+
+<h2 id="section-3">删除数据库</h2>
+
+<p>删除名为qwer的数据库</p>
+
+<p><code>drop database qwer</code>;</p>
+
+<h2 id="section-4">导出整个数据库</h2>
+
+<p>导出文件默认是存在mysql\bin目录下</p>
+
+<p><code>mysqldump -u 用户名 -p 数据库名 &gt; 导出的文件名</code></p>
+
+<p><code>mysqldump -u user_name -p database_name &gt; outfile_name.sql</code></p>
 
 </div>
 

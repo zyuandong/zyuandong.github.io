@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>web前端安全</title>
+    <title>less初体验</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -231,29 +231,219 @@
 </div>
 
 <div id="contents">
-    <h1 id="section">常见的前端安全策略</h1>
+    <h3 id="less">less是什么</h3>
 
-<ol>
-  <li>DOM check</li>
-  <li>HTTPS</li>
-  <li>csp</li>
-</ol>
+<p><strong>less is more</strong></p>
 
-<h1 id="section-1">比较</h1>
+<p>less是一种动态样式语言，属于css预处理语言的一种，它使用类似css的语法，为css赋予了动态语言的特性，如变量、继承、运算、函数等，更方便css的编写和维护。</p>
 
-<p><strong>DOM check</strong></p>
+<p>less可以在多语言、多环境中使用。</p>
 
-<p>维护成本大，很难彻底解决攻击</p>
+<h3 id="section">编译工具</h3>
 
-<p><strong>HTTPS</strong></p>
+<ul>
+  <li>Koala，国产，less/sass编译工具，小巧好用</li>
+  <li>node.js库，使用npm在服务器上安装less</li>
+  <li>浏览器端使用，加载less.js在浏览器端编译less文件，但不推荐这种做法，因为这样做JavaScript引擎需要额外的时间在处理代码，然后输出编译后的css到浏览器，影响了加载速度。</li>
+</ul>
 
-<p>从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。</p>
+<h3 id="section-1">注释</h3>
 
-<p><strong>csp</strong></p>
+<ul>
+  <li>可以使用css中的注释/**/</li>
+  <li>也可以使用//注释，//编译时会自动过滤掉</li>
+</ul>
 
-<p>一种代价小，回报大的安全策略，但是兼容性不好。</p>
+<p>即编译后，/**/内的部分会保留到css文件中。</p>
 
-<p>……</p>
+<h3 id="section-2">变量</h3>
+
+<p>less中定义变量使用@，@开头:值;</p>
+
+<pre><code>html:
+&lt;div class="test"&gt;&lt;/div&gt;
+
+less:
+@div_width: 300px;
+.test {
+	width: @div_width;
+}
+</code></pre>
+
+<h3 id="section-3">混合</h3>
+
+<ul>
+  <li>形式一</li>
+</ul>
+
+<p>不同的样式声明可以相互混合，方便实现样式重用</p>
+
+<pre><code>.box {
+	width: xxx;
+	height: xxx;
+
+	.border;
+}
+.border {
+	boerder: xxx;
+}
+</code></pre>
+
+<ul>
+  <li>形式二</li>
+</ul>
+
+<p>可带参数</p>
+
+<pre><code>.box(@box_width){
+	width: @box_width;
+}
+
+.box2{
+	.box(30px);
+}
+</code></pre>
+
+<ul>
+  <li>形式三</li>
+</ul>
+
+<p>带有默认值,传参数时可修改默认值</p>
+
+<pre><code>.box(@box_width:30px){
+	width: @box_width;
+}
+.box2{
+	.box(); //这里虽然不加括号也可以传默认值，但为与形式一区别开，还是加上括号以区别开
+}
+</code></pre>
+
+<p>混合的好处之一就是在写border-radius之类的css3特殊样式，需要考虑到兼容性时，-moz-/-webkit-之类的前缀可以很方便的省略</p>
+
+<h3 id="section-4">匹配模式</h3>
+
+<p>额。。这不是LOL。简单一点就是根据参数匹配相应已有的样式。</p>
+
+<p>以margin为例，上下左右可以根据需要，选择特定的方向设定margin</p>
+
+<pre><code>.margin(top) {
+	margin-top: 10px;
+}
+.box {
+	.margin(top);
+}
+</code></pre>
+
+<p><strong>匹配里通用的方法</strong></p>
+
+<pre><code>.margin(top){...}
+.margin(right){...}
+.margin(@_){color:#000000;}
+
+.box(top){
+	...
+	color:#000000;
+}//这里不管匹配到哪一个，都会加上@_中的样式，@_是固定写法。
+</code></pre>
+
+<h3 id="section-5">运算</h3>
+
+<p>less中任何数字，颜色或者变量都可以参与运算，运算被包裹在括号中</p>
+
+<pre><code>@width:30px;
+.box{
+	width: @width + 20;
+	color: #000 + 20;
+}
+注意单位，只需要其中一个有待单位就ok
+</code></pre>
+
+<h3 id="section-6">嵌套规则</h3>
+
+<p>两种用法：</p>
+
+<ul>
+  <li>&amp; 对伪类使用: hover或focus</li>
+  <li>对连接的使用: &amp;_item</li>
+</ul>
+
+<pre><code>&lt;ul class="list"&gt;
+	&lt;li&gt;
+		&lt;a href=""&gt;&lt;/a&gt;
+		&lt;span&gt;&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+less：
+.list {
+	....
+	li {
+		....
+	}
+	a {
+		...
+		///&amp; 代表它的上一层选择器，即a标签
+		&amp;:hover {
+			...
+		}
+	}
+}
+//这样写可以省略许多原来css的逐级写法，查看代码时容易找到对应模块
+</code></pre>
+
+<pre><code>&lt;div class="box"&gt;
+	&lt;div class="box_nav"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+.box {
+	....
+
+	&amp;_nav {
+		....
+	}
+}
+//&amp;的第二条使用方法，&amp;_nav即代表box_nav
+</code></pre>
+
+<h3 id="arguments">@arguments变量</h3>
+
+<pre><code>.border(@w:20px,@c:#ccc) {
+	border: @arguments;
+}
+.box{
+	.border();
+}
+//arguments即代表border里的所有变量，可以省略书写
+</code></pre>
+
+<h3 id="important">避免编译、!important以及总结</h3>
+
+<p>有时候我们需要输出一些不正确的css语法或者使用一些less不认识的专有语法。
+要输出这样的值，我们可以在字符串前加上一个 ~，如<code>width:~calc'(100%-35)';</code></p>
+
+<pre><code>.test {
+	width: ~'calc(300px - 30px)';
+}
+//calc()原意是需要浏览器去计算，所以需要加上~来防止less的编译，类似情况还有滤镜等。
+</code></pre>
+
+<p><strong>!important</strong></p>
+
+<p>会为所有混合所带来的样式，添加上!important;</p>
+
+<pre><code>.width(@w:30px){
+	width: @w;
+	color: red;
+}
+.box {
+	.width() !important;
+}
+//编译后的css会自动全加上!important
+.box {
+	width: 30px !important;
+	color: red !important;
+}
+</code></pre>
 
 </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>web前端安全</title>
+    <title>Python <1></title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -231,29 +231,56 @@
 </div>
 
 <div id="contents">
-    <h1 id="section">常见的前端安全策略</h1>
+    <h1 id="python">开始学习Python</h1>
 
-<ol>
-  <li>DOM check</li>
-  <li>HTTPS</li>
-  <li>csp</li>
-</ol>
+<p>Python语言是一种既简单又功能强大的编程语言。它注重的是如何解决问题而不是编程语言的语法和结构。</p>
 
-<h1 id="section-1">比较</h1>
+<p>balabalabala…..</p>
 
-<p><strong>DOM check</strong></p>
+<p>这里的介绍我就不再照搬了，网上的好教程（比如<a href="http://sebug.net/paper/python/">简明Python教程</a>等）太多了，我不想做教程的搬运工，我只想写一写我在学习过程中的心得体会以及过程中所遇到的困难。希望能一点点从这个过程中快速成长。</p>
 
-<p>维护成本大，很难彻底解决攻击</p>
+<h1 id="python-1">通过Python连接数据库</h1>
 
-<p><strong>HTTPS</strong></p>
+<p>既然不是教学篇，那我就直接跳过大篇幅的介绍，使用SQLite，来实现Python连接数据库的一个小示例，以熟悉Python的语法特点。</p>
 
-<p>从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。</p>
+<p>SQLite是一种嵌入式数据库，它的数据就是一个文件。Python就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。</p>
 
-<p><strong>csp</strong></p>
+<p>通过Python的交互式命令行试验一下：</p>
 
-<p>一种代价小，回报大的安全策略，但是兼容性不好。</p>
+<pre><code># 导入SQLite驱动:
+&gt;&gt;&gt; import sqlite3
 
-<p>……</p>
+# 连接到SQLite数据库
+# 数据库文件是test.db
+# 如果文件不存在，会自动在当前目录创建:
+&gt;&gt;&gt; conn = sqlite3.connect('test.db')
+
+# 创建一个Cursor:
+&gt;&gt;&gt; cursor = conn.cursor()
+
+# 执行一条SQL语句，创建user表:
+&gt;&gt;&gt; cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
+&lt;sqlite3.Cursor object at 0x10f8aa260&gt;
+
+# 继续执行一条SQL语句，插入一条记录:
+&gt;&gt;&gt; cursor.execute('insert into user (id, name) values (\'1\', \'Michael\')')
+&lt;sqlite3.Cursor object at 0x10f8aa260&gt;
+
+# 通过rowcount获得插入的行数:
+&gt;&gt;&gt; cursor.rowcount
+1
+
+# 关闭Cursor:
+&gt;&gt;&gt; cursor.close()
+
+# 提交事务:
+&gt;&gt;&gt; conn.commit()
+
+# 关闭Connection:
+&gt;&gt;&gt; conn.close()
+</code></pre>
+
+<p>这样，简单的通过SQLite连接数据库的大致过程就有一点思路了。</p>
 
 </div>
 
