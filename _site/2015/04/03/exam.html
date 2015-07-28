@@ -231,7 +231,9 @@
 </div>
 
 <div id="contents">
-    <h3 id="indexof">1.一个数组，输入数组元素，可以得到对应下标，若没有检索到字符，则返回-1，即实现indexOf()方法。</h3>
+    <h1 id="section">~题库~</h1>
+
+<h2 id="indexof">1.一个数组，输入数组元素，可以得到对应下标，若没有检索到字符，则返回-1，即实现indexOf()方法。</h2>
 
 <blockquote>
   <p>string.indexOf(str,start);</p>
@@ -260,12 +262,12 @@ Array.prototype.myindexOf = function(num,start){
 console.log(arr.myindexOf(434)); // &gt;&gt; 6
 </code></pre>
 
-<h4 id="stringindexof">扩展：实现String对象的indexOf()方法</h4>
+<h3 id="stringindexof">扩展：实现String对象的indexOf()方法</h3>
 
 <pre><code>
 </code></pre>
 
-<h3 id="ad2ff3ad2ff3adadffffff">2. 字符串解码，以字母与数字混排的字符串，如“ad2ff3”，编写算法，实现，将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列，“ad2ff3”解码后的便为“adadffffff”。</h3>
+<h2 id="ad2ff3ad2ff3adadffffff">2. 字符串解码，以字母与数字混排的字符串，如“ad2ff3”，编写算法，实现，将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列，“ad2ff3”解码后的便为“adadffffff”。</h2>
 
 <p>代码：</p>
 
@@ -297,7 +299,7 @@ function getCode(str){
 console.log(getCode(str));  // &gt;&gt; faAdBfaAdBffffff
 </code></pre>
 
-<h3 id="testtxttxt">3. 设计算法，获取文件名，如“test.txt”的后缀，即“.txt”。</h3>
+<h2 id="testtxttxt">3. 设计算法，获取文件名，如“test.txt”的后缀，即“.txt”。</h2>
 
 <p>代码：</p>
 
@@ -312,7 +314,7 @@ function getFileType(str){
 console.log(getFileType(str)); // &gt;&gt; .txt
 </code></pre>
 
-<h4 id="section">扩展</h4>
+<h3 id="section-1">扩展</h3>
 
 <ul>
   <li>
@@ -326,7 +328,7 @@ console.log(getFileType(str)); // &gt;&gt; .txt
   </li>
 </ul>
 
-<h3 id="html">4. 遍历数组数据，并将其包裹上HTML标签，数组数据和遍历后的结果如下：</h3>
+<h2 id="html">4. 遍历数组数据，并将其包裹上HTML标签，数组数据和遍历后的结果如下：</h2>
 <p>数组：var item = [{‘children’:[{‘name’:’xx’,’age’:12},{‘child’:[{‘name’:’gg’,’age’:11}]}]}];</p>
 
 <p>遍历后结果：</p>
@@ -376,7 +378,7 @@ function getJsonHTML(item){
 console.log(getJsonHTML(item));
 </code></pre>
 
-<h3 id="js3hello5643hello3hello">5. 取出js数组中重复的元素，如[3,’hello’,5,6,4,3,’hello’]，取出[3,’hello’]</h3>
+<h2 id="js3hello5643hello3hello">5. 取出js数组中重复的元素，如[3,’hello’,5,6,4,3,’hello’]，取出[3,’hello’]</h2>
 
 <p>代码一：</p>
 
@@ -436,7 +438,7 @@ function duplicate(source) {
 console.log(duplicate(a));
 </code></pre>
 
-<h3 id="qywyer23tddy">6. 给定一个字符串，请写一段代码找出这个字符中首先出现两次的那个字符。例如字符串“qywyer23tdd”，输出为y</h3>
+<h2 id="qywyer23tddy">6. 给定一个字符串，请写一段代码找出这个字符中首先出现两次的那个字符。例如字符串“qywyer23tdd”，输出为y</h2>
 
 <p>代码：</p>
 
@@ -454,12 +456,12 @@ function getKey(str){
 console.log(getKey(str));  // &gt;&gt; 'y'
 </code></pre>
 
-<h3 id="section-1">7. 给定一个整型数组，对这个整数数组排序吗，使得按序拼接数组各元素得到的值最小。示例：[3,83,8,13,1]，被排序后的数组为[1,13,3,83,8]，依次拼接得到的最小数1133838</h3>
+<h2 id="section-2">7. 给定一个整型数组，对这个整数数组排序吗，使得按序拼接数组各元素得到的值最小。示例：[3,83,8,13,1]，被排序后的数组为[1,13,3,83,8]，依次拼接得到的最小数1133838</h2>
 
 <pre><code>？？？
 </code></pre>
 
-<h3 id="section-2">8. 判断一下代码的输出结果</h3>
+<h2 id="section-3">8. 判断一下代码的输出结果</h2>
 
 <pre><code>var x = 0;
 
@@ -484,7 +486,7 @@ console.log(x);
 
 <p>第一个为“变量式”函数，第二个函数为“定义式”函数，其实JavaScript执行引擎并非一行一行地分析和执行程序，而是一段一段地分析和执行的。而且，在同一段程序的分析执行中，定义式的函数会被提取出来优先执行。函数定义执行完之后，才会按顺序执行其他语句代码。</p>
 
-<h3 id="section-3">9. 判断以下代码的输出</h3>
+<h2 id="section-4">9. 判断以下代码的输出</h2>
 
 <pre><code>function say(){
   console.log(this.name);
@@ -527,12 +529,12 @@ function getParameter(url){
 console.log(getParameter(url));
 </code></pre>
 
-<h3 id="formatdatedate-formatdatedateformatyyyymmdd-">11. 请写一个函数，formatDate(date, format)，date参数为Date对象，format参数为yyyy,MM,dd及-的组合，返回格式化后的字符串，考虑各种情况</h3>
+<h2 id="formatdatedate-formatdatedateformatyyyymmdd-">11. 请写一个函数，formatDate(date, format)，date参数为Date对象，format参数为yyyy,MM,dd及-的组合，返回格式化后的字符串，考虑各种情况</h2>
 
 <pre><code>？？？
 </code></pre>
 
-<h3 id="section-4">12. 在一个数组里每隔5个元素插入一个空字符串，使其成为一个新的数组。</h3>
+<h2 id="section-5">12. 在一个数组里每隔5个元素插入一个空字符串，使其成为一个新的数组。</h2>
 
 <p>代码一：</p>
 
@@ -565,11 +567,11 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 //splice()里那个 +i 真是精髓
 </code></pre>
 
-<h3 id="for1100">13. 不适用for循环，实现打印1~100</h3>
+<h2 id="for1100">13. 不适用for循环，实现打印1~100</h2>
 
-<h3 id="section-5">14. 一个数组为0、1混乱交叉排列，共100个元素，如何在只遍历一次的情况下，整理数组，使之前面所有的数都为0，后边所有的数都为1。</h3>
+<h2 id="section-6">14. 一个数组为0、1混乱交叉排列，共100个元素，如何在只遍历一次的情况下，整理数组，使之前面所有的数都为0，后边所有的数都为1。</h2>
 
-<h3 id="arrayn">15. 请为Array增加一个原型方法：该方法的功能是删除数组中的某一项n</h3>
+<h2 id="arrayn">15. 请为Array增加一个原型方法：该方法的功能是删除数组中的某一项n</h2>
 
 <p>代码：</p>
 

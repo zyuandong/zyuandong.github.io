@@ -231,11 +231,13 @@
 </div>
 
 <div id="contents">
-    <h1 id="nodejs">node.js模块</h1>
+    <h1 id="nodejs-2">学习nodejs &lt;2&gt;</h1>
+
+<h2 id="nodejs">node.js模块</h2>
 
 <p>每一个node.js都是一个node.js模块，包括JavaScript文件(（).js)、JSON文件(.json)和二进制模块文件(.node)</p>
 
-<h1 id="section">模块使用</h1>
+<h2 id="section">模块使用</h2>
 
 <p>创建一个文件mymodule.js，代码：</p>
 
@@ -286,7 +288,7 @@ hello.hello();
 hello.world();
 </code></pre>
 
-<h1 id="moduleexportsexports">module.exports和exports</h1>
+<h2 id="moduleexportsexports">module.exports和exports</h2>
 
 <p>module是一个对象，每个模块中都有一个module对象，module是当前模块的一个引用。module.exports对象是Module系统创建的，而exports可以看作是对module.exports对象的一个引用。在模块中require另一个模块时，以module.exports的值为准，因为有的情况下，module.exports和exports它们的值是不同的。module.exports和exports的关系可以表示成这样：</p>
 
@@ -310,9 +312,9 @@ console.log(m.e);
 console.log(e);
 </code></pre>
 
-<h1 id="nodejs-1">node.js包</h1>
+<h2 id="nodejs-1">node.js包</h2>
 
-<h2 id="section-1">1. 包</h2>
+<h3 id="section-1">1. 包</h3>
 
 <p>包用于管理多个模块及其依赖关系，可以对多个模块进行封装，包的根目录必须包含package.json文件，package.json文件是CommonJS规范用于描述包的文件，符合CommonJS规范的package.json文件应该包含一下字段：</p>
 
@@ -330,7 +332,7 @@ console.log(e);
   <li>dependencies: 包依赖。</li>
 </ol>
 
-<h1 id="npm">npm包管理工具</h1>
+<h2 id="npm">npm包管理工具</h2>
 
 <p>搜索第三方包：</p>
 

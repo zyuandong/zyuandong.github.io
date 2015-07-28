@@ -17,9 +17,9 @@ tags: JavaScript
 
 为了兼容这两种浏览器，可以使用$(window).load(function(evt){});事件来代替。这样将可正确获得图片的宽度和高度值。
 
-# 浏览器之间的区别
+## 浏览器之间的区别
 
-# 相关链接
+## 相关链接
 
 [链接一](http://www.cnblogs.com/itprogrammer/archive/2010/10/22/1858131.html)
 
@@ -27,4 +27,4 @@ tags: JavaScript
 
 [链接三](http://zhangzhaoaaa.iteye.com/blog/2124690)
 
-# 待总结。。。。
+## 待总结。。。。
