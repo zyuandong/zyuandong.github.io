@@ -142,6 +142,9 @@ tbody tr:hover {
 	padding: 0;
 	list-style: none;
 }
+.file-list ul li {
+	margin: 5px 0;
+}
 .file-list .date {
 	color: #1f3f5f;
 }
