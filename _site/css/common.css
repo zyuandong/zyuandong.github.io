@@ -35,7 +35,7 @@ a {
 a:hover,
 a:focus {
   background-color: #4ae8c4;
-  color: #fff;
+  color: #ffffff;
 }
 /* a标签 end */
 /* h1~h6 */
@@ -147,7 +147,23 @@ tbody tr:hover {
   list-style: none;
 }
 .file-list ul li {
-  margin: 5px 0;
+  color: #1f3f5f;
+  padding: 5px 0;
+}
+.file-list ul li .date {
+  display: inline-block;
+  width: 18%;
+  color: #c7254e;
+}
+.file-list ul li a {
+  display: inline-block;
+  width: 80%;
+  color: #1f3f5f;
+}
+.file-list ul li a:hover,
+.file-list ul li a:focus {
+  background-color: #4ae8c4;
+  color: #fff;
 }
 .file-list ul li:hover {
   background-color: #4ae8c4;
@@ -155,10 +171,6 @@ tbody tr:hover {
 .file-list ul li:hover a,
 .file-list ul li:hover .date {
   color: #fff;
-}
-.file-list .date,
-.file-list a {
-  color: #1f3f5f;
 }
 /* 文章目录 end */
 /* 文章显示 */
