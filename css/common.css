@@ -1,187 +1,192 @@
-html,
-body {
-	padding: 0;
-	margin: 0;
-	background-color: #eee;
+.base-mixin {
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+}
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
 }
 body {
-	color: #1f3f5f;
-	line-height: 1.5;
-	font-weight: 400;
-	word-wrap: break-word;
-	overflow: hidden;
-	font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+  color: #1f3f5f;
+  line-height: 1.5;
+  font-weight: 400;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
-#loading {	
-	width: 100%;
-	height: 3px;
-	background-color: red;
+#loading {
+  width: 100%;
+  height: 3px;
+  background-color: red;
 }
 .contents {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 /* a标签 */
 a {
-	color: #4ae8c4;
-	text-decoration: none;
+  color: #4ae8c4;
+  text-decoration: none;
 }
-a:hover {
-	background-color: #4ae8c4;
-	color: #fff;
+a:hover,
+a:focus {
+  background-color: #4ae8c4;
+  color: #fff;
 }
 /* a标签 end */
-
 /* h1~h6 */
-h1,h2,h3,h4,h5,h6 {
-	color: #000;
-	font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-weight: normal;
 }
 /* h1~h6 end */
-
 /* 代码块 */
 pre {
-	padding: 0px;
+  padding: 0px;
 }
 pre code {
-	border-radius: 5px;
-	font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  border-radius: 5px;
+  font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* 代码块 end */
-
 /* 行内代码 */
 li code,
 p code {
-	padding: 2px 4px;
-	color: #c7254e;
-	background-color: #ccc;
-	font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #ccc;
+  font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* 行内代码 end */
-
-/* 引入 */
+/* 引用 */
 blockquote {
-	border-left: 5px solid #ccc;
-	margin-left: 20px;
-	padding-left: 10px;
-	font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
+  border-left: 5px solid #ccc;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 引入 end */
-
+/* 引用 end */
 /* 选中文本 */
 ::selection {
-	background-color: #4ae8c4;
-	color: #fff;
+  background-color: #4ae8c4;
+  color: #fff;
 }
 ::-moz-selection {
-	background-color: #4ae8c4;
-	color: #fff;
+  background-color: #4ae8c4;
+  color: #fff;
 }
 /* 选中文本 end */
-
-/* table */
+/* 表格 */
 table {
-	margin-left: 30px;
-	border: 1px solid #ccc;
-	border-collapse:collapse;
+  margin-left: 30px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
 }
 thead {
-	background-color: #6ec8c9;
+  background-color: #6ec8c9;
 }
 tbody {
-	background-color: #d0edee;
+  background-color: #d0edee;
 }
 th,
 td {
-	padding: 6px 12px;
-	border: 1px solid #ccc;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
 }
 tbody tr:hover {
-	background-color: #6ec8c9;
+  background-color: #6ec8c9;
 }
-/* table end */
-
+/* 表格 end */
 /* 文章目录 */
 #slide-panel {
-	width: 520px;
-	height: 100%;
-	float: left;
+  width: 520px;
+  height: 100%;
+  float: left;
 }
 .guid {
-	width: 180px;
-	height: 100%;
-	float: left;
-	color: #ccc;
-	background-color: #1f3f5f;
+  width: 180px;
+  height: 100%;
+  float: left;
+  color: #ccc;
+  background-color: #1f3f5f;
 }
 .guid a:hover {
-	background-color: #1f3f5f;
-}
-.head-img {
-	width: 180px;
-	height: 180px;
+  background-color: #1f3f5f;
 }
 .guid ul {
-	margin: 10px 0;
-	padding: 0;
-	list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
 }
 .guid ul li {
-//	border-top: 1px solid #333;
-//	border-bottom:  1px solid #333;
-	padding: 10px 30px;
-	cursor: pointer;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.head-img {
+  width: 180px;
+  height: 180px;
 }
 .file-list {
-	width: 340px;
-	height: 100%;
-	float: left;
-	background-color: #ccc;
+  width: 340px;
+  height: 100%;
+  float: left;
+  background-color: #ccc;
 }
 .file-list ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .file-list ul li {
-	margin: 5px 0;
+  margin: 5px 0;
 }
 .file-list ul li:hover {
-	background-color: #4ae8c4;
+  background-color: #4ae8c4;
 }
 .file-list ul li:hover a,
 .file-list ul li:hover .date {
-	color: #fff;
+  color: #fff;
 }
-.file-list .date {
-	color: #1f3f5f;
-}
+.file-list .date,
 .file-list a {
-	color: #1f3f5f;
+  color: #1f3f5f;
 }
 /* 文章目录 end */
-
 /* 文章显示 */
 #contents {
-	height: 100%;
-	margin: 0;
-	padding: 0 30px;
-	overflow-y: auto; 
+  height: 100%;
+  margin: 0;
+  padding: 0 30px;
+  overflow-y: auto;
 }
 /* 文章显示 end */
-
 /* 切换按钮 */
 #slider {
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	top: 15px;
-	right: 15px;
-	background-color: #000;
-	cursor: pointer;
-	color: #fff;
-	text-align: center;
-	line-height: 50px;
-	border-radius: 50px;
-	opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #000;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50px;
+  opacity: 0.5;
 }
 /* 切换按钮 end */
+/* <strong></strong>标签 */
+strong {
+  color: #c7254e;
+}
+/* <strong></strong>标签 end */

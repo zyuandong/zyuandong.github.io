@@ -262,6 +262,8 @@
 
 <p>less中定义变量使用@，@开头:值;</p>
 
+<p><strong>sass中定义变量使用$，$开头: 值;</strong></p>
+
 <pre><code>html:
 &lt;div class="test"&gt;&lt;/div&gt;
 
@@ -272,7 +274,7 @@ less:
 }
 </code></pre>
 
-<h2 id="section-3">混合</h2>
+<h2 id="mixin">混合 (Mixin)</h2>
 
 <ul>
   <li>形式一</li>
@@ -322,7 +324,7 @@ less:
 
 <p>混合的好处之一就是在写border-radius之类的css3特殊样式，需要考虑到兼容性时，-moz-/-webkit-之类的前缀可以很方便的省略</p>
 
-<h2 id="section-4">匹配模式</h2>
+<h2 id="section-3">匹配模式</h2>
 
 <p>额。。这不是LOL。简单一点就是根据参数匹配相应已有的样式。</p>
 
@@ -348,7 +350,7 @@ less:
 }//这里不管匹配到哪一个，都会加上@_中的样式，@_是固定写法。
 </code></pre>
 
-<h2 id="section-5">运算</h2>
+<h2 id="section-4">运算</h2>
 
 <p>less中任何数字，颜色或者变量都可以参与运算，运算被包裹在括号中</p>
 
@@ -360,7 +362,7 @@ less:
 注意单位，只需要其中一个有待单位就ok
 </code></pre>
 
-<h2 id="section-6">嵌套规则</h2>
+<h2 id="section-5">嵌套规则</h2>
 
 <p>两种用法：</p>
 
