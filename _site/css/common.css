@@ -140,7 +140,7 @@ tbody tr:hover {
   height: 100%;
   float: left;
   background-color: #ccc;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .file-list ul {
   margin: 0;

@@ -1,5 +1,10 @@
 $(function(){
 	$('body').css('height', $(window).get(0).innerHeight);
+
+	$(window).resize(function() {
+
+		$('body').css('height', $(window).get(0).innerHeight);
+	});
 	
 	$('#slider').on('click', function(){
 		if($(this).hasClass('left')){
