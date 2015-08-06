@@ -130,6 +130,10 @@ tbody tr:hover {
 .guid ul li {
   padding: 10px 30px;
   cursor: pointer;
+  display: flex;
+  flex-wrap: row nowrap;
+  align-items: stretch;
+  justify-content: space-around;
 }
 .head-img {
   width: 180px;
@@ -149,29 +153,29 @@ tbody tr:hover {
 }
 .file-list ul li {
   color: #1f3f5f;
-  padding: 5px 0;
-}
-.file-list ul li .date {
-  display: inline-block;
-  width: 18%;
-  color: #c7254e;
 }
 .file-list ul li a {
-  display: inline-block;
-  width: 80%;
+  display: flex;
+  flex-wrap: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.file-list ul li a .title {
   color: #1f3f5f;
+  text-align: left;
+  padding: 5px 10px;
 }
-.file-list ul li a:hover,
-.file-list ul li a:focus {
-  background-color: #4ae8c4;
-  color: #fff;
+.file-list ul li a:hover {
+  background-color: rgba(221, 221, 221, 0.5);
 }
-.file-list ul li:hover {
-  background-color: #4ae8c4;
+.file-list ul li a:hover .title {
+  color: #c7254e;
+  text-decoration: underline;
 }
-.file-list ul li:hover a,
-.file-list ul li:hover .date {
-  color: #fff;
+.file-list ul .date-tip {
+  font-size: 14px;
+  color: #c7254e;
+  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 文章目录 end */
 /* 文章显示 */

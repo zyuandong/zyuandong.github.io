@@ -142,6 +142,10 @@ tbody {
 		li {
 			padding: 10px 30px;
 			cursor: pointer;
+			display: flex;
+			flex-wrap: row nowrap;
+			align-items: stretch;
+			justify-content: space-around;
 		}
 	}
 }
@@ -163,34 +167,36 @@ tbody {
 
 		li {
 			color: #1f3f5f;
-			padding: 5px 0;
-
-			.date {
-				display: inline-block;
-				width: 18%;
-				color: #c7254e;
-			}
 
 			a {
-				display: inline-block;
-				width: 80%;
-				color: #1f3f5f;
+				display: flex;
+				flex-wrap: row nowrap;
+				align-items: stretch;
+				justify-content: space-between;
 
-				&:hover,
-				&:focus {
-					background-color: #4ae8c4;
-					color: #fff;
+				.title {
+					color: #1f3f5f;
+					text-align: left;
+					padding: 5px 10px;
+					
+				}
+
+				&:hover {
+					background-color: rgba(221,221,221, 0.5);
+
+					.title {
+						color: #c7254e;
+						text-decoration: underline;
+					}
 				}
 			}
 
-			&:hover {
-				background-color: #4ae8c4;
+		}
 
-				a,
-				.date {
-					color: #fff;
-				}
-			}
+		.date-tip {
+			font-size: 14px;
+			color: #c7254e;
+			font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 		}
 	}
 }
