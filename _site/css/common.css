@@ -1,17 +1,4 @@
-.base-mixin {
-  padding: 0;
-  margin: 0;
-  background-color: #eee;
-}
-html {
-  padding: 0;
-  margin: 0;
-  background-color: #eee;
-}
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #eee;
   color: #1f3f5f;
   line-height: 1.5;
   font-weight: 400;
@@ -119,6 +106,14 @@ tbody tr:hover {
   color: #ccc;
   background-color: #1f3f5f;
 }
+.guid .head-img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  line-height: 180px;
+  box-shadow: 0 0 5px #6ec8c9;
+}
 .guid a:hover {
   background-color: #1f3f5f;
 }
@@ -134,10 +129,6 @@ tbody tr:hover {
   flex-wrap: row nowrap;
   align-items: stretch;
   justify-content: space-around;
-}
-.head-img {
-  width: 180px;
-  height: 180px;
 }
 .file-list {
   width: 340px;

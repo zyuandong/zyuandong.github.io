@@ -1,16 +1,7 @@
 @black: #000;
 @white: #fff;
-.base-mixin {
-	padding: 0;
-	margin: 0;
-	background-color: #eee;
-}
-html {
-	.base-mixin;
-}
-body {
-	.base-mixin;
 
+body {
 	color: #1f3f5f;
 	line-height: 1.5;
 	font-weight: 400;
@@ -127,6 +118,15 @@ tbody {
 	color: #ccc;
 	background-color: #1f3f5f;
 
+	.head-img {
+		display: block;
+		width: 180px;
+		height: 180px;
+		text-align: center;
+		line-height: 180px;
+		box-shadow: 0 0 5px #6ec8c9;
+	}
+
 	a {
 
 		&:hover {
@@ -148,10 +148,6 @@ tbody {
 			justify-content: space-around;
 		}
 	}
-}
-.head-img {
-	width: 180px;
-	height: 180px;
 }
 .file-list {
 	width: 340px;
