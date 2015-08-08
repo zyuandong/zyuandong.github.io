@@ -1,7 +1,6 @@
 ---
 layout: default
 title: nodejs beginner book
-monthFirst: true
 ---
 
 # The Node Beginner Book

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: web前端安全
+monthLast: true
 ---
 
 # 常见的前端安全策略

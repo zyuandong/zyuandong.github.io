@@ -25,12 +25,13 @@
 	<div class="file-list">
 		<ul>
 		    {% for post in site.posts %}
-		    {% if post.monthFirst %}
+		    {% if post.monthLast %}
 	    	<li class="date-tip">{{ post.date | date: "%Y %b" }}</li>
 		    {% endif %}
 		    <li>
 		        <a href="{{ site.baseurl }}{{ post.url }}">
 			    	<span class="title">{{ post.title }}</span>
+			    	
 		        </a>
 		    </li>
 		    {% endfor %}
