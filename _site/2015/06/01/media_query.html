@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML5 File API</title>
+    <title>详解media query媒体查询</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -259,38 +259,7 @@
 </div>
 
 <div id="contents">
-    <h1 id="html5-file-api">HTML5 File API</h1>
-
-<pre><code>&lt;input type='file' id="file"&gt;  
-&lt;input type="button" value="读取图像" onclick="readAsDataURL()"&gt;  
-&lt;div id="result"&gt;&lt;/div&gt;
-</code></pre>
-
-<pre><code>var result = document.getElementById('result');
-var file = document.getElementById('file');
-if(typeof FileReader == 'undefined'){
-    result.innerHTML = "&lt;p&gt;sorry&lt;/p&gt;";
-}
-function readAsDataURL(){
-    var file = document.getElementById('file').files[0];
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function(e){
-        var result = document.getElementById('result');
-        result.innerHTML = '&lt;img src="'+this.result+'"/&gt;';
-    };
-}
-</code></pre>
-
-<pre><code>$('#file').change(function(){
-    var file = $(this).get(0).files[0];
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function(){
-        $('#result').append('&lt;img src="'+this.result+'"&gt;');
-    };
-});
-</code></pre>
+    
 
 </div>
 

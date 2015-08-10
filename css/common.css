@@ -112,7 +112,6 @@ tbody tr:hover {
   height: 180px;
   text-align: center;
   line-height: 180px;
-  box-shadow: 0 0 5px #6ec8c9;
 }
 .guid a:hover {
   background-color: #1f3f5f;
@@ -175,6 +174,12 @@ tbody tr:hover {
   margin: 0;
   padding: 0 30px;
   overflow-y: auto;
+}
+@media screen and (max-width: 800px) {
+  #contents {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 /* 文章显示 end */
 /* 切换按钮 */

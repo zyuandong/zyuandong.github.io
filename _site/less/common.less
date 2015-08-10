@@ -84,7 +84,7 @@ blockquote {
 table {
 	margin-left: 30px;
 	border: 1px solid #ccc;
-	border-collapse:collapse;
+	border-collapse: collapse;
 }
 thead {
 	background-color: #6ec8c9;
@@ -124,7 +124,6 @@ tbody {
 		height: 180px;
 		text-align: center;
 		line-height: 180px;
-		box-shadow: 0 0 5px #6ec8c9;
 	}
 
 	a {
@@ -204,6 +203,11 @@ tbody {
 	margin: 0;
 	padding: 0 30px;
 	overflow-y: auto; 
+
+	@media screen and (max-width: 800px) {
+		width: 800px;
+		margin: 0 auto;
+	}
 }
 /* 文章显示 end */
 
