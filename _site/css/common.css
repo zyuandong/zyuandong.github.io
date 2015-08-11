@@ -175,11 +175,9 @@ tbody tr:hover {
   padding: 0 30px;
   overflow-y: auto;
 }
-@media screen and (max-width: 800px) {
-  #contents {
-    width: 800px;
-    margin: 0 auto;
-  }
+#contents .contents-box {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 /* 文章显示 end */
 /* 切换按钮 */
