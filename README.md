@@ -1,2 +1,2 @@
-# simpleBlog
+# My Blog
 bakerz's Blog
