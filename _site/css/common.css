@@ -201,3 +201,20 @@ strong {
   color: #c7254e;
 }
 /* <strong></strong>标签 end */
+/* media query */
+@media screen and (max-width: 768px) {
+  .guid {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .guid {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .guid {
+    display: block;
+  }
+}
+/* media query end */
