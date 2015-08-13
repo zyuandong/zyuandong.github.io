@@ -202,17 +202,17 @@ strong {
 }
 /* <strong></strong>标签 end */
 /* media query */
+@media screen and (max-width: 640px) {
+  .guid {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .guid {
     display: none;
   }
 }
-@media screen and (min-width: 992px) {
-  .guid {
-    display: block;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .guid {
     display: block;
   }

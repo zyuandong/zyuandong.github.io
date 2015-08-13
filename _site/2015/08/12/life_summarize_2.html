@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>nodejs <2></title>
+    <title>群处守住嘴，独时守住心</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/blog/js/jquery.js"></script>
@@ -268,124 +268,7 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="nodejs-2">学习nodejs &lt;2&gt;</h1>
-
-<h2 id="nodejs">node.js模块</h2>
-
-<p>每一个node.js都是一个node.js模块，包括JavaScript文件(（).js)、JSON文件(.json)和二进制模块文件(.node)</p>
-
-<h2 id="section">模块使用</h2>
-
-<p>创建一个文件mymodule.js，代码：</p>
-
-<pre><code>function hello() {
-	console.log('hello');
-}
-
-function world() {
-	console.log('world');
-}
-
-exports.hello = hello;
-exports.world = world;
-</code></pre>
-
-<p>在其他模块中引入并使用这个模块，我们需要为模块提供对外的接口，这就要用到<code>module.exports</code>和<code>exports</code>。</p>
-
-<p>在其他模块中使用require(module_name);载入需要的模块。
-新建 index.js 文件，代码：</p>
-
-<pre><code>var hello = require('./mymodule');
-
-hello.hello();
-hello.world();
-</code></pre>
-
-<p>也可以这样写mymodule.js:</p>
-
-<pre><code>function Hello(){
-	this.hello = function() {
-		console.log('hello');
-	};
-	this.world = function() {
-		console.log('world');
-	};
-}
-
-module.exports = Hello;
-</code></pre>
-
-<p>index.js则改写为：</p>
-
-<pre><code>var Hello = require('./mymodule');
-
-var hello = new Hello();
-
-hello.hello();
-hello.world();
-</code></pre>
-
-<h2 id="moduleexportsexports">module.exports和exports</h2>
-
-<p>module是一个对象，每个模块中都有一个module对象，module是当前模块的一个引用。module.exports对象是Module系统创建的，而exports可以看作是对module.exports对象的一个引用。在模块中require另一个模块时，以module.exports的值为准，因为有的情况下，module.exports和exports它们的值是不同的。module.exports和exports的关系可以表示成这样：</p>
-
-<pre><code>var m = {};
-var e = m.e = {};
-
-m.e.a = 5;
-e.b = 6;
-
-console.log(m.e);
-console.loog(e);
-</code></pre>
-
-<pre><code>var m = {};
-var e = m.e = {};
-
-m.e = { c:9 };
-e.d = 10;
-
-console.log(m.e);
-console.log(e);
-</code></pre>
-
-<h2 id="nodejs-1">node.js包</h2>
-
-<h3 id="section-1">1. 包</h3>
-
-<p>包用于管理多个模块及其依赖关系，可以对多个模块进行封装，包的根目录必须包含package.json文件，package.json文件是CommonJS规范用于描述包的文件，符合CommonJS规范的package.json文件应该包含一下字段：</p>
-
-<ol>
-  <li>name: 包名。包名是唯一的，只能包含小写字母、数字和下划线。</li>
-  <li>version: 包版本号。</li>
-  <li>description: 包说明。</li>
-  <li>keywords: 关键字数组。用于搜索。</li>
-  <li>homepage: 项目主页。</li>
-  <li>bugs: 提交bug的地址。</li>
-  <li>license: 许可证。</li>
-  <li>maintainers: 维护者数组。</li>
-  <li>contributors: 贡献者数组。</li>
-  <li>repositories: 项目仓库托管地址数组。</li>
-  <li>dependencies: 包依赖。</li>
-</ol>
-
-<h2 id="npm">npm包管理工具</h2>
-
-<p>搜索第三方包：</p>
-
-<p><code> $ sudo npm search express </code></p>
-
-<p>安装包：</p>
-
-<p><code> $ sudo npm install -g express </code></p>
-
-<p>更新包：</p>
-
-<p><code> $ sudo npm update express </code></p>
-
-<p>卸载包：</p>
-
-<p><code> $ sudo npm uninstall express </code></p>
+    <h1 id="section">群处守住嘴，独时守住心</h1>
 
     </div>
 </div>
