@@ -25,15 +25,16 @@
 	<div class="file-list">
 		<ul>
 		    {% for post in site.posts %}
-		    {% if post.monthLast %}
-	    	<li class="date-tip">{{ post.date | date: "%Y %b" }}</li>
-		    {% endif %}
-		    <li>
-		        <a href="{{ site.baseurl }}{{ post.url }}">
-			    	<span class="title">{{ post.title }}</span>
-			    	
-		        </a>
-		    </li>
+			    {% if post.monthLast %}
+		    	<li class="date-tip">{{ post.date | date: "%Y %b" }}</li>
+			    {% endif %}
+			    {% if post.public != false %}
+			    <li>
+			        <a href="{{ site.baseurl }}{{ post.url }}">
+				    	<span class="title">{{ post.title }}</span>
+			        </a>
+			    </li>
+			    {% endif %}
 		    {% endfor %}
 		</ul>
 	</div>

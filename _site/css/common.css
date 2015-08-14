@@ -104,7 +104,7 @@ tbody tr:hover {
   height: 100%;
   float: left;
   color: #ccc;
-  background-color: #1f3f5f;
+  background-color: rgba(31, 63, 95, 0.9);
 }
 .guid .head-img {
   display: block;
@@ -130,10 +130,10 @@ tbody tr:hover {
   justify-content: space-around;
 }
 .file-list {
-  width: 340px;
+  width: 320px;
   height: 100%;
   float: left;
-  background-color: #ccc;
+  background-color: rgba(213, 213, 213, 0.9);
   overflow-y: auto;
 }
 .file-list ul {
@@ -194,6 +194,7 @@ tbody tr:hover {
   line-height: 50px;
   border-radius: 50px;
   opacity: 0.5;
+  z-index: 2;
 }
 /* 切换按钮 end */
 /* <strong></strong>标签 */
@@ -203,18 +204,34 @@ strong {
 /* <strong></strong>标签 end */
 /* media query */
 @media screen and (max-width: 640px) {
-  .guid {
+  #slide-panel {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+  #slide-panel .guid {
     display: none;
   }
-}
-@media screen and (max-width: 768px) {
-  .guid {
-    display: none;
+  #slide-panel .file-list {
+    width: 100%;
+  }
+  #contents {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: stretch;
+    justify-content: center;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .guid {
-    display: block;
+@media screen and (min-width: 641px) and (max-width: 1280px) {
+  #slide-panel {
+    position: fixed;
+    z-index: 1;
+  }
+  #contents {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: stretch;
+    justify-content: center;
   }
 }
 /* media query end */
