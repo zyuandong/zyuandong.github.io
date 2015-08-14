@@ -14,9 +14,6 @@ body {
 	height: 3px;
 	background-color: red;
 }
-.contents {
-	margin-top: 20px;
-}
 /* a标签 */
 a {
 	color: #4ae8c4;
@@ -107,7 +104,6 @@ tbody {
 
 /* 文章目录 */
 #slide-panel {
-	width: 520px;
 	height: 100%;
 	float: left;
 }
@@ -172,29 +168,19 @@ tbody {
 		li {
 			color: #1f3f5f;
 
-			a {
-				display: flex;
-				flex-wrap: row nowrap;
-				align-items: stretch;
-				justify-content: space-between;
-
-				.title {
-					color: #1f3f5f;
-					text-align: left;
-					padding: 5px 10px;
-					
-				}
+			.title {
+				display: block;
+				width: 100%;
+				color: #1f3f5f;
+				text-align: left;
+				padding: 5px 10px;
 
 				&:hover {
-					background-color: rgba(221,221,221, 0.5);
-
-					.title {
-						color: #c7254e;
-						text-decoration: underline;
-					}
+					background-color: rgba(221,221,221, 0.9);
+					color: #c7254e;
+					text-decoration: underline;
 				}
 			}
-
 		}
 
 		.date-tip {
@@ -247,7 +233,7 @@ strong {
 /* media query */
 @media screen and (max-width: 640px) {
 	#slide-panel {
-		position: fixed;
+		position: absolute;
 		z-index: 1;
 		width: 100%;
 
@@ -273,7 +259,7 @@ strong {
 }
 @media screen and (min-width: 641px) and (max-width: 1280px) {
 	#slide-panel {
-		position: fixed;
+		position: absolute;
 		z-index: 1;
 	}
 	#contents {

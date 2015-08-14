@@ -11,9 +11,6 @@ body {
   height: 3px;
   background-color: red;
 }
-.contents {
-  margin-top: 20px;
-}
 /* a标签 */
 a {
   color: #4ae8c4;
@@ -95,7 +92,6 @@ tbody tr:hover {
 /* 表格 end */
 /* 文章目录 */
 #slide-panel {
-  width: 520px;
   height: 100%;
   float: left;
 }
@@ -151,21 +147,15 @@ tbody tr:hover {
 .file-list ul li {
   color: #1f3f5f;
 }
-.file-list ul li a {
-  display: flex;
-  flex-wrap: row nowrap;
-  align-items: stretch;
-  justify-content: space-between;
-}
-.file-list ul li a .title {
+.file-list ul li .title {
+  display: block;
+  width: 100%;
   color: #1f3f5f;
   text-align: left;
   padding: 5px 10px;
 }
-.file-list ul li a:hover {
-  background-color: rgba(221, 221, 221, 0.5);
-}
-.file-list ul li a:hover .title {
+.file-list ul li .title:hover {
+  background-color: rgba(221, 221, 221, 0.9);
   color: #c7254e;
   text-decoration: underline;
 }
@@ -212,7 +202,7 @@ strong {
 /* media query */
 @media screen and (max-width: 640px) {
   #slide-panel {
-    position: fixed;
+    position: absolute;
     z-index: 1;
     width: 100%;
   }
@@ -234,7 +224,7 @@ strong {
 }
 @media screen and (min-width: 641px) and (max-width: 1280px) {
   #slide-panel {
-    position: fixed;
+    position: absolute;
     z-index: 1;
   }
   #contents {

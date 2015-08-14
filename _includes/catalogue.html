@@ -35,8 +35,8 @@
 			    {% endif %}
 			    {% if post.public != false %}
 			    <li>
-			        <a href="{{ site.baseurl }}{{ post.url }}">
-				    	<span class="title">{{ post.title }}</span>
+			        <a class="title" href="{{ site.baseurl }}{{ post.url }}">
+			        	{{ post.title }}
 			        </a>
 			    </li>
 			    {% endif %}
