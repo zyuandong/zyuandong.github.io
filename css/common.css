@@ -136,9 +136,16 @@ tbody tr:hover {
   background-color: rgba(213, 213, 213, 0.9);
   overflow-y: auto;
 }
+.file-list .head-img-min {
+  height: 50px;
+  display: none;
+}
+.file-list .head-img-min img {
+  height: 100%;
+}
 .file-list ul {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   list-style: none;
 }
 .file-list ul li {
@@ -214,6 +221,9 @@ strong {
   }
   #slide-panel .file-list {
     width: 100%;
+  }
+  #slide-panel .file-list .head-img-min {
+    display: block;
   }
   #contents {
     display: flex;

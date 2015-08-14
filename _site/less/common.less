@@ -155,9 +155,18 @@ tbody {
 	background-color: rgba(213, 213, 213, 0.9);//#ccc
 	overflow-y: auto;
 
+	.head-img-min {
+		height: 50px;
+		display: none;
+
+		img {
+			height: 100%;
+		}
+	}
+
 	ul {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 20px 0;
 		list-style: none;
 
 		li {
@@ -241,13 +250,17 @@ strong {
 		position: fixed;
 		z-index: 1;
 		width: 100%;
-		
+
 		.guid {
 			display: none;
 		}
 
 		.file-list {
 			width: 100%;
+
+			.head-img-min {
+				display: block;
+			}
 		}
 	}
 	#contents {
@@ -270,6 +283,4 @@ strong {
 		justify-content: center;
 	}
 }
-
-
 /* media query end */
