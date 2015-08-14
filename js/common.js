@@ -10,7 +10,7 @@ $(function(){
 		if($(this).hasClass('left')){
 			$(this).removeClass('left').addClass('right');
 			$('#slide-panel').animate({
-				marginLeft: "-520px"
+				marginLeft: "-640px"
 			},500);
 		}else{
 			$(this).removeClass('right').addClass('left');
