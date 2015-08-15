@@ -1,7 +1,12 @@
 # Site settings
-title: bakerz
+title: My Blog :)
 description: "bakerz's blog"
 baseurl: /simplex
+
+author: 
+	name: bakerz
+	email: de1719@163.com
+	github: https://github.com/bakerz
 
 #Build settings
 markdown: kramdown
