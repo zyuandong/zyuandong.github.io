@@ -1,7 +1,7 @@
 # Site settings
 title: bakerz
 description: "bakerz's blog"
-baseurl: /blog
+baseurl: /simplex
 
 #Build settings
 markdown: kramdown
