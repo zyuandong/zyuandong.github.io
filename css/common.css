@@ -18,8 +18,8 @@ a {
 }
 a:hover,
 a:focus {
-  background-color: #4ae8c4;
-  color: #ffffff;
+  color: #4ac8c4;
+  text-decoration: underline;
 }
 /* a标签 end */
 /* h1~h6 */
