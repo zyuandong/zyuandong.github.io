@@ -2,7 +2,6 @@
 layout: default
 title: markdown语法
 tags: markdown
-monthLast: true
 ---
 
 ### 标题
