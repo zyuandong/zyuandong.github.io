@@ -47,7 +47,7 @@ li code,
 p code {
   padding: 2px 4px;
   color: #c7254e;
-  background-color: #ccc;
+  background-color: #eee;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* 行内代码 end */
