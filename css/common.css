@@ -32,6 +32,9 @@ h6 {
   color: #000;
   font-weight: normal;
 }
+h1 {
+  text-align: center;
+}
 /* h1~h6 end */
 /* 代码块 */
 pre {
