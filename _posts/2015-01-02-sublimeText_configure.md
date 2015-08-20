@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 将Sublime Text打造为适合自己的开发工具
-monthLSAT: true
+monthLast: true
 ---
 
 # 将Sublime Text打造为适合自己的开发工具
@@ -21,6 +21,8 @@ Vim
 Emacs
 
 ## 破解Sublime Text
+
+...
 
 ## 必备Package Control（扩展包管理器）
 
@@ -55,7 +57,47 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed
 
 ## 常用插件介绍
 
-###
+http://www.th7.cn/web/js/201411/68112.shtml
+
+- Emmet
+
+简单命令快速编写页面代码
+
+- Color Highlighter
+
+背景显示16进制颜色
+
+- BracketHighlighter
+
+代码匹配，可以匹配括号，引号等符号内的范围
+
+[可自己修改配色方案](http://www.dbpoo.com/sublime-text3-brackethighlighter/)
+
+- DocBlockr 
+
+生成注释模板
+
+- Tag
+
+HTML/XML标签缩进、补全、排版和校验工具
+
+Ctrl + Alt + f 自动排版
+
+- Less
+
+Less语法高亮
+
+- SideBarEnhancements
+
+SideBarEnhancements是一款很实用的右键菜单增强插件在安装该插件前，在Sublime Text左侧FOLDERS栏中点击右键只有寥寥几个简单的功能
+
+通过Package Control安装SideBarEnhancements插件后
+
+- Markdown Preview
+
+支持Markdown语法，直接生成HTML进行预览等功能
+
+[Sublime Text Package](https://packagecontrol.io/)
 
 ###
 
