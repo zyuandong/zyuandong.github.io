@@ -176,6 +176,7 @@ tbody tr:hover {
   overflow-y: auto;
 }
 #contents .contents-box {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
