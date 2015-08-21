@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Git skill</title>
+    <title>搭建Jekyll本地环境</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/simplex/js/jquery.js"></script>
@@ -317,34 +317,57 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="gitpullpush">配置Git，让pull与push时不用再输入用户名及密码</h1>
+    <h1 id="jekyll">搭建Jekyll本地环境</h1>
 
-<h2 id="windows">windows操作系统环境:</h2>
+<ol>
+  <li>安装<a href="http://rubyinstaller.org/downloads/">RubyInstaller</a></li>
+</ol>
 
-<p>在%HOME%目录中，一般为C:\users\Administrator，也可以是你自己创建的系统用户名目录，反正都在C:\users\中。文件名为.git-credentials,由于在Window中不允许直接创建以”.”开头的文件，所以需要借助git bash进行，打开git bash客户端，进行%HOME%目录，然后用touch创建文件 .git-credentials, 用vim编辑此文件，输入内容格式：</p>
+<p>下载最新版RubyInstaller,我的安装 <code>Ruby 2.2.2 (x64)</code>,安装的时候记得勾选添加环境变量。我的安装位置c:\Ruby22-x64</p>
 
-<p>在windows中添加一个HOME环境变量，变量名:HOME,变量值：%USERPROFILE%</p>
+<p>（这其中已经包含了RubyGems）</p>
 
-<p>进入%HOME%目录，新建一个名为”_netrc”的文件，文件中内容格式如下：</p>
+<p>可以从命令提示符更新RubyGems</p>
 
-<p>machine {git account name}.github.com
-login your-usernmae
-password your-password</p>
+<p>gem update –system</p>
 
-<p>重新打开git bash即可，无需再输入用户名和密码</p>
+<ol>
+  <li>安装<a href="http://rubyinstaller.org/downloads/">DevKit</a></li>
+</ol>
 
-<h2 id="linux">Linux操作系统环境:</h2>
+<p>在RubyInstaller同一页面中往下拉，选择自己Ruby版本对应的DevKit,下载,运行选择解压位置，我的解压位置c:\DevKit，然后执行：</p>
 
-<p>在根目录(~/)下，创建文件.git-credentials，命令 <code>touch .git-credentials</code></p>
+<p>cd c:\devkit
+ruby dk.rb init
+ruby dk.rb install</p>
 
-<p>编辑内容，命令 <code>vim .git-credentials</code>,插入内容<code>https://{username}:{password}$github.com</code></p>
+<p><a href="http://www.th7.cn/Program/Ruby/201409/280459.shtml">安装DevKit</a></p>
 
-<p>在终端下，执行 <code>git config --global credential.helper store</code>，就可以看到Git的配置文件~/.gitconfig文件多了一项</p>
+<ol>
+  <li>通过gem安装jekyll</li>
+</ol>
 
-<pre><code>[credentials]
-	helper = sctore
-</code></pre>
+<p>gem install jekyll</p>
 
+<p>由于万恶的GFW，可能出现许多问题，但是伟大的国人们总是能通过自己的知识、汗水找到解决的办法。taobao有个<a href="http://ruby.taobao.org/">仓库镜像</a>，可以绕过“天朝”的网络管理制度，还能提高应用程序的下载速度，大赞。</p>
+
+<p>配置下载源的过程如下：</p>
+
+<p>//<em>查看源</em></p>
+
+<p><code>gem sources list</code></p>
+
+<p><code>gem sources --remove https://rubygems.org/</code></p>
+
+<p>gem sources -a https://ruby.taobao.org/</p>
+
+<p>ok，更换源配置搞定</p>
+
+<p>最后一步，cmd打开命令提示符，cd到项目目录下（有_config.yml文件的目录），输入</p>
+
+<p>jekyll –server</p>
+
+<p>启动服务后，访问localhost:4000/项目名称/，即可访问</p>
 
     <div id="footer">
 	<p>

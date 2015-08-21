@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Git skill</title>
+    <title>将Sublime Text打造为适合自己的开发工具</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/simplex/js/jquery.js"></script>
@@ -317,34 +317,128 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="gitpullpush">配置Git，让pull与push时不用再输入用户名及密码</h1>
+    <h1 id="sublime-text">将Sublime Text打造为适合自己的开发工具</h1>
 
-<h2 id="windows">windows操作系统环境:</h2>
+<h2 id="sublime-text-1">选择Sublime Text</h2>
 
-<p>在%HOME%目录中，一般为C:\users\Administrator，也可以是你自己创建的系统用户名目录，反正都在C:\users\中。文件名为.git-credentials,由于在Window中不允许直接创建以”.”开头的文件，所以需要借助git bash进行，打开git bash客户端，进行%HOME%目录，然后用touch创建文件 .git-credentials, 用vim编辑此文件，输入内容格式：</p>
+<p>Sublime Text</p>
 
-<p>在windows中添加一个HOME环境变量，变量名:HOME,变量值：%USERPROFILE%</p>
+<p>notepadd++</p>
 
-<p>进入%HOME%目录，新建一个名为”_netrc”的文件，文件中内容格式如下：</p>
+<p>eclipse</p>
 
-<p>machine {git account name}.github.com
-login your-usernmae
-password your-password</p>
+<p>myeclipse</p>
 
-<p>重新打开git bash即可，无需再输入用户名和密码</p>
+<p>Vim</p>
 
-<h2 id="linux">Linux操作系统环境:</h2>
+<p>Emacs</p>
 
-<p>在根目录(~/)下，创建文件.git-credentials，命令 <code>touch .git-credentials</code></p>
+<h2 id="sublime-text-2">破解Sublime Text</h2>
 
-<p>编辑内容，命令 <code>vim .git-credentials</code>,插入内容<code>https://{username}:{password}$github.com</code></p>
+<p>…</p>
 
-<p>在终端下，执行 <code>git config --global credential.helper store</code>，就可以看到Git的配置文件~/.gitconfig文件多了一项</p>
+<h2 id="package-control">必备Package Control（扩展包管理器）</h2>
 
-<pre><code>[credentials]
-	helper = sctore
+<h3 id="section">一、控制台命令安装</h3>
+
+<p>Sublime Text 3</p>
+
+<pre><code>import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 </code></pre>
 
+<p>Sublime Text 2</p>
+
+<pre><code>import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
+</code></pre>
+
+<p>重启Sublime Text</p>
+
+<h3 id="section-1">二、手动安装</h3>
+
+<p>可能由于各种原因，无法使用代码安装，那可以通过以下步骤手动安装Package Control：</p>
+
+<ol>
+  <li>
+    <p>点击Preferences &gt; Browse Packages菜单</p>
+  </li>
+  <li>
+    <p>进入打开的目录的上层目录，然后再进入Installed Packages/目录</p>
+  </li>
+  <li>
+    <p>下载Package Control.sublime-package并复制到Installed Packages/目录</p>
+  </li>
+  <li>
+    <p>重启Sublime Text</p>
+  </li>
+</ol>
+
+<h2 id="section-2">常用插件介绍</h2>
+
+<p>http://www.th7.cn/web/js/201411/68112.shtml</p>
+
+<ul>
+  <li>Emmet</li>
+</ul>
+
+<p>简单命令快速编写页面代码</p>
+
+<ul>
+  <li>Color Highlighter</li>
+</ul>
+
+<p>背景显示16进制颜色</p>
+
+<ul>
+  <li>BracketHighlighter</li>
+</ul>
+
+<p>代码匹配，可以匹配括号，引号等符号内的范围</p>
+
+<p><a href="http://www.dbpoo.com/sublime-text3-brackethighlighter/">可自己修改配色方案</a></p>
+
+<ul>
+  <li>DocBlockr</li>
+</ul>
+
+<p>生成注释模板</p>
+
+<ul>
+  <li>Tag</li>
+</ul>
+
+<p>HTML/XML标签缩进、补全、排版和校验工具</p>
+
+<p>Ctrl + Alt + f 自动排版</p>
+
+<ul>
+  <li>Less</li>
+</ul>
+
+<p>Less语法高亮</p>
+
+<ul>
+  <li>SideBarEnhancements</li>
+</ul>
+
+<p>SideBarEnhancements是一款很实用的右键菜单增强插件在安装该插件前，在Sublime Text左侧FOLDERS栏中点击右键只有寥寥几个简单的功能</p>
+
+<p>通过Package Control安装SideBarEnhancements插件后</p>
+
+<ul>
+  <li>Markdown Preview</li>
+</ul>
+
+<p>支持Markdown语法，直接生成HTML进行预览等功能</p>
+
+<p><a href="https://packagecontrol.io/">Sublime Text Package</a></p>
+
+<h2 id="section-3">#</h2>
+
+<h2 id="sublime-text-3">Sublime Text快捷键</h2>
+
+<p>Ctrl + Shift + p 调用控制命令面板</p>
+
+<p>Ctrl + ~ 调出控制台</p>
 
     <div id="footer">
 	<p>
