@@ -228,7 +228,25 @@ tbody {
 	font-family: Consolas;
 	font-size: 30px;
 }
-
+#icon-slider {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	-ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#icon-slider.fullscreen {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
 .toRight {
 	animation: toRight 0.5s forwards;
 	-webkit-animation: toRight 0.5s forwards;
