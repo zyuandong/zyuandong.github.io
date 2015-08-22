@@ -1,0 +1,68 @@
+<blockquote>
+  <p>利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。</p>
+</blockquote>
+
+<h2 id="section">设置</h2>
+<p>设置队列使用Redis非常容易，在<code>app/config/queue.php</code>中配置</p>
+
+<pre><code>...
+'default' =&gt; 'redis',
+...
+'connections' =&gt; array(
+    ...
+    'redis' =&gt; array(
+        'driver' =&gt; 'redis',
+        'queue'  =&gt; 'waa',
+    ),
+),
+</code></pre>
+
+<p>即可。</p>
+
+<h2 id="section-1">使用</h2>
+<p>使用时不需要多配置，只要写好Queue类和其fire方法，在需要的位置出队即可。具体方法可以看<a href="http://laravel.com/docs/queues#basic-usage">这里</a>。</p>
+
+<pre><code>class SendEmail {
+
+    public function fire($job, $data)
+    {
+        //
+        $job-&gt;delete();
+    }
+
+}
+
+Queue::push('SendEmail@send', array('message' =&gt; $message));
+</code></pre>
+
+<h2 id="section-2">流程</h2>
+<p>Laravel利用artisan命令来执行出队操作，然后进行任务的执行。方法调用如下：</p>
+
+<ol>
+  <li>artisan queue:work</li>
+  <li>WorkerCommand:fire()</li>
+  <li>Worker:pop()</li>
+  <li>Worker:getNextJob()</li>
+  <li>RedisQueue:pop()</li>
+  <li>Worker:process()</li>
+</ol>
+
+<p>我遇到的问题就在这里，在<code>RedisQueue:pop()</code>方法中，有这样一句：</p>
+
+<pre><code>$this-&gt;redis-&gt;zadd($queue.':reserved', $this-&gt;getTime() + 60, $job);
+</code></pre>
+
+<p>这里将当前执行的任务放到另外一个reserved队列中，超时时间是60s。也就是说，如果60s后这个任务没有被删除掉，则任务会重新被放入队列中来。因此，在实际的使用过程中，任务很可能被多次执行。解决的办法是</p>
+
+<pre><code>class SendEmail {
+
+    public function fire($job, $data)
+    {
+        $job-&gt;delete();
+        // job 
+    }
+
+}
+</code></pre>
+
+<p>即先删除这个任务，再开始执行任务。</p>

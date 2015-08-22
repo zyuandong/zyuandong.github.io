@@ -1,0 +1,1890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>My Blog :)</title>
+    <link></link>
+    <description>bakerz's blog</description>
+    
+      <item>
+        <title>群处守住嘴，独时守住心</title>
+        <link>/2015/08/12/life_summarize_2.html</link>
+        <guid isPermaLink="true">/2015/08/12/life_summarize_2.html</guid>
+        <pubDate>Wed, 12 Aug 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;section&quot;&gt;群处守住嘴，独时守住心&lt;/h1&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>详细解析normalize.css</title>
+        <link>/2015/08/08/normalize.html</link>
+        <guid isPermaLink="true">/2015/08/08/normalize.html</guid>
+        <pubDate>Sat, 08 Aug 2015 00:00:00 +0800</pubDate>
+        <description>
+</description>
+      </item>
+    
+      <item>
+        <title>css实现多行文本溢出时显示省略号</title>
+        <link>/2015/08/07/cssKill_1.html</link>
+        <guid isPermaLink="true">/2015/08/07/cssKill_1.html</guid>
+        <pubDate>Fri, 07 Aug 2015 00:00:00 +0800</pubDate>
+        <description>
+</description>
+      </item>
+    
+      <item>
+        <title>flexbox</title>
+        <link>/2015/08/04/Flexbox.html</link>
+        <guid isPermaLink="true">/2015/08/04/Flexbox.html</guid>
+        <pubDate>Tue, 04 Aug 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;flexbox&quot;&gt;Flexbox弹性盒子模型&lt;/h1&gt;
+
+&lt;p&gt;首先设定父元素display: flex; 即成为一个弹性盒子&lt;/p&gt;
+
+&lt;p&gt;flex-row属性来指定子元素布局是在一行，还是一列显示&lt;/p&gt;
+
+&lt;p&gt;flex-row是flex-direction(伸缩流的方向)和flex-wrap（伸缩行换行）的缩写&lt;/p&gt;
+
+&lt;p&gt;flex-direction属性包括：row(默认)、row-revers、column、column-revers&lt;/p&gt;
+
+&lt;p&gt;flex-wrap属性包括：nowrap（默认）、wrap、wrap-revers&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;侧轴对齐伸缩项目&lt;/h2&gt;
+
+&lt;p&gt;align-items&lt;/p&gt;
+
+&lt;p&gt;属性包括：&lt;/p&gt;
+
+&lt;p&gt;flex-start、baseline&lt;/p&gt;
+
+&lt;p&gt;flex-end&lt;/p&gt;
+
+&lt;p&gt;center&lt;/p&gt;
+
+&lt;p&gt;stretch&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;主轴对齐伸缩项目&lt;/h2&gt;
+
+&lt;p&gt;justify-content&lt;/p&gt;
+
+&lt;p&gt;属性包括：&lt;/p&gt;
+
+&lt;p&gt;flex-start&lt;/p&gt;
+
+&lt;p&gt;flex-end&lt;/p&gt;
+
+&lt;p&gt;center&lt;/p&gt;
+
+&lt;p&gt;space-between&lt;/p&gt;
+
+&lt;p&gt;space-around&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Git skill</title>
+        <link>/2015/07/21/Git_skill.html</link>
+        <guid isPermaLink="true">/2015/07/21/Git_skill.html</guid>
+        <pubDate>Tue, 21 Jul 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;gitpullpush&quot;&gt;配置Git，让pull与push时不用再输入用户名及密码&lt;/h1&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;windows操作系统环境:&lt;/h2&gt;
+
+&lt;p&gt;在%HOME%目录中，一般为C:\users\Administrator，也可以是你自己创建的系统用户名目录，反正都在C:\users\中。文件名为.git-credentials,由于在Window中不允许直接创建以”.”开头的文件，所以需要借助git bash进行，打开git bash客户端，进行%HOME%目录，然后用touch创建文件 .git-credentials, 用vim编辑此文件，输入内容格式：&lt;/p&gt;
+
+&lt;p&gt;在windows中添加一个HOME环境变量，变量名:HOME,变量值：%USERPROFILE%&lt;/p&gt;
+
+&lt;p&gt;进入%HOME%目录，新建一个名为”_netrc”的文件，文件中内容格式如下：&lt;/p&gt;
+
+&lt;p&gt;machine {git account name}.github.com
+login your-usernmae
+password your-password&lt;/p&gt;
+
+&lt;p&gt;重新打开git bash即可，无需再输入用户名和密码&lt;/p&gt;
+
+&lt;h2 id=&quot;linux&quot;&gt;Linux操作系统环境:&lt;/h2&gt;
+
+&lt;p&gt;在根目录(~/)下，创建文件.git-credentials，命令 &lt;code&gt;touch .git-credentials&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;编辑内容，命令 &lt;code&gt;vim .git-credentials&lt;/code&gt;,插入内容&lt;code&gt;https://{username}:{password}$github.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在终端下，执行 &lt;code&gt;git config --global credential.helper store&lt;/code&gt;，就可以看到Git的配置文件~/.gitconfig文件多了一项&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[credentials]
+	helper = sctore
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>详解media query媒体查询</title>
+        <link>/2015/06/01/media_query.html</link>
+        <guid isPermaLink="true">/2015/06/01/media_query.html</guid>
+        <pubDate>Mon, 01 Jun 2015 00:00:00 +0800</pubDate>
+        <description>
+</description>
+      </item>
+    
+      <item>
+        <title>MySQL小技巧</title>
+        <link>/2015/05/11/MySQL.html</link>
+        <guid isPermaLink="true">/2015/05/11/MySQL.html</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;mysql&quot;&gt;MySQL小技巧总结&lt;/h1&gt;
+
+&lt;h2 id=&quot;cmdmysql&quot;&gt;使用cmd命令终端登录MySQL&lt;/h2&gt;
+
+&lt;p&gt;方法一：如果添加了MySQL环境变量，可以直接使用命令&lt;code&gt;mysql -uroot -p***(***是用户密码)&lt;/code&gt;，回车便可以登录&lt;/p&gt;
+
+&lt;p&gt;方法二：未添加MySQL环境变量，可以将MySQL安装目录下的bin目录添加到系统环境变量，即可参照方法一继续进行；也可切换到MySQL的安装目录下的bin目录，再使用方法一&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-1&quot;&gt;连接到远程主机上的MySQL&lt;/h2&gt;
+
+&lt;p&gt;假设远程主机IP为：110.110.110.110，用户名为：root，密码为：123456。则命令为：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mysql -h110.110.110.110 -uroot -p123456&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-2&quot;&gt;查看MySQL字符编码&lt;/h2&gt;
+
+&lt;p&gt;MySQL命令模式下，输入&lt;code&gt;show variables like &#39;%char%&#39;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;show variables like &#39;character_set_%&#39;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-3&quot;&gt;解决MySQL命令模式下，展示数据乱码&lt;/h2&gt;
+
+&lt;p&gt;输入&lt;code&gt;set names utf8;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;查看MySQL编码结果为&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set character_set_client=utf8;
+
+set character_set_results=utf8;
+
+set character_set_connection=utf8;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在命令行插入、查询数据前，执行命令&lt;code&gt;set names gbk;&lt;/code&gt;或者&lt;code&gt;set names gb2312;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;插入、查询结束后再&lt;code&gt;set names utf8;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这样就能正常插入和查询中文并且保持数据库编码为utf8&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;修改密码&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;mysqladmin -u 用户名 -p 旧密码 password 新密码&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;给root加个密码ab12&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;首先在DOS下进入目录mysql\bin，然后键入以下命令:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mysqladmin -u root -password ab12&lt;/code&gt;(注：因为开始时root没有密码，所以-p旧密码一项就可以省略了)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;再将root的密码改为qwe123&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;mysqladmin -u root -p ab12 password qwe123&lt;/code&gt;;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;创建数据库&lt;/h2&gt;
+
+&lt;p&gt;创建一个名为qwer的数据库—&lt;code&gt;create database qwer;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;显示数据库&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;show databases;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;删除数据库&lt;/h2&gt;
+
+&lt;p&gt;删除名为qwer的数据库&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;drop database qwer&lt;/code&gt;;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;导出整个数据库&lt;/h2&gt;
+
+&lt;p&gt;导出文件默认是存在mysql\bin目录下&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mysqldump -u 用户名 -p 数据库名 &amp;gt; 导出的文件名&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mysqldump -u user_name -p database_name &amp;gt; outfile_name.sql&lt;/code&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Python <1></title>
+        <link>/2015/05/08/Python_1.html</link>
+        <guid isPermaLink="true">/2015/05/08/Python_1.html</guid>
+        <pubDate>Fri, 08 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;python&quot;&gt;开始学习Python&lt;/h1&gt;
+
+&lt;p&gt;Python语言是一种既简单又功能强大的编程语言。它注重的是如何解决问题而不是编程语言的语法和结构。&lt;/p&gt;
+
+&lt;p&gt;balabalabala…..&lt;/p&gt;
+
+&lt;p&gt;这里的介绍我就不再照搬了，网上的好教程（比如&lt;a href=&quot;http://sebug.net/paper/python/&quot;&gt;简明Python教程&lt;/a&gt;等）太多了，我不想做教程的搬运工，我只想写一写我在学习过程中的心得体会以及过程中所遇到的困难。希望能一点点从这个过程中快速成长。&lt;/p&gt;
+
+&lt;h2 id=&quot;python-1&quot;&gt;通过Python连接数据库&lt;/h2&gt;
+
+&lt;p&gt;既然不是教学篇，那我就直接跳过大篇幅的介绍，使用SQLite，来实现Python连接数据库的一个小示例，以熟悉Python的语法特点。&lt;/p&gt;
+
+&lt;p&gt;SQLite是一种嵌入式数据库，它的数据就是一个文件。Python就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。&lt;/p&gt;
+
+&lt;p&gt;通过Python的交互式命令行试验一下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 导入SQLite驱动:
+&amp;gt;&amp;gt;&amp;gt; import sqlite3
+
+# 连接到SQLite数据库
+# 数据库文件是test.db
+# 如果文件不存在，会自动在当前目录创建:
+&amp;gt;&amp;gt;&amp;gt; conn = sqlite3.connect(&#39;test.db&#39;)
+
+# 创建一个Cursor:
+&amp;gt;&amp;gt;&amp;gt; cursor = conn.cursor()
+
+# 执行一条SQL语句，创建user表:
+&amp;gt;&amp;gt;&amp;gt; cursor.execute(&#39;create table user (id varchar(20) primary key, name varchar(20))&#39;)
+&amp;lt;sqlite3.Cursor object at 0x10f8aa260&amp;gt;
+
+# 继续执行一条SQL语句，插入一条记录:
+&amp;gt;&amp;gt;&amp;gt; cursor.execute(&#39;insert into user (id, name) values (\&#39;1\&#39;, \&#39;Michael\&#39;)&#39;)
+&amp;lt;sqlite3.Cursor object at 0x10f8aa260&amp;gt;
+
+# 通过rowcount获得插入的行数:
+&amp;gt;&amp;gt;&amp;gt; cursor.rowcount
+1
+
+# 关闭Cursor:
+&amp;gt;&amp;gt;&amp;gt; cursor.close()
+
+# 提交事务:
+&amp;gt;&amp;gt;&amp;gt; conn.commit()
+
+# 关闭Connection:
+&amp;gt;&amp;gt;&amp;gt; conn.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样，简单的通过SQLite连接数据库的大致过程就有一点思路了。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>AJAX</title>
+        <link>/2015/05/04/AJAX.html</link>
+        <guid isPermaLink="true">/2015/05/04/AJAX.html</guid>
+        <pubDate>Mon, 04 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;ajax&quot;&gt;认识AJAX&lt;/h1&gt;
+
+&lt;h1 id=&quot;jqueryajax&quot;&gt;jquery中的AJAX&lt;/h1&gt;
+
+&lt;h1 id=&quot;geijson&quot;&gt;$.geiJSON()跨域请求&lt;/h1&gt;
+
+&lt;p&gt;url = ‘http://localhost:8080/xxx’,&lt;/p&gt;
+
+&lt;p&gt;url = ‘http://localhost:8080/xxx?callback=?’&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>web前端安全</title>
+        <link>/2015/04/27/webSecurity.html</link>
+        <guid isPermaLink="true">/2015/04/27/webSecurity.html</guid>
+        <pubDate>Mon, 27 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;section&quot;&gt;常见的前端安全策略&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;DOM check&lt;/li&gt;
+  &lt;li&gt;HTTPS&lt;/li&gt;
+  &lt;li&gt;csp&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;比较&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;DOM check&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;维护成本大，很难彻底解决攻击&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;从网络协议中开辟加密信道用于交换信息，能从网络层很好控制攻击，但是需要证书支持，且加载速度慢，访问效率不高。内部访问的资源也必须同在HTTPS协议中。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;csp&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;一种代价小，回报大的安全策略，但是兼容性不好。&lt;/p&gt;
+
+&lt;p&gt;……&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>必备基础知识</title>
+        <link>/2015/04/14/fundation_course.html</link>
+        <guid isPermaLink="true">/2015/04/14/fundation_course.html</guid>
+        <pubDate>Tue, 14 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;section&quot;&gt;数据结构部分&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;网络部分&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HTTP协议&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;转自：&lt;a href=&quot;http://blog.csdn.net/gueter/archive/2007/03/08/1524447.aspx&quot;&gt;http://blog.csdn.net/gueter/archive/2007/03/08/1524447.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Author :Jeffrey&lt;/p&gt;
+
+&lt;p&gt;HTTP(Hyper Text Transfer Protocol:超文本传输协议)是一个属于应用层的面向对象的协议，其主要的特点概括如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;支持客户/服务器模式&lt;/li&gt;
+  &lt;li&gt;简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度快。&lt;/li&gt;
+  &lt;li&gt;灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。&lt;/li&gt;
+  &lt;li&gt;无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。&lt;/li&gt;
+  &lt;li&gt;无状态： HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;一、HTTP协议详解之URL篇&lt;/p&gt;
+
+&lt;p&gt;http（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。&lt;/p&gt;
+
+&lt;p&gt;HTTP URL (URL是一种特殊类型的URI，包含了用于查找某个资源的足够的信息)的格式如下：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;http://host[”:”port][abs_path]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;http: 表示通过HTTP协议来定位网络资源;&lt;/p&gt;
+
+&lt;p&gt;host: 表示合法的Internet主机域名或者IP地址;&lt;/p&gt;
+
+&lt;p&gt;port: 指定一个端口号，为空则使用缺省端口80;&lt;/p&gt;
+
+&lt;p&gt;abs_path: 指定请求资源的URI,如果URL中没有给出abs_path，那么当它作为请求URI时，必须以“/”的形式给出，通常这个工作浏览器自动帮我们完成。&lt;/p&gt;
+
+&lt;p&gt;1、输入：www.guet.edu.cn&lt;/p&gt;
+
+&lt;p&gt;浏览器自动转换成：http://www.guet.edu.cn/&lt;/p&gt;
+
+&lt;p&gt;2、http:192.168.0.116:8080/index.jsp&lt;/p&gt;
+
+&lt;p&gt;二、HTTP协议详解之请求篇&lt;/p&gt;
+
+&lt;p&gt;http请求由三部分组成，分别是：请求行、消息报头、请求正文&lt;/p&gt;
+
+&lt;p&gt;1、请求行以一个方法符号开头，以空格分开，后面跟着请求的URI和协议的版本，格式如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Method Request-URI HTTP-Version CRLF&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;其中 Method表示请求方法；Request-URI是一个统一资源标识符；HTTP-Version表示请求的HTTP协议版本；CRLF表示回车和换行（除了作为结尾的CRLF外，不允许出现单独的CR或LF字符）。&lt;/p&gt;
+
+&lt;p&gt;请求方法（所有方法全为大写）有多种，各个方法的解释如下：&lt;/p&gt;
+
+&lt;p&gt;GET     请求获取Request-URI所标识的资源&lt;/p&gt;
+
+&lt;p&gt;POST    在Request-URI所标识的资源后附加新的数据&lt;/p&gt;
+
+&lt;p&gt;HEAD    请求获取由Request-URI所标识的资源的响应消息报头&lt;/p&gt;
+
+&lt;p&gt;PUT     请求服务器存储一个资源，并用Request-URI作为其标识&lt;/p&gt;
+
+&lt;p&gt;DELETE  请求服务器删除Request-URI所标识的资源&lt;/p&gt;
+
+&lt;p&gt;TRACE   请求服务器回送收到的请求信息，主要用于测试或诊断&lt;/p&gt;
+
+&lt;p&gt;CONNECT 保留将来使用&lt;/p&gt;
+
+&lt;p&gt;OPTIONS 请求查询服务器的性能，或者查询与资源相关的选项和需求&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;应用举例：&lt;/h3&gt;
+
+&lt;p&gt;GET方法：在浏览器的地址栏中输入网址的方式访问网页时，浏览器采用GET方法向服务器获取资源，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;eg:GET /form.html HTTP/1.1 (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;POST方法要求被请求服务器接受附在请求后面的数据，常用于提交表单。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;eg：POST /reg.jsp HTTP/ (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Accept:image/gif,image/x-xbit,... (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;HOST:www.guet.edu.cn (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Content-Length:22 (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Connection:Keep-Alive (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cache-Control:no-cache (CRLF)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(CRLF)                 //该CRLF表示消息报头已经结束，在此之前为消息报头&lt;/p&gt;
+
+&lt;p&gt;user=jeffrey&amp;amp;pwd=1234  //此行以下为提交的数据&lt;/p&gt;
+
+&lt;p&gt;HEAD方法与GET方法几乎是一样的，对于HEAD请求的回应部分来说，它的HTTP头部中包含的信息与通过GET请求所得到的信息是相同的。利用这个方法，不必传输整个资源内容，就可以得到Request-URI所标识的资源的信息。该方法常用于测试超链接的有效性，是否可以访问，以及最近是否更新。&lt;/p&gt;
+
+&lt;p&gt;2、请求报头后述&lt;/p&gt;
+
+&lt;p&gt;3、请求正文(略)&lt;/p&gt;
+
+&lt;p&gt;三、HTTP协议详解之响应篇&lt;/p&gt;
+
+&lt;p&gt;在接收和解释请求消息后，服务器返回一个HTTP响应消息。&lt;/p&gt;
+
+&lt;p&gt;HTTP响应也是由三个部分组成，分别是：状态行、消息报头、响应正文
+1、状态行格式如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;HTTP-Version Status-Code Reason-Phrase CRLF&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;其中，HTTP-Version表示服务器HTTP协议的版本；&lt;/p&gt;
+
+&lt;p&gt;Status-Code表示服务器发回的响应状态代码；&lt;/p&gt;
+
+&lt;p&gt;Reason-Phrase表示状态代码的文本描述。&lt;/p&gt;
+
+&lt;p&gt;状态代码有三位数字组成，第一个数字定义了响应的类别，且有五种可能取值：&lt;/p&gt;
+
+&lt;p&gt;1xx：指示信息–表示请求已接收，继续处理&lt;/p&gt;
+
+&lt;p&gt;2xx：成功–表示请求已被成功接收、理解、接受&lt;/p&gt;
+
+&lt;p&gt;3xx：重定向–要完成请求必须进行更进一步的操作&lt;/p&gt;
+
+&lt;p&gt;4xx：客户端错误–请求有语法错误或请求无法实现&lt;/p&gt;
+
+&lt;p&gt;5xx：服务器端错误–服务器未能实现合法的请求&lt;/p&gt;
+
+&lt;p&gt;常见状态代码、状态描述、说明：&lt;/p&gt;
+
+&lt;p&gt;200 OK      //客户端请求成功&lt;/p&gt;
+
+&lt;p&gt;400 Bad Request  //客户端请求有语法错误，不能被服务器所理解&lt;/p&gt;
+
+&lt;p&gt;401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用&lt;/p&gt;
+
+&lt;p&gt;403 Forbidden  //服务器收到请求，但是拒绝提供服务&lt;/p&gt;
+
+&lt;p&gt;404 Not Found  //请求资源不存在，eg：输入了错误的URL&lt;/p&gt;
+
+&lt;p&gt;500 Internal Server Error //服务器发生不可预期的错误&lt;/p&gt;
+
+&lt;p&gt;503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常&lt;/p&gt;
+
+&lt;p&gt;eg：HTTP/1.1 200 OK （CRLF）&lt;/p&gt;
+
+&lt;p&gt;2、响应报头后述&lt;/p&gt;
+
+&lt;p&gt;3、响应正文就是服务器返回的资源的内容&lt;/p&gt;
+
+&lt;p&gt;四、HTTP协议详解之消息报头篇&lt;/p&gt;
+
+&lt;p&gt;HTTP消息由客户端到服务器的请求和服务器到客户端的响应组成。请求消息和响应消息都是由开始行（对于请求消息，开始行就是请求行，对于响应消息，开始行就是状态行），消息报头（可选），空行（只有CRLF的行），消息正文（可选）组成。&lt;/p&gt;
+
+&lt;p&gt;HTTP消息报头包括普通报头、请求报头、响应报头、实体报头。&lt;/p&gt;
+
+&lt;p&gt;每一个报头域都是由名字+“：”+空格+值 组成，消息报头域的名字是大小写无关的。&lt;/p&gt;
+
+&lt;p&gt;1、普通报头&lt;/p&gt;
+
+&lt;p&gt;在普通报头中，有少数报头域用于所有的请求和响应消息，但并不用于被传输的实体，只用于传输的消息。
+eg：&lt;/p&gt;
+
+&lt;p&gt;Cache-Control   用于指定缓存指令，缓存指令是单向的（响应中出现的缓存指令在请求中未必会出现），且是独立的（一个消息的缓存指令不会影响另一个消息处理的缓存机制），HTTP1.0使用的类似的报头域为Pragma。&lt;/p&gt;
+
+&lt;p&gt;请求时的缓存指令包括：no-cache（用于指示请求或响应消息不能缓存）、no-store、max-age、max-stale、min-fresh、only-if-cached;&lt;/p&gt;
+
+&lt;p&gt;响应时的缓存指令包括：public、private、no-cache、no-store、no-transform、must-revalidate、proxy-revalidate、max-age、s-maxage.&lt;/p&gt;
+
+&lt;p&gt;eg：为了指示IE浏览器（客户端）不要缓存页面，服务器端的JSP程序可以编写如下：response.sehHeader(“Cache-Control”,”no-cache”);&lt;/p&gt;
+
+&lt;p&gt;//response.setHeader(“Pragma”,”no-cache”);作用相当于上述代码，通常两者//合用
+这句代码将在发送的响应消息中设置普通报头域：Cache-Control:no-cache&lt;/p&gt;
+
+&lt;p&gt;Date普通报头域表示消息产生的日期和时间&lt;/p&gt;
+
+&lt;p&gt;Connection普通报头域允许发送指定连接的选项。例如指定连接是连续，或者指定“close”选项，通知服务器，在响应完成后，关闭连接&lt;/p&gt;
+
+&lt;p&gt;2、请求报头&lt;/p&gt;
+
+&lt;p&gt;请求报头允许客户端向服务器端传递请求的附加信息以及客户端自身的信息。&lt;/p&gt;
+
+&lt;p&gt;常用的请求报头&lt;/p&gt;
+
+&lt;p&gt;Accept
+Accept请求报头域用于指定客户端接受哪些类型的信息。&lt;/p&gt;
+
+&lt;p&gt;eg：Accept：image/gif，表明客户端希望接受GIF图象格式的资源；Accept：text/html，表明客户端希望接受html文本。&lt;/p&gt;
+
+&lt;p&gt;Accept-Charset&lt;/p&gt;
+
+&lt;p&gt;Accept-Charset请求报头域用于指定客户端接受的字符集。&lt;/p&gt;
+
+&lt;p&gt;eg：Accept-Charset:iso-8859-1,gb2312.如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。&lt;/p&gt;
+
+&lt;p&gt;Accept-Encoding&lt;/p&gt;
+
+&lt;p&gt;Accept-Encoding请求报头域类似于Accept，但是它是用于指定可接受的内容编码。&lt;/p&gt;
+
+&lt;p&gt;eg：Accept-Encoding:gzip.deflate.如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。&lt;/p&gt;
+
+&lt;p&gt;Accept-Language&lt;/p&gt;
+
+&lt;p&gt;Accept-Language请求报头域类似于Accept，但是它是用于指定一种自然语言。&lt;/p&gt;
+
+&lt;p&gt;eg：Accept-Language:zh-cn.如果请求消息中没有设置这个报头域，服务器假定客户端对各种语言都可以接受。&lt;/p&gt;
+
+&lt;p&gt;Authorization&lt;/p&gt;
+
+&lt;p&gt;Authorization请求报头域主要用于证明客户端有权查看某个资源。&lt;/p&gt;
+
+&lt;p&gt;当浏览器访问一个页面时，如果收到服务器的响应代码为401（未授权），可以发送一个包含Authorization请求报头域的请求，要求服务器对其进行验证。&lt;/p&gt;
+
+&lt;p&gt;Host（发送请求时，该报头域是必需的）&lt;/p&gt;
+
+&lt;p&gt;Host请求报头域主要用于指定被请求资源的Internet主机和端口号，它通常从HTTP URL中提取出来的，&lt;/p&gt;
+
+&lt;p&gt;eg：我们在浏览器中输入：http://www.guet.edu.cn/index.html&lt;/p&gt;
+
+&lt;p&gt;浏览器发送的请求消息中，就会包含Host请求报头域，如下：&lt;/p&gt;
+
+&lt;p&gt;Host：www.guet.edu.cn&lt;/p&gt;
+
+&lt;p&gt;此处使用缺省端口号80，若指定了端口号，则变成：Host：www.guet.edu.cn:指定端口号&lt;/p&gt;
+
+&lt;p&gt;User-Agent&lt;/p&gt;
+
+&lt;p&gt;我们上网登陆论坛的时候，往往会看到一些欢迎信息，其中列出了你的操作系统的名称和版本，你所使用的浏览器的名称和版本，这往往让很多人感到很神奇，实际上，服务器应用程序就是从User-Agent这个请求报头域中获取到这些信息。User-Agent请求报头域允许客户端将它的操作系统、浏览器和其它属性告诉服务器。不过，这个报头域不是必需的，如果我们自己编写一个浏览器，不使用User-Agent请求报头域，那么服务器端就无法得知我们的信息了。&lt;/p&gt;
+
+&lt;p&gt;请求报头举例：&lt;/p&gt;
+
+&lt;p&gt;GET /form.html HTTP/1.1 (CRLF)&lt;/p&gt;
+
+&lt;p&gt;Accept:image/gif,image/x-xbitmap,image/jpeg,application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword,&lt;em&gt;/&lt;/em&gt; (CRLF)&lt;/p&gt;
+
+&lt;p&gt;Accept-Language:zh-cn (CRLF)&lt;/p&gt;
+
+&lt;p&gt;Accept-Encoding:gzip,deflate (CRLF)&lt;/p&gt;
+
+&lt;p&gt;If-Modified-Since:Wed,05 Jan 2007 11:21:25 GMT (CRLF)&lt;/p&gt;
+
+&lt;p&gt;If-None-Match:W/”80b1a4c018f3c41:8317” (CRLF)&lt;/p&gt;
+
+&lt;p&gt;User-Agent:Mozilla/4.0(compatible;MSIE6.0;Windows NT 5.0) (CRLF)&lt;/p&gt;
+
+&lt;p&gt;Host:www.guet.edu.cn (CRLF)&lt;/p&gt;
+
+&lt;p&gt;Connection:Keep-Alive (CRLF)&lt;/p&gt;
+
+&lt;p&gt;(CRLF)&lt;/p&gt;
+
+&lt;p&gt;3、响应报头&lt;/p&gt;
+
+&lt;p&gt;响应报头允许服务器传递不能放在状态行中的附加响应信息，以及关于服务器的信息和对Request-URI所标识的资源进行下一步访问的信息。&lt;/p&gt;
+
+&lt;p&gt;常用的响应报头&lt;/p&gt;
+
+&lt;p&gt;Location&lt;/p&gt;
+
+&lt;p&gt;Location响应报头域用于重定向接受者到一个新的位置。Location响应报头域常用在更换域名的时候。&lt;/p&gt;
+
+&lt;p&gt;Server&lt;/p&gt;
+
+&lt;p&gt;Server响应报头域包含了服务器用来处理请求的软件信息。与User-Agent请求报头域是相对应的。&lt;/p&gt;
+
+&lt;p&gt;下面是Server响应报头域的一个例子：&lt;/p&gt;
+
+&lt;p&gt;Server：Apache-Coyote/1.1&lt;/p&gt;
+
+&lt;p&gt;WWW-Authenticate&lt;/p&gt;
+
+&lt;p&gt;WWW-Authenticate响应报头域必须被包含在401（未授权的）响应消息中，客户端收到401响应消息时候，并发送Authorization报头域请求服务器对其进行验证时，服务端响应报头就包含该报头域。&lt;/p&gt;
+
+&lt;p&gt;eg：WWW-Authenticate:Basic realm=”Basic Auth Test!”&lt;/p&gt;
+
+&lt;p&gt;//可以看出服务器对请求资源采用的是基本验证机制。&lt;/p&gt;
+
+&lt;p&gt;4、实体报头&lt;/p&gt;
+
+&lt;p&gt;请求和响应消息都可以传送一个实体。一个实体由实体报头域和实体正文组成，但并不是说实体报头域和实体正文要在一起发送，可以只发送实体报头域。实体报头定义了关于实体正文（eg：有无实体正文）和请求所标识的资源的元信息。&lt;/p&gt;
+
+&lt;p&gt;常用的实体报头&lt;/p&gt;
+
+&lt;p&gt;Content-Encoding&lt;/p&gt;
+
+&lt;p&gt;Content-Encoding实体报头域被用作媒体类型的修饰符，它的值指示了已经被应用到实体正文的附加内容的编码，因而要获得Content-Type报头域中所引用的媒体类型，必须采用相应的解码机制。&lt;/p&gt;
+
+&lt;p&gt;Content-Encoding这样用于记录文档的压缩方法，&lt;/p&gt;
+
+&lt;p&gt;eg：Content-Encoding：gzip&lt;/p&gt;
+
+&lt;p&gt;Content-Language&lt;/p&gt;
+
+&lt;p&gt;Content-Language实体报头域描述了资源所用的自然语言。没有设置该域则认为实体内容将提供给所有的语言阅读
+者。&lt;/p&gt;
+
+&lt;p&gt;eg：Content-Language:da
+Content-Length&lt;/p&gt;
+
+&lt;p&gt;Content-Length实体报头域用于指明实体正文的长度，以字节方式存储的十进制数字来表示。&lt;/p&gt;
+
+&lt;p&gt;Content-Type&lt;/p&gt;
+
+&lt;p&gt;Content-Type实体报头域用语指明发送给接收者的实体正文的媒体类型。&lt;/p&gt;
+
+&lt;p&gt;eg：
+Content-Type:text/html;charset=ISO-8859-1&lt;/p&gt;
+
+&lt;p&gt;Content-Type:text/html;charset=GB2312&lt;/p&gt;
+
+&lt;p&gt;Last-Modified&lt;/p&gt;
+
+&lt;p&gt;Last-Modified实体报头域用于指示资源的最后修改日期和时间。&lt;/p&gt;
+
+&lt;p&gt;Expires&lt;/p&gt;
+
+&lt;p&gt;Expires实体报头域给出响应过期的日期和时间。为了让代理服务器或浏览器在一段时间以后更新缓存中(再次访问曾访问过的页面时，直接从缓存中加载，缩短响应时间和降低服务器负载)的页面，我们可以使用Expires实体报头域指定页面过期的时间。&lt;/p&gt;
+
+&lt;p&gt;eg：Expires：Thu，15 Sep 2006 16:23:12 GMT&lt;/p&gt;
+
+&lt;p&gt;HTTP1.1的客户端和缓存必须将其他非法的日期格式（包括0）看作已经过期。eg：为了让浏览器不要缓存页面，我们也可以利用Expires实体报头域，设置为0，jsp中程序如下：response.setDateHeader(“Expires”,”0”);&lt;/p&gt;
+
+&lt;p&gt;五、利用telnet观察http协议的通讯过程&lt;/p&gt;
+
+&lt;p&gt;实验目的及原理：&lt;/p&gt;
+
+&lt;p&gt;利用MS的telnet工具，通过手动输入http请求信息的方式，向服务器发出请求，服务器接收、解释和接受请求后，会返回一个响应，该响应会在telnet窗口上显示出来，从而从感性上加深对http协议的通讯过程的认识。&lt;/p&gt;
+
+&lt;p&gt;实验步骤：&lt;/p&gt;
+
+&lt;p&gt;1、打开telnet
+1.1 打开telnet
+运行–&amp;gt;cmd–&amp;gt;telnet&lt;/p&gt;
+
+&lt;p&gt;1.2 打开telnet回显功能
+set localecho&lt;/p&gt;
+
+&lt;p&gt;2、连接服务器并发送请求
+2.1 open www.guet.edu.cn 80  //注意端口号不能省略&lt;/p&gt;
+
+&lt;p&gt;HEAD /index.asp HTTP/1.0&lt;/p&gt;
+
+&lt;p&gt;Host:www.guet.edu.cn&lt;/p&gt;
+
+&lt;p&gt;/&lt;em&gt;我们可以变换请求方法,请求桂林电子主页内容,输入消息如下&lt;/em&gt;/&lt;/p&gt;
+
+&lt;p&gt;open www.guet.edu.cn 80&lt;/p&gt;
+
+&lt;p&gt;GET /index.asp HTTP/1.0  //请求资源的内容&lt;/p&gt;
+
+&lt;p&gt;Host:www.guet.edu.cn&lt;/p&gt;
+
+&lt;p&gt;2.2 open www.sina.com.cn 80  //在命令提示符号下直接输入telnet www.sina.com.cn 80&lt;/p&gt;
+
+&lt;p&gt;HEAD /index.asp HTTP/1.0&lt;/p&gt;
+
+&lt;p&gt;Host:www.sina.com.cn&lt;/p&gt;
+
+&lt;p&gt;3 实验结果：&lt;/p&gt;
+
+&lt;p&gt;3.1 请求信息2.1得到的响应是:&lt;/p&gt;
+
+&lt;p&gt;HTTP/1.1 200 OK                                              //请求成功&lt;/p&gt;
+
+&lt;p&gt;Server: Microsoft-IIS/5.0                                    //web服务器&lt;/p&gt;
+
+&lt;p&gt;Date: Thu,08 Mar 200707:17:51 GMT&lt;/p&gt;
+
+&lt;p&gt;Connection: Keep-Alive&lt;/p&gt;
+
+&lt;p&gt;Content-Length: 23330&lt;/p&gt;
+
+&lt;p&gt;Content-Type: text/html&lt;/p&gt;
+
+&lt;p&gt;Expries: Thu,08 Mar 2007 07:16:51 GMT&lt;/p&gt;
+
+&lt;p&gt;Set-Cookie: ASPSESSIONIDQAQBQQQB=BEJCDGKADEDJKLKKAJEOIMMH;&lt;/p&gt;
+
+&lt;p&gt;path=/Cache-control: private&lt;/p&gt;
+
+&lt;p&gt;//资源内容省略&lt;/p&gt;
+
+&lt;p&gt;3.2 请求信息2.2得到的响应是:&lt;/p&gt;
+
+&lt;p&gt;HTTP/1.0 404 Not Found       //请求失败&lt;/p&gt;
+
+&lt;p&gt;Date: Thu, 08 Mar 2007 07:50:50 GMT&lt;/p&gt;
+
+&lt;p&gt;Server: Apache/2.0.54 &lt;unix&gt;&lt;/unix&gt;&lt;/p&gt;
+
+&lt;p&gt;Last-Modified: Thu, 30 Nov 2006 11:35:41 GMT&lt;/p&gt;
+
+&lt;p&gt;ETag: “6277a-415-e7c76980”&lt;/p&gt;
+
+&lt;p&gt;Accept-Ranges: bytes&lt;/p&gt;
+
+&lt;p&gt;X-Powered-By: mod_xlayout_jh/0.0.1vhs.markII.remix&lt;/p&gt;
+
+&lt;p&gt;Vary: Accept-Encoding&lt;/p&gt;
+
+&lt;p&gt;Content-Type: text/html&lt;/p&gt;
+
+&lt;p&gt;X-Cache: MISS from zjm152-78.sina.com.cn&lt;/p&gt;
+
+&lt;p&gt;Via: 1.0 zjm152-78.sina.com.cn:80&amp;lt;squid/2.6.STABLES-20061207&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;X-Cache: MISS from th-143.sina.com.cn&lt;/p&gt;
+
+&lt;p&gt;Connection: close&lt;/p&gt;
+
+&lt;p&gt;失去了跟主机的连接&lt;/p&gt;
+
+&lt;p&gt;按任意键继续…&lt;/p&gt;
+
+&lt;p&gt;4 .注意事项：&lt;/p&gt;
+
+&lt;p&gt;1、出现输入错误，则请求不会成功。&lt;/p&gt;
+
+&lt;p&gt;2、报头域不分大小写。&lt;/p&gt;
+
+&lt;p&gt;3、更深一步了解HTTP协议，可以查看RFC2616，在http://www.letf.org/rfc上找到该文件。&lt;/p&gt;
+
+&lt;p&gt;4、开发后台程序必须掌握http协议&lt;/p&gt;
+
+&lt;p&gt;六、HTTP协议相关技术补充&lt;/p&gt;
+
+&lt;p&gt;1、基础：&lt;/p&gt;
+
+&lt;p&gt;高层协议有：文件传输协议FTP、电子邮件传输协议SMTP、域名系统服务DNS、网络新闻传输协议NNTP和HTTP协议等&lt;/p&gt;
+
+&lt;p&gt;中介由三种：代理(Proxy)、网关(Gateway)和通道(Tunnel)，一个代理根据URI的绝对格式来接受请求，重写全部或部分消息，通过 URI的标识把已格式化过的请求发送到服务器。网关是一个接收代理，作为一些其它服务器的上层，并且如果必须的话，可以把请求翻译给下层的服务器协议。一 个通道作为不改变消息的两个连接之间的中继点。当通讯需要通过一个中介(例如：防火墙等)或者是中介不能识别消息的内容时，通道经常被使用。&lt;/p&gt;
+
+&lt;p&gt;代理(Proxy)：一个中间程序，它可以充当一个服务器，也可以充当一个客户机，为其它客户机建立请求。请求是通过可能的翻译在内部或经过传递到其它的 服务器中。一个代理在发送请求信息之前，必须解释并且如果可能重写它。代理经常作为通过防火墙的客户机端的门户，代理还可以作为一个帮助应用来通过协议处 理没有被用户代理完成的请求。&lt;/p&gt;
+
+&lt;p&gt;网关(Gateway)：一个作为其它服务器中间媒介的服务器。与代理不同的是，网关接受请求就好象对被请求的资源来说它就是源服务器；发出请求的客户机并没有意识到它在同网关打交道。
+网关经常作为通过防火墙的服务器端的门户，网关还可以作为一个协议翻译器以便存取那些存储在非HTTP系统中的资源。&lt;/p&gt;
+
+&lt;p&gt;通道(Tunnel)：是作为两个连接中继的中介程序。一旦激活，通道便被认为不属于HTTP通讯，尽管通道可能是被一个HTTP请求初始化的。当被中继 的连接两端关闭时，通道便消失。当一个门户(Portal)必须存在或中介(Intermediary)不能解释中继的通讯时通道被经常使用。&lt;/p&gt;
+
+&lt;p&gt;2、协议分析的优势—HTTP分析器检测网络攻击&lt;/p&gt;
+
+&lt;p&gt;以模块化的方式对高层协议进行分析处理，将是未来入侵检测的方向。&lt;/p&gt;
+
+&lt;p&gt;HTTP及其代理的常用端口80、3128和8080在network部分用port标签进行了规定&lt;/p&gt;
+
+&lt;p&gt;3、HTTP协议Content Lenth限制漏洞导致拒绝服务攻击&lt;/p&gt;
+
+&lt;p&gt;使用POST方法时，可以设置ContentLenth来定义需要传送的数据长度，例如ContentLenth:999999999，在传送完成前，内 存不会释放，攻击者可以利用这个缺陷，连续向WEB服务器发送垃圾数据直至WEB服务器内存耗尽。这种攻击方法基本不会留下痕迹。&lt;/p&gt;
+
+&lt;p&gt;http://www.cnpaf.net/Class/HTTP/0532918532667330.html&lt;/p&gt;
+
+&lt;p&gt;4、利用HTTP协议的特性进行拒绝服务攻击的一些构思&lt;/p&gt;
+
+&lt;p&gt;服务器端忙于处理攻击者伪造的TCP连接请求而无暇理睬客户的正常请求（毕竟客户端的正常请求比率非常之小），此时从正常客户的角度看来，服务器失去响应，这种情况我们称作：服务器端受到了SYNFlood攻击（SYN洪水攻击）。&lt;/p&gt;
+
+&lt;p&gt;而Smurf、TearDrop等是利用ICMP报文来Flood和IP碎片攻击的。本文用“正常连接”的方法来产生拒绝服务攻击。&lt;/p&gt;
+
+&lt;p&gt;19端口在早期已经有人用来做Chargen攻击了，即Chargen_Denial_of_Service，但是！他们用的方法是在两台Chargen 服务器之间产生UDP连接，让服务器处理过多信息而DOWN掉，那么，干掉一台WEB服务器的条件就必须有2个：&lt;/p&gt;
+
+&lt;p&gt;1.有Chargen服务&lt;/p&gt;
+
+&lt;p&gt;2.有HTTP 服务&lt;/p&gt;
+
+&lt;p&gt;方法：攻击者伪造源IP给N台Chargen发送连接请求（Connect），Chargen接收到连接后就会返回每秒72字节的字符流（实际上根据网络实际情况，这个速度更快）给服务器。&lt;/p&gt;
+
+&lt;p&gt;5、Http指纹识别技术&lt;/p&gt;
+
+&lt;p&gt;Http指纹识别的原理大致上也是相同的：记录不同服务器对Http协议执行中的微小差别进行识别.Http指纹识别比TCP/IP堆栈指纹识别复杂许 多,理由是定制Http服务器的配置文件、增加插件或组件使得更改Http的响应信息变的很容易,这样使得识别变的困难；然而定制TCP/IP堆栈的行为 需要对核心层进行修改,所以就容易识别.&lt;/p&gt;
+
+&lt;p&gt;要让服务器返回不同的Banner信息的设置是很简单的,象Apache这样的开放源代码的Http服务器,用户可以在源代码里修改Banner信息,然 后重起Http服务就生效了；对于没有公开源代码的Http服务器比如微软的IIS或者是Netscape,可以在存放Banner信息的Dll文件中修 改,相关的文章有讨论的,这里不再赘述,当然这样的修改的效果还是不错的.另外一种模糊Banner信息的方法是使用插件。&lt;/p&gt;
+
+&lt;p&gt;常用测试请求：&lt;/p&gt;
+
+&lt;p&gt;1：HEAD/Http/1.0发送基本的Http请求&lt;/p&gt;
+
+&lt;p&gt;2：DELETE/Http/1.0发送那些不被允许的请求,比如Delete请求&lt;/p&gt;
+
+&lt;p&gt;3：GET/Http/3.0发送一个非法版本的Http协议请求&lt;/p&gt;
+
+&lt;p&gt;4：GET/JUNK/1.0发送一个不正确规格的Http协议请求&lt;/p&gt;
+
+&lt;p&gt;Http指纹识别工具Httprint,它通过运用统计学原理,组合模糊的逻辑学技术,能很有效的确定Http服务器的类型.它可以被用来收集和分析不同Http服务器产生的签名。&lt;/p&gt;
+
+&lt;p&gt;6、其他：为了提高用户使用浏览器时的性能，现代浏览器还支持并发的访问方式，浏览一个网页时同时建立多个连接，以迅速获得一个网页上的多个图标，这样能更快速完成整个网页的传输。
+HTTP1.1中提供了这种持续连接的方式，而下一代HTTP协议：HTTP-NG更增加了有关会话控制、丰富的内容协商等方式的支持，来提供
+更高效率的连接。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;操作系统部分&lt;/h3&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>使用 Zipcar 在加州租车</title>
+        <link>/suyan.github.io/%E7%94%9F%E6%B4%BB/2015/04/13/rent-car-by-zipcar.html</link>
+        <guid isPermaLink="true">/suyan.github.io/%E7%94%9F%E6%B4%BB/2015/04/13/rent-car-by-zipcar.html</guid>
+        <pubDate>Mon, 13 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;在洛杉矶这个“大饼”中生活，没有车真的是各种艰难。2月初把驾照考过了，接下来就考虑买车或者租车。买车算了算不是很划算，而且对车也不太懂，就考虑先租车。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在 &lt;a href=&quot;http://transnet.usc.edu/index.php/getting-around/&quot;&gt;USC Transportation&lt;/a&gt; 上排名最靠前的两个公司是 Enterprise 和 Zipcar。前者是传统的租车公司，后者稍微不一样一点。我还没有在 Enterprise 上租过车，所以先说说 Zipcar.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;zipcar-&quot;&gt;Zipcar 简介&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.zipcar.com&quot;&gt;Zipcar&lt;/a&gt; 是会员制的，在注册以后会给发一张 Zipcard 过来，有了这张卡你就可以随时去订车和提车了。Zipcar 不像其他租车行一样你得去固定地方统一取车，它的车就停在路边，他们有固定的停车位。来看一下 Zipcar 在 USC 附近的停车点。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-zipcar-map.png&quot; alt=&quot;zipcar map&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;zipcar--1&quot;&gt;Zipcar 使用&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1. 注册获得会员卡&lt;/h3&gt;
+
+&lt;p&gt;大部分学校应该都和 Zipcar 有合作，所以注册之前应该去学校网站看一下。学生可以将会员费缩减到 25刀/年。&lt;/p&gt;
+
+&lt;p&gt;注册地址在&lt;a href=&quot;http://members.zipcar.com/registration&quot;&gt;这里&lt;/a&gt;，注册的时候去搜一下 Promo Code，我就是注册完才看到一个免费40刀的 Code T_T。在美国注册帐号一看到 Code 填空就应该去搜搜~&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2. 租车&lt;/h3&gt;
+
+&lt;p&gt;租车可以在网站上或者手机 APP 上进行。租车非常方便，只要选择相应车辆，以及使用时间预订即可。然后在预订时间的前15分钟内取车。取车很简单，拿自己的 Zipcard 刷一下车前部的一个感应器门就开了。然后上车发动走人。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3. 加油&lt;/h3&gt;
+
+&lt;p&gt;Zipcar 租的车带了加油卡，就在司机座位上面。虽然看起来比较贴心，但是这个卡经常不能用，因为它似乎是个信用卡，然后一旦有人尝试多次失败就被锁了，导致后面的人们也不能用。&lt;/p&gt;
+
+&lt;p&gt;加油卡的使用方式是：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;刷一下加油卡 (Gas Card)&lt;/li&gt;
+  &lt;li&gt;输入汽车里程表上的数&lt;/li&gt;
+  &lt;li&gt;输入 Zipcard 上面那个 6 位的 Gas ID&lt;/li&gt;
+  &lt;li&gt;加油&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;如果加油卡失效，这个时候会提示：Find your cashier。不用担心，直接用自己的信用卡加油就好了，然后记得要收据 (Receipt)，然后把收据发到 support@zipcar.com 报销就好。记得在邮件里加上自己的 Zipcard ID.&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;4. 还车&lt;/h3&gt;
+
+&lt;p&gt;还车记得一定要还到原车的位置。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;5. 保险&lt;/h3&gt;
+
+&lt;p&gt;在帐号注册的时候有个保险选项&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-zipcar-damage-fee.png&quot; alt=&quot;damage fee&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我建议选择那个complete waiver，毕竟开车难免磕碰。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;注意&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;1. 逾期罚款&lt;/h3&gt;
+
+&lt;p&gt;租车的时候宁可多不可少，因为逾期惩罚是非常重的，应该是一个小时50刀左右。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Front-End Enginer summarize</title>
+        <link>/2015/04/11/life_summarize_1.html</link>
+        <guid isPermaLink="true">/2015/04/11/life_summarize_1.html</guid>
+        <pubDate>Sat, 11 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;section&quot;&gt;前端&lt;/h1&gt;
+
+&lt;p&gt;首先引用曾看过的一段话：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“随着互联网的发展，相比其他职位，前端开发时最容易被边缘化的一个工种，终其所有，前端也只是一个服务于浏览器端信息呈现的工种。而随着科技的发展，未来信息呈现的媒介会愈发丰富，目前浏览器的垄断地位将不复存在，前端也会随之没落。君子不器，当有远虑。”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我不否认或许某天身为前端开发的我也会面临这样的情况，UI设计师，直接就动手写起了原本应该由自己负责的前端代码，抛开规范、性能和兼容性，也许这段代码还能正常运行。&lt;/p&gt;
+
+&lt;p&gt;我也承认我看到这样的情形，我首先会愤怒、再是无奈、最后才会冷静。显然作为一个门槛不是很高的职业，人人都可以在很短的时间里迅速成长为一个合格的F2E。&lt;/p&gt;
+
+&lt;p&gt;不想别淘汰，还是尽快武装自己的大脑吧，或者是重新规划自己的职业发展。现在开始，一切从头。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;计算机基础&lt;/h1&gt;
+
+&lt;p&gt;快毕业了，也面试了大大小小的一些公司，共同点就是考查对基础知识的掌握。什么算法、数据结构、网络、操作系统，尤其是大公司，更看重这点。so，这要求前端需要有良好的计算机基础背景。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;继续深入前端技术&lt;/h1&gt;
+
+&lt;p&gt;前端绝不是 HTML+JavaScript+CSS。早在09年就诞生了能在后端（脱离浏览器环境）运行JavaScript的运行时环境–node.js；有了自己的MVC框架–angularJs；有了整套完整的前端自动化集成解决方–Yeoman 、Bower 、Grunt / Gulp；等等很多因前端技术快速发展所诞生的技术。&lt;/p&gt;
+
+&lt;p&gt;虽然依旧是前端，但也许已慢慢磨砺为高级阶段。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-3&quot;&gt;转后端&lt;/h1&gt;
+
+&lt;p&gt;都说不懂后端的前端不是好前端，会后端自然会是每位前端发展到瓶颈期时需要面对的。当然也不是完全脱离前端工作，总之两者结合，在困窘的时期也能打通一条道路。&lt;/p&gt;
+
+&lt;h1 id=&quot;or&quot;&gt;转产品or管理&lt;/h1&gt;
+
+&lt;p&gt;这也是许多人愿意接受的一种现实，毕竟在国内就是这种年轻就是资本的环境，雇主更愿意招一群有活力，且要求不高的年轻人。或许有许多经验的你更应该去指导别人？！&lt;/p&gt;
+
+&lt;h1 id=&quot;section-4&quot;&gt;创业做自己的产品&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I have a dream”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;曾和好友聊过自己的梦想，再普通不过的大学校园旁的一个小餐馆里，两个小伙子，傻傻的憧憬着未来。这一刻我会铭记于心，那是值得记录的。&lt;/p&gt;
+
+&lt;p&gt;但创业、做自己产品这条路也不是立马说做就做，这还与一个人的性格特点有很大的联系。而我自己最想做的东西却离互联网很遥远，但是我最想做的东西。。。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“梦想还是要有的，万一实现了呢？”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;end&quot;&gt;End&lt;/h1&gt;
+
+&lt;p&gt;最后对于我来说，我会依照每一点严格要求自己，毕竟互联网更新换代这么快，谁会知道多年后又是怎样一番景象，珍惜眼前的时光，不虚度才是最重要的。&lt;/p&gt;
+
+&lt;p&gt;最后是看了一篇介绍前端工程师的文章，自己的截取的精华部分：&lt;/p&gt;
+
+&lt;h1 id=&quot;section-5&quot;&gt;大多人心中的前端工程师&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;把Photoshop文件、图片或者线框放进一个网页；&lt;/li&gt;
+  &lt;li&gt;偶尔设计Photoshop文件、图片或者线框；&lt;/li&gt;
+  &lt;li&gt;用js编程，为网页制作动画，过渡效果；&lt;/li&gt;
+  &lt;li&gt;用html+css编程，确定网页的内容和形式。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;section-6&quot;&gt;事实上，前端工程师在做的是：&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在设计师和工程师之间创建可视化的语言；&lt;/li&gt;
+  &lt;li&gt;用可视化的设计，定义一组代表内容、品牌和功能的组件；&lt;/li&gt;
+  &lt;li&gt;为web应用程序的公约、框架、需求、可视化的语言和规格设定底线；&lt;/li&gt;
+  &lt;li&gt;定义web应用程序的设备、浏览器、屏幕、动画的范围；&lt;/li&gt;
+  &lt;li&gt;开发一个质量保证指南来确保品牌忠诚度、代码质量、产品标准；&lt;/li&gt;
+  &lt;li&gt;为web应用程序设定适当的行距、字体、标题、图标、余量、填充等；&lt;/li&gt;
+  &lt;li&gt;为web应用程序设定多种分辨率的图像，设备为主的实体模型，同时维护设计指南；&lt;/li&gt;
+  &lt;li&gt;用account semantics, accessibility, SEO, schemas, microformats标记web应用程序；&lt;/li&gt;
+  &lt;li&gt;用一种友好的，消耗小的，设备和客户端感知的方式连接API，获取内容；&lt;/li&gt;
+  &lt;li&gt;开发客户端代码来显示流畅的动画、过渡、延迟加载、交互、应用工作流程，大多数时间用来考虑渐进增强和向后兼容的标准；&lt;/li&gt;
+  &lt;li&gt;保证后台连接安全， 采取跨地资源共享（CORS）的程序考虑，防止跨站点脚本（XSS）和跨站点请求伪造（CSRF）；&lt;/li&gt;
+  &lt;li&gt;最重要的是，尽管有严格的期限、利益相关者的要求，以及设备的限制，无论现在还是将来永远是【客户第一】。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;section-7&quot;&gt;糟糕的前端工程师是这样做事的：&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;滥用js库，因为他们实际上并不了解js的内部；&lt;/li&gt;
+  &lt;li&gt;滥用js插件，抄别人的代码哪怕自己根本读不懂；&lt;/li&gt;
+  &lt;li&gt;给web应用程序添加css框架，却只用到css/js的5%，没有看到任何需求、设计或者比较和评价；&lt;/li&gt;
+  &lt;li&gt;认为只要添加了css框架，网站就可以【有求必应】；&lt;/li&gt;
+  &lt;li&gt;一边在说着【响应式web设计】，却对服务器端技术一无所知；&lt;/li&gt;
+  &lt;li&gt;用css编程时不管预处理器、命名规范等，却用不合适的selector/ids/magic unmbers等；&lt;/li&gt;
+  &lt;li&gt;忽视表现，内存泄露（并不理解内存泄露的真正含义），不会检测代码；&lt;/li&gt;
+  &lt;li&gt;不会用指标衡量一个产品，或者这种指标在自己的电脑、浏览器、设备有效；
+9.忽视软件技术。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;要知道，入门容易精通难，计算机和软件的基础对你用js或浏览器编程都非常重要。web可能是最有影响力的平台和环境之一，在那里执行的程序必须被小心对待。一位优秀的前端工程师不仅要考虑web技术和语言，并且还要了解所有不同的组件、系统和概念。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-8&quot;&gt;优秀的前端工程师在即时面对普通的任务也会做的事情&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;DNS解析、使用CDN和关于multiple HostNames as part of resources request；&lt;/li&gt;
+  &lt;li&gt;HTTP Headers (Expires, CacheControl, if-modified-since);&lt;/li&gt;
+  &lt;li&gt;Steve Souders的所有规则（High Performance Websites）&lt;/li&gt;
+  &lt;li&gt;如何解决PageSpeed, YSlow, Chrome Dev Tools Audit, Chrome Dev Tools Timeline显示的所有问题；&lt;/li&gt;
+  &lt;li&gt;何时把任务传到服务器和客户端；&lt;/li&gt;
+  &lt;li&gt;缓存，预取和负荷技术的使用；&lt;/li&gt;
+  &lt;li&gt;Native js，知道何时从头开始做，何时查找别人的代码，同时可以评估这样做的优缺点；&lt;/li&gt;
+  &lt;li&gt;modern MVC javascript libraries（e.g. AngularJS, EmberJS, ReactJS）。graphic librarise（e.g. D3, SnapSVG）。DOM manipulation libraries（e.g. jQuery, Zepto）。 lazy loading or package management libraries （e.g. RequireJS, CommonJS）。 package managers（e.g. Bower, ComponentJS）。and testing（e.g. Protractor, Selenium）的相关知识和用法；&lt;/li&gt;
+  &lt;li&gt;js的电脑知识（内存管理、单线程的性质、垃圾收集算法、超时、范围、提升、模式）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;换句话说，如果说精通html+css+js，了解后端知识，只是60分的合格前端；那么要想成为受追捧、拿高薪的80分优秀前端，要求对业务需求和架构设计有真正的运用；而100分的顶级前端，则必须要能够兼顾技术和设计，更接近【以前端开发为主的全栈工程师】了。&lt;/p&gt;
+
+&lt;p&gt;加油吧，前端！&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>nodejs <3></title>
+        <link>/2015/04/09/nodeJs_3.html</link>
+        <guid isPermaLink="true">/2015/04/09/nodeJs_3.html</guid>
+        <pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;repl&quot;&gt;REPL环境&lt;/h1&gt;
+
+&lt;p&gt;node.js框架中提供了可交互式运行的环境–REPL&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>认识CSS</title>
+        <link>/2015/04/07/knowCSS_1.html</link>
+        <guid isPermaLink="true">/2015/04/07/knowCSS_1.html</guid>
+        <pubDate>Tue, 07 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;calc&quot;&gt;calc()&lt;/h1&gt;
+
+&lt;p&gt;对我来说这是一个相当陌生的属性，曾在匆匆浏览大神博客之间略有认识，但一直没认证体会其用法。存在既有理，那就来学习一下calc()，填平这个大坑。&lt;/p&gt;
+
+&lt;h1 id=&quot;bfc&quot;&gt;BFC&lt;/h1&gt;
+
+&lt;h1 id=&quot;display-inline-block&quot;&gt;display: inline-block;&lt;/h1&gt;
+
+&lt;h1 id=&quot;box-sizing&quot;&gt;box-sizing&lt;/h1&gt;
+
+&lt;h1 id=&quot;zoom-1&quot;&gt;zoom: 1;&lt;/h1&gt;
+
+&lt;h1 id=&quot;box-model&quot;&gt;box model&lt;/h1&gt;
+
+&lt;h1 id=&quot;flexbox&quot;&gt;flexbox&lt;/h1&gt;
+
+&lt;h1 id=&quot;font-family&quot;&gt;font-family&lt;/h1&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>学习Grunt</title>
+        <link>/2015/04/07/Grunt_1.html</link>
+        <guid isPermaLink="true">/2015/04/07/Grunt_1.html</guid>
+        <pubDate>Tue, 07 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;grunt&quot;&gt;Grunt&lt;/h1&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;前端集成解决方案&lt;/h2&gt;
+
+&lt;p&gt;解决前端工程的根本问题。一套包含框架和工具，便于开发者快速构建美丽实用的web应用程序的工作流，同时这套工作流必须是文件强壮的。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;解决的前端问题&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;开发团队代码风格不统一，如何强制开发规范；&lt;/li&gt;
+  &lt;li&gt;前期开发的组件库如何维护和使用；&lt;/li&gt;
+  &lt;li&gt;如何模块化前端项目；&lt;/li&gt;
+  &lt;li&gt;服务器部署前必须的压缩，检查流程如何简化，流程如何完善；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;常见的前端集成解决方案&lt;/h2&gt;
+
+&lt;p&gt;Yeoman –&amp;gt; Bower –&amp;gt; Grunt/Gulp&lt;/p&gt;
+
+&lt;p&gt;mac平台: CodeKit&lt;/p&gt;
+
+&lt;p&gt;百度: FIS&lt;/p&gt;
+
+&lt;p&gt;腾讯Alloyteam: Spirit&lt;/p&gt;
+
+&lt;h2 id=&quot;build-tool&quot;&gt;Build tool(编译一个程序的新版本时所使用的编译工具)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ant(java)&lt;/li&gt;
+  &lt;li&gt;Yeoman、Grunt、Buildy(node.js)&lt;/li&gt;
+  &lt;li&gt;jasy(Python)&lt;/li&gt;
+  &lt;li&gt;Gmake(Ruby)&lt;/li&gt;
+  &lt;li&gt;Rake(Ruby,类Gmake)&lt;/li&gt;
+  &lt;li&gt;Sprockets(Rack)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;学习基础&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;html&lt;/li&gt;
+  &lt;li&gt;css&lt;/li&gt;
+  &lt;li&gt;JavaScript基础知识&lt;/li&gt;
+  &lt;li&gt;了解node.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;nodejs&quot;&gt;了解node.js&lt;/h2&gt;
+
+&lt;h3 id=&quot;node&quot;&gt;1. node环境安装&lt;/h3&gt;
+
+&lt;p&gt;node.js官网： http://nodejs.org/&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;安装node程序包时路径不要有空格&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;npmnode-package-managernodea&quot;&gt;2. npm(Node Package Manager)nodea包管理和分发工具&lt;/h3&gt;
+
+&lt;p&gt;类似：
+gem(ruby)&lt;/p&gt;
+
+&lt;p&gt;pypi / setuptools(python)&lt;/p&gt;
+
+&lt;p&gt;pear(php)&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;3. 命令行工具：&lt;/h3&gt;
+
+&lt;p&gt;windows：cmd窗口不支持bash脚本，可安装Git，Git提供了git bash shell&lt;/p&gt;
+
+&lt;p&gt;mac: iTerm可替代原生的控制台&lt;/p&gt;
+
+&lt;h3 id=&quot;node-1&quot;&gt;4. node项目的基本结构&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;grunt-1&quot;&gt;安装Grunt&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;code&gt;http://gruntjs.com/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;安装指令：&lt;code&gt;npm install -g grunt-cli&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;验证方法：&lt;code&gt;grunt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;grunt：自动化，减少压缩、编译、单元测试，代码校验这种重复且无业务关联的工作。&lt;/p&gt;
+
+&lt;h2 id=&quot;yeoman&quot;&gt;安装Yeoman&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;code&gt;http://yeoman.io/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;安装指令：&lt;code&gt;npm install -g yo&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;验证方法：&lt;code&gt;yo -v&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Yeoman：现代web App的&lt;code&gt;脚手架&lt;/code&gt;工具。 在web项目的立项阶段，使用Yeoman来生成项目的文件，代码结构。Yeoman自动将最佳实践和工具整合进来，大大加速和方便我们后续的开发。保留了代码校验、测试、压缩等基本工作流程。&lt;/p&gt;
+
+&lt;p&gt;安装好Yeoman还需要安装自己所需的Generator(生成器)&lt;/p&gt;
+
+&lt;h2 id=&quot;bower&quot;&gt;安装Bower&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;code&gt;http://bower.io/&lt;/code&gt;
+安装指令： &lt;code&gt;npm install -g bower&lt;/code&gt;
+验证方法： &lt;code&gt;bower -v&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bower： web的包管理器。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>less初体验</title>
+        <link>/2015/04/06/less_1.html</link>
+        <guid isPermaLink="true">/2015/04/06/less_1.html</guid>
+        <pubDate>Mon, 06 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;less&quot;&gt;Less&lt;/h1&gt;
+
+&lt;h2 id=&quot;less-1&quot;&gt;less是什么&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;less is more&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;less是一种动态样式语言，属于css预处理语言的一种，它使用类似css的语法，为css赋予了动态语言的特性，如变量、继承、运算、函数等，更方便css的编写和维护。&lt;/p&gt;
+
+&lt;p&gt;less可以在多语言、多环境中使用。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;编译工具&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Koala，国产，less/sass编译工具，小巧好用&lt;/li&gt;
+  &lt;li&gt;node.js库，使用npm在服务器上安装less&lt;/li&gt;
+  &lt;li&gt;浏览器端使用，加载less.js在浏览器端编译less文件，但不推荐这种做法，因为这样做JavaScript引擎需要额外的时间在处理代码，然后输出编译后的css到浏览器，影响了加载速度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;注释&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可以使用css中的注释/**/&lt;/li&gt;
+  &lt;li&gt;也可以使用//注释，//编译时会自动过滤掉&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;即编译后，/**/内的部分会保留到css文件中。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;变量&lt;/h2&gt;
+
+&lt;p&gt;less中定义变量使用@，@开头:值;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sass中定义变量使用$，$开头: 值;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;html:
+&amp;lt;div class=&quot;test&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+less:
+@div_width: 300px;
+.test {
+	width: @div_width;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;mixin&quot;&gt;混合 (Mixin)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;形式一&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不同的样式声明可以相互混合，方便实现样式重用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.box {
+	width: xxx;
+	height: xxx;
+
+	.border;
+}
+.border {
+	boerder: xxx;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;形式二&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可带参数&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.box(@box_width){
+	width: @box_width;
+}
+
+.box2{
+	.box(30px);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;形式三&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;带有默认值,传参数时可修改默认值&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.box(@box_width:30px){
+	width: @box_width;
+}
+.box2{
+	.box(); //这里虽然不加括号也可以传默认值，但为与形式一区别开，还是加上括号以区别开
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;混合的好处之一就是在写border-radius之类的css3特殊样式，需要考虑到兼容性时，-moz-/-webkit-之类的前缀可以很方便的省略&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;匹配模式&lt;/h2&gt;
+
+&lt;p&gt;额。。这不是LOL。简单一点就是根据参数匹配相应已有的样式。&lt;/p&gt;
+
+&lt;p&gt;以margin为例，上下左右可以根据需要，选择特定的方向设定margin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.margin(top) {
+	margin-top: 10px;
+}
+.box {
+	.margin(top);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;匹配里通用的方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.margin(top){...}
+.margin(right){...}
+.margin(@_){color:#000000;}
+
+.box(top){
+	...
+	color:#000000;
+}//这里不管匹配到哪一个，都会加上@_中的样式，@_是固定写法。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;运算&lt;/h2&gt;
+
+&lt;p&gt;less中任何数字，颜色或者变量都可以参与运算，运算被包裹在括号中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@width:30px;
+.box{
+	width: @width + 20;
+	color: #000 + 20;
+}
+注意单位，只需要其中一个有待单位就ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;嵌套规则&lt;/h2&gt;
+
+&lt;p&gt;两种用法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&amp;amp; 对伪类使用: hover或focus&lt;/li&gt;
+  &lt;li&gt;对连接的使用: &amp;amp;_item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&quot;list&quot;&amp;gt;
+	&amp;lt;li&amp;gt;
+		&amp;lt;a href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;
+		&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
+	&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+less：
+.list {
+	....
+	li {
+		....
+	}
+	a {
+		...
+		///&amp;amp; 代表它的上一层选择器，即a标签
+		&amp;amp;:hover {
+			...
+		}
+	}
+}
+//这样写可以省略许多原来css的逐级写法，查看代码时容易找到对应模块
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;box&quot;&amp;gt;
+	&amp;lt;div class=&quot;box_nav&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+.box {
+	....
+
+	&amp;amp;_nav {
+		....
+	}
+}
+//&amp;amp;的第二条使用方法，&amp;amp;_nav即代表box_nav
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;arguments&quot;&gt;@arguments变量&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;.border(@w:20px,@c:#ccc) {
+	border: @arguments;
+}
+.box{
+	.border();
+}
+//arguments即代表border里的所有变量，可以省略书写
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;important&quot;&gt;避免编译、!important以及总结&lt;/h2&gt;
+
+&lt;p&gt;有时候我们需要输出一些不正确的css语法或者使用一些less不认识的专有语法。
+要输出这样的值，我们可以在字符串前加上一个 ~，如&lt;code&gt;width:~calc&#39;(100%-35)&#39;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.test {
+	width: ~&#39;calc(300px - 30px)&#39;;
+}
+//calc()原意是需要浏览器去计算，所以需要加上~来防止less的编译，类似情况还有滤镜等。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;!important&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;会为所有混合所带来的样式，添加上!important;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.width(@w:30px){
+	width: @w;
+	color: red;
+}
+.box {
+	.width() !important;
+}
+//编译后的css会自动全加上!important
+.box {
+	width: 30px !important;
+	color: red !important;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>认识JavaScript</title>
+        <link>/2015/04/05/knowJavaScript_1.html</link>
+        <guid isPermaLink="true">/2015/04/05/knowJavaScript_1.html</guid>
+        <pubDate>Sun, 05 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;javascript&quot;&gt;复习JavaScript&lt;/h1&gt;
+
+&lt;h2 id=&quot;for-in&quot;&gt;for-in循环&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nowamagic.net/librarys/veda/detail/1625&quot;&gt;for-in&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;attachevent--addeventlistener&quot;&gt;attachEvent 和 addEventListener&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.163.com/wangzhengquan85@126/blog/static/36082995201011812341235/&quot;&gt;attachEvent/addEventListener&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;undefinednull&quot;&gt;undefined和null&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/24959.htm&quot;&gt;undefined/null&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>题目</title>
+        <link>/2015/04/03/exam.html</link>
+        <guid isPermaLink="true">/2015/04/03/exam.html</guid>
+        <pubDate>Fri, 03 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;section&quot;&gt;~题库~&lt;/h1&gt;
+
+&lt;h2 id=&quot;indexof&quot;&gt;1.一个数组，输入数组元素，可以得到对应下标，若没有检索到字符，则返回-1，即实现indexOf()方法。&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;string.indexOf(str,start);&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;str：要检索的字符串。&lt;/li&gt;
+  &lt;li&gt;start：可选，检索的起始下标位置。氛围0~length-1。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var arr = [12,43,5,67,323,224,434,434];
+
+Array.prototype.myindexOf = function(num,start){
+  if(!start) start = 0;
+  var len = this.length;
+  for(var i = start; i &amp;lt; len; i++){
+    if(this[i] == num)
+      return i;
+  }
+  if(i == len)
+    return -1;
+};
+
+console.log(arr.myindexOf(434)); // &amp;gt;&amp;gt; 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;stringindexof&quot;&gt;扩展：实现String对象的indexOf()方法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;ad2ff3ad2ff3adadffffff&quot;&gt;2. 字符串解码，以字母与数字混排的字符串，如“ad2ff3”，编写算法，实现，将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列，“ad2ff3”解码后的便为“adadffffff”。&lt;/h2&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var str = &quot;1faAdB2ff3&quot;;
+
+function getCode(str){
+  var num_arr = str.match(/\d+/g);
+  var str_arr = str.match(/[A-z]+/g);
+  var str_res = &quot;&quot;;
+  if(str.indexOf(num_arr[0]) === 0){
+    //按题意是否需要删除以数字开头的部分
+    for(var i = 0,len = num_arr.length; i &amp;lt; len-1; i++){
+      num_arr[i] = num_arr[i+1];
+    }
+    num_arr.pop();
+  }
+  for(var j = 0, str_len = str_arr.length; j &amp;lt; str_len; j++){
+    if(num_arr[j]){
+      for(var n = 1; n &amp;lt;= num_arr[j]; n++){
+        str_res += str_arr[j];
+      }
+    }else{
+      str_res += str_arr[j];
+    }
+  }
+  return str_res;
+}
+
+console.log(getCode(str));  // &amp;gt;&amp;gt; faAdBfaAdBffffff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;testtxttxt&quot;&gt;3. 设计算法，获取文件名，如“test.txt”的后缀，即“.txt”。&lt;/h2&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var str = &quot;test.txt&quot;;
+
+function getFileType(str){
+  var index = str.lastIndexOf(&quot;.&quot;);
+  var str_res = str.substr(index);
+  return str_res;
+}
+
+console.log(getFileType(str)); // &amp;gt;&amp;gt; .txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;扩展&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;slice(start,end)&lt;/code&gt; - 按下标取子字符串&lt;code&gt;[start,end)&lt;/code&gt;，参数都可以为负数，但必须保证&lt;code&gt;start&lt;/code&gt;对应的下标位置在&lt;code&gt;end&lt;/code&gt;对应下标位置的左边，否则，返回“”。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;substr(start,length)&lt;/code&gt; - 按长度取子字符串，&lt;code&gt;start&lt;/code&gt;可为负数。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;substring(start,end)&lt;/code&gt; - 按下标取子字符串&lt;code&gt;[start,end)&lt;/code&gt;，参数为负数便会转换为0，若&lt;code&gt;start &amp;gt; end&lt;/code&gt;则先调换参数位置，若&lt;code&gt;start = end&lt;/code&gt;，返回“”。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;html&quot;&gt;4. 遍历数组数据，并将其包裹上HTML标签，数组数据和遍历后的结果如下：&lt;/h2&gt;
+&lt;p&gt;数组：var item = [{‘children’:[{‘name’:’xx’,’age’:12},{‘child’:[{‘name’:’gg’,’age’:11}]}]}];&lt;/p&gt;
+
+&lt;p&gt;遍历后结果：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;name&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;age&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;name&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;age&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var item = [{&#39;children&#39;:[{&#39;name&#39;:&#39;xx&#39;,&#39;age&#39;:12},{&#39;child&#39;:[{&#39;name&#39;:&#39;gg&#39;,&#39;age&#39;:11}]}]}];
+
+function getJsonHTML(item){
+  var str = &quot;&quot;;
+  for(var i = 0,len1 = item.length; i &amp;lt; len1; i ++){
+    if(item[i].children){
+      for(var j = 0,len2 = item[i].children.length; j &amp;lt; len2; j++){
+        str += &#39;&amp;lt;ul&amp;gt;&#39;;
+        if(item[i].children[j].child){
+          str += &#39;&amp;lt;li&amp;gt;&amp;lt;ul&amp;gt;&#39;;
+          for(var k = 0,len3 = item[i].children[j].child.length; k &amp;lt; len3; k++){
+            str += &#39;&amp;lt;li&amp;gt;&#39; + item[i].children[j].child[k].name + &#39;&amp;lt;/li&amp;gt;&#39;+
+                   &#39;&amp;lt;li&amp;gt;&#39; + item[i].children[j].child[k].age + &#39;&amp;lt;/li&amp;gt;&#39;;
+          }
+          str += &#39;&amp;lt;/ul&amp;gt;&amp;lt;/li&amp;gt;&#39;;
+        }else{
+          str += &#39;&amp;lt;li&amp;gt;&#39; + item[i].children[j].name + &#39;&amp;lt;/li&amp;gt;&#39;+
+                 &#39;&amp;lt;li&amp;gt;&#39; + item[i].children[j].age + &#39;&amp;lt;/li&amp;gt;&#39;;
+        }
+        str += &#39;&amp;lt;/ul&amp;gt;&#39;;
+      }
+    }
+  }
+  return str;
+}
+
+console.log(getJsonHTML(item));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;js3hello5643hello3hello&quot;&gt;5. 取出js数组中重复的元素，如[3,’hello’,5,6,4,3,’hello’]，取出[3,’hello’]&lt;/h2&gt;
+
+&lt;p&gt;代码一：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var a = [3, &#39;hello&#39;, 5, 6, 4, 3, &#39;hello&#39;];
+Array.prototype.duplicate=function() {
+    var tmp = [];
+    this.concat().sort().sort(function(a,b){
+        if(a==b &amp;amp;&amp;amp; tmp.indexOf(a) === -1) tmp.push(a);
+    });
+    return tmp;
+}
+console.log(a.duplicate());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码二：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//适用基础数据类型（空间换时间的方案）
+function duplicates(list) {
+    var cache = {},
+        own   = Object.prototype.hasOwnProperty,
+        r     = []
+    ;
+    for (var i = list.length; --i&amp;gt;=0; ){
+        var 
+            item = list[i],
+            key  = item.toString()
+       ;
+        if (!own.call(cache, key)) {
+            cache[key] = 1;
+        } else {
+            r.push(item);
+        }
+    }
+    return r;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码三：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var a = [3, &#39;hello&#39;, 5, 6, 4, 3, &#39;hello&#39;];
+
+function duplicate(source) {
+    var ret = [], cache = [];
+    source.concat().sort().sort(function (a, b) {
+        if (a == b) {
+            var key = typeof(a) + &quot;:&quot; + a;
+            if (!cache[key]) {
+                cache[key] = true;
+                ret.push(a);
+            }
+        }
+    });
+    return ret;
+}
+
+// test
+console.log(duplicate(a));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;qywyer23tddy&quot;&gt;6. 给定一个字符串，请写一段代码找出这个字符中首先出现两次的那个字符。例如字符串“qywyer23tdd”，输出为y&lt;/h2&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var str = &quot;qywyer23tdd&quot;;
+
+function getKey(str){
+  var str_arr = str.split(&quot;&quot;);
+  for(var i = 0,len = str_arr.length; i &amp;lt; len; i++){
+    if(str.indexOf(str_arr[i],i+1) !== -1){
+      return str_arr[i];
+    }
+  }
+}
+
+console.log(getKey(str));  // &amp;gt;&amp;gt; &#39;y&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;7. 给定一个整型数组，对这个整数数组排序吗，使得按序拼接数组各元素得到的值最小。示例：[3,83,8,13,1]，被排序后的数组为[1,13,3,83,8]，依次拼接得到的最小数1133838&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;？？？
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;8. 判断一下代码的输出结果&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;var x = 0;
+
+var f = function(){
+  x = 1;
+};
+
+f();
+
+console.log(x);
+
+function f(){
+  x = 2;
+}
+
+f();
+
+console.log(x);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;输出为：1，1&lt;/p&gt;
+
+&lt;p&gt;第一个为“变量式”函数，第二个函数为“定义式”函数，其实JavaScript执行引擎并非一行一行地分析和执行程序，而是一段一段地分析和执行的。而且，在同一段程序的分析执行中，定义式的函数会被提取出来优先执行。函数定义执行完之后，才会按顺序执行其他语句代码。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;9. 判断以下代码的输出&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;function say(){
+  console.log(this.name);
+}
+
+var name = &quot;name1&quot;;
+
+var person = {
+  name: &quot;name2&quot;,
+  say: say
+};
+
+person.say();
+
+say();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;输出为：“name2”，”name1”&lt;/p&gt;
+
+&lt;h3 id=&quot;urlhttpwwwxxxxcoma1b2citye58c97e4baaca1b2city&quot;&gt;10. 请写一个函数，功能是将url中的参数解析出来。如：http://www.xxxx.com/?a=1&amp;amp;b=2&amp;amp;city=%E5%8C%97%E4%BA%AC，返回为：{a:”1”,b:”2”,city:”北京”}&lt;/h3&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var url = &quot;http://www.xxxx.com/?a=1&amp;amp;b=2&amp;amp;city=%E5%8C%97%E4%BA%AC&quot;;
+
+function getParameter(url){
+  var url_arr = [],
+      res = {};
+  url = url.substr(url.indexOf(&quot;?&quot;)+1).replace(/&amp;amp;/g,&quot;=&quot;);
+  url_arr = url.split(&quot;=&quot;);
+  for(var i = 0,len = url_arr.length; i &amp;lt; len; i++){
+    if(i%2 === 0){
+      res[url_arr[i]]=url_arr[i+1];
+    }
+  }
+  res.city = decodeURI(res.city);
+  return res;
+}
+
+console.log(getParameter(url));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;formatdatedate-formatdatedateformatyyyymmdd-&quot;&gt;11. 请写一个函数，formatDate(date, format)，date参数为Date对象，format参数为yyyy,MM,dd及-的组合，返回格式化后的字符串，考虑各种情况&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;？？？
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;12. 在一个数组里每隔5个元素插入一个空字符串，使其成为一个新的数组。&lt;/h2&gt;
+
+&lt;p&gt;代码一：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function myNewArr(arr){
+    var res_arr = [];
+    for(var i = 0, len = arr.length; i &amp;lt; len; i++){
+      res_arr.push(arr[i]);
+      if((i + 1) % 5 === 0){
+        res_arr.push(&quot;&quot;);
+      }
+    }
+  return res_arr;
+}
+
+console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
+// &amp;gt;&amp;gt; [1, 2, 3, 4, 5, &quot; &quot;, 6, 7, 8, 9, 10, &quot; &quot;, 11, 12, 13, 14, 15, &quot; &quot;, 16, 17]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码二：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function myNewArr(arr){
+  var count = (arr.length/5) | 0;
+  for(var i = 0; i &amp;lt; count; i++){
+    arr.splice((i+1)*5+i,0,&quot;&quot;);
+  }
+  return arr;
+}
+
+console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
+//splice()里那个 +i 真是精髓
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;for1100&quot;&gt;13. 不适用for循环，实现打印1~100&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;14. 一个数组为0、1混乱交叉排列，共100个元素，如何在只遍历一次的情况下，整理数组，使之前面所有的数都为0，后边所有的数都为1。&lt;/h2&gt;
+
+&lt;h2 id=&quot;arrayn&quot;&gt;15. 请为Array增加一个原型方法：该方法的功能是删除数组中的某一项n&lt;/h2&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Array.prototype.delKey = function(n){
+  for(var i = n - 1,len=this.length ; i &amp;lt; len; i++){
+    this[i] = this[i+1];
+  }
+    this.pop();
+    var res = this;
+    return res;
+};
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>nodejs <2></title>
+        <link>/2015/04/02/nodeJs_2.html</link>
+        <guid isPermaLink="true">/2015/04/02/nodeJs_2.html</guid>
+        <pubDate>Thu, 02 Apr 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;nodejs-2&quot;&gt;学习nodejs &amp;lt;2&amp;gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;nodejs&quot;&gt;node.js模块&lt;/h2&gt;
+
+&lt;p&gt;每一个node.js都是一个node.js模块，包括JavaScript文件(（).js)、JSON文件(.json)和二进制模块文件(.node)&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;模块使用&lt;/h2&gt;
+
+&lt;p&gt;创建一个文件mymodule.js，代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function hello() {
+	console.log(&#39;hello&#39;);
+}
+
+function world() {
+	console.log(&#39;world&#39;);
+}
+
+exports.hello = hello;
+exports.world = world;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在其他模块中引入并使用这个模块，我们需要为模块提供对外的接口，这就要用到&lt;code&gt;module.exports&lt;/code&gt;和&lt;code&gt;exports&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;在其他模块中使用require(module_name);载入需要的模块。
+新建 index.js 文件，代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var hello = require(&#39;./mymodule&#39;);
+
+hello.hello();
+hello.world();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以这样写mymodule.js:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function Hello(){
+	this.hello = function() {
+		console.log(&#39;hello&#39;);
+	};
+	this.world = function() {
+		console.log(&#39;world&#39;);
+	};
+}
+
+module.exports = Hello;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;index.js则改写为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var Hello = require(&#39;./mymodule&#39;);
+
+var hello = new Hello();
+
+hello.hello();
+hello.world();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;moduleexportsexports&quot;&gt;module.exports和exports&lt;/h2&gt;
+
+&lt;p&gt;module是一个对象，每个模块中都有一个module对象，module是当前模块的一个引用。module.exports对象是Module系统创建的，而exports可以看作是对module.exports对象的一个引用。在模块中require另一个模块时，以module.exports的值为准，因为有的情况下，module.exports和exports它们的值是不同的。module.exports和exports的关系可以表示成这样：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var m = {};
+var e = m.e = {};
+
+m.e.a = 5;
+e.b = 6;
+
+console.log(m.e);
+console.loog(e);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;var m = {};
+var e = m.e = {};
+
+m.e = { c:9 };
+e.d = 10;
+
+console.log(m.e);
+console.log(e);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nodejs-1&quot;&gt;node.js包&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;1. 包&lt;/h3&gt;
+
+&lt;p&gt;包用于管理多个模块及其依赖关系，可以对多个模块进行封装，包的根目录必须包含package.json文件，package.json文件是CommonJS规范用于描述包的文件，符合CommonJS规范的package.json文件应该包含一下字段：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;name: 包名。包名是唯一的，只能包含小写字母、数字和下划线。&lt;/li&gt;
+  &lt;li&gt;version: 包版本号。&lt;/li&gt;
+  &lt;li&gt;description: 包说明。&lt;/li&gt;
+  &lt;li&gt;keywords: 关键字数组。用于搜索。&lt;/li&gt;
+  &lt;li&gt;homepage: 项目主页。&lt;/li&gt;
+  &lt;li&gt;bugs: 提交bug的地址。&lt;/li&gt;
+  &lt;li&gt;license: 许可证。&lt;/li&gt;
+  &lt;li&gt;maintainers: 维护者数组。&lt;/li&gt;
+  &lt;li&gt;contributors: 贡献者数组。&lt;/li&gt;
+  &lt;li&gt;repositories: 项目仓库托管地址数组。&lt;/li&gt;
+  &lt;li&gt;dependencies: 包依赖。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;npm&quot;&gt;npm包管理工具&lt;/h2&gt;
+
+&lt;p&gt;搜索第三方包：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt; $ sudo npm search express &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;安装包：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt; $ sudo npm install -g express &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;更新包：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt; $ sudo npm update express &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;卸载包：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt; $ sudo npm uninstall express &lt;/code&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+  </channel>
+</rss>

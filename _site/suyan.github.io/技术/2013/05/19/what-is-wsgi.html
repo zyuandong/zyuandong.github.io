@@ -1,0 +1,34 @@
+<h2 id="wsgiweb-server-gateway-interface">WSGI(Web Server Gateway Interface)</h2>
+<p>WSGI是WEB服务网关接口的缩写，是为Python语言定义的Web服务器和Web应用程序之间一种简单而通用的接口。它没有具体的实现，更像是一个标准协议，具体可以去<a href="http://www.python.org/dev/peps/pep-0333/">PEP333</a>了解。</p>
+
+<p>简单说来，它是一个连接用户应用和Web服务器的桥梁，有点类似Apache的CGI。</p>
+
+<h2 id="section">简单例子</h2>
+<p>下面是来自PEP333的一个简单例子</p>
+
+<pre><code>def simple_app(environ, start_response):
+    """Simplest possible application object"""
+    status = '200 OK'
+    response_headers = [('Content-type','text/plain')]
+    start_response(status, response_headers)
+    return ['Hello world!n']
+</code></pre>
+
+<p>我们可以看出，这个例子里就是输出了一个基本Web页面的body和header。其中environ就是把环境变量啥的一起丢进来，而start_response就像rpc一样负责响应这次请求。接下来看一下能运行的代码：</p>
+
+<pre><code>from wsgiref.simple_server import make_server
+
+def my_app(environ, start_response):
+    """a simple wsgi application"""
+    status = '200 OK'
+    response_headers = [('Content-type', 'text/plain')]
+    start_response(status, response_headers)
+    return ["hello world"]
+
+httpd = make_server('', 8000, my_app)
+print "Serving on port 8000..."
+httpd.serve_forever()
+</code></pre>
+
+<p>访问localhost:8000即可看到hello world显示了出来，这就是一个wsgi的简单例子了</p>
+

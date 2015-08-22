@@ -1,0 +1,243 @@
+<blockquote>
+  <p>有些东西如果不是经常使用，很容易忘记，比如魔术方法和魔术常量。</p>
+</blockquote>
+
+<h2 id="magic-methods">魔术方法(Magic methods)</h2>
+<p>PHP中把以两个下划线<code>__</code>开头的方法称为魔术方法，这些方法在PHP中充当了举足轻重的作用。 魔术方法包括：</p>
+
+<ul>
+  <li><code>__construct()</code>，类的构造函数</li>
+  <li><code>__destruct()</code>，类的析构函数</li>
+  <li><code>__call()</code>，在对象中调用一个不可访问方法时调用</li>
+  <li><code>__callStatic()</code>，用静态方式中调用一个不可访问方法时调用</li>
+  <li><code>__get()</code>，获得一个类的成员变量时调用</li>
+  <li><code>__set()</code>，设置一个类的成员变量时调用</li>
+  <li><code>__isset()</code>，当对不可访问属性调用<code>isset()</code>或<code>empty()</code>时调用</li>
+  <li><code>__unset()</code>，当对不可访问属性调用<code>unset()</code>时被调用。</li>
+  <li><code>__sleep()</code>，执行<code>serialize()</code>时，先会调用这个函数</li>
+  <li><code>__wakeup()</code>，执行<code>unserialize()</code>时，先会调用这个函数</li>
+  <li><code>__toString()</code>，类被当成字符串时的回应方法</li>
+  <li><code>__invoke()</code>，调用函数的方式调用一个对象时的回应方法</li>
+  <li><code>__set_state()</code>，调用<code>var_export()</code>导出类时，此静态方法会被调用。</li>
+  <li><code>__clone()</code>，当对象复制完成时调用</li>
+</ul>
+
+<h3 id="constructdestruct"><code>__construct()</code>和<code>__destruct()</code></h3>
+<p>构造函数和析构函数应该不陌生，他们在对象创建和消亡时被调用。例如我们需要打开一个文件，在对象创建时打开，对象消亡时关闭</p>
+
+<p>```php
+&lt;?php 
+class FileRead
+{
+    protected $handle = NULL;</p>
+
+<pre><code>function __construct(){
+    $this-&gt;handle = fopen(...);
+}
+
+function __destruct(){
+    fclose($this-&gt;handle);
+} } ?&gt; ```
+</code></pre>
+
+<p>这两个方法在继承时可以扩展，例如：</p>
+
+<p>```php
+&lt;?php 
+class TmpFileRead extends FileRead
+{
+    function __construct(){
+        parent::__construct();
+    }</p>
+
+<pre><code>function __destruct(){
+    parent::__destruct();
+} } ?&gt; ```
+</code></pre>
+
+<h3 id="callcallstatic"><code>__call()</code>和<code>__callStatic()</code></h3>
+<p>在对象中调用一个不可访问方法时会调用这两个方法，后者为静态方法。这两个方法我们在可变方法（Variable functions）调用中可能会用到。</p>
+
+<p>```php
+&lt;?php
+class MethodTest 
+{
+    public function __call ($name, $arguments) {
+        echo “Calling object method ‘$name’ “. implode(‘, ‘, $arguments). “\n”;
+    }</p>
+
+<pre><code>public static function __callStatic ($name, $arguments) {
+    echo "Calling static method '$name' ". implode(', ', $arguments). "\n";
+} }
+</code></pre>
+
+<p>$obj = new MethodTest;
+$obj-&gt;runTest(‘in object context’);
+MethodTest::runTest(‘in static context’);
+?&gt;
+```</p>
+
+<h3 id="getsetissetunset"><code>__get()</code>，<code>__set()</code>，<code>__isset()</code>和<code>__unset()</code></h3>
+<p>当get/set一个类的成员变量时调用这两个函数。例如我们将对象变量保存在另外一个数组中，而不是对象本身的成员变量</p>
+
+<p>```php
+&lt;?php 
+class MethodTest
+{
+    private $data = array();</p>
+
+<pre><code>public function __set($name, $value){
+    $this-&gt;data[$name] = $value;
+}
+
+public function __get($name){
+    if(array_key_exists($name, $this-&gt;data))
+        return $this-&gt;data[$name];
+    return NULL;
+}
+
+public function __isset($name){
+    return isset($this-&gt;data[$name])
+}
+
+public function unset($name){
+    unset($this-&gt;data[$name]);
+} } ?&gt; ```
+</code></pre>
+
+<h3 id="sleepwakeup"><code>__sleep()</code>和<code>__wakeup()</code></h3>
+<p>当我们在执行<code>serialize()</code>和<code>unserialize()</code>时，会先调用这两个函数。例如我们在序列化一个对象时，这个对象有一个数据库链接，想要在反序列化中恢复链接状态，则可以通过重构这两个函数来实现链接的恢复。例子如下：</p>
+
+<p>```php
+&lt;?php
+class Connection 
+{
+    protected $link;
+    private $server, $username, $password, $db;</p>
+
+<pre><code>public function __construct($server, $username, $password, $db)
+{
+    $this-&gt;server = $server;
+    $this-&gt;username = $username;
+    $this-&gt;password = $password;
+    $this-&gt;db = $db;
+    $this-&gt;connect();
+}
+
+private function connect()
+{
+    $this-&gt;link = mysql_connect($this-&gt;server, $this-&gt;username, $this-&gt;password);
+    mysql_select_db($this-&gt;db, $this-&gt;link);
+}
+
+public function __sleep()
+{
+    return array('server', 'username', 'password', 'db');
+}
+
+public function __wakeup()
+{
+    $this-&gt;connect();
+} } ?&gt; ```
+</code></pre>
+
+<h3 id="tostring"><code>__toString()</code></h3>
+<p>对象当成字符串时的回应方法。例如使用<code>echo $obj;</code>来输出一个对象</p>
+
+<p>```php
+&lt;?php
+// Declare a simple class
+class TestClass
+{
+    public function __toString() {
+        return ‘this is a object’;
+    }
+}</p>
+
+<p>$class = new TestClass();
+echo $class;
+?&gt;
+```</p>
+
+<p>这个方法只能返回字符串，而且不可以在这个方法中抛出异常，否则会出现致命错误。</p>
+
+<h3 id="invoke"><code>__invoke()</code></h3>
+<p>调用函数的方式调用一个对象时的回应方法。如下</p>
+
+<p><code>php
+&lt;?php
+class CallableClass 
+{
+    function __invoke() {
+        echo 'this is a object';
+    }
+}
+$obj = new CallableClass;
+var_dump(is_callable($obj));
+?&gt;
+</code></p>
+
+<h3 id="setstate"><code>__set_state()</code></h3>
+<p>调用<code>var_export()</code>导出类时，此静态方法会被调用。</p>
+
+<p>```php
+&lt;?php
+class A
+{
+    public $var1;
+    public $var2;</p>
+
+<pre><code>public static function __set_state ($an_array) {
+    $obj = new A;
+    $obj-&gt;var1 = $an_array['var1'];
+    $obj-&gt;var2 = $an_array['var2'];
+    return $obj;
+} }
+</code></pre>
+
+<p>$a = new A;
+$a-&gt;var1 = 5;
+$a-&gt;var2 = ‘foo’;
+var_dump(var_export($a));
+?&gt;
+```</p>
+
+<h3 id="clone"><code>__clone()</code></h3>
+<p>当对象复制完成时调用。例如在<a href="http://yansu.org/2014/04/19/sigleton-design-pattern.html">设计模式详解及PHP实现：单例模式</a>一文中提到的单例模式实现方式，利用这个函数来防止对象被克隆。</p>
+
+<p>```php
+&lt;?php 
+public class Singleton {
+    private static $_instance = NULL;</p>
+
+<pre><code>// 私有构造方法 
+private function __construct() {}
+
+public static function getInstance() {
+    if (is_null(self::$_instance)) {
+        self::$_instance = new Singleton();
+    }
+    return self::$_instance;
+}
+
+// 防止克隆实例
+public function __clone(){
+    die('Clone is not allowed.' . E_USER_ERROR);
+} } ?&gt; ```
+</code></pre>
+
+<h2 id="magic-constants">魔术常量(Magic constants)</h2>
+<p>PHP中的常量大部分都是不变的，但是有8个常量会随着他们所在代码位置的变化而变化，这8个常量被称为魔术常量。</p>
+
+<ul>
+  <li><code>__LINE__</code>，文件中的当前行号</li>
+  <li><code>__FILE__</code>，文件的完整路径和文件名</li>
+  <li><code>__DIR__</code>，文件所在的目录</li>
+  <li><code>__FUNCTION__</code>，函数名称</li>
+  <li><code>__CLASS__</code>，类的名称</li>
+  <li><code>__TRAIT__</code>，Trait的名字</li>
+  <li><code>__METHOD__</code>，类的方法名</li>
+  <li><code>__NAMESPACE__</code>，当前命名空间的名称</li>
+</ul>
+
+<p>这些魔术常量常常被用于获得当前环境信息或者记录日志。</p>

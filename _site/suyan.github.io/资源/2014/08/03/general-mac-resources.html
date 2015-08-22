@@ -1,0 +1,95 @@
+<h2 id="section">常用软件</h2>
+
+<h3 id="alfred">Alfred</h3>
+
+<h4 id="alfredworkflow">Alfred常用Workflow</h4>
+
+<ul>
+  <li><a href="http://kapeli.com/dash">Dash</a></li>
+  <li><a href="https://github.com/liberize/alfred-dict-workflow">Dict - Lookup Word</a></li>
+  <li><a href="http://www.alfredforum.com/topic/917-reminders/">Reminders</a></li>
+  <li><a href="http://support.alfredapp.com/evernote">Evernote</a></li>
+  <li><a href="http://www.alfredforum.com/topic/1009-notes/">Notes</a></li>
+</ul>
+
+<h2 id="section-1">常用命令</h2>
+
+<h3 id="dashboard">开启关闭dashboard</h3>
+
+<p>关闭</p>
+
+<pre><code>defaults write com.apple.dashboard mcx-disabled -boolean YES
+killall Dock
+</code></pre>
+
+<p>开启</p>
+
+<pre><code>defaults write com.apple.dashboard mcx-disabled -boolean NO
+killall Dock
+</code></pre>
+
+<h3 id="section-2">剪贴板操作</h3>
+<p>写入剪切板</p>
+
+<pre><code>echo 'test' &gt; pbcopy 
+cat testfile &gt; pbcopy
+</code></pre>
+
+<p>读取剪贴板</p>
+
+<pre><code>pbpaste &gt; testfile
+pbpaste | cat
+</code></pre>
+
+<h3 id="hidpi">开启关闭Hidpi</h3>
+<p>开启</p>
+
+<pre><code>sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool YES
+</code></pre>
+
+<p>关闭</p>
+
+<pre><code>sudo defaults delete /Library/Preferences/com.apple.windowserver DisplayResolutionDisabled
+</code></pre>
+
+<h3 id="dock">修改Dock隐藏和出现时间</h3>
+
+<p><code>bash
+defaults write com.apple.dock autohide-delay -int 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
+killall Dock
+</code></p>
+
+<h3 id="itermoptionaltmeta">设置iterm中option为alt(meta)键</h3>
+
+<p><img src="http://7u2ho6.com1.z0.glb.clouddn.com/resource-set-meta-to-alt.png" alt="option-to-meta" /></p>
+
+<h3 id="dropbox">删除dropbox冲突文件</h3>
+
+<pre><code>find . -type f -name "* conflicted *" -exec rm -f {} \;
+</code></pre>
+
+<h3 id="launchpad">清空Launchpad（删除掉）</h3>
+
+<pre><code>sqlite3 ~/Library/Application\ Support/Dock/*.db 'DELETE FROM apps;' &amp;&amp; killall Dock
+</code></pre>
+
+<h3 id="launchpad-1">重置Launchpad</h3>
+
+<pre><code>rm -f ~/Library/Application\ Support/Dock/*.db &amp;&amp; killall Dock
+</code></pre>
+
+<h3 id="finder">修改Finder中文件夹显示语言</h3>
+
+<pre><code># 以Desktop为例
+touch ~/Desktop/.localized
+chmod 600 ~/Desktop/.localized
+</code></pre>
+
+<h2 id="section-3">常用快捷键</h2>
+
+<h3 id="chrome">Chrome</h3>
+
+<ul>
+  <li>切换用户 <code>Command + shift + M</code></li>
+</ul>

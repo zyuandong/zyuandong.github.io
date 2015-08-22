@@ -1,0 +1,61 @@
+<h2 id="section">安装</h2>
+<p>Docker暂时并不支持原生的Mac系统，所以Mac下的Docker实际上是依赖一个很小的linux虚拟机来实现的。</p>
+
+<h3 id="virtualbox">安装Virtualbox</h3>
+<p>Vagrant依赖现有的虚拟机软件来管理虚拟机，如Virtualbox, Vmware Fusion, Parallel Desktop等，其中最方便的是VirtualBox，所以我选择了Virtualbox。</p>
+
+<p>下载地址在<a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>。下载好后直接安装。</p>
+
+<h3 id="boot2docker">安装Boot2Docker</h3>
+<p><a href="https://github.com/boot2docker/boot2docker">Boot2Docker</a>是帮助控制虚拟机中Docker的工具，它会下载一个安装好docker的虚拟机，并控制其实现docker功能。</p>
+
+<p>在mac下安装boot2docker只要执行</p>
+
+<pre><code>brew install boot2docker
+</code></pre>
+
+<p>即可。</p>
+
+<h3 id="docker-client">安装docker client</h3>
+<p>要想在mac下直接执行docker命令，需要安装一个适合mac的docker client，安装方法如下</p>
+
+<pre><code># Get the docker client file
+DIR=$(mktemp -d ${TMPDIR:-/tmp}/dockerdl.XXXXXXX) &amp;&amp; \
+curl -f -o $DIR/ld.tgz https://get.docker.io/builds/Darwin/x86_64/docker-latest.tgz &amp;&amp; \
+gunzip $DIR/ld.tgz &amp;&amp; \
+tar xvf $DIR/ld.tar -C $DIR/ &amp;&amp; \
+cp $DIR/usr/local/bin/docker ./docker
+
+# Set the environment variable for the docker daemon
+export DOCKER_HOST=tcp://127.0.0.1:4243
+
+# Copy the executable file
+sudo cp docker /usr/local/bin/
+</code></pre>
+
+<p>这样就有一个docker命令了</p>
+
+<h2 id="section-1">使用</h2>
+<p>使用docker安装需要先启动boot2docker虚拟机</p>
+
+<pre><code># Initiate the VM
+boot2docker init
+
+# Run the VM (the docker daemon)
+boot2docker up
+
+# To see all available commands:
+boot2docker
+</code></pre>
+
+<p>之后就可以使用docker命令了</p>
+
+<pre><code>docker version
+</code></pre>
+
+<h2 id="section-2">参考</h2>
+
+<ol>
+  <li><a href="http://docs.docker.io/en/latest/installation/mac/">How To Install Docker On Mac OS X</a></li>
+  <li><a href="https://github.com/boot2docker/boot2docker">boot2docker</a></li>
+</ol>

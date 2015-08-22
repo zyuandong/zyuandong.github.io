@@ -7,15 +7,18 @@ $(function(){
 	});
 	
 	$('#slider').on('click', function(){
-		if($(this).hasClass('toRight')){
-			$(this).removeClass('toRight').addClass('toLeft').html('>');
+		if($(this).children('i').hasClass('toRight')){
+			$(this).children('i').remove();
+			$(this).html('<i class="fa fa-angle-left toLeft"></i>');
 			$('#slide-panel').animate({
-				marginLeft: "0"
+				marginLeft: '0'
 			},500);
 		}else{
-			$(this).removeClass('toLeft').addClass('toRight').html('<');
+			//$(this).children('i').removeClass('toLeft').addClass('toRight');
+			$(this).children('i').remove();
+			$(this).html('<i class="fa fa-angle-right toRight"></i>');
 			$('#slide-panel').animate({
-				marginLeft: "-640px"
+				marginLeft: '-640px'
 			},500);
 		}
 	});

@@ -189,8 +189,8 @@ tbody tr:hover {
   cursor: pointer;
   color: #fff;
   text-align: center;
-  line-height: 46px;
-  border-radius: 50px;
+  line-height: 50px;
+  border-radius: 50%;
   position: fixed;
   top: 15px;
   right: 15px;
@@ -307,6 +307,13 @@ strong {
     flex-wrap: row wrap;
     align-items: stretch;
     justify-content: center;
+  }
+  #slider {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 0%;
+    opacity: 0.5;
   }
 }
 @media screen and (min-width: 641px) and (max-width: 1280px) {

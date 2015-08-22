@@ -1,0 +1,33 @@
+<h2 id="section">下载代码</h2>
+<p>原来的代码好像安装的时候没有把文件全拷进去，用我修改过的吧</p>
+
+<pre><code>git clone https://github.com/suyan/ceilometer-horizon.git    
+</code></pre>
+
+<p>下面是他原来的代码</p>
+
+<pre><code>git clone https://github.com/yuanotes/ceilometer-horizon.git
+</code></pre>
+
+<h2 id="section-1">安装必须的包</h2>
+<p>他用了导出pdf的python库，所以先得装一下</p>
+
+<pre><code>easy_install svglib
+easy_install reportlab
+./setup.py install
+</code></pre>
+
+<h2 id="horizon">增加horizon部分</h2>
+<p>修改horizon/local目录中的local_setting.py</p>
+
+<pre><code>import sys
+settings = sys.modules['openstack_dashboard.settings']
+settings.INSTALLED_APPS += ('ceilometer_horizon.admin',)
+from openstack_dashboard.dashboards.admin import dashboard
+dashboard.SystemPanels.panels += ('ceilometer',)
+</code></pre>
+
+<h2 id="apache">重启apache</h2>
+
+<pre><code>service apache2 restart
+</code></pre>

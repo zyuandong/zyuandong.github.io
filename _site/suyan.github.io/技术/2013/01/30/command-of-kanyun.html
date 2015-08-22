@@ -1,0 +1,39 @@
+<pre><code>uuid:虚拟机的唯一标识，如08e89e41-d2c2-4c5d-ba2a-c0d180942270
+column_family(metric): 'cpu','vmnetwork','mem_max','mem_free','nic_incoming','nic_outgoing','blk_read','blk_write'
+super_column_family:当column_family为vmnetwork,cpu,mem*时为total，其他情况为'vnet0','vda'等
+timestamp: 时间戳，如1357628942
+option:额外选项，用来处理数据，'sum','max','min','avg','sam'
+period:时间间隔    
+</code></pre>
+
+<h3 id="section">获得某一虚拟机一段时间内某一度量标准记录值</h3>
+
+<pre><code>api-client -get &lt;uuid&gt; &lt;column_family&gt; &lt;super_column_family&gt; &lt;timestamp_from&gt; &lt;timestamp_to&gt;
+    api-client -get 08e89e41-d2c2-4c5d-ba2a-c0d180942270 cpu total 1357628942 1357629699
+</code></pre>
+
+<h3 id="section-1">获得某一虚拟机一段时间内某一度量标准分析值</h3>
+
+<pre><code>api-client -get &lt;uuid&gt; &lt;column_family&gt; &lt;super_column_family&gt; &lt;option&gt; &lt;period&gt; &lt;timestring_from&gt; &lt;timestring_to&gt;
+    api-client 08e89e41-d2c2-4c5d-ba2a-c0d180942270 cpu total sum 5 2013-01-08T02:09:02 2013-01-08T02:21:05
+</code></pre>
+
+<h3 id="section-2">显示所有某一度量标准的所有内容</h3>
+
+<pre><code>api-client -l &lt;metric&gt;
+    api-client -l cpu
+</code></pre>
+
+<h3 id="section-3">时间格式转换</h3>
+
+<pre><code>api-client -t &lt;timestamp&gt;
+api-client -d &lt;timestring&gt;
+    api-client -t 1111111111
+    api-client -d 2013-01-09T10:10
+</code></pre>
+
+<h3 id="section-4">显示帮助</h3>
+
+<pre><code>    api-client -h
+</code></pre>
+

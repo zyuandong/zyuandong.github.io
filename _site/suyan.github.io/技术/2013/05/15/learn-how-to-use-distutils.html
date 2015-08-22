@@ -1,0 +1,63 @@
+<h2 id="distutils">安装和了解distutils</h2>
+<p>python中自带了distutils，直接用</p>
+
+<h3 id="section">使用步骤</h3>
+
+<ul>
+  <li>写一个安装脚本(setup.py)</li>
+  <li>(可选)写一个安装配置文件</li>
+  <li>创建一个源码分布</li>
+  <li>(可选)创建一个或多个编译过的二进制分布</li>
+</ul>
+
+<h3 id="section-1">一个简单的例子</h3>
+
+<pre><code>from distutils.core import setup
+setup(name='test',
+      version='1.0',
+      py_modules=['test'],
+      )
+</code></pre>
+
+<h3 id="python">常见的python术语</h3>
+
+<ul>
+  <li>module 组件 Python中可重用代码的基本单位，这里主要介绍纯python组件、扩展组件和包</li>
+  <li>pure Python module 纯Python组件 完全由python写成的组件</li>
+  <li>extension module 扩展组件 由低级语言(C,C++)等写成的组件</li>
+  <li>package 包 一个含有别的组件的组件。通常包含在文件系统的目录下，并且显示声明在<code>__init__.py</code>文件中</li>
+  <li>root package 根包。 在根目录sys.path下的包</li>
+</ul>
+
+<h3 id="distutils-1">distutils特有的包</h3>
+
+<ul>
+  <li>module distribution 组件分布 一个可以安装的一系列组件的合集</li>
+  <li>pure module distribution 纯组件分布</li>
+  <li>non-pure module distribution 不纯组件分布，含有扩展组件</li>
+  <li>distribution root 你的源码最高级的目录，即<code>setup.py</code>所在目录</li>
+</ul>
+
+<h2 id="section-2">编写安装脚本</h2>
+
+<pre><code>#!/usr/bin/env python
+
+from distutils.core import setup
+
+setup(name='test',
+      version='1.0',
+      description='test package',
+      author='Su Yan',
+      author_email='yansu0711@gmail.com',
+      url='http://www.yansu.org',
+      packages=['test'],
+      scripts=['scripts/test.sh']
+     )
+</code></pre>
+
+<p>这个例子包含了一些详细的信息，在packages中可以利用<code>os.listdir(os.path.join('mydir','subdir'))</code>等函数添加目录下全部目录。</p>
+
+<p>在packages中包含的目录中，最好有<code>__init__.py</code>来声明它是一个包，如果没有，会有异常提醒</p>
+
+<p>scripts这项指，如果你的包有执行文件，可以讲其复制到<code>/usr/local/bin</code>下</p>
+
