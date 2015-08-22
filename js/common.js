@@ -11,12 +11,12 @@ $(function(){
 			$('#icon-slider').removeClass('fullscreen');
 			$('#slide-panel').animate({
 				marginLeft: '0'
-			},500);
+			},500).dequeue();
 		} else {
 			$('#icon-slider').addClass('fullscreen');
 			$('#slide-panel').animate({
 				marginLeft: '-640px'
-			},500);
+			},500).dequeue();
 		}
 		/**
 		if($(this).children('i').hasClass('toRight')){
