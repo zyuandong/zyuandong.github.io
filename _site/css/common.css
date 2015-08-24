@@ -174,11 +174,19 @@ tbody tr:hover {
   margin: 0;
   padding: 0 30px;
   overflow-y: auto;
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 #contents .contents-box {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+}
+#contents .contents-box img {
+  width: auto;
+  max-width: 100%;
 }
 /* 文章显示 end */
 /* 切换按钮 slider */
@@ -217,82 +225,6 @@ tbody tr:hover {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.toRight {
-  animation: toRight 0.5s forwards;
-  -webkit-animation: toRight 0.5s forwards;
-  -moz-animation: toRight 0.5s forwards;
-  -o-animation: toRight 0.5s forwards;
-}
-@-webkit-keyframes toRight {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-@-moz-keyframes toRight {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-@-o-keyframes toRight {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-@keyframes toRight {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-.toLeft {
-  animation: toLeft 0.5s forwards;
-  -webkit-animation: toLeft 0.5s forwards;
-  -moz-animation: toLeft 0.5s forwards;
-  -o-animation: toLeft 0.5s forwards;
-}
-@keyframes toLeft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}
-@-webkit-keyframes toLeft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}
-@-moz-keyframes toLeft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}
-@-o-keyframes toLeft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}
 /* 切换按钮 slider end */
 /* <strong></strong>标签 */
 strong {
@@ -321,12 +253,6 @@ strong {
   #slide-panel .file-list .head-img-min {
     display: block;
   }
-  #contents {
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: stretch;
-    justify-content: center;
-  }
   #slider {
     position: fixed;
     top: 0;
@@ -339,12 +265,6 @@ strong {
   #slide-panel {
     position: absolute;
     z-index: 1;
-  }
-  #contents {
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: stretch;
-    justify-content: center;
   }
 }
 /* media query end */
