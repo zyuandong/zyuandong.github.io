@@ -20,4 +20,6 @@ use dbname（查看数据库）
 
 show collections（查看集合）
 
-db.collection.drop()（删除集合）
+db.COLLECTION_NAME.drop()（删除集合）
+
+db.COLLECTION_NAME.remove() （从集合中删除文档）
