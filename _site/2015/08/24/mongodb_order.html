@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>认识CSS</title>
+    <title>mongoDB基本命令运用</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/simplex/js/jquery.js"></script>
@@ -325,23 +325,29 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="calc">calc()</h1>
+    <h1 id="mongodb">mongoDB基本命令运用</h1>
 
-<p>对我来说这是一个相当陌生的属性，曾在匆匆浏览大神博客之间略有认识，但一直没认证体会其用法。存在既有理，那就来学习一下calc()，填平这个大坑。</p>
+<p>win下启动mongoDB服务</p>
 
-<h1 id="bfc">BFC</h1>
+<p>mongod -dbpath d:\myservicer\data</p>
 
-<h1 id="display-inline-block">display: inline-block;</h1>
+<p>cd到mongoDB安装位置的bin目录下，</p>
 
-<h1 id="box-sizing">box-sizing</h1>
+<p><a href="http://www.360doc.com/content/10/0618/22/10626_33885376.shtml">mongoDB</a></p>
 
-<h1 id="zoom-1">zoom: 1;</h1>
+<p><a href="http://www.yiibai.com/mongodb/">mongoDB教程</a></p>
 
-<h1 id="box-model">box model</h1>
+<p><a href="http://blog.csdn.net/mcpang/article/details/7714744">mongodb概念–文档、集合、数据库、shell</a></p>
 
-<h1 id="flexbox">flexbox</h1>
+<p>show dbs (查看数据库)</p>
 
-<h1 id="font-family">font-family</h1>
+<p>use dbname（切换数据库）</p>
+
+<p>show collections（查看集合）</p>
+
+<p>db.COLLECTION_NAME.drop()（删除集合）</p>
+
+<p>db.COLLECTION_NAME.remove({}) （从集合中删除文档）</p>
 
     <div id="footer">
 	<p>

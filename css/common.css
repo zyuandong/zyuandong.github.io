@@ -93,6 +93,11 @@ tbody tr:hover {
   background-color: #6ec8c9;
 }
 /* 表格 end */
+/* <strong></strong>标签 */
+strong {
+  color: #c7254e;
+}
+/* <strong></strong>标签 end */
 /* 文章目录 */
 #slide-panel {
   height: 100%;
@@ -189,7 +194,7 @@ tbody tr:hover {
   max-width: 100%;
 }
 /* 文章显示 end */
-/* 切换按钮 slider */
+/* slider按钮  */
 #slider {
   width: 50px;
   height: 50px;
@@ -225,12 +230,22 @@ tbody tr:hover {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* 切换按钮 slider end */
-/* <strong></strong>标签 */
-strong {
-  color: #c7254e;
+/* slider按钮 end */
+/* back2top按钮 */
+#back2top {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
 }
-/* <strong></strong>标签 end */
+/* back2top按钮 end */
 /* 底部footer */
 #footer {
   margin-top: 60px;
