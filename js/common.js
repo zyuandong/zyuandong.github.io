@@ -1,4 +1,6 @@
 $(function(){
+	onScroll();
+
 	$('body').css('height', $(window).get(0).innerHeight);
 
 	$(window).resize(function() {
@@ -30,3 +32,19 @@ $(function(){
 		**/
 	});
 });
+
+/**
+ * 滚动事件
+ * */
+function onScroll(){
+	$('#contents').scroll(function(){
+	    var t = $(this).scrollTop();
+	    if( t >= 10) {
+	    	if(!$('#back2top').is(":visible")){
+		    	$('#back2top').show();
+	    	}
+	    } else {
+	    	$('#back2top').hide();
+	    }
+	})
+}
