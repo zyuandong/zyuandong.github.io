@@ -246,7 +246,21 @@ strong {
   bottom: 66px;
   opacity: 0.5;
 }
-/* indexBtn 按钮 */
+/* indexBtn 按钮 end */
+/* indexPanel */
+#index-panel {
+  width: 100px;
+  height: 500px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  opacity: 0.5;
+  border: 1px solid green;
+  border-radius: 5px 0 0;
+  display: none;
+}
+/* indexPanel end */
 /* back2top按钮 */
 #back2top {
   width: 50px;
