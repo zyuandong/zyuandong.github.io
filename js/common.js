@@ -46,4 +46,18 @@ $(function(){
 			scrollTop: '0'
 		}, 700);
 	});
+
+	$('#index-btn').click(function() {
+		if($(this).hasClass('show')){
+			$(this).removeClass('show');
+			$('#index-panel').animate({
+				right: '-100px'
+			}, 300).dequeue();
+		} else {
+			$(this).addClass('show');
+			$('#index-panel').animate({
+				right: '0'
+			}, 300).dequeue();
+		}
+	});
 });
