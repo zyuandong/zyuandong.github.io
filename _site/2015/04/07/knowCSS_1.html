@@ -325,23 +325,79 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="calc">calc()</h1>
+    <h2 id="calc">calc()</h2>
 
 <p>对我来说这是一个相当陌生的属性，曾在匆匆浏览大神博客之间略有认识，但一直没认证体会其用法。存在既有理，那就来学习一下calc()，填平这个大坑。</p>
 
-<h1 id="bfc">BFC</h1>
+<h2 id="rgba--opacity-">rgba() 与 opacity 的区别</h2>
 
-<h1 id="display-inline-block">display: inline-block;</h1>
+<p>想要实现透明的效果，常常会用到这两个元素，但二者之前存在一个很大的差别，手工写个例子对比一下</p>
 
-<h1 id="box-sizing">box-sizing</h1>
+<p>HTML 代码：</p>
 
-<h1 id="zoom-1">zoom: 1;</h1>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;title&gt;rgba() VS opciaty&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class="box1"&gt;
+			&lt;div class="con"&gt;rgba()&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="box2"&gt;
+			&lt;div class="con"&gt;opacity&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<h1 id="box-model">box model</h1>
+<p>CSS 代码：</p>
 
-<h1 id="flexbox">flexbox</h1>
+<pre><code>.box1 {
+	width: 100px;
+	height: 100px;
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 10px;
+}
 
-<h1 id="font-family">font-family</h1>
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	padding: 10px;
+	opacity: 0.5;
+}
+
+.con {
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+</code></pre>
+
+<p>对比图：</p>
+
+<p><img src="http://imgchr.com/images/rgbaVSopacity.png" alt="rgba VS opacity" /></p>
+
+<p>这样就可以很明显得到到结论：</p>
+
+<p><code>rgab()</code>：不会影响子元素显示
+<code>opacity</code>：会影响子元素，使其也是透明显示</p>
+
+<h2 id="bfc">BFC</h2>
+
+<h2 id="display-inline-block">display: inline-block;</h2>
+
+<h2 id="box-sizing">box-sizing</h2>
+
+<h2 id="zoom-1">zoom: 1;</h2>
+
+<h2 id="box-model">box model</h2>
+
+<h2 id="flexbox">flexbox</h2>
+
+<h2 id="font-family">font-family</h2>
 
     <div id="footer">
 	<p>
