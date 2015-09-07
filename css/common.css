@@ -108,7 +108,7 @@ strong {
   height: 100%;
   float: left;
   color: #ccc;
-  background-color: rgba(31, 63, 95, 0.9);
+  background-color: #778EB1;
 }
 .guid .head-img {
   display: block;
@@ -137,7 +137,7 @@ strong {
   width: 320px;
   height: 100%;
   float: left;
-  background-color: rgba(213, 213, 213, 0.9);
+  background-color: rgba(213, 213, 213, 0.3);
   overflow-y: auto;
 }
 .file-list .head-img-min {
@@ -295,6 +295,7 @@ strong {
   }
   #slide-panel .file-list {
     width: 100%;
+    background-color: rgba(213, 213, 213, 0.9);
   }
   #slide-panel .file-list .head-img-min {
     display: block;
@@ -321,6 +322,9 @@ strong {
   #slide-panel {
     position: absolute;
     z-index: 1;
+  }
+  .file-list {
+    background-color: rgba(213, 213, 213, 0.9);
   }
 }
 /* media query end */
