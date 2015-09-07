@@ -11,6 +11,9 @@ body {
   height: 3px;
   background-color: red;
 }
+* {
+  box-sizing: border-box;
+}
 /* a标签 */
 a {
   color: #4ae8c4;
@@ -179,15 +182,12 @@ strong {
   margin: 0;
   padding: 0 30px;
   overflow-y: auto;
-  display: flex;
-  flex-wrap: row wrap;
-  align-items: stretch;
-  justify-content: center;
 }
 #contents .contents-box {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #fff;
 }
 #contents .contents-box img {
   width: auto;
@@ -325,6 +325,16 @@ strong {
   }
   .file-list {
     background-color: rgba(213, 213, 213, 0.9);
+  }
+}
+@media screen and (min-width: 1000px) {
+  #contents {
+    background-color: #eee;
+  }
+  #contents .contents-box {
+    padding: 0 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px #bbb;
   }
 }
 /* media query end */
