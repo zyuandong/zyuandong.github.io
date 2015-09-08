@@ -2,10 +2,22 @@ $(function(){
 	$('body').css('height', $(window).get(0).innerHeight);
 
 	$(window).resize(function() {
-
 		$('body').css('height', $(window).get(0).innerHeight);
 	});
+
+	//为超链接加上target='_blank'属性
+	$('a[href^="http"]').each(function() {
+		$(this).attr('target', '_blank');
+	});
 	
+	//移动设备，打开文章时目录自动收起
+	if($(window).width() <= 640) {
+		$('#slide-panel').animate({
+			marginLeft: '-640px'
+		}, 500).dequeue();
+		$('#icon-slider').addClass('fullscreen');
+	}
+
 	$('#slider').on('click', function() {
 		if($('#icon-slider').hasClass('fullscreen')) {
 			$('#icon-slider').removeClass('fullscreen');
@@ -31,13 +43,6 @@ $(function(){
 			});
 		}
 	});
-
-	if($(window).width() <= 640) {
-		$('#slide-panel').animate({
-			marginLeft: '-640px'
-		}, 500).dequeue();
-		$('#icon-slider').addClass('fullscreen');
-	}
 
 	/**
 	 * 滚动事件
