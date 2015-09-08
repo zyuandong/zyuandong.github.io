@@ -395,6 +395,64 @@
 
 <p><img src="http://imgchr.com/images/box-sizing.png" alt="box-sizing" /></p>
 
+<h2 id="animate">animate</h2>
+
+<p><a href="http://www.educity.cn/wenda/148720.html">jQuery animate()步骤详解、实例、扩展（详细版）</a></p>
+
+<pre><code>$('...').animate({
+	...
+}, [time], function() {}).dequeue();
+</code></pre>
+
+<p>规范写法：</p>
+
+<pre><code>$('...').animate({
+	...
+}, {
+	duration: [time], 
+	queue: false,
+	complete: function() {}
+});
+</code></pre>
+
+<p>可能的 CSS 样式值（提供实例）：</p>
+
+<pre><code>backgroundPosition
+borderWidth
+borderBottomWidth
+borderLeftWidth
+borderRightWidth
+borderTopWidth
+borderSpacing
+margin
+marginBottom
+marginLeft
+marginRight
+marginTop
+outlineWidth
+padding
+paddingBottom
+paddingLeft
+paddingRight
+paddingTop
+height
+width
+maxHeight
+maxWidth
+minHeight
+minWidth
+font
+fontSize
+bottom
+left
+right
+top
+letterSpacing
+wordSpacing
+lineHeight
+textIndent
+</code></pre>
+
 <h2 id="bfc">BFC</h2>
 
 <h2 id="display-inline-block">display: inline-block;</h2>

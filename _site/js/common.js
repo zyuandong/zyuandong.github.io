@@ -11,12 +11,25 @@ $(function(){
 			$('#icon-slider').removeClass('fullscreen');
 			$('#slide-panel').animate({
 				marginLeft: '0'
-			},500).dequeue();
+			}, {
+				duration: 500,
+				queue: false,
+				complete: function() {
+					$('.contents-box').removeClass('fullscreen');
+				}
+			});
 		} else {
 			$('#icon-slider').addClass('fullscreen');
+			$('.contents-box').addClass('fullscreen');
 			$('#slide-panel').animate({
 				marginLeft: '-640px'
-			}, 500).dequeue();
+			}, {
+				duration: 500,
+				queue: false,
+				complete: function() {
+					$('.contents-box').addClass('fullscreen');
+				}
+			});
 		}
 	});
 
