@@ -4,13 +4,15 @@ title: web前端安全
 monthLast: true
 ---
 
-# 常见的前端安全策略
+# web前端安全
+
+## 常见的前端安全策略
 
 1. DOM check
 2. HTTPS
 3. csp
 
-# 比较
+## 比较
 
 **DOM check**
 

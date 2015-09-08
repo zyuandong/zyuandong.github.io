@@ -3,7 +3,7 @@ layout: default
 title: 认识JavaScript
 ---
 
-# 复习JavaScript
+# 认识JavaScript
 
 ## for-in循环
 

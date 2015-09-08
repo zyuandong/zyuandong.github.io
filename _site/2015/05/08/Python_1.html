@@ -343,7 +343,7 @@
 
 <p>通过Python的交互式命令行试验一下：</p>
 
-<pre><code># 导入SQLite驱动:
+<pre><code>## 导入SQLite驱动:
 &gt;&gt;&gt; import sqlite3
 
 # 连接到SQLite数据库
@@ -351,14 +351,14 @@
 # 如果文件不存在，会自动在当前目录创建:
 &gt;&gt;&gt; conn = sqlite3.connect('test.db')
 
-# 创建一个Cursor:
+## 创建一个Cursor:
 &gt;&gt;&gt; cursor = conn.cursor()
 
-# 执行一条SQL语句，创建user表:
+## 执行一条SQL语句，创建user表:
 &gt;&gt;&gt; cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
 &lt;sqlite3.Cursor object at 0x10f8aa260&gt;
 
-# 继续执行一条SQL语句，插入一条记录:
+## 继续执行一条SQL语句，插入一条记录:
 &gt;&gt;&gt; cursor.execute('insert into user (id, name) values (\'1\', \'Michael\')')
 &lt;sqlite3.Cursor object at 0x10f8aa260&gt;
 
@@ -366,13 +366,13 @@
 &gt;&gt;&gt; cursor.rowcount
 1
 
-# 关闭Cursor:
+## 关闭Cursor:
 &gt;&gt;&gt; cursor.close()
 
-# 提交事务:
+## 提交事务:
 &gt;&gt;&gt; conn.commit()
 
-# 关闭Connection:
+## 关闭Connection:
 &gt;&gt;&gt; conn.close()
 </code></pre>
 

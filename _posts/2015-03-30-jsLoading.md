@@ -5,7 +5,9 @@ tags: JavaScript
 monthLast: true
 ---
 
-# 常用加载js方法及区别
+# 资源加载顺序小结
+
+## 常用加载js方法及区别
 
 - `<body onload="functionName()">...</body>`
 - `$(document).ready(function(){...}); `
