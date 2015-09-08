@@ -12,7 +12,7 @@ $(function(){
 			$('#slide-panel').animate({
 				marginLeft: '0'
 			}, {
-				duration: 500,
+				duration: 300,
 				queue: false,
 				complete: function() {
 					$('.contents-box').removeClass('fullscreen');
@@ -20,11 +20,10 @@ $(function(){
 			});
 		} else {
 			$('#icon-slider').addClass('fullscreen');
-			$('.contents-box').addClass('fullscreen');
 			$('#slide-panel').animate({
 				marginLeft: '-640px'
 			}, {
-				duration: 500,
+				duration: 300,
 				queue: false,
 				complete: function() {
 					$('.contents-box').addClass('fullscreen');

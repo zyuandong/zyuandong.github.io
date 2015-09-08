@@ -212,14 +212,23 @@ strong {
 }
 #contents .contents-box {
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
   box-sizing: border-box;
+  /**
+		-webkit-transition: width 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+		-moz-transition: width 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+		-ms-transition: width 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+		-o-transition: width 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+		transition: width 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+**/
 }
 #contents .contents-box img {
   width: auto;
   max-width: 100%;
+}
+#contents .contents-box.fullscreen {
+  max-width: 800px;
 }
 /* 文章显示 end */
 /* slider按钮  */
