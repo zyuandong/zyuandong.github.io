@@ -122,6 +122,7 @@ strong {
 	height: 100%;
 	float: left;
 	color: #ccc;
+	position: relative;
 	//background-color: rgba(31, 63, 95, 0.9);//#1f3f5f
 	background-color: #064065;
 
@@ -155,9 +156,37 @@ strong {
 			justify-content: space-around;
 		}
 	}
+
+	.my-msg {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		font-size: 20px;
+
+		display: flex;
+		flex-wrap: row nowrap;
+		align-items: stretch;
+		justify-content: space-around;
+
+/**
+		a:first-child {
+			//width: 50%;
+			text-align: center;
+			border-top: 1px solid #434d9b;
+			border-right: 1px solid #434d9b;
+		}
+
+		a:last-child {
+			//width: 50%;
+			text-align: center;
+			border-top: 1px solid #434d9b;
+			border-left: 1px solid #434d9b;
+		}
+**/
+	}
 }
 .file-list {
-	width: 320px;
+	width: 309px;
 	height: 100%;
 	float: left;
 	background-color: rgba(213, 213, 213, 0.3);//#ccc
