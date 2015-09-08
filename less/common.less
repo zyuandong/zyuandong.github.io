@@ -354,6 +354,7 @@ strong {
 /* 底部footer end */
 
 /* media query */
+//这个分辨率区间大多为移动设备
 @media screen and (max-width: 640px) {
 
 	#slide-panel {
@@ -395,6 +396,9 @@ strong {
 		right: 0;
 	}
 }
+
+//这个分辨率区间的设备最少（slide-panel可以覆盖contents）
+//大于等于1024px的常见设备有 iPad / iPad mini / PC
 @media screen and (min-width: 641px) and (max-width: 1023px) {
 	#slide-panel {
 		position: absolute;
@@ -411,6 +415,7 @@ strong {
 
 }
 
+//800px以上给contents-box加一圈边框
 @media screen and (min-width: 800px) {
 	#contents {
 		background-color: #eee;
@@ -426,5 +431,4 @@ strong {
 		}
 	}
 }
-
 /* media query end */
