@@ -11,9 +11,6 @@ body {
   height: 3px;
   background-color: red;
 }
-* {
-  box-sizing: border-box;
-}
 /* a标签 */
 a {
   color: #4ae8c4;
@@ -111,17 +108,21 @@ strong {
   height: 100%;
   float: left;
   color: #ccc;
-  background-color: #778EB1;
+  background-color: #064065;
 }
-.guid .head-img {
+.guid .head-img-box {
   display: block;
-  width: 180px;
-  height: 180px;
+  margin: 30px 35px 0;
+}
+.guid .head-img-box .head-img {
+  display: block;
+  width: 110px;
+  height: 110px;
   text-align: center;
   line-height: 180px;
-}
-.guid a:hover {
-  background-color: #1f3f5f;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-sizing: border-box;
 }
 .guid ul {
   margin: 10px 0;
@@ -188,6 +189,7 @@ strong {
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
+  box-sizing: border-box;
 }
 #contents .contents-box img {
   width: auto;
