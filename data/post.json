@@ -1,7 +1,5 @@
 ---
-layout: data
 ---
-
 {
 	"datas": [
 {% for post in site.posts %}

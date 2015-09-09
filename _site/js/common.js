@@ -77,4 +77,21 @@ $(function(){
 			}, 300).dequeue();
 		}
 	});
+
+	$.getJSON('/simplex/data/post.json', function(data) {
+		console.log(data);
+		var html = "",
+			len = data.size,
+			datas = data.datas;
+		for(var i in data.datas) {
+			if(datas[i].tags.length > 0) {
+				for(var j in datas[i].tags) {
+					html += datas[i].tags[j] + ',';
+				}
+			}
+		}
+		$('.tags-box').html(html);
+		console.log(html);
+	});
+
 });
