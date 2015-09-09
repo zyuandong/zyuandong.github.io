@@ -11,19 +11,23 @@ title: 认识JavaScript
 
 + 遍历对象 obj
 
+~~~
 for(var i in obj) {
 	// i 为属性名
 	// obj[i] 为具体的值
 }
+~~~
 
 + 遍历数组 array
 
 不赞成用 `for-in` 遍历数组，如果数组对象已被自定义的功能增强，就可能发生逻辑错误。
 
+~~~
 for(var i in array) {
 	// i 为数组下标
 	// array[i] 为具体的值
 }
+~~~
 
 ## attachEvent 和 addEventListener
 

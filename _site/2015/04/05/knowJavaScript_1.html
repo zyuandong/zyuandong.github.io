@@ -356,10 +356,11 @@
   <li>遍历对象 obj</li>
 </ul>
 
-<p>for(var i in obj) {
+<pre><code>for(var i in obj) {
 	// i 为属性名
 	// obj[i] 为具体的值
-}</p>
+}
+</code></pre>
 
 <ul>
   <li>遍历数组 array</li>
@@ -367,10 +368,11 @@
 
 <p>不赞成用 <code>for-in</code> 遍历数组，如果数组对象已被自定义的功能增强，就可能发生逻辑错误。</p>
 
-<p>for(var i in array) {
+<pre><code>for(var i in array) {
 	// i 为数组下标
 	// array[i] 为具体的值
-}</p>
+}
+</code></pre>
 
 <h2 id="attachevent--addeventlistener">attachEvent 和 addEventListener</h2>
 
