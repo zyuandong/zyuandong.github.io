@@ -2,6 +2,7 @@
 layout: default
 title: mongoDB基本命令运用
 monthLast: true
+tags: [mongoDB, mongoose]
 ---
 
 # mongoDB基本命令运用
