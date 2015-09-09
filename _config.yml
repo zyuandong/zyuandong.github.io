@@ -9,3 +9,4 @@ github: https://github.com/bakerz
 
 #Build settings
 markdown:    kramdown
+# highlighter: highlight
