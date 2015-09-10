@@ -213,13 +213,13 @@ strong {
   background-color: #fff;
   box-sizing: border-box;
 }
-#contents .contents-box .category-tags-box {
+#contents .contents-box .date-tags-box {
   color: #bbb;
   padding: 10px;
   border-bottom: 1px dashed #ccc;
 }
-#contents .contents-box .category-tags-box .tags {
-  margin-left: 20px;
+#contents .contents-box .date-tags-box .date {
+  margin-right: 20px;
 }
 #contents .contents-box img {
   width: auto;
