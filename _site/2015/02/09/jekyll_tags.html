@@ -367,12 +367,12 @@
 
 
 <div class="category-tags-box">
-	<span>
+	<span class="category">
 		<i class="fa fa-clock-o"></i>
 		2015.02.09
 	</span>
-	<span>
-		<i class="fa fa-tags"></i><a href="">jekyll</a> 、 <a href="">liquid</a>
+	<span class="tags">
+		<i class="fa fa-tags"></i><a href="#">jekyll</a>、<a href="#">liquid</a>
 	</span>
 </div>
     <p><a href="http://yanping.me/cn/blog/2012/10/10/asynchronous-loading-post-list-with-jekyll-and-jQuery/">用jekyll和jQuery实现异步加载文章列表</a></p>
@@ -388,8 +388,8 @@
 <p>tags 或者 tag 区别</p>
 
 <ul>
-  <li>生成 post.json 的 <code>post.tags</code> 能够识别 tags 和 tag；</li>
-  <li>但获取文章 tag 的 <code>page.tags</code> 只能够识别 tags，同理 <code>page.tag</code> 只能识别 <code>tag</code>。</li>
+  <li>生成 post.json 的 `` 能够识别 tags 和 tag；</li>
+  <li>但获取文章 tag 的 <code>jekyllliquid</code> 只能够识别 tags，同理 `` 只能识别 <code>tag</code>，但通过 for-in 遍历依然能够获取信息。</li>
 </ul>
 
 <p>因此我还是统一定为 tags。</p>

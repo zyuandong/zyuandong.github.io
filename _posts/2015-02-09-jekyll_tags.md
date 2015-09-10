@@ -18,7 +18,7 @@ tags: [jekyll, liquid]
 
 tags 或者 tag 区别
 
-+ 生成 post.json 的 `post.tags` 能够识别 tags 和 tag；
-+ 但获取文章 tag 的 `page.tags` 只能够识别 tags，同理 `page.tag` 只能识别 `tag`。
++ 生成 post.json 的 `{{ post.tags }}` 能够识别 tags 和 tag；
++ 但获取文章 tag 的 `{{ page.tags }}` 只能够识别 tags，同理 `{{ page.tag }}` 只能识别 `tag`，但通过 for-in 遍历依然能够获取信息。
 
 因此我还是统一定为 tags。

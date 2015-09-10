@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 将Sublime Text打造为适合自己的开发工具
+tags: [开发工具, sublime text]
 ---
 
 ## 选择Sublime Text

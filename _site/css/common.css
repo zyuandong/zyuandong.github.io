@@ -32,9 +32,6 @@ h6 {
   color: #000;
   font-weight: normal;
 }
-h1 {
-  text-align: center;
-}
 /* h1~h6 end */
 /* 代码块 */
 pre {
@@ -215,6 +212,14 @@ strong {
   margin: 0 auto;
   background-color: #fff;
   box-sizing: border-box;
+}
+#contents .contents-box .category-tags-box {
+  color: #bbb;
+  padding: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+#contents .contents-box .category-tags-box .tags {
+  margin-left: 20px;
 }
 #contents .contents-box img {
   width: auto;
