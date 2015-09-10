@@ -9,7 +9,11 @@ title
 
 可选：
 
-tag | tags
+category
+
+tags | tag
+
+description
 
 public: true | false
 
