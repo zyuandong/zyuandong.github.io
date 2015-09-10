@@ -3,8 +3,6 @@ layout: default
 title: 认识JavaScript
 ---
 
-# 认识JavaScript
-
 ## for-in循环
 
 [for-in](http://www.nowamagic.net/librarys/veda/detail/1625)

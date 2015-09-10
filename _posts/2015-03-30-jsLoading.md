@@ -5,8 +5,6 @@ tags: JavaScript
 monthLast: true
 ---
 
-# 资源加载顺序小结
-
 ## 常用加载js方法及区别
 
 - `<body onload="functionName()">...</body>`

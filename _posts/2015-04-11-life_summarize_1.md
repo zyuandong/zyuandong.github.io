@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Front-End Enginer summarize 
+title: 前端感悟
 ---
-
-# 前端感悟
 
 首先引用曾看过的一段话：
 

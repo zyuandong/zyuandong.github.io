@@ -4,8 +4,6 @@ title: 搭建Jekyll本地环境
 monthLast: true
 ---
 
-# 搭建Jekyll本地环境
-
 1. 安装[RubyInstaller](http://rubyinstaller.org/downloads/)
 
 下载最新版RubyInstaller,我的安装 `Ruby 2.2.2 (x64)`,安装的时候记得勾选添加环境变量。我的安装位置c:\Ruby22-x64

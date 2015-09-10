@@ -4,8 +4,6 @@ title: web前端安全
 monthLast: true
 ---
 
-# web前端安全
-
 ## 常见的前端安全策略
 
 1. DOM check

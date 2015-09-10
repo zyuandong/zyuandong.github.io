@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MySQL小技巧</title>
+    <title>MySQL小技巧总结</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="/simplex/js/jquery-1.11.3.min.js"></script>
@@ -98,7 +98,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/08/04/Flexbox.html">
-			        	flexbox
+			        	Flexbox弹性盒子模型
 			        </a>
 			    </li>
 			    
@@ -131,7 +131,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/05/11/MySQL.html">
-			        	MySQL小技巧
+			        	MySQL小技巧总结
 			        </a>
 			    </li>
 			    
@@ -140,7 +140,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/05/08/Python_1.html">
-			        	Python <1>
+			        	开始学习Python
 			        </a>
 			    </li>
 			    
@@ -149,7 +149,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/05/04/AJAX.html">
-			        	AJAX
+			        	认识AJAX
 			        </a>
 			    </li>
 			    
@@ -178,7 +178,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/11/life_summarize_1.html">
-			        	Front-End Enginer summarize
+			        	前端感悟
 			        </a>
 			    </li>
 			    
@@ -187,7 +187,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/09/nodeJs_3.html">
-			        	nodejs <3>
+			        	学习 nodejs <3>
 			        </a>
 			    </li>
 			    
@@ -232,7 +232,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/03/exam.html">
-			        	题目
+			        	题目收集
 			        </a>
 			    </li>
 			    
@@ -241,7 +241,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/02/nodeJs_2.html">
-			        	nodejs <2>
+			        	学习nodejs <2>
 			        </a>
 			    </li>
 			    
@@ -250,7 +250,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/02/nodeJs_1.html">
-			        	nodejs <1>
+			        	学习nodejs <1>
 			        </a>
 			    </li>
 			    
@@ -259,7 +259,7 @@
 			    
 			    <li>
 			        <a class="title" href="/simplex/2015/04/01/TheNodeBaginnerBook.html">
-			        	nodejs beginner book
+			        	The Node Beginner Book
 			        </a>
 			    </li>
 			    
@@ -355,27 +355,43 @@
 
 <div id="contents">
     <div class="contents-box">
-    <h1 id="mysql">MySQL小技巧总结</h1>
+    <h1>MySQL小技巧总结</h1>
+    
+	
+	
+		
+	
+	
 
-<h2 id="cmdmysql">使用cmd命令终端登录MySQL</h2>
+
+<div class="category-tags-box">
+	<span>
+		<i class="fa fa-clock-o"></i>
+		2015.05.11
+	</span>
+	<span>
+		<i class="fa fa-tag"></i><a href="">MySQL</a>
+	</span>
+</div>
+    <h2 id="cmdmysql">使用cmd命令终端登录MySQL</h2>
 
 <p>方法一：如果添加了MySQL环境变量，可以直接使用命令<code>mysql -uroot -p***(***是用户密码)</code>，回车便可以登录</p>
 
 <p>方法二：未添加MySQL环境变量，可以将MySQL安装目录下的bin目录添加到系统环境变量，即可参照方法一继续进行；也可切换到MySQL的安装目录下的bin目录，再使用方法一</p>
 
-<h2 id="mysql-1">连接到远程主机上的MySQL</h2>
+<h2 id="mysql">连接到远程主机上的MySQL</h2>
 
 <p>假设远程主机IP为：110.110.110.110，用户名为：root，密码为：123456。则命令为：</p>
 
 <p><code>mysql -h110.110.110.110 -uroot -p123456</code></p>
 
-<h2 id="mysql-2">查看MySQL字符编码</h2>
+<h2 id="mysql-1">查看MySQL字符编码</h2>
 
 <p>MySQL命令模式下，输入<code>show variables like '%char%';</code></p>
 
 <p><code>show variables like 'character_set_%';</code></p>
 
-<h2 id="mysql-3">解决MySQL命令模式下，展示数据乱码</h2>
+<h2 id="mysql-2">解决MySQL命令模式下，展示数据乱码</h2>
 
 <p>输入<code>set names utf8;</code></p>
 

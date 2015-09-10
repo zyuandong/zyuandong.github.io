@@ -5,8 +5,6 @@ monthLast: true
 tags: [mongoDB, mongoose]
 ---
 
-# mongoDB基本命令运用
-
 win下启动mongoDB服务
 
 mongod -dbpath d:\myservicer\data

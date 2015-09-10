@@ -3,8 +3,6 @@ layout: default
 title: 将Sublime Text打造为适合自己的开发工具
 ---
 
-# 将Sublime Text打造为适合自己的开发工具
-
 ## 选择Sublime Text
 
 Sublime Text

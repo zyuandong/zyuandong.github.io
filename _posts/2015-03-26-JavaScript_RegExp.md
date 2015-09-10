@@ -4,8 +4,6 @@ title: 正则表达式
 tags: 正则表达式
 ---
 
-# 正则表达式
-
 ## RegExp对象
 
 `new RegExp(pattern, attributes);`
