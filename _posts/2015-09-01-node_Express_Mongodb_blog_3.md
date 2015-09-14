@@ -6,35 +6,11 @@ tags: nodeJS Express mongoDB
 
 #  使用 mongoDB 数据库
 
-## 一、实验说明
-
-下述介绍为实验楼默认环境，如果您使用的是定制环境，请修改成您自己的环境介绍。
-
-### 1. 环境登录
-
-无需密码自动登录，系统用户名shiyanlou，密码shiyanlou
-
-### 2. 环境介绍
-
-本实验环境采用带桌面的Ubuntu Linux环境，实验中会用到桌面上的程序：
-
-1. LX终端（LXTerminal）: Linux命令行终端，打开后会进入Bash环境，可以使用Linux命令
-2. Firefox：浏览器，可以用在需要前端界面的课程里，只需要打开环境里写的HTML/JS页面即可
-3. GVim：非常好用的编辑器，最简单的用法可以参考课程[Vim编辑器](http://www.shiyanlou.com/courses/2)
-
-### 3. 环境使用
-
-使用GVim编辑器输入实验所需的代码及文件，使用LX终端（LXTerminal）运行所需命令进行操作。
-
-完成实验后可以点击桌面上方的“实验截图”保存并分享实验结果到微博，向好友展示自己的学习进度。实验楼提供后台系统截图，可以真实有效证明您已经完成了实验。
-
-实验记录页面可以在“我的主页”中查看，其中含有每次实验的截图及笔记，以及每次实验的有效学习时间（指的是在实验桌面内操作的时间，如果没有操作，系统会记录为发呆时间）。这些都是您学习的真实性证明。
-
-## 二、课程介绍
+## 一、课程介绍
 
 这一节，我们将学习在 Express 框架如何操作 mongoDB 中的数据，以及如何配合 session 完成一些基本的逻辑状态判断，完成本节，我们的 LouBlog 博客系统也将初具模型。
 
-## 三、使用 mongoDB 数据库
+## 二、使用 mongoDB 数据库
 
 mongoDB 是一个基于分布式文件存储的非关系型数据库（NoSQL）的一种。它支持的数据结构非常松散，类似 json 的 bjson 格式。
 
@@ -54,10 +30,10 @@ mongoDB 没有关系型数据库中行和表的概念，但有类似文档 （do
 
 最后输入 `mongo` 即可访问数据库。
 
-### 3.1 连接 mongoDB
+### 2.1 连接 mongoDB
 
 mongoDB 的服务启动后，开始编写程序建立连接，这里我们使用 mongoDB 的模型工具 -- mongoose，可以方便我们减化代码，并且这还是为 nodeJS 设计的。 
-#### 3.1.1 使用 mongoose 连接 mongoDB
+#### 2.1.1 使用 mongoose 连接 mongoDB
 
 运行以下命令安装 mongoose 包：
 
@@ -76,7 +52,7 @@ mongoose.connection.on('error', console.error.bind(console, '连接数据库失�
 
 刷新页面时，若没有报出 “连接数据库失败” 则成功连接数据库。接下来，我们便要建立数据库模型，向数据库中存储数据。
 
-### 3.2 设置 schema
+### 2.2 设置 schema
 
 schema 是 mongoose 中的模型对象，就类似关系型数据库中的表结构，为 key/value 的键值对形式。
 
@@ -84,7 +60,7 @@ schema 是 mongoose 中的模型对象，就类似关系型数据库中的表结
 
 在根目录下新建一个文件夹 `models`，再新建一个文件 `model.js`。
 
-#### 3.2.1 设置 userSchema 
+#### 2.2.1 设置 userSchema 
 
 在 `models/model.js` 中引入 mongoose 模块，并定义 schema 模型对象：
 
@@ -115,7 +91,7 @@ var userSchema = new Schema({
 exports.User = mongoose.model('User', userSchema);
 ~~~
 
-#### 3.2.2 设置 articleSchema
+#### 2.2.2 设置 articleSchema
 
 同样是在 `models/model.js` 下，我们创建文章模型对象 -- articleSchema：
 
@@ -139,9 +115,9 @@ exports.Article = mongoose.model('Article', articleSchema);
 
 创建好模型，就可以操作数据了。
 
-### 3.3 操作数据
+### 2.3 操作数据
 
-#### 3.3.1 注册用户、发表文章
+#### 2.3.1 注册用户、发表文章
 
 首先我们学习添加数据的操作 -- 注册用户和发表文章，在 `routes/index.js` 中，我们添加以下代码：
 
@@ -233,7 +209,7 @@ router.post('/post', function(req, res, next) {
 
 有了用户注册的基础，发表文章就简单许多了，但现在还没讲到 session 的运用，author 元素的值可以暂时通过 post 表单获得，稍后讲到 session 时，我们再改为上面的写法即可。
 
-#### 3.3.2 删除文章
+#### 2.3.2 删除文章
 
 接下来是文章的删除操作，依然是 `routes/index.js`，修改我们第一节实验写好的路由规则 `/remove/:_id`：
 
@@ -253,7 +229,7 @@ router.get('/remove/:_id', function(req, res, next) {
 });
 ~~~
 
-#### 3.3.3 编辑文章
+#### 2.3.3 编辑文章
 
 编辑文章，不仅需要获取文章信息，初始化表单内容，同时还需要有和发表文章一样的功能：
 
@@ -290,7 +266,7 @@ router.post('/edit/:_id', function(req, res, next) {
 });
 ~~~
 
-#### 3.3.4 查询文章
+#### 2.3.4 查询文章
 
 这里我们可以通过正则表达式，实现模糊查询，因为 Express 路由规则支持正则匹配查询。
 
@@ -322,11 +298,11 @@ router.get('/search', function(req, res, next) {
 
 解决这两个问题，就需要靠接下来我们将要学习的 session 。
 
-## 四、创建 session
+## 三、创建 session
 
 session 是一种持久网络协议，在客户端与服务器之间起到交换数据包的作用。用户登录后的基本信息都会保存其中，Express 也提供了会话中间件，同时我们还可以将会话信息存储到数据库中，便于维护。为此，我们需要引入两个中间件 express-session 和 connect-mongo，安装方式如下：
 
-### 4.1 引入中间件，创建 session
+### 3.1 引入中间件，创建 session
 
 ~~~
 cnpm install express-session --save
@@ -355,7 +331,7 @@ app.use(session({
 
 完成对 `app.js` 的以上修改之后，我们便能通过 `req.session` 获取当前用户的会话对象，获取用户的相关信息。
 
-### 4.2 使用 session
+### 3.2 使用 session
 
 举两个例子：
 
@@ -446,14 +422,3 @@ res.render('index', {
 ~~~
 
 除了以上两个例子，还有许多用到 session 的地方，大家在学习过程中可以自己好好感悟。
-
-## 五、本节总结及下节预告
-
-本节添加了mongoDB，并使用 mongoose 连接了数据库，创建 session 判断用户状态，博客系统的基本功能已经基本完成。
-
-下一节我们主要是总结之前的知识点，并在此基础上添加新的功能，以扩展我们的博客系统。
-
-## 六、实验报告
-
-请按照本节实验的步骤创建并提交 LouBlog v0.3 版本。在实验报告中详细描述你的操作过程。完成后点击公开实验报告，将会收到教师的点评指导。
-
