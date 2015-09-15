@@ -79,7 +79,6 @@ $(function(){
 	});
 
 	$.getJSON('/simplex/data/post.json', function(data) {
-		console.log(data);
 		var html = "",
 			len = data.size,
 			datas = data.datas;
@@ -91,7 +90,6 @@ $(function(){
 			}
 		}
 		$('.tags-box').html(html);
-		console.log(html);
 	});
 
 });
