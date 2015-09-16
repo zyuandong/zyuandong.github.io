@@ -9,6 +9,8 @@ $(function(){
 	$('a[href^="http"]').each(function() {
 		$(this).attr('target', '_blank');
 	});
+
+	$('#contents').pjax('a');
 	
 	//移动设备，打开文章时目录自动收起
 	if($(window).width() <= 640) {
