@@ -2,7 +2,6 @@
 layout: default
 title: 使用 nodeJS 开发博客系统系列<4>
 tags: nodeJS Express mongoDB
-monthLast: true
 ---
 
 # 功能模块整理
