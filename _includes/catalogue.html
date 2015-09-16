@@ -1,6 +1,6 @@
 <div id="slide-panel">
 	<div class="guid">
-		<a href="{{ site.baseurl }}/" class="head-img-box">
+		<a href="{{ site.baseurl }}/" class="head-img-box" data-pajx>
 			<img src="http://imgchr.com/images/headerimg.png" alt="bakerz" class="head-img">
 		</a>
 		<ul>
@@ -36,8 +36,8 @@
 		    	<li class="date-tip">{{ post.date | date: "%Y %b" }}</li>
 			    {% endif %}
 			    {% if post.public != false %}
-			    <li>
-			        <a class="title" href="{{ site.baseurl }}{{ post.url }}">
+			    <li class="x-pajx">
+			        <a href="{{ site.baseurl }}{{ post.url }}" class="title" data-pajx>
 			        	{{ post.title }}
 			        </a>
 			    </li>

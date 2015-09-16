@@ -196,7 +196,12 @@ strong {
 .file-list ul li .title:hover {
   background-color: rgba(221, 221, 221, 0.9);
   color: #c7254e;
-  text-decoration: underline;
+  text-decoration: none;
+}
+.file-list ul li.active .title {
+  background-color: rgba(221, 221, 221, 0.9);
+  color: #c7254e;
+  text-decoration: none;
 }
 .file-list ul .date-tip {
   font-size: 14px;

@@ -10,7 +10,14 @@ $(function(){
 		$(this).attr('target', '_blank');
 	});
 
-	$(document).pjax('a', '#contents');
+	$('.x-pajx').on('click', function() {
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+
+	$(document).pjax('[data-pajx] a, a[data-pajx]', '#contents', { 
+		fragment: '#contents', 
+		timeout: 10000 
+	});
 	
 	//移动设备，打开文章时目录自动收起
 	if($(window).width() <= 640) {
