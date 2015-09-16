@@ -35,6 +35,8 @@ $(document).pjax('[data-pjax] a, a[data-pjax]', '#container');
 
 依赖 jQuery 1.8.x or higher
 
+还需要浏览器支持 HTML5 pushState
+
 ## 注意事项
 
 + 如果浏览器不支持pushState接口函数，那就只能退化为ajax或者使用hash bang了~

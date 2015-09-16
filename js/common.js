@@ -1,4 +1,5 @@
 $(function(){
+	//调整目录高度
 	$('body').css('height', $(window).get(0).innerHeight);
 
 	$(window).resize(function() {
@@ -10,6 +11,7 @@ $(function(){
 		$(this).attr('target', '_blank');
 	});
 
+	//使用 jquery-pjax 实现无刷新改变文档内容
 	$('.x-pajx').on('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
@@ -17,6 +19,14 @@ $(function(){
 	$(document).pjax('[data-pajx] a, a[data-pajx]', '#contents', { 
 		fragment: '#contents', 
 		timeout: 10000 
+	});
+
+	$(document).on('pjax:complete', function() {
+		console.log(3232);
+		$('#slide-panel').animate({
+			marginLeft: '-640px'
+		}, 500).dequeue();
+		$('#icon-slider').addClass('fullscreen');
 	});
 	
 	//移动设备，打开文章时目录自动收起

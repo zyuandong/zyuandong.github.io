@@ -213,7 +213,7 @@ strong {
 #contents {
   height: 100%;
   margin: 0;
-  padding: 0 30px;
+  padding: 0 20px;
   overflow-y: auto;
 }
 #contents .contents-box {
@@ -376,7 +376,7 @@ strong {
     background-color: #eee;
   }
   #contents .contents-box {
-    padding: 0 30px;
+    padding: 0 20px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 5px #bbb;
   }
