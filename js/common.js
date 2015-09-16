@@ -10,7 +10,7 @@ $(function(){
 		$(this).attr('target', '_blank');
 	});
 
-	$('#contents').pjax('a');
+	$(document).pjax('a', '#contents');
 	
 	//移动设备，打开文章时目录自动收起
 	if($(window).width() <= 640) {
