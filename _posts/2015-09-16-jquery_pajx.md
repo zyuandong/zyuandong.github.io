@@ -5,6 +5,36 @@ tags: [jquery, pajx]
 monthLast: true
 ---
 
+## 语法
+
+// 全局定义：
+`$(document).pjax('a', [container], options);`
+
+示例：
+
+`$(document).pjax('a', '#container');`
+
+
+// 选择定义：
+`$(document).pjax([selector], [container], options);`
+
+当网站中存在外链或非同域链接，就不能将所有都绑定 pajx ，需要选择给同域下的链接加上选择器
+
+如当前环境是在 a 站内，并存在跳转 b 站的链接 `<a href="http://b.com/xxx"></a>` ，同时 a 站内一定有很多指向本站内的链接 `<a href="http://a.com/xxx"></a>`，我们就需要给这类链接加上标记，class 或 id 等。
+
+官网示例：
+
+~~~
+// 加上 data-pjax 属性
+<a href="http://a.com/xxx" data-pajx></a>
+
+$(document).pjax('[data-pjax] a, a[data-pjax]', '#container');
+~~~
+
+## 依赖
+
+依赖 jQuery 1.8.x or higher
+
 ## 注意事项
 
 + 如果浏览器不支持pushState接口函数，那就只能退化为ajax或者使用hash bang了~
