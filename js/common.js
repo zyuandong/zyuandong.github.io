@@ -21,8 +21,7 @@ $(function(){
 		timeout: 10000 
 	});
 
-	$(document).on('pjax:complete', function() {
-		console.log(3232);
+	$(document).on('pjax:end', function() {
 		$('#slide-panel').animate({
 			marginLeft: '-640px'
 		}, 500).dequeue();
