@@ -22,10 +22,12 @@ $(function(){
 	});
 
 	$(document).on('pjax:end', function() {
-		$('#slide-panel').animate({
-			marginLeft: '-640px'
-		}, 500).dequeue();
-		$('#icon-slider').addClass('fullscreen');
+		if($(window).width() <= 640) {
+			$('#slide-panel').animate({
+				marginLeft: '-640px'
+			}, 500).dequeue();
+			$('#icon-slider').addClass('fullscreen');
+		}
 	});
 	
 	//移动设备，打开文章时目录自动收起
