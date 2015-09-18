@@ -2,7 +2,6 @@
 layout: default
 title: jquery-pajx 实现无刷新改变文档内容
 tags: [jquery, pajx]
-monthLast: true
 ---
 
 ## 语法
