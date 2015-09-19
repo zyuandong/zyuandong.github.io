@@ -35,3 +35,19 @@ for(var i in array) {
 
 [undefined/null](http://www.jb51.net/article/24959.htm)
 
+## 字符转ascii码：charCodeAt();
+
+示例：
+
+~~~
+var str = 'A';
+str.charCodeAt(); // 65
+~~~
+
+## ascii码砖字符：用fromCharCode();
+
+示例：
+
+~~~
+String.fromCharCode(65); // 'A'
+~~~
