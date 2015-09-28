@@ -113,7 +113,7 @@ strong {
 
 
 
-/* 文章目录 */
+/* 主目录 */
 #slide-panel {
 	height: 100%;
 	float: left;
@@ -190,12 +190,22 @@ strong {
 **/
 	}
 }
-.file-list {
-	width: 309px;
+/* 主目录 end */
+
+/* 文章、分类、标签 */
+.page-item {
+	width: 300px;
 	height: 100%;
 	float: left;
-	background-color: rgba(213, 213, 213, 0.3);//#ccc
+	background-color: rgba(213, 213, 213, 0.3);
 	overflow-y: auto;
+	display: none;
+}
+/* 文章、分类、标签 end */
+
+/* 文章 */
+.articles-all {
+	display: block;
 
 	.head-img-min {
 		height: 50px;
@@ -245,7 +255,7 @@ strong {
 		}
 	}
 }
-/* 文章目录 end */
+/* 文章 end */
 
 /* 文章显示 */
 #contents {
@@ -390,7 +400,7 @@ strong {
 			display: none;
 		}
 
-		.file-list {
+		.articles-all {
 			width: 100%;
 			background-color: rgba(213, 213, 213, 0.9);//#ccc
 
@@ -429,7 +439,7 @@ strong {
 		z-index: 1;
 	}
 
-	.file-list {
+	.articles-all {
 		background-color: rgba(213, 213, 213, 0.9);//#ccc
 	}
 

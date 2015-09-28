@@ -4,10 +4,12 @@
 			<img src="http://imgchr.com/images/headerimg.png" alt="bakerz" class="head-img">
 		</a>
 		<ul>
-			<li>所有文章</li>
-			<li>分类</li>
-			<li>标签</li>
+			<li class="guid-item" data-page="articles-all">所有文章</li>
+			<!--
+			<li class="guid-item" data-page="category-all">分类</li>
+			<li class="guid-item" data-page="tags-all">标签</li>
 			<li>关于我</li>
+			-->
 		</ul>
 		<div class="my-msg">
 			<a href="https://github.com/bakerz" target="_blank">
@@ -21,7 +23,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="file-list">
+	<div class="page-item articles-all">
 		<div class="head-img-min">
 			<a href="{{ site.baseurl }}/">
 				<img src="http://imgchr.com/images/headerimg.png" alt="bakerz" class="head-img">
@@ -42,8 +44,10 @@
 		    {% endfor %}
 		</ul>
 	</div>
-	<div class="tags-box" style="width:309px;height:50px;display:none;">
-		
-
+	<div class="page-item category-all">
+		All Category
+	</div>
+	<div class="page-item tags-all">
+		All Tags
 	</div>
 </div>

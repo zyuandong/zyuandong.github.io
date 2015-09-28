@@ -97,7 +97,7 @@ strong {
   color: #c7254e;
 }
 /* <strong></strong>标签 end */
-/* 文章目录 */
+/* 主目录 */
 #slide-panel {
   height: 100%;
   float: left;
@@ -166,51 +166,59 @@ strong {
 		}
 **/
 }
-.file-list {
-  width: 309px;
+/* 主目录 end */
+/* 文章、分类、标签 */
+.page-item {
+  width: 300px;
   height: 100%;
   float: left;
   background-color: rgba(213, 213, 213, 0.3);
   overflow-y: auto;
+  display: none;
 }
-.file-list .head-img-min {
+/* 文章、分类、标签 end */
+/* 文章 */
+.articles-all {
+  display: block;
+}
+.articles-all .head-img-min {
   height: 50px;
   display: none;
 }
-.file-list .head-img-min img {
+.articles-all .head-img-min img {
   height: 100%;
 }
-.file-list ul {
+.articles-all ul {
   margin: 0;
   padding: 0 0 20px 0;
   list-style: none;
 }
-.file-list ul li {
+.articles-all ul li {
   color: #1f3f5f;
 }
-.file-list ul li .title {
+.articles-all ul li .title {
   display: block;
   width: 90%;
   color: #1f3f5f;
   text-align: left;
   padding: 5px 5%;
 }
-.file-list ul li .title:hover {
+.articles-all ul li .title:hover {
   background-color: rgba(221, 221, 221, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
-.file-list ul li.active .title {
+.articles-all ul li.active .title {
   background-color: rgba(221, 221, 221, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
-.file-list ul .date-tip {
+.articles-all ul .date-tip {
   font-size: 14px;
   color: #c7254e;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 文章目录 end */
+/* 文章 end */
 /* 文章显示 */
 #contents {
   height: 100%;
@@ -336,11 +344,11 @@ strong {
   #slide-panel .guid {
     display: none;
   }
-  #slide-panel .file-list {
+  #slide-panel .articles-all {
     width: 100%;
     background-color: rgba(213, 213, 213, 0.9);
   }
-  #slide-panel .file-list .head-img-min {
+  #slide-panel .articles-all .head-img-min {
     display: block;
   }
   #slider {
@@ -366,7 +374,7 @@ strong {
     position: absolute;
     z-index: 1;
   }
-  .file-list {
+  .articles-all {
     background-color: rgba(213, 213, 213, 0.9);
   }
   .contents-box {

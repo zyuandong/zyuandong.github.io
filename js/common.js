@@ -1,17 +1,25 @@
 $(function(){
-	//调整目录高度
+	// 调整目录高度
 	$('body').css('height', $(window).get(0).innerHeight);
 
 	$(window).resize(function() {
 		$('body').css('height', $(window).get(0).innerHeight);
 	});
 
-	//为超链接加上target='_blank'属性
+	// 切换所有文章、分类、标签
+	$('#slide-panel .guid-item').on('click', function() {
+		var page = $(this).data('page');
+		console.log(page);
+		$('#slide-panel .page-item').hide();
+		$('#slide-panel').find('.' + page).show();
+	});
+
+	// 为超链接加上target='_blank'属性
 	$('a[href^="http"]').each(function() {
 		$(this).attr('target', '_blank');
 	});
 
-	//使用 jquery-pjax 实现无刷新改变文档内容
+	// 使用 jquery-pjax 实现无刷新改变文档内容
 	$('.x-pajx').on('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
@@ -30,7 +38,7 @@ $(function(){
 		}
 	});
 	
-	//移动设备，打开文章时目录自动收起
+	// 移动设备，打开文章时目录自动收起
 	if($(window).width() <= 640) {
 		$('#slide-panel').animate({
 			marginLeft: '-640px'
