@@ -7,11 +7,11 @@ layout
 
 title
 
-可选：
-
 category
 
 tags | tag
+
+可选：
 
 description
 
