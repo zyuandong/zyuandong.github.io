@@ -1,8 +1,9 @@
 ---
 layout: default
 title: jekyll标签归档
-monthLast: true
+category: 百宝箱
 tags: [jekyll, liquid]
+monthLast: true
 ---
 
 [用jekyll和jQuery实现异步加载文章列表](http://yanping.me/cn/blog/2012/10/10/asynchronous-loading-post-list-with-jekyll-and-jQuery/)

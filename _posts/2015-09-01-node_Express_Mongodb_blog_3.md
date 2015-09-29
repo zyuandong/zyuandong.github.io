@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 使用 nodeJS 开发博客系统系列<3>
-tags: nodeJS Express mongoDB
+category: javascript
+tags: [nodeJS, Express, mongoDB]
 ---
 
 #  使用 mongoDB 数据库

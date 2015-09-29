@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 滚动条自动滚到底部
+category: 百宝箱
 tag: css
 monthLast: true
 ---

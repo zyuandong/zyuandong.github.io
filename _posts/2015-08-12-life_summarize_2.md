@@ -1,5 +1,6 @@
 ---
 layout: default
 title: 群处守住嘴，独时守住心
-tags: 感悟
+category: 生活
+tag: 总结
 ---

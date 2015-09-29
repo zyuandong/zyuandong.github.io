@@ -9,7 +9,6 @@ $(function(){
 	// 切换所有文章、分类、标签
 	$('#slide-panel .guid-item').on('click', function() {
 		var page = $(this).data('page');
-		console.log(page);
 		$('#slide-panel .page-item').hide();
 		$('#slide-panel').find('.' + page).show();
 	});
@@ -120,4 +119,27 @@ $(function(){
 		$('.tags-box').html(html);
 	});
 
+	/**
+	 *  获取分类文章
+	 */
+	$('.category-all span').on('click', function() {
+		var key = $(this).data('category');
+		$.getJSON('/simplex/data/post.json', function(data) {
+			var count = 0,
+				datas = data.datas,
+				html = '<h2>分类：'+ key +'</h2><ul>';
+			$.each(datas, function(i, item) {
+				if(item.category){
+					if(item.category == key) {
+						html += '<li><a href="/simplex'+item.url+'">'+item.title+'</a></li>';
+						count++;
+					}
+				}
+			});
+			if(count > 0) {
+				html += '</ul>';
+				$('.category-box').html(html);
+			}
+		});
+	});
 });

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: The Node Beginner Book
+category: javascript
+tag: nodejs
 ---
 
 《The Node Beginner Book》中文翻译为《Node 入门》，是由[Manuel Kiessling](https://twitter.com/manuelkiessling)编写的node.js入门书籍。书籍总页数不多，但是作为入门书籍，作者由简单到复杂，逐步加深读者对node的认识，每个例子都非常经典。

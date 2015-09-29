@@ -7,6 +7,8 @@ author: bakerz
 email:  de1719@163.com
 github: https://github.com/bakerz
 
+permalink: /:year/:month/:day/:title
+
 #Build settings
 markdown:    kramdown
 # highlighter: highlight

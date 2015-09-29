@@ -1,8 +1,9 @@
 ---
 layout: default
 title: mongoDB基本命令运用
-monthLast: true
+category: 工具
 tags: [mongoDB, mongoose]
+monthLast: true
 ---
 
 win下启动mongoDB服务

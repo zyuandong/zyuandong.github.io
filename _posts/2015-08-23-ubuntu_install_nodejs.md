@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 在 Ubuntu 上安装最新版本的 Node.js
-tags: Node.js
+category: 百宝箱
+tag: nodejs
 ---
 
 下列方法无需从头编译安装：

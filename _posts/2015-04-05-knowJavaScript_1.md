@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 认识JavaScript
+category: javascript
+tag: javascript
 ---
 
 ## for-in循环

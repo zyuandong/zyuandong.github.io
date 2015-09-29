@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 前端感悟
+category: 生活
+tag: 感悟
 ---
 
 首先引用曾看过的一段话：
