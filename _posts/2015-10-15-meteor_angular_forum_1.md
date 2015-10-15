@@ -13,7 +13,7 @@ AngularJS是一个MV* JavaScript框架，由Google维护。Angular使用声明�
 
 Angular通过`表达式`把数据绑定到HTML模板，表达式写在双大括号内，如：`{{ expression }}`，HTML中出现Angular表达式的地方，就会显示对应表达式的数据。来个示例看看：
 
-```
+~~~
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +32,7 @@ Angular通过`表达式`把数据绑定到HTML模板，表达式写在双大括�
 	</script>
 </body>
 </html>
-```
+~~~
 
 保存以上代码为HTML文件，在浏览器中打开，可以看到浏览器中显示了`hellow angular`字符串以及数字10。Angular表达式可以做简单的运算，但是不支持条件判断、循环和异常。我们还可以看到`div`中出现了`ng-app`和`ng-init`这两个奇怪的东西，这就是Angular的指令了。
 
@@ -51,7 +51,7 @@ Angular指令是HTML带有`ng-`前缀的扩展属性，每个指令都有不同�
 
 Angular控制器用于控制和处理应用程序的数据。举个栗子：
 
-```
+~~~
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,7 +76,7 @@ Angular控制器用于控制和处理应用程序的数据。举个栗子：
 </script>
 </body>
 </html>
-```
+~~~
 
 `angular.module`用于创建Angular模块，通常Angular应用程序由模块定义，Angular控制器需要挂载到模块才会运行。
 
@@ -90,28 +90,28 @@ Meteor是一个基于Node.js的Web开发框架，主要用来开发实时的应�
 
 ### 安装Meteor
 
-```
+~~~
 $ curl https://install.meteor.com/ | sh
-```
+~~~
 
 安装完成后可以输入如下命令，查看当前安装的Meteor的版本号，以确认安装成功了：
 
-```
+~~~
 $ meteor --version
-```
+~~~
 
 ### 创建示例项目
 
-```
+~~~
 $ meteor create LouForum
-```
+~~~
 
 这里，我们创建了一个Meteor的示例项目，进入到项目目录启动项目：
 
-```
+~~~
 $ cd LouForum
 $ meteor
-```
+~~~
 
 启动项目的命令是在项目根目录下运行`meteor`，停止项目直接输入`Ctrl+c`即可。
 
@@ -128,87 +128,87 @@ Meteor创建简单的app直接在项目根目录下创建js文件、HTML文件�
 
 首先，我们删掉初始化项目时，自动生成的三个文件：
 
-```
+~~~
 $ rm LouForum.html LouForum.html LouForum.html
-```
+~~~
 
 然后创建一个`index.html`文件：
 
-```
+~~~
 $ touch index.html
-```
+~~~
 
 在`index.html`中输入如下代码：
 
-```
+~~~
 <body>
     <p>shiyanlou</p>
 </body>
-```
+~~~
 
 我们只写了`body`这个标签，而没有`html`和`head`标签，这是因为Meteor会扫描所有的HTML文件，然后把这些HTML文件中`head`标签内的内容合并，`body`中的内容合并，然后组成一个新的文件，再自动创建`html`标签、`head`标签和`body`标签，以及其他必须的代码。
 
 运行项目：
 
-```
+~~~
 $ meteor
-```
+~~~
 
 启动成功后，打开浏览器访问`http://localhost:3000`，会看到页面上显示`shiyanlou`字样。
 
 添加Angular包（在项目根目录下执行）：
 
-```
+~~~
 $ meteor add angular
-```
+~~~
 
 添加Angular成功后，下次运行项目，前端页面会自动引用Angular，无需再手动引用。
 
 新建一个文件：
 
-```
+~~~
 $ touch index.ng.html
-```
+~~~
 
 这里，我们使用了`.ng.html`后缀名，这样，Meteor官方默认的模板系统（Blaze）就不会编译这个类型的HTML文件，Angular就可以使用这样的HTML文件了。
 
 在`index.ng.html`文件中输入如下代码：
 
-```
+~~~
 <p>shiyanlou</p>
-```
+~~~
 
 然后修改`index.html`文件的代码：
 
-```
+~~~
 <body>
     <div ng-include="'index.ng.html'"></div>
 </body>
-```
+~~~
 
 我们可以看到这里使用了Angular的一个指令，`ng-include`用于引入外部HTML文件，注意这里的双引号里面还有单引号。然后在创建一个`app.js`文件，并输入如下代码：
 
-```
+~~~
 if (Meteor.isClient) {
     // 创建 Angular module
     // 并添加 angular-meteor 包依赖
     angular.module('louForum', ['angular-meteor']);
 }
-```
+~~~
 
 添加`ng-app`到`index.html`：
 
-```
+~~~
 <body ng-app="louForum">
     <div ng-include="index.ng.html"></div>
 </body>
-```
+~~~
 
 运行项目查看效果：
 
-```
+~~~
 $ meteor
-```
+~~~
 
 运行成功后，我们可以看到，浏览器显示的和刚刚一样，说明Angular创建的模块运行成功了。
 
@@ -231,26 +231,26 @@ $ meteor
 
 然后把`index.html`、`index.ng.html`和`app.js`文件移动到client文件夹下面，并修改`app.js`代码为：
 
-```
+~~~
 // 创建 Angular module
 // 并添加 angular-meteor 包依赖
 angular.module('louForum', ['angular-meteor']);
-```
+~~~
 
 因为client文件夹下面的代码只会在客户端运行，所以不需要`Meteor.isClient`判断了。
 
 `index.html`文件中`ng-include`引入的文件路径必须完整，修改`index.html`代码如下所示：
 
-```
+~~~
 <body>
     <div ng-include="'client/index.ng.html'"></div>
 </body>
-```
+~~~
 
 运行项目：
 
-```
+~~~
 $ meteor
-```
+~~~
 
 可以看到，效果和前面一样。
