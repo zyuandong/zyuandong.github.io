@@ -7,29 +7,21 @@ tags: [nodeJS, Express, mongoDB]
 
 # 搭建开发环境
 
-## 一、实验说明
-
-推荐先学一下免费课程：
-
-+ [《JavaScript基础（新版）》](https://www.shiyanlou.com/courses/21)
-+ [《NodeJS教程》](https://www.shiyanlou.com/courses/44)
-+ [《mongoDB基础教程》](https://www.shiyanlou.com/courses/12)
-
-## 二、课程介绍
+## 一、课程介绍
 
 1. 博客平台功能模块分析与设计
 2. 搭建开发环境
 3. 基于 nodeJS 和 Express 框架搭建路由模块
 
-## 三、功能模块分析与设计
+## 二、功能模块分析与设计
 
-在4周的时间里，我们将开发一个简单的多人博客系统，我们默认称之为`LouBlog`，当然你也可以为其任意命名。
+将开发一个简单的多人博客系统，默认称之为`LouBlog`，当然你也可以为其任意命名。
 
 博客的功能比较简单，总结 LouBlog 的基本功能如下：
 
 1. 用户管理：具备注册和登录的功能。
 2. 文章管理：具备添加、删除、编辑以及查询的功能。
-3. 附加功能：附加功能作为整个项目的完善部分，我们放到最后学习。
+3. 附加功能：附加功能作为整个项目的完善部分。
 
 下面将对这些功能模块进行一一分析。
 
@@ -61,21 +53,17 @@ tags: [nodeJS, Express, mongoDB]
 
 输入查询关键字即可查询，支持模糊查询。
 
-大概说明一下功能需求后，便开始我们的 LouBlog 开发阶段。
-
 ## 四、搭建开发环境
 
 LouBlog 使用 nodeJS 搭建后台，使用最受欢迎的 web 框架 Express 快速搭建。
 
 有过 nodeJS 基础的同学应该对此有一定的了解，简单说一下，nodeJS 是基于 Chrome JavaScript 运行时建立的平台，用于方便地搭建响应速度快、易于扩展的网络应用。nodeJS 使用事件驱动，非阻塞 I/O 模型而得以轻量和高效。
 
-再来介绍一下深受 nodeJS 开发者欢迎的 web 开发框架 Express 。Express 是一个基于 nodeJS 平台的极简、灵活的 web 应用开发框架，这好比如是 Flask 和 Python 的搭配一样。Express 拥有丰富的 HTTP 快捷方法和任意排列组合的 Connect 中间件，方便快速、简单地创建健壮、友好的 API
+Express 是一个基于 nodeJS 平台的极简、灵活的 web 应用开发框架，这好比如是 Flask 和 Python 的搭配一样。Express 拥有丰富的 HTTP 快捷方法和任意排列组合的 Connect 中间件，方便快速、简单地创建健壮、友好的 API
 
 ### 4.1 安装node.js
 
-`node -v`
-
-默认安装版本 v0.10.33 ，而当前课程编写时的最新版本为 v0.12.7 ，这并不会影响到接下来的学习，但你也可以选择升级默认安装的 nodeJS 
+`node -v` 查看 nodejs 版本
 
 #### 4.1.1 升级系统中的node.js
 
