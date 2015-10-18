@@ -62,8 +62,6 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 ![此处输入图片的描述](https://dn-anything-about-doc.qbox.me/document-uid9061labid1361timestamp1441935469652.png/wm)
 
-希望大家能自由发挥你的创造力，建造有自己特色的样式的博客，下面给出 index.ejs 的最简代码，通过不断优化，来学习 ejs 模板及其他知识点。
-
 ~~~
 <!DOCTYPE html>
 <html>
@@ -136,11 +134,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 ### 3.1 使用 bootstrap 前端框架
 
-熟悉前端的同学应该听过 bootstrap 的大名，也将会在本次课程中使用，但具体的使用方法，在实验楼中也有相关的课程：
-
-[《Bootstrap3.0入门学习》](https://www.shiyanlou.com/courses/50)
-
-在此也就不用太多的篇幅讲解 bootstrap，主要是给出几个示例，讲解在 Express 框架中 bootstrap 的使用方法。还是那句话，提倡大家自己主动学习，参考官方文档，注重实践，大胆创造。
+在此也就不用太多的篇幅讲解 bootstrap，主要是给出几个示例，讲解在 Express 框架中 bootstrap 的使用方法。
 
 ### 3.1.1 引入 bootstrap
 
@@ -164,7 +158,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 ~~~
 
-建议你使用 bower 安装 bootstrap，当然这需要你在空余时间学习，这里只是提供一个思路，加之实验环境的限制，我们就选择 CDN 加速的方式安装 bootstrap。
+建议你使用 bower 安装 bootstrap，在 public/ 下执行 `bower install bootstrap jquery` ，便可以通过路径引入相关文件
 
 ### 3.1.2 使用 bootstrap
 
