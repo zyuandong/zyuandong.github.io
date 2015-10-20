@@ -35,6 +35,14 @@ $(function(){
 			}, 500).dequeue();
 			$('#icon-slider').addClass('fullscreen');
 		}
+
+		// 为超链接加上target='_blank'属性
+		$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+
+		hljs.configure({tabReplace: '    '});
+        hljs.initHighlightingOnLoad();
 	});
 	
 	// 移动设备，打开文章时目录自动收起
