@@ -1,8 +1,8 @@
 ---
 layout: default
-title: meteor + AngularJs 搭建简易论坛<3>
+title: meteor+AngularJs 搭建简易论坛<3>
 category: javascript
-tag: [meteor, AngularJs]
+tags: [meteor, AngularJs]
 ---
 
 ## 节点添加功能

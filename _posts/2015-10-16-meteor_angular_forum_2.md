@@ -1,8 +1,8 @@
 ---
 layout: default
-title: meteor + AngularJs 搭建简易论坛<2>
+title: meteor+AngularJs 搭建简易论坛<2>
 category: javascript
-tag: [meteor, AngularJs]
+tags: [meteor, AngularJs]
 ---
 
 ## 添加路由控制
