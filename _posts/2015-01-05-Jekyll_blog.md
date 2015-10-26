@@ -30,7 +30,7 @@ ruby dk.rb install
 
 gem install jekyll 
 
-由于万恶的GFW，可能出现许多问题，但是伟大的国人们总是能通过自己的知识、汗水找到解决的办法。taobao有个[仓库镜像](http://ruby.taobao.org/)，可以绕过“天朝”的网络管理制度，还能提高应用程序的下载速度，大赞。
+由于didi~的GFW，可能出现许多问题，但是伟大的国人们总是能通过自己的知识、汗水找到解决的办法。taobao有个[仓库镜像](http://ruby.taobao.org/)，可以绕过“天朝”的网络管理制度，还能提高应用程序的下载速度，大赞。
 
 配置下载源的过程如下：
 
@@ -50,3 +50,31 @@ ok，更换源配置搞定
 jekyll --server
 
 启动服务后，访问localhost:4000/项目名称/，即可访问
+
+## markdown 解析器
+
+- kramdown
+
+[Github-Page 推荐的解析器](https://help.github.com/articles/migrating-your-pages-site-from-maruku/)
+
+修改配置文件为
+
+```
+markdown: kramdown
+kramdown: 
+  input: GFM
+```
+
+代码块语法可使用 ``` 替换 ~~~
+
+- redcarpet
+
+执行命令 - `gem install redcarpet`
+
+修改配置文件为
+
+```
+markdown: redcarpet
+```
+
+[报错参见](http://blog.csdn.net/kong5090041/article/details/38408211)

@@ -9,6 +9,8 @@ github: https://github.com/bakerz
 
 permalink: /:year/:month/:day/:title
 
-#Build settings
-markdown:    kramdown
+# Build settings
 # highlighter: highlight
+markdown: kramdown
+kramdown:
+    input: GFM
