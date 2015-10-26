@@ -13,19 +13,14 @@ $(function(){
 		$('#slide-panel').find('.' + page).show();
 	});
 
-	// 为超链接加上target='_blank'属性
-	$('a[href^="http"]').each(function() {
-		$(this).attr('target', '_blank');
-	});
-
 	// 使用 jquery-pjax 实现无刷新改变文档内容
-	$('.x-pajx').on('click', function() {
+	$('.x-pjax').on('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 
-	$(document).pjax('[data-pajx] a, a[data-pajx]', '#contents', { 
-		fragment: '#contents', 
-		timeout: 10000 
+	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', { 
+		fragment: '#contents',
+		timeout: 10000
 	});
 
 	$(document).on('pjax:end', function() {
@@ -41,8 +36,13 @@ $(function(){
 			$(this).attr('target', '_blank');
 		});
 
-		hljs.configure({tabReplace: '    '});
-        hljs.initHighlightingOnLoad();
+
+		$('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+			//hljs.configure({tabReplace: ''});
+		});
+
+        //hljs.initHighlightingOnLoad();
 	});
 	
 	// 移动设备，打开文章时目录自动收起
