@@ -1,58 +1,18 @@
 $(function(){
-	// 调整目录高度
+	// change page height
 	$('body').css('height', $(window).get(0).innerHeight);
-
 	$(window).resize(function() {
 		$('body').css('height', $(window).get(0).innerHeight);
 	});
 
-	// 切换所有文章、分类、标签
+	// switch file category tag
 	$('#slide-panel .guid-item').on('click', function() {
 		var page = $(this).data('page');
 		$('#slide-panel .page-item').hide();
 		$('#slide-panel').find('.' + page).show();
 	});
 
-	// 使用 jquery-pjax 实现无刷新改变文档内容
-	$('.x-pjax').on('click', function() {
-		$(this).addClass('active').siblings().removeClass('active');
-	});
-
-	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', { 
-		fragment: '#contents',
-		timeout: 10000
-	});
-
-	$(document).on('pjax:end', function() {
-		if($(window).width() <= 640) {
-			$('#slide-panel').animate({
-				marginLeft: '-640px'
-			}, 500).dequeue();
-			$('#icon-slider').addClass('fullscreen');
-		}
-
-		// 为超链接加上target='_blank'属性
-		$('a[href^="http"]').each(function() {
-			$(this).attr('target', '_blank');
-		});
-
-
-		$('pre code').each(function(i, block) {
-			hljs.highlightBlock(block);
-			//hljs.configure({tabReplace: ''});
-		});
-
-        //hljs.initHighlightingOnLoad();
-	});
-	
-	// 移动设备，打开文章时目录自动收起
-	if($(window).width() <= 640) {
-		$('#slide-panel').animate({
-			marginLeft: '-640px'
-		}, 500).dequeue();
-		$('#icon-slider').addClass('fullscreen');
-	}
-
+	// click slider-btn to show or hide slider-panel
 	$('#slider').on('click', function() {
 		if($('#icon-slider').hasClass('fullscreen')) {
 			$('#icon-slider').removeClass('fullscreen');
@@ -79,9 +39,7 @@ $(function(){
 		}
 	});
 
-	/**
-	 * 滚动事件
-	 * */
+	// show back2top-btn
 	$('#contents').scroll(function(){
 	    var t = $(this).scrollTop();
 	    if( t >= 10) {
@@ -93,12 +51,14 @@ $(function(){
 	    }
 	});
 
+	// back to top
 	$('#back2top').click(function() {
 		$('#contents').animate({
 			scrollTop: '0'
 		}, 700);
 	});
 
+	// side index-list
 	$('#index-btn').click(function() {
 		if($(this).hasClass('show')){
 			$(this).removeClass('show');
@@ -113,6 +73,19 @@ $(function(){
 		}
 	});
 
+	// use jquery-pjax
+	$('.x-pjax').on('click', function() {
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', { 
+		fragment: '#contents',
+		timeout: 10000
+	});
+	$(document).on('pjax:end', function() {
+		pjaxEnd();
+	});
+
+	// 获取标签
 	$.getJSON('/simplex/data/post.json', function(data) {
 		var html = "",
 			len = data.size,
@@ -127,9 +100,7 @@ $(function(){
 		$('.tags-box').html(html);
 	});
 
-	/**
-	 *  获取分类文章
-	 */
+	// 获取文章
 	$('.category-all span').on('click', function() {
 		var key = $(this).data('category');
 		$.getJSON('/simplex/data/post.json', function(data) {
@@ -150,4 +121,26 @@ $(function(){
 			}
 		});
 	});
+
+	pjaxEnd();
 });
+
+function pjaxEnd(){
+	// catalogue automatic hide in mobile
+	if($(window).width() <= 640) {
+		$('#slide-panel').animate({
+			marginLeft: '-640px'
+		}, 500).dequeue();
+		$('#icon-slider').addClass('fullscreen');
+	}
+
+	// open page in new tab
+	$('a[href^="http"]').each(function() {
+		$(this).attr('target', '_blank');
+	});
+
+	// code highlight
+	$('pre code').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+}
