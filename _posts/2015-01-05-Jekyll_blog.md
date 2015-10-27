@@ -1,5 +1,4 @@
 ---
-layout: default
 title: 搭建Jekyll本地环境
 category: 百宝箱
 monthLast: true

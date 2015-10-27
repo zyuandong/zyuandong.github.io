@@ -1,16 +1,26 @@
 # Site settings
 title:       My Blog :)
 description: "bakerz's blog"
-baseurl:     /simplex
 
 author: bakerz
 email:  de1719@163.com
 github: https://github.com/bakerz
 
+# Serving
+baseurl: /simplex
+
+# Outputting
 permalink: /:year/:month/:day/:title
 
-# Build settings
-# highlighter: highlight
+# Markdown Processors
 markdown: kramdown
 kramdown:
     input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
