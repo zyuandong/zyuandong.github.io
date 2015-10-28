@@ -97,10 +97,32 @@ $(function(){
 				}
 			}
 		}
-		$('.tags-box').html(html);
+		//$('.tags-box').html(html);
 	});
 
-	// 获取文章
+	// get article by tag
+	$('.tags-all span').on('click', function() {
+		var key = $(this).data('tag');
+		$.getJSON('/simplex/data/post.json', function(data) {
+			var count = 0,
+				datas = data.datas,
+				html = '<h2>标签：'+ key +'</h2><ul>';
+			$.each(datas, function(i, item) {
+				for(var i in item.tags) {
+					if(item.tags[i] == key) {
+						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
+						count++;
+					}
+				}
+			});
+			if(count > 0) {
+				html += '</ul>';
+				$('.tags-box').html(html);
+			}
+		});
+	});
+
+	// get article by category
 	$('.category-all span').on('click', function() {
 		var key = $(this).data('category');
 		$.getJSON('/simplex/data/post.json', function(data) {
@@ -110,7 +132,7 @@ $(function(){
 			$.each(datas, function(i, item) {
 				if(item.category){
 					if(item.category == key) {
-						html += '<li><a href="/simplex'+item.url+'">'+item.title+'</a></li>';
+						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
 						count++;
 					}
 				}
