@@ -265,12 +265,64 @@ strong {
 
 /* 分类 */
 .category-all {
+	flex-flow: column nowrap;
+	align-items: stretch;
+	justify-content: flex-start;
+
+	.category-index {
+		padding: 5px 5%;
+		color: #B5AFAF;
+
+		.category-item {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: stretch;
+			justify-content: space-between;
+			padding: 5px 0;
+			cursor: pointer;
+			border-bottom: 1px solid #B5AFAF;
+			
+			.category-size {
+				padding: 0 10px;
+				border: 1px solid #B5AFAF;
+				border-radius: 15px;
+			}
+		}
+	}
+
+	.category-box {
+		overflow-y: auto;
+	}
+
 	.ul-style();
 }
 /* 分类 end */
 
 /* 标签 */
 .tags-all {
+	flex-flow: column nowrap;
+	align-items: stretch;
+	justify-content: flex-start;
+
+	.tags-index {
+		padding: 5px 5%;
+		color: #B5AFAF;
+
+		.tags-item {
+			cursor: pointer;
+			margin-right: 10px;
+			white-space: nowrap;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.tags-box {
+		overflow-y: auto;
+	}
+
 	.ul-style();
 }
 /* 标签 end */

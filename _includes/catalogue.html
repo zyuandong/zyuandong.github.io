@@ -4,10 +4,9 @@
 			<img src="http://imgchr.com/images/headerimg.png" alt="bakerz" class="head-img">
 		</a>
 		<ul>
-			<li class="guid-item" data-page="articles-all">所有文章</li>
-			<li class="guid-item" data-page="category-all">分类</li>
-			<li class="guid-item" data-page="tags-all">标签</li>
-			<li>关于</li>
+			<li class="guid-item" data-page="articles-all">HOME</li>
+			<li class="guid-item" data-page="category-all">CATEGORIES</li>
+			<li class="guid-item" data-page="tags-all">TAGS</li>
 		</ul>
 		<div class="my-msg">
 			<a href="https://github.com/bakerz" target="_blank">
@@ -49,9 +48,14 @@
 	<div class="page-item category-all">
 		<div class="category-index">
 			{% for category in site.categories %}
-			<span data-category="{{ category | first }}">
-				{{ category | first }} {{ category | last | size }}
-			</span><br>
+			<div class="category-item" data-category="{{ category | first }}">
+				<div class="category-name">
+					{{ category | first }}
+				</div>
+				<div class="category-size">
+					{{ category | last | size }}
+				</div>
+			</div>
 			{% endfor %}
 		</div>
 		<div class="category-box"></div>
@@ -60,11 +64,13 @@
 
 	<!-- tag -->
 	<div class="page-item tags-all">
-		{% for tag in site.tags %}
-		<span data-tag="{{ tag | first }}">
-			{{ tag | first }} {{ tag | last | size }}
-		</span>
-		{% endfor %}
+		<div class="tags-index">
+			{% for tag in site.tags %}
+			<span class="tags-item" data-tag="{{ tag | first }}">
+				{{ tag | first }}
+			</span>
+			{% endfor %}
+		</div>
 		<div class="tags-box"></div>
 	</div>
 	<!-- tag end -->
