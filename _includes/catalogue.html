@@ -5,9 +5,9 @@
 		</a>
 		<ul>
 			<li class="guid-item" data-page="articles-all">所有文章</li>
-			<!--<li class="guid-item" data-page="category-all">分类</li>
+			<li class="guid-item" data-page="category-all">分类</li>
 			<li class="guid-item" data-page="tags-all">标签</li>
-			<li>关于我</li>-->
+			<li>关于我</li>
 		</ul>
 		<div class="my-msg">
 			<a href="https://github.com/bakerz" target="_blank">
@@ -45,7 +45,7 @@
 	<div class="page-item category-all">
 		{% for category in site.categories %}
 		<span data-category="{{ category | first }}">
-			{{ category | first }} {{ category | first | size }}
+			{{ category | first }} {{ category | last | size }}
 		</span><br>
 		{% endfor %}
 		<div class="category-box"></div>
@@ -53,7 +53,7 @@
 	<div class="page-item tags-all">
 		{% for tag in site.tags %}
 		<span data-tag="{{ tag[0] }}">
-			{{ tag[0] }} {{ tag[0] | size }}
+			{{ tag | first }} {{ tag | last | size }}
 		</span>
 		{% endfor %}
 
