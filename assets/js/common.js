@@ -106,7 +106,7 @@ $(function(){
 		$.getJSON('/simplex/data/post.json', function(data) {
 			var count = 0,
 				datas = data.datas,
-				html = '<h2>标签：'+ key +'</h2><ul>';
+				html = '<div>标签：'+ key +'</div><ul>';
 			$.each(datas, function(i, item) {
 				for(var i in item.tags) {
 					if(item.tags[i] == key) {
@@ -128,7 +128,7 @@ $(function(){
 		$.getJSON('/simplex/data/post.json', function(data) {
 			var count = 0,
 				datas = data.datas,
-				html = '<h2>分类：'+ key +'</h2><ul>';
+				html = '<div>分类：'+ key +'</div><ul>';
 			$.each(datas, function(i, item) {
 				if(item.category){
 					if(item.category == key) {

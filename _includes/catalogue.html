@@ -21,6 +21,7 @@
 			</a>
 		</div>
 	</div>
+	<!-- all-article -->
 	<div class="page-item articles-all">
 		<div class="head-img-min">
 			<a href="{{ site.baseurl }}/">
@@ -34,7 +35,7 @@
 			    {% endif %}
 			    {% if post.public != false %}
 			    <li class="x-pjax">
-			        <a href="{{ site.baseurl }}{{ post.url }}" class="title" data-pjax>
+			        <a href="{{ site.baseurl }}{{ post.url }}" data-pjax>
 			        	{{ post.title }}
 			        </a>
 			    </li>
@@ -42,14 +43,22 @@
 		    {% endfor %}
 		</ul>
 	</div>
+	<!-- all-article end -->
+
+	<!-- category -->
 	<div class="page-item category-all">
-		{% for category in site.categories %}
-		<span data-category="{{ category | first }}">
-			{{ category | first }} {{ category | last | size }}
-		</span><br>
-		{% endfor %}
+		<div class="category-index">
+			{% for category in site.categories %}
+			<span data-category="{{ category | first }}">
+				{{ category | first }} {{ category | last | size }}
+			</span><br>
+			{% endfor %}
+		</div>
 		<div class="category-box"></div>
 	</div>
+	<!-- category end -->
+
+	<!-- tag -->
 	<div class="page-item tags-all">
 		{% for tag in site.tags %}
 		<span data-tag="{{ tag | first }}">
@@ -58,4 +67,5 @@
 		{% endfor %}
 		<div class="tags-box"></div>
 	</div>
+	<!-- tag end -->
 </div>

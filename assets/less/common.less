@@ -27,6 +27,11 @@ a {
 		text-decoration: underline;
 		outline: none;
 	}
+	
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
 }
 /* a标签 end */
 
@@ -111,8 +116,6 @@ strong {
 }
 /* <strong></strong>标签 end */
 
-
-
 /* 主目录 */
 #slide-panel {
 	height: 100%;
@@ -192,7 +195,7 @@ strong {
 }
 /* 主目录 end */
 
-/* 文章、分类、标签 */
+/* 文章、分类、标签共同样式 */
 .page-item {
 	width: 300px;
 	height: 100%;
@@ -201,21 +204,7 @@ strong {
 	overflow-y: auto;
 	display: none;
 }
-/* 文章、分类、标签 end */
-
-/* 文章 */
-.articles-all {
-	display: block;
-
-	.head-img-min {
-		height: 50px;
-		display: none;
-
-		img {
-			height: 100%;
-		}
-	}
-
+.ul-style {
 	ul {
 		margin: 0;
 		padding: 0 0 20px 0;
@@ -224,7 +213,7 @@ strong {
 		li {
 			color: #1f3f5f;
 
-			.title {
+			a {
 				display: block;
 				width: 90%;
 				color: #1f3f5f;
@@ -241,7 +230,7 @@ strong {
 
 		li.active {
 
-			.title {
+			a {
 				background-color: rgba(221,221,221, 0.9);
 				color: #c7254e;
 				text-decoration: none;
@@ -255,7 +244,36 @@ strong {
 		}
 	}
 }
+/* 文章、分类、标签共同样式 end */
+
+/* 文章 */
+.articles-all {
+	display: block;
+
+	.head-img-min {
+		height: 50px;
+		display: none;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	.ul-style();
+}
 /* 文章 end */
+
+/* 分类 */
+.category-all {
+	.ul-style();
+}
+/* 分类 end */
+
+/* 标签 */
+.tags-all {
+	.ul-style();
+}
+/* 标签 end */
 
 /* 文章显示 */
 #contents {
