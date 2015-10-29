@@ -221,7 +221,7 @@ strong {
 				padding: 5px 5%;
 
 				&:hover {
-					background-color: rgba(221,221,221, 0.9);
+					background-color: rgba(234, 234, 234, 0.9);
 					color: #c7254e;
 					text-decoration: none;
 				}
@@ -231,7 +231,7 @@ strong {
 		li.active {
 
 			a {
-				background-color: rgba(221,221,221, 0.9);
+				background-color: rgba(234, 234, 234, 0.9);
 				color: #c7254e;
 				text-decoration: none;
 			}
@@ -281,11 +281,27 @@ strong {
 			padding: 5px 0;
 			cursor: pointer;
 			border-bottom: 1px solid #B5AFAF;
-			
+
 			.category-size {
 				padding: 0 10px;
 				border: 1px solid #B5AFAF;
 				border-radius: 15px;
+			}
+
+			&.active {
+				color: #1f3f5f;
+
+				.category-size {
+					border-color: #1f3f5f;
+				}
+			}
+
+			&:hover {
+				color: #1f3f5f;
+
+				.category-size {
+					border-color: #1f3f5f;
+				}
 			}
 		}
 	}
@@ -312,8 +328,13 @@ strong {
 			cursor: pointer;
 			margin-right: 10px;
 			white-space: nowrap;
+			
+			&.active {
+				color: #1f3f5f;
+			}
 
 			&:hover {
+				color: #1f3f5f;
 				text-decoration: underline;
 			}
 		}

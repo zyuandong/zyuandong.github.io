@@ -83,36 +83,14 @@ $(function(){
 		pjaxEnd();
 	});
 
-	// get tags-list
-	$('.tags-all .tags-item').on('click', function() {
-		var key = $(this).data('tag');
-		$.getJSON('/simplex/data/post.json', function(data) {
-			var count = 0,
-				datas = data.datas,
-				html = '<div>'+ key +'</div><ul>';
-			$.each(datas, function(i, item) {
-				for(var i in item.tags) {
-					if(item.tags[i] == key) {
-						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
-						count++;
-					}
-				}
-			});
-			if(count > 0) {
-				html += '</ul>';
-				$('.tags-box').html(html);
-				bindActive();
-			}
-		});
-	});
-
 	// get categories-list
 	$('.category-all .category-item').on('click', function() {
 		var key = $(this).data('category');
+		$(this).addClass('active').siblings().removeClass('active');
 		$.getJSON('/simplex/data/post.json', function(data) {
 			var count = 0,
 				datas = data.datas,
-				html = '<div>'+ key +'</div><ul>';
+				html = '<ul>';
 			$.each(datas, function(i, item) {
 				if(item.category){
 					if(item.category == key) {
@@ -124,6 +102,30 @@ $(function(){
 			if(count > 0) {
 				html += '</ul>';
 				$('.category-box').html(html);
+				bindActive();
+			}
+		});
+	});
+
+	// get tags-list
+	$('.tags-all .tags-item').on('click', function() {
+		var key = $(this).data('tag');
+		$(this).addClass('active').siblings().removeClass('active');
+		$.getJSON('/simplex/data/post.json', function(data) {
+			var count = 0,
+				datas = data.datas,
+				html = '<ul>';
+			$.each(datas, function(i, item) {
+				for(var i in item.tags) {
+					if(item.tags[i] == key) {
+						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
+						count++;
+					}
+				}
+			});
+			if(count > 0) {
+				html += '</ul>';
+				$('.tags-box').html(html);
 				bindActive();
 			}
 		});

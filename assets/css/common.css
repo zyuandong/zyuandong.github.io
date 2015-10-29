@@ -196,12 +196,12 @@ strong {
   padding: 5px 5%;
 }
 .ul-style ul li a:hover {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
 .ul-style ul li.active a {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
@@ -238,12 +238,12 @@ strong {
   padding: 5px 5%;
 }
 .articles-all ul li a:hover {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
 .articles-all ul li.active a {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
@@ -277,6 +277,18 @@ strong {
   border: 1px solid #B5AFAF;
   border-radius: 15px;
 }
+.category-all .category-index .category-item.active {
+  color: #1f3f5f;
+}
+.category-all .category-index .category-item.active .category-size {
+  border-color: #1f3f5f;
+}
+.category-all .category-index .category-item:hover {
+  color: #1f3f5f;
+}
+.category-all .category-index .category-item:hover .category-size {
+  border-color: #1f3f5f;
+}
 .category-all .category-box {
   overflow-y: auto;
 }
@@ -296,12 +308,12 @@ strong {
   padding: 5px 5%;
 }
 .category-all ul li a:hover {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
 .category-all ul li.active a {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
@@ -326,7 +338,11 @@ strong {
   margin-right: 10px;
   white-space: nowrap;
 }
+.tags-all .tags-index .tags-item.active {
+  color: #1f3f5f;
+}
 .tags-all .tags-index .tags-item:hover {
+  color: #1f3f5f;
   text-decoration: underline;
 }
 .tags-all .tags-box {
@@ -348,12 +364,12 @@ strong {
   padding: 5px 5%;
 }
 .tags-all ul li a:hover {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
 .tags-all ul li.active a {
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(234, 234, 234, 0.9);
   color: #c7254e;
   text-decoration: none;
 }
