@@ -2,9 +2,10 @@
 title:       My Blog :)
 description: "bakerz's blog"
 
-author: bakerz
-email:  de1719@163.com
-github: https://github.com/bakerz
+author: 
+  name: bakerz
+  email:  de1719@163.com
+  github: https://github.com/bakerz
 
 # Serving
 baseurl: /simplex
