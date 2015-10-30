@@ -332,6 +332,8 @@ strong {
 .tags-all .tags-index {
   padding: 5px 5%;
   color: #B5AFAF;
+  max-height: 40%;
+  overflow-y: auto;
 }
 .tags-all .tags-index .tags-item {
   cursor: pointer;
@@ -346,6 +348,7 @@ strong {
   text-decoration: underline;
 }
 .tags-all .tags-box {
+  max-height: 60%;
   overflow-y: auto;
 }
 .tags-all ul {
