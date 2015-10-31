@@ -256,18 +256,19 @@ strong {
 /* 分类 */
 .category-all {
   flex-flow: column nowrap;
-  align-items: stretch;
   justify-content: flex-start;
+  align-items: stretch;
 }
 .category-all .category-index {
   padding: 5px 5%;
   color: #B5AFAF;
+  min-height: 180px;
 }
 .category-all .category-index .category-item {
   display: flex;
   flex-flow: row nowrap;
-  align-items: stretch;
   justify-content: space-between;
+  align-items: stretch;
   padding: 5px 0;
   cursor: pointer;
   border-bottom: 1px solid #B5AFAF;
