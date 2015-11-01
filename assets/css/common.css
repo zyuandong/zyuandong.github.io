@@ -405,6 +405,19 @@ strong {
 #contents .contents-box .date-tags-box .date {
   margin-right: 20px;
 }
+#contents .contents-box .page-previous {
+  float: left;
+  padding: 10px 0;
+}
+#contents .contents-box .page-next {
+  float: right;
+  padding: 10px 0;
+}
+#contents .contents-box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 #contents .contents-box img {
   width: auto;
   max-width: 100%;
