@@ -29,20 +29,20 @@
         {% include categoryAndTags.html %}
         {{ content }}
         {% if page.previous %}
-        <div class="page-previous">
+        <span class="page-previous">
             <a href="{{site.baseurl}}{{ page.previous.url }}">
                 <i class="fa fa-chevron-left"></i>
                 Previous
             </a>
-        </div>
+        </span>
         {% endif %}
         {% if page.next %}
-        <div class="page-next">
+        <span class="page-next">
             <a href="{{site.baseurl}}{{ page.next.url }}">
                 Next
                 <i class="fa fa-chevron-right"></i>
             </a>
-        </div>
+        </span>
         {% endif %}
     </div>
     {% include copyright.html %}
