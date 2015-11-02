@@ -1,7 +1,7 @@
 ---
-title: 安装最新版本的Node.js
-category: 杂物间
-tag: Node.js
+title: 安装最新版本的node.js
+category: node.js
+tag: node.js
 ---
 
 下列方法无需从头编译安装：
