@@ -82,10 +82,10 @@ table {
   border-collapse: collapse;
 }
 thead {
-  background-color: #6ec8c9;
+  background-color: #4ae8c4;
 }
 tbody {
-  background-color: #d0edee;
+  background-color: #E7F1EE;
 }
 th,
 td {
@@ -93,7 +93,7 @@ td {
   border: 1px solid #ccc;
 }
 tbody tr:hover {
-  background-color: #6ec8c9;
+  background-color: #4ae8c4;
 }
 /* 表格 end */
 /* <strong></strong>标签 */
