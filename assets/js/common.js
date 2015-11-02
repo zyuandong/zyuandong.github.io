@@ -86,6 +86,7 @@ $(function(){
 		},
 		'pjax:end': function() {
 			pjaxEnd();
+			bindActive();
 			$("#contents").fadeIn();
 			NProgress.done();
 		}
@@ -171,5 +172,13 @@ function pjaxEnd(){
 function bindActive() {
 	$('.x-pjax').on('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+	$('.page-next, .page-previous').on('click', function() {
+		var $_id = $(this).data("id");
+		$('.x-pjax').removeClass('active').each(function() {
+			if($(this).data('id') == $_id) {
+				$(this).addClass('active');
+			}
+		});
 	});
 }

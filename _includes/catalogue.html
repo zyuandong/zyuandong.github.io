@@ -33,7 +33,7 @@
 		    	<li class="date-tip">{{ post.date | date: "%Y %b" }}</li>
 			    {% endif %}
 			    {% if post.public != false %}
-			    <li class="x-pjax">
+			    <li class="x-pjax" data-id="{{ post.id }}">
 			        <a href="{{ site.baseurl }}{{ post.url }}" data-pjax>
 			        	{{ post.title }}
 			        </a>
