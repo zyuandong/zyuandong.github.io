@@ -80,13 +80,12 @@ $(function(){
 		timeout: 10000
 	});
 	$(document).on({
-		'pjax:click': function() {
+		'pjax:start': function() {
+			$("#contents").fadeOut();
 			NProgress.start();
 		},
-		'pjax:start': function() {
-			//NProgress.start();
-		},
 		'pjax:end': function() {
+			$("#contents").fadeIn();
 			NProgress.done();
 			pjaxEnd();
 		}
