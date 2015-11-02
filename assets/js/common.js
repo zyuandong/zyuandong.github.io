@@ -32,7 +32,7 @@ $(function(){
 			}, {
 				duration: 300,
 				queue: false,
-				complete: function() {
+				step: function() {
 					$('.contents-box').addClass('fullscreen');
 				}
 			});
@@ -85,9 +85,9 @@ $(function(){
 			NProgress.start();
 		},
 		'pjax:end': function() {
+			pjaxEnd();
 			$("#contents").fadeIn();
 			NProgress.done();
-			pjaxEnd();
 		}
 	});
 
@@ -149,6 +149,12 @@ function pjaxEnd(){
 			marginLeft: '-640px'
 		}, 500).dequeue();
 		$('#icon-slider').addClass('fullscreen');
+	}
+
+	if($('#icon-slider').hasClass('fullscreen')) {
+		$('.contents-box').addClass('fullscreen');
+	} else {
+		$('.contents-box').removeClass('fullscreen');
 	}
 
 	// open page in new tab
