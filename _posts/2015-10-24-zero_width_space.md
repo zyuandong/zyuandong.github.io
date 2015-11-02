@@ -1,7 +1,6 @@
 ---
-layout: default
 title: 看不见的ZWSP
-category: javascript
+category: 杂物间
 tag: Unicode
 monthLast: true
 ---

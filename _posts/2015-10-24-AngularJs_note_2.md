@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Angular.js 学习笔记<2>
-category: javascript
-tags: [javascript, AngularJs]
+title: angular.js学习笔记<2>
+category: angular.js
+tags: [javascript, angular.js]
 ---

@@ -262,7 +262,8 @@ strong {
 .category-all .category-index {
   padding: 5px 5%;
   color: #B5AFAF;
-  min-height: 180px;
+  min-height: 230px;
+  overflow-y: auto;
 }
 .category-all .category-index .category-item {
   display: flex;
@@ -333,8 +334,14 @@ strong {
 .tags-all .tags-index {
   padding: 5px 5%;
   color: #B5AFAF;
-  max-height: 40%;
+  min-height: 260px;
   overflow-y: auto;
+}
+.tags-all .tags-index:after {
+  content: "";
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px dashed #B5AFAF;
 }
 .tags-all .tags-index .tags-item {
   cursor: pointer;
@@ -349,7 +356,6 @@ strong {
   text-decoration: underline;
 }
 .tags-all .tags-box {
-  max-height: 60%;
   overflow-y: auto;
 }
 .tags-all ul {

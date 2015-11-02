@@ -1,7 +1,6 @@
 ---
-layout: default
 title: 必备基础知识
-category: 百宝箱
+category: 杂物间
 tags: [http, 数据结构]
 ---
 

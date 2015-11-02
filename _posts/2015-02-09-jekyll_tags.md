@@ -1,8 +1,7 @@
 ---
-layout: default
-title: jekyll标签归档
-category: 百宝箱
-tags: [jekyll, liquid]
+title: 使用jekyll中的Category和Tag
+category: 杂物间
+tag: jekyll
 monthLast: true
 ---
 

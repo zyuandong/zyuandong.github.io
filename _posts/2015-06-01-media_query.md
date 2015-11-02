@@ -1,8 +1,7 @@
 ---
-layout: default
 title: 详解media query媒体查询
-category: 设计
-tags: [css, media query]
+category: web
+tags: [CSS, media query]
 monthLast: true
 ---
 

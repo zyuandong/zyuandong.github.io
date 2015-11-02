@@ -1,7 +1,6 @@
 ---
-layout: default
 title: 前端感悟
-category: 生活
+category: 随笔
 tag: 感悟
 ---
 

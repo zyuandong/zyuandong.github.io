@@ -1,8 +1,7 @@
 ---
-layout: default
 title: jquery-pajx 实现无刷新改变文档内容
-category: 工具
-tags: [jquery, pajx]
+category: 杂物间
+tags: pajx
 ---
 
 ## 语法

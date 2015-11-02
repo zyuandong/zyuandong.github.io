@@ -1,6 +1,5 @@
 ---
-layout: default
-title: 认识JavaScript
+title: 认识javascript
 category: javascript
 tag: javascript
 ---

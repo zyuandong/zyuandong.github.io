@@ -1,7 +1,7 @@
 ---
-title: 将Sublime Text打造为适合自己的开发工具
-category: 工具
-tags: [开发工具, sublime text]
+title: 将Sublime Text打造为适合自己的编辑器
+category: 杂物间
+tags: [编辑器, sublime text]
 ---
 
 ## 选择Sublime Text

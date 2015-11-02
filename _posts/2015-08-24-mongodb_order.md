@@ -1,8 +1,7 @@
 ---
-layout: default
 title: mongoDB基本命令运用
-category: 工具
-tags: [mongoDB, mongoose]
+category: 杂物间
+tag: mongoDB
 monthLast: true
 ---
 

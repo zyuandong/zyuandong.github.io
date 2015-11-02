@@ -1,8 +1,7 @@
 ---
-layout: default
 title: web前端安全
-category: 百宝箱
-tag: 安全策略
+category: web
+tag: web
 monthLast: true
 ---
 

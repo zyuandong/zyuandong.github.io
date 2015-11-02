@@ -272,7 +272,8 @@ strong {
 	.category-index {
 		padding: 5px 5%;
 		color: #B5AFAF;
-		min-height: 180px;
+		min-height: 230px;
+		overflow-y: auto;
 
 		.category-item {
 			display: flex;
@@ -324,8 +325,15 @@ strong {
 	.tags-index {
 		padding: 5px 5%;
 		color: #B5AFAF;
-		max-height: 40%;
+		min-height: 260px;
 		overflow-y: auto;
+
+		&:after {
+			content: "";
+			display: block;
+			padding: 5px 0;
+			border-bottom: 1px dashed #B5AFAF;
+		}
 
 		.tags-item {
 			cursor: pointer;
@@ -344,7 +352,6 @@ strong {
 	}
 
 	.tags-box {
-		max-height: 60%;
 		overflow-y: auto;
 	}
 

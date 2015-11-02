@@ -1,8 +1,7 @@
 ---
-layout: default
 title: 正则表达式
-category: 百宝箱
-tags: 正则表达式
+category: 杂物间
+tag: 正则表达式
 ---
 
 ## RegExp对象

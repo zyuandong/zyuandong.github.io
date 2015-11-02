@@ -1,8 +1,7 @@
 ---
-layout: default
 title: 资源加载顺序小结
-category: javascript
-tags: JavaScript
+category: web
+tags: [web, javascript]
 monthLast: true
 ---
 

@@ -1,8 +1,7 @@
 ---
-layout: default
-title: meteor+AngularJs 搭建简易论坛<4>
-category: javascript
-tags: [meteor, AngularJs]
+title: meteor+angular.js搭建简易论坛<4>
+category: angular.js
+tags: [meteor, angular.js]
 ---
 
 ## 显示节点下的帖子列表

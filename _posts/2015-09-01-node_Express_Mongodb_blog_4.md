@@ -1,8 +1,7 @@
 ---
-layout: default
-title: 使用 nodeJS 开发博客系统系列<4>
-category: javascript
-tags: [nodeJS, Express, mongoDB]
+title: 使用node.js开发博客系统系列<4>
+category: node.js
+tags: [node.js, Express, mongoDB]
 ---
 
 # 功能模块整理

@@ -1,8 +1,7 @@
 ---
-layout: default
 title: markdown语法
-category: 工具
-tags: markdown
+category: 杂物间
+tag: markdown
 ---
 
 ### 标题
