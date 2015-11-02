@@ -79,8 +79,17 @@ $(function(){
 		fragment: '#contents',
 		timeout: 10000
 	});
-	$(document).on('pjax:end', function() {
-		pjaxEnd();
+	$(document).on({
+		'pjax:click': function() {
+			NProgress.start();
+		},
+		'pjax:start': function() {
+			//NProgress.start();
+		},
+		'pjax:end': function() {
+			NProgress.done();
+			pjaxEnd();
+		}
 	});
 
 	// get categories-list
