@@ -65,7 +65,7 @@ kramdown:
   input: GFM
 ```
 
-代码块语法可使用 ``` 替换 ~~~
+代码块语法可使用 ``` 替换 ```
 
 - redcarpet
 
