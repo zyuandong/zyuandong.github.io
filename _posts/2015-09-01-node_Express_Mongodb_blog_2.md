@@ -1,5 +1,5 @@
 ---
-title: 使用node.js开发博客系统系列<2>
+title: 使用node.js开发博客系统系列02
 category: node.js
 tags: [node.js, Express, mongoDB]
 ---
@@ -32,10 +32,10 @@ tags: [node.js, Express, mongoDB]
 
 在 Express 自动生成项目框架时，有这么两行代码
 
-~~~
+```
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-~~~
+```
 
 这里设置了模板文件的存储位置和使用的模板引擎。
 
@@ -61,7 +61,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 ![此处输入图片的描述](https://dn-anything-about-doc.qbox.me/document-uid9061labid1361timestamp1441935469652.png/wm)
 
-~~~
+```
 <!DOCTYPE html>
 <html>
 	<head>
@@ -82,7 +82,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 		</div>
 	</body>
 </html>
-~~~
+```
 
 从这个页面的构造，以及我们之前的功能设计可以看出，`<nav>` 部分的导航条是共用部分，也就是在其页面都有出现，这就可以用到 `include` 将其提取为一个文件。
 
@@ -90,7 +90,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 `views/header.ejs` 文件：
 
-~~~
+```
 <!DOCTYPE html>
 <html>
 	<head>
@@ -107,23 +107,23 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 			</ul>
 		</nav>
 		<div id="container">
-~~~
+```
 
 `views/footer.ejs` 文件：
 
-~~~
+```
         </div>
     </body>
 </html>
-~~~
+```
 
 修改过后的 `views/index.ejs` 文件为：
 
-~~~
+```
 <%- include header %>
 <%= title %>
 <%- include footer %>
-~~~
+```
 
 以上便是 `include` 的简单使用方法，ejs 模板引擎的基本功能也梳理完毕，在接下来的学习中，进一步体会 ejs 的魅力吧。
 
@@ -149,13 +149,13 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 + 使用CDN加速服务：bootstrap 中文网提供了免费的 CDN 加速服务，复制以下代码，即可使用：
 
-~~~
+```
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-~~~
+```
 
 建议你使用 bower 安装 bootstrap，在 public/ 下执行 `bower install bootstrap jquery` ，便可以通过路径引入相关文件
 
@@ -163,7 +163,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 在 `viwes/header.ejs` 中添加上面的代码，并将 `<nav>` 部分替换为 bootstrap 的导航条组件：
 
-~~~
+```
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -205,7 +205,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 		</div>
 	</div>
 </nav>
-~~~
+```
 
 这段代码中就是使用 bootstrap 的一个简单例子，也只用到了导航条组件，除此之外，我们开发博客系统还可能用到表单样式，栅格系统等，同学们可选择合适的组件，当然也可以使用其他前端框架，比如 AmazeUI 等，开发自己的博客系统。
 
@@ -245,15 +245,15 @@ form 表单，和发表页面一致，需要自动填写原有的数据，方便
 
 跳转首页的路由规则为：
 
-~~~
+```
 router.get('/', function(req, res, next) {
 	res.render('index', {title: '主页'});
 });
-~~~
+```
 
 上一节提到，`res.render()` 会将数据传递给模板，其中参数一便是对应的模板，这里便是 `index.ejs`，而数据便是 `{...}` 这一对象。所以，我们编写的模拟数据，就写在这个对象里，以 json 格式为标准。
 
-~~~
+```
 router.get('/', function(req, res, next) {
 	res.render('index', {
 	    title: '主页',
@@ -278,11 +278,11 @@ router.get('/', function(req, res, next) {
 	    }]
     });
 });
-~~~
+```
 
 这里简单添加了三条数据，模板 `views/index.ejs` 中添加：
 
-~~~
+```
 <% arts.forEach(function(art) { %>
 	<%= art.title %>
 	<%= art.tags %>
@@ -290,6 +290,6 @@ router.get('/', function(req, res, next) {
 	<%= art.createTime %>
 	<%= art.content %>
 <% }) %>
-~~~
+```
 
 这样，模板便成功的从后台得到了数据，并展示到页面中。页面样式很粗糙，这需要同学们自己完成。

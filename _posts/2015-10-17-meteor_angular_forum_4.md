@@ -1,5 +1,5 @@
 ---
-title: meteor+angular.js搭建简易论坛<4>
+title: meteor+angular.js搭建简易论坛04
 category: angular.js
 tags: [meteor, angular.js]
 ---
@@ -10,17 +10,17 @@ tags: [meteor, angular.js]
 
 在`client/routes.js`中添加路由：
 
-~~~
+```
 .state('nodeDetails', {
     url: '/node/:node',
     templateUrl: 'client/node/views/node-details.ng.html',
     controller: 'NodeDetailsCtrl'
 })
-~~~
+```
 
 在`client/node/controllers`文件夹新建`nodeDetails.js`文件，输入如下内容：
 
-~~~
+```
 angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '$stateParams',
     function($meteor, $scope, $stateParams) {
         $scope.node = $meteor.object(Nodes, { url: $stateParams.node }, false);
@@ -29,11 +29,11 @@ angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '
         });
     }
 ]);
-~~~
+```
 
 然后在`client/node/views`文件夹新建`node-details.ng.html`，输入如下代码：
 
-~~~
+```
 <div class="current-node">
     <ol class="breadcrumb">
         <li><a ui-sref="nodesList">节点</a></li>
@@ -59,7 +59,7 @@ angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '
         </div>
     </div>
 </div>
-~~~
+```
 
 添加一个页面是不是已经很熟练了。
 
@@ -67,7 +67,7 @@ angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '
 
 首先创建数据模型，在`model`文件夹中新建`reply.js`文件，输入如下代码：
 
-~~~
+```
 
 Replies = new Mongo.Collection('replies');
 
@@ -86,11 +86,11 @@ Replies.allow({
         return userId;
     }
 });
-~~~
+```
 
 在`client/post/controllers/postDetails.js`中添加代码：
 
-~~~
+```
 angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '$scope', '$stateParams',
     function($meteor, $state, $scope, $stateParams) {
         $scope.post = $meteor.object(Posts, $stateParams.postId, false);
@@ -112,11 +112,11 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
         };
     }
 ]);
-~~~
+```
 
 然后在`client/post/views/post-details.ng.html`中添加回复帖子的表单，修改后的代码如下所示：
 
-~~~
+```
 
 <div class="current-node" ng-if="node">
     <ol class="breadcrumb">
@@ -158,7 +158,7 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
         </form>
     </div>
 </div>
-~~~
+```
 
 到这里，整个项目基本上就完成了。具备用户注册登录，论坛节点添加，发帖和回帖等功能。
 
@@ -166,13 +166,13 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
 
 但是页面是不是也太难看了点，那么下面我们来稍微美化一下吧，这里我们使用LESS来编写样式，首先添加LESS包：
 
-~~~
+```
 $ meteor add less
-~~~
+```
 
 然后在client文件夹下新建`index.less`文件，添加主页模板样式：
 
-~~~
+```
 body {
     background: #efefef;
 }
@@ -225,11 +225,11 @@ a {
     box-shadow: 0 0 1px 0 #999;
     border-radius: 2px;
 }
-~~~
+```
 
 在`client/node/views`文件夹下新建`styles`文件夹，然后在这个文件夹中新建`nodes-list.less`，添加节点列表页的样式：
 
-~~~
+```
 .nodes-list {
     padding: 10px 0;
 
@@ -242,11 +242,11 @@ a {
         font-size: 14px;
     }
 }
-~~~
+```
 
 在`client/post/views`文件夹下新建`styles`文件夹，然后在这个文件夹中新建`post-item.less`，添加帖子列表的样式：
 
-~~~
+```
 .current-node {
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -285,11 +285,11 @@ a {
         }
     }
 }
-~~~
+```
 
 在`client/post/views`文件夹下新建`styles`文件夹，然后在这个文件夹中新建`post-details.less`，添加帖子详情页的样式：
 
-~~~
+```
 
 .post-details-header {
     h4 {
@@ -321,4 +321,4 @@ a {
 .post-reply-content {
     margin: 10px 0;
     font-size: 16px;
-~~~
+```

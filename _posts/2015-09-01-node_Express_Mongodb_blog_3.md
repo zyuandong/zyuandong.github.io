@@ -1,5 +1,5 @@
 ---
-title: 使用node.js开发博客系统系列<3>
+title: 使用node.js开发博客系统系列03
 category: node.js
 tags: [node.js, Express, mongoDB]
 ---
@@ -41,14 +41,14 @@ mongoDB 的服务启动后，开始编写程序建立连接，这里我们使用
 
 接下需要修改 `app.js`，添加下面的代码：
 
-~~~
+```
 //先引入 mongoose 模块
 var mongoose = require('mongoose');
 
 //连接数据库
 mongoose.connect('mongodb://localhost:27017/datas');
 mongoose.connection.on('error', console.error.bind(console, '连接数据库失败'));
-~~~
+```
 
 刷新页面时，若没有报出 “连接数据库失败” 则成功连接数据库。接下来，我们便要建立数据库模型，向数据库中存储数据。
 
@@ -64,16 +64,16 @@ schema 是 mongoose 中的模型对象，就类似关系型数据库中的表结
 
 在 `models/model.js` 中引入 mongoose 模块，并定义 schema 模型对象：
 
-~~~
+```
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-~~~
+```
 
 根据上一节实验中，我们统一定义的用户属性有 “用户名”、“密码”和“邮箱”，可以确定模型中的属性：`username`、`password`、`email`，此外考虑到以后操作数据的方便，在添加一个属性`createTime`。
 
 就可以创建具体的模型对象：
 
-~~~
+```
 var userSchema = new Schema({
 	username: String,
 	password: String,
@@ -83,19 +83,19 @@ var userSchema = new Schema({
 		default: Date.now
 	}
 });
-~~~
+```
 
 最后通过 mongoose 的 `model()` 方法，将 schema 发布为 model，model 具有抽象属性和行为的数据库操作对，这就使模型对象具有了数据库的 CRUD 操作方法。
 
-~~~
+```
 exports.User = mongoose.model('User', userSchema);
-~~~
+```
 
 #### 2.2.2 设置 articleSchema
 
 同样是在 `models/model.js` 下，我们创建文章模型对象 -- articleSchema：
 
-~~~
+```
 var articleSchema = new Schema({
 	title: String,
 	author: String,
@@ -109,7 +109,7 @@ var articleSchema = new Schema({
 
 //发布为 model 
 exports.Article = mongoose.model('Article', articleSchema);	
-~~~
+```
 
 #### 注意：此处创建好的 model 对应数据库中的集合，可以通过 `show colections` 查看数据库中的所有集合。
 
@@ -121,7 +121,7 @@ exports.Article = mongoose.model('Article', articleSchema);
 
 首先我们学习添加数据的操作 -- 注册用户和发表文章，在 `routes/index.js` 中，我们添加以下代码：
 
-~~~
+```
 var mongoose = require('mongoose');
 //引入加密模块
 var crypto = require('crypto');
@@ -179,12 +179,12 @@ router.post('/reg', function(req, res, next) {
 		});
 	});
 });
-~~~
+```
 这样便实现了注册功能，需要注意 `req.body` 处理 post 请求的参数，建立 User 模型对象实体操作数据库，其实有 JavaScript 基础的同学应该很熟悉这样的写法。
 
 再来是文章发表功能，这时就要用到 articleSchema 模型对象：
 
-~~~
+```
 var Article = model.Article;
 
 router.post('/post', function(req, res, next) {
@@ -205,7 +205,7 @@ router.post('/post', function(req, res, next) {
 		return res.redirect('/');
 	});
 });
-~~~
+```
 
 有了用户注册的基础，发表文章就简单许多了，但现在还没讲到 session 的运用，author 元素的值可以暂时通过 post 表单获得，稍后讲到 session 时，我们再改为上面的写法即可。
 
@@ -213,7 +213,7 @@ router.post('/post', function(req, res, next) {
 
 接下来是文章的删除操作，依然是 `routes/index.js`，修改我们第一节实验写好的路由规则 `/remove/:_id`：
 
-~~~
+```
 //mongoose 的 remove() 方法，通过传递检索参数，直接删除检索结果
 router.get('/remove/:_id', function(req, res, next) {
 
@@ -227,13 +227,13 @@ router.get('/remove/:_id', function(req, res, next) {
 		return res.redirect('back');
 	})
 });
-~~~
+```
 
 #### 2.3.3 编辑文章
 
 编辑文章，不仅需要获取文章信息，初始化表单内容，同时还需要有和发表文章一样的功能：
 
-~~~
+```
 router.get('/edit/:_id', function(req, res, next) {
 	Article.findOne({_id: req.params._id}, function(err, art) {
 		if(err) {
@@ -264,13 +264,13 @@ router.post('/edit/:_id', function(req, res, next) {
 		return res.redirect('/u/' + req.session.user.username);
 	});
 });
-~~~
+```
 
 #### 2.3.4 查询文章
 
 这里我们可以通过正则表达式，实现模糊查询，因为 Express 路由规则支持正则匹配查询。
 
-~~~
+```
 router.get('/search', function(req, res, next) {
     //req.query 获取 get 请求的参数，并构造为正则对象
 	var query = req.query.title,
@@ -289,7 +289,7 @@ router.get('/search', function(req, res, next) {
 		});
 	});
 });
-~~~
+```
 
 完成以上四步，我们的博客系统就具有了基本的功能，但是还有几个小问题：
 
@@ -304,14 +304,14 @@ session 是一种持久网络协议，在客户端与服务器之间起到交换
 
 ### 3.1 引入中间件，创建 session
 
-~~~
+```
 cnpm install express-session --save
 cnpm install connect-mongo --save
-~~~
+```
 
 接着我们要在 `app.js` 中添加以下代码：
 
-~~~
+```
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
@@ -327,7 +327,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-~~~
+```
 
 完成对 `app.js` 的以上修改之后，我们便能通过 `req.session` 获取当前用户的会话对象，获取用户的相关信息。
 
@@ -337,7 +337,7 @@ app.use(session({
 
 之前提到过的发表文章，其中的 author 属性需要通过获取 session 中保存的用户信息，此处我们就可以修改发表文章的方法以实现我们的需求：
 
-~~~
+```
 router.post('/post', function(req, res, next) {
     var data = new Article({
         title: req.body.title,
@@ -356,13 +356,13 @@ router.post('/post', function(req, res, next) {
         return res.redirect('/');
     });
 });
-~~~
+```
 
 session 另一个很大的作用就是判断用户登录状态并控制页面的元素显示：
 
 我们就修改上一节给出的导航条代码，修改如下：
 
-~~~
+```
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -409,16 +409,16 @@ session 另一个很大的作用就是判断用户登录状态并控制页面的
 		</div>
 	</div>
 </nav>
-~~~
+```
 
 代码中我们可以看到有许多判断，其中的参数 user 便是通过 session 获取的用户信息，为此，我们还需要在 `res.render()` 中传递 session：
 
-~~~
+```
 res.render('index', { 
 	title: '主页',
 	user: req.session.user
 	// code ....
 });
-~~~
+```
 
 除了以上两个例子，还有许多用到 session 的地方，大家在学习过程中可以自己好好感悟。

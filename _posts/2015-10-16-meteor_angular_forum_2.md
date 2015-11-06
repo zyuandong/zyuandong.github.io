@@ -1,5 +1,5 @@
 ---
-title: meteor+angular.js搭建简易论坛<2>
+title: meteor+angular.js搭建简易论坛02
 category: angular.js
 tags: [meteor, angular.js]
 ---
@@ -10,19 +10,19 @@ tags: [meteor, angular.js]
 
 首先添加`ui-router`模块到项目：
 
-~~~
+```
 $ meteor add angularui:angular-ui-router
-~~~
+```
 
 在`client`文件夹下新建`lib`文件夹，然后把`app.js`文件移动到lib文件夹下面，然后把`ui-router`添加到Angular模块依赖中，修改`app.js`代码，如下所示：
 
-~~~
+```
 angular.module('louForum', ['angular-meteor', 'ui.router']);
-~~~
+```
 
 在client文件夹下创建`routes.js`文件，通过`angular-ui-router`定义注册和登录的路由，代码如下：
 
-~~~
+```
 angular.module('louForum').config(['$urlRouterProvider', '$stateProvider', '$locationProvider',
     function($urlRouterProvider, $stateProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
@@ -67,16 +67,16 @@ angular.module('louForum').config(['$urlRouterProvider', '$stateProvider', '$loc
         $urlRouterProvider.otherwise('/');
     }
 ]);
-~~~
+```
 
 `ui-router`通过嵌套的`states`和`views`来控制路由，在HTML文件中，要引用一个链接，直接添加对应的state即可，比如链接登录页面：
 
-~~~
+```
 <body>
     <div ui-view></div>
     <a ui-sref="login">login</a>
 </body>
-~~~
+```
 
 `ui-sref`是ui-router的一个指令，用于给HTML模板渲染ui-router定义的链接。而指令`ui-view`用于渲染HTML页面模板。
 
@@ -88,13 +88,13 @@ Angular通过`config()`方法调用`ui-router`的`$stateProvider`方法根据`st
 
 我们使用bootstrap构建前端页面，添加bootstrap到Meteor：
 
-~~~
+```
 $ meteor add twbs:bootstrap
-~~~
+```
 
 删除`index.ng.html`文件，打开`index.html`，修改代码如下：
 
-~~~
+```
 <head>
     <base href="/">
 </head>
@@ -119,7 +119,7 @@ $ meteor add twbs:bootstrap
         <div ui-view></div>
     </div>
 </body>
-~~~
+```
 
 `ui-sref`是`angular-ui-router`的指令，用于指定路由控制函数中定义的state，以对应其中的URL。`ng-if`是一个判断表达式结果为true或者false的Angular指令，为true则渲染此HTML元素，为false则不渲染。在head标签中，我们添加了base标签，这是html5 mode 所必须的，指定了URL的根目录。我们还添加了一个带有`ui-view`属性的div元素，根据不同的URL，对应的Angular模板的内容会加载到这个div中，所以点击切换URL时，页面其实是没有刷新的，而只是更改了`ui-view`中的内容。
 
@@ -127,15 +127,15 @@ $ meteor add twbs:bootstrap
 
 Meteor默认加载了很多包，其中`insecure`包使得服务端默认会把所有的数据发送给所有的客户端，而且所有客户端都可以修改数据，比如没有登录也可以发帖。为了安全，添加用户之前，我们需要移除`insecure`包：
 
-~~~
+```
 $ meteor remove insecure
-~~~
+```
 
 然后添加Meteor用户管理包`accounts-password`：
 
-~~~
+```
 $ meteor add accounts-password
-~~~
+```
 
 这个包有登录、注册、修改密码、邮箱验证等功能，非常实用。
 
@@ -143,7 +143,7 @@ $ meteor add accounts-password
 
 创建注册控制器，在controllers文件夹中新建`register.js`，输入如下代码（通过IDE写代码可以输入中文的哦~）：
 
-~~~
+```
 // 定义注册控制器 RegisterCtrl
 // 并传入 $meteor 和 $state
 angular.module('louForum').controller('RegisterCtrl', ['$meteor', '$state',
@@ -175,11 +175,11 @@ angular.module('louForum').controller('RegisterCtrl', ['$meteor', '$state',
         };
     }
 ]);
-~~~
+```
 
 然后再创建注册的模板，在views文件夹中新建`register.ng.html`，输入如下代码：
 
-~~~
+```
 <form class="form-horizontal">
     <div class="form-group">
         <label class="col-md-2 control-label">昵称</label>
@@ -205,7 +205,7 @@ angular.module('louForum').controller('RegisterCtrl', ['$meteor', '$state',
         </div>
     </div>
 </form>
-~~~
+```
 
 关于注册的控制器和模板就完成了。
 
@@ -213,7 +213,7 @@ angular.module('louForum').controller('RegisterCtrl', ['$meteor', '$state',
 
 同样的，创建登录控制器，在controllers文件夹中新建`login.js`，输入如下代码：
 
-~~~
+```
 angular.module('louForum').controller('LoginCtrl', ['$meteor', '$state',
     function($meteor, $state) {
         var vm = this;
@@ -237,11 +237,11 @@ angular.module('louForum').controller('LoginCtrl', ['$meteor', '$state',
         };
     }
 ]);
-~~~
+```
 
 然后创建登录的模板，在views文件夹中新建`login.ng.html`，输入如下代码：
 
-~~~
+```
 <form class="form-horizontal">
     <div class="form-group">
         <label class="col-md-2 control-label">邮箱</label>
@@ -261,55 +261,55 @@ angular.module('louForum').controller('LoginCtrl', ['$meteor', '$state',
         </div>
     </div>
 </form>
-~~~
+```
 
 由于登录成功后，会自动跳转到首页，这里我们就先添加一个空白主页，在client文件夹下新建`home`文件夹，在`home`文件夹下创建`controllers`文件夹和`views`文件夹。
 
 在这个`controllers`文件夹中新建`home.js`文件，输入如下代码：
 
-~~~
+```
 angular.module('louForum').controller('HomeCtrl', ['$meteor', '$state', '$scope',
     function($meteor, $state, $scope) {
     }
 ]);
-~~~
+```
 
 在`views`文件夹下新建`home.ng.html`文件夹，输入如下代码：
 
-~~~
+```
 <p>home page</p>
-~~~
+```
 
 运行项目：
 
-~~~
+```
 $ meteor
-~~~
+```
 
 访问`http:localhost:3000/register`即可注册新用户，访问`http:localhost:3000/login`登录。
 
 在虚拟机中新打开一个shell终端，进入louForum目录，输入如下命令，进入Meteor的MongoDB命令行环境：
 
-~~~
+```
 $ meteor mongo
-~~~
+```
 
 然后输入如下命令，进入名为`meteor`（Meteor的默认数据库）的数据库：
 
-~~~
+```
 > use meteor;
-~~~
+```
 
 输入如下命令，查看该数据库中的Collection：
 
-~~~
+```
 > show collections;
-~~~
+```
 
 可以看到，有一个名为`users`的collection，输入如下命令，查看`users`中的数据：
 
-~~~
+```
 > db.users.find();
-~~~
+```
 
 可以看到打印出了刚刚注册的用户的数据。到此，注册和登录用户就完成了。

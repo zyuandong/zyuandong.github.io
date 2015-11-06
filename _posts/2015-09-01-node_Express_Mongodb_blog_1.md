@@ -1,5 +1,5 @@
 ---
-title: 使用node.js开发博客系统系列<1>
+title: 使用node.js开发博客系统系列01
 category: node.js
 tags: [node.js, Express, mongoDB]
 ---
@@ -116,7 +116,7 @@ v4.x 后还需要安装Express命令行工具：
 
 文件结构如下
 
-~~~
+```
 |-- LouBlog
 	|-- public
 		|-- javascripts
@@ -133,7 +133,7 @@ v4.x 后还需要安装Express命令行工具：
 		`-- www
 	|-- app.js
 	`-- package.json
-~~~
+```
 
 简单了解一下 Express 都为我们准备好了什么：
 
@@ -180,11 +180,11 @@ v4.x 后还需要安装Express命令行工具：
 
 routers/index.js 中有以下代码：
 
-~~~
+```
 router.get('/', functoin(req, res) {
     res.render('index', { title: 'Express' });
 });
-~~~
+```
 
 代码意思是当访问主页时，调用 ejs 模板（这里提到的 ejs 模板将会在下一节中详细讲解）来渲染 views/index.ejs 模板文件。
 其中 get 指 http 的 get 请求方式，Express 封装了许多 http 请求方式，我们主要使用 `get()` 和 `post()` 两种;
@@ -211,11 +211,11 @@ router.get('/', functoin(req, res) {
 
 在 routers/index.js 文件中添加代码
 
-~~~
+```
 router.get('/login', function(req, res, next) {
 	res.render('login', {title: 'login'});
 });
-~~~
+```
 
 `Ctrl + c` 停止服务，`node app.js` 再次启动服务，访问 `localhost:3000/login` 后显示：
 
@@ -247,7 +247,7 @@ router.get('/login', function(req, res, next) {
 
 依据我们博客指定好的功能，我们初步设计以下几个路由规则：
 
-~~~
+```
 /login
 /logout
 /reg
@@ -255,7 +255,7 @@ router.get('/login', function(req, res, next) {
 /search
 /edit/:_id
 /remove/:_id
-~~~
+```
 
 以上几个路由规则分别对应“登录”、“退出登录”、“注册”、“发表文章”、“查询”、“编辑”、“删除”功能。
 
@@ -263,13 +263,13 @@ router.get('/login', function(req, res, next) {
 
 再分别建立好对应的视图文件：
 
-~~~
+```
 views/login.ejs
 views/register.ejs
 views/index.ejs
 views/post.ejs
 views/search.ejs
 views/edit.ejs
-~~~
+```
 
 “删除”功能只是在请求完成后返回一个状态信息，因此不必要创建视图文件。
