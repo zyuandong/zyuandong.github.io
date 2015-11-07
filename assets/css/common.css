@@ -190,9 +190,10 @@ strong {
 }
 .ul-style ul li a {
   display: block;
-  width: 90%;
+  width: 98%;
   color: #1f3f5f;
   text-align: left;
+  box-sizing: border-box;
   padding: 5px 0 5px 5%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -202,13 +203,13 @@ strong {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .ul-style ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .ul-style ul .date-tip {
   font-size: 14px;
@@ -237,9 +238,10 @@ strong {
 }
 .articles-all ul li a {
   display: block;
-  width: 90%;
+  width: 98%;
   color: #1f3f5f;
   text-align: left;
+  box-sizing: border-box;
   padding: 5px 0 5px 5%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -249,13 +251,13 @@ strong {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .articles-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .articles-all ul .date-tip {
   font-size: 14px;
@@ -314,9 +316,10 @@ strong {
 }
 .category-all ul li a {
   display: block;
-  width: 90%;
+  width: 98%;
   color: #1f3f5f;
   text-align: left;
+  box-sizing: border-box;
   padding: 5px 0 5px 5%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -326,13 +329,13 @@ strong {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .category-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .category-all ul .date-tip {
   font-size: 14px;
@@ -383,9 +386,10 @@ strong {
 }
 .tags-all ul li a {
   display: block;
-  width: 90%;
+  width: 98%;
   color: #1f3f5f;
   text-align: left;
+  box-sizing: border-box;
   padding: 5px 0 5px 5%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -395,13 +399,13 @@ strong {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .tags-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
   color: #1f3f5f;
   text-decoration: none;
-  border-right: 3px solid #4ae8c4;
+  border-left: 5px solid #4ae8c4;
 }
 .tags-all ul .date-tip {
   font-size: 14px;
