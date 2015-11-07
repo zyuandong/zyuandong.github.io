@@ -190,7 +190,7 @@ strong {
 }
 .ul-style ul li a {
   display: block;
-  width: 98%;
+  width: 100%;
   color: #1f3f5f;
   text-align: left;
   box-sizing: border-box;
@@ -238,7 +238,7 @@ strong {
 }
 .articles-all ul li a {
   display: block;
-  width: 98%;
+  width: 100%;
   color: #1f3f5f;
   text-align: left;
   box-sizing: border-box;
@@ -316,7 +316,7 @@ strong {
 }
 .category-all ul li a {
   display: block;
-  width: 98%;
+  width: 100%;
   color: #1f3f5f;
   text-align: left;
   box-sizing: border-box;
@@ -386,7 +386,7 @@ strong {
 }
 .tags-all ul li a {
   display: block;
-  width: 98%;
+  width: 100%;
   color: #1f3f5f;
   text-align: left;
   box-sizing: border-box;
