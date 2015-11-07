@@ -193,17 +193,22 @@ strong {
   width: 90%;
   color: #1f3f5f;
   text-align: left;
-  padding: 5px 5%;
+  padding: 5px 0 5px 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ul-style ul li a:hover {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .ul-style ul li.active a {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .ul-style ul .date-tip {
   font-size: 14px;
@@ -235,17 +240,22 @@ strong {
   width: 90%;
   color: #1f3f5f;
   text-align: left;
-  padding: 5px 5%;
+  padding: 5px 0 5px 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .articles-all ul li a:hover {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .articles-all ul li.active a {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .articles-all ul .date-tip {
   font-size: 14px;
@@ -307,17 +317,22 @@ strong {
   width: 90%;
   color: #1f3f5f;
   text-align: left;
-  padding: 5px 5%;
+  padding: 5px 0 5px 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .category-all ul li a:hover {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .category-all ul li.active a {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .category-all ul .date-tip {
   font-size: 14px;
@@ -371,17 +386,22 @@ strong {
   width: 90%;
   color: #1f3f5f;
   text-align: left;
-  padding: 5px 5%;
+  padding: 5px 0 5px 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .tags-all ul li a:hover {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .tags-all ul li.active a {
-  background-color: rgba(234, 234, 234, 0.9);
-  color: #c7254e;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #1f3f5f;
   text-decoration: none;
+  border-right: 3px solid #4ae8c4;
 }
 .tags-all ul .date-tip {
   font-size: 14px;
