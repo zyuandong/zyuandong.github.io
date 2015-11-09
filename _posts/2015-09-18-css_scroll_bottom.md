@@ -1,11 +1,11 @@
 ---
-title: 滚动条自动滚到底部
+title: 滚动条自动滚到顶部
 category: 杂物间
 tags: [web, javascript]
 monthLast: true
 ---
 
-许多时候，为了展示效果，我们需要触发一个条件便让滚动条能自动滚到最底部，经过实验与测试，总结如下：
+许多时候，为了展示效果，我们需要触发一个条件便让滚动条能自动滚到最顶部，经过实验与测试，总结如下：
 
 ## Mozilla 的 scrollTopMax
 
