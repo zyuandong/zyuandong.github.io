@@ -164,6 +164,18 @@ function pjaxEnd(){
 	$('pre code').each(function(i, block) {
 		hljs.highlightBlock(block);
 	});
+
+	$('.date-tags-box').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
+		console.log(this.tagName);
+		switch (this.tagName) {
+			case H1: 
+			case H2:
+			case H3:
+			case H4:
+			case H5:
+			case H6:
+		}
+	});
 }
 
 function bindActive() {
