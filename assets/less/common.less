@@ -419,6 +419,22 @@ strong {
 		}
 	}
 }
+
+#contents.fadeIn {
+	-webkit-animation: fadeIn 0.3s;
+	-moz-animation: fadeIn 0.3s;
+	-ms-animation: fadeIn 0.3s;
+	-o-animation: fadeIn 0.3s;
+	animation: fadeIn 0.3s;
+}
+
+#contents.fadeOut {
+	-webkit-animation: fadeOut 0.2s;
+	-moz-animation: fadeOut 0.2s;
+	-ms-animation: fadeOut 0.2s;
+	-o-animation: fadeOut 0.2s;
+	animation: fadeOut 0.2s;
+}
 /* 文章显示 end */
 
 /* slider按钮  */
@@ -597,3 +613,129 @@ strong {
 	}
 }
 /* media query end */
+
+/*------------*\
+  fadeIn style
+\*------------*/
+@-webkit-keyframes fadeIn {
+	from {
+		-webkit-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	from {
+		-moz-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	from {
+		-ms-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-ms-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	from {
+		-o-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-o-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/*------------*\
+  fadeOut style
+\*------------*/
+@-webkit-keyframes fadeOut {
+	from {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		-webkit-transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fadeOut {
+	from {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		-moz-transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes fadeOut {
+	from {
+		-ms-transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		-ms-transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeOut {
+	from {
+		-o-transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		-o-transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+}

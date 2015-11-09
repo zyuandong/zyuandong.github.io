@@ -40,10 +40,10 @@ $(function(){
 	});
 
 	// show back2top-btn
-	$('#contents').scroll(function(){
+	$('#contents').scroll(function() {
 	    var t = $(this).scrollTop();
 	    if( t >= 10) {
-	    	if(!$('#back2top').is(":visible")){
+			if(!$('#back2top').is(":visible")) {
 		    	$('#back2top').show();
 	    	}
 	    } else {
@@ -75,20 +75,17 @@ $(function(){
 
 	// use jquery-pjax
 	bindActive();
-	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', { 
-		fragment: '#contents',
-		timeout: 10000
-	});
+	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', {fragment: '#contents', timeout: 10000});
 	$(document).on({
 		'pjax:start': function() {
-			$("#contents").fadeOut();
+			$('#contents').removeClass('fadeIn').addClass('fadeOut');
 			NProgress.start();
 		},
 		'pjax:end': function() {
-			pjaxEnd();
-			bindActive();
-			$("#contents").fadeIn();
+			$('#contents').scrollTop(0).removeClass('fadeOut').addClass('fadeIn');
 			NProgress.done();
+			bindActive();
+			pjaxEnd();
 		}
 	});
 
