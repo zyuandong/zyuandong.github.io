@@ -522,15 +522,37 @@ strong {
 /* indexBtn 按钮 end */
 /* indexPanel */
 #index-panel {
-  width: 100px;
-  height: 500px;
+  width: 280px;
+  height: 640px;
   position: fixed;
-  right: -100px;
+  right: -280px;
   bottom: 0;
-  background-color: #ccc;
-  opacity: 0.5;
-  border: 1px solid green;
-  border-radius: 5px 0 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 3px solid #ccc;
+}
+#index-panel ul {
+  list-style: none;
+  padding-left: 0.625em;
+}
+#index-panel ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#index-panel ul .li-h2 {
+  padding-left: 1em;
+}
+#index-panel ul .li-h3 {
+  padding-left: 2em;
+}
+#index-panel ul .li-h4 {
+  padding-left: 3em;
+}
+#index-panel ul .li-h5 {
+  padding-left: 4em;
+}
+#index-panel ul .li-h6 {
+  padding-left: 5em;
 }
 /* indexPanel end */
 /* back2top按钮 */
