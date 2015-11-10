@@ -63,7 +63,7 @@ $(function(){
 		if($(this).hasClass('show')){
 			$(this).removeClass('show');
 			$('#index-panel').animate({
-				right: '-100px'
+				right: '-280px'
 			}, 300).dequeue();
 		} else {
 			$(this).addClass('show');
@@ -170,27 +170,27 @@ function pjaxEnd(){
 		switch (this.tagName) {
 			case 'H1':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h1"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H2':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h2"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H3':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h3"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H4':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h4"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H5':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h5"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H6':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h6"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
 				break;
 		}
 	});
