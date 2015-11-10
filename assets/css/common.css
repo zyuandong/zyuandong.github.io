@@ -562,6 +562,11 @@ strong {
 #index-panel ul li a:hover {
   text-decoration: underline;
 }
+#index-panel ul li a:active,
+#index-panel ul li a:focus,
+#index-panel ul li a:visited {
+  text-decoration: none;
+}
 #index-panel ul .li-h2 {
   padding-left: 1em;
 }

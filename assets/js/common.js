@@ -166,36 +166,42 @@ function pjaxEnd(){
 	});
 
 	var html = '';
+	$('#index-panel .pin').css('top', '5px');
 	$('.date-tags-box').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
 		switch (this.tagName) {
 			case 'H1':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H2':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H3':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H4':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H5':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 			case 'H6':
 				$(this).attr('id','title'+i);
-				html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'">'+$(this).text()+'</a></li>';
+				html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
 				break;
 		}
 	});
 
 	$('#index-panel .index-panel-ul').html(html);
+
+	$('.index-panel-ul li a').on('click', function() {
+		var index = $(this).data('index');
+		$('.pin').css('top', index * 24 + 5 + 'px');
+	})
 }
 
 function bindActive() {

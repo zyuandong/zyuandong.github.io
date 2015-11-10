@@ -532,10 +532,16 @@ strong {
 
 			a {
 				color: #1f3f5f;
-			}
 
-			a:hover {
-				text-decoration: underline;
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:active,
+				&:focus,
+				&:visited {
+					text-decoration: none;
+				}
 			}
 		}
 		
