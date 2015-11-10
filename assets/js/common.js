@@ -77,12 +77,15 @@ $(function(){
 	bindActive();
 	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', {fragment: '#contents', timeout: 10000});
 	$(document).on({
-		'pjax:start': function() {
+		'pjax:click': function() {
 			$('#contents').removeClass('fadeIn').addClass('fadeOut');
 			NProgress.start();
 		},
+		'pjax:start': function() {
+			$('#contents').css('opacity', 0);
+		},
 		'pjax:end': function() {
-			$('#contents').scrollTop(0).removeClass('fadeOut').addClass('fadeIn');
+			$('#contents').scrollTop(0).css('opacity', 1).removeClass('fadeOut').addClass('fadeIn');
 			NProgress.done();
 			bindActive();
 			pjaxEnd();
