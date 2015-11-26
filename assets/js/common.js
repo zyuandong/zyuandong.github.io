@@ -210,9 +210,6 @@ function pjaxEnd(){
 }
 
 function bindActive() {
-	$('.x-pjax').on('click', function() {
-		$(this).addClass('active').siblings().removeClass('active');
-	});
 	$('.x-pjax, .page-next, .page-previous').on('click', function() {
 		var $_id = $(this).data("id");
 		$('.x-pjax').removeClass('active').each(function() {
