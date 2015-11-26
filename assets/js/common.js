@@ -103,7 +103,8 @@ $(function(){
 			$.each(datas, function(i, item) {
 				if(item.category){
 					if(item.category == key) {
-						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
+						html += '<li class="x-pjax" data-id="'+ item.id +'">' 
+							+ '<a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
 						count++;
 					}
 				}
@@ -127,7 +128,8 @@ $(function(){
 			$.each(datas, function(i, item) {
 				for(var i in item.tags) {
 					if(item.tags[i] == key) {
-						html += '<li class="x-pjax"><a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
+						html += '<li class="x-pjax" data-id="'+ item.id +'">'
+							+ '<a href="/simplex'+item.url+'" data-pjax>'+item.title+'</a></li>';
 						count++;
 					}
 				}
@@ -211,7 +213,7 @@ function bindActive() {
 	$('.x-pjax').on('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
-	$('.page-next, .page-previous').on('click', function() {
+	$('.x-pjax, .page-next, .page-previous').on('click', function() {
 		var $_id = $(this).data("id");
 		$('.x-pjax').removeClass('active').each(function() {
 			if($(this).data('id') == $_id) {
