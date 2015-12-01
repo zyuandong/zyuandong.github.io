@@ -14,6 +14,7 @@ $(function(){
 
 	// click slider-btn to show or hide slider-panel
 	$('#slider').on('click', function() {
+		alert(232);
 		if($('#icon-slider').hasClass('fullscreen')) {
 			$('#icon-slider').removeClass('fullscreen');
 			$('#slide-panel').animate({
@@ -53,6 +54,7 @@ $(function(){
 
 	// back to top
 	$('#back2top').click(function() {
+		alert(32);
 		$('#contents').animate({
 			scrollTop: '0'
 		}, 700);
