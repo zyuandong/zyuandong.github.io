@@ -9,7 +9,7 @@ $(function(){
 	$('#slide-panel .guid-item').on('click', function() {
 		var page = $(this).data('page');
 		$('#slide-panel .page-item').hide();
-		$('#slide-panel').find('.' + page).show().css('display','flex');
+		$('#slide-panel').find('.' + page).show().not('.articles-all').css('display','flex');
 	});
 
 	// click slider-btn to show or hide slider-panel
