@@ -219,10 +219,7 @@ strong {
 /* 文章、分类、标签共同样式 end */
 /* 文章 */
 .articles-all {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  display: block;
 }
 .articles-all .head-img-min {
   height: 50px;
