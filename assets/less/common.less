@@ -9,11 +9,6 @@ body {
 	overflow: hidden;
 	font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
-#loading {	
-	width: 100%;
-	height: 3px;
-	background-color: red;
-}
 /* a标签 */
 a {
 	color: #4ae8c4;
@@ -84,6 +79,36 @@ blockquote {
 	color: #fff;
 }
 /* 选中文本 end */
+
+/* 滚动条 */
+/* 滚动条垂直方向的宽度与水平方向的高度 */
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+/* 滚动条轨道上的按钮 */
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+/* 滚动条垂直方向轨道件 */
+::-webkit-scrollbar-track-piece {
+}
+/* 滚动条按钮 */
+::-webkit-scrollbar-button {
+}
+/* 滚动条轨道上的滚动角 */ 
+::-webkit-scrollbar-corner {
+}
+/* 滚动条 end */
 
 /* 表格 */
 table {
