@@ -1,5 +1,6 @@
 @black: #000;
 @white: #fff;
+@green: #4ae8c4;
 
 body {
 	color: #1f3f5f;
@@ -11,7 +12,7 @@ body {
 }
 /* a标签 */
 a {
-	color: #4ae8c4;
+	color: @green;
 	text-decoration: none;
 
 	&:hover,
@@ -71,11 +72,11 @@ blockquote {
 
 /* 选中文本 */
 ::selection {
-	background-color: #4ae8c4;
+	background-color: @green;
 	color: #fff;
 }
 ::-moz-selection {
-	background-color: #4ae8c4;
+	background-color: @green;
 	color: #fff;
 }
 /* 选中文本 end */
@@ -117,7 +118,7 @@ table {
 	border-collapse: collapse;
 }
 thead {
-	background-color: #4ae8c4;
+	background-color: @green;
 }
 tbody {
 	background-color: #E7F1EE;
@@ -130,7 +131,7 @@ td {
 tbody {
 
 	tr:hover {
-		background-color: #4ae8c4;
+		background-color: @green;
 	}
 }
 /* 表格 end */
@@ -259,7 +260,7 @@ strong {
 				//	color: #c7254e;
 					color: #1f3f5f;
 					text-decoration: none;
-					border-left: 5px solid #4ae8c4;
+					border-left: 5px solid @green;
 				}
 			}
 		}
@@ -271,7 +272,7 @@ strong {
 				//color: #c7254e;
 				color: #1f3f5f;
 				text-decoration: none;
-				border-left: 5px solid #4ae8c4;
+				border-left: 5px solid @green;
 			}
 		}
 
@@ -474,7 +475,7 @@ strong {
 #slider {
 	width: 40px;
 	height: 40px;
-	background-color: #4ae8c4;
+	background-color: @green;
 	cursor: pointer;
 	color: #fff;
 	text-align: center;
@@ -544,7 +545,7 @@ strong {
 	.pin {
 		width: 100%;
 		height: 24px;
-		border-left: 3px solid #4ae8c4;
+		border-left: 3px solid @green;
 		background-color: rgba(217, 217, 217, 0.9);
 		box-sizing: border-box;
 		position: absolute;
