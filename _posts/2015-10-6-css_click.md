@@ -1,0 +1,10 @@
+---
+title: css模拟点击事件
+category: web
+tag: CSS
+---
+
+```
+<input type="checkbox" id="checkbox">
+<label for="checkbox"></label>
+```
