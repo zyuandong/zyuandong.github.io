@@ -457,7 +457,7 @@ strong {
   border: 1px solid #ccc;
   border-radius: 100px;
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 #contents .contents-box .page-next {
   float: right;
@@ -466,7 +466,7 @@ strong {
   border: 1px solid #ccc;
   border-radius: 100px;
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 #contents .contents-box:after {
   content: '';
