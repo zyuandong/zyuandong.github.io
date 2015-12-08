@@ -14,16 +14,16 @@ monthLast: true
 - `window.load = function(){...} `
 - `document.body.load = function(){...} `
 
-1. window.onload
+1. window.onload 页面全部加载完成，甚至包括图片
 
 - window.onload = function() {};
 - window.onload = funName;
 
-2. body.onload 
+2. body.onload 等 document 加载完成再加载相应的脚本
 
 `<body onload='init()'></body>`
 
-3. document.onreadystatechange
+3. document.onreadystatechang 当页面加载状态改变的时候执行这个方法
 
 ```
 document.onreadystatechange = function() {
