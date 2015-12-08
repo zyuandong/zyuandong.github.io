@@ -1,7 +1,7 @@
 ---
 title: 资源加载顺序小结
-category: web
-tags: [web, javascript]
+category: javascript
+tag: javascript
 monthLast: true
 ---
 
@@ -13,6 +13,25 @@ monthLast: true
 - `$(window).load(function(){...}); `
 - `window.load = function(){...} `
 - `document.body.load = function(){...} `
+
+1. window.onload
+
+- window.onload = function() {};
+- window.onload = funName;
+
+2. body.onload 
+
+`<body onload='init()'></body>`
+
+3. document.onreadystatechange
+
+```
+document.onreadystatechange = function() {
+	if(document.readyState == 'complete') {
+		// 具体执行的代码部分
+	}
+}
+```
 
 在chrome浏览器中，Jquery中的$(document).ready(function(){});事件将会在浏览器加载完文本后立即执行，此时，图片尚未加载。因此，在此事件中将无法获正确获取图片的高度和宽度值。但是在ie，firefox流览器中，在些事件中可以获取图片的高度和宽度值 。
 
