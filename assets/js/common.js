@@ -1,10 +1,11 @@
 $(function(){
 	// change page height
+	/*
 	$('body').css('height', $(window).get(0).innerHeight);
 	$(window).resize(function() {
 		$('body').css('height', $(window).get(0).innerHeight);
 	});
-
+*/
 	// switch file category tag
 	$('#slide-panel .guid-item').on('click', function() {
 		var page = $(this).data('page');

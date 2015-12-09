@@ -1,4 +1,8 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   color: #1f3f5f;
   line-height: 1.5;
   font-weight: 400;
@@ -165,7 +169,6 @@ strong {
   bottom: 0;
   font-size: 20px;
   display: flex;
-  flex-wrap: row nowrap;
   align-items: stretch;
   justify-content: space-around;
   /**
