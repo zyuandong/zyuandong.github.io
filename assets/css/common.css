@@ -458,7 +458,7 @@ strong {
   width: 100px;
   padding: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 100px;
+  border-radius: 5px;
   text-align: center;
   margin: 15px 0;
 }
@@ -467,7 +467,7 @@ strong {
   width: 100px;
   padding: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 100px;
+  border-radius: 5px;
   text-align: center;
   margin: 15px 0;
 }
