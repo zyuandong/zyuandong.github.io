@@ -677,8 +677,10 @@ strong {
     position: absolute;
     z-index: 1;
   }
-  .articles-all {
-    background-color: rgba(213, 213, 213, 0.9);
+  .articles-all,
+  .category-all,
+  .tags-all {
+    background-color: #f3f3f3;
   }
   .contents-box {
     max-width: 800px;
