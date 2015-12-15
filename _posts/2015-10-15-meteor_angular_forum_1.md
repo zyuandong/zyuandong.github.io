@@ -1,5 +1,5 @@
 ---
-title: meteor+angular.js搭建简易论坛01
+title: meteor+angular.js简易论坛（一）
 category: angular.js
 tags: [meteor, angular.js]
 ---

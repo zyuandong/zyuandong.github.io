@@ -1,5 +1,5 @@
 ---
-title: 使用node.js开发博客系统系列04
+title: node.js开发博客系统（四）
 category: node.js
 tags: [node.js, Express, mongoDB]
 ---

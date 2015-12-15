@@ -1,5 +1,5 @@
 ---
-title: 使用node.js开发博客系统系列02
+title: node.js开发博客系统（二）
 category: node.js
 tags: [node.js, Express, mongoDB]
 ---
