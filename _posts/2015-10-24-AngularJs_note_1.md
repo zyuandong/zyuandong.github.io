@@ -1,5 +1,5 @@
 ---
-title: angular.js学习笔记<1>
+title: angular.js学习笔记（一）
 category: angular.js
 tags: [javascript, angular.js]
 ---
