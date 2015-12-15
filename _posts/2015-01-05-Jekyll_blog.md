@@ -2,7 +2,6 @@
 title: 搭建Jekyll本地环境
 category: 杂物间
 tag: jekyll
-monthLast: true
 ---
 
 1. 安装[RubyInstaller](http://rubyinstaller.org/downloads/)
