@@ -2,7 +2,6 @@
 title: 详解media query媒体查询
 category: web
 tags: [CSS, media query]
-monthLast: true
 ---
 
 ## viewport
