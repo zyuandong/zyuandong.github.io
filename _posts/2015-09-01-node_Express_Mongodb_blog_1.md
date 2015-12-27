@@ -14,7 +14,7 @@ tags: [node.js, Express, mongoDB]
 
 ## 二、功能模块分析与设计
 
-将开发一个简单的多人博客系统，默认称之为`LouBlog`，当然你也可以为其任意命名。
+将开发一个简单的多人博客系统，默认称之为`LouBlog`。
 
 博客的功能比较简单，总结 LouBlog 的基本功能如下：
 
@@ -22,7 +22,7 @@ tags: [node.js, Express, mongoDB]
 2. 文章管理：具备添加、删除、编辑以及查询的功能。
 3. 附加功能：附加功能作为整个项目的完善部分。
 
-下面将对这些功能模块进行一一分析。
+下面对这些功能模块进行一一分析。
 
 ### 3.1 用户管理
 
@@ -54,7 +54,7 @@ tags: [node.js, Express, mongoDB]
 
 ## 四、搭建开发环境
 
-LouBlog 使用 nodeJS 搭建后台，使用最受欢迎的 web 框架 Express 快速搭建。
+LouBlog 使用 nodeJS 搭建后台，使用最受欢迎的。
 
 nodeJS 是基于 Chrome JavaScript 运行时建立的平台，用于方便地搭建响应速度快、易于扩展的网络应用。nodeJS 使用事件驱动，非阻塞 I/O 模型而得以轻量和高效。
 
@@ -72,7 +72,7 @@ Express 是一个基于 nodeJS 平台的极简、灵活的 web 应用开发框�
 
 `sudo npm install -g cnpm --registry=https://registry.npm.taobao.org`
 
-#### 注意：若执行了此条命令，那之后的npm都改为cnpm，所有的安装才会通过修改后的下载源进行下载安装。这一条希望大家牢记
+#### 注意：若执行了此条命令，那之后的npm都改为cnpm。
 
 升级所需的模块 n，虽然这个模块的名字很短，但它是专门用来管理nodeJS版本的。首先我们需要安装 n 模块：
 
@@ -92,7 +92,7 @@ Express 是一个基于 nodeJS 平台的极简、灵活的 web 应用开发框�
 
 #### 4.2.1 安装 Express
 
-在 Express v3.x 之前，还内置许多中间件，但在 v4.x 后，除了 static 都被分离为单独的模块，这也是许多初学者，面对的最大的问题，因为现在许多网上的文章还停留在 v3.x。
+在 Express v3.x 之前，还内置许多中间件，但在 v4.x 后，除了 static 都被分离为单独的模块。
 
 详情可以访问 [Express中文网](http://www.expressjs.com.cn/)。
 
@@ -104,7 +104,7 @@ v4.x 后还需要安装Express命令行工具：
 
 `sudo cnpm install -g express-generator`
 
-这样，才可以使用 express 命令，这也是 Express 升级为 v4.x 后出现的一个本不该是问题的问题。
+这样，才可以使用 express 命令。
 
 #### 4.2.2 使用 Express
 
@@ -151,10 +151,6 @@ v4.x 后还需要安装Express命令行工具：
 
 + package.json:  文件中有项目的基本信息，包括项目名、版本号、开放权限、启动命令等；以及项目的模块依赖信息，当运行 `npm install` 时, npm 就会此文件，并根据 dependencies 对象中的属性安装模块。
 
-简单了解了 Express 为我们生成的框架，有没有感受得到 Express 的强大呢，帮我做好了很多建站的基本工作，大大提高了效率。
-
-#### 注意：希望大家能多多学习生成的文件内容，尤其是 app.js 、routes/index.js 、bin/www 这几个文件，结合 Express 官网学习；主动学习很重要、官方文档很重要、实践很重要。
-
 接下来我们做一点点修改，方便我们启动项目服务，进入项目根目录，并安装项目的依赖模块：
 
 `cd LouBlog`
@@ -169,8 +165,6 @@ v4.x 后还需要安装Express命令行工具：
 `node app.js`
 
 启动项目，通过浏览器访问 `localhost:3000`，即可看到结果
-
-![此处输入图片的描述](https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441699640190.png/wm)
 
 ### 4.3 熟悉Express框架
 
@@ -226,8 +220,6 @@ router.get('/login', function(req, res, next) {
 ![正确显示](https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441704219657.png/wm)
 
 还记得之前简单讲解过 Express 生成的模板框架吗，routes 中存放路由文件，views 中存放视图文件，这就相当于 MVC 模式中的 C 和 V，而 index.ejs 文件中的 `<%= title %>` 是 ejs 模板引擎的语句，意思是将后台传递来的 title 数据在页面中显示出来。
-
-现在你应该大致了解了 Express 的路由工作原理，但在刚在的操作中，我们发现每次修改后台代码时，想要浏览修改结果，就需要先重启服务。这无疑增加了开发的负担。
 
 使用 supervisor 模块可以很好的解决这个问题，每当我们保存文件后，此模块便会自动重启服务，提高了开发效率。
 

@@ -6,9 +6,9 @@ tags: [node.js, Express, mongoDB]
 
 # 实现博客前后端数据传递
 
-## 一、课程介绍
+## 一、简介
 
-这节课程主要为两个部分，一是讲解 ejs 模板引擎的；二是修改上一节简单设计的每个路由规则的回调函数，并通过模拟数据跑通前后端，实现其逻辑功能。
+这节为两个部分，一是讲解 ejs 模板引擎的；二是修改上一节简单设计的每个路由规则的回调函数，并通过模拟数据跑通前后端，实现其逻辑功能。
 
 ## 二、前端模板引擎
 
@@ -18,11 +18,11 @@ tags: [node.js, Express, mongoDB]
 
 ### 2.2 什么是ejs
 
-大家是否还记得上一节，我们使用 Express 生产项目框架的命令，
+上一节，我们使用 Express 生产项目框架的命令，
 
 `express -e LouBlog`
 
-看过 Express API 的同学可能比较清楚，这里的 -e 正是指定 ejs 作为我们的模板引擎，而默认的模板引擎是 jade 。
+这里的 -e 正是指定 ejs 作为我们的模板引擎，而默认的模板引擎是 jade 。
 
 那为何要选择 ejs ，不选 jade？很大的一个原因是因为 ejs 的语法更符合前端开发者的习惯，项目的目的是为了能让大家学会这一套开发流程，而不仅仅是一个模板引擎；反观 jade ，很多初学者都很难马上适应这中语法，更符合后台开发者的习惯，特别是对缩进的严格要求，使得大家感觉与 Python 很像。
 
@@ -150,14 +150,14 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 + 使用CDN加速服务：bootstrap 中文网提供了免费的 CDN 加速服务，复制以下代码，即可使用：
 
 ```
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 ```
 
-建议你使用 bower 安装 bootstrap，在 public/ 下执行 `bower install bootstrap jquery` ，便可以通过路径引入相关文件
+建议使用 bower 安装 bootstrap，在 public/ 下执行 `bower install bootstrap jquery` ，便可以通过路径引入相关文件
 
 ### 3.1.2 使用 bootstrap
 
@@ -209,7 +209,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 这段代码中就是使用 bootstrap 的一个简单例子，也只用到了导航条组件，除此之外，我们开发博客系统还可能用到表单样式，栅格系统等，同学们可选择合适的组件，当然也可以使用其他前端框架，比如 AmazeUI 等，开发自己的博客系统。
 
-另外需要提出的一点是，在上面的导航条中，同时出现了“登录”和“用户信息”等逻辑上不该同时出现的按钮。这就需要通过 session 机制来判断用户的登录状态，并返回应该显示在页面中的按钮选项。这将在下一节，添加 mongoDB 后做详细的讲解。
+另外需要提出的一点是，在上面的导航条中，同时出现了“登录”和“用户信息”等逻辑上不该同时出现的按钮。这就需要通过 session 机制来判断用户的登录状态，并返回应该显示在页面中的按钮选项。
 
 ### 3.2 自己搭建页面样式
 
