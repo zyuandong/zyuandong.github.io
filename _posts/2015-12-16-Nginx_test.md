@@ -2,7 +2,6 @@
 title: Nginx牛刀小试
 category: web
 tags: [web, Nginx]
-monthLast: true
 ---
 
 `/etc/nginx/sites-enabled` 下的配置文件
