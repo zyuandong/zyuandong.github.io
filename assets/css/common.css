@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   word-wrap: break-word;
   overflow: hidden;
-  font-family: "Microsoft YaHei", Consolas, KaiTi, monospace;
+  font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
 /* a标签 */
 a {
