@@ -104,3 +104,18 @@ SideBarEnhancements是一款很实用的右键菜单增强插件在安装该插�
 Ctrl + Shift + p 调用控制命令面板
 
 Ctrl + ~ 调出控制台
+
+## 显示空格或制表符
+
+Preference -> Setting-User 添加
+
+`"draw_white_space": "all",`
+
+## 制表符以4个空格替换tab
+
+Preference -> Setting-User 添加
+
+```
+"tab_size": 4,
+"translate_tabs_to_spaces": true,
+```
