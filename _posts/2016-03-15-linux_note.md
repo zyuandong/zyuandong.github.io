@@ -43,3 +43,5 @@ tag: Linux
 [参考三](http://zhidao.baidu.com/link?url=jw9jw0Rnh3IaSbu4S8n-cNL4tK1CZJYpHyuGrPIhV3irQ3TdAe4pkfcVNilUpVlnZeMgC-EFZsWsxo0niJmZ3_)
 
 安装 zsh 
+
+安装 Tmux
