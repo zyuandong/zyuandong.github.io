@@ -27,16 +27,18 @@ tags: [javascript, 闭包]
 ## 嵌套函数的闭包
 
 ```
+<script>
 function aaa() {  
-	var a = 1;  
-	return function(){
-		alert(a++)
-	};  
+    var a = 1;  
+    return function() {
+        alert(a++)
+    };
 }         
 var fun = aaa();  
-fun();// 1 执行后 a++，，然后a还在~  
-fun();// 2   
-fun = null;//a被回收！！
+fun();  // 1 执行后 a++，，然后a还在~  
+fun();  // 2   
+fun = null; //a被回收！！
+</script>
 ```
 
 闭包会使变量始终保存在内存中，如果不当使用会增大内存消耗。
@@ -63,12 +65,12 @@ fun = null;//a被回收！！
 ```
 <script>
 var a = 1;
-function abc(){
-        a++;
-        alert(a);
+function abc() {
+    a++;
+    alert(a);
 }
-abc();              //2
-abc();            //3
+abc();  //2
+abc();  //3
 </script>
 ```
 
@@ -77,13 +79,13 @@ abc();            //3
 ```
 <script>
 
-function abc(){
-        var a = 1;
-        a++;
-        alert(a);
+function abc() {
+    var a = 1;
+    a++;
+    alert(a);
 }
-abc();                       //2
-abc();                    //2
+abc();  //2
+abc();  //2
 </script>
 ```
 
@@ -93,16 +95,16 @@ abc();                    //2
 
 ```
 <script>
-function outer(){
-        var x=10;
-        return function(){             //函数嵌套函数
-                x++;
-                alert(x);
-        }
+function outer() {
+    var x=10;
+    return function() {  //函数嵌套函数
+        x++;
+        alert(x);
+    }
 }
-var y = outer();              //外部函数赋给变量y;
-y();                 //y函数调用一次，结果为11，相当于outer()()；
-y();                //y函数调用第二次，结果为12，实现了累加
+var y = outer();    //外部函数赋给变量y;
+y();    //y函数调用一次，结果为11，相当于outer()()；
+y();    //y函数调用第二次，结果为12，实现了累加
 </script>
 ```
 
@@ -112,8 +114,8 @@ y();                //y函数调用第二次，结果为12，实现了累加
 
 ```
 <script>
-function abc(){
-        alert(123);
+function abc() {
+    alert(123);
 }
 abc();
 </script>
@@ -123,9 +125,9 @@ abc();
 
 ```
 <script>
-(function (){
-        alert(123);
-})();                   //然后通过()直接调用前面的表达式即可，因此函数可以不必写名字；
+(function () {
+    alert(123);
+})();   //然后通过()直接调用前面的表达式即可，因此函数可以不必写名字；
 </script>
 ```
 
@@ -133,15 +135,15 @@ abc();
 
 ```
 <script>
-var abc = (function(){      //abc为外部匿名函数的返回值
-        var a = 1;
-        return function(){
-                a++;
-                alert(a);
-        }
+var abc = (function() {  //abc为外部匿名函数的返回值
+    var a = 1;
+    return function() {
+        a++;
+        alert(a);
+    }
 })();
-abc();    //2 ；调用一次abc函数，其实是调用里面内部函数的返回值    
-abc();    //3
+abc();  //2 ；调用一次abc函数，其实是调用里面内部函数的返回值    
+abc();  //3
 </script>
 ```
 
@@ -149,49 +151,48 @@ abc();    //3
 
 ```
 <script>
-var aaa = (function(){
-        var a = 1;
-        function bbb(){
-                a++;
-                alert(a);
-        }
-        function ccc(){
-                a++;
-                alert(a);
-        }
-        return {
-                b:bbb,             //json结构
-                c:ccc
-        }
+var aaa = (function() {
+    var a = 1;
+    function bbb() {
+        a++;
+        alert(a);
+    }
+    function ccc() {
+        a++;
+        alert(a);
+    }
+    return {
+        b:bbb,  //json结构
+        c:ccc
+    }
 })();
-aaa.b();     //2
-aaa.c()      //3
+aaa.b();    //2
+aaa.c();    //3
 </script>
 ```
 
 ## 六.使用匿名函数实现累加
 
-//使用匿名函数实现局部变量驻留内存中，从而实现累加
+使用匿名函数实现局部变量驻留内存中，从而实现累加
 
 ```
-<script type="text/javascript">
-
- function box(){
-     var age = 100;
-     return function(){          //匿名函数
-          age++;
-          return age;
-     };
-
- } 
+<script>
+function box() {
+    var age = 100;
+    return function() { //匿名函数
+        age++;
+        return age;
+    };
+} 
 var b = box();
 alert(b());
 alert(b());    //即alert(box()())；
 alert(b());
-alert(b);            //     function () {
-                        //   age++;
-                       // return age;
-                      //       }
+alert(b);            
+//function () {
+//  age++;
+//  return age;
+//}
 
 b = null；  //解除引用，等待垃圾回收
 </script>
@@ -202,67 +203,63 @@ b = null；  //解除引用，等待垃圾回收
 ## 七、在循环中直接找到对应元素的索引
 
 ```
-   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-    <head>
-            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-            <title></title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
     <script>
-    window.onload = function(){
-            var aLi = document.getElementsByTagName('li');
-            for (var i=0;i<aLi.length;i++){
-                    aLi[i].onclick = function(){        //当点击时for循环已经结束
-                    alert(i);
-                    };
-            }
+    window.onload = function() {
+        var aLi = document.getElementsByTagName('li');
+        for (var i=0;i<aLi.length;i++) {
+            aLi[i].onclick = function() {        //当点击时for循环已经结束
+                alert(i);
+            };
+        }
     }
     </script>
-
-    </head>
-    <body>
-            <ul>
-                    <li>123</li>
-                    <li>456</li>
-                    <li>789</li>
-                    <li>010</li>
-            </ul>
-    </body>
-    </html>
+</head>
+<body>
+    <ul>
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+        <li>010</li>
+    </ul>
+</body>
+</html>
 ```
 
 ## 八、使用闭包改写上面代码
 
 ```
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-    <head>
-            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-            <title></title>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
     <script>
-    window.onload = function(){
-            var aLi = document.getElementsByTagName('li');
-            for (var i=0;i<aLi.length;i++){
-                    (function(i){
-                            aLi[i].onclick = function(){
-                                    alert(i);
-                            };
-                    })(i);
-            }
-            };
+    window.onload = function() {
+        var aLi = document.getElementsByTagName('li');
+        for (var i=0;i<aLi.length;i++) {
+            (function(i){
+                aLi[i].onclick = function() {
+                    alert(i);
+                };
+            })(i);
+        }
+    };
     </script>
-
-    </head>
-    <body>
-            <ul>
-                    <li>123</li>
-                    <li>456</li>
-                    <li>789</li>
-            </ul>
-    </body>
-    </html>
+</head>
+<body>
+    <ul>
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+    </ul>
+</body>
+</html>
 ```
 
 ## 九.内存泄露问题
@@ -270,18 +267,21 @@ b = null；  //解除引用，等待垃圾回收
 由于IE的js对象和DOM对象使用不同的垃圾收集方法，因此闭包在IE中会导致内存泄露问题，也就是无法销毁驻留在内存中的元素
 
 ```
-function closure(){
-    var oDiv = document.getElementById('oDiv');//oDiv用完之后一直驻留在内存中
+<script>
+function closure() {
+    var oDiv = document.getElementById('oDiv'); //oDiv用完之后一直驻留在内存中
     oDiv.onclick = function () {
-        alert('oDiv.innerHTML');//这里用oDiv导致内存泄露
+        alert('oDiv.innerHTML');    //这里用oDiv导致内存泄露
     };
 }
 closure();
+</script>
 ```
 
 //最后应将oDiv解除引用来避免内存泄露
 
 ```
+<script>
 function closure(){
     var oDiv = document.getElementById('oDiv');
     var test = oDiv.innerHTML;
@@ -290,6 +290,7 @@ function closure(){
     };
     oDiv = null;
 }
+</script>
 ```
 
 扩展阅读： [JavaScript学习总结（四）function函数部分](http://segmentfault.com/a/1190000000660786)
