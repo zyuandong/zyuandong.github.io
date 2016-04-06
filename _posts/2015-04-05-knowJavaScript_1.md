@@ -12,8 +12,8 @@ tag: javascript
 
 ~~~
 for(var i in obj) {
-	// i 为属性名
-	// obj[i] 为具体的值
+    // i 为属性名
+    // obj[i] 为具体的值
 }
 ~~~
 
@@ -23,8 +23,8 @@ for(var i in obj) {
 
 ~~~
 for(var i in array) {
-	// i 为数组下标
-	// array[i] 为具体的值
+    // i 为数组下标
+    // array[i] 为具体的值
 }
 ~~~
 

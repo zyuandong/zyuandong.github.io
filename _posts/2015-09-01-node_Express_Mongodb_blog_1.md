@@ -118,21 +118,21 @@ v4.x 后还需要安装Express命令行工具：
 
 ```
 |-- LouBlog
-	|-- public
-		|-- javascripts
-		|-- images
-		`-- stylesheets
-			`-- style.css
-	|-- routes
-		|-- index.js
-		`-- users.js
-	|-- views
-		|-- index.ejs
-		`-- error.ejs
-	|-- bin
-		`-- www
-	|-- app.js
-	`-- package.json
+    |-- public
+        |-- javascripts
+        |-- images
+        `-- stylesheets
+            `-- style.css
+    |-- routes
+        |-- index.js
+        `-- users.js
+    |-- views
+        |-- index.ejs
+        `-- error.ejs
+    |-- bin
+        `-- www
+    |-- app.js
+    `-- package.json
 ```
 
 简单了解一下 Express 都为我们准备好了什么：
@@ -207,7 +207,7 @@ router.get('/', functoin(req, res) {
 
 ```
 router.get('/login', function(req, res, next) {
-	res.render('login', {title: 'login'});
+    res.render('login', {title: 'login'});
 });
 ```
 
