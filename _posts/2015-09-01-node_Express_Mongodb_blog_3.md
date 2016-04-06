@@ -75,13 +75,13 @@ var Schema = mongoose.Schema;
 
 ```
 var userSchema = new Schema({
-	username: String,
-	password: String,
-	email: String,
-	createTime: {
-		type: Date,
-		default: Date.now
-	}
+    username: String,
+    password: String,
+    email: String,
+    createTime: {
+        type: Date,
+        default: Date.now
+    }
 });
 ```
 
@@ -97,14 +97,14 @@ exports.User = mongoose.model('User', userSchema);
 
 ```
 var articleSchema = new Schema({
-	title: String,
-	author: String,
-	tag: String,
-	content: String,
-	createTime: {
-		type: Date,
-		default: Date.now
-	}
+    title: String,
+    author: String,
+    tag: String,
+    content: String,
+    createTime: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 //发布为 model 
@@ -132,52 +132,52 @@ var User = model.User;
 
 router.post('/reg', function(req, res, next) {
     //req.body 处理 post 请求
-	var username = req.body.username,
-		password = req.body.password,
-		passwordRepeat = req.body.passwordRepeat;
-
-	//检查两次输入的密码是否一致
-	if(password != passwordRepeat) {
-		console.log('两次输入的密码不一致！');
-		return res.redirect('/reg');
-	}
-
-	//检查用户名是否已经存在
-	//mongoose findOne() 方法
-	User.findOne({username:username}, function(err, user) {
-		if(err) {
-			console.log(err);
-			return res.redirect('/reg');
-		}
-
-		if(user) {
-			console.log('用户名已经存在');
-			return res.redirect('/reg');
-		}
-
-		//对密码进行md5加密
-		var md5 = crypto.createHash('md5'),
-			md5password = md5.update(password).digest('hex');
-
-		var newUser = new User({
-			username: username,
-			password: md5password,
-			email: req.body.email
-		});
-
+    var username = req.body.username,
+    password = req.body.password,
+    passwordRepeat = req.body.passwordRepeat;
+    
+    //检查两次输入的密码是否一致
+    if(password != passwordRepeat) {
+        console.log('两次输入的密码不一致！');
+        return res.redirect('/reg');
+    }
+    
+    //检查用户名是否已经存在
+    //mongoose findOne() 方法
+    User.findOne({username:username}, function(err, user) {
+        if(err) {
+            console.log(err);
+            return res.redirect('/reg');
+        }
+    
+        if(user) {
+            console.log('用户名已经存在');
+            return res.redirect('/reg');
+        }
+    
+        //对密码进行md5加密
+        var md5 = crypto.createHash('md5'),
+        md5password = md5.update(password).digest('hex');
+        
+        var newUser = new User({
+            username: username,
+            password: md5password,
+            email: req.body.email
+        });
+    
         //mongoose save()方法
-		newUser.save(function(err, doc) {
-			if(err) {
-				console.log(err);
-				return res.redirect('/reg');
-			}
-			console.log('注册成功！');
-			newUser.password = null;
-			delete newUser.password;
-			req.session.user = newUser;
-			return res.redirect('/');
-		});
-	});
+        newUser.save(function(err, doc) {
+            if(err) {
+                console.log(err);
+                return res.redirect('/reg');
+            }
+            console.log('注册成功！');
+            newUser.password = null;
+            delete newUser.password;
+            req.session.user = newUser;
+            return res.redirect('/');
+        });
+    });
 });
 ```
 这样便实现了注册功能，需要注意 `req.body` 处理 post 请求的参数，建立 User 模型对象实体操作数据库，其实有 JavaScript 基础的同学应该很熟悉这样的写法。
@@ -188,22 +188,22 @@ router.post('/reg', function(req, res, next) {
 var Article = model.Article;
 
 router.post('/post', function(req, res, next) {
-	var data = new Article({
-		title: req.body.title,
-		//这里的 author 元素通过 session 获得，后面会详细讲解
-		author: req.session.user.username,
-		tag: req.body.tag,
-		content: req.body.content
-	});
-
-	data.save(function(err, doc) {
-		if(err) {
-			req.flash('error', err);
-			return res.redirect('/post');
-		}
-		console.log('文章发表成功！');
-		return res.redirect('/');
-	});
+    var data = new Article({
+        title: req.body.title,
+        //这里的 author 元素通过 session 获得，后面会详细讲解
+        author: req.session.user.username,
+        tag: req.body.tag,
+        content: req.body.content
+    });
+    
+    data.save(function(err, doc) {
+        if(err) {
+            req.flash('error', err);
+            return res.redirect('/post');
+        }
+        console.log('文章发表成功！');
+        return res.redirect('/');
+    });
 });
 ```
 
@@ -218,14 +218,14 @@ router.post('/post', function(req, res, next) {
 router.get('/remove/:_id', function(req, res, next) {
 
     //req.params 处理 /:xxx 形式的 get 或 post 请求，获取请求参数
-	Article.remove({_id: req.params._id}, function(err) {
-		if(err) {
-			console.log(err);
-		} else {
-			console.log('文章删除成功！');
-		}
-		return res.redirect('back');
-	})
+    Article.remove({_id: req.params._id}, function(err) {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log('文章删除成功！');
+        }
+        return res.redirect('back');
+    })
 });
 ```
 
@@ -235,34 +235,34 @@ router.get('/remove/:_id', function(req, res, next) {
 
 ```
 router.get('/edit/:_id', function(req, res, next) {
-	Article.findOne({_id: req.params._id}, function(err, art) {
-		if(err) {
-			console.log(err);
-			return res.redirect('back');
-		}
-		res.render('edit', {
-			title: '编辑',
-			// code ....
-			art: art
-		});
-	});
+    Article.findOne({_id: req.params._id}, function(err, art) {
+        if(err) {
+            console.log(err);
+            return res.redirect('back');
+        }
+        res.render('edit', {
+            title: '编辑',
+            // code ....
+            art: art
+        });
+    });
 });
 
 router.post('/edit/:_id', function(req, res, next) {
     //mongoose 的 update() 方法用过检索参数并返回修改结果
-	Article.update({_id: req.params._id},{
-		title: req.body.title,
-		tag: req.body.tag,
-		content: req.body.content,
-		createTime: Date.now()
-	}, function(err, art) {
-		if(err) {
-			console.log(err);
-			return res.redirect('back');
-		}
-		console.log('文章编辑成功！');
-		return res.redirect('/u/' + req.session.user.username);
-	});
+    Article.update({_id: req.params._id},{
+        title: req.body.title,
+        tag: req.body.tag,
+        content: req.body.content,
+        createTime: Date.now()
+    }, function(err, art) {
+        if(err) {
+            console.log(err);
+            return res.redirect('back');
+        }
+        console.log('文章编辑成功！');
+        return res.redirect('/u/' + req.session.user.username);
+    });
 });
 ```
 
@@ -273,21 +273,21 @@ router.post('/edit/:_id', function(req, res, next) {
 ```
 router.get('/search', function(req, res, next) {
     //req.query 获取 get 请求的参数，并构造为正则对象
-	var query = req.query.title,
-		title = new RegExp(query, 'i');
-	Article
-	.find({title: title})
-	.sort('-createTime')
-	.exec(function(err, arts) {
-		if(err) {
-			console.loh(err);
-			return res.redirect('/');
-		}
-		res.render('search', { 
-			title: '查询结果',
-			arts: arts
-		});
-	});
+    var query = req.query.title,
+    title = new RegExp(query, 'i');
+    Article
+    .find({title: title})
+    .sort('-createTime')
+    .exec(function(err, arts) {
+        if(err) {
+            console.loh(err);
+            return res.redirect('/');
+        }
+        res.render('search', { 
+            title: '查询结果',
+            arts: arts
+        });
+    });
 });
 ```
 
@@ -317,15 +317,15 @@ var MongoStore = require('connect-mongo')(session);
 
 //这里设置 session 参数，并确保以下代码在 `app.use('/', routes)` 前引入
 app.use(session({
-  key: 'session',
-  secret: 'keboard cat',
-  cookie: {maxAge: 1000 * 60 * 60 * 24},//1day
-  store: new MongoStore({
-    db: 'datas',
-    mongooseConnection: mongoose.connection
-  }),
-  resave: false,
-  saveUninitialized: true
+    key: 'session',
+    secret: 'keboard cat',
+    cookie: {maxAge: 1000 * 60 * 60 * 24},//1day
+    store: new MongoStore({
+        db: 'datas',
+        mongooseConnection: mongoose.connection
+    }),
+    resave: false,
+    saveUninitialized: true
 }));
 ```
 
@@ -339,7 +339,7 @@ app.use(session({
 
 ```
 router.post('/post', function(req, res, next) {
-    var data = new Article({
+	var data = new Article({
         title: req.body.title,
         //这里的 author 元素通过 session 获得
         author: req.session.user.username,
@@ -364,50 +364,49 @@ session 另一个很大的作用就是判断用户登录状态并控制页面的
 
 ```
 <nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        		<span class="sr-only">Toggle navigation</span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-    		</button>
-    		<a class="navbar-brand" href="/">实验楼</a>
-		</div>
-
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<% if(user) { %>
-				<ul class="nav navbar-nav navbar-left">
-					<li><a href="/post">发表</a></li>
-				</ul>
-			<% } %>
-			<ul class="nav navbar-nav navbar-right">
-				<% if(user) { %>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<%= user.username %>
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="/u/<%= user.username %>">账户信息</a></li>
-							<li><a href="/logout">退出登录</a></li>
-						</ul>
-					</li>
-				<% } else { %>
-					<ul class="nav navbar-nav">
-						<li><a href="/login">登录</a></li>
-						<li><a href="/reg">注册</a></li>
-					</ul>
-				<% } %>
-			</ul>
-			<form class="navbar-form navbar-right" role="search" action='/search' method="get">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search" name="title">
-				</div>
-				<button type="submit" class="btn btn-default">搜索</button>
-			</form>
-		</div>
-	</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">实验楼</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <% if(user) { %>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/post">发表</a></li>
+            </ul>
+            <% } %>
+            <ul class="nav navbar-nav navbar-right">
+                <% if(user) { %>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <%= user.username %>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/u/<%= user.username %>">账户信息</a></li>
+                        <li><a href="/logout">退出登录</a></li>
+                    </ul>
+                </li>
+                <% } else { %>
+                <ul class="nav navbar-nav">
+                    <li><a href="/login">登录</a></li>
+                    <li><a href="/reg">注册</a></li>
+                </ul>
+                <% } %>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" action='/search' method="get">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="title">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
 </nav>
 ```
 
@@ -415,8 +414,8 @@ session 另一个很大的作用就是判断用户登录状态并控制页面的
 
 ```
 res.render('index', { 
-	title: '主页',
-	user: req.session.user
-	// code ....
+    title: '主页',
+    user: req.session.user
+    // code ....
 });
 ```

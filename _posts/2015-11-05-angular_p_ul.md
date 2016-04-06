@@ -14,6 +14,6 @@ tags: [angular.js, w3c规范]
 
 ```
 <p>
-	<ul></ul>
+    <ul></ul>
 </p>
 ```

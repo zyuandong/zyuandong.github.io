@@ -6,9 +6,9 @@ tags: [node.js, javascript]
 
 ```
 var formidable = require('formidable'),
-	fs = require('fs'),
-	AVATAR_UPLOAD_FOLDER = '/avatar/',
-	fn;
+    fs = require('fs'),
+    AVATAR_UPLOAD_FOLDER = '/avatar/',
+    fn;
 
 router.post('/uploadImg', function(req, res, next) {
     //创建上传表单
@@ -26,7 +26,7 @@ router.post('/uploadImg', function(req, res, next) {
     
         if (err) {
             console.log(err);
-			req.flash('error', err);
+            req.flash('error', err);
             return res.redirect('/uploadImg');
         }
         
@@ -37,28 +37,28 @@ router.post('/uploadImg', function(req, res, next) {
                 break;
             case 'image/jpeg':
                 extName = 'jpg';
-                break;		 
+                break;
             case 'image/png':
                 extName = 'png';
                 break;
             case 'image/x-png':
                 extName = 'png';
-                break;		 
+                break;
         }
     
         if(extName.length == 0){
             console.log('只支持png和jpg格式图片');
-			req.flash('error', '只支持png和jpg格式图片');
-            return res.redirect('/uploadImg');				   
+            req.flash('error', '只支持png和jpg格式图片');
+            return res.redirect('/uploadImg');
         }
 
         var avatarName = Math.random() + '.' + extName;
-		var newPath = form.uploadDir + avatarName;
+        var newPath = form.uploadDir + avatarName;
         fs.renameSync(files.img.path, newPath);  //重命名
 
-		console.log('上传成功');
-		req.flash('success', '上传成功');
-		res.redirect('/uploadImg');
+        console.log('上传成功');
+        req.flash('success', '上传成功');
+        res.redirect('/uploadImg');
     });
 })
 ```

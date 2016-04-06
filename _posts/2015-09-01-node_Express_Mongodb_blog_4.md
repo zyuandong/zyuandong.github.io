@@ -67,37 +67,37 @@ app.use(flash());
 var page = 1;
 var pageSize = 5;
 router.get('/', function(req, res, next) {
-	page = req.query.page ? parseInt(req.query.page) : 1;
-	Article
-	.count(function(err, total) {
-		Article
-		.find()
-		//skip 跳过指定的页数
-		.skip((page - 1) * pageSize)
-		//限制读取 pageSize 条数据
-		.limit(pageSize)
-		//以 createTime 倒序排序
-		.sort('-createTime')
-		//执行回调方法
-		.exec(function(err, arts) {
-			if(err) {
-				req.flash('error',err);
-				return res.redirect('/');
-			}
-			res.render('index', { 
-				title: '主页',
-				user: req.session.user,
-				success: req.flash('success').toString(),
-				error: req.flash('error').toString(),
-				total: total,
-				page: page,
-				pageSize: pageSize,
-				isFirstPage: (page - 1) == 0,
-				isLastPage: ((page - 1) * pageSize + arts.length) == total,
-				arts: arts
-			});
-		});
-	});
+    page = req.query.page ? parseInt(req.query.page) : 1;
+    Article
+    .count(function(err, total) {
+        Article
+        .find()
+        //skip 跳过指定的页数
+        .skip((page - 1) * pageSize)
+        //限制读取 pageSize 条数据
+        .limit(pageSize)
+        //以 createTime 倒序排序
+        .sort('-createTime')
+        //执行回调方法
+        .exec(function(err, arts) {
+            if(err) {
+                req.flash('error',err);
+                return res.redirect('/');
+            }
+            res.render('index', { 
+                title: '主页',
+                user: req.session.user,
+                success: req.flash('success').toString(),
+                error: req.flash('error').toString(),
+                total: total,
+                page: page,
+                pageSize: pageSize,
+                isFirstPage: (page - 1) == 0,
+                isLastPage: ((page - 1) * pageSize + arts.length) == total,
+                arts: arts
+            });
+        });
+    });
 });
 ```
 

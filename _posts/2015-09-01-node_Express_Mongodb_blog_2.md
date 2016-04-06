@@ -64,23 +64,24 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 ```
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title><%= title %></title>
-		<link rel="stylesheet" href="/stylesheets/style.css">
-		<body>
-		<nav>
-			<ul>
-				<li><a href="#">register</a></li>
-				<li><a href="#">login</a></li>
-				<li><a href="#">post</a></li>
-				<li><a href="#">logout</a></li>
-			</ul>
-		</nav>
-		<div id="container">
-		    <%= title %>
-		</div>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">register</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">post</a></li>
+            <li><a href="#">logout</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <%= title %>
+    </div>
+</body>
 </html>
 ```
 
@@ -93,27 +94,28 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 ```
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title><%= title %></title>
-		<link rel="stylesheet" href="/stylesheets/style.css">
-		<body>
-		<nav>
-			<ul>
-				<li><a href="#">register</a></li>
-				<li><a href="#">login</a></li>
-				<li><a href="#">post</a></li>
-				<li><a href="#">logout</a></li>
-			</ul>
-		</nav>
-		<div id="container">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">register</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">post</a></li>
+            <li><a href="#">logout</a></li>
+        </ul>
+    </nav>
+    <div id="container">
 ```
 
 `views/footer.ejs` 文件：
 
 ```
-        </div>
-    </body>
+	</div>
+</body>
 </html>
 ```
 
@@ -165,45 +167,44 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 ```
 <nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		    </button>
-		    <a class="navbar-brand" href="/">LouBlog</a>
-		</div>
-
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-left">
-				<li><a href="/post">post</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-							username
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">about</a></li>
-						<li><a href="/logout">logout</a></li>
-					</ul>
-				</li>
-				<ul class="nav navbar-nav">
-					<li><a href="/login">login</a></li>
-					<li><a href="/reg">register</a></li>
-				</ul>
-			</ul>
-			<form class="navbar-form navbar-right" role="search" action='/search' method="get">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search" name="title">
-				</div>
-				<button type="submit" class="btn btn-default">search</button>
-			</form>
-		</div>
-	</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LouBlog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/post">post</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        username
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">about</a></li>
+                        <li><a href="/logout">logout</a></li>
+                    </ul>
+                </li>
+                <ul class="nav navbar-nav">
+                    <li><a href="/login">login</a></li>
+                    <li><a href="/reg">register</a></li>
+                </ul>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" action='/search' method="get">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="title">
+                </div>
+                <button type="submit" class="btn btn-default">search</button>
+            </form>
+        </div>
+    </div>
 </nav>
 ```
 
@@ -247,7 +248,7 @@ form 表单，和发表页面一致，需要自动填写原有的数据，方便
 
 ```
 router.get('/', function(req, res, next) {
-	res.render('index', {title: '主页'});
+    res.render('index', {title: '主页'});
 });
 ```
 
@@ -255,27 +256,27 @@ router.get('/', function(req, res, next) {
 
 ```
 router.get('/', function(req, res, next) {
-	res.render('index', {
-	    title: '主页',
-	    arts: [{
-	        title: 'nodeJS入门',
-	        tags: 'nodeJS',
-	        author: '...',
-	        createTime: '',
-	        content: '...'
-	    },{
-	        title: 'nodeJS入门',
-	        tags: 'nodeJS',
-	        author: '...',
-	        createTime: '',
-	        content: '...'
-	    },{
-	        title: 'nodeJS入门',
-	        tags: 'nodeJS',
-	        author: '...',
-	        createTime: '',
-	        content: '...'
-	    }]
+    res.render('index', {
+        title: '主页',
+        arts: [{
+            title: 'nodeJS入门',
+            tags: 'nodeJS',
+            author: '...',
+            createTime: '',
+            content: '...'
+        },{
+            title: 'nodeJS入门',
+            tags: 'nodeJS',
+            author: '...',
+            createTime: '',
+            content: '...'
+        },{
+            title: 'nodeJS入门',
+            tags: 'nodeJS',
+            author: '...',
+            createTime: '',
+            content: '...'
+        }]
     });
 });
 ```
@@ -284,11 +285,11 @@ router.get('/', function(req, res, next) {
 
 ```
 <% arts.forEach(function(art) { %>
-	<%= art.title %>
-	<%= art.tags %>
-	<%= art.author %>
-	<%= art.createTime %>
-	<%= art.content %>
+    <%= art.title %>
+    <%= art.tags %>
+    <%= art.author %>
+    <%= art.createTime %>
+    <%= art.content %>
 <% }) %>
 ```
 

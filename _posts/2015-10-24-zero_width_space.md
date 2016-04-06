@@ -11,6 +11,6 @@ monthLast: true
 
 ~~~
 function alert(a, b) {
-	return console.log(a + b);
+    return console.log(a + b);
 }
 ~~~
