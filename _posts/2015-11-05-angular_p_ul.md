@@ -1,7 +1,7 @@
 ---
-title: angular.js开发中的语义化插曲
+title: 开发中的语义化插曲
 category: angular.js
-tags: [angular.js, w3c规范]
+tags: w3c规范
 ---
 
 ```
