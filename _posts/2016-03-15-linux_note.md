@@ -2,6 +2,7 @@
 title: 小白上手 Linux
 category: 杂物间
 tag: Linux
+monthLast: true
 ---
 
 ## 使用 Xshell 连接
