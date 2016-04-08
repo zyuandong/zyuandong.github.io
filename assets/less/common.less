@@ -234,7 +234,6 @@ strong {
 	width: 300px;
 	height: 100%;
 	float: left;
-	background-color: rgba(213, 213, 213, 0.3);
 	overflow-y: auto;
 	display: none;
 }
@@ -697,9 +696,7 @@ strong {
 		z-index: 1;
 	}
 
-	.articles-all,
-	.category-all,
-	.tags-all {
+	.page-item {
 		background-color: #f3f3f3;//#ccc
 	}
 
@@ -708,7 +705,7 @@ strong {
 	}
 }
 
-//800px以上给contents-box加一圈边框
+//800px以上给contents-box加一圈边框，突出文章内容
 @media screen and (min-width: 800px) {
 	#contents {
 		background-color: #eee;
@@ -722,6 +719,18 @@ strong {
 		.contents-box.fullscreen {
 			max-width: 800px;
 		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-item {
+		opacity: 0.2;
+		background-color: #f9f9f9;
+	}
+
+	.page-item:hover {
+		opacity: 1;
+		background-color: #f9f9f9;
 	}
 }
 /* media query end */
