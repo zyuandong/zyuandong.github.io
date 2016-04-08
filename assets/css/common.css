@@ -3,9 +3,8 @@ html {
 }
 body {
   height: 100%;
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
-  font-weight: 400;
   word-wrap: break-word;
   overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
@@ -28,14 +27,20 @@ a:visited {
 }
 /* a标签 end */
 /* h1~h6 */
-h1,
+h1 {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #000;
-  font-weight: normal;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  font-weight: 400;
+  background-color: #eee;
+  border-left: 5px solid #ccc;
 }
 /* h1~h6 end */
 /* 代码块 */
@@ -202,12 +207,12 @@ strong {
   list-style: none;
 }
 .ul-style ul li {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .ul-style ul li a {
   display: block;
   width: 100%;
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   box-sizing: border-box;
   padding: 5px 0 5px 5%;
@@ -217,19 +222,19 @@ strong {
 }
 .ul-style ul li a:hover {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .ul-style ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .ul-style ul .date-tip {
   font-size: 14px;
-  color: #c7254e;
+  color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 文章、分类、标签共同样式 end */
@@ -250,12 +255,12 @@ strong {
   list-style: none;
 }
 .articles-all ul li {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .articles-all ul li a {
   display: block;
   width: 100%;
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   box-sizing: border-box;
   padding: 5px 0 5px 5%;
@@ -265,19 +270,19 @@ strong {
 }
 .articles-all ul li a:hover {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .articles-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .articles-all ul .date-tip {
   font-size: 14px;
-  color: #c7254e;
+  color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 文章 end */
@@ -308,16 +313,16 @@ strong {
   border-radius: 15px;
 }
 .category-all .category-index .category-item.active {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .category-all .category-index .category-item.active .category-size {
-  border-color: #1f3f5f;
+  border-color: rgba(0, 0, 0, 0.6);
 }
 .category-all .category-index .category-item:hover {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .category-all .category-index .category-item:hover .category-size {
-  border-color: #1f3f5f;
+  border-color: rgba(0, 0, 0, 0.6);
 }
 .category-all .category-box {
   overflow-y: auto;
@@ -328,12 +333,12 @@ strong {
   list-style: none;
 }
 .category-all ul li {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .category-all ul li a {
   display: block;
   width: 100%;
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   box-sizing: border-box;
   padding: 5px 0 5px 5%;
@@ -343,19 +348,19 @@ strong {
 }
 .category-all ul li a:hover {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .category-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .category-all ul .date-tip {
   font-size: 14px;
-  color: #c7254e;
+  color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 分类 end */
@@ -383,10 +388,10 @@ strong {
   white-space: nowrap;
 }
 .tags-all .tags-index .tags-item.active {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .tags-all .tags-index .tags-item:hover {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: underline;
 }
 .tags-all .tags-box {
@@ -398,12 +403,12 @@ strong {
   list-style: none;
 }
 .tags-all ul li {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 .tags-all ul li a {
   display: block;
   width: 100%;
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   box-sizing: border-box;
   padding: 5px 0 5px 5%;
@@ -413,19 +418,19 @@ strong {
 }
 .tags-all ul li a:hover {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .tags-all ul li.active a {
   background-color: rgba(217, 217, 217, 0.9);
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
 .tags-all ul .date-tip {
   font-size: 14px;
-  color: #c7254e;
+  color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 标签 end */
@@ -584,7 +589,7 @@ strong {
   white-space: nowrap;
 }
 #index-panel ul li a {
-  color: #1f3f5f;
+  color: rgba(0, 0, 0, 0.6);
 }
 #index-panel ul li a:hover {
   text-decoration: underline;

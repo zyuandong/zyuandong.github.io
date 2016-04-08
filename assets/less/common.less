@@ -1,22 +1,22 @@
 @black: #000;
 @white: #fff;
-@green: #5bc0de;//#4ae8c4 - #009a61
+@blue-free: #5bc0de;//#4ae8c4 - #009a61
+@font-main: rgba(0, 0, 0, 0.6); //#1f3f5f
 
 html {
 	height: 100%;
 }
 body {
 	height: 100%;
-	color: #1f3f5f;
+	color: @font-main;
 	line-height: 1.5;
-	font-weight: 400;
 	word-wrap: break-word;
 	overflow: hidden;
 	font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
 /* a标签 */
 a {
-	color: @green;
+	color: @blue-free;
 	text-decoration: none;
 
 	&:hover,
@@ -36,9 +36,16 @@ a {
 /* a标签 end */
 
 /* h1~h6 */
-h1,h2,h3,h4,h5,h6 {
-	color: #000;
-	font-weight: normal;
+h1 {
+	color: @font-main;
+	font-weight: 400;
+}
+h2,h3,h4,h5,h6 {
+	color: @font-main;
+	padding: 10px;
+	font-weight: 400;
+	background-color: #eee;
+	border-left: 5px solid #ccc;
 }
 /* h1~h6 end */
 
@@ -76,11 +83,11 @@ blockquote {
 
 /* 选中文本 */
 ::selection {
-	background-color: @green;
+	background-color: @blue-free;
 	color: #fff;
 }
 ::-moz-selection {
-	background-color: @green;
+	background-color: @blue-free;
 	color: #fff;
 }
 /* 选中文本 end */
@@ -122,7 +129,7 @@ table {
 	border-collapse: collapse;
 }
 thead {
-	background-color: @green;
+	background-color: @blue-free;
 }
 tbody {
 	background-color: #E7F1EE;
@@ -135,7 +142,7 @@ td {
 tbody {
 
 	tr:hover {
-		background-color: @green;
+		background-color: @blue-free;
 	}
 }
 /* 表格 end */
@@ -244,12 +251,12 @@ strong {
 		list-style: none;
 
 		li {
-			color: #1f3f5f;
+			color: @font-main;
 
 			a {
 				display: block;
 				width: 100%;
-				color: #1f3f5f;
+				color: @font-main;
 				//color: #B5AFAF;
 				text-align: left;
 				box-sizing: border-box;
@@ -261,9 +268,9 @@ strong {
 				&:hover {
 					background-color: rgba(217, 217, 217, 0.9);
 				//	color: #c7254e;
-					color: #1f3f5f;
+					color: @font-main;
 					text-decoration: none;
-					border-left: 5px solid @green;
+					border-left: 5px solid @blue-free;
 				}
 			}
 		}
@@ -273,15 +280,15 @@ strong {
 			a {
 				background-color: rgba(217, 217, 217, 0.9);
 				//color: #c7254e;
-				color: #1f3f5f;
+				color: @font-main;
 				text-decoration: none;
-				border-left: 5px solid @green;
+				border-left: 5px solid @blue-free;
 			}
 		}
 
 		.date-tip {
 			font-size: 14px;
-			color: #c7254e;
+			color: #d14; //#c7254e;
 			font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 		}
 	}
@@ -337,18 +344,18 @@ strong {
 			}
 
 			&.active {
-				color: #1f3f5f;
+				color: @font-main;
 
 				.category-size {
-					border-color: #1f3f5f;
+					border-color: @font-main;
 				}
 			}
 
 			&:hover {
-				color: #1f3f5f;
+				color: @font-main;
 
 				.category-size {
-					border-color: #1f3f5f;
+					border-color: @font-main;
 				}
 			}
 		}
@@ -387,11 +394,11 @@ strong {
 			white-space: nowrap;
 			
 			&.active {
-				color: #1f3f5f;
+				color: @font-main;
 			}
 
 			&:hover {
-				color: #1f3f5f;
+				color: @font-main;
 				text-decoration: underline;
 			}
 		}
@@ -489,7 +496,7 @@ strong {
 #slider {
 	width: 40px;
 	height: 40px;
-	background-color: @green;
+	background-color: @blue-free;
 	cursor: pointer;
 	color: #fff;
 	text-align: center;
@@ -559,7 +566,7 @@ strong {
 	.pin {
 		width: 100%;
 		height: 24px;
-		border-left: 3px solid @green;
+		border-left: 3px solid @blue-free;
 		background-color: rgba(217, 217, 217, 0.9);
 		box-sizing: border-box;
 		position: absolute;
@@ -579,7 +586,7 @@ strong {
 			white-space: nowrap;
 
 			a {
-				color: #1f3f5f;
+				color: @font-main;
 
 				&:hover {
 					text-decoration: underline;
