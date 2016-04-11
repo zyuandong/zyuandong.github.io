@@ -27,9 +27,9 @@ monthLast: true
 
 ```
 document.onreadystatechange = function() {
-	if(document.readyState == 'complete') {
-		// 具体执行的代码部分
-	}
+    if(document.readyState == 'complete') {
+        // 具体执行的代码部分
+    }
 }
 ```
 
