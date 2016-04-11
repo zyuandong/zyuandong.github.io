@@ -628,6 +628,7 @@ tbody tr:hover {
   bottom: 65px;
   border-radius: 50%;
   display: none;
+  z-index: 1;
 }
 /* back2top btn end */
 /* use animation */
