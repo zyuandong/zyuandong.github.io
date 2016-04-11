@@ -50,7 +50,7 @@ tag: markdown
 
 ## 图片
 
-![描述](http://i2.tietuku.com/e7576785ca2d37b1.jpg)
+![描述](http://i2.piimg.com/e7576785ca2d37b1.jpg)
 
 ```
 ![描述](图片url)
