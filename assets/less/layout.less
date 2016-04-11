@@ -11,7 +11,7 @@ body {
 }
 /* a tag */
 a {
-    color: @blue-free;
+    color: @blue;
     text-decoration: none;
 
     &:hover,
@@ -48,6 +48,7 @@ pre {
     
     code {
         border-radius: 5px;
+        border: 1px solid #ddd;
         font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
     }
 }
@@ -57,9 +58,10 @@ pre {
 li,
 p {
     code {
+        color: @red;
         padding: 2px 4px;
-        color: #c7254e;
         background-color: #eee;
+        border: 1px solid #ddd;
         font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
     }
 }
@@ -81,7 +83,7 @@ table {
     border-collapse: collapse;
 }
 thead {
-    background-color: @blue-free;
+    background-color: @blue;
 }
 tbody {
     background-color: #E7F1EE;
@@ -94,24 +96,18 @@ td {
 tbody {
 
     tr:hover {
-        background-color: @blue-free;
+        background-color: @blue;
     }
 }
 /* table end */
 
-/* strong tag */
-strong {
-    color: #c7254e;
-}
-/* strong tag end */
-
 /* selection */
 ::selection {
-    background-color: @blue-free;
+    background-color: @blue;
     color: #fff;
 }
 ::-moz-selection {
-    background-color: @blue-free;
+    background-color: @blue;
     color: #fff;
 }
 /* selection end */

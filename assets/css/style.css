@@ -48,15 +48,17 @@ pre {
 }
 pre code {
   border-radius: 5px;
+  border: 1px solid #ddd;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* code block end */
 /* code */
 li code,
 p code {
+  color: #dd1144;
   padding: 2px 4px;
-  color: #c7254e;
   background-color: #eee;
+  border: 1px solid #ddd;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* code end */
@@ -89,11 +91,6 @@ tbody tr:hover {
   background-color: #5bc0de;
 }
 /* table end */
-/* strong tag */
-strong {
-  color: #c7254e;
-}
-/* strong tag end */
 /* selection */
 ::selection {
   background-color: #5bc0de;
@@ -218,7 +215,7 @@ strong {
 }
 .ul-style ul .date-tip {
   font-size: 14px;
-  color: #d14;
+  color: #dd1144;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* article、categories、tags common style end */
@@ -266,7 +263,7 @@ strong {
 }
 .articles-all ul .date-tip {
   font-size: 14px;
-  color: #d14;
+  color: #dd1144;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* article end */
@@ -344,7 +341,7 @@ strong {
 }
 .category-all ul .date-tip {
   font-size: 14px;
-  color: #d14;
+  color: #dd1144;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* categories end */
@@ -414,7 +411,7 @@ strong {
 }
 .tags-all ul .date-tip {
   font-size: 14px;
-  color: #d14;
+  color: #dd1144;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* tags end */
