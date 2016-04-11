@@ -72,14 +72,14 @@ $(function(){
 	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', {fragment: '#contents', timeout: 10000});
 	$(document).on({
 		'pjax:click': function() {
-			$('#contents').removeClass('fadeIn').addClass('fadeOut');
+			$('#contents').removeClass('fade-in').addClass('fade-out');
 			NProgress.start();
 		},
 		'pjax:start': function() {
 			$('#contents').css('opacity', 0);
 		},
 		'pjax:end': function() {
-			$('#contents').scrollTop(0).css('opacity', 1).removeClass('fadeOut').addClass('fadeIn');
+			$('#contents').scrollTop(0).css('opacity', 1).removeClass('fade-out').addClass('fade-in');
 			NProgress.done();
 			bindActive();
 			pjaxEnd();
@@ -166,7 +166,7 @@ function pjaxEnd(){
 
 	var html = '';
 	$('#index-panel .pin').css('top', '5px');
-	$('.date-tags-box').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
+	$('.date-tags').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
 		switch (this.tagName) {
 			case 'H1':
 				$(this).attr('id','title'+i);

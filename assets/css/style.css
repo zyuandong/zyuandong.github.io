@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
 }
-/* a标签 */
+/* a tag */
 a {
   color: #5bc0de;
   text-decoration: none;
@@ -24,7 +24,7 @@ a:link,
 a:visited {
   text-decoration: none;
 }
-/* a标签 end */
+/* a tag end */
 /* h1~h6 */
 h1 {
   color: rgba(0, 0, 0, 0.6);
@@ -42,7 +42,7 @@ h6 {
   border-left: 5px solid #ccc;
 }
 /* h1~h6 end */
-/* 代码块 */
+/* code block */
 pre {
   padding: 0px;
 }
@@ -50,8 +50,8 @@ pre code {
   border-radius: 5px;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
-/* 代码块 end */
-/* 行内代码 */
+/* code block end */
+/* code */
 li code,
 p code {
   padding: 2px 4px;
@@ -59,7 +59,7 @@ p code {
   background-color: #eee;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
-/* 行内代码 end */
+/* code end */
 /* 引用 */
 blockquote {
   border-left: 5px solid #ccc;
@@ -68,7 +68,33 @@ blockquote {
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* 引用 end */
-/* 选中文本 */
+/* table */
+table {
+  margin-left: 30px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+thead {
+  background-color: #5bc0de;
+}
+tbody {
+  background-color: #E7F1EE;
+}
+th,
+td {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+}
+tbody tr:hover {
+  background-color: #5bc0de;
+}
+/* table end */
+/* strong tag */
+strong {
+  color: #c7254e;
+}
+/* strong tag end */
+/* selection */
 ::selection {
   background-color: #5bc0de;
   color: #fff;
@@ -77,8 +103,8 @@ blockquote {
   background-color: #5bc0de;
   color: #fff;
 }
-/* 选中文本 end */
-/* 滚动条 */
+/* selection end */
+/* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */
 ::-webkit-scrollbar {
   width: 12px;
@@ -100,34 +126,8 @@ blockquote {
 /* 滚动条垂直方向轨道件 */
 /* 滚动条按钮 */
 /* 滚动条轨道上的滚动角 */
-/* 滚动条 end */
-/* 表格 */
-table {
-  margin-left: 30px;
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-}
-thead {
-  background-color: #5bc0de;
-}
-tbody {
-  background-color: #E7F1EE;
-}
-th,
-td {
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-}
-tbody tr:hover {
-  background-color: #5bc0de;
-}
-/* 表格 end */
-/* <strong></strong>标签 */
-strong {
-  color: #c7254e;
-}
-/* <strong></strong>标签 end */
-/* 主目录 */
+/* scrollbar end */
+/* main nav */
 #slide-panel {
   height: 100%;
   float: left;
@@ -175,24 +175,9 @@ strong {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-  /**
-		a:first-child {
-			//width: 50%;
-			text-align: center;
-			border-top: 1px solid #434d9b;
-			border-right: 1px solid #434d9b;
-		}
-
-		a:last-child {
-			//width: 50%;
-			text-align: center;
-			border-top: 1px solid #434d9b;
-			border-left: 1px solid #434d9b;
-		}
-**/
 }
-/* 主目录 end */
-/* 文章、分类、标签共同样式 */
+/* main nav end */
+/* article、categories、tags common style */
 .page-item {
   width: 300px;
   height: 100%;
@@ -236,8 +221,8 @@ strong {
   color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 文章、分类、标签共同样式 end */
-/* 文章 */
+/* article、categories、tags common style end */
+/* article */
 .articles-all {
   display: block;
 }
@@ -284,8 +269,8 @@ strong {
   color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 文章 end */
-/* 分类 */
+/* article end */
+/* categories */
 .category-all {
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -362,8 +347,8 @@ strong {
   color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 分类 end */
-/* 标签 */
+/* categories end */
+/* tags */
 .tags-all {
   flex-flow: column nowrap;
   align-items: stretch;
@@ -432,8 +417,8 @@ strong {
   color: #d14;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
-/* 标签 end */
-/* 文章显示 */
+/* tags end */
+/* 日志展示 */
 #contents {
   height: 100%;
   margin: 0;
@@ -483,22 +468,14 @@ strong {
   width: auto;
   max-width: 100%;
 }
-#contents.fadeIn {
-  -webkit-animation: fadeIn 0.3s;
-  -moz-animation: fadeIn 0.3s;
-  -ms-animation: fadeIn 0.3s;
-  -o-animation: fadeIn 0.3s;
-  animation: fadeIn 0.3s;
+/* 日志展示 end */
+/* copyright */
+#copyright {
+  margin-top: 60px;
+  text-align: center;
 }
-#contents.fadeOut {
-  -webkit-animation: fadeOut 0.2s;
-  -moz-animation: fadeOut 0.2s;
-  -ms-animation: fadeOut 0.2s;
-  -o-animation: fadeOut 0.2s;
-  animation: fadeOut 0.2s;
-}
-/* 文章显示 end */
-/* slider按钮  */
+/* copyright end */
+/* slider btn */
 #slider {
   width: 40px;
   height: 40px;
@@ -512,7 +489,6 @@ strong {
   top: 15px;
   right: 15px;
   z-index: 2;
-  font-family: Consolas;
   font-size: 1.875em;
 }
 #icon-slider {
@@ -534,8 +510,8 @@ strong {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* slider按钮 end */
-/* indexBtn 按钮 */
+/* slider btn end */
+/* sidebar btn */
 #index-btn {
   width: 50px;
   height: 50px;
@@ -543,34 +519,34 @@ strong {
   line-height: 50px;
   font-size: 30px;
   background-color: #ccc;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   position: fixed;
   right: 15px;
   bottom: 66px;
   opacity: 0.5;
 }
-/* indexBtn 按钮 end */
-/* indexPanel */
+/* sidebar btn end */
+/* sidebar panel */
 #index-panel {
   width: 280px;
   max-height: 90%;
   overflow-y: auto;
   padding-left: 3px;
-  background-color: rgba(217, 217, 217, 0.9);
+  background-color: #ccc;
   position: fixed;
   right: -280px;
   bottom: 0;
 }
 #index-panel .index-panel-box {
-  background-color: #fff;
+  background-color: #ffffff;
   background-clip: content-box;
 }
 #index-panel .pin {
   width: 100%;
   height: 24px;
   border-left: 3px solid #5bc0de;
-  background-color: rgba(217, 217, 217, 0.9);
+  background-color: #eee;
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -613,8 +589,8 @@ strong {
 #index-panel ul .li-h6 {
   padding-left: 5em;
 }
-/* indexPanel end */
-/* back2top按钮 */
+/* sidebar panel end */
+/* back2top btn */
 #back2top {
   width: 50px;
   height: 50px;
@@ -630,13 +606,127 @@ strong {
   opacity: 0.5;
   display: none;
 }
-/* back2top按钮 end */
-/* 底部footer */
-#footer {
-  margin-top: 60px;
-  text-align: center;
+/* back2top btn end */
+/* use animation */
+#contents.fade-in {
+  -webkit-animation: fade-in 0.3s;
+  -moz-animation: fade-in 0.3s;
+  -ms-animation: fade-in 0.3s;
+  -o-animation: fade-in 0.3s;
+  animation: fade-in 0.3s;
 }
-/* 底部footer end */
+#contents.fade-out {
+  -webkit-animation: fade-out 0.2s;
+  -moz-animation: fade-out 0.2s;
+  -ms-animation: fade-out 0.2s;
+  -o-animation: fade-out 0.2s;
+  animation: fade-out 0.2s;
+}
+/* use animation end */
+/* fade-in style */
+@-webkit-keyframes fade-in {
+  from {
+    -webkit-transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  from {
+    -moz-transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in {
+  from {
+    -ms-transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -ms-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  from {
+    -o-transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* fade-in style end */
+/* fade-out style */
+@-webkit-keyframes fade-out {
+  from {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade-out {
+  from {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -moz-transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+@-ms-keyframes fade-out {
+  from {
+    -ms-transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -ms-transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+@-o-keyframes fade-out {
+  from {
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -o-transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+/* fade-out style end */
 /* media query */
 @media screen and (max-width: 640px) {
   #slide-panel {
@@ -711,109 +801,3 @@ strong {
   }
 }
 /* media query end */
-/*------------*\
-  fadeIn style
-\*------------*/
-@-webkit-keyframes fadeIn {
-  from {
-    -webkit-transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  from {
-    -moz-transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-ms-keyframes fadeIn {
-  from {
-    -ms-transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    -ms-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  from {
-    -o-transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/*------------*\
-  fadeOut style
-\*------------*/
-@-webkit-keyframes fadeOut {
-  from {
-    -webkit-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translateY(-30px);
-    opacity: 0;
-  }
-}
-@-moz-keyframes fadeOut {
-  from {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -moz-transform: translateY(-30px);
-    opacity: 0;
-  }
-}
-@-ms-keyframes fadeOut {
-  from {
-    -ms-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -ms-transform: translateY(-30px);
-    opacity: 0;
-  }
-}
-@-o-keyframes fadeOut {
-  from {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -o-transform: translateY(-30px);
-    opacity: 0;
-  }
-}
-@keyframes fadeOut {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-}

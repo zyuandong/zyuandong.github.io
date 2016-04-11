@@ -1,0 +1,65 @@
+/* 日志展示 */
+#contents {
+    height: 100%;
+    margin: 0;
+    padding: 0 20px;
+    overflow-y: auto;
+
+    .contents-box {
+        width: 100%;
+        min-height: 570px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 0 0 5px 5px;
+
+        .date-tags {
+            color: #bbb;
+            padding: 10px;
+            border-bottom: 1px dashed #ccc;
+
+            .date {
+                margin-right: 20px;
+            }
+        }
+
+        .page-previous {
+            float: left;
+            width: 100px;
+            padding: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .page-next {
+            float: right;
+            width: 100px;
+            padding: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+/* 日志展示 end */
+
+/* copyright */
+#copyright {
+    margin-top: 60px;
+    text-align: center;
+}
+/* copyright end */
