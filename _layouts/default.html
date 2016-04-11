@@ -20,12 +20,15 @@
 </head>
 <body>
 
-{% include catalogue.html %}
+{% include menu.html %}
 
 <div id="contents">
     <div class="contents-box">
         <h1>{{ page.title }}</h1>
-        {% include categoryAndTags.html %}
+        <div class="date-tags">
+            {% include date.html %}
+            {% include tags.html %}
+        </div>
         {{ content }}
 
         {% if page.previous %}
@@ -53,7 +56,7 @@
     <i id="icon-slider" class="fa fa-angle-left"></i>
 </div>
 
-{% include indexBtn.html %}
+{% include sidebar.html %}
 {% include back2top.html %}
 
 </body>

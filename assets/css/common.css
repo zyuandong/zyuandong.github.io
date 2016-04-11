@@ -448,12 +448,12 @@ strong {
   box-sizing: border-box;
   border-radius: 0 0 5px 5px;
 }
-#contents .contents-box .date-tags-box {
+#contents .contents-box .date-tags {
   color: #bbb;
   padding: 10px;
   border-bottom: 1px dashed #ccc;
 }
-#contents .contents-box .date-tags-box .date {
+#contents .contents-box .date-tags .date {
   margin-right: 20px;
 }
 #contents .contents-box .page-previous {
