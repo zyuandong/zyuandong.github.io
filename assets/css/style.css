@@ -502,17 +502,29 @@ tbody tr:hover {
 }
 #toggle .toggle-line-first {
   margin-bottom: 4px;
-  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 #toggle .toggle-line-last {
   margin-top: 4px;
-  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-first {
-  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-last {
-  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 /* toggle btn end */
 /* sidebar btn */

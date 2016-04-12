@@ -1,4 +1,12 @@
 /* toggle btn */
+.rotate(@deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+}
+
 #toggle {
     width: 40px;
     height: 40px;
@@ -29,23 +37,23 @@
 
     .toggle-line-first {
         margin-bottom: 4px;
-        transform: rotate(-45deg);
+        .rotate(-45deg);
     }
 
     .toggle-line-last {
         margin-top: 4px;
-        transform: rotate(45deg);
+        .rotate(45deg);
     }
 }
 
 #toggle.fullscreen {
 
     .toggle-line-first {
-        transform: rotate(45deg);
+        .rotate(45deg);
     }
 
     .toggle-line-last {
-        transform: rotate(-45deg);
+        .rotate(-45deg);
     }   
 }
 /* toggle btn end */
