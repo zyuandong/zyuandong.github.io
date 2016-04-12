@@ -145,10 +145,10 @@ function pjaxEnd(){
 		$('#slide-panel').animate({
 			marginLeft: '-640px'
 		}, 500).dequeue();
-		$('#icon-toggle').addClass('fullscreen');
+		$('#toggle').addClass('fullscreen');
 	}
 
-	if($('#icon-toggle').hasClass('fullscreen')) {
+	if($('#toggle').hasClass('fullscreen')) {
 		$('.contents-box').addClass('fullscreen');
 	} else {
 		$('.contents-box').removeClass('fullscreen');
