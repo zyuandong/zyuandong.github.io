@@ -1,5 +1,5 @@
 /* sidebar btn */
-.transform(@rotate) {
+.sidebar-btn-trf(@rotate) {
     -webkit-transform: translateX(-3px) rotate(@rotate);
     -moz-transform: translateX(-3px) rotate(@rotate);
     -ms-transform: translateX(-3px) rotate(@rotate);
@@ -45,7 +45,7 @@
 
     .sidebar-line-first {
         transform-origin: 100% 50%;
-        .transform(-45deg);
+        .sidebar-btn-trf(-45deg);
     }
     
     .sidebar-line-middle {
@@ -54,7 +54,7 @@
 
     .sidebar-line-last {
         transform-origin: 100% 50%;
-        .transform(45deg);
+        .sidebar-btn-trf(45deg);
     }
 }
 /* sidebar btn end */

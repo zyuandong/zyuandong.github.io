@@ -1,5 +1,5 @@
 /* toggle btn */
-.transform(@rotate) {
+.toggle-line-trf(@rotate) {
     -webkit-transform: rotate(@rotate);
     -moz-transform: rotate(@rotate);
     -ms-transform: rotate(@rotate);
@@ -37,23 +37,23 @@
 
     .toggle-line-first {
         margin-bottom: 4px;
-        .transform(-45deg);
+        .toggle-line-trf(-45deg);
     }
 
     .toggle-line-last {
         margin-top: 4px;
-        .transform(45deg);
+        .toggle-line-trf(45deg);
     }
 }
 
 #toggle.fullscreen {
 
     .toggle-line-first {
-        .transform(45deg);
+        .toggle-line-trf(45deg);
     }
 
     .toggle-line-last {
-        .transform(-45deg);
+        .toggle-line-trf(-45deg);
     }   
 }
 /* toggle btn end */

@@ -506,11 +506,6 @@ tbody tr:hover {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  -webkit-transform: translateX(-3px) rotate(-45deg);
-  -moz-transform: translateX(-3px) rotate(-45deg);
-  -ms-transform: translateX(-3px) rotate(-45deg);
-  -o-transform: translateX(-3px) rotate(-45deg);
-  transform: translateX(-3px) rotate(-45deg);
 }
 #toggle .toggle-line-last {
   margin-top: 4px;
@@ -518,33 +513,18 @@ tbody tr:hover {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -webkit-transform: translateX(-3px) rotate(45deg);
-  -moz-transform: translateX(-3px) rotate(45deg);
-  -ms-transform: translateX(-3px) rotate(45deg);
-  -o-transform: translateX(-3px) rotate(45deg);
-  transform: translateX(-3px) rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-first {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -webkit-transform: translateX(-3px) rotate(45deg);
-  -moz-transform: translateX(-3px) rotate(45deg);
-  -ms-transform: translateX(-3px) rotate(45deg);
-  -o-transform: translateX(-3px) rotate(45deg);
-  transform: translateX(-3px) rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-last {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  -webkit-transform: translateX(-3px) rotate(-45deg);
-  -moz-transform: translateX(-3px) rotate(-45deg);
-  -ms-transform: translateX(-3px) rotate(-45deg);
-  -o-transform: translateX(-3px) rotate(-45deg);
-  transform: translateX(-3px) rotate(-45deg);
 }
 /* toggle btn end */
 /* sidebar btn */
@@ -580,10 +560,6 @@ tbody tr:hover {
 }
 #sidebar-btn.show .sidebar-line-first {
   transform-origin: 100% 50%;
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
   -webkit-transform: translateX(-3px) rotate(-45deg);
   -moz-transform: translateX(-3px) rotate(-45deg);
   -ms-transform: translateX(-3px) rotate(-45deg);
@@ -595,10 +571,6 @@ tbody tr:hover {
 }
 #sidebar-btn.show .sidebar-line-last {
   transform-origin: 100% 50%;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
   -webkit-transform: translateX(-3px) rotate(45deg);
   -moz-transform: translateX(-3px) rotate(45deg);
   -ms-transform: translateX(-3px) rotate(45deg);
