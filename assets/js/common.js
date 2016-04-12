@@ -36,7 +36,7 @@ $(function(){
 	// show back2top-btn
 	$('#contents').scroll(function() {
 	    var t = $(this).scrollTop();
-	    if( t >= 10) {
+	    if( t >= 800) {
 			if(!$('#back2top').is(":visible")) {
 		    	$('#back2top').show();
 	    	}
