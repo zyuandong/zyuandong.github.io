@@ -1,4 +1,12 @@
 /* sidebar btn */
+.transform(@rotate) {
+    -webkit-transform: translateX(-3px) rotate(@rotate);
+    -moz-transform: translateX(-3px) rotate(@rotate);
+    -ms-transform: translateX(-3px) rotate(@rotate);
+    -o-transform: translateX(-3px) rotate(@rotate);
+    transform: translateX(-3px) rotate(@rotate);
+}
+
 #sidebar-btn {
     width: 40px;
     height: 40px;
@@ -7,12 +15,13 @@
     background-color: @blue;
     color: @white;
     cursor: pointer;
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
     border-radius: 50%;
     padding: 13px 11px;
     box-sizing: border-box;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
 
     .sidebar-line {
         display: inline-block;
@@ -35,8 +44,8 @@
 #sidebar-btn.show {
 
     .sidebar-line-first {
-        transform: translateX(-3px) rotate(-45deg);
         transform-origin: 100% 50%;
+        .transform(-45deg);
     }
     
     .sidebar-line-middle {
@@ -44,8 +53,8 @@
     }
 
     .sidebar-line-last {
-        transform: translateX(-3px) rotate(45deg);
         transform-origin: 100% 50%;
+        .transform(45deg);
     }
 }
 /* sidebar btn end */
@@ -60,6 +69,7 @@
     position: fixed;
     right: -280px;
     bottom: 0;
+    z-index: 1;
 
     .sidebar-panel-box {
         background-color: @white;

@@ -481,13 +481,13 @@ tbody tr:hover {
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 2;
   font-size: 0;
   box-sizing: border-box;
   padding: 14px 12px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 4;
 }
 #toggle .toggle-line {
   width: 100%;
@@ -506,6 +506,11 @@ tbody tr:hover {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  -webkit-transform: translateX(-3px) rotate(-45deg);
+  -moz-transform: translateX(-3px) rotate(-45deg);
+  -ms-transform: translateX(-3px) rotate(-45deg);
+  -o-transform: translateX(-3px) rotate(-45deg);
+  transform: translateX(-3px) rotate(-45deg);
 }
 #toggle .toggle-line-last {
   margin-top: 4px;
@@ -513,18 +518,33 @@ tbody tr:hover {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  -webkit-transform: translateX(-3px) rotate(45deg);
+  -moz-transform: translateX(-3px) rotate(45deg);
+  -ms-transform: translateX(-3px) rotate(45deg);
+  -o-transform: translateX(-3px) rotate(45deg);
+  transform: translateX(-3px) rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-first {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  -webkit-transform: translateX(-3px) rotate(45deg);
+  -moz-transform: translateX(-3px) rotate(45deg);
+  -ms-transform: translateX(-3px) rotate(45deg);
+  -o-transform: translateX(-3px) rotate(45deg);
+  transform: translateX(-3px) rotate(45deg);
 }
 #toggle.fullscreen .toggle-line-last {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  -webkit-transform: translateX(-3px) rotate(-45deg);
+  -moz-transform: translateX(-3px) rotate(-45deg);
+  -ms-transform: translateX(-3px) rotate(-45deg);
+  -o-transform: translateX(-3px) rotate(-45deg);
+  transform: translateX(-3px) rotate(-45deg);
 }
 /* toggle btn end */
 /* sidebar btn */
@@ -536,12 +556,13 @@ tbody tr:hover {
   background-color: #5bc0de;
   color: #ffffff;
   cursor: pointer;
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
   border-radius: 50%;
   padding: 13px 11px;
   box-sizing: border-box;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 2;
 }
 #sidebar-btn .sidebar-line {
   display: inline-block;
@@ -558,15 +579,31 @@ tbody tr:hover {
   margin: 4px 0;
 }
 #sidebar-btn.show .sidebar-line-first {
-  transform: translateX(-3px) rotate(-45deg);
   transform-origin: 100% 50%;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -webkit-transform: translateX(-3px) rotate(-45deg);
+  -moz-transform: translateX(-3px) rotate(-45deg);
+  -ms-transform: translateX(-3px) rotate(-45deg);
+  -o-transform: translateX(-3px) rotate(-45deg);
+  transform: translateX(-3px) rotate(-45deg);
 }
 #sidebar-btn.show .sidebar-line-middle {
   opacity: 0;
 }
 #sidebar-btn.show .sidebar-line-last {
-  transform: translateX(-3px) rotate(45deg);
   transform-origin: 100% 50%;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -webkit-transform: translateX(-3px) rotate(45deg);
+  -moz-transform: translateX(-3px) rotate(45deg);
+  -ms-transform: translateX(-3px) rotate(45deg);
+  -o-transform: translateX(-3px) rotate(45deg);
+  transform: translateX(-3px) rotate(45deg);
 }
 /* sidebar btn end */
 /* sidebar panel */
@@ -579,6 +616,7 @@ tbody tr:hover {
   position: fixed;
   right: -280px;
   bottom: 0;
+  z-index: 1;
 }
 #sidebar-panel .sidebar-panel-box {
   background-color: #ffffff;
@@ -647,7 +685,7 @@ tbody tr:hover {
   bottom: 65px;
   border-radius: 50%;
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 /* back2top btn end */
 /* use animation */
@@ -774,7 +812,7 @@ tbody tr:hover {
 @media screen and (max-width: 640px) {
   #slide-panel {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
   }
   #slide-panel .guid {
@@ -811,7 +849,7 @@ tbody tr:hover {
 @media screen and (min-width: 641px) and (max-width: 1023px) {
   #slide-panel {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
   }
   .page-item {
     background-color: #f3f3f3;

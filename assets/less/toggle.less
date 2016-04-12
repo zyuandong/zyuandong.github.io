@@ -1,10 +1,10 @@
 /* toggle btn */
-.rotate(@deg) {
-    -webkit-transform: rotate(@deg);
-    -moz-transform: rotate(@deg);
-    -ms-transform: rotate(@deg);
-    -o-transform: rotate(@deg);
-    -webkit-transform: rotate(@deg);
+.transform(@rotate) {
+    -webkit-transform: rotate(@rotate);
+    -moz-transform: rotate(@rotate);
+    -ms-transform: rotate(@rotate);
+    -o-transform: rotate(@rotate);
+    -webkit-transform: rotate(@rotate);
 }
 
 #toggle {
@@ -15,13 +15,13 @@
     color: #fff;
     text-align: center;
     border-radius: 50%;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2;
     font-size: 0;
     box-sizing: border-box;
     padding: 14px 12px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 4;
     
     .toggle-line {
         width: 100%;
@@ -37,23 +37,23 @@
 
     .toggle-line-first {
         margin-bottom: 4px;
-        .rotate(-45deg);
+        .transform(-45deg);
     }
 
     .toggle-line-last {
         margin-top: 4px;
-        .rotate(45deg);
+        .transform(45deg);
     }
 }
 
 #toggle.fullscreen {
 
     .toggle-line-first {
-        .rotate(45deg);
+        .transform(45deg);
     }
 
     .toggle-line-last {
-        .rotate(-45deg);
+        .transform(-45deg);
     }   
 }
 /* toggle btn end */
