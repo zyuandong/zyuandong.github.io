@@ -559,23 +559,31 @@ tbody tr:hover {
   margin: 4px 0;
 }
 #sidebar-btn.show .sidebar-line-first {
-  transform-origin: 100% 50%;
   -webkit-transform: translateX(-3px) rotate(-45deg);
   -moz-transform: translateX(-3px) rotate(-45deg);
   -ms-transform: translateX(-3px) rotate(-45deg);
   -o-transform: translateX(-3px) rotate(-45deg);
   transform: translateX(-3px) rotate(-45deg);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
 #sidebar-btn.show .sidebar-line-middle {
   opacity: 0;
 }
 #sidebar-btn.show .sidebar-line-last {
-  transform-origin: 100% 50%;
   -webkit-transform: translateX(-3px) rotate(45deg);
   -moz-transform: translateX(-3px) rotate(45deg);
   -ms-transform: translateX(-3px) rotate(45deg);
   -o-transform: translateX(-3px) rotate(45deg);
   transform: translateX(-3px) rotate(45deg);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
 /* sidebar btn end */
 /* sidebar panel */
