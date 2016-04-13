@@ -1,5 +1,5 @@
 ---
-title: 小白上手 Linux
+title: 小白搭建 Linux 开发环境
 category: 杂物间
 tag: Linux
 monthLast: true
