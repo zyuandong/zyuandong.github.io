@@ -1,0 +1,55 @@
+/* mask layer */
+.mask-layer-line-trf(@rotate) {
+    -webkit-transform: rotate(@rotate);
+    -moz-transform: rotate(@rotate);
+    -ms-transform: rotate(@rotate);
+    -o-transform: rotate(@rotate);
+    transform: rotate(@rotate);
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+#mask-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+    display: none;
+
+    .mask-layer-btn {
+        width: 40px;
+        height: 40px;
+        background-color: @blue;
+        border-radius: 50%;
+        font-size: 0;
+        cursor: pointer;
+        padding: 14px 12px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        .mask-layer-line {
+            width: 100%;
+            height: 2px;
+            display: inline-block;
+            background-color: @white;
+        }
+
+        .mask-layer-line-first {
+            margin-bottom: 4px;
+            .mask-layer-line-trf(-45deg);
+        }
+
+        .mask-layer-line-last {
+            margin-top: 4px;
+            .mask-layer-line-trf(45deg);
+        }
+    }
+}
+/* mask layer end */
