@@ -883,7 +883,7 @@ tbody tr:hover {
   border-radius: 50%;
   font-size: 0;
   cursor: pointer;
-  padding: 14px 12px;
+  padding: 13px 11px;
   box-sizing: border-box;
   position: absolute;
   top: 15px;
@@ -896,12 +896,12 @@ tbody tr:hover {
   background-color: #ffffff;
 }
 #mask-layer .mask-layer-btn .mask-layer-line-first {
-  margin-bottom: 4px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  margin-bottom: 5px;
+  -webkit-transform: translateX(-3px) rotate(-45deg);
+  -moz-transform: translateX(-3px) rotate(-45deg);
+  -ms-transform: translateX(-3px) rotate(-45deg);
+  -o-transform: translateX(-3px) rotate(-45deg);
+  transform: translateX(-3px) rotate(-45deg);
   -webkit-transform-origin: 100% 50%;
   -moz-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
@@ -909,12 +909,12 @@ tbody tr:hover {
   transform-origin: 100% 50%;
 }
 #mask-layer .mask-layer-btn .mask-layer-line-last {
-  margin-top: 4px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  margin-top: 5px;
+  -webkit-transform: translateX(-3px) rotate(45deg);
+  -moz-transform: translateX(-3px) rotate(45deg);
+  -ms-transform: translateX(-3px) rotate(45deg);
+  -o-transform: translateX(-3px) rotate(45deg);
+  transform: translateX(-3px) rotate(45deg);
   -webkit-transform-origin: 100% 50%;
   -moz-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;

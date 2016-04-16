@@ -86,6 +86,14 @@ $(function(){
 		}
 	});
 
+	$('#contents-box img').click(function() {
+		console.log(233);
+		var img = new Image();
+		img.src = $(this).attr('src');
+		$('#mask-layer').show();
+		$('#mask-layer .mask-layer-img').html(img);
+	});
+
 	// get categories-list
 	$('.category-all .category-item').on('click', function() {
 		var key = $(this).data('category');

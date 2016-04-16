@@ -1,10 +1,10 @@
 /* mask layer */
 .mask-layer-line-trf(@rotate) {
-    -webkit-transform: rotate(@rotate);
-    -moz-transform: rotate(@rotate);
-    -ms-transform: rotate(@rotate);
-    -o-transform: rotate(@rotate);
-    transform: rotate(@rotate);
+    -webkit-transform: translateX(-3px) rotate(@rotate);
+    -moz-transform: translateX(-3px) rotate(@rotate);
+    -ms-transform: translateX(-3px) rotate(@rotate);
+    -o-transform: translateX(-3px) rotate(@rotate);
+    transform: translateX(-3px) rotate(@rotate);
     -webkit-transform-origin: 100% 50%;
     -moz-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
@@ -28,7 +28,7 @@
         border-radius: 50%;
         font-size: 0;
         cursor: pointer;
-        padding: 14px 12px;
+        padding: 13px 11px;
         box-sizing: border-box;
         position: absolute;
         top: 15px;
@@ -42,12 +42,12 @@
         }
 
         .mask-layer-line-first {
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             .mask-layer-line-trf(-45deg);
         }
 
         .mask-layer-line-last {
-            margin-top: 4px;
+            margin-top: 5px;
             .mask-layer-line-trf(45deg);
         }
     }
