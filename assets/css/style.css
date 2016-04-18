@@ -876,6 +876,9 @@ tbody tr:hover {
   z-index: 5;
   display: none;
 }
+#mask-layer .mask-layer-img {
+  text-align: center;
+}
 #mask-layer .mask-layer-btn {
   width: 40px;
   height: 40px;

@@ -67,6 +67,11 @@ $(function(){
 		}
 	});
 
+	// mask-layer btn
+	$('.mask-layer-btn').click(function() {
+		$('#mask-layer').hide().child('.mask-layer-img').html('');
+	})
+
 	// use jquery-pjax
 	bindActive();
 	$(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', {fragment: '#contents', timeout: 10000});
@@ -84,14 +89,6 @@ $(function(){
 			bindActive();
 			pjaxEnd();
 		}
-	});
-
-	$('#contents-box img').click(function() {
-		console.log(233);
-		var img = new Image();
-		img.src = $(this).attr('src');
-		$('#mask-layer').show();
-		$('#mask-layer .mask-layer-img').html(img);
 	});
 
 	// get categories-list
@@ -215,6 +212,16 @@ function pjaxEnd(){
 		var index = $(this).data('index');
 		$('.pin').css('top', index * 24 + 5 + 'px');
 	})
+
+	$('#contents img').click(function() {
+		console.log(233);
+		var img = new Image();
+		img.src = $(this).attr('src');
+		$('#mask-layer').show();
+		$('#mask-layer .mask-layer-img').html(img);
+	});
+
+
 }
 
 function bindActive() {
