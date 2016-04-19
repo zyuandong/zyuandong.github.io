@@ -12,17 +12,27 @@
     transform-origin: 100% 50%;
 }
 #mask-layer {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
     z-index: 5;
-    display: none;
-
-    .mask-layer-img {
-        text-align: center;
+    
+    .mask-layer-box {
+        width: 100%;
+        height: 100%;
+        display: table;
+        line-height: 0;
+        
+        .mask-layer-img {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 
     .mask-layer-btn {
@@ -34,7 +44,7 @@
         cursor: pointer;
         padding: 13px 11px;
         box-sizing: border-box;
-        position: absolute;
+        position: fixed;
         top: 15px;
         right: 15px;
 

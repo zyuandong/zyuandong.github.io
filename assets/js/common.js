@@ -69,7 +69,7 @@ $(function(){
 
 	// mask-layer btn
 	$('.mask-layer-btn').click(function() {
-		$('#mask-layer').hide().child('.mask-layer-img').html('');
+		$('#mask-layer').hide().find('.mask-layer-img').html('');
 	})
 
 	// use jquery-pjax
@@ -214,14 +214,11 @@ function pjaxEnd(){
 	})
 
 	$('#contents img').click(function() {
-		console.log(233);
 		var img = new Image();
 		img.src = $(this).attr('src');
 		$('#mask-layer').show();
 		$('#mask-layer .mask-layer-img').html(img);
 	});
-
-
 }
 
 function bindActive() {
