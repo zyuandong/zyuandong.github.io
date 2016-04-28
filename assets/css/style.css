@@ -427,6 +427,7 @@ tbody tr:hover {
   margin: 0 auto;
   background-color: #fff;
   box-sizing: border-box;
+  word-break: break-all;
   border-radius: 0 0 5px 5px;
 }
 #contents .contents-box .date-tags {
