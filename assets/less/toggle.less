@@ -1,10 +1,10 @@
 /* toggle btn */
-.toggle-line-trf(@rotate) {
-    -webkit-transform: rotate(@rotate);
-    -moz-transform: rotate(@rotate);
-    -ms-transform: rotate(@rotate);
-    -o-transform: rotate(@rotate);
-    transform: rotate(@rotate);
+.toggle-line-trf(@Y, @rotate) {
+    -webkit-transform: translateY(@Y) rotate(@rotate);
+    -moz-transform: translateY(@Y) rotate(@rotate);
+    -ms-transform: translateY(@Y) rotate(@rotate);
+    -o-transform: translateY(@Y) rotate(@rotate);
+    transform: translateY(@Y) rotate(@rotate);
 }
 
 #toggle {
@@ -16,7 +16,7 @@
     border-radius: 50%;
     font-size: 0;
     box-sizing: border-box;
-    padding: 14px 12px;
+    padding: 14px;
     position: fixed;
     top: 15px;
     right: 15px;
@@ -36,23 +36,23 @@
 
     .toggle-line-first {
         margin-bottom: 4px;
-        .toggle-line-trf(-45deg);
+        .toggle-line-trf(1px, -45deg);
     }
 
     .toggle-line-last {
         margin-top: 4px;
-        .toggle-line-trf(45deg);
+        .toggle-line-trf(-1px, 45deg);
     }
 }
 
 #toggle.fullscreen {
 
     .toggle-line-first {
-        .toggle-line-trf(45deg);
+        .toggle-line-trf(1px, 45deg);
     }
 
     .toggle-line-last {
-        .toggle-line-trf(-45deg);
+        .toggle-line-trf(-1px, -45deg);
     }   
 }
 /* toggle btn end */
