@@ -478,7 +478,6 @@ tbody tr:hover {
   height: 40px;
   background-color: #5bc0de;
   cursor: pointer;
-  color: #fff;
   text-align: center;
   border-radius: 50%;
   font-size: 0;
@@ -538,7 +537,6 @@ tbody tr:hover {
   text-align: center;
   font-size: 0;
   background-color: #5bc0de;
-  color: #ffffff;
   cursor: pointer;
   border-radius: 50%;
   padding: 13px 11px;
@@ -659,10 +657,8 @@ tbody tr:hover {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 35px;
-  font-size: 30px;
+  font-size: 0;
   background-color: #5bc0de;
-  color: #ffffff;
   cursor: pointer;
   position: fixed;
   right: 15px;
@@ -670,6 +666,29 @@ tbody tr:hover {
   border-radius: 50%;
   display: none;
   z-index: 2;
+  padding: 12px 14px;
+  box-sizing: border-box;
+}
+#back2top .bt-line {
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  background-color: #ffffff;
+}
+#back2top .bt-line-first {
+  margin-top: 6px;
+  -webkit-transform: translate(4px, 0) rotate(45deg);
+  -moz-transform: translate(4px, 0) rotate(45deg);
+  -ms-transform: translate(4px, 0) rotate(45deg);
+  -o-transform: translate(4px, 0) rotate(45deg);
+  transform: translate(4px, 0) rotate(45deg);
+}
+#back2top .bt-line-last {
+  -webkit-transform: translate(-4px, -2px) rotate(-45deg);
+  -moz-transform: translate(-4px, -2px) rotate(-45deg);
+  -ms-transform: translate(-4px, -2px) rotate(-45deg);
+  -o-transform: translate(-4px, -2px) rotate(-45deg);
+  transform: translate(-4px, -2px) rotate(-45deg);
 }
 /* back2top btn end */
 /* use animation */
