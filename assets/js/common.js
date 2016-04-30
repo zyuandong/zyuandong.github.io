@@ -52,7 +52,7 @@ $(function(){
 		}, 700);
 	});
 
-	// sidebar list
+	// show or hide sidebar list
 	$('#sidebar-btn').click(function() {
 		if ($(this).hasClass('show')){
 			$(this).removeClass('show');
