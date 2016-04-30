@@ -67,6 +67,9 @@ $(function(){
 		}
 	});
 
+	// relating slidebar content-box scroll
+	
+
 	// mask-layer btn
 	$('.mask-layer-btn').click(function() {
 		$('#mask-layer').hide().find('.mask-layer-img').html('');
