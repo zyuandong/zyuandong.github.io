@@ -1,7 +1,7 @@
 ---
 title: 开发中的语义化插曲
 category: angular.js
-tags: w3c规范
+tag: 规范
 ---
 
 ```
