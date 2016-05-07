@@ -12,7 +12,7 @@ Package Control 是一个方便 Sublime Text 管理插件的插件，通过简�
 
 以为 Sublime Text 3 更新了 Python 的函数，API 不同了，所以3与2的安装命令也有所不同。
 
-从菜单 `View` -> `Show Control` 或者 `Ctrl + ~\`` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
+从菜单 `View` → `Show Control` 或者 `Ctrl + ~` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
 
 Sublime Text 3:
 
