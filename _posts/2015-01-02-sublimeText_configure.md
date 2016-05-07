@@ -4,35 +4,23 @@ category: 杂物间
 tags: [编辑器, sublime text]
 ---
 
-## 选择Sublime Text
+## 扩展包管理器 Package Control
 
-Sublime Text
+Package Control 是一个方便 Sublime Text 管理插件的插件，通过简单的步骤就可以安装各种功能强大的插件，为编辑带来更高的效率，下面提供两种安装 Package Control 的方法。
 
-notepadd++
+### 控制台命令安装
 
-eclipse
+以为 Sublime Text 3 更新了 Python 的函数，API 不同了，所以3与2的安装命令也有所不同。
 
-myeclipse
+从菜单 `View` -> `Show Control` 或者 `Ctrl + ~\`` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
 
-Vim
-
-Emacs
-
-## 破解Sublime Text
-
-...
-
-## 必备Package Control（扩展包管理器）
-
-### 一、控制台命令安装
-
-Sublime Text 3
+Sublime Text 3:
 
 ```
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
 
-Sublime Text 2
+Sublime Text 2:
 
 ```
 import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
@@ -40,7 +28,7 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed
 
 重启Sublime Text
 
-### 二、手动安装
+### 手动安装
 
 可能由于各种原因，无法使用代码安装，那可以通过以下步骤手动安装Package Control：
 
