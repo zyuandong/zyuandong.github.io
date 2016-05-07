@@ -97,8 +97,8 @@ $(function(){
         $(this).addClass('active').siblings().removeClass('active');
         $.getJSON('/simplex/data/post.json', function(data) {
             var count = 0,
-            	datas = data.datas,
-            	html = '<ul>';
+                datas = data.datas,
+                html = '<ul>';
             $.each(datas, function(i, item) {
                 if (item.category){
                     if (item.category == key) {
@@ -122,8 +122,8 @@ $(function(){
         $(this).addClass('active').siblings().removeClass('active');
         $.getJSON('/simplex/data/post.json', function(data) {
             var count = 0,
-            	datas = data.datas,
-            	html = '<ul>';
+                datas = data.datas,
+                html = '<ul>';
             $.each(datas, function(i, item) {
                 for(var i in item.tags) {
                     if (item.tags[i] == key) {
@@ -150,92 +150,95 @@ function pjaxEnd(){
         $('#slide-panel').animate({
             marginLeft: '-640px'
         }, 500).dequeue();
-	    $('#toggle').addClass('fullscreen');
-	}
+        $('#toggle').addClass('fullscreen');
+    }
 
-	if ($('#toggle').hasClass('fullscreen')) {
-	    $('.contents-box').addClass('fullscreen');
-	} else {
-	    $('.contents-box').removeClass('fullscreen');
-	}
+    if ($('#toggle').hasClass('fullscreen')) {
+        $('.contents-box').addClass('fullscreen');
+    } else {
+        $('.contents-box').removeClass('fullscreen');
+    }
 
-	// open page in new tab
-	$('a[href^="http"]').each(function() {
-	    $(this).attr('target', '_blank');
-	});
-
-	// code highlight
-	$('pre code').each(function(i, block) {
-	    hljs.highlightBlock(block);
-	});
-
-	// get sidebar list
-	var html = '',
-		heightArr = [];
-	$('#sidebar-panel .pin').css('top', '5px');
-	$('.date-tags').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
-	    switch (this.tagName) {
-	        case 'H1':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	        case 'H2':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	        case 'H3':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	        case 'H4':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	        case 'H5':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	        case 'H6':
-	            heightArr.push($(this).get(0).offsetTop);
-	            $(this).attr({'id':'title'+i, 'class':'title'});
-	            html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
-	            break;
-	    }
-	});
-
-	if (html.length) {
-	    $('#sidebar-panel .sidebar-panel-ul').html(html);
-	    $('#sidebar-btn, #sidebar-panel').show();
-	} else {
-	    $('#sidebar-panel .sidebar-panel-ul').html('');
-	    $('#sidebar-btn, #sidebar-panel').hide();
-	}
-
-	// focus list active
-	$('.sidebar-panel-ul li a').on('click', function() {
-	    var index = $(this).data('index');
-	    $('.pin').css('top', index * 24 + 5 + 'px');
-	});
-
-    // relating sidebar content-box scroll
-    $('#contents').scroll(function() {
-    	var top = $('.title', this).offset().top;
-    	console.log(top);
-    	if (top == 0) {
-    		console.log('success');
-    	}
+    // open page in new tab
+    $('a[href^="http"]').each(function() {
+        $(this).attr('target', '_blank');
     });
 
+    // code highlight
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+    // get sidebar list
+    var html = '',
+        heightArr = [];
+    $('#sidebar-panel .pin').css('top', '5px');
+    $('.date-tags').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
+        switch (this.tagName) {
+            case 'H1':
+                heightArr.push($(this).get(0).offsetTop);
+                //$(this).attr('id', 'title'+i);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+            case 'H2':
+                heightArr.push($(this).get(0).offsetTop);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+            case 'H3':
+                heightArr.push($(this).get(0).offsetTop);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+            case 'H4':
+                heightArr.push($(this).get(0).offsetTop);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+            case 'H5':
+                heightArr.push($(this).get(0).offsetTop);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+            case 'H6':
+                heightArr.push($(this).get(0).offsetTop);
+                $(this).attr({'id':'title'+i, 'class':'title'});
+                html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                break;
+        }
+    });
+
+    if (html.length) {
+        $('#sidebar-panel .sidebar-panel-ul').html(html);
+        $('#sidebar-btn, #sidebar-panel').show();
+    } else {
+        $('#sidebar-panel .sidebar-panel-ul').html('');
+        $('#sidebar-btn, #sidebar-panel').hide();
+    }
+
+    // focus list active
+    $('.sidebar-panel-ul li a').on('click', function() {
+        var index = $(this).data('index');
+        $('.pin').css('top', index * 24 + 5 + 'px');
+    });
+
+    // relating sidebar content-box scroll
+    /*
+    $('#contents').scroll(function() {
+        var top = $('.title', this).offset().top;
+        console.log(top);
+        if (top == 0) {
+            console.log('success');
+        }
+    });
+    */
+
     // show image with full screen
-	$('#contents img').click(function() {
-	    var img = new Image();
-	    img.src = $(this).attr('src');
-	    $('#mask-layer').show();
+    $('#contents img').click(function() {
+        var img = new Image();
+        img.src = $(this).attr('src');
+        $('#mask-layer').show();
         $('#mask-layer .mask-layer-img').html(img);
     });
 }
