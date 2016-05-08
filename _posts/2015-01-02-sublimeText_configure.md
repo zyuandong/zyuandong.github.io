@@ -12,7 +12,7 @@ Package Control 是一个方便 Sublime Text 管理插件的插件，通过简�
 
 以为 Sublime Text 3 更新了 Python 的函数，API 不同了，所以3与2的安装命令也有所不同。
 
-从菜单 `View` → `Show Control` 或者 `Ctrl + ~` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
+从菜单 `View` > `Show Control` 或者 `Ctrl + ~` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
 
 Sublime Text 3:
 
@@ -26,66 +26,63 @@ Sublime Text 2:
 import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
 ```
 
-重启Sublime Text
+最后重启 Sublime Text
 
 ### 手动安装
 
-可能由于各种原因，无法使用代码安装，那可以通过以下步骤手动安装Package Control：
+可能由于各种原因，无法使用代码安装，那可以通过以下步骤手动安装 Package Control:
 
-1. 点击Preferences > Browse Packages菜单
+1. 点击 `Preferences` > `Browse Packages` 菜单
 
-2. 进入打开的目录的上层目录，然后再进入Installed Packages/目录
+2. 进入打开的目录的上层目录，然后再进入 `Installed Packages/` 目录
 
-3. 下载Package Control.sublime-package并复制到Installed Packages/目录
+3. 下载 Package Control.sublime-package 并复制到 `Installed Packages/` 目录
 
 4. 重启Sublime Text
 
+按下组合件 `Ctrl` + `Shift` + `p` 即可调出命令面板，也就意味着 Package Control 安装成功了。
 
 ## 常用插件介绍
 
+大多数的插件都可以通过网站 [Package Control](https://packagecontrol.io/) 查看具体信息。
+
+下面介绍我自己常用的几个插件及其用法。
+
 http://www.th7.cn/web/js/201411/68112.shtml
 
-- Emmet
+### Emmet
 
 简单命令快速编写页面代码
 
-- Color Highlighter
+### Color Highlighter
 
 背景显示16进制颜色
 
-- BracketHighlighter
+### BracketHighlighter
 
 代码匹配，可以匹配括号，引号等符号内的范围
 
 [可自己修改配色方案](http://www.dbpoo.com/sublime-text3-brackethighlighter/)
 
-- DocBlockr 
+### DocBlockr 
 
 生成注释模板
 
-- Tag
-
-HTML/XML标签缩进、补全、排版和校验工具
-
-Ctrl + Alt + f 自动排版
-
-- Less
+### Less
 
 Less语法高亮
 
-- SideBarEnhancements
+### SideBarEnhancements
 
 SideBarEnhancements是一款很实用的右键菜单增强插件在安装该插件前，在Sublime Text左侧FOLDERS栏中点击右键只有寥寥几个简单的功能
 
 通过Package Control安装SideBarEnhancements插件后
 
-- Markdown Preview
+### Markdown Preview
 
 支持Markdown语法，直接生成HTML进行预览等功能
 
 [Sublime Text Package](https://packagecontrol.io/)
-
-###
 
 ## Sublime Text快捷键
 
