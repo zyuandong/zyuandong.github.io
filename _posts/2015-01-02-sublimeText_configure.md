@@ -54,6 +54,8 @@ http://www.th7.cn/web/js/201411/68112.shtml
 
 简单命令快速编写页面代码
 
+详情参照 [语法表](http://docs.emmet.io/cheat-sheet/)
+
 ### Color Highlighter
 
 背景显示16进制颜色
