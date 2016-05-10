@@ -46,3 +46,45 @@ monthLast: true
 安装 zsh 
 
 安装 Tmux
+
+安装 zsh 和 Tmux 前，可能还会遇到需要 curl 等工具，为了方便记忆与查阅，我都全部归纳到一起。
+
+- curl
+
+简单介绍一下，curl 是一个利用 URL 语法在命令行下工作的文件传输工具。
+
+Linux 下通用安装配置 curl 工具
+
+--获得安装包，从网上直接下载或者其他途径，这里直接wget
+`$ wget http://curl.haxx.se/download/curl-7.20.0.tar.gz`
+
+--解压到当前目录（或者 http://www.linuxidc.com/Linux/2014-08/106022.htm）
+`$ tar -zxf curl-7.20.0.tar.gz`
+
+--进入解压后的目录内
+`$ cd curl-7.17.1`
+
+--配置，指定安装的目录，这里是“/usr/local/curl”
+`$ ./configure --prefix=/usr/local/curl`
+
+--
+# make
+--安装
+# make install
+--安装完毕
+
+使用：
+将curl命令加入环境变量，
+命令行里执行（仅对本会话起作用，或者在.bash_profile、.bashrc文件里配置环境变量）：
+# export PATH=$PATH:/usr/local/curl/bin
+
+设置环境变量 
+#vi /etc/profile 添加以下内容： export PATH=$PATH:/usr/local/curl/bin
+
+Ubuntu 用户安装下载器 cURL 7.36.0  http://www.linuxidc.com/Linux/2014-05/102269.htm
+
+Linux curl使用简单介绍 http://www.linuxidc.com/Linux/2008-01/10891.htm
+
+Unix下Curl的使用方法及常用功能记录分享 http://www.linuxidc.com/Linux/2012-08/69154.htm
+
+curl命令使用 http://www.linuxidc.com/Linux/2014-09/107018.htm
