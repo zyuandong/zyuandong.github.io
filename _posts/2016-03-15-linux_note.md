@@ -70,6 +70,7 @@ Linux 下通用安装配置 curl 工具
 --
 # make
 --安装
+
 # make install
 --安装完毕
 
@@ -82,6 +83,9 @@ Linux 下通用安装配置 curl 工具
 #vi /etc/profile 添加以下内容： export PATH=$PATH:/usr/local/curl/bin
 
 Ubuntu 用户安装下载器 cURL 7.36.0  http://www.linuxidc.com/Linux/2014-05/102269.htm
+
+Ubuntu下，只需一条命令即可：
+`$ sudo apt-get install curl`
 
 Linux curl使用简单介绍 http://www.linuxidc.com/Linux/2008-01/10891.htm
 
