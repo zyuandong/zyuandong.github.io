@@ -1,5 +1,5 @@
 ---
-title: Angular 实现即时搜索 
+title: AngularJS 实现即时搜索 
 category: angular.js
 tag: [angular.js, javascript]
 ---
