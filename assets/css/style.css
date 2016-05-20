@@ -914,9 +914,6 @@ tbody tr:hover {
   display: table-cell;
   vertical-align: middle;
 }
-#mask-layer .mask-layer-box .mask-layer-img img {
-  cursor: -webkit-zoom-out;
-}
 #mask-layer .mask-layer-btn {
   width: 40px;
   height: 40px;
