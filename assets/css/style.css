@@ -464,6 +464,7 @@ tbody tr:hover {
 #contents .contents-box img {
   width: auto;
   max-width: 100%;
+  cursor: -webkit-zoom-in;
 }
 /* 日志展示 end */
 /* copyright */
@@ -912,6 +913,9 @@ tbody tr:hover {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+}
+#mask-layer .mask-layer-box .mask-layer-img img {
+  cursor: -webkit-zoom-out;
 }
 #mask-layer .mask-layer-btn {
   width: 40px;
