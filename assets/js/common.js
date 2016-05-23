@@ -245,10 +245,11 @@ function pjaxEnd(){
     
 function bindActive() {
     $('.x-pjax, .page-next, .page-previous').on('click', function() {
-        var $_id = $(this).data("id");
-        $('.x-pjax').removeClass('active').each(function() {
-            if ($(this).data('id') == $_id) {
-                $(this).addClass('active');
+        var id = $(this).data("id");
+        $_xpjax = $('.x-pjax');
+        $_xpjax.each(function() {
+            if ($(this).data('id') == id) {
+                $(this).addClass('active').siblings().removeClass('active');
             }
         });
     });
