@@ -37,10 +37,18 @@
         li {
             padding: 10px 30px;
             cursor: pointer;
+            text-align: center;
+            color: @blue;
+
+            &:hover {
+                color: @white;
+            }
+            /*
             display: flex;
             flex-wrap: row nowrap;
             align-items: stretch;
             justify-content: space-around;
+            */
         }
     }
 
@@ -54,6 +62,10 @@
     //  flex-wrap: row nowrap;
         align-items: stretch;
         justify-content: space-around;
+
+        a:hover {
+            color: @white;
+        }
     }
 }
 /* main nav end */

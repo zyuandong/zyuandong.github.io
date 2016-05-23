@@ -165,10 +165,17 @@ tbody tr:hover {
 .guid ul li {
   padding: 10px 30px;
   cursor: pointer;
-  display: flex;
-  flex-wrap: row nowrap;
-  align-items: stretch;
-  justify-content: space-around;
+  text-align: center;
+  color: #5bc0de;
+  /*
+            display: flex;
+            flex-wrap: row nowrap;
+            align-items: stretch;
+            justify-content: space-around;
+            */
+}
+.guid ul li:hover {
+  color: #ffffff;
 }
 .guid .my-msg {
   width: 100%;
@@ -178,6 +185,9 @@ tbody tr:hover {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
+}
+.guid .my-msg a:hover {
+  color: #ffffff;
 }
 /* main nav end */
 /* article、categories、tags common style */
