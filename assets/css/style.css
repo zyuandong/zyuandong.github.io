@@ -229,11 +229,6 @@ tbody tr:hover {
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
-.ul-style ul .date-tip {
-  font-size: 14px;
-  color: #dd1144;
-  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
-}
 /* article、categories、tags common style end */
 /* article */
 .articles-all {
@@ -277,7 +272,7 @@ tbody tr:hover {
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
-.articles-all ul .date-tip {
+.articles-all .date-tip {
   font-size: 14px;
   color: #dd1144;
   font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
@@ -355,11 +350,6 @@ tbody tr:hover {
   text-decoration: none;
   border-left: 5px solid #5bc0de;
 }
-.category-all ul .date-tip {
-  font-size: 14px;
-  color: #dd1144;
-  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
-}
 /* categories end */
 /* tags */
 .tags-all {
@@ -424,11 +414,6 @@ tbody tr:hover {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   border-left: 5px solid #5bc0de;
-}
-.tags-all ul .date-tip {
-  font-size: 14px;
-  color: #dd1144;
-  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
 /* tags end */
 /* 日志展示 */
