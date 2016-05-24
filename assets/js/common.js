@@ -57,12 +57,12 @@ $(function(){
         if ($(this).hasClass('show')){
             $(this).removeClass('show');
             $('#sidebar-panel').animate({
-                right: '-280px'
+                right: '-275px'
             }, 300).dequeue();
         } else {
             $(this).addClass('show');
             $('#sidebar-panel').animate({
-                right: '0'
+                right: '15px'
             }, 300).dequeue();
         }
     });
