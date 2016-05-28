@@ -15,5 +15,7 @@
 	}{% if forloop.last == false %},{% endif %}
 {% endfor %}
 	],
-	"size": {{ site.posts | size }}
+	"size": {{ site.posts | size }},
+	"category": [],
+	"tags": []
 }
