@@ -33,25 +33,25 @@ jQuery 提供了两种扩展方法，`jQuery.extend()` 和 `jQuery.fn.extend()`�
 
 `jQuery.extend()` - 是对 jQuery 这个类的扩展。
 
-比如常用的去掉字符串首尾空格的方法 `trim()`这样，我们可以通过 `$` 直接调用此方法，如 `$.trim("   hello, shiyanlou   ")`。
+比如常用的去掉字符串首尾空格的方法 `trim()`这样，我们可以通过 `$` 直接调用此方法，如 `$.trim("   Hello, World   ")`。
 
 我们就用这种方式扩展一个简单的方法：
 
 ```
 jQuery.extend({
     say: function() {
-        alert('shiyanlou');
+        alert('Hello, World');
     }
 });
 ```
 
-这样，我们就可以通过 `$.say();` 这样的方式打印出 `shiyanlou` 这个字符串。
+这样，我们就可以通过 `$.say();` 这样的方式打印出 `Hello, World` 这个字符串。
 
 `jQuery.fn.extend()` - 其实，这也就是扩展 `jQuery.fn`的方法 ，即 `jQuery.prototype` ，扩展 jQuery 对象的方法。
 
-换个方式说，也就是 `jQuery.fn.extend` 扩展的方法，只能用到 jQuery 对象上，假如还是扩展了一 `say()` 方法，我们的这样使用 `$("#id").say()`，要这样用 `$.say()` 是会报错误的。
+意思就是 `jQuery.fn.extend` 扩展的方法，只能用到 jQuery 对象上。举例，假如还是扩展了一 `say()` 方法，我们的这样使用 `$("#id").say()`，要这样用 `$.say()` 是会报错误的。
 
-总结一下，`jQuery.extend()` 主要是用来扩展全局函数或者选择器；而我们制作插件，常常使用的还是 `jQuery.fn.extend()` 方法。
+总结一下，`jQuery.extend()` 主要是用来扩展全局函数或者选择器；而制作插件，常常使用的还是 `jQuery.fn.extend()` 方法。
 
 ## 四、插件封装
 
@@ -117,7 +117,7 @@ jQuery.extend({
 
 新加的几行代码也就是插件对外的接口。 `slideImg` 是调用的方法名；  `options` 是引用插件时传进来的外部参数； `return` 则开放了对外访问的接口，也很好的保持了 jQuery 级联操作的特性；`init()` 方法是插件的初始化，接下来，我们就一步步从初始化方法开始，完善我们的插件。
 
-到这一步，插件的基本封装已经完成，剩下的工作主要是对插件核心功能的实现。
+到这一步，插件的基本框架已经完成，剩下的工作主要是对插件核心功能的实现。
 
 初始化方法主要是构建好轮播图的 HTML 框架，代码如下
 
