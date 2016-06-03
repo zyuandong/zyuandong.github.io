@@ -3,7 +3,7 @@ $(function(){
     $('#slide-panel .guid-item').on('click', function() {
         var page = $(this).data('page');
         if (page) {
-            $(this).siblings().removeClass('active').addClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
             $('#slide-panel .page-item').hide();
             $('#slide-panel').find('.' + page).show().not('.articles-all').css('display','flex');
         }
