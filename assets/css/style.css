@@ -267,7 +267,7 @@ tbody tr:hover {
 .guid ul li.guid-item:hover {
   color: #ffffff;
 }
-.guid ul .active {
+.guid ul li.active {
   color: #ffffff;
 }
 .guid .my-msg {
