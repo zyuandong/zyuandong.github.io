@@ -1,14 +1,4 @@
 $(function(){
-    // switch file category tag
-    $('#slide-panel .guid-item').on('click', function() {
-        var page = $(this).data('page');
-        if (page) {
-            $(this).addClass('active').siblings().removeClass('active');
-            $('#slide-panel .page-item').hide();
-            $('#slide-panel').find('.' + page).show().not('.articles-all').css('display','flex');
-        }
-    });
-
     // click toggle-btn to show or hide slide-panel
     $('#toggle').on('click', function() {
         if ($(this).hasClass('fullscreen')) {
@@ -148,6 +138,16 @@ $(function(){
 });
     
 function pjaxEnd(){
+    // switch file category tag
+    $('#slide-panel .guid-item').on('click', function() {
+        var page = $(this).data('page');
+        if (page) {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('#slide-panel .page-item').hide();
+            $('#slide-panel').find('.' + page).show().not('.articles-all').css('display','flex');
+        }
+    });
+
     // menu automatic hide in mobile
     if ($(window).width() <= 640) {
         $('#slide-panel').animate({
