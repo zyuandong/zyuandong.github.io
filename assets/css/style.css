@@ -252,7 +252,7 @@ tbody tr:hover {
   padding: 0;
   list-style: none;
 }
-.guid ul li {
+.guid ul li.guid-item {
   padding: 10px 30px;
   cursor: pointer;
   text-align: center;
@@ -264,7 +264,10 @@ tbody tr:hover {
             justify-content: space-around;
             */
 }
-.guid ul li:hover {
+.guid ul li.guid-item:hover {
+  color: #ffffff;
+}
+.guid ul .active {
   color: #ffffff;
 }
 .guid .my-msg {
