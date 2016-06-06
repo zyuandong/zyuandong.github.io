@@ -311,7 +311,7 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
 |------|------|----------|--------|
 | collection | meteor Collection Object / Reactive Function | 是 | |
 | autoClientSave | Boolean | 否 | True |
-| updateCollection | Meteor Collection Object | 否 | | |
+| updateCollection | Meteor Collection Object | 否 | |
 
 *$meteor.object()：*
 

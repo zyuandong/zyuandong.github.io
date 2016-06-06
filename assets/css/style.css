@@ -175,18 +175,18 @@ table {
   border-collapse: collapse;
 }
 thead {
-  background-color: #5bc0de;
+  background-color: #ccc;
 }
 tbody {
-  background-color: #E7F1EE;
+  background-color: #eee;
 }
 th,
 td {
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
 }
 tbody tr:hover {
-  background-color: #5bc0de;
+  background-color: #ccc;
 }
 /* table end */
 /* selection */
