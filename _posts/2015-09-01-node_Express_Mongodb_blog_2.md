@@ -59,7 +59,7 @@ ejs 模板引擎的 include 语法简单粗暴，它不像许多模板能够引�
 
 我们先来搭建一个首页 index.ejs，课程**最终**完成的样式如下：
 
-![此处输入图片的描述](https://dn-anything-about-doc.qbox.me/document-uid9061labid1361timestamp1441935469652.png/wm)
+![此处输入图片的描述 - https://dn-anything-about-doc.qbox.me/document-uid9061labid1361timestamp1441935469652.png/wm)
 
 ```
 <!DOCTYPE html>

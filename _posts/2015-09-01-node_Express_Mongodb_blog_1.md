@@ -199,7 +199,7 @@ router.get('/', functoin(req, res) {
 
 现在我们直接访问 `localhost:3000/login` 会显示：
 
-![未创建路由规则](https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441703944897.png/wm)
+![未创建路由规则 - https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441703944897.png/wm)
 
 这是因为我们还没有建立 /login 这一路由规则
 
@@ -213,11 +213,11 @@ router.get('/login', function(req, res, next) {
 
 `Ctrl + c` 停止服务，`node app.js` 再次启动服务，访问 `localhost:3000/login` 后显示：
 
-![未创建对应的视图模板文件](https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441703871058.png/wm)
+![未创建对应的视图模板文件 - https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441703871058.png/wm)
 
 出现这个错误是因为 view 中并没用 login 对应的文件，添加 login.ejs 文件，文件中写入 `<%= title %>`，直接刷新浏览器，这时便可以看到正确的显示：
 
-![正确显示](https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441704219657.png/wm)
+![正确显示 - https://dn-anything-about-doc.qbox.me/document-uid9061labid1356timestamp1441704219657.png/wm)
 
 还记得之前简单讲解过 Express 生成的模板框架吗，routes 中存放路由文件，views 中存放视图文件，这就相当于 MVC 模式中的 C 和 V，而 index.ejs 文件中的 `<%= title %>` 是 ejs 模板引擎的语句，意思是将后台传递来的 title 数据在页面中显示出来。
 
