@@ -140,7 +140,6 @@ $(function(){
 function pjaxEnd(){
     // switch file category tag
     $('#slide-panel .guid-item').on('click', function() {
-        console.log(333);
         var page = $(this).data('page');
         $(this).addClass('active').siblings().removeClass('active');
         if (page) {
@@ -175,44 +174,42 @@ function pjaxEnd(){
 
     // get sidebar list
     var html = '',
-        heightArr = [];
+        topArr = [];
     $('#sidebar-panel .pin').css('top', '5px');
     $('.date-tags').nextAll('h1,h2,h3,h4,h5,h6').each(function(i) {
         switch (this.tagName) {
             case 'H1':
-                heightArr.push($(this).get(0).offsetTop);
-                //$(this).attr('id', 'title'+i);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h1 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h1"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
             case 'H2':
-                heightArr.push($(this).get(0).offsetTop);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h2 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h2"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
             case 'H3':
-                heightArr.push($(this).get(0).offsetTop);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h3 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h3"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
             case 'H4':
-                heightArr.push($(this).get(0).offsetTop);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h4 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h4"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
             case 'H5':
-                heightArr.push($(this).get(0).offsetTop);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h5 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h5"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
             case 'H6':
-                heightArr.push($(this).get(0).offsetTop);
-                $(this).attr({'id':'title'+i, 'class':'title'});
-                html += '<li class="li-h6 title'+i+'"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
+                topArr.push($(this).get(0).offsetTop);
+                $(this).attr('id', 'title'+i);
+                html += '<li class="li-h6"><a href="#title'+i+'" data-index="'+ i +'">'+$(this).text()+'</a></li>';
                 break;
         }
     });
-
     if (html.length) {
         $('#sidebar-panel .sidebar-panel-ul').html(html);
         $('#sidebar-btn, #sidebar-panel').show();
@@ -221,22 +218,23 @@ function pjaxEnd(){
         $('#sidebar-btn, #sidebar-panel').hide();
     }
 
+    // sidebar-mapping by contents scroll
+    $('#contents').scroll(function() {
+        var t = $(this).scrollTop();
+
+        for (var i = topArr.length - 1; i >= 0; i--) {
+            if (t >= topArr[i]) {
+                $('.pin').css('top', i * 24 + 5 + 'px');
+                break;
+            }
+        }
+    })
+
     // focus list active
-    $('.sidebar-panel-ul li a').on('click', function() {
+    $('.sidebar-panel-ul li a').click(function() {
         var index = $(this).data('index');
         $('.pin').css('top', index * 24 + 5 + 'px');
     });
-
-    // relating sidebar content-box scroll
-    /*
-    $('#contents').scroll(function() {
-        var top = $('.title', this).offset().top;
-        console.log(top);
-        if (top == 0) {
-            console.log('success');
-        }
-    });
-    */
 
     // show image with full screen
     $('#contents img').click(function() {
