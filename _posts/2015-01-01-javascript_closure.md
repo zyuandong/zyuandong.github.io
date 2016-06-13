@@ -1,5 +1,5 @@
 ---
-title: 详解javascript闭包【转载】
+title: JavaScript 闭包【转载】
 category: javascript
 tags: [javascript, 闭包]
 ---
