@@ -92,6 +92,8 @@ $(function(){
                 $(this).show().siblings().hide();
             }
         });
+
+        bindActive();
     });
     
     // get tags-list
@@ -102,6 +104,8 @@ $(function(){
                 $(this).show().siblings().hide();
             }
         });
+
+        bindActive();
     });
     
     pjaxEnd();
@@ -219,9 +223,10 @@ function bindActive() {
     $('.x-pjax, .page-next, .page-previous').on('click', function() {
         var id = $(this).data("id");
         $_xpjax = $('.x-pjax');
+        $_xpjax.removeClass('active');
         $_xpjax.each(function() {
             if ($(this).data('id') == id) {
-                $(this).addClass('active').siblings().removeClass('active');
+                $(this).addClass('active');
             }
         });
     });
