@@ -1,7 +1,7 @@
 ---
 title: JavaScript 作用域
 category: javascript
-tag: javascript
+tag: JavaScript
 ---
 
 ## 概要

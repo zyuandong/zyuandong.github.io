@@ -1,7 +1,7 @@
 ---
 title: 总结AMD和CMD规范
 category: javascript
-tags: [javascript, 规范] 
+tags: [JavaScript, 规范] 
 ---
 
 ### 3.1 AMD 规范

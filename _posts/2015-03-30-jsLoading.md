@@ -1,7 +1,7 @@
 ---
 title: 资源加载顺序小结
 category: javascript
-tag: javascript
+tag: JavaScript
 monthLast: true
 ---
 

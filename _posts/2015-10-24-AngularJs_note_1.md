@@ -1,7 +1,7 @@
 ---
 title: angular.js学习笔记（一）
 category: angular.js
-tags: [javascript, angular.js]
+tags: [JavaScript, angular.js]
 ---
 
 ng-app

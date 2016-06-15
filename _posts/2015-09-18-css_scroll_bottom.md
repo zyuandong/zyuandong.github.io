@@ -1,7 +1,7 @@
 ---
 title: 滚动条自动滚到底部
 category: 杂物间
-tags: [web, javascript]
+tags: [web, JavaScript]
 monthLast: true
 ---
 

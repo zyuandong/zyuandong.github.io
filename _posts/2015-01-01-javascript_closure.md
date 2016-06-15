@@ -1,10 +1,10 @@
 ---
 title: JavaScript 闭包【转载】
 category: javascript
-tags: [javascript, 闭包]
+tags: [JavaScript, 闭包]
 ---
 
-闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
+闭包（closure）是 Javascript 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
 
 ## 闭包的特性
 

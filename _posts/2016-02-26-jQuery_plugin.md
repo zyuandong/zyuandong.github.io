@@ -1,7 +1,7 @@
 ---
 title: 制作jQuery插件
 category: javascript
-tags: [javascript, jQuery]
+tags: [JavaScript, jQuery]
 monthLast: true
 ---
 

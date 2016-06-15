@@ -1,7 +1,7 @@
 ---
 title: 认识javascript
 category: javascript
-tag: javascript
+tag: JavaScript
 ---
 
 ## for-in循环

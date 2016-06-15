@@ -1,7 +1,7 @@
 ---
 title: AngularJS 实现即时搜索 
 category: angular.js
-tag: [angular.js, javascript]
+tag: [angular.js, JavaScript]
 ---
 
 ## 二、基础知识储备
