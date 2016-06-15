@@ -19,6 +19,7 @@ kramdown:
     input: GFM
 
 defaults:
+  -
     scope:
       path: ""
       type: "posts"
