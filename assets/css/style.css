@@ -418,6 +418,9 @@ tbody tr:hover {
 .category-all .category-box {
   overflow-y: auto;
 }
+.category-all .category-box ul {
+  display: none;
+}
 .category-all ul {
   margin: 0;
   padding: 0 0 20px 0;
@@ -482,6 +485,9 @@ tbody tr:hover {
 }
 .tags-all .tags-box {
   overflow-y: auto;
+}
+.tags-all .tags-box ul {
+  display: none;
 }
 .tags-all ul {
   margin: 0;
