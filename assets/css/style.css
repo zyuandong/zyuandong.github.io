@@ -542,7 +542,8 @@ tbody tr:hover {
   padding: 10px;
   border-bottom: 1px dashed #ccc;
 }
-#contents .contents-box .date-tags .date {
+#contents .contents-box .date-tags .date,
+#contents .contents-box .date-tags .category {
   margin-right: 20px;
 }
 #contents .contents-box .page-previous {
