@@ -1,7 +1,7 @@
 ---
 title: AngularJS 实现简易聊天室
 category: angular.js
-tag: angular.js
+tag: AngularJS
 ---
 
 ## 一、框架搭建

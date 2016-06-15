@@ -1,7 +1,7 @@
 ---
-title: meteor+angular.js简易论坛（四）
+title: meteor+AngularJS 简易论坛（四）
 category: angular.js
-tags: [meteor, angular.js]
+tags: [meteor, AngularJS]
 ---
 
 ## 显示节点下的帖子列表

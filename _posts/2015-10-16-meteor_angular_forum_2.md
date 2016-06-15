@@ -1,7 +1,7 @@
 ---
-title: meteor+angular.js简易论坛（二）
+title: meteor+AngularJS 简易论坛（二）
 category: angular.js
-tags: [meteor, angular.js]
+tags: [meteor, AngularJS]
 ---
 
 ## 添加路由控制
