@@ -1,5 +1,5 @@
 ---
-title: 认识javascript
+title: 认识 JavaScript
 category: javascript
 tag: JavaScript
 ---
