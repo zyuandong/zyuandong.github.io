@@ -30,7 +30,9 @@
             {% include header-category.html %}
             {% include header-tag.html %}
         </div>
+        <div class="blog-content">
         {{ content }}
+        </div>
 
         {% if page.previous %}
         <span class="page-previous" data-id="{{ page.previous.id }}">
