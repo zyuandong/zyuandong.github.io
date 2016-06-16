@@ -1,6 +1,6 @@
 ---
 title: JavaScript 闭包【转载】
-category: javascript
+category: 前端技术
 tags: [JavaScript, 闭包]
 ---
 

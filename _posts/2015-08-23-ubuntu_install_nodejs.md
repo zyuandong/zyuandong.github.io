@@ -1,7 +1,7 @@
 ---
 title: Node.js 安装及版本控制
-category: node.js
-tag: node.js
+category: 后端技术
+tag: Node.js
 ---
 
 安装方式有以下几种：

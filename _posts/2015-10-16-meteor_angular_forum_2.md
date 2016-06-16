@@ -1,6 +1,6 @@
 ---
 title: meteor+AngularJS 简易论坛（二）
-category: angular.js
+category: 框架/库
 tags: [meteor, AngularJS]
 ---
 

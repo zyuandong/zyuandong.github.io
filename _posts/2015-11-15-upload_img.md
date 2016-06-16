@@ -1,7 +1,7 @@
 ---
 title: Node.js 图片上传
-category: node.js
-tags: [node.js, JavaScript]
+category: 后端技术
+tags: [Node.js, JavaScript]
 ---
 
 ```

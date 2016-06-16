@@ -1,6 +1,6 @@
 ---
 title: 认识 JavaScript
-category: javascript
+category: 前端技术
 tag: JavaScript
 ---
 

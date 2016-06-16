@@ -1,6 +1,6 @@
 ---
 title: 总结AMD和CMD规范
-category: javascript
+category: 前端技术
 tags: [JavaScript, 规范] 
 ---
 

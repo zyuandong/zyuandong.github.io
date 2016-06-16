@@ -1,6 +1,6 @@
 ---
-title: web前端安全
-category: web
+title: web 安全
+category: 前端技术
 tag: web
 monthLast: true
 ---

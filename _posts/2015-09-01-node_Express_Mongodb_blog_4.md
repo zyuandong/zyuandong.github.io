@@ -1,7 +1,7 @@
 ---
-title: node.js开发博客系统（四）
-category: node.js
-tags: [node.js, Express, mongoDB]
+title: Node.js 开发博客系统（四）
+category: 后端技术
+tags: [Node.js, Express, mongoDB]
 ---
 
 # 功能模块整理
