@@ -1,5 +1,5 @@
 ---
-title: 使用jekyll中的Category和Tag
+title: jekyll中使用Category和Tag
 category: 杂物间
 tag: jekyll
 monthLast: true

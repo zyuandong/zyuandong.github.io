@@ -1,5 +1,5 @@
 ---
-title: 认识 JavaScript
+title: JavaScript 笔记
 category: 前端技术
 tag: JavaScript
 ---
