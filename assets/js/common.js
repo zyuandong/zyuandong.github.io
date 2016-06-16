@@ -208,14 +208,49 @@ function pjaxEnd(){
                 break;
             }
         }
-    })
+    });
 
-    // show image with full screen
+    // blog-title category mapping menu
     $('#contents img').click(function() {
         var img = new Image();
         img.src = $(this).attr('src');
         $('#mask-layer').show();
         $('#mask-layer .mask-layer-img').html(img);
+    });
+
+    $('.blog-title .title-category').click(function() {
+        var key = $(this).data('cateHref');
+        $('.category-all .category-item').each(function() {
+            if ($(this).data('category') == key) {
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+        });
+        $('.category-box ul').each(function() {
+            if ($(this).data('cateBox') == key) {
+                $(this).show().siblings().hide();
+            }
+        });
+        $('#slide-panel .categories').addClass('active').siblings().removeClass('active');
+        $('#slide-panel .page-item').hide();
+        $('.category-all').show();
+    });
+
+    // blog-title tag mapping menu
+    $('.blog-title .title-tag').click(function() {
+        var key = $(this).data('tagHref');
+        $('.tags-all .tags-item').each(function() {
+            if ($(this).data('tag') == key) {
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+        });
+        $('.tags-box ul').each(function() {
+            if ($(this).data('tagBox') == key) {
+                $(this).show().siblings().hide();
+            }
+        });
+        $('#slide-panel .tags').addClass('active').siblings().removeClass('active');
+        $('#slide-panel .page-item').hide();
+        $('.tags-all').show();
     });
 }
     
