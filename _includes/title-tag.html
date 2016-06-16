@@ -22,6 +22,8 @@
     {% assign tags_content_total = '' %}
 {% endif %}
 
+{% if page.tags %}
 <span class="tags">
     {{ tags_content_total }}
 </span>
+{% endif %}
