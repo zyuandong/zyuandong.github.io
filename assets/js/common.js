@@ -12,25 +12,23 @@ $(function(){
     // get categories-list
     $('.category-all .category-item').on('click', function() {
         var key = $(this).data('category');
+        $(this).addClass('active').siblings().removeClass('active');
         $('.category-box ul').each(function() {
             if ($(this).data('cateBox') == key) {
                 $(this).show().siblings().hide();
             }
         });
-
-        bindActive();
     });
 
     // get tags-list
     $('.tags-all .tags-item').on('click', function() {
         var key = $(this).data('tag');
+        $(this).addClass('active').siblings().removeClass('active');
         $('.tags-box ul').each(function() {
             if ($(this).data('tagBox') == key) {
                 $(this).show().siblings().hide();
             }
         });
-
-        bindActive();
     });
 
     // click toggle-btn to show or hide slide-panel
