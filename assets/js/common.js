@@ -232,7 +232,7 @@ function pjaxEnd(){
         });
         $('#slide-panel .categories').addClass('active').siblings().removeClass('active');
         $('#slide-panel .page-item').hide();
-        $('.category-all').show();
+        $('.category-all').css('display','flex').show();
     });
 
     // blog-title tag mapping menu
@@ -250,7 +250,7 @@ function pjaxEnd(){
         });
         $('#slide-panel .tags').addClass('active').siblings().removeClass('active');
         $('#slide-panel .page-item').hide();
-        $('.tags-all').show();
+        $('.tags-all').css('display','flex').show();
     });
 }
     
