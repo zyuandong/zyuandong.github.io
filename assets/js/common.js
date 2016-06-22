@@ -249,7 +249,6 @@ function pjaxEnd() {
     $('.sidebar-panel-ul li a').click(function() {
         var self = $(this);
         setTimeout(function() {
-            console.log(self.data('index'));
             var index = self.data('index');
             $('.pin').css('top', index * 24 + 5 + 'px');
         }, 500);
