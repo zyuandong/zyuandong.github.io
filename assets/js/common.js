@@ -98,7 +98,6 @@ $(function(){
     });
 
     // use jquery-pjax
-    bindActive();
     $(document).pjax('[data-pjax] a, a[data-pjax]', '#contents', {fragment: '#contents', timeout: 10000});
     $(document).on({
         'pjax:click': function() {
@@ -116,16 +115,11 @@ $(function(){
         }
     });
 
-    // focus list active
-    $('.sidebar-panel-ul li a').click(function() {
-        var index = $(this).data('index');
-        $('.pin').css('top', index * 24 + 5 + 'px');
-    });
-    
+    bindActive();
     pjaxEnd();
 });
     
-function pjaxEnd(){
+function pjaxEnd() {
     // menu automatic hide in mobile
     if ($(window).width() <= 640) {
         $('#slide-panel').animate({
@@ -196,18 +190,6 @@ function pjaxEnd(){
         $('#sidebar-btn, #sidebar-panel').hide();
     }
 
-    // sidebar-mapping by contents scroll
-    $('#contents').scroll(function() {
-        var t = $(this).scrollTop();
-
-        for (var i = topArr.length - 1; i >= 0; i--) {
-            if (t >= topArr[i]) {
-                $('.pin').css('top', i * 24 + 5 + 'px');
-                break;
-            }
-        }
-    });
-
     // blog-title category mapping menu
     $('#contents img').click(function() {
         var img = new Image();
@@ -249,6 +231,28 @@ function pjaxEnd(){
         $('#slide-panel .tags').addClass('active').siblings().removeClass('active');
         $('#slide-panel .page-item').hide();
         $('.tags-all').css('display','flex').show();
+    });
+
+    // sidebar-mapping by contents scroll
+    $('#contents').scroll(function() {
+        var t = $(this).scrollTop();
+
+        for (var i = topArr.length - 1; i >= 0; i--) {
+            if (t >= topArr[i]) {
+                $('.pin').css('top', i * 24 + 5 + 'px');
+                break;
+            }
+        }
+    });
+
+    // focus list active
+    $('.sidebar-panel-ul li a').click(function() {
+        var self = $(this);
+        setTimeout(function() {
+            console.log(self.data('index'));
+            var index = self.data('index');
+            $('.pin').css('top', index * 24 + 5 + 'px');
+        }, 500);
     });
 }
     

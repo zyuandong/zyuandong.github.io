@@ -558,7 +558,7 @@ tbody tr:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  margin: 15px 0;
+  margin: 30px 0;
 }
 #contents .contents-box .page-next {
   float: right;
@@ -567,7 +567,7 @@ tbody tr:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  margin: 15px 0;
+  margin: 30px 0;
 }
 #contents .contents-box:after {
   content: '';
