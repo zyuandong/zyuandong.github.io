@@ -7,54 +7,93 @@ monthLast: true
 
 ## 1. 单元表格
 
+HTML:
 ```
-div {
+<body>
+    <div class="box">
+        <div class="demo">
+            <img src="http://i1.piimg.com/503500/97e61bc409806ae1.jpg">
+            <!--我是一行居中的文字-->
+        </div>
+    </div>
+</body>
+```
+
+CSS:
+```
+.box {
+    width: 300px;
     height: 300px;
+    display: table;
+    background: #ccc;
+}
+
+// .demo 部分是关键代码
+.demo {
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
+}
+
+.demo img {
+    width: 100px;
 }
 ```
 
-兼容 IE8+，及大多浏览器，作为一个合法的单元格，其父辈元素要有 `display: table;` 出现
+优点：
+1. 兼容 IE8+，及大多浏览器
+2. 代码简单
+3. 图片、文字均适用
+
+缺点：
+父辈元素要出现 `display: table;` 属性。
 
 ## 2. 绝对居中
 
+HTML: 
 ```
-div {
-    margin: auto;
+<body>
+    <div class="box">
+        <div class="demo">
+            <img src="http://i1.piimg.com/503500/97e61bc409806ae1.jpg">
+        </div>
+    </div>
+</body>
+```
+
+CSS:
+```
+.box {
+    width: 300px;
+    height: 300px;
+    background: #ccc;
+    position: relative;
+}
+
+// .demo 部分是关键代码
+.demo {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: **px;
-    height: **px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
 }
-```
-没想到 `margin: auto;` 也能实现垂直居中，这方法简单，无需其他标记，超实用。兼容 IE8+，
 
-## 3. 利用IE layout
-
-```
-div1 {
-    height: 300px;
-    position: relative;
-}
-div1 div2{
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-div1 div2 div3{
-    position: relative;
-    top: -50%;
-    left: 0;
+.demo img {
+    width: 100px;
 }
 ```
 
-IE5、6、7 有效，IE8+ 和其他浏览器无效
+优点：
+1. 兼容 IE8+
+2. 代码简单
 
-结合以上两点可接近完美效果。
+缺点：
+居中元素需要设置 `height`，这样意味着如果居中元素中有文字，文字将会从顶部排列，并不是完全垂直居中。
+
 
 [资料一](http://blog.csdn.net/freshlover/article/details/11579669)
 
