@@ -8,6 +8,7 @@ monthLast: true
 ## 1. 单元表格
 
 HTML:
+
 ```
 <body>
     <div class="box">
@@ -20,6 +21,7 @@ HTML:
 ```
 
 CSS:
+
 ```
 .box {
     width: 300px;
@@ -51,6 +53,7 @@ CSS:
 ## 2. 绝对居中
 
 HTML: 
+
 ```
 <body>
     <div class="box">
@@ -62,6 +65,7 @@ HTML:
 ```
 
 CSS:
+
 ```
 .box {
     width: 300px;
