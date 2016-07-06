@@ -155,7 +155,7 @@ p code {
   color: #dd1144;
   padding: 2px 4px;
   background-color: #eee;
-  border: 1px solid #ddd;
+  border-radius: 4px;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* code end */
