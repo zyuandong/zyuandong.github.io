@@ -302,6 +302,50 @@ CSS:
 
 ## 10. 行内块元素（Inline-Block）
 
+很受欢迎的一种居中实现方式，基本思想是使用 `display: inline-block`, `vertical-align: middle` 和一个伪元素让内容块处于容器中央。
+
+HTML:
+
+```
+<div class="box">
+    <div class="demo">
+        <p>这里是一行文本，居中测试</p>
+        <p>这是第二行测试文本</p>
+    </div>
+</div>
+```
+
+CSS:
+
+```
+.box {
+    text-align: center;
+    overflow: auto;
+    height: 400px;
+}
+// 关键代码
+.box:after,
+.demo {
+    display: inline-block;;
+    vertical-align: middle;
+}
+.box:after {
+    content: '';
+    height: 100%;
+    margin-left: -0.25em; /* To offset spacing. May vary by font */  
+}
+.demo {
+    max-width: 99%;
+    // or  max-width: calc(100% - 0.25em);
+}
+```
+
+这是一种很 hack 的方法，和 `table-cell` 方式差不多，浏览器的支持也很好。但需要注意如果内容块内容很长，会将内容块挤错位。
+
+（使用伪元素 `:after`，内容块会被挤到容器顶部；使用伪元素 `:before`，内容块会往下偏移，偏移量为容器的 `height`）。
+
+因此内容块的最大宽度不能超过容器的 100% 减去 0.25em，或者可以直接设置 `max-width: 99%;`
+
 ## 11. 弹性盒子（Flexbox）
 
 CSS3 新增属性，也是设计趋势，不仅用于居中，还能帮助解决分栏、布局等问题。
