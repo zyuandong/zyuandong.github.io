@@ -351,7 +351,7 @@ CSS:
 // 关键代码
 .box:after,
 .demo {
-    display: inline-block;;
+    display: inline-block;
     vertical-align: middle;
 }
 .box:after {
@@ -423,5 +423,3 @@ CSS:
 
 
 [资料一](http://blog.csdn.net/freshlover/article/details/11579669)
-
-[资料二](http://blog.163.com/hongshaoguoguo@126/blog/static/1804698120135156225265/)
