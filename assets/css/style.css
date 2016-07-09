@@ -149,16 +149,16 @@ pre code {
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* code block end */
-/* code */
+/* code inline*/
 li code,
 p code {
   color: #dd1144;
   padding: 2px 4px;
-  background-color: #eee;
+  background-color: #f9f2f4;
   border-radius: 4px;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
-/* code end */
+/* code inline end */
 /* 引用 */
 blockquote {
   background-color: #eee;
