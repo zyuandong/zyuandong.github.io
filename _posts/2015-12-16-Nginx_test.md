@@ -1,7 +1,7 @@
 ---
 title: Nginx 端口映射访问
 category: 后端技术
-tags: [Nginx]
+tags: Nginx
 ---
 
 ## 故事的开始
