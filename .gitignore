@@ -1,3 +1,4 @@
 /_site/*
 npm-debug.log
 .idea/
+.DS_store
