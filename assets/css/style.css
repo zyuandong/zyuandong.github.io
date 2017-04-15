@@ -99,6 +99,7 @@ body {
   line-height: 1.5;
   overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
+  background: url("../img/bg-img.jpg");
 }
 /* a tag */
 a {
@@ -981,7 +982,6 @@ tbody tr:hover {
 }
 @media screen and (min-width: 800px) {
   #contents {
-    background-color: #eee;
   }
   #contents .contents-box {
     padding: 0 20px;
