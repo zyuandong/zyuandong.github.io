@@ -1,11 +1,11 @@
 # Site settings
 title:       My Blog :)
-description: "bakerz's blog"
+description: "zfareast's blog"
 
 author: 
-  name: bakerz
+  name: zfareast
   email:  de1719@163.com
-  github: https://github.com/bakerz
+  github: https://github.com/zfareast
 
 # Serving
 baseurl: /simplex
@@ -24,4 +24,4 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "default"
+      layout: "layout"
