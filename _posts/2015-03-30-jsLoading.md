@@ -39,12 +39,10 @@ document.onreadystatechange = function() {
 
 ## 浏览器之间的区别
 
-## 相关链接
+## 参考资料
 
 [链接一](http://www.cnblogs.com/itprogrammer/archive/2010/10/22/1858131.html)
 
 [链接二](http://www.poluoluo.com/jzxy/201405/275920.html)
 
 [链接三](http://zhangzhaoaaa.iteye.com/blog/2124690)
-
-## 待总结。。。。
