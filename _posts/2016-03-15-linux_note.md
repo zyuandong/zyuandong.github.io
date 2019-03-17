@@ -108,3 +108,5 @@ curl命令使用 http://www.linuxidc.com/Linux/2014-09/107018.htm
 [ssk is not in the sudoers file.This incident will be reported](http://zhidao.baidu.com/link?url=jw9jw0Rnh3IaSbu4S8n-cNL4tK1CZJYpHyuGrPIhV3irQ3TdAe4pkfcVNilUpVlnZeMgC-EFZsWsxo0niJmZ3_)
 
 [Linux curl命令详解](http://www.linuxdiyf.com/linux/2800.html)
+
+[linux中curl安装和使用](https://blog.csdn.net/wanwanmom/article/details/80018882)
