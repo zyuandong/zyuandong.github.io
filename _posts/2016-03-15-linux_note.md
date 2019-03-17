@@ -83,21 +83,14 @@ Linux 下通用安装配置 curl 工具
 使用：
 将curl命令加入环境变量，
 命令行里执行（仅对本会话起作用，或者在.bash_profile、.bashrc文件里配置环境变量）：
-# export PATH=$PATH:/usr/local/curl/bin
 
-设置环境变量 
-#vi /etc/profile 添加以下内容： export PATH=$PATH:/usr/local/curl/bin
+`export PATH=$PATH:/usr/local/curl/bin`
 
-Ubuntu 用户安装下载器 cURL 7.36.0  http://www.linuxidc.com/Linux/2014-05/102269.htm
+设置环境变量 #vi /etc/profile 添加以下内容： export PATH=$PATH:/usr/local/curl/bin
 
 Ubuntu下，只需一条命令即可：
 `$ sudo apt-get install curl`
 
-Linux curl使用简单介绍 http://www.linuxidc.com/Linux/2008-01/10891.htm
-
-Unix下Curl的使用方法及常用功能记录分享 http://www.linuxidc.com/Linux/2012-08/69154.htm
-
-curl命令使用 http://www.linuxidc.com/Linux/2014-09/107018.htm
 
 ## 参考资料
 
@@ -106,6 +99,14 @@ curl命令使用 http://www.linuxidc.com/Linux/2014-09/107018.htm
 [xxx is not in the sudoers file.This incident will be reported.的解决方法](http://www.cnblogs.com/zox2011/archive/2013/05/28/3103824.html)
 
 [ssk is not in the sudoers file.This incident will be reported](http://zhidao.baidu.com/link?url=jw9jw0Rnh3IaSbu4S8n-cNL4tK1CZJYpHyuGrPIhV3irQ3TdAe4pkfcVNilUpVlnZeMgC-EFZsWsxo0niJmZ3_)
+
+[Ubuntu 用户安装下载器 cURL 7.36.0](http://www.linuxidc.com/Linux/2014-05/102269.htm)
+
+[Linux curl使用简单介绍](http://www.linuxidc.com/Linux/2008-01/10891.htm)
+
+[Unix下Curl的使用方法及常用功能记录分享](http://www.linuxidc.com/Linux/2012-08/69154.htm)
+
+[curl命令使用](http://www.linuxidc.com/Linux/2014-09/107018.htm)
 
 [Linux curl命令详解](http://www.linuxdiyf.com/linux/2800.html)
 
