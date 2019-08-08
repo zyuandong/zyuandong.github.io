@@ -12,3 +12,5 @@ tags:
 
 [[AngularJS] AngularJS系列(7) 进阶篇之promise](https://www.cnblogs.com/neverc/p/5928285.html)
 
+[Javascript：Promise对象基础](https://www.jianshu.com/p/82237a7ca6e5)
+
