@@ -42,3 +42,12 @@ v-model.number 不允许输入小数点，因此对于需要输入小数的情�
 [vue如何使用rules对表单字段进行校验](https://www.cnblogs.com/luoxuemei/p/9295506.html)
 
 [Vue事件API](https://github.com/answershuto/learnVue/blob/master/docs/Vue事件机制.MarkDown) *
+
+---
+
+[vuejs学习——vue+vuex+vue-router项目搭建(一)](https://www.cnblogs.com/ychl/p/6107821.html)
+
+[搭建vue+webpack+mock脚手架（一）](https://segmentfault.com/a/1190000008279215)
+
+[5个Vue.js项目的令人敬畏的模板](https://baijiahao.baidu.com/s?id=1606305883663025122&wfr=spider&for=pc)
+
