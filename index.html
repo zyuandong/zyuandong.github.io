@@ -1,181 +1,184 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>zyuandong's Blog</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-        <link rel="stylesheet" type="text/css" href="/simplex/assets/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="/simplex/assets/css/style.css" />
-    </head>
-    <body>
-        <div id="index-container">
-            <canvas height="620" width="1360" id="canvas"></canvas>
-            <div class="breathe"></div>
-            <a href="/simplex/2015/01/01/javascript_closure" class="head-img-box">
-                <img src="/simplex/assets/img/header-img.jpg" class="head-img" />
-            </a>
-        </div>
+<head>
+  <title>zyuandong's Blog</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-        <script>
-            (function () {
-                var canvasEl = document.getElementById('canvas');
-                var ctx = canvasEl.getContext('2d');
-                var mousePos = [0, 0];
+  <link rel="stylesheet" type="text/css" href="/simplex/assets/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/simplex/assets/css/style.css" />
+</head>
 
-                var easingFactor = 5.0;
-                var backgroundColor = '#fff';
-                var nodeColor = '#ddd';
-                var edgeColor = '#ddd';
+<body>
+  <div id="index-container">
+    <canvas height="620" width="1360" id="canvas"></canvas>
+    <div class="breathe"></div>
+    <a href="/simplex/2015/01/01/javascript_closure" class="head-img-box">
+      <img src="/simplex/assets/img/header-img.jpg" class="head-img" />
+    </a>
+  </div>
 
-                var nodes = [];
-                var edges = [];
+  <script>
+    (function () {
+      var canvasEl = document.getElementById('canvas');
+      var ctx = canvasEl.getContext('2d');
+      var mousePos = [0, 0];
 
-                function constructNodes() {
-                    for (var i = 0; i < 100; i++) {
-                        var node = {
-                            drivenByMouse: i == 0,
-                            x: Math.random() * canvasEl.width,
-                            y: Math.random() * canvasEl.height,
-                            vx: Math.random() * 1 - 0.5,
-                            vy: Math.random() * 1 - 0.5,
-                            radius: Math.random() > 0.9 ? 3 + Math.random() * 3 : 1 + Math.random() * 3
-                        };
+      var easingFactor = 5.0;
+      var backgroundColor = '#fff';
+      var nodeColor = '#ddd';
+      var edgeColor = '#ddd';
 
-                        nodes.push(node);
-                    }
+      var nodes = [];
+      var edges = [];
 
-                    nodes.forEach(function (e) {
-                        nodes.forEach(function (e2) {
-                            if (e == e2) {
-                                return;
-                            }
+      function constructNodes() {
+        for (var i = 0; i < 100; i++) {
+          var node = {
+            drivenByMouse: i == 0,
+            x: Math.random() * canvasEl.width,
+            y: Math.random() * canvasEl.height,
+            vx: Math.random() * 1 - 0.5,
+            vy: Math.random() * 1 - 0.5,
+            radius: Math.random() > 0.9 ? 3 + Math.random() * 3 : 1 + Math.random() * 3
+          };
 
-                            var edge = {
-                                from: e,
-                                to: e2
-                            }
+          nodes.push(node);
+        }
 
-                            addEdge(edge);
-                        });
-                    });
-                }
+        nodes.forEach(function (e) {
+          nodes.forEach(function (e2) {
+            if (e == e2) {
+              return;
+            }
 
-                function addEdge(edge) {
-                    var ignore = false;
+            var edge = {
+              from: e,
+              to: e2
+            }
 
-                    edges.forEach(function (e) {
-                        if (e.from == edge.from && e.to == edge.to) {
-                            ignore = true;
-                        }
+            addEdge(edge);
+          });
+        });
+      }
 
-                        if (e.to == edge.from && e.from == edge.to) {
-                            ignore = true;
-                        }
-                    });
+      function addEdge(edge) {
+        var ignore = false;
 
-                    if (!ignore) {
-                        edges.push(edge);
-                    }
-                }
+        edges.forEach(function (e) {
+          if (e.from == edge.from && e.to == edge.to) {
+            ignore = true;
+          }
 
-                function step() {
-                    nodes.forEach(function (e) {
-                        if (e.drivenByMouse) {
-                            return;
-                        }
+          if (e.to == edge.from && e.from == edge.to) {
+            ignore = true;
+          }
+        });
 
-                        e.x += e.vx;
-                        e.y += e.vy;
+        if (!ignore) {
+          edges.push(edge);
+        }
+      }
 
-                        function clamp(min, max, value) {
-                            if (value > max) {
-                                return max;
-                            } else if (value < min) {
-                                return min;
-                            } else {
-                                return value;
-                            }
-                        }
+      function step() {
+        nodes.forEach(function (e) {
+          if (e.drivenByMouse) {
+            return;
+          }
 
-                        if (e.x <= 0 || e.x >= canvasEl.width) {
-                            e.vx *= -1;
-                            e.x = clamp(0, canvasEl.width, e.x)
-                        }
+          e.x += e.vx;
+          e.y += e.vy;
 
-                        if (e.y <= 0 || e.y >= canvasEl.height) {
-                            e.vy *= -1;
-                            e.y = clamp(0, canvasEl.height, e.y)
-                        }
-                    });
+          function clamp(min, max, value) {
+            if (value > max) {
+              return max;
+            } else if (value < min) {
+              return min;
+            } else {
+              return value;
+            }
+          }
 
-                    adjustNodeDrivenByMouse();
-                    render();
-                    window.requestAnimationFrame(step);
-                }
+          if (e.x <= 0 || e.x >= canvasEl.width) {
+            e.vx *= -1;
+            e.x = clamp(0, canvasEl.width, e.x)
+          }
 
-                function adjustNodeDrivenByMouse() {
-                    nodes[0].x += (mousePos[0] - nodes[0].x) / easingFactor;
-                    nodes[0].y += (mousePos[1] - nodes[0].y) / easingFactor;
-                }
+          if (e.y <= 0 || e.y >= canvasEl.height) {
+            e.vy *= -1;
+            e.y = clamp(0, canvasEl.height, e.y)
+          }
+        });
 
-                function lengthOfEdge(edge) {
-                    return Math.sqrt(Math.pow((edge.from.x - edge.to.x), 2) + Math.pow((edge.from.y - edge.to.y), 2));
-                }
+        adjustNodeDrivenByMouse();
+        render();
+        window.requestAnimationFrame(step);
+      }
 
-                function render() {
-                    ctx.fillStyle = backgroundColor;
-                    ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
+      function adjustNodeDrivenByMouse() {
+        nodes[0].x += (mousePos[0] - nodes[0].x) / easingFactor;
+        nodes[0].y += (mousePos[1] - nodes[0].y) / easingFactor;
+      }
 
-                    edges.forEach(function (e) {
-                        var l = lengthOfEdge(e);
-                        var threshold = canvasEl.width / 8;
+      function lengthOfEdge(edge) {
+        return Math.sqrt(Math.pow((edge.from.x - edge.to.x), 2) + Math.pow((edge.from.y - edge.to.y), 2));
+      }
 
-                        if (l > threshold) {
-                            return;
-                        }
+      function render() {
+        ctx.fillStyle = backgroundColor;
+        ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
-                        ctx.strokeStyle = edgeColor;
-                        ctx.lineWidth = (1.0 - l / threshold) * 2.5;
-                        ctx.globalAlpha = 1.0 - l / threshold;
-                        ctx.beginPath();
-                        ctx.moveTo(e.from.x, e.from.y);
-                        ctx.lineTo(e.to.x, e.to.y);
-                        ctx.stroke();
-                    });
-                    ctx.globalAlpha = 1.0;
+        edges.forEach(function (e) {
+          var l = lengthOfEdge(e);
+          var threshold = canvasEl.width / 8;
 
-                    nodes.forEach(function (e) {
-                        if (e.drivenByMouse) {
-                            return;
-                        }
+          if (l > threshold) {
+            return;
+          }
 
-                        ctx.fillStyle = nodeColor;
-                        ctx.beginPath();
-                        ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
-                        ctx.fill();
-                    });
-                }
+          ctx.strokeStyle = edgeColor;
+          ctx.lineWidth = (1.0 - l / threshold) * 2.5;
+          ctx.globalAlpha = 1.0 - l / threshold;
+          ctx.beginPath();
+          ctx.moveTo(e.from.x, e.from.y);
+          ctx.lineTo(e.to.x, e.to.y);
+          ctx.stroke();
+        });
+        ctx.globalAlpha = 1.0;
 
-                window.onresize = function () {
-                    canvasEl.width = document.body.clientWidth;
-                    canvasEl.height = canvasEl.clientHeight;
+        nodes.forEach(function (e) {
+          if (e.drivenByMouse) {
+            return;
+          }
 
-                    if (nodes.length == 0) {
-                        constructNodes();
-                    }
+          ctx.fillStyle = nodeColor;
+          ctx.beginPath();
+          ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
+          ctx.fill();
+        });
+      }
 
-                    render();
-                };
+      window.onresize = function () {
+        canvasEl.width = document.body.clientWidth;
+        canvasEl.height = canvasEl.clientHeight;
 
-                window.onmousemove = function (e) {
-                    mousePos[0] = e.clientX;
-                    mousePos[1] = e.clientY;
-                }
+        if (nodes.length == 0) {
+          constructNodes();
+        }
 
-                window.onresize(); // trigger the event manually.
-                window.requestAnimationFrame(step);
-            }).call(this);
-        </script>
-    </body>
+        render();
+      };
+
+      window.onmousemove = function (e) {
+        mousePos[0] = e.clientX;
+        mousePos[1] = e.clientY;
+      }
+
+      window.onresize(); // trigger the event manually.
+      window.requestAnimationFrame(step);
+    }).call(this);
+  </script>
+</body>
+
 </html>
