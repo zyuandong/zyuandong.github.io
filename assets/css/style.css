@@ -523,7 +523,7 @@ tbody tr:hover {
 }
 #contents .contents-box {
   width: 100%;
-  min-height: 570px;
+  min-height: calc(100vh - 100px);
   margin: 0 auto;
   background-color: #fff;
   box-sizing: border-box;
