@@ -63,7 +63,7 @@ Ruby China：`gem sources --add https://gems.ruby-china.com/`
 
 最后一步，cmd打开命令提示符，cd到项目目录下（有_config.yml文件的目录），输入
 
-`jekyll --server`
+`jekyll serve`
 
 启动服务后，访问localhost:4000/项目名称/，即可访问
 
