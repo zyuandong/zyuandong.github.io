@@ -48,3 +48,7 @@ try {
 
 ## continue [label]
 
+## 参考资料
+
+[循环与迭代](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
