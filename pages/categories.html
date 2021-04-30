@@ -1,0 +1,8 @@
+---
+layout: default
+permalink: /categories
+---
+
+{% for category in site.categories %}
+  {{ category | first }}: {{ category | last | size }} <br />
+{% endfor %}

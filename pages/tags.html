@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /tags
+---
+
+<ul>
+  {% for tag in site.tags %}
+  <li>
+    <a href="{{ tag | first }}">
+      {{ tag | first }}: {{ tag | last | size }} <br />
+    </a>
+  </li>
+  {% endfor %}
+</ul>
