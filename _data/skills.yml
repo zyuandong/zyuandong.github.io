@@ -1,0 +1,52 @@
+base:
+  -
+    key: JavaScript
+    value: --
+  -
+    key: CSS
+    value: --
+  -
+    key: HTML
+    value: --
+
+frame:
+  -
+    key: Angular.js v1.x
+    value: --
+  -
+    key: Vue.js
+    value: --
+  -
+    key: React.js
+    value: --
+  -
+    key: uni-app
+    value: --
+  -
+    key: Taro
+    value: --
+  -
+    key: Flutter
+    value: --
+
+aboutEngineering:
+  -
+    key: Node.js
+    value: --
+  -
+    key: Gulp
+    value: --
+  -
+    key: Webpack
+    value: --
+  -
+    key: Rollup
+    value: --
+
+visualization:
+  -
+    key: Echarts
+    value: --
+  -
+    key: HighCharts
+    value: --
