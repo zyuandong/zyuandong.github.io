@@ -22,8 +22,8 @@
 
 <body>
 
-  <div id="contents site-container" class="container">
-    <div class="aside">
+  <div id="site-container">
+    <div id="aside">
       {% include menu2.html %}
       <!-- <ul>
         <li><a href="{{ site.baseurl }}/home">Home</a></li>
@@ -33,15 +33,15 @@
         <li><a href="{{ site.baseurl }}/about">About</a></li>
       </ul> -->
     </div>
-    <div class="container right">
-      <div class="header">
+    <div class="container">
+      <div id="header">
         {% include header.html %}
       </div>
-      <div class="main">
+      <div id="main">
         {{ content }}
       </div>
-      <div class="footer">
-        {% include copyright.html %}
+      <div id="footer">
+        {% include footer.html %}
       </div>
     </div>
   </div>

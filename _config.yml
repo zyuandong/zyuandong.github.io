@@ -15,7 +15,7 @@ plugins:
   - jekyll-archives
 
 # Outputting
-permalink: /:title
+permalink: /posts/:title
 
 # Markdown Processors
 markdown: kramdown
@@ -28,7 +28,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "layout"
+      layout: "default"
 
 jekyll-archives:
   enabled: [categories, tags]

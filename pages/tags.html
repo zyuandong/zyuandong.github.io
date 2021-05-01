@@ -4,7 +4,7 @@ title: Tags
 permalink: /tags
 ---
 
-<ul>
+<!-- <ul>
   {% for tag in site.tags %}
   <li>
     <a href="{{ tag | first }}">
@@ -19,18 +19,18 @@ permalink: /tags
     </ul>
   </li>
   {% endfor %}
-</ul>
+</ul> -->
 
 
 <ul class="tags">
   {% for tag in site.tags %}
   <li>
-      <a href="#{{ tag[0] }}">{{ tag[0] }}</a> <sup>{{ tag[1].size }}</sup>
+      <a href="{{ tag | first }}">{{ tag | first }}</a> <sup>{{ tag | last |size }}</sup>
   </li>
   {% endfor %}
 </ul>
 
-<ul class="listing">
+<!-- <ul class="listing">
   {% for tag in site.tags %}
   <li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
   {% for post in tag[1] %}
@@ -40,4 +40,4 @@ permalink: /tags
   </li>
   {% endfor %}
 {% endfor %}
-</ul>
+</ul> -->

@@ -1,103 +1,11 @@
-#index-container #canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-#index-container img {
-  border: 5px solid #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 60px);
-}
-#index-container .breathe {
-  width: 120px;
-  height: 120px;
-  box-shadow: 0 0 30px #5bc0de inset;
-  -webkit-animation: ani-breathe 5s infinite;
-  -moz-animation: ani-breathe 5s infinite;
-  -ms-animation: ani-breathe 5s infinite;
-  -o-animation: ani-breathe 5s infinite;
-  animation: ani-breathe 5s infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -ms-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  border-radius: 50%;
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 60px);
-}
-.public-style {
-  border-radius: 50%;
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 60px);
-}
-@-webkit-keyframes ani-breathe {
-  0% {
-    -webkit-transform: scale(1, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-  }
-}
-@-moz-keyframes ani-breathe {
-  0% {
-    -moz-transform: scale(1, 1);
-  }
-  50% {
-    -moz-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -moz-transform: scale(1, 1);
-  }
-}
-@-ms-keyframes ani-breathe {
-  0% {
-    -ms-transform: scale(1, 1);
-  }
-  50% {
-    -ms-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -ms-transform: scale(1, 1);
-  }
-}
-@-o-keyframes ani-breathe {
-  0% {
-    -o-transform: scale(1, 1);
-  }
-  50% {
-    -o-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -o-transform: scale(1, 1);
-  }
-}
-@keyframes ani-breathe {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 html {
   height: 100%;
+  font-size: 1px;
 }
 body {
   height: 100%;
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
-  overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   background: url("../img/bg-img.jpg");
 }
@@ -208,6 +116,119 @@ tbody tr:hover {
 /* 滚动条按钮 */
 /* 滚动条轨道上的滚动角 */
 /* scrollbar end */
+#site-container {
+  display: flex;
+  justify-content: start;
+}
+#site-container .container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+#aside {
+  height: 100vh;
+}
+#header {
+  width: 100%;
+  height: 50rem;
+  line-height: 50rem;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+}
+#index-container #canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#index-container img {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+#index-container .breathe {
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 30px #5bc0de inset;
+  -webkit-animation: ani-breathe 5s infinite;
+  -moz-animation: ani-breathe 5s infinite;
+  -ms-animation: ani-breathe 5s infinite;
+  -o-animation: ani-breathe 5s infinite;
+  animation: ani-breathe 5s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+.public-style {
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+@-webkit-keyframes ani-breathe {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@-moz-keyframes ani-breathe {
+  0% {
+    -moz-transform: scale(1, 1);
+  }
+  50% {
+    -moz-transform: scale(1.5, 1.5);
+  }
+  100% {
+    -moz-transform: scale(1, 1);
+  }
+}
+@-ms-keyframes ani-breathe {
+  0% {
+    -ms-transform: scale(1, 1);
+  }
+  50% {
+    -ms-transform: scale(1.5, 1.5);
+  }
+  100% {
+    -ms-transform: scale(1, 1);
+  }
+}
+@-o-keyframes ani-breathe {
+  0% {
+    -o-transform: scale(1, 1);
+  }
+  50% {
+    -o-transform: scale(1.5, 1.5);
+  }
+  100% {
+    -o-transform: scale(1, 1);
+  }
+}
+@keyframes ani-breathe {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 /* main nav */
 #slide-panel {
   height: 100%;
