@@ -1,8 +1,11 @@
 ---
 layout: default
+title: Categories
 permalink: /categories
 ---
 
 {% for category in site.categories %}
-  {{ category | first }}: {{ category | last | size }} <br />
+  <a href="{{ category | first }}">
+    {{ category | first }}: {{ category | last | size }} <br />
+  </a>
 {% endfor %}

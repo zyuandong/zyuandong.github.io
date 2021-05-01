@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="/simplex/assets/css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="/simplex/assets/highlight/styles/foundation.css" />
   <link rel="stylesheet" type="text/css" href="/simplex/assets/css/nprogress.css" />
-  <link rel="stylesheet" type="text/css" href="/simplex/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/simplex/assets/css/index.css" />
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/simplex/assets/img/coding.ico" />
 
   <script type="text/javascript" src="/simplex/assets/js/jquery-1.11.3.min.js"></script>
@@ -24,16 +24,19 @@
 
   <div id="contents site-container" class="container">
     <div class="aside">
-      <ul>
+      {% include menu2.html %}
+      <!-- <ul>
         <li><a href="{{ site.baseurl }}/home">Home</a></li>
         <li><a href="{{ site.baseurl }}/categories">Categories</a></li>
         <li><a href="{{ site.baseurl }}/tags">Tags</a></li>
         <li><a href="{{ site.baseurl }}/archives">Archives</a></li>
         <li><a href="{{ site.baseurl }}/about">About</a></li>
-      </ul>
+      </ul> -->
     </div>
     <div class="container right">
-      <div class="header">header</div>
+      <div class="header">
+        {% include header.html %}
+      </div>
       <div class="main">
         {{ content }}
       </div>

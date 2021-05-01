@@ -10,8 +10,12 @@ author:
 # Serving
 baseurl: /simplex
 
+# Plugins
+plugins:
+  - jekyll-archives
+
 # Outputting
-permalink: /:year/:month/:day/:title
+permalink: /:title
 
 # Markdown Processors
 markdown: kramdown
@@ -25,3 +29,13 @@ defaults:
       type: "posts"
     values:
       layout: "layout"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+    
