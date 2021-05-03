@@ -1,122 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-    height: 100%;
-    font-size: 1px;
+  height: 100%;
+  font-size: 1px;
 }
 body {
-    height: 100%;
-    color: @font-main;
-    line-height: 1.5;
-    // overflow: hidden;
-    font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
-    background: url("../img/bg-img.jpg");
+  height: 100%;
+  color: @font-main;
+  line-height: 1.5;
+  // overflow: hidden;
+  font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
+  background: url("../img/bg-img.jpg");
 }
 /* a tag */
 a {
-    color: @blue;
-    text-decoration: none;
+  color: @blue;
+  text-decoration: none;
 
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: underline;
-        outline: none;
-    }
-    
-    &:link,
-    &:visited {
-        text-decoration: none;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
 }
 /* a tag end */
 
 /* h1~h6 */
 h1 {
-    color: @font-main;
-    font-weight: 400;
+  color: @font-main;
+  font-weight: 400;
 }
-h2,h3,h4,h5,h6 {
-    color: @font-main;
-    font-weight: 400;
-    padding-top: 20px;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @font-main;
+  font-weight: 400;
+  padding-top: 20px;
 
-    &:before {
-        content: '#';
-        color: @blue;
-        margin-right: 10px;
-    }   
+  &:before {
+    content: "#";
+    color: @blue;
+    margin-right: 10px;
+  }
 }
 /* h1~h6 end */
 
 /* code block */
 pre {
-    padding: 0px;
-    
-    code {
-        border-radius: 5px;
-        font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
-    }
+  padding: 0px;
+
+  code {
+    border-radius: 5px;
+    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  }
 }
 /* code block end */
 
 /* code inline*/
 li,
 p {
-    code {
-        color: @red;
-        padding: 2px 4px;
-        background-color: #f9f2f4;
-        border-radius: 4px;
-        font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
-    }
+  code {
+    color: @red;
+    padding: 2px 4px;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  }
 }
 /* code inline end */
 
 /* 引用 */
 blockquote {
-    background-color: #eee;
-    border-left: 5px solid #ccc;
-    margin-left: 20px;
-    padding-left: 10px;
-    font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
+  background-color: #eee;
+  border-left: 5px solid #ccc;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei",
+    "Courier New", monospace;
 }
 /* 引用 end */
 
 /* table */
 table {
-    margin-left: 30px;
-    border: 1px solid #ccc;
-    border-collapse: collapse;
+  margin-left: 30px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
 }
 thead {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 tbody {
-    background-color: #eee;
+  background-color: #eee;
 }
 th,
 td {
-    padding: 6px 12px;
-    border: 1px solid #fff;
+  padding: 6px 12px;
+  border: 1px solid #fff;
 }
 tbody {
-
-    tr:hover {
-        background-color: #ccc;
-    }
+  tr:hover {
+    background-color: #ccc;
+  }
 }
 /* table end */
 
 /* selection */
 ::selection {
-    background-color: @blue;
-    color: #fff;
+  background-color: @blue;
+  color: #fff;
 }
 ::-moz-selection {
-    background-color: @blue;
-    color: #fff;
+  background-color: @blue;
+  color: #fff;
 }
 /* selection end */
 
+/* card */
+.card {
+  min-height: calc(100vh - 98rem);
+  // min-height: 686rem;
+  background-color: #fff;
+  padding: 16rem;
+  border: 1px solid #ebeef5;
+  border-radius: 4rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+/* card end */
+
+/* line */
+.line {
+  height: 1rem;
+  background-color: #f3f3f3;
+  margin: 8rem 0 16rem;
+}
+/* line end */
 
 /* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */
@@ -146,7 +173,7 @@ tbody {
 // ::-webkit-scrollbar-button {
 // }
 
-/* 滚动条轨道上的滚动角 */ 
+/* 滚动条轨道上的滚动角 */
 // ::-webkit-scrollbar-corner {
 // }
 /* scrollbar end */

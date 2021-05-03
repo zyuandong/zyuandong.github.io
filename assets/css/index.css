@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html {
   height: 100%;
   font-size: 1px;
@@ -44,7 +47,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-  content: '#';
+  content: "#";
   color: #5bc0de;
   margin-right: 10px;
 }
@@ -108,6 +111,23 @@ tbody tr:hover {
   color: #fff;
 }
 /* selection end */
+/* card */
+.card {
+  min-height: calc(100vh - 98rem);
+  background-color: #fff;
+  padding: 16rem;
+  border: 1px solid #ebeef5;
+  border-radius: 4rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+/* card end */
+/* line */
+.line {
+  height: 1rem;
+  background-color: #f3f3f3;
+  margin: 8rem 0 16rem;
+}
+/* line end */
 /* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */
 /* 滚动条轨道 */
@@ -125,6 +145,9 @@ tbody tr:hover {
   height: 100vh;
   overflow: auto;
 }
+#site-container #main {
+  margin: 0 16rem;
+}
 #aside {
   height: 100vh;
 }
@@ -136,6 +159,13 @@ tbody tr:hover {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
+}
+#main {
+  padding: 60rem 0 0 0;
+}
+#footer {
+  text-align: center;
+  padding: 10rem 0;
 }
 #index-container #canvas {
   position: absolute;
