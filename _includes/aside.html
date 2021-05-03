@@ -1,14 +1,14 @@
-<div id="aside slide-panel">
+<div id="aside">
   <div class="guid">
     <a href="{{ site.baseurl }}/" class="head-img-box">
       <img src="{{ site.baseurl }}/assets/img/header-img.jpg" alt="zyuandong" class="head-img">
     </a>
     <ul>
-      <li class="guid-item"><a href="{{ site.baseurl }}/home">Home</a></li>
-      <li class="guid-item"><a href="{{ site.baseurl }}/categories">Categories</a></li>
-      <li class="guid-item"><a href="{{ site.baseurl }}/tags">Tags</a></li>
-      <li class="guid-item"><a href="{{ site.baseurl }}/archives">Archives</a></li>
-      <li class="guid-item"><a href="{{ site.baseurl }}/about">About</a></li>
+      <li class="guid-item {% if page.title == 'Home' %}is-active{% endif %}"><a href="{{ site.baseurl }}/home">Home</a></li>
+      <li class="guid-item {% if page.title == 'Categories' %}is-active{% endif %}"><a href="{{ site.baseurl }}/categories">Categories</a></li>
+      <li class="guid-item {% if page.title == 'Tags' %}is-active{% endif %}"><a href="{{ site.baseurl }}/tags">Tags</a></li>
+      <li class="guid-item {% if page.title == 'Archives' %}is-active{% endif %}"><a href="{{ site.baseurl }}/archives">Archives</a></li>
+      <li class="guid-item {% if page.title == 'About' %}is-active{% endif %}"><a href="{{ site.baseurl }}/about">About</a></li>
       <!-- <li class="guid-item active" data-page="articles-all">HOME</li>
       <li class="guid-item categories" data-page="category-all">CATEGORIES</li>
       <li class="guid-item tags" data-page="tags-all">TAGS</li>

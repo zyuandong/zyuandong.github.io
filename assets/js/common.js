@@ -1,11 +1,11 @@
 $(function () {
   // switch file category tag
-  $("#slide-panel .guid-item").on("click", function () {
+  $("#aside .guid-item").on("click", function () {
     var page = $(this).data("page");
     $(this).addClass("active").siblings().removeClass("active");
     if (page) {
-      $("#slide-panel .page-item").hide();
-      $("#slide-panel")
+      $("#aside .page-item").hide();
+      $("#aside")
         .find("." + page)
         .show()
         .not(".articles-all")
@@ -35,11 +35,11 @@ $(function () {
     });
   });
 
-  // click toggle-btn to show or hide slide-panel
+  // click toggle-btn to show or hide aside
   $("#toggle").on("click", function () {
     if ($(this).hasClass("fullscreen")) {
       $(this).removeClass("fullscreen");
-      $("#slide-panel").animate(
+      $("#aside").animate(
         {
           marginLeft: "0"
         },
@@ -53,9 +53,9 @@ $(function () {
       );
     } else {
       $(this).addClass("fullscreen");
-      $("#slide-panel").animate(
+      $("#aside").animate(
         {
-          marginLeft: "-640px"
+          marginLeft: "-180px"
         },
         {
           duration: 300,
@@ -152,10 +152,10 @@ $(function () {
 function pjaxEnd() {
   // menu automatic hide in mobile
   if ($(window).width() <= 640) {
-    $("#slide-panel")
+    $("#aside")
       .animate(
         {
-          marginLeft: "-640px"
+          marginLeft: "-180px"
         },
         500
       )
@@ -289,11 +289,11 @@ function pjaxEnd() {
         $(this).show().siblings().hide();
       }
     });
-    $("#slide-panel .categories")
+    $("#aside .categories")
       .addClass("active")
       .siblings()
       .removeClass("active");
-    $("#slide-panel .page-item").hide();
+    $("#aside .page-item").hide();
     $(".category-all").css("display", "flex").show();
   });
 
@@ -310,8 +310,8 @@ function pjaxEnd() {
         $(this).show().siblings().hide();
       }
     });
-    $("#slide-panel .tags").addClass("active").siblings().removeClass("active");
-    $("#slide-panel .page-item").hide();
+    $("#aside .tags").addClass("active").siblings().removeClass("active");
+    $("#aside .page-item").hide();
     $(".tags-all").css("display", "flex").show();
   });
 
