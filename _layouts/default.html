@@ -23,26 +23,18 @@
 <body>
 
   <div id="site-container">
-    <div id="aside">
-      {% include menu2.html %}
-      <!-- <ul>
-        <li><a href="{{ site.baseurl }}/home">Home</a></li>
-        <li><a href="{{ site.baseurl }}/categories">Categories</a></li>
-        <li><a href="{{ site.baseurl }}/tags">Tags</a></li>
-        <li><a href="{{ site.baseurl }}/archives">Archives</a></li>
-        <li><a href="{{ site.baseurl }}/about">About</a></li>
-      </ul> -->
-    </div>
+    {% include aside.html %}
+
     <div class="container">
-      <div id="header">
-        {% include header.html %}
-      </div>
+      {% include header.html %}
+
       <div id="main">
-        {{ content }}
+        <div class="card">
+          {{ content }}
+        </div>
       </div>
-      <div id="footer">
-        {% include footer.html %}
-      </div>
+
+      {% include footer.html %}
     </div>
   </div>
 

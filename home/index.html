@@ -3,27 +3,37 @@ layout: default
 title: Home
 ---
 
+{% assign page = paginator.previous_page %}
+
 <!-- 遍历分页后的文章 -->
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </p>
   <div class="content">
-    <!-- {{ post.content }} -->
+    {{ post.content | strip_html | truncate: 200 }}
+    <!-- {{ post.content | markdownify | strip_html | truncate: 200 }} -->
   </div>
+  <div class="line"></div>
 {% endfor %}
+
+<!-- {{ paginator.previous_page }} -->
 
 <!-- 分页链接 -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+    {% if page == 1 %}
+    <a href="{{ site.baseurl }}/home" class="previous">Previous</a>
+    {% else %}
+    <a href="{{ site.baseurl }}/home/page{{ paginator.previous_page }}" class="previous">Previous</a>
+    {% endif %}
   {% else %}
     <span class="previous">Previous</span>
   {% endif %}
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+    <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">Next</a>
   {% else %}
     <span class="next ">Next</span>
   {% endif %}
