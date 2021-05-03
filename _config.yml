@@ -13,6 +13,11 @@ baseurl: /simplex
 # Plugins
 plugins:
   - jekyll-archives
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "home/page:num"
 
 # Outputting
 permalink: /posts/:title
@@ -22,6 +27,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 
+# Layout
 defaults:
   -
     scope:
@@ -38,4 +44,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-    

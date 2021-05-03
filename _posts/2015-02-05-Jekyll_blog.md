@@ -93,6 +93,27 @@ kramdown:
 markdown: redcarpet
 ```
 
+## categories / tags 设计
+
+[jekyll-archives](https://jekyll.github.io/jekyll-archives/)
+
+category 或 tag 中带有空格
+
+## 分页功能
+
+[jekyll-paginate](https://github.com/jekyll/jekyll-paginate/)
+
+```ruby
+# Gemfile
+# source
+source "https://gems.ruby-china.com/"
+
+group :jekyll_plugins do
+  gem "jekyll-archives"
+  gem "jekyll-paginate"
+end
+```
+
 ## 参考资料
 
 [Windows 上安装 Jekyll](http://blog.csdn.net/kong5090041/article/details/38408211)
