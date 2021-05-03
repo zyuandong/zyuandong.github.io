@@ -20,7 +20,7 @@ paginate: 10
 paginate_path: "home/page:num"
 
 # Outputting
-permalink: /posts/:title
+permalink: posts/:title
 
 # Markdown Processors
 markdown: kramdown
@@ -42,5 +42,5 @@ jekyll-archives:
     category: category
     tag: tag
   permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+    tag: tags/:name/
+    category: categories/:name/
