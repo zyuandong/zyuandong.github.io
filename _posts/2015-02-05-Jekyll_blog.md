@@ -1,7 +1,7 @@
 ---
 title: 搭建Jekyll本地环境
-category: 杂物间
-tag: jekyll
+category: [杂物间, 二级分类]
+tag: [jekyll]
 ---
 
 ## 安装 [Ruby Installer](http://rubyinstaller.org/downloads/)
@@ -97,7 +97,7 @@ markdown: redcarpet
 
 [jekyll-archives](https://jekyll.github.io/jekyll-archives/)
 
-category 或 tag 中带有空格
+category 或 tag 中带有空格、/ 等特殊符号
 
 ## 分页功能
 
