@@ -4,8 +4,18 @@ title: Categories
 permalink: /categories
 ---
 
-{% for category in site.categories %}
-  <a href="{{ category | first }}">
-    {{ category | first }}: {{ category | last | size }} <br />
-  </a>
+{% assign categories = "" | split: "" %}
+{% for c in site.categories %}
+  {% assign categories = categories | push: c[0] %}
 {% endfor %}
+
+{% assign sorted_categories = categories | sort_natural %}
+
+<ul id="categories">
+  {% for category in sorted_categories %}
+  <li>
+    <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
+    <sup>{{ site.categories[category] | size }} </sup>
+  </li>
+  {% endfor %}
+</ul>
