@@ -8,6 +8,7 @@ html {
 body {
   height: 100%;
   color: rgba(0, 0, 0, 0.6);
+  font-size: 14rem;
   line-height: 1.5;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   background: url("../img/bg-img.jpg");
@@ -32,20 +33,58 @@ a:visited {
 h1 {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
+  font-size: 30rem;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
+  font-size: 24rem;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
   padding-top: 20px;
 }
-h2:before,
-h3:before,
-h4:before,
-h5:before,
+h2:before {
+  content: "#";
+  color: #5bc0de;
+  margin-right: 10px;
+}
+h3 {
+  font-size: 20rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  padding-top: 20px;
+}
+h3:before {
+  content: "#";
+  color: #5bc0de;
+  margin-right: 10px;
+}
+h4 {
+  font-size: 16rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  padding-top: 20px;
+}
+h4:before {
+  content: "#";
+  color: #5bc0de;
+  margin-right: 10px;
+}
+h5 {
+  font-size: 14rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  padding-top: 20px;
+}
+h5:before {
+  content: "#";
+  color: #5bc0de;
+  margin-right: 10px;
+}
+h6 {
+  font-size: 12rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  padding-top: 20px;
+}
 h6:before {
   content: "#";
   color: #5bc0de;
@@ -183,6 +222,19 @@ tbody tr:hover {
   padding: 8rem 16rem;
   border: 1px solid #f3f3f3;
   margin: 0 16rem 16rem 0;
+}
+#archives {
+  list-style: none;
+  padding: 0;
+}
+#archives h1::before,
+#archives h2::before,
+#archives h3::before,
+#archives h4::before,
+#archives h5::before,
+#archives h6::before {
+  content: '';
+  margin: 0;
 }
 #footer {
   text-align: center;

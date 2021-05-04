@@ -9,6 +9,7 @@ html {
 body {
   height: 100%;
   color: @font-main;
+  font-size: 14rem;
   line-height: 1.5;
   // overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
@@ -34,15 +35,7 @@ a {
 /* a tag end */
 
 /* h1~h6 */
-h1 {
-  color: @font-main;
-  font-weight: 400;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h-n-mixin() {
   color: @font-main;
   font-weight: 400;
   padding-top: 20px;
@@ -52,6 +45,35 @@ h6 {
     color: @blue;
     margin-right: 10px;
   }
+
+  a {
+    // font-size: inherit;
+  }
+}
+h1 {
+  color: @font-main;
+  font-weight: 400;
+  font-size: 30rem;
+}
+h2 {
+  font-size: 24rem;
+  .h-n-mixin;
+}
+h3 {
+  font-size: 20rem;
+  .h-n-mixin;
+}
+h4 {
+  font-size: 16rem;
+  .h-n-mixin;
+}
+h5 {
+  font-size: 14rem;
+  .h-n-mixin;
+}
+h6 {
+  font-size: 12rem;
+  .h-n-mixin;
 }
 /* h1~h6 end */
 
