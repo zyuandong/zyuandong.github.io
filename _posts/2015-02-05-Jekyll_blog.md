@@ -1,7 +1,7 @@
 ---
 title: 搭建Jekyll本地环境
-category: [杂物间, 二级分类]
-tag: [jekyll]
+categories: [杂物间, 二级分类]
+tags: [jekyll]
 ---
 
 ## 安装 [Ruby Installer](http://rubyinstaller.org/downloads/)
