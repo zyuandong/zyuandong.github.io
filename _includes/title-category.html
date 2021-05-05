@@ -1,6 +1,16 @@
 {% if page.category %}
 <span class="category">
-    <i class="icon-folder"></i>
-    <a href="javascript:;" class="title-category" data-cate-href="{{ page.category }}">{{ page.category }}</a>
+  <i class="icon-folder"></i>
+  <a href="{{ site.baseurl }}/categories/{{ page.category | slugify}}" class="title-category">{{ page.category }}</a>
+</span>
+{% endif %}
+
+{% if page.categories %}
+<span class="category">
+  <i class="icon-folder"></i>
+  {% for c in page.categories %}
+  <a href="{{ site.baseurl }}/categories/{{ c | slugify}}" class="title-category">{{ c }}</a>
+  {% unless forloop.last %}、{% endunless %}
+  {% endfor %}
 </span>
 {% endif %}
