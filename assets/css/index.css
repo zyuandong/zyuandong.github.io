@@ -184,9 +184,6 @@ tbody tr:hover {
   height: 100vh;
   overflow: auto;
 }
-#site-container #main {
-  margin: 0 16rem;
-}
 #aside {
   height: 100vh;
 }
@@ -202,6 +199,7 @@ tbody tr:hover {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 #header input {
   height: 32rem;
@@ -211,7 +209,7 @@ tbody tr:hover {
   border-radius: 4rem;
 }
 #main {
-  padding: 60rem 0 0 0;
+  padding: 60rem 10rem 0;
 }
 #tags {
   list-style: none;
@@ -223,18 +221,108 @@ tbody tr:hover {
   border: 1px solid #f3f3f3;
   margin: 0 16rem 16rem 0;
 }
-#archives {
-  list-style: none;
-  padding: 0;
+#archives .year {
+  width: 20%;
+  text-align: right;
+  line-height: 50rem;
+  font-size: 24rem;
+  position: relative;
 }
-#archives h1::before,
-#archives h2::before,
-#archives h3::before,
-#archives h4::before,
-#archives h5::before,
-#archives h6::before {
-  content: '';
-  margin: 0;
+#archives .year::after {
+  display: inline-block;
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  line-height: 1.5;
+  margin: 0 11rem;
+  background: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 0 3rem #ccc;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  background: #fff;
+  border: 3px solid #ccc;
+  margin: 0 9rem;
+  z-index: 2;
+}
+#archives .year .line {
+  display: inline-block;
+  content: "";
+  width: 4rem;
+  height: 50rem;
+  background: #f3f3f3;
+  margin: 0 13rem;
+  position: absolute;
+  right: 0;
+  bottom: 18rem;
+}
+#archives .month {
+  width: 20%;
+  text-align: right;
+  line-height: 50rem;
+  font-size: 20rem;
+  position: relative;
+}
+#archives .month::after {
+  display: inline-block;
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  line-height: 1.5;
+  margin: 0 11rem;
+  background: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 0 3rem #ccc;
+  width: 4rem;
+  height: 4rem;
+  background: #fff;
+  border: 2px solid #ccc;
+  position: relative;
+}
+#archives .month .line {
+  display: inline-block;
+  content: "";
+  width: 4rem;
+  height: 50rem;
+  background: #f3f3f3;
+  margin: 0 13rem;
+  position: absolute;
+  right: 0;
+  bottom: 18rem;
+}
+#archives .day-title {
+  font-size: 16rem;
+}
+#archives .day-title .day {
+  width: 20%;
+  text-align: right;
+  line-height: 50rem;
+  display: inline-block;
+  position: relative;
+}
+#archives .day-title .day::after {
+  display: inline-block;
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  line-height: 1.5;
+  margin: 0 11rem;
+  background: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 0 3rem #ccc;
+  position: relative;
+}
+#archives .day-title .day .line {
+  display: inline-block;
+  content: "";
+  width: 4rem;
+  height: 50rem;
+  background: #f3f3f3;
+  margin: 0 13rem;
+  position: absolute;
+  right: 0;
+  bottom: 18rem;
 }
 #footer {
   text-align: center;

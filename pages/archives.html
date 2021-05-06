@@ -4,33 +4,43 @@ title: Archives
 permalink: /archives
 ---
 
-<ul id="archives">
+<h1>Archives</h1>
+
+<div id="archives">
   {% for post in site.posts %}
 
     {% unless post.next %}
-      <h1>{{ post.date | date: "%Y" }}</h1>
+      <div class="year">{{ post.date | date: "%Y" }}</div>
     {% else %}
       {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
-      {% if year != nyear %}
-        <h1>{{ post.date | date: "%Y" }}</h1>
+      {% capture n_year %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+      {% if year != n_year %}
+      <div class="year">
+        {{ post.date | date: "%Y" }}
+        <span class="line">
+        </span>
+      </div>
       {% endif %}
     {% endunless %}
 
     {% capture month %}{{ post.date | date: "%b" }}{% endcapture %}
-    {% capture nmonth %}{{ post.next.date | date: "%b" }}{% endcapture %}
+    {% capture n_month %}{{ post.next.date | date: "%b" }}{% endcapture %}
 
-    {% if month != nmonth %}
-      <h2>{{ month }}</h2>
+    {% if month != n_month %}
+      <div class="month">
+        {{ month }}
+        <span class="line"></span>
+      </div>
     {% endif %}
-    <!-- {{ month }}
-    {{ nmonth }} -->
 
-    <li>
-      {{ post.date | date: "%d" }}
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </li>
+    <div class="day-title">
+      <span class="day"  title="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%d" }}
+        <span class="line"></span>
+      </span>
+      <span class="title" title="{{ post.title }}">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </span>
+    </div>
   {% endfor %}
-</ul>
+</div>
