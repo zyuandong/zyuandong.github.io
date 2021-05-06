@@ -4,20 +4,22 @@ title: Tags
 permalink: /tags
 ---
 
-<h1>Tags</h1>
+<div id="tags">
+  <h1>Tags</h1>
 
-{% assign tags = "" | split: "" %}
-{% for t in site.tags %}
-  {% assign tags = tags | push: t[0] %}
-{% endfor %}
-
-{% assign sorted_tags = tags | sort_natural %}
-
-<ul id="tags">
-  {% for tag in sorted_tags %}
-  <li>
-    <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a>
-    <sup>{{ site.tags[tag] |size }}</sup>
-  </li>
+  {% assign tags = "" | split: "" %}
+  {% for t in site.tags %}
+    {% assign tags = tags | push: t[0] %}
   {% endfor %}
-</ul>
+
+  {% assign sorted_tags = tags | sort_natural %}
+
+  <ul id="tags">
+    {% for tag in sorted_tags %}
+    <li>
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a>
+      <sup>{{ site.tags[tag] |size }}</sup>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

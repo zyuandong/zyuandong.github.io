@@ -217,9 +217,14 @@ tbody tr:hover {
 }
 #tags li {
   display: inline-block;
-  padding: 8rem 16rem;
-  border: 1px solid #f3f3f3;
+  padding: 4rem 12rem;
+  border: 1px solid #ebeef5;
+  border-radius: 4rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   margin: 0 16rem 16rem 0;
+}
+#tags li:hover {
+  background: #f3f3f3;
 }
 #archives .year {
   width: 20%;

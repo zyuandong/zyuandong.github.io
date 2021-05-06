@@ -4,89 +4,91 @@ title: Categories
 permalink: /categories
 ---
 
-<h1>Categories</h1>
+<div id="categories">
+  <h1>Categories</h1>
 
-<ul id="categories">
+  <ul id="categories">
 
-{% assign sorted_categories_2 = site.categories | sort %}
+  {% assign sorted_categories_2 = site.categories | sort %}
 
-{% for c in sorted_categories_2 %}
-  {% assign category = c | first %}
-  {% assign posts = c | last %}
-  {% assign categories22 = "" | split: "" %}
+  {% for c in sorted_categories_2 %}
+    {% assign category = c | first %}
+    {% assign posts = c | last %}
+    {% assign categories22 = "" | split: "" %}
 
-  {% for p in posts %}
-    {% if category == p.categories[0] %}
-      {% assign categories22 = categories22 | concat: p.categories %}
-    {% endif %}
-  {% endfor %}
+    {% for p in posts %}
+      {% if category == p.categories[0] %}
+        {% assign categories22 = categories22 | concat: p.categories %}
+      {% endif %}
+    {% endfor %}
 
-  {% assign uniqed_categories = categories22 | uniq %}
-  {% for c2 in uniqed_categories %}
-    {% if forloop.first %}
-    <li class="level-1">
-      <a href="{{ c2 | slugify }}">{{ c2 }}</a>
-      <sup>{{ site.categories[c2] | size }}</sup>
-    </li>
-    {% else %}
-    <ul>
-      <li class="level-2">
+    {% assign uniqed_categories = categories22 | uniq %}
+    {% for c2 in uniqed_categories %}
+      {% if forloop.first %}
+      <li class="level-1">
         <a href="{{ c2 | slugify }}">{{ c2 }}</a>
         <sup>{{ site.categories[c2] | size }}</sup>
       </li>
-    </ul>
-    {% endif %}
+      {% else %}
+      <ul>
+        <li class="level-2">
+          <a href="{{ c2 | slugify }}">{{ c2 }}</a>
+          <sup>{{ site.categories[c2] | size }}</sup>
+        </li>
+      </ul>
+      {% endif %}
+    {% endfor %}
+    {% if uniqed_categories.size > 0 %}<br />{% endif %}
   {% endfor %}
-  {% if uniqed_categories.size > 0 %}<br />{% endif %}
-{% endfor %}
 
-<!-- 2 -->
-<!-- {% for c in sorted_categories_2 %}
-  {% assign category = c | first %}
-  {% assign posts = c | last %}
-  {% assign level_1_category = "" %}
-  {% assign level_2_category_arr = "" | split: "" %}
+  <!-- 2 -->
+  <!-- {% for c in sorted_categories_2 %}
+    {% assign category = c | first %}
+    {% assign posts = c | last %}
+    {% assign level_1_category = "" %}
+    {% assign level_2_category_arr = "" | split: "" %}
 
-  {% for p in posts %}
-    {% if p.categories[0] == category %}
-      {% assign level_1_category = category %}
-      {% for sub_c in p.categories %}
-        {% if sub_c != level_1_category and level_2_category_arr | join: ',' contains sub_c %}
-          {% assign level_2_category_arr = level_2_category_arr | push: sub_c %}
-        {% endif %}
+    {% for p in posts %}
+      {% if p.categories[0] == category %}
+        {% assign level_1_category = category %}
+        {% for sub_c in p.categories %}
+          {% if sub_c != level_1_category and level_2_category_arr | join: ',' contains sub_c %}
+            {% assign level_2_category_arr = level_2_category_arr | push: sub_c %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+    {% if level_1_category != "" %}
+    <li class="level-1">
+      <a href="{{ level_1_category | slugify }}">{{ level_1_category }}</a>
+      <sup>{{ site.categories[level_1_category] | size }}</sup>
+    </li>
+      {% for c in level_2_category_arr %}
+      <ul>
+        <li class="level-2">
+          <a href="{{ c | slugify }}">{{ c }}</a>
+          <sup>{{ site.categories[c] | size }}</sup>
+        </li>
+      </ul>
       {% endfor %}
     {% endif %}
+  {% endfor %} -->
+
+  <!-- 3 -->
+  <!-- {% assign categories = "" | split: "" %}
+  {% for c in site.categories %}
+    {% assign categories = categories | push: c[0] %}
   {% endfor %}
 
-  {% if level_1_category != "" %}
-  <li class="level-1">
-    <a href="{{ level_1_category | slugify }}">{{ level_1_category }}</a>
-    <sup>{{ site.categories[level_1_category] | size }}</sup>
+  {% assign sorted_categories = categories | sort_natural %}
+
+  {% for category in sorted_categories %}
+  <li>
+    <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
+    <sup>{{ site.categories[category] | size }} </sup>
   </li>
-    {% for c in level_2_category_arr %}
-    <ul>
-      <li class="level-2">
-        <a href="{{ c | slugify }}">{{ c }}</a>
-        <sup>{{ site.categories[c] | size }}</sup>
-      </li>
-    </ul>
-    {% endfor %}
-  {% endif %}
-{% endfor %} -->
+  {% endfor %} -->
 
-<!-- 3 -->
-<!-- {% assign categories = "" | split: "" %}
-{% for c in site.categories %}
-  {% assign categories = categories | push: c[0] %}
-{% endfor %}
-
-{% assign sorted_categories = categories | sort_natural %}
-
-{% for category in sorted_categories %}
-<li>
-  <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
-  <sup>{{ site.categories[category] | size }} </sup>
-</li>
-{% endfor %} -->
-
-</ul>
+  </ul>
+</div>
