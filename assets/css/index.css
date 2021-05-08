@@ -167,6 +167,11 @@ tbody tr:hover {
   margin: 8rem 0 16rem;
 }
 /* line end */
+/* text */
+.text-tip {
+  color: #ccc;
+}
+/* text end */
 /* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */
 /* 滚动条轨道 */
@@ -245,6 +250,32 @@ tbody tr:hover {
   margin: 0 16rem 16rem 0;
 }
 #tags li:hover {
+  background: #f3f3f3;
+}
+#previous-next-post {
+  display: flex;
+  border-top: 1px solid #f3f3f3;
+  justify-content: space-around;
+  margin: 32rem 0 0 0;
+}
+.previous {
+  flex: 1;
+  text-align: center;
+  padding: 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+.previous:hover {
+  background: #f3f3f3;
+}
+.next {
+  flex: 1;
+  text-align: center;
+  padding: 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+.next:hover {
   background: #f3f3f3;
 }
 #archives .year {
@@ -772,24 +803,6 @@ tbody tr:hover {
 #contents .contents-box .blog-title .date,
 #contents .contents-box .blog-title .category {
   margin-right: 20px;
-}
-#contents .contents-box .page-previous {
-  float: left;
-  width: 100px;
-  padding: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  margin: 30px 0;
-}
-#contents .contents-box .page-next {
-  float: right;
-  width: 100px;
-  padding: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  margin: 30px 0;
 }
 #contents .contents-box:after {
   content: '';

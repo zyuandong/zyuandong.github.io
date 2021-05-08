@@ -1,0 +1,19 @@
+<div id="previous-next-post">
+  {% if page.previous %}
+  <span class="previous">
+    <a href="{{ site.baseurl }}{{ page.previous.url }}">
+      <div class="text-tip">Previous</div>
+      <div>{{ page.previous.title }}</div>
+    </a>
+  </span>
+  {% endif %}
+  
+  {% if page.next %}
+  <span class="next">
+    <a href="{{ site.baseurl }}{{ page.next.url }}">
+      <div class="text-tip">Next</div>
+      <div>{{ page.next.title }}</div>
+    </a>
+  </span>
+  {% endif %}
+</div>

@@ -36,6 +36,10 @@
       <div id="main" class="{{ aside_sticky }}">
         <div class="main-view card">
           {{ content }}
+
+          {% if page.url contains "posts" %}
+            {% include previous-next-post.html %}
+          {% endif %}
         </div>
         <div class="aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
           <div class="card">Recent Update</div>
