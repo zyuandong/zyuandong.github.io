@@ -21,6 +21,11 @@
 </head>
 
 <body>
+  {% if page.url contains "posts" %}
+    {% assign aside_sticky = "" %}
+  {% else %}
+    {% assign aside_sticky = "aside-sticky" %}
+  {% endif %}
 
   <div id="site-container">
     {% include aside.html %}
@@ -28,9 +33,16 @@
     <div class="container">
       {% include header.html %}
 
-      <div id="main">
-        <div class="card">
+      <div id="main" class="{{ aside_sticky }}">
+        <div class="main-view card">
           {{ content }}
+        </div>
+        <div class="aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
+          <div class="card">Recent Update</div>
+          <div class="card">Trending Tags</div>
+          {% if page.url contains "posts" %}
+          <div class="card position-sticky">Menu</div>
+          {% endif %}
         </div>
       </div>
 
@@ -39,6 +51,7 @@
   </div>
 
   <!-- {% include toggle.html %} -->
+  {% include back2top.html %}
 
 </body>
 

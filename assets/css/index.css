@@ -152,7 +152,6 @@ tbody tr:hover {
 /* selection end */
 /* card */
 .card {
-  min-height: calc(100vh - 98rem);
   background-color: #fff;
   padding: 16rem;
   border: 1px solid #ebeef5;
@@ -209,7 +208,28 @@ tbody tr:hover {
   border-radius: 4rem;
 }
 #main {
+  display: flex;
   padding: 60rem 10rem 0;
+  justify-content: flex-start;
+}
+#main.aside-sticky {
+  align-items: flex-start;
+}
+#main .main-view {
+  flex: 3;
+  min-height: calc(100vh - 98rem);
+  margin: 0 5rem 0 0;
+}
+#main .aside {
+  flex: 1;
+  margin: 0 0 0 5rem;
+}
+#main .aside .card:not(:last-child) {
+  margin: 0 0 10rem 0;
+}
+#main .position-sticky {
+  position: sticky;
+  top: 60rem;
 }
 #tags {
   list-style: none;
