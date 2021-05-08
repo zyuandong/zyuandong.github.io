@@ -1,7 +1,7 @@
 
 
 {% if page.categories %}
-<span class="category">
+<span class="category m-r-16">
   <i class="icon-folder"></i>
   {% for c in page.categories %}
   <a href="{{ site.baseurl }}/categories/{{ c | slugify}}" class="title-category">{{ c }}</a>
