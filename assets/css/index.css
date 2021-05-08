@@ -93,6 +93,7 @@ h6:before {
 /* h1~h6 end */
 /* code block */
 pre {
+  white-space: normal;
   padding: 0px;
 }
 pre code {
