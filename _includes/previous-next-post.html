@@ -2,13 +2,13 @@
   {% if page.previous %}
   <span class="previous">
     <a href="{{ site.baseurl }}{{ page.previous.url }}">
-      <div class="text-tip">Previous</div>
+      <div class="text-tip">上一篇</div>
       <div>{{ page.previous.title }}</div>
     </a>
   </span>
   {% else %}
   <span class="previous cursor-not-allowed">
-    <div class="text-tip">Previous</div>
+    <div class="text-tip">上一篇</div>
     <div>-</div>
   </span>
   {% endif %}
@@ -16,13 +16,13 @@
   {% if page.next %}
   <span class="next">
     <a href="{{ site.baseurl }}{{ page.next.url }}">
-      <div class="text-tip">Next</div>
+      <div class="text-tip">下一篇</div>
       <div>{{ page.next.title }}</div>
     </a>
   </span>
   {% else %}
   <span class="next cursor-not-allowed">
-    <div class="text-tip">Next</div>
+    <div class="text-tip">下一篇</div>
     <div>-</div>
   </span>
   {% endif %}
