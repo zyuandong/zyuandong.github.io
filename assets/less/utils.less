@@ -176,69 +176,49 @@ tbody {
 /* cursor end */
 
 /* Loop */
-@placements: '', 't', 'r', 'b', 'l';
-@placements_len : length(@placements);
-
 .loop_p_m(@number) when (@number < 50)  {
   .p-@{number} {
     padding: @number * 1rem;
   }
   .p-t-@{number} {
-    padding: @number * 1rem 0 0 0;
+    padding-top: @number * 1rem;
   }
   .p-r-@{number} {
-    padding: 0 @number * 1rem 0 0;
+    padding-right: @number * 1rem;
   }
   .p-b-@{number} {
-    padding: 0 0 @number * 1rem 0;
+    padding-bottom: @number * 1rem;
   }
   .p-l-@{number} {
-    padding: 0 0 0 @number * 1rem;
+    padding-left: @number * 1rem;
   }
   .m-@{number} {
     margin: @number * 1rem;
   }
   .m-t-@{number} {
-    margin: @number * 1rem 0 0 0;
+    margin-top: @number * 1rem;
   }
   .m-r-@{number} {
-    margin: 0 @number * 1rem 0 0;
+    margin-right: @number * 1rem;
   }
   .m-b-@{number} {
-    margin: 0 0 @number * 1rem 0;
+    margin-bottom: @number * 1rem;
   }
   .m-l-@{number} {
-    margin: 0 0 0 @number * 1rem;
+    margin-left: @number * 1rem;
   }
 
   .loop_p_m(@number + 1);
 }
 .loop_p_m(0);
 
-// .loop_t(@number, @placement) when (@number < 10)  {
-//   .p-@{placement}-@{number} {
-//     padding: @number * 1rem 0 0 0;
-//   }
-//   .loop_t(@number + 1, @placement);
-// }
-// .loop_t(0, t);
-
-// .loop_placements(@index) when (@index < @placements_len) and (extract(@placements, @index) = '') {
-//   .Loop(0, 't');
-//   .loop_placements(@index + 1);
-// }
-// .loop_placements(0);
-
-
-
-// .generate-columns(4);
-
-// .generate-columns(@n, @i: 1) when (@i =< @n) {
-//   .column-@{i} {
-//     width: (@i * 100% / @n);
-//   }
-//   .generate-columns(@n, (@i + 1));
-// }
+.loop_f_s(@number) when (@number <= 30) {
+  .f-s-@{number} {
+    font-size: @number * 1rem;
+  }
+  .loop_f_s(@number + 2);
+}
+.loop_f_s(12);
 /* Loop end */
 
 /* scrollbar */

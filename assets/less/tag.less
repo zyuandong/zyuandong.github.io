@@ -2,16 +2,38 @@
   list-style: none;
   padding: 0;
 
-  li {
-    display: inline-block;
-    padding: 4rem 12rem;
-    border: 1px solid #ebeef5;
-    border-radius: 4rem;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-    margin: 0 16rem 16rem 0;
+  ul {
+    padding: 0;
 
-    &:hover {
-      background: #f3f3f3;
+    li {
+      display: inline-block;
+      padding: 4rem 12rem;
+      border: 1px solid #ebeef5;
+      border-radius: 4rem;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      margin: 0 16rem 16rem 0;
+  
+      &:hover {
+        background: #f3f3f3;
+      }
+    }
+  }
+}
+
+
+#tag {
+  ul {
+    line-height: 2;
+    padding: 0;
+
+    li {
+      display: flex;
+    }
+
+    .line-dashed {
+      flex: 1;
+      border-bottom: 1px dashed #ccc;
+      margin: 0 10rem 10rem 10rem;
     }
   }
 }
