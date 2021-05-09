@@ -69,7 +69,7 @@ $(function () {
   });
 
   // show back2top-btn
-  $("#contents").scroll(function () {
+  $("#site-container .container").scroll(function () {
     var t = $(this).scrollTop();
     if (t >= 800) {
       if (!$("#back2top").is(":visible")) {
@@ -82,7 +82,7 @@ $(function () {
 
   // back to top
   $("#back2top").click(function () {
-    $("#contents").animate(
+    $("#site-container .container").animate(
       {
         scrollTop: "0"
       },

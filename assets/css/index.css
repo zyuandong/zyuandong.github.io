@@ -2530,13 +2530,14 @@ tbody tr:hover {
   background-color: #0090bb;
   cursor: pointer;
   position: fixed;
-  right: 15px;
-  bottom: 65px;
+  right: 30px;
+  bottom: 30px;
   border-radius: 50%;
   display: none;
   z-index: 2;
   padding: 12px 14px;
   box-sizing: border-box;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.7);
 }
 #back2top .bt-line {
   height: 2px;
