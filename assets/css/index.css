@@ -1888,6 +1888,9 @@ tbody tr:hover {
   right: 0;
   bottom: 18rem;
 }
+#pagination .is-active {
+  background: #f3f3f3;
+}
 #footer {
   text-align: center;
   padding: 10rem 0;

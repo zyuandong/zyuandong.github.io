@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-{% assign page = paginator.previous_page %}
-
 <!-- 遍历分页后的文章 -->
 {% for post in paginator.posts %}
   <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -18,20 +16,31 @@ title: Home
 {% endfor %}
 
 <!-- 分页链接 -->
-<div class="pagination">
+<div id="pagination" style="text-align: center;">
   {% if paginator.previous_page %}
-    {% if page == 1 %}
-    <a href="{{ site.baseurl }}/home" class="previous">Previous</a>
+    {% if paginator.previous_page == 1 %}
+    <a href="{{ site.baseurl }}/home" class="previous"> < </a>
     {% else %}
-    <a href="{{ site.baseurl }}/home/page{{ paginator.previous_page }}" class="previous">Previous</a>
+    <a href="{{ site.baseurl }}/home/page{{ paginator.previous_page }}" class="previous"> < </a>
     {% endif %}
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="previous cursor-not-allowed"> < </span>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  {% for number in (1..paginator.total_pages) %}
+    {% if number == 1 %}
+    <a href="{{ site.baseurl }}/home" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
+    {% else %}
+    <a href="{{ site.baseurl }}/home/page{{ number }}" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
+    {% endif %}
+  {% endfor %}
+
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">Next</a>
+    <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next"> > </a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next cursor-not-allowed"> > </span>
   {% endif %}
+
+  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+
 </div>
