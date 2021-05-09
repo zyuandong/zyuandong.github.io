@@ -10,7 +10,10 @@ title: Home
     {{ post.content | strip_html | truncate: 200 }}
   </div>
   <div class="message text-tip p-t-16">
-    <span class="date">{{ post.date | date: "%b %e, %Y" }}</span>
+    <span class="date" title="{{ post.date | date: '%Y-%m-%d' }}">
+      <i class="icon-calendar"></i>
+      {{ post.date | date: "%b %e, %Y" }}
+    </span>
   </div>
   <div class="line"></div>
 {% endfor %}
