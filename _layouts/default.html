@@ -42,7 +42,9 @@
           {% endif %}
         </div>
         <div class="aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
-          <div class="card">Recent Update</div>
+          <div class="card">
+            {% include recent-update.html %}
+          </div>
           <div class="card">Trending Tags</div>
           {% if page.url contains "posts" %}
           <div class="card position-sticky">Menu</div>

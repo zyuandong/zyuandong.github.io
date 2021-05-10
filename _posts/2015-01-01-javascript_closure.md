@@ -2,6 +2,7 @@
 title: JavaScript 闭包【转载】
 categories: [前端技术, 二级分类 2, 二级分类]
 tags: [JavaScript, 闭包]
+last_modified_date: 2021-05-11
 ---
 
 闭包（closure）是 Javascript 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
