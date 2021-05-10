@@ -1743,7 +1743,7 @@ tbody tr:hover {
 }
 #main .main-view {
   flex: 3;
-  min-height: calc(100vh - 98rem);
+  min-height: calc(100vh - 104rem);
   margin: 0 5rem 0 0;
 }
 #main .aside {
@@ -1889,7 +1889,7 @@ tbody tr:hover {
   width: 14%;
   text-align: right;
   line-height: 50rem;
-  font-size: 20rem;
+  font-size: 16rem;
   position: relative;
 }
 #archives .month::after {
