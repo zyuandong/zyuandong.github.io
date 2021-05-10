@@ -1780,12 +1780,23 @@ tbody tr:hover {
   position: sticky;
   top: 60rem;
 }
+#categories ul {
+  list-style: none;
+}
+#category ul {
+  line-height: 2;
+  list-style: none;
+}
+#category li {
+  display: flex;
+}
+#category .line-dashed {
+  flex: 1;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 10rem 10rem;
+}
 #tags {
   list-style: none;
-  padding: 0;
-}
-#tags ul {
-  padding: 0;
 }
 #tags ul li {
   display: inline-block;
@@ -1800,7 +1811,6 @@ tbody tr:hover {
 }
 #tag ul {
   line-height: 2;
-  padding: 0;
 }
 #tag ul li {
   display: flex;
