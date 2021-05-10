@@ -1867,7 +1867,7 @@ tbody tr:hover {
   background: #f3f3f3;
 }
 #archives .year {
-  width: 20%;
+  width: 14%;
   text-align: right;
   line-height: 50rem;
   font-size: 24rem;
@@ -1903,7 +1903,7 @@ tbody tr:hover {
   bottom: 18rem;
 }
 #archives .month {
-  width: 20%;
+  width: 14%;
   text-align: right;
   line-height: 50rem;
   font-size: 20rem;
@@ -1940,7 +1940,7 @@ tbody tr:hover {
   font-size: 16rem;
 }
 #archives .day-title .day {
-  width: 20%;
+  width: 14%;
   text-align: right;
   line-height: 50rem;
   display: inline-block;
