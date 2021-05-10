@@ -25,20 +25,20 @@ permalink: /categories
     {% assign uniqed_categories = categories22 | uniq %}
     {% for c2 in uniqed_categories %}
       {% if forloop.first %}
-      <li class="level-1">
+      <li class="level-1{% if uniqed_categories.size > 1 %} has-level-2{% endif %}">
         <a href="{{ c2 | slugify }}">{{ c2 }}</a>
-        <sup>{{ site.categories[c2] | size }}</sup>
+        <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
       </li>
       {% else %}
-      <ul>
+      <ul class="{% if forloop.last == true %}last-level-2{% endif %}">
         <li class="level-2">
           <a href="{{ c2 | slugify }}">{{ c2 }}</a>
-          <sup>{{ site.categories[c2] | size }}</sup>
+          <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
         </li>
       </ul>
       {% endif %}
     {% endfor %}
-    {% if uniqed_categories.size > 0 %}<br />{% endif %}
+    <!-- {% if uniqed_categories.size > 0 %}<br />{% endif %} -->
   {% endfor %}
 
   <!-- 2 -->
