@@ -3,8 +3,9 @@ layout: default
 title: Home
 ---
 
-<!-- 遍历分页后的文章 -->
-{% for post in paginator.posts %}
+<div id="home">
+  <!-- 遍历分页后的文章 -->
+  {% for post in paginator.posts %}
   <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
   <div class="content">
     {{ post.content | strip_html | truncate: 200 }}
@@ -16,34 +17,35 @@ title: Home
     </span>
   </div>
   <div class="line"></div>
-{% endfor %}
-
-<!-- 分页链接 -->
-<div id="pagination" style="text-align: center;">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ site.baseurl }}/home" class="previous"> < </a>
-    {% else %}
-    <a href="{{ site.baseurl }}/home/page{{ paginator.previous_page }}" class="previous"> < </a>
-    {% endif %}
-  {% else %}
-    <span class="previous cursor-not-allowed"> < </span>
-  {% endif %}
-
-  {% for number in (1..paginator.total_pages) %}
-    {% if number == 1 %}
-    <a href="{{ site.baseurl }}/home" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
-    {% else %}
-    <a href="{{ site.baseurl }}/home/page{{ number }}" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
-    {% endif %}
   {% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next"> > </a>
-  {% else %}
-    <span class="next cursor-not-allowed"> > </span>
-  {% endif %}
+  <!-- 分页链接 -->
+  <div id="pagination" style="text-align: center;">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="{{ site.baseurl }}/home" class="previous"> < </a>
+      {% else %}
+      <a href="{{ site.baseurl }}/home/page{{ paginator.previous_page }}" class="previous"> < </a>
+      {% endif %}
+    {% else %}
+      <span class="previous cursor-not-allowed"> < </span>
+    {% endif %}
 
-  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% for number in (1..paginator.total_pages) %}
+      {% if number == 1 %}
+      <a href="{{ site.baseurl }}/home" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
+      {% else %}
+      <a href="{{ site.baseurl }}/home/page{{ number }}" class="next {% if page.url contains number %}is-active{% endif %}">{{ number }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next"> > </a>
+    {% else %}
+      <span class="next cursor-not-allowed"> > </span>
+    {% endif %}
+
+    <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  </div>
 
 </div>

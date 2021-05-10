@@ -9,7 +9,7 @@ html {
 body {
   height: 100%;
   color: @font-main;
-  font-size: 14rem;
+  font-size: 16rem;
   line-height: 1.5;
   // overflow: hidden;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
@@ -35,41 +35,40 @@ a {
 /* a tag end */
 
 /* h1~h6 */
-.h-n-mixin() {
+.title-h() {
   color: @font-main;
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
 
-  &:before {
-    content: "#";
-    color: @blue;
-    margin-right: 10px;
-  }
+  // &:before {
+  //   content: "#";
+  //   color: @blue;
+  //   margin-right: 10px;
+  // }
 }
 h1 {
-  color: @font-main;
-  font-weight: 400;
-  font-size: 30rem;
+  .title-h();
+  font-size: 28rem;
 }
 h2 {
+  .title-h();
   font-size: 24rem;
-  .h-n-mixin;
 }
 h3 {
+  .title-h();
   font-size: 20rem;
-  .h-n-mixin;
 }
 h4 {
+  .title-h();
   font-size: 16rem;
-  .h-n-mixin;
 }
 h5 {
+  .title-h();
   font-size: 14rem;
-  .h-n-mixin;
 }
 h6 {
+  .title-h();
   font-size: 12rem;
-  .h-n-mixin;
 }
 /* h1~h6 end */
 
@@ -166,6 +165,7 @@ tbody {
 /* text */
 .text-tip {
   color: #ccc;
+  font-size: 14rem;
 }
 /* text end */
 

@@ -8,7 +8,7 @@ html {
 body {
   height: 100%;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 14rem;
+  font-size: 16rem;
   line-height: 1.5;
   font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   background: url("../img/bg-img.jpg");
@@ -32,63 +32,39 @@ a:visited {
 /* h1~h6 */
 h1 {
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
-  font-size: 30rem;
+  font-weight: 500;
+  padding-top: 20px;
+  font-size: 28rem;
 }
 h2 {
-  font-size: 24rem;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
-}
-h2:before {
-  content: "#";
-  color: #0090bb;
-  margin-right: 10px;
+  font-size: 24rem;
 }
 h3 {
-  font-size: 20rem;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
-}
-h3:before {
-  content: "#";
-  color: #0090bb;
-  margin-right: 10px;
+  font-size: 20rem;
 }
 h4 {
-  font-size: 16rem;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
-}
-h4:before {
-  content: "#";
-  color: #0090bb;
-  margin-right: 10px;
+  font-size: 16rem;
 }
 h5 {
-  font-size: 14rem;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
-}
-h5:before {
-  content: "#";
-  color: #0090bb;
-  margin-right: 10px;
+  font-size: 14rem;
 }
 h6 {
-  font-size: 12rem;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
-}
-h6:before {
-  content: "#";
-  color: #0090bb;
-  margin-right: 10px;
+  font-size: 12rem;
 }
 /* h1~h6 end */
 /* code block */
@@ -170,6 +146,7 @@ tbody tr:hover {
 /* text */
 .text-tip {
   color: #ccc;
+  font-size: 14rem;
 }
 /* text end */
 /* cursor */
@@ -1779,6 +1756,12 @@ tbody tr:hover {
 #main .position-sticky {
   position: sticky;
   top: 60rem;
+}
+#home .content {
+  font-size: 14rem;
+}
+#post .post-content {
+  font-size: 14rem;
 }
 #categories ul {
   list-style: none;
