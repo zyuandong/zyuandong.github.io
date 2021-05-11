@@ -1,0 +1,35 @@
+<div id="trending-tags">
+  <h4 class="p-0 m-0 m-b-16">标签排行</h4>
+  {% assign tag_size_list = "" | split: "" %}
+  {% assign size_list = "" | split: "" %}
+
+  {% for tag in site.tags %}
+    {% assign item = tag[0] | append: ":" | append: tag[1].size %}
+    {% assign tag_size_list = tag_size_list | push: item %}
+    {% assign size_list = size_list | push: tag[1].size %}
+  {% endfor %}
+
+  {% assign sorted_tag_size_list = tag_size_list | sort_natural %}
+
+  {% assign sorted_size_list = size_list | sort | reverse %}
+  {% assign trending_tags = "" | split: "" %}
+
+  {% for size in sorted_size_list limit: 10 %}
+    {% for tag_size_item in sorted_tag_size_list %}
+      {% assign tag = tag_size_item | split: ":" | first %}
+      {% assign tag_size = tag_size_item | split: ":" | last | plus: 0 %}
+      {% if size == tag_size %}
+        {% assign trending_tags = trending_tags | push: tag %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% for tag in trending_tags %}
+    <a class="f-s-14 p-tb-4 p-lr-8 m-r-10 m-b-10" href="{{ site.baseurl }}/tags/{{ tag | slugify }}">
+      {{ tag }}
+      <span class="text-tip p-l-8">{{ site.tags[tag] | size }}</span>
+    </a>
+  {% endfor %}
+
+</div>

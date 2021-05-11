@@ -176,7 +176,7 @@ tbody {
 /* cursor end */
 
 /* Loop */
-.loop_p_m(@number) when (@number < 50)  {
+.loop_p_m(@number) when (@number < 20)  {
   .p-@{number} {
     padding: @number * 1rem;
   }
@@ -191,6 +191,14 @@ tbody {
   }
   .p-l-@{number} {
     padding-left: @number * 1rem;
+  }
+  .p-tb-@{number} {
+    padding-top: @number * 1rem;
+    padding-bottom: @number * 1rem;
+  }
+  .p-lr-@{number} {
+    padding-left: @number * 1rem;
+    padding-right: @number * 1rem;
   }
   .m-@{number} {
     margin: @number * 1rem;
@@ -207,12 +215,20 @@ tbody {
   .m-l-@{number} {
     margin-left: @number * 1rem;
   }
+  .m-tb-@{number} {
+    margin-top: @number * 1rem;
+    margin-bottom: @number * 1rem;
+  }
+  .m-lr-@{number} {
+    margin-left: @number * 1rem;
+    margin-right: @number * 1rem;
+  }
 
   .loop_p_m(@number + 1);
 }
 .loop_p_m(0);
 
-.loop_f_s(@number) when (@number <= 30) {
+.loop_f_s(@number) when (@number <= 28) {
   .f-s-@{number} {
     font-size: @number * 1rem;
   }

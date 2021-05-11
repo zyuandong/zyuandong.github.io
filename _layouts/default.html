@@ -45,7 +45,9 @@
           <div class="card">
             {% include recent-update.html %}
           </div>
-          <div class="card">Trending Tags</div>
+          <div class="card">
+            {% include trending-tags.html %}
+          </div>
           {% if page.url contains "posts" %}
           <div class="card position-sticky">Menu</div>
           {% endif %}
