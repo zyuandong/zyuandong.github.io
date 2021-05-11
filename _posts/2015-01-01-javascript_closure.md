@@ -293,6 +293,6 @@ closure();
 </script>
 ```
 
-## 参考及相关资料
+## 参考
 
 - [JavaScript 学习总结（四）function 函数部分](http://segmentfault.com/a/1190000000660786)

@@ -2031,24 +2031,15 @@ tbody tr:hover {
 }
 /* sidebar btn end */
 /* sidebar panel */
-#sidebar-panel {
-  width: 270px;
-  max-height: 90%;
+#post-menu {
   overflow-y: auto;
-  padding-left: 3px;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0px -1px 5px #ccc;
-  background-color: #ccc;
-  position: fixed;
-  right: -275px;
-  bottom: 0;
   z-index: 1;
 }
-#sidebar-panel .sidebar-panel-box {
+#post-menu .sidebar-panel-box {
   background-color: #fff;
   background-clip: content-box;
 }
-#sidebar-panel .pin {
+#post-menu .pin {
   width: 100%;
   height: 24px;
   border-left: 3px solid #0090bb;
@@ -2056,45 +2047,37 @@ tbody tr:hover {
   box-sizing: border-box;
   position: absolute;
   left: 0;
-  top: 5px;
   -webkit-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -ms-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
-#sidebar-panel .sidebar-panel-ul {
+#post-menu .sidebar-panel-ul {
   list-style: none;
-  padding: 5px 0 5px 0.625em;
   position: relative;
   margin: 0;
 }
-#sidebar-panel .sidebar-panel-ul li {
+#post-menu .sidebar-panel-ul li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-#sidebar-panel .sidebar-panel-ul li a {
-  color: rgba(0, 0, 0, 0.6);
-}
-#sidebar-panel .sidebar-panel-ul li a:hover {
-  text-decoration: underline;
-}
-#sidebar-panel .sidebar-panel-ul li a:active,
-#sidebar-panel .sidebar-panel-ul li a:focus,
-#sidebar-panel .sidebar-panel-ul li a:visited {
+#post-menu .sidebar-panel-ul li a:active,
+#post-menu .sidebar-panel-ul li a:focus,
+#post-menu .sidebar-panel-ul li a:visited {
   text-decoration: none;
 }
-#sidebar-panel .sidebar-panel-ul .li-h3 {
+#post-menu .sidebar-panel-ul .li-h3 {
   padding-left: 1em;
 }
-#sidebar-panel .sidebar-panel-ul .li-h4 {
+#post-menu .sidebar-panel-ul .li-h4 {
   padding-left: 2em;
 }
-#sidebar-panel .sidebar-panel-ul .li-h5 {
+#post-menu .sidebar-panel-ul .li-h5 {
   padding-left: 3em;
 }
-#sidebar-panel .sidebar-panel-ul .li-h6 {
+#post-menu .sidebar-panel-ul .li-h6 {
   padding-left: 4em;
 }
 /* sidebar panel end */

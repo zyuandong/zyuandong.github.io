@@ -1,3 +1,95 @@
+let html = "", topArr = [];
+
+const createMenu = () => {
+  $("#post-menu .pin").css("top", "16rem");
+  $("#post .post-content")
+    .find("h1,h2,h3,h4,h5,h6")
+    .each(function (i) {
+      switch (this.tagName) {
+        case "H1":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h1"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+        case "H2":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h2"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+        case "H3":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h3"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+        case "H4":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h4"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+        case "H5":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h5"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+        case "H6":
+          topArr.push($(this).get(0).offsetTop);
+          $(this).attr("id", "title" + i);
+          html +=
+            '<li class="li-h6"><a href="#title' +
+            i +
+            '" data-index="' +
+            i +
+            '">' +
+            $(this).text() +
+            "</a></li>";
+          break;
+      }
+    });
+  if (html.length) {
+    $("#post-menu .sidebar-panel-ul").html(html);
+    $("#sidebar-btn, #sidebar-panel").show();
+  } else {
+    $("#post-menu .sidebar-panel-ul").html("");
+    $("#sidebar-btn, #sidebar-panel").hide();
+  }
+}
+// createMenu();
+
 $(function () {
   // switch file category tag
   $("#aside .guid-item").on("click", function () {
@@ -91,29 +183,29 @@ $(function () {
   });
 
   // show or hide sidebar list
-  $("#sidebar-btn").click(function () {
-    if ($(this).hasClass("show")) {
-      $(this).removeClass("show");
-      $("#sidebar-panel")
-        .animate(
-          {
-            right: "-275px"
-          },
-          300
-        )
-        .dequeue();
-    } else {
-      $(this).addClass("show");
-      $("#sidebar-panel")
-        .animate(
-          {
-            right: "15px"
-          },
-          300
-        )
-        .dequeue();
-    }
-  });
+  // $("#sidebar-btn").click(function () {
+  //   if ($(this).hasClass("show")) {
+  //     $(this).removeClass("show");
+  //     $("#sidebar-panel")
+  //       .animate(
+  //         {
+  //           right: "-275px"
+  //         },
+  //         300
+  //       )
+  //       .dequeue();
+  //   } else {
+  //     $(this).addClass("show");
+  //     $("#sidebar-panel")
+  //       .animate(
+  //         {
+  //           right: "15px"
+  //         },
+  //         300
+  //       )
+  //       .dequeue();
+  //   }
+  // });
 
   // mask-layer btn
   $(".mask-layer-btn").click(function () {
@@ -179,95 +271,8 @@ function pjaxEnd() {
     hljs.highlightBlock(block);
   });
 
-  // get sidebar list
-  var html = "",
-    topArr = [];
-  $("#sidebar-panel .pin").css("top", "5px");
-  $(".blog-content")
-    .find("h1,h2,h3,h4,h5,h6")
-    .each(function (i) {
-      switch (this.tagName) {
-        case "H1":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h1"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-        case "H2":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h2"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-        case "H3":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h3"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-        case "H4":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h4"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-        case "H5":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h5"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-        case "H6":
-          topArr.push($(this).get(0).offsetTop);
-          $(this).attr("id", "title" + i);
-          html +=
-            '<li class="li-h6"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
-          break;
-      }
-    });
-  if (html.length) {
-    $("#sidebar-panel .sidebar-panel-ul").html(html);
-    $("#sidebar-btn, #sidebar-panel").show();
-  } else {
-    $("#sidebar-panel .sidebar-panel-ul").html("");
-    $("#sidebar-btn, #sidebar-panel").hide();
-  }
+  // creat post menu
+  createMenu();
 
   // blog-title category mapping menu
   $("#contents img").click(function () {
@@ -316,12 +321,12 @@ function pjaxEnd() {
   });
 
   // sidebar-mapping by contents scroll
-  $("#contents").scroll(function () {
+  $("#site-container .container").scroll(function () {
     var t = $(this).scrollTop();
 
     for (var i = topArr.length - 1; i >= 0; i--) {
       if (t >= topArr[i]) {
-        $(".pin").css("top", i * 24 + 5 + "px");
+        $(".pin").css("top", i * 24 + 16 + "rem");
         break;
       }
     }
