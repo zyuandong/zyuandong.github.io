@@ -15,7 +15,7 @@ layout: default
 
     {% for post in page.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
       <span class="line-dashed"></span>
       <span class="text-tip">{{ post.date | date: post_long_df }}</span>
     </li>

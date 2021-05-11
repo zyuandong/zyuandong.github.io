@@ -1174,6 +1174,9 @@ tbody tr:hover {
   position: sticky;
   top: 60rem;
 }
+#main :not(#pagination) > a:hover {
+  border-bottom: 1rem solid #0090bb;
+}
 #home .content {
   font-size: 14rem;
 }
@@ -1271,7 +1274,11 @@ tbody tr:hover {
   border-radius: 4rem;
 }
 .previous:hover {
-  background: #f3f3f3;
+  color: #fff;
+  background: #0090bb;
+}
+.previous:hover a {
+  color: #fff;
 }
 .next {
   flex: 1;
@@ -1281,7 +1288,11 @@ tbody tr:hover {
   border-radius: 4rem;
 }
 .next:hover {
-  background: #f3f3f3;
+  color: #fff;
+  background: #0090bb;
+}
+.next:hover a {
+  color: #fff;
 }
 #archives .year {
   width: 14%;
@@ -1386,8 +1397,65 @@ tbody tr:hover {
   right: 0;
   bottom: 18rem;
 }
+#pagination .base {
+  flex: 1;
+  text-align: center;
+  padding: 6rem 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+#pagination .base:hover {
+  color: #fff;
+  background: #0090bb;
+}
+#pagination .base:hover a {
+  color: #fff;
+}
+#pagination .number {
+  flex: 1;
+  text-align: center;
+  padding: 6rem 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+#pagination .number:hover {
+  color: #fff;
+  background: #0090bb;
+}
+#pagination .number:hover a {
+  color: #fff;
+}
+#pagination .previous {
+  flex: 1;
+  text-align: center;
+  padding: 6rem 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+#pagination .previous:hover {
+  color: #fff;
+  background: #0090bb;
+}
+#pagination .previous:hover a {
+  color: #fff;
+}
+#pagination .next {
+  flex: 1;
+  text-align: center;
+  padding: 6rem 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+}
+#pagination .next:hover {
+  color: #fff;
+  background: #0090bb;
+}
+#pagination .next:hover a {
+  color: #fff;
+}
 #pagination .is-active {
-  background: #f3f3f3;
+  color: #fff;
+  background: #0090bb;
 }
 #footer {
   text-align: center;
