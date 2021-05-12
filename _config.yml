@@ -11,9 +11,9 @@ author:
 baseurl: /simplex
 
 # Plugins
-# plugins:
-#   - jekyll-archives
-#   - jekyll-paginate
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
 
 # Pagination
 paginate: 10
