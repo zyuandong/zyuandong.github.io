@@ -1,5 +1,5 @@
 ---
-title: 搭建Jekyll本地环境
+title: Jekyll 系列：如何搭建本地环境
 categories: [Others, Jekyll]
 tags: [jekyll]
 ---
