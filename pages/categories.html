@@ -52,7 +52,8 @@ permalink: /categories
       {% if p.categories[0] == category %}
         {% assign level_1_category = category %}
         {% for sub_c in p.categories %}
-          {% if sub_c != level_1_category and level_2_category_arr | join: ',' contains sub_c %}
+          {% assign level_2_category_str = level_2_category_arr | join: ',' %}
+          {% if sub_c != level_1_category and level_2_category_str contains sub_c %}
             {% assign level_2_category_arr = level_2_category_arr | push: sub_c %}
           {% endif %}
         {% endfor %}

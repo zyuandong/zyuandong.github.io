@@ -10,9 +10,12 @@ AngularJS是一个MV* JavaScript框架，由Google维护。Angular使用声明�
 
 ## Angular表达式
 
+{% raw %}
 Angular通过`表达式`把数据绑定到HTML模板，表达式写在双大括号内，如：`{{ expression }}`，HTML中出现Angular表达式的地方，就会显示对应表达式的数据。来个示例看看：
+{% endraw %}
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +34,7 @@ Angular通过`表达式`把数据绑定到HTML模板，表达式写在双大括�
 	</script>
 </body>
 </html>
+{% endraw %}
 ```
 
 保存以上代码为HTML文件，在浏览器中打开，可以看到浏览器中显示了`hellow angular`字符串以及数字10。Angular表达式可以做简单的运算，但是不支持条件判断、循环和异常。我们还可以看到`div`中出现了`ng-app`和`ng-init`这两个奇怪的东西，这就是Angular的指令了。
@@ -50,7 +54,8 @@ Angular指令是HTML带有`ng-`前缀的扩展属性，每个指令都有不同�
 
 Angular控制器用于控制和处理应用程序的数据。举个栗子：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,6 +80,7 @@ Angular控制器用于控制和处理应用程序的数据。举个栗子：
 </script>
 </body>
 </html>
+{% endraw %}
 ```
 
 `angular.module`用于创建Angular模块，通常Angular应用程序由模块定义，Angular控制器需要挂载到模块才会运行。

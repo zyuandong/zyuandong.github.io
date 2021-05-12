@@ -159,15 +159,18 @@ angular.module('louForum').controller('NodesListCtrl', ['$meteor', '$state', '$s
 然后添加模板，在`node`文件夹下的`views`文件夹中新建`nodes-list.ng.html`，输入如下代码：
 
 ```
+{% raw %}
 <div class="nodes-list">
     <!-- nodeDetails 是节点详情页，后面再添加这个页面 -->
     <a ng-repeat="node in nodes" ui-sref="nodeDetails({ node: node.url })">{{ node.name }}</a>
 </div>
+{% endraw %}
 ```
 
 在主菜单上添加节点列表链接，在client文件夹下的`index.html`中添加代码：
 
 ```
+{% raw %}
 <!-- ... -->
 <div class="pull-left" id="main-nav">
     <a ui-sref="home" ui-sref-active="active">首页</a>
@@ -182,6 +185,7 @@ angular.module('louForum').controller('NodesListCtrl', ['$meteor', '$state', '$s
     <a ui-sref="node" ui-sref-active="active">添加节点</a>
 </div>
 <!-- ... -->
+{% endraw %}
 ```
 
 `ui-sref-active="active"`用于判断当前页面是否为此链接的`ui-sref`指向的页面，如果是，则给当前页面添加一个class：`class="active"`，这样可以很方便的高亮当前显示的页面的导航。
@@ -284,7 +288,7 @@ angular.module('louForum').controller('PostCtrl', ['$meteor', '$state', '$scope'
 
 和前面的模块一样，在client文件夹中的`routes.js`文件中添加如下代码：
 
-```
+```javascript
 .state('postDetails', {
     url: '/post/:postId',
     templateUrl: 'client/post/views/post-details.ng.html',
@@ -294,7 +298,7 @@ angular.module('louForum').controller('PostCtrl', ['$meteor', '$state', '$scope'
 
 然后在`client/post/controllers`文件夹中新建`postDetails.js`文件，并输入如下代码：
 
-```
+```javascript
 angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '$scope', '$stateParams',
     function($meteor, $state, $scope, $stateParams) {
         $scope.post = $meteor.object(Posts, $stateParams.postId, false);
@@ -323,7 +327,8 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
 
 在`client/post/views`文件夹中新建`post-details.ng.html`文件，并输入下代码：
 
-```
+```html
+{% raw %}
 <div class="post-details">
     <div class="post-details-header">
         <h4>{{ post.title }}</h4>
@@ -339,6 +344,7 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
     <div class="post-details-footer">
     </div>
 </div>
+{% endraw %}
 ```
 
 论坛节点的添加和发帖功能就实现了。
@@ -347,7 +353,7 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
 
 修改首页的控制器，代码如下所示：
 
-```
+```javascript
 angular.module('louForum').controller('HomeCtrl', ['$meteor', '$scope',
     function($meteor, $scope) {
         // 这里传入$meteor.collection的是一个函数
@@ -355,7 +361,7 @@ angular.module('louForum').controller('HomeCtrl', ['$meteor', '$scope',
         // 可以是Meteor Collection对象
         // 或者是一个函数
         $scope.posts = $meteor.collection(function() {
-            return Posts.find({}, { sort: { createAt: -1 } });
+            return Posts.find({}, { sort: { createAt: -1 }});
         });
     }
 ]);
@@ -363,7 +369,8 @@ angular.module('louForum').controller('HomeCtrl', ['$meteor', '$scope',
 
 修改首页的模板，代码如下所示：
 
-```
+```html
+{% raw %}
 <div class="row">
     <div class="post-item" ng-repeat="post in posts">
         <div class="col-md-10">
@@ -378,6 +385,7 @@ angular.module('louForum').controller('HomeCtrl', ['$meteor', '$scope',
         </div>
     </div>
 </div>
+{% endraw %}
 ```
 
 模板中`post.authorObj()`访问的就是在model中定义的post collection的帮助函数返回的对象。

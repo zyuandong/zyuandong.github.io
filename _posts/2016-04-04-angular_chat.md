@@ -103,7 +103,8 @@ louChat
 
 编辑 `/louChat/client/index.html` 文件：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -161,22 +162,26 @@ louChat
 
 </body>
 </html>
+{% endraw %}
 ```
 
 这里就需要将项目所需要的静态文件 `jquery`、`bootstrap`、`Angular.js`、`socket.io` 等都引入的文件中，并且声明 Angular.js 的控制器范围。
 
 `user.html` 文件：
 
-```
+```html
+{% raw %}
 <div class="user">
     <span class="nickname">{{info.nickname?info.nickname:"Group-chat"}}</span>
     <span class="unread" ng-show="info.hasNewMessage&&!iscurrentreceiver">[Unread]</span>    
 </div>
+{% endraw %}
 ```
 
 `message.html` 文件：
 
-```
+```html
+{% raw %}
 <div ng-switch on="info.type">
     <!-- 欢迎消息 -->
     <div class="system-notification" ng-switch-when="welcome"><strong>System:&nbsp;&nbsp;</strong><span>{{info.text}}</span>is coming~
@@ -190,7 +195,7 @@ louChat
         <div class="content-wrapper"><span class="content">{{info.text}}</span></div>
     </div>
 </div>
-
+{% endraw %}
 ```
 
 **注：CSS样式文件就由同学们自由发挥，这里就不展示出具体代码** 

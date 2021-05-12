@@ -75,6 +75,7 @@ tag: [AngularJS, JavaScript]
 修改 `/louSearch/views/index.ejs` 文件：
 
 ```
+{% raw %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,6 +101,7 @@ tag: [AngularJS, JavaScript]
     </script>
   </body>
 </html>
+{% endraw %}
 ```
 
 代码的效果就是每次点击 'switch' 按钮，就会交替显示 'hello shiyanlou' 和 'bye-bye' 两句话。
@@ -123,7 +125,8 @@ tag: [AngularJS, JavaScript]
 
 修改 `/louSearch/views/index.ejs` 文件：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -143,6 +146,7 @@ tag: [AngularJS, JavaScript]
     </div>
   </body>
 </html>
+{% endraw %}
 ```
 
 这里没有创建控制器，通过指令 `ng-repeat` 和过滤器，实现了在输入框中输入字符，下方只会对应显示含有此字符的数据的效果。
@@ -159,7 +163,8 @@ tag: [AngularJS, JavaScript]
 
 修改 `/louSearch/views/index.ejs` 文件：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -197,6 +202,7 @@ tag: [AngularJS, JavaScript]
     </script>
   </body>
 </html>
+{% endraw %}
 ```
 
 运行程序，我们可以发现当我们输入 `people` 数据集合中含有的字符时，输入框下发会对应显示这一数据，这样，我们就初步实现了即时搜索提示的粗糙效果。
@@ -228,7 +234,8 @@ tag: [AngularJS, JavaScript]
 
 修改 `/louSearch/views/index.ejs` 文件：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -278,6 +285,7 @@ tag: [AngularJS, JavaScript]
     </script>
   </body>
 </html>
+{% endraw %}
 ```
 
 至此，项目的效果已经大部分完成，虽然还是使用的模拟数据，但与后台数据关联的接口也已经明确，我们可以继续编写后台服务程序来提供真实数据。
@@ -316,7 +324,8 @@ tag: [AngularJS, JavaScript]
 
 修改 `/louSearch/views/index.ejs` 文件：
 
-```
+```html
+{% raw %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -367,4 +376,5 @@ tag: [AngularJS, JavaScript]
     </script>
   </body>
 </html>
+{% endraw %}
 ```

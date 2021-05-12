@@ -33,7 +33,9 @@ angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '
 
 然后在`client/node/views`文件夹新建`node-details.ng.html`，输入如下代码：
 
-```
+{% raw %}
+
+```html
 <div class="current-node">
     <ol class="breadcrumb">
         <li><a ui-sref="nodesList">节点</a></li>
@@ -61,14 +63,15 @@ angular.module('louForum').controller('NodeDetailsCtrl', ['$meteor', '$scope', '
 </div>
 ```
 
+{% endraw %}
+
 添加一个页面是不是已经很熟练了。
 
 ## 回复帖子
 
 首先创建数据模型，在`model`文件夹中新建`reply.js`文件，输入如下代码：
 
-```
-
+```javascript
 Replies = new Mongo.Collection('replies');
 
 Replies.helpers({
@@ -90,7 +93,7 @@ Replies.allow({
 
 在`client/post/controllers/postDetails.js`中添加代码：
 
-```
+```javascript
 angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '$scope', '$stateParams',
     function($meteor, $state, $scope, $stateParams) {
         $scope.post = $meteor.object(Posts, $stateParams.postId, false);
@@ -116,8 +119,9 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
 
 然后在`client/post/views/post-details.ng.html`中添加回复帖子的表单，修改后的代码如下所示：
 
-```
+{% raw %}
 
+```html
 <div class="current-node" ng-if="node">
     <ol class="breadcrumb">
         <li><a ui-sref="nodesList">节点</a></li>
@@ -159,6 +163,8 @@ angular.module('louForum').controller('PostDetailsCtrl', ['$meteor', '$state', '
     </div>
 </div>
 ```
+
+{% endraw %}
 
 到这里，整个项目基本上就完成了。具备用户注册登录，论坛节点添加，发帖和回帖等功能。
 
