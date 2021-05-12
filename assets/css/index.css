@@ -1120,6 +1120,9 @@ tbody tr:hover {
   height: 100vh;
   overflow: auto;
 }
+#page-404 {
+  text-align: center;
+}
 #aside {
   height: 100vh;
 }
