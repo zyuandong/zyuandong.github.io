@@ -1,7 +1,7 @@
 ---
 title: 搭建Jekyll本地环境
-category: 杂物间
-tag: jekyll
+categories: [杂物间, 二级分类]
+tags: [jekyll]
 ---
 
 ## 安装 [Ruby Installer](http://rubyinstaller.org/downloads/)
@@ -91,6 +91,27 @@ kramdown:
 
 ```yaml
 markdown: redcarpet
+```
+
+## categories / tags 设计
+
+[jekyll-archives](https://jekyll.github.io/jekyll-archives/)
+
+category 或 tag 中带有空格、/ 等特殊符号
+
+## 分页功能
+
+[jekyll-paginate](https://github.com/jekyll/jekyll-paginate/)
+
+```ruby
+# Gemfile
+# source
+source "https://gems.ruby-china.com/"
+
+group :jekyll_plugins do
+  gem "jekyll-archives"
+  gem "jekyll-paginate"
+end
 ```
 
 ## 参考资料

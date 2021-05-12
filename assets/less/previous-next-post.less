@@ -1,0 +1,32 @@
+#previous-next-post {
+  display: flex;
+  border-top: 1px solid #f3f3f3;
+  justify-content: space-around;
+  margin: 32rem 0 0 0;
+}
+
+.base() {
+  flex: 1;
+  text-align: center;
+  padding: 10rem;
+  margin: 16rem 8rem;
+  border-radius: 4rem;
+
+  &:hover {
+    // background: #f3f3f3;
+    color: #fff;
+    background: @blue;
+    
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.previous {
+  .base();
+}
+
+.next {
+  .base();
+}

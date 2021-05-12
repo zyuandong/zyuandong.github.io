@@ -10,18 +10,37 @@ author:
 # Serving
 baseurl: /simplex
 
+# Plugins
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "home/page:num"
+
 # Outputting
-permalink: /:year/:month/:day/:title
+permalink: posts/:title
 
 # Markdown Processors
 markdown: kramdown
 kramdown:
     input: GFM
 
+# Layout
 defaults:
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "layout"
+      layout: "post"
+
+jekyll-archives:
+  enabled: [tags, categories]
+  layouts:
+    tag: tag
+    category: category
+  permalinks:
+    tag: tags/:name/
+    category: categories/:name/

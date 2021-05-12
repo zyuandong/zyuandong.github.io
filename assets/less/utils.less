@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 1px;
+}
+body {
+  height: 100%;
+  color: @font-main;
+  font-size: 16rem;
+  line-height: 1.5;
+  // overflow: hidden;
+  // font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
+  font-family: @font-family;
+  background: url("../img/bg-img.jpg");
+}
+/* a tag */
+a {
+  color: @blue;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+/* a tag end */
+
+/* h1~h6 */
+.title-h() {
+  color: @font-main;
+  font-weight: 500;
+  padding-top: 20px;
+
+  // &:before {
+  //   content: "#";
+  //   color: @blue;
+  //   margin-right: 10px;
+  // }
+}
+h1 {
+  .title-h();
+  font-size: 28rem;
+}
+h2 {
+  .title-h();
+  font-size: 24rem;
+}
+h3 {
+  .title-h();
+  font-size: 20rem;
+}
+h4 {
+  .title-h();
+  font-size: 16rem;
+}
+h5 {
+  .title-h();
+  font-size: 14rem;
+}
+h6 {
+  .title-h();
+  font-size: 12rem;
+}
+/* h1~h6 end */
+
+/* code block */
+pre {
+  white-space: pre-wrap;
+  padding: 0px;
+
+  code {
+    border-radius: 5px;
+    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  }
+}
+/* code block end */
+
+/* code inline*/
+li,
+p {
+  code {
+    color: @red;
+    padding: 2px 4px;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  }
+}
+/* code inline end */
+
+/* 引用 */
+blockquote {
+  background-color: #eee;
+  border-left: 5px solid #ccc;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei",
+    "Courier New", monospace;
+}
+/* 引用 end */
+
+/* table */
+table {
+  margin-left: 30px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+thead {
+  background-color: #ccc;
+}
+tbody {
+  background-color: #eee;
+}
+th,
+td {
+  padding: 6px 12px;
+  border: 1px solid #fff;
+}
+tbody {
+  tr:hover {
+    background-color: #ccc;
+  }
+}
+/* table end */
+
+/* selection */
+::selection {
+  background-color: @blue;
+  color: #fff;
+}
+::-moz-selection {
+  background-color: @blue;
+  color: #fff;
+}
+/* selection end */
+
+/* card */
+.card {
+  // min-height: 686rem;
+  background-color: #fff;
+  padding: 16rem;
+  border: 1px solid #ebeef5;
+  border-radius: 4rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+/* card end */
+
+/* line */
+.line {
+  height: 1rem;
+  background-color: #f3f3f3;
+  margin: 8rem 0 16rem;
+}
+/* line end */
+
+/* text */
+.text-tip {
+  color: #ccc;
+  font-size: 14rem;
+}
+/* text end */
+
+/* cursor */
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+/* cursor end */
+
+/* Loop */
+.loop_p_m(@number) when (@number < 20)  {
+  .p-@{number} {
+    padding: @number * 1rem;
+  }
+  .p-t-@{number} {
+    padding-top: @number * 1rem;
+  }
+  .p-r-@{number} {
+    padding-right: @number * 1rem;
+  }
+  .p-b-@{number} {
+    padding-bottom: @number * 1rem;
+  }
+  .p-l-@{number} {
+    padding-left: @number * 1rem;
+  }
+  .p-tb-@{number} {
+    padding-top: @number * 1rem;
+    padding-bottom: @number * 1rem;
+  }
+  .p-lr-@{number} {
+    padding-left: @number * 1rem;
+    padding-right: @number * 1rem;
+  }
+  .m-@{number} {
+    margin: @number * 1rem;
+  }
+  .m-t-@{number} {
+    margin-top: @number * 1rem;
+  }
+  .m-r-@{number} {
+    margin-right: @number * 1rem;
+  }
+  .m-b-@{number} {
+    margin-bottom: @number * 1rem;
+  }
+  .m-l-@{number} {
+    margin-left: @number * 1rem;
+  }
+  .m-tb-@{number} {
+    margin-top: @number * 1rem;
+    margin-bottom: @number * 1rem;
+  }
+  .m-lr-@{number} {
+    margin-left: @number * 1rem;
+    margin-right: @number * 1rem;
+  }
+
+  .loop_p_m(@number + 1);
+}
+.loop_p_m(0);
+
+.loop_f_s(@number) when (@number <= 28) {
+  .f-s-@{number} {
+    font-size: @number * 1rem;
+  }
+  .loop_f_s(@number + 2);
+}
+.loop_f_s(12);
+/* Loop end */
+
+/* scrollbar */
+/* 滚动条垂直方向的宽度与水平方向的高度 */
+// ::-webkit-scrollbar {
+//     width: 12px;
+//     height: 12px;
+// }
+
+/* 滚动条轨道 */
+// ::-webkit-scrollbar-track {
+//     border-radius: 10px;
+// }
+
+/* 滚动条轨道上的按钮 */
+// ::-webkit-scrollbar-thumb {
+//     background-color: rgba(0, 0, 0, 0.5);
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//     background-color: rgba(0, 0, 0, 0.7);
+// }
+
+/* 滚动条垂直方向轨道件 */
+// ::-webkit-scrollbar-track-piece {
+// }
+
+/* 滚动条按钮 */
+// ::-webkit-scrollbar-button {
+// }
+
+/* 滚动条轨道上的滚动角 */
+// ::-webkit-scrollbar-corner {
+// }
+/* scrollbar end */

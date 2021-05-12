@@ -1,0 +1,46 @@
+---
+layout: default
+title: Archives
+permalink: /archives
+---
+
+
+<div id="archives">
+  <!-- <h1>归档</h1> -->
+  {% for post in site.posts %}
+
+    {% unless post.next %}
+      <div class="year">{{ post.date | date: "%Y" }}</div>
+    {% else %}
+      {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture n_year %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+      {% if year != n_year %}
+      <div class="year">
+        {{ post.date | date: "%Y" }}
+        <span class="line">
+        </span>
+      </div>
+      {% endif %}
+    {% endunless %}
+
+    {% capture month %}{{ post.date | date: "%b" }}{% endcapture %}
+    {% capture n_month %}{{ post.next.date | date: "%b" }}{% endcapture %}
+
+    {% if month != n_month %}
+      <div class="month">
+        {{ month }}
+        <span class="line"></span>
+      </div>
+    {% endif %}
+
+    <div class="day-title">
+      <span class="day text-tip"  title="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%d" }}
+        <span class="line"></span>
+      </span>
+      <span class="title" title="{{ post.title }}">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </span>
+    </div>
+  {% endfor %}
+</div>

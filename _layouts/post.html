@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div id="post">
+  <h1>{{ page.title }}</h1>
+  <div class="post-message">
+    {% include title-date.html %}
+    {% include title-category.html %}
+    {% include title-tag.html %}
+  </div>
+  <div class="line"></div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</div>

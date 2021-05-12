@@ -52,6 +52,10 @@ git push origin HEAD --force
 
 **注意：此操作会将 B 之后的记录一并删除**
 
+## git tag
+
+[git tag 的基本用法](https://mp.weixin.qq.com/s?src=11&timestamp=1619766130&ver=3039&signature=Ul5a3cICrOzj4eRew1egrmOPKBY-hW--gwmOrJXhjAhSqU6s90qdi1zaos8uOIrAeT*fsLqAdSsf9JU67i43lLlz38-UFPWqrn9tvDpXLl01jJ106xgO5xKGWU58UrMZ&new=1)
+
 ## 参考资料
 
 删除本地

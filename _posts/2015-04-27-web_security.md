@@ -2,7 +2,6 @@
 title: web 安全
 category: 前端技术
 tag: web
-monthLast: true
 ---
 
 ## 常见的前端安全策略

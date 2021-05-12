@@ -2,7 +2,6 @@
 title: 资源加载顺序小结
 category: 前端技术
 tag: JavaScript
-monthLast: true
 ---
 
 ## 常用加载js方法及区别

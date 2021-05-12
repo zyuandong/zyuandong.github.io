@@ -1,42 +1,43 @@
 /* back2top btn */
 .bt-line-trf(@X, @Y, @rotate) {
-    -webkit-transform: translate(@X, @Y) rotate(@rotate);
-    -moz-transform: translate(@X, @Y) rotate(@rotate);
-    -ms-transform: translate(@X, @Y) rotate(@rotate);
-    -o-transform: translate(@X, @Y) rotate(@rotate);
-    transform: translate(@X, @Y) rotate(@rotate);
+  -webkit-transform: translate(@X, @Y) rotate(@rotate);
+  -moz-transform: translate(@X, @Y) rotate(@rotate);
+  -ms-transform: translate(@X, @Y) rotate(@rotate);
+  -o-transform: translate(@X, @Y) rotate(@rotate);
+  transform: translate(@X, @Y) rotate(@rotate);
 }
 
 #back2top {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 0;
-    background-color: @blue;
-    cursor: pointer;
-    position: fixed;
-    right: 15px;
-    bottom: 65px;
-    border-radius: 50%;
-    display: none;
-    z-index: 2;
-    padding: 12px 14px;
-    box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 0;
+  background-color: @blue;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  display: none;
+  z-index: 2;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.7);
 
-    .bt-line {
-        height: 2px;
-        width: 100%;
-        display: inline-block;
-        background-color: @white;
-    }
+  .bt-line {
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    background-color: @white;
+  }
 
-    .bt-line-first {
-        margin-top: 6px;
-        .bt-line-trf(4px, 0, 45deg);
-    }
+  .bt-line-first {
+    margin-top: 6px;
+    .bt-line-trf(4px, 0, 45deg);
+  }
 
-    .bt-line-last {
-        .bt-line-trf(-4px, -2px, -45deg);
-    }
+  .bt-line-last {
+    .bt-line-trf(-4px, -2px, -45deg);
+  }
 }
 /* back2top btn end */

@@ -1,6 +1,6 @@
 {% if page.date %}
-<span class="date">
-    <i class="icon-calendar"></i>
-    {{ page.date | date: "%Y-%m-%d" }}
+<span class="date m-r-16" title="{{ page.date | date: '%Y-%m-%d' }}">
+    <i class="icon-calendar-o"></i>
+    {{ page.date | date: "%b %e, %Y" }}
 </span>
 {% endif %}
