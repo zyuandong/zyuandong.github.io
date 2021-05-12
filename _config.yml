@@ -37,10 +37,10 @@ defaults:
       layout: "post"
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [tags, categories]
   layouts:
-    category: category
     tag: tag
+    category: category
   permalinks:
     tag: tags/:name/
     category: categories/:name/
