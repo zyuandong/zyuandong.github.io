@@ -11,9 +11,9 @@ author:
 baseurl: /simplex
 
 # Plugins
-plugins:
-  - jekyll-archives
-  - jekyll-paginate
+# plugins:
+#   - jekyll-archives
+#   - jekyll-paginate
 
 # Pagination
 paginate: 10
@@ -37,7 +37,9 @@ defaults:
       layout: "post"
 
 jekyll-archives:
-  enabled: [tags, categories]
+  enabled:
+    - tags
+    - categories
   layouts:
     tag: tag
     category: category
