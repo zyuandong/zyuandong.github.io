@@ -1,6 +1,6 @@
 ---
 title: Docker 学习笔记（一）
-category: 杂物间
+category: Others
 tag: Docker
 monthLast: true
 ---

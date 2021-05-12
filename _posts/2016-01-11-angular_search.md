@@ -1,6 +1,6 @@
 ---
 title: AngularJS 实现即时搜索 
-category: 框架/库
+category: Technology
 tag: [AngularJS, JavaScript]
 ---
 

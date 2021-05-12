@@ -1,6 +1,6 @@
 ---
 title: web 安全
-category: 前端技术
+category: Technology
 tag: web
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 搭建 Linux 开发环境
-category: 杂物间
+category: Others
 tag: Linux
 monthLast: true
 ---

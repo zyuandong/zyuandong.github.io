@@ -1,6 +1,6 @@
 ---
 title: Node.js 安装及版本控制
-category: 后端技术
+category: Technology
 tag: Node.js
 ---
 

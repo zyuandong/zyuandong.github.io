@@ -1,6 +1,6 @@
 ---
 title: jekyll中使用Category和Tag
-category: 杂物间
+category: Others
 tag: jekyll
 ---
 

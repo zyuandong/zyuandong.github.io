@@ -1,7 +1,7 @@
 ---
 title: 提高效率，拒绝拖延
-category: 随笔
-tag: 随笔
+category: Living
+tags: [Living]
 monthLast: true
 ---
 

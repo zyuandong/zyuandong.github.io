@@ -1,6 +1,6 @@
 ---
 title: Node.js 图片上传
-category: 后端技术
+category: Technology
 tags: [Node.js, JavaScript]
 ---
 

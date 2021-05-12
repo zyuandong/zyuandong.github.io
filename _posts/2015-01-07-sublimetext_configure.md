@@ -1,6 +1,6 @@
 ---
 title: 将Sublime Text打造为适合自己的编辑器
-category: 工具
+category: Tools
 tags: [编辑器, sublime text]
 ---
 

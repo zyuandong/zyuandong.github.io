@@ -1,6 +1,6 @@
 ---
 title: mongoDB基本命令运用
-category: 杂物间
+category: Others
 tag: mongoDB
 monthLast: true
 ---

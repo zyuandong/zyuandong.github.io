@@ -1,6 +1,6 @@
 ---
 title: 搭建Jekyll本地环境
-categories: [杂物间, 二级分类]
+categories: [Others, Jekyll]
 tags: [jekyll]
 ---
 

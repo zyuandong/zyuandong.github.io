@@ -1,6 +1,6 @@
 ---
 title: Node.js 开发博客系统（四）
-category: 后端技术
+category: Technology
 tags: [Node.js, Express, mongoDB]
 ---
 

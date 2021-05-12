@@ -1,6 +1,6 @@
 ---
 title: JavaScript 闭包【转载】
-categories: [前端技术, 二级分类]
+categories: [Technology, FrontEnd]
 tags: [JavaScript, 闭包]
 last_modified_date: 2021-05-11
 ---

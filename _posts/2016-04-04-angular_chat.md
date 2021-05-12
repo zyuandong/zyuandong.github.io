@@ -1,6 +1,6 @@
 ---
 title: AngularJS 实现简易聊天室
-category: 框架/库
+category: Technology
 tag: AngularJS
 ---
 

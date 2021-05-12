@@ -1,6 +1,6 @@
 ---
 title: 正则表达式
-category: 杂物间
+category: Others
 tag: 正则表达式
 ---
 

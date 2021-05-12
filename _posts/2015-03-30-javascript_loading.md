@@ -1,6 +1,6 @@
 ---
 title: 资源加载顺序小结
-category: 前端技术
+category: Technology
 tag: JavaScript
 ---
 

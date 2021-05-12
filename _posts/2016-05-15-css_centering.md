@@ -1,6 +1,6 @@
 ---
 title: CSS 实现垂直居中
-category: 前端技术
+category: Technology
 tag: CSS
 ---
 
