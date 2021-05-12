@@ -22,10 +22,38 @@ Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板�
 镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。
 用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。
 
+```
+docker search nginx
+
+docker images
+docker image ls
+
+docker pull nginx
+
+docker run --name nginx-container -p 8080:80 -d nginx
+```
+
 ### 容器
 
 Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。
 在Docker容器中，每个容器之间的隔离使用过Linux的 CGroups 和 Namespaces 技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。
+
+```
+docker ps
+
+docker container ls
+docker container ls -a
+
+docker stop <container name>
+
+docker restart <container name>
+
+docker start <container name>
+
+docker rm <container name>
+
+docker container exec -it <container id> /bin/bash
+```
 
 ### 仓库
 
@@ -35,4 +63,6 @@ Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器�
 
 ### Docker 基础命令
 
-![Docker基础命令](http://imgchr.com/images/docker.png)
+- [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620814243&ver=3064&signature=16ggfIUMSxhk*PvTNJ6aH6XqB753DYX5iQdg7izU5hXmF7YA38Sz6JcTm-PeJ3hTcGRqIjt0PT5FbhEopcyJvcfOYHIeYlVmsbkhR2tauh2RTssO7p4j5MBODfdRAT9Z&new=1)
+- [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
+- [Docker部署nginx并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
