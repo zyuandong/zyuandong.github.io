@@ -25,11 +25,16 @@
     {% endfor %}
   {% endfor %}
 
-  {% for tag in trending_tags %}
-    <a class="f-s-14 p-tb-4 p-lr-8 m-r-10 m-b-10" href="{{ site.baseurl }}/tags/{{ tag | slugify }}">
-      {{ tag }}
-      <span class="text-tip p-l-8">{{ site.tags[tag] | size }}</span>
-    </a>
-  {% endfor %}
+  <ul class="tag-inline-block p-0">
+    {% for tag in trending_tags %}
+    <li>
+      <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">
+        <span class="name">{{ tag }}</span>
+        <span class="count">{{ site.tags[tag] | size }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  
 
 </div>

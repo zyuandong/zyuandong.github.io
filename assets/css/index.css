@@ -52,19 +52,19 @@ h4 {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   padding-top: 20px;
-  font-size: 16rem;
+  font-size: 18rem;
 }
 h5 {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   padding-top: 20px;
-  font-size: 14rem;
+  font-size: 16rem;
 }
 h6 {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   padding-top: 20px;
-  font-size: 12rem;
+  font-size: 14rem;
 }
 /* h1~h6 end */
 /* code block */
@@ -1229,21 +1229,37 @@ tbody tr:hover {
 #tags {
   list-style: none;
 }
-#tags ul li {
+#tags ul.tag-inline-block li {
   display: inline-block;
-  padding: 4rem 12rem;
-  border: 1px solid #ebeef5;
-  border-radius: 4rem;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   margin: 0 16rem 16rem 0;
 }
-#tags ul li:hover {
-  background: #0090bb;
-  border-color: #0090bb;
-  box-shadow: 0 2px 12px 0 #0090bb;
-}
-#tags ul li:hover a {
+#tags ul.tag-inline-block li a {
+  display: inline-block;
   color: #fff;
+  text-decoration: none;
+}
+#tags ul.tag-inline-block li a .name {
+  float: left;
+  background: #868e96;
+  padding: 0 8rem;
+  border-radius: 3rem 0 0 3rem;
+}
+#tags ul.tag-inline-block li a .count {
+  float: left;
+  background: #495057;
+  padding: 0 6rem;
+  border-radius: 0 3rem 3rem 0;
+}
+#tags ul.tag-inline-block li a:hover {
+  border: none !important;
+  box-shadow: 0 0 5px #495057;
+}
+#tags ul.tag-inline-block li a:hover .name {
+  background: #495057;
+}
+#tags .tag-anchor-point {
+  padding: 80rem 0 0 0;
+  margin: -60rem 0 0 0;
 }
 #tag ul {
   line-height: 2;
@@ -1256,17 +1272,33 @@ tbody tr:hover {
   border-bottom: 1px dashed #ccc;
   margin: 0 10rem 10rem 10rem;
 }
-#trending-tags a {
+#trending-tags ul.tag-inline-block li {
   display: inline-block;
-  border: 1rem solid #ebeef5;
-  border-radius: 4rem;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 16rem 16rem 0;
 }
-#trending-tags a:hover {
+#trending-tags ul.tag-inline-block li a {
+  display: inline-block;
   color: #fff;
-  background: #0090bb;
-  border-color: #0090bb;
-  box-shadow: 0 2px 12px 0 #0090bb;
+  text-decoration: none;
+}
+#trending-tags ul.tag-inline-block li a .name {
+  float: left;
+  background: #868e96;
+  padding: 0 8rem;
+  border-radius: 3rem 0 0 3rem;
+}
+#trending-tags ul.tag-inline-block li a .count {
+  float: left;
+  background: #495057;
+  padding: 0 6rem;
+  border-radius: 0 3rem 3rem 0;
+}
+#trending-tags ul.tag-inline-block li a:hover {
+  border: none !important;
+  box-shadow: 0 0 5px #495057;
+}
+#trending-tags ul.tag-inline-block li a:hover .name {
+  background: #495057;
 }
 #previous-next-post {
   display: flex;
