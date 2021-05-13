@@ -54,7 +54,7 @@ git push origin HEAD --force
 
 ## git tag
 
-[git tag 的基本用法](https://mp.weixin.qq.com/s?src=11&timestamp=1619766130&ver=3039&signature=Ul5a3cICrOzj4eRew1egrmOPKBY-hW--gwmOrJXhjAhSqU6s90qdi1zaos8uOIrAeT*fsLqAdSsf9JU67i43lLlz38-UFPWqrn9tvDpXLl01jJ106xgO5xKGWU58UrMZ&new=1)
+[git tag 的基本用法](https://mp.weixin.qq.com/s?src=11&timestamp=1620892195&ver=3065&signature=Tirnl*vOnhdwInpxhdlrPSZmlMwbk86nzijrswn-e-0EeenQF9kB6YmSYFaWj6NMcUqWC6-5xwAmHev89mZsDvfoIdeMXkwUu9nGAZOIhwHUgmrGzXy7tIUH0a1a1zio&new=1)
 
 ## 参考资料
 
