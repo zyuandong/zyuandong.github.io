@@ -19,8 +19,10 @@
       {% assign tag = tag_size_item | split: ":" | first %}
       {% assign tag_size = tag_size_item | split: ":" | last | plus: 0 %}
       {% if size == tag_size %}
-        {% assign trending_tags = trending_tags | push: tag %}
-        {% break %}
+        {% unless trending_tags contains tag %}
+          {% assign trending_tags = trending_tags | push: tag %}
+          {% break %}
+        {% endunless %}
       {% endif %}
     {% endfor %}
   {% endfor %}
