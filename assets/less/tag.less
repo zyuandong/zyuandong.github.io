@@ -3,25 +3,25 @@
 
     li {
       display: inline-block;
-      margin: 0 16rem 16rem 0;
+      margin: 0 8rem 8rem 0;
 
       a {
         display: inline-block;
         color: #fff;
         text-decoration: none;
+        overflow: hidden;
+        border-radius: 3rem;
 
         .name {
           float: left;
           background: #868e96;
           padding: 0 8rem;
-          border-radius: 3rem 0 0 3rem;
         }
 
         .count {
           float: left;
           background: #495057;
           padding: 0 6rem;
-          border-radius: 0 3rem 3rem 0;
         }
 
         &:hover {
@@ -44,6 +44,10 @@
   .tag-anchor-point {
     padding: 80rem 0 0 0;
     margin: -60rem 0 0 0;
+  }
+
+  ul:not(.tag-inline-block) {
+    line-height: 1.8;
   }
 }
 

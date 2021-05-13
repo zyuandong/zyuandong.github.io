@@ -1191,28 +1191,12 @@ tbody tr:hover {
 #post .post-content {
   font-size: 14rem;
 }
+#categories .tag-anchor-point {
+  padding: 80rem 0 0 0;
+  margin: -60rem 0 0 0;
+}
 #categories ul {
-  list-style: none;
-}
-#categories ul .level-1 {
-  padding: 10rem;
-  border: 1px solid #ccc;
-  background: #f3f3f3;
-  border-radius: 4rem;
-  margin: 0 0 30rem 0;
-}
-#categories ul .level-1.has-level-2 {
-  border-radius: 4rem 4rem 0 0;
-  margin: 0;
-}
-#categories ul ul {
-  padding: 10rem 10rem 10rem 40rem;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-#categories ul ul.last-level-2 {
-  border-radius: 0 0 4rem 4rem;
-  margin: 0 0 30rem 0;
+  line-height: 1.8;
 }
 #category ul {
   line-height: 2;
@@ -1231,24 +1215,24 @@ tbody tr:hover {
 }
 #tags ul.tag-inline-block li {
   display: inline-block;
-  margin: 0 16rem 16rem 0;
+  margin: 0 8rem 8rem 0;
 }
 #tags ul.tag-inline-block li a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
+  overflow: hidden;
+  border-radius: 3rem;
 }
 #tags ul.tag-inline-block li a .name {
   float: left;
   background: #868e96;
   padding: 0 8rem;
-  border-radius: 3rem 0 0 3rem;
 }
 #tags ul.tag-inline-block li a .count {
   float: left;
   background: #495057;
   padding: 0 6rem;
-  border-radius: 0 3rem 3rem 0;
 }
 #tags ul.tag-inline-block li a:hover {
   border: none !important;
@@ -1260,6 +1244,9 @@ tbody tr:hover {
 #tags .tag-anchor-point {
   padding: 80rem 0 0 0;
   margin: -60rem 0 0 0;
+}
+#tags ul:not(.tag-inline-block) {
+  line-height: 1.8;
 }
 #tag ul {
   line-height: 2;
@@ -1274,24 +1261,24 @@ tbody tr:hover {
 }
 #trending-tags ul.tag-inline-block li {
   display: inline-block;
-  margin: 0 16rem 16rem 0;
+  margin: 0 8rem 8rem 0;
 }
 #trending-tags ul.tag-inline-block li a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
+  overflow: hidden;
+  border-radius: 3rem;
 }
 #trending-tags ul.tag-inline-block li a .name {
   float: left;
   background: #868e96;
   padding: 0 8rem;
-  border-radius: 3rem 0 0 3rem;
 }
 #trending-tags ul.tag-inline-block li a .count {
   float: left;
   background: #495057;
   padding: 0 6rem;
-  border-radius: 0 3rem 3rem 0;
 }
 #trending-tags ul.tag-inline-block li a:hover {
   border: none !important;

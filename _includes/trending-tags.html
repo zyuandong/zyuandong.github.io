@@ -27,7 +27,7 @@
     {% endfor %}
   {% endfor %}
 
-  <ul class="tag-inline-block p-0">
+  <ul class="tag-inline-block p-0 m-b-0">
     {% for tag in trending_tags %}
     <li>
       <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}">
@@ -37,6 +37,5 @@
     </li>
     {% endfor %}
   </ul>
-  
 
 </div>

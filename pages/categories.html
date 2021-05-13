@@ -7,39 +7,27 @@ permalink: /categories
 <div id="categories">
   <!-- <h1>分类</h1> -->
 
-  <ul class="p-0">
+{% for c in site.categories %}
+  {% assign category = c | first %}
+  {% assign posts = c | last %}
+  {% assign category_group = "" | split: "" %}
 
-  {% assign sorted_categories = site.categories | sort %}
-
-  {% for c in sorted_categories %}
-    {% assign category = c | first %}
-    {% assign posts = c | last %}
-    {% assign category_group = "" | split: "" %}
-
-    {% for p in posts %}
-      {% if category == p.categories[0] %}
-        {% assign category_group = category_group | concat: p.categories %}
-      {% endif %}
-    {% endfor %}
-
-    {% assign uniqed_category_group = category_group | uniq %}
-    {% for c2 in uniqed_category_group %}
-      {% if forloop.first %}
-      <li class="level-1{% if uniqed_category_group.size > 1 %} has-level-2{% endif %}">
-        <a href="{{ c2 | slugify }}">{{ c2 }}</a>
-        <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
+  <div class="category-group">
+    <h3 id="{{ category| slugify }}" class="tag-anchor-point">
+      <span>{{ category }}</span>
+      <span class="text-tip">{{ posts | size }} Posts</span>
+    </h3>
+    
+    <ul>
+      {% for p in posts %}
+      <li>
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        <span class="line-dashed"></span>
+        <span class="text-tip">{{ p.date | date: "%b %e, %Y" }} Posts</span>
       </li>
-      {% else %}
-      <ul class="{% if forloop.last == true %}last-level-2{% endif %}">
-        <li class="level-2">
-          <a href="{{ c2 | slugify }}">{{ c2 }}</a>
-          <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
-        </li>
-      </ul>
-      {% endif %}
-    {% endfor %}
-    <!-- {% if uniqed_category_group.size > 0 %}<br />{% endif %} -->
-  {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
 
-  </ul>
 </div>
