@@ -1300,6 +1300,9 @@ tbody tr:hover {
 #trending-tags ul.tag-inline-block li a:hover .name {
   background: #495057;
 }
+#trending-tags a {
+  font-size: 14rem;
+}
 #previous-next-post {
   display: flex;
   border-top: 1px solid #f3f3f3;
