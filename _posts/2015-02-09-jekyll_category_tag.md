@@ -46,6 +46,64 @@ jekyll-archives:
 
 考虑成本以及 jekyll 现有的功能，最终还是决定放弃 jekyll-archives，而是使用 jekyll 现有的能力来实现 post、category、tag 的资源关联交互。
 
+## categories 结构、样式
+
+{% raw %}
+
+```html
+<!-- 2 -->
+{% for c in sorted_categories_2 %}
+  {% assign category = c | first %}
+  {% assign posts = c | last %}
+  {% assign level_1_category = "" %}
+  {% assign level_2_category_arr = "" | split: "" %}
+
+  {% for p in posts %}
+    {% if p.categories[0] == category %}
+      {% assign level_1_category = category %}
+      {% for sub_c in p.categories %}
+        {% assign level_2_category_str = level_2_category_arr | join: ',' %}
+        {% if sub_c != level_1_category and level_2_category_str contains sub_c %}
+          {% assign level_2_category_arr = level_2_category_arr | push: sub_c %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% if level_1_category != "" %}
+  <li class="level-1">
+    <a href="{{ level_1_category | slugify }}">{{ level_1_category }}</a>
+    <sup>{{ site.categories[level_1_category] | size }}</sup>
+  </li>
+    {% for c in level_2_category_arr %}
+    <ul>
+      <li class="level-2">
+        <a href="{{ c | slugify }}">{{ c }}</a>
+        <sup>{{ site.categories[c] | size }}</sup>
+      </li>
+    </ul>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+<!-- 3 -->
+{% assign categories = "" | split: "" %}
+{% for c in site.categories %}
+  {% assign categories = categories | push: c[0] %}
+{% endfor %}
+
+{% assign sorted_categories = categories | sort_natural %}
+
+{% for category in sorted_categories %}
+<li>
+  <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
+  <sup>{{ site.categories[category] | size }} </sup>
+</li>
+{% endfor %}
+```
+
+{% endraw %}
+
 ## 参考
 
 [用jekyll和jQuery实现异步加载文章列表](http://yanping.me/cn/blog/2012/10/10/asynchronous-loading-post-list-with-jekyll-and-jQuery/)
