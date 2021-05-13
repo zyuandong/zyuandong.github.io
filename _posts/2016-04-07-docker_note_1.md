@@ -22,7 +22,7 @@ Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板�
 镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。
 用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。
 
-```
+```cmd
 docker search nginx
 
 docker images
@@ -38,7 +38,7 @@ docker run --name nginx-container -p 8080:80 -d nginx
 Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。
 在Docker容器中，每个容器之间的隔离使用过Linux的 CGroups 和 Namespaces 技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。
 
-```
+```cmd
 docker ps
 
 docker container ls
@@ -61,8 +61,81 @@ docker container exec -it <container id> /bin/bash
 Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。
 仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull拉取镜像到本地。
 
-### Docker 基础命令
+## 基于 Nginx 部署 Vue 项目
+
+结构说明：
+
+```text
+/demo
+|
+|__ Dockerfile
+|__ dist
+|__ nginx
+      |__ default.conf
+```
+
+Dockerfile 文件：
+
+```dockerfile
+FROM nginx
+COPY dist/ /usr/share/nginx/html/
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+```
+
+default.conf 文件：
+
+```nginx
+server {
+  listen       80;
+  server_name  192.168.62.14;
+
+  #charset koi8-r;
+  access_log  /var/log/nginx/host.access.log  main;
+  error_log  /var/log/nginx/error.log  error;
+
+  location / {
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+  }
+
+  #error_page  404              /404.html;
+
+  # redirect server error pages to the static page /50x.html
+  #
+  error_page   500 502 503 504  /50x.html;
+  location = /50x.html {
+    root   /usr/share/nginx/html;
+  }
+}
+```
+
+生成镜像：
+
+在存在 Dockerfile 的目录下执行命令：
+
+`docker build -t <image name> .`
+
+启动容器：
+
+`docker run -d --name <container name> -p 8080:80 <image name>`
+
+- `docer run` 基于镜像启动容器
+- `-d` 后台方式运行
+- `--name <container name>` 设置容器名
+- `-p 8080:80` 端口映射，将宿主的 8080 端口映射到容器的 80 端口
+
+## 参考
 
 - [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620814243&ver=3064&signature=16ggfIUMSxhk*PvTNJ6aH6XqB753DYX5iQdg7izU5hXmF7YA38Sz6JcTm-PeJ3hTcGRqIjt0PT5FbhEopcyJvcfOYHIeYlVmsbkhR2tauh2RTssO7p4j5MBODfdRAT9Z&new=1)
 - [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
 - [Docker部署nginx并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
+
+- [Docker + Nginx 部署 Vue 项目](https://zhuanlan.zhihu.com/p/345622879)
+- [[手把手系列之]Docker 部署 vue 项目](https://mp.weixin.qq.com/s?src=11&timestamp=1620873161&ver=3065&signature=SXWaLe7JFgWgQ83rfcJJgskhDuMCKFkEYOwhcjICiCapxweAaGVt2Brq-G2lTRccMpYSRq2v0kCo4uKcC*ibznTPi4i5T5H6PyumXz3CXUe5Ek-TjkvBOK7BbZAMYWGH&new=1)
+- [Dockerfile 详解，看这一篇就够了](https://mp.weixin.qq.com/s?src=11&timestamp=1620882486&ver=3065&signature=R9lV0HB-0NK73wfZt2NfB3mpckZWHanZbr0965EVk5Nal8tXwMwzdhiNFAhfgl5iUmvGcgXpjI6n-WrHNayJjp0374-KM9N3EakVjETrA9fHw3piXqQ9zHeQoJmXcfwv&new=1)
+
+- [使用nginx代理vue项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620873031&ver=3065&signature=1U*Zj3a9DuCRKnPyUak9OcUtiBJWKGCBixSI4OHI0GgdqC6PLHSW*VbgZssxl1e36yYOtTw8j6rP6xreqmB6mJ4DB4ETca28sxCk1mEeCXRPB4bwHJKJR24XQmCDf2qs&new=1)
+- [nginx 基本入门(至今为止见过最好的 nginx 入门文章，没有之一。)](https://www.jianshu.com/p/93ac21161ac6)
+- [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/Dhjie_king/article/details/113868250)
+- [Nginx部署Vue项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620815010&ver=3064&signature=AW7hbSFSQyfnPe2qISCvGKlJ3msx-zXfG1E-YpAt0*8FrXJwH*i1VN2K5dH-bogNakbYfJWXnC9ucjUamEhPW*zWzMrfBUBQB3tK4hYr8lgunN-beKZajJAa-s*0VNgw&new=1)
+- [使用docker运行nginx](https://mp.weixin.qq.com/s?src=11&timestamp=1620810325&ver=3064&signature=KXqGB0S-Nb-LfGEjfvrQjJsKEok7zfrDeB-qPVD8PsxWlYByRaqsBaxiTDsxI2k2CBWz*Y61aD9HJfYAg-yFNshDvGDRuA4VnhvU5bXMXFKCrW-T5sG7NoNGyqAC1yd1&new=1)
