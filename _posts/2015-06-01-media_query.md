@@ -1,6 +1,6 @@
 ---
 title: 详解media query媒体查询
-category: Technology
+category: 技术
 tags: [CSS, media query]
 ---
 

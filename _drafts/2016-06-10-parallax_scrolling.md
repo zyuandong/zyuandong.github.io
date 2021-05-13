@@ -1,6 +1,6 @@
 ---
 title: 视差滚动
-category: Technology
+category: 技术
 tag: CSS
 monthLast: true
 ---

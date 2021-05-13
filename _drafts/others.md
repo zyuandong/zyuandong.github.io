@@ -1,5 +1,5 @@
 ---
-title: Others
+title: 随笔
 category:
 tags:
 ---

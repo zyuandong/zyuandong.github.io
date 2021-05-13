@@ -1,6 +1,6 @@
 ---
 title: Node.js 图片上传
-category: Technology
+category: 技术
 tags: [Node.js, JavaScript]
 ---
 

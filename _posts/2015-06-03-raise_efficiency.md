@@ -1,8 +1,7 @@
 ---
 title: 提高效率，拒绝拖延
-category: Living
-tags: [Living]
-monthLast: true
+category: 生活
+tags: []
 ---
 
 ## 一个拖延症晚期患者的自述

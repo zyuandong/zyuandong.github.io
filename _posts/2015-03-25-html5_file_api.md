@@ -1,6 +1,6 @@
 ---
 title: HTML5 File API
-category: Technology
+category: 技术
 tags: [web, HTML]
 ---
 

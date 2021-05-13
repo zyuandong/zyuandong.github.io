@@ -1,6 +1,6 @@
 ---
 title: Node.js 入门
-category: Technology
+category: 技术
 tag: Node.js
 ---
 

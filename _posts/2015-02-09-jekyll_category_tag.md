@@ -1,6 +1,6 @@
 ---
 title: Jekyll 系列：Category 和 Tag
-category: Others
+category: 随笔
 tag: jekyll
 last_modified_date: 2021-05-12
 ---
@@ -51,6 +51,38 @@ jekyll-archives:
 {% raw %}
 
 ```html
+<!-- 1 -->
+{% assign sorted_categories = site.categories %}
+
+{% for c in sorted_categories %}
+  {% assign category = c | first %}
+  {% assign posts = c | last %}
+  {% assign category_group = "" | split: "" %}
+
+  {% for p in posts %}
+    {% if category == p.categories[0] %}
+      {% assign category_group = category_group | concat: p.categories %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign uniqed_category_group = category_group | uniq %}
+  {% for c2 in uniqed_category_group %}
+    {% if forloop.first %}
+    <li class="level-1{% if uniqed_category_group.size > 1 %} has-level-2{% endif %}">
+      <a href="{{ c2 | slugify }}">{{ c2 }}</a>
+      <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
+    </li>
+    {% else %}
+    <ul class="{% if forloop.last == true %}last-level-2{% endif %}">
+      <li class="level-2">
+        <a href="{{ c2 | slugify }}">{{ c2 }}</a>
+        <span class="text-tip">{{ site.categories[c2] | size }} Posts</span>
+      </li>
+    </ul>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
 <!-- 2 -->
 {% for c in sorted_categories_2 %}
   {% assign category = c | first %}

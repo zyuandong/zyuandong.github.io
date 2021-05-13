@@ -1,6 +1,6 @@
 ---
 title: mongoDB基本命令运用
-category: Others
+category: 随笔
 tag: mongoDB
 monthLast: true
 ---

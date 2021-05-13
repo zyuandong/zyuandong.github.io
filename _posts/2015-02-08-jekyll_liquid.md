@@ -1,6 +1,6 @@
 ---
 title: Jekyll 系列：初识模板语言 Liquid
-category: Others
+category: 随笔
 tag: liquid
 ---
 

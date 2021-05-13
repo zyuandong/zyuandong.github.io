@@ -1,6 +1,6 @@
 ---
 title: 搭建 Linux 开发环境
-category: Others
+category: 随笔
 tag: Linux
 monthLast: true
 ---

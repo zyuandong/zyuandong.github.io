@@ -1,6 +1,6 @@
 ---
 title: jquery-pajx 实现无刷新改变文档内容
-category: Tools
+category: 工具
 tags: pajx
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Docker 学习笔记（一）
-category: Others
+category: 随笔
 tag: Docker
 monthLast: true
 ---

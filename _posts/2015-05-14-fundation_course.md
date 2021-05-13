@@ -1,6 +1,6 @@
 ---
 title: 必备基础知识
-category: Others
+category: 随笔
 tags: [http, 数据结构]
 monthLast: true
 ---

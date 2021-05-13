@@ -1,6 +1,6 @@
 ---
 title: Jekyll 系列：如何搭建本地环境
-categories: [Others, Jekyll]
+category: 随笔
 tags: [jekyll]
 ---
 

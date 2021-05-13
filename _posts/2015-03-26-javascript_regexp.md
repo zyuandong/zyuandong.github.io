@@ -1,6 +1,6 @@
 ---
 title: 正则表达式
-category: Others
+category: 随笔
 tag: 正则表达式
 ---
 

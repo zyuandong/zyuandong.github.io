@@ -1,6 +1,6 @@
 ---
 title: JavaScript 笔记
-category: Technology
+category: 技术
 tag: JavaScript
 ---
 

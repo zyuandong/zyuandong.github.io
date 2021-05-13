@@ -1,6 +1,6 @@
 ---
 title: Grunt 学习笔记
-category: Tools
+category: 工具
 tag: Grunt
 ---
 

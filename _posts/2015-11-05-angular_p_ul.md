@@ -1,6 +1,6 @@
 ---
 title: 开发中的语义化插曲
-category: Technology
+category: 技术
 tag: 规范
 ---
 

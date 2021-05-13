@@ -1,6 +1,6 @@
 ---
 title: 滚动条自动滚到底部
-category: Others
+category: 随笔
 tags: [web, JavaScript]
 monthLast: true
 ---

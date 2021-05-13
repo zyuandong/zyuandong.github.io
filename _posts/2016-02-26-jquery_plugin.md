@@ -1,6 +1,6 @@
 ---
 title: 制作jQuery插件
-category: Technology
+category: 技术
 tags: [JavaScript, jQuery]
 monthLast: true
 ---

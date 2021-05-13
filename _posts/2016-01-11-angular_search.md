@@ -1,6 +1,6 @@
 ---
 title: AngularJS 实现即时搜索 
-category: Technology
+category: 技术
 tag: [AngularJS, JavaScript]
 ---
 

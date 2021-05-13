@@ -1,6 +1,6 @@
 ---
 title: JavaScript 作用域
-category: Technology
+category: 技术
 tag: JavaScript
 ---
 
