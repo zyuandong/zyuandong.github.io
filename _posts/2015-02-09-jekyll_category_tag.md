@@ -1,7 +1,7 @@
 ---
 title: Jekyll 系列：Category 和 Tag
 category: 随笔
-tag: jekyll
+tags: [Jekyll]
 last_modified_date: 2021-05-12
 ---
 

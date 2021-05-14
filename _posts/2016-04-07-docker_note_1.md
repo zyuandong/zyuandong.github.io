@@ -124,6 +124,47 @@ server {
 - `--name <container name>` 设置容器名
 - `-p 8080:80` 端口映射，将宿主的 8080 端口映射到容器的 80 端口
 
+访问地址： http://IP:8080，即可正常访问项目。
+
+IP 地址为宿主机的地址
+
+### 需要修改容器中的配置文件
+
+实际开发中，经常会遇到需要修改容器中配置文件的情况，比如之前例子中的 Nginx 配置，有一下几种方法：
+
+- 方法一：进入容器修改
+
+针对修改 Nginx 配置文件这个例子，进入容器内部:
+
+ `docker container exec -it <container name> bash`
+
+修改 Nginx 配置文件：
+
+`vi /etc/nginx/conf.d/default.conf`
+
+**注：默认容器环境下不包含 vim，通过 `apt-get update` -> `apt-get install vim` 安装 vim**
+
+之后重启 Nginx 服务即可:
+
+`nginx -s reload`
+
+- 方法二：映射配置文件
+
+很显然方法一并不是通用的方法，接着介绍一个简洁、高效的方法：
+
+> 映射配置文件：把宿主机上的配置文件映射到启动的容器当中
+
+``` Dockerfile
+docker run \
+-d --name <container name> \
+-p 8080:80 \
+-v /root/nginx:/etc/nginx/conf.d \
+-v /root/dist:/usr/share/nginx/html
+<image name>
+```
+
+这样以后修改了配置文件，只需要重启容器就能使配置文件生效。
+
 ## 参考
 
 - [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620814243&ver=3064&signature=16ggfIUMSxhk*PvTNJ6aH6XqB753DYX5iQdg7izU5hXmF7YA38Sz6JcTm-PeJ3hTcGRqIjt0PT5FbhEopcyJvcfOYHIeYlVmsbkhR2tauh2RTssO7p4j5MBODfdRAT9Z&new=1)

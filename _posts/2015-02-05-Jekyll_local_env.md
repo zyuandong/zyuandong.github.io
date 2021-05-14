@@ -1,7 +1,7 @@
 ---
 title: Jekyll 系列：如何搭建本地环境
 category: 随笔
-tags: [jekyll]
+tags: [Jekyll]
 ---
 
 ## 安装 [Ruby Installer](http://rubyinstaller.org/downloads/)
