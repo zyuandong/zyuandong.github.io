@@ -153,6 +153,9 @@ tbody tr:hover {
 .cursor-not-allowed {
   cursor: not-allowed;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 /* cursor end */
 /* Loop */
 .p-0 {
@@ -1197,6 +1200,18 @@ tbody tr:hover {
 }
 #categories ul {
   line-height: 1.8;
+}
+#categories .tabs {
+  list-style: none;
+}
+#categories .tabs li {
+  display: inline-block;
+}
+#categories .tabs li.is-active {
+  border-bottom: 3px solid #495057;
+}
+#categories .category-group {
+  display: none;
 }
 #category ul {
   line-height: 2;
