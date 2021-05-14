@@ -29,12 +29,12 @@ permalink: /tags
   {% for tag in sorted_tags %}
     <h3 id="{{ tag | slugify }}" class="tag-anchor-point">{{ tag }}</h3>
 
-    <ul>
+    <ul class="tag-group">
       {% for post in site.tags[tag] %}
       <li>
-        <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
+        <span class="date text-tip">{{ post.date | date: "%b %d, %Y" }}</span>
+        <a class="title" href="{{ post.url | relative_url}}">{{ post.title }}</a>
         <span class="line-dashed"></span>
-        <span class="text-tip">{{ post.date | date: "%b %e, %Y" }}</span>
       </li>
       {% endfor %}
     </ul>

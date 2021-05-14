@@ -180,7 +180,7 @@ tbody {
 /* cursor end */
 
 /* Loop */
-.loop_p_m(@number) when (@number < 20)  {
+.loop_p_m(@number) when (@number <= 20)  {
   .p-@{number} {
     padding: @number * 1rem;
   }
