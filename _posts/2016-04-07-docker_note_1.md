@@ -159,24 +159,37 @@ docker run \
 -d --name <container name> \
 -p 8080:80 \
 -v /root/nginx:/etc/nginx/conf.d \
--v /root/dist:/usr/share/nginx/html
+-v /root/dist:/usr/share/nginx/html \
+<image name>
+```
+
+or
+
+``` Dockerfile
+docker run \
+-d --name <container name> \
+-p 8080:80 \
+--mount type=bind,source=/root/nginx,target=/etc/nginx/conf.d \
+--mount type=bind,source=/root/dist,target=/usr/share/nginx/html \
 <image name>
 ```
 
 这样以后修改了配置文件，只需要重启容器就能使配置文件生效。
 
+*最开始 -v 或者 --volume 选项是给单独容器使用， --mount 选项是给集群服务使用。但是从 Docker 17.06 开始，也可以在单独容器上使用 --mount。*
+
 ## 参考
 
-- [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620814243&ver=3064&signature=16ggfIUMSxhk*PvTNJ6aH6XqB753DYX5iQdg7izU5hXmF7YA38Sz6JcTm-PeJ3hTcGRqIjt0PT5FbhEopcyJvcfOYHIeYlVmsbkhR2tauh2RTssO7p4j5MBODfdRAT9Z&new=1)
+- [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620971083&ver=3067&signature=RlymF*sP*UEbU*eQRpI3coenrhRYMNOtvm*WBw5Km*uadfWKkDAB9w5Rpo0JqQ5zDMb15z4JUMsHsYHUrb1G0Lk5599S2HYT*5qyYUIHJGUjFqIrEw9uhkbKPtJGOHhh&new=1)
 - [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
 - [Docker部署nginx并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
 
 - [Docker + Nginx 部署 Vue 项目](https://zhuanlan.zhihu.com/p/345622879)
-- [[手把手系列之]Docker 部署 vue 项目](https://mp.weixin.qq.com/s?src=11&timestamp=1620873161&ver=3065&signature=SXWaLe7JFgWgQ83rfcJJgskhDuMCKFkEYOwhcjICiCapxweAaGVt2Brq-G2lTRccMpYSRq2v0kCo4uKcC*ibznTPi4i5T5H6PyumXz3CXUe5Ek-TjkvBOK7BbZAMYWGH&new=1)
-- [Dockerfile 详解，看这一篇就够了](https://mp.weixin.qq.com/s?src=11&timestamp=1620882486&ver=3065&signature=R9lV0HB-0NK73wfZt2NfB3mpckZWHanZbr0965EVk5Nal8tXwMwzdhiNFAhfgl5iUmvGcgXpjI6n-WrHNayJjp0374-KM9N3EakVjETrA9fHw3piXqQ9zHeQoJmXcfwv&new=1)
+- [[手把手系列之]Docker 部署 vue 项目](https://mp.weixin.qq.com/s?src=11&timestamp=1620971110&ver=3067&signature=FG1qt3ryyKjwm4extLRMUA76XAQ4wQyPPh0WqA7H8lCqgEReI8hm9qSgPkk2ys1fnZ93ur41foA*gLWV-YDiBHICfrhfhNIWaJi6UuP4xaGW-kSJ-iVUP7liS03BJSv*&new=1)
+- [Dockerfile 详解，看这一篇就够了](https://mp.weixin.qq.com/s?src=11&timestamp=1620971128&ver=3067&signature=1b8aa4iDOAu3FODtaJsKZMWgS-*WX-9nxBGVHFDejNpnM2AclUsqRfNycnqREx5Oe8atM69zCeu8mJDHlmKF9sWECzQk*kJBWx8Qr*n66gQbaTitw455g15DmJMGCHCi&new=1)
 
-- [使用nginx代理vue项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620873031&ver=3065&signature=1U*Zj3a9DuCRKnPyUak9OcUtiBJWKGCBixSI4OHI0GgdqC6PLHSW*VbgZssxl1e36yYOtTw8j6rP6xreqmB6mJ4DB4ETca28sxCk1mEeCXRPB4bwHJKJR24XQmCDf2qs&new=1)
+- [使用nginx代理vue项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620971153&ver=3067&signature=EB6NnhoulxyTerTQyTfUc52LXsll-DCaggDZpUj4fnFb55TMvzIwBwAzpef6mBYo5HQUIzREnR--qzU4gV*Y69oukaoEWln2ieF6mY694S7QgR74JOH-gZM*2nvWgSaO&new=1)
 - [nginx 基本入门(至今为止见过最好的 nginx 入门文章，没有之一。)](https://www.jianshu.com/p/93ac21161ac6)
 - [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/Dhjie_king/article/details/113868250)
-- [Nginx部署Vue项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620815010&ver=3064&signature=AW7hbSFSQyfnPe2qISCvGKlJ3msx-zXfG1E-YpAt0*8FrXJwH*i1VN2K5dH-bogNakbYfJWXnC9ucjUamEhPW*zWzMrfBUBQB3tK4hYr8lgunN-beKZajJAa-s*0VNgw&new=1)
-- [使用docker运行nginx](https://mp.weixin.qq.com/s?src=11&timestamp=1620810325&ver=3064&signature=KXqGB0S-Nb-LfGEjfvrQjJsKEok7zfrDeB-qPVD8PsxWlYByRaqsBaxiTDsxI2k2CBWz*Y61aD9HJfYAg-yFNshDvGDRuA4VnhvU5bXMXFKCrW-T5sG7NoNGyqAC1yd1&new=1)
+- [Nginx部署Vue项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620971170&ver=3067&signature=RnSS4MJkb*h*KIigIsNG3Eg8teAfVyPZM2HDjxch1oi6xAQ2Hvj7ETijUVz1PE3yoTcdchZEiHAjy1Qjkxdx29Lb4MOCf4RYUob1NeH7*MmRHUhEK-cRTlKyUWxvYMmr&new=1)
+- [最简单的docker教程：在docker里运行nginx服务器](https://zhuanlan.zhihu.com/p/50918703)
