@@ -4,16 +4,24 @@
   line-height: 50rem;
   background-color: #fff;
   // text-align: right;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   z-index: 10;
 
-  input {
+  .search-box {
+    display: inline-block;
     height: 32rem;
     line-height: 32rem;
-    padding: 0 15rem;
-    border: 1px solid #dcdfe6;
-    border-radius: 4rem;
+    background: #f3f3f3;
+    border: none;
+    border-bottom: 2px solid #ccc;
+
+    input {
+      height: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
   }
 }
