@@ -2,12 +2,12 @@
 ---
 
 {
-  "datas": [
+  "posts": [
     {% for post in site.posts %}
     {
       "id": "{{ post.id }}",
       "title": "{{ post.title }}",
-      "url": "{{ site.url }}{{ post.url }}",
+      "url": "{{ post.url | relative_url }}",
       "date": "{{ post.date | date: '%Y-%m-%d' }}",
       "category": "{{ post.category }}",
       "tags": [
@@ -18,18 +18,19 @@
     }{% if forloop.last == false %},{% endif %}
     {% endfor %}
   ],
-  "size": {
-    {{ site.posts | size }}
-  },
   "categories": [
     {% for category in site.categories %}
     {
       "name": "{{ category | first }}",
+      "url": "{{ site.baseurl }}/categories#{{ category | first | slugify | url_encode }}"
+      {% comment %}
+      ,
       "datas": [
         {% for post in category.last %}
         "{{ post.title }}"{% if forloop.last == false %},{% endif %}
         {% endfor %}
       ]
+      {% endcomment %}
     }{% if forloop.last == false %},{% endif %}
     {% endfor %}
   ],
@@ -37,10 +38,15 @@
     {% for tag in site.tags %}
     {
       "name": "{{ tag | first }}",
+      "url": "{{ site.baseurl }}/tags#{{ tag | first | slugify | url_encode }}"
+      {% comment %}
+      ,
       "datas": [
         {% for post in tag.last %}
-        "{{ post.title }}"{% if forloop.last == false %},{% endif %}{% endfor %}
+        "{{ post.title }}"{% if forloop.last == false %},{% endif %}
+        {% endfor %}
       ]
+      {% endcomment %}
     }{% if forloop.last == false %},{% endif %}
     {% endfor %}
   ]
