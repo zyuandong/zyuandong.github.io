@@ -18,7 +18,7 @@ permalink: /tags
     {% for tag in sorted_tags %}
     <li>
       <!-- <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a> -->
-      <a href="#{{ tag | slugify }}">
+      <a href="#{{ tag | slugify | url_encode }}">
         <span class="name">{{ tag }}</span>
         <span class="count">{{ site.tags[tag] |size }}</span>
       </a>
@@ -27,7 +27,7 @@ permalink: /tags
   </ul>
 
   {% for tag in sorted_tags %}
-    <h3 id="{{ tag | slugify }}" class="tag-anchor-point">{{ tag }}</h3>
+    <h3 class="tag-anchor-point #{{ tag | slugify | url_encode }}">{{ tag }}</h3>
 
     <ul class="tag-group">
       {% for post in site.tags[tag] %}
@@ -41,3 +41,28 @@ permalink: /tags
 
   {% endfor %}
 </div>
+
+<script>
+const setActive = (key) => {
+  const el = document.getElementsByClassName(key)[0];
+  el.scrollIntoView({
+    behavior: 'smooth'
+  })
+  // TODO active status
+  // document.getElementsByClassName('tag-anchor-point').style.color = 'black'
+  // el.style.color = 'red';
+}
+window.onload = () => {
+  // 初始化标签
+  const key = location.hash;
+  if (key) setActive(key);
+
+  // 点击标签
+  document.getElementsByClassName('tag-inline-block')[0].addEventListener('click', (e) => {
+    setTimeout(() => {
+      const key = location.hash;
+      setActive(key);
+    }, 100)
+  })
+}
+</script>

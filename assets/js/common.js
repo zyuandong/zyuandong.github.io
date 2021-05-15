@@ -163,7 +163,7 @@ $(function () {
   // show back2top-btn
   $("#site-container .container").scroll(function () {
     var t = $(this).scrollTop();
-    if (t >= 800) {
+    if (t >= 300) {
       if (!$("#back2top").is(":visible")) {
         $("#back2top").show();
       }
