@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?4brrld');
-  src:  url('../fonts/icomoon.eot?4brrld#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?4brrld') format('truetype'),
-    url('../fonts/icomoon.woff?4brrld') format('woff'),
-    url('../fonts/icomoon.svg?4brrld#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?80i0pm');
+  src:  url('../fonts/icomoon.eot?80i0pm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?80i0pm') format('truetype'),
+    url('../fonts/icomoon.woff?80i0pm') format('woff'),
+    url('../fonts/icomoon.svg?80i0pm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -37,15 +37,6 @@
 .icon-chevrons-right:before {
   content: "\e903";
 }
-.icon-codepen:before {
-  content: "\e904";
-}
-.icon-github:before {
-  content: "\e905";
-}
-.icon-mail:before {
-  content: "\e906";
-}
 .icon-moon:before {
   content: "\e90a";
 }
@@ -55,18 +46,42 @@
 .icon-sun:before {
   content: "\e90b";
 }
+.icon-mail-o:before {
+  content: "\f003";
+}
 .icon-tag:before {
   content: "\f02b";
 }
 .icon-tags:before {
   content: "\f02c";
 }
+.icon-close:before {
+  content: "\f057";
+}
 .icon-calendar:before {
   content: "\f073";
+}
+.icon-folder:before {
+  content: "\f07b";
 }
 .icon-folder-open:before {
   content: "\f07c";
 }
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-mail:before {
+  content: "\f0e0";
+}
+.icon-github-alt:before {
+  content: "\f113";
+}
 .icon-calendar-o:before {
   content: "\f133";
+}
+.icon-file:before {
+  content: "\f15b";
+}
+.icon-codepen:before {
+  content: "\f1cb";
 }

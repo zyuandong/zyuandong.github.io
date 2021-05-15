@@ -1152,6 +1152,11 @@ tbody tr:hover {
   font-size: 28rem;
 }
 /* Loop end */
+/* no data */
+.no-data {
+  text-align: center;
+}
+/* no data end */
 /* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */
 /* 滚动条轨道 */
@@ -1208,6 +1213,60 @@ tbody tr:hover {
   border: none;
   outline: none;
   background: transparent;
+}
+#header .search-box .search-btn {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#header .search-box .search-mask {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+#header .search-box .result-box {
+  font-size: 14rem;
+  width: 30%;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 35%;
+  top: 10%;
+  z-index: 10;
+}
+#header .search-box .result-box .search-box {
+  height: 32rem;
+  line-height: 32rem;
+  background: #f3f3f3;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: calc(100% - 20rem);
+  background: transparent;
+}
+#header .search-box .result-box .search-box input {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#header .search-box .result-box .search-box input {
+  width: calc(100% - 36rem);
+}
+#header .search-box .result-box .type {
+  padding: 3rem 10rem;
+  background: #f3f3f3;
+}
+#header .search-box .result-box ul {
+  list-style: none;
+  line-height: 1.5;
+  padding-left: 24rem;
 }
 #main {
   display: flex;
@@ -2431,9 +2490,9 @@ tbody tr:hover {
 /* mask layer */
 #mask-layer {
   display: none;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
