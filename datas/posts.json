@@ -1,5 +1,10 @@
 ---
 ---
+{% assign tags = "" | split: "" %}
+{% for t in site.tags %}
+  {% assign tags = tags | push: t[0] %}
+{% endfor %}
+{% assign sorted_tags = tags | sort_natural %}
 
 {
   "posts": [
@@ -35,12 +40,6 @@
     {% endfor %}
   ],
   "tags": [
-    {% assign tags = "" | split: "" %}
-    {% for t in site.tags %}
-    {% assign tags = tags | push: t[0] %}
-    {% endfor %}
-    {% assign sorted_tags = tags | sort_natural %}
-
     {% for tag in sorted_tags %}
     {
       "name": "{{ tag }}",
