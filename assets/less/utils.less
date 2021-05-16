@@ -18,12 +18,13 @@ body {
 }
 /* a tag */
 a {
-  color: @blue;
+  color: @a-base-color;
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
+    color: @blue;
     text-decoration: underline;
     outline: none;
   }

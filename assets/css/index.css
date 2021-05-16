@@ -15,12 +15,13 @@ body {
 }
 /* a tag */
 a {
-  color: #0090bb;
+  color: #495057;
   text-decoration: none;
 }
 a:hover,
 a:active,
 a:focus {
+  color: #0090bb;
   text-decoration: underline;
   outline: none;
 }
