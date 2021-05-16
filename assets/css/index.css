@@ -1191,10 +1191,11 @@ tbody tr:hover {
   color: rgba(204, 204, 204, 0.6);
 }
 #header {
-  width: 100%;
+  width: calc(100% - 180rem);
   height: 50rem;
   line-height: 50rem;
   background-color: #fff;
+  text-align: right;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -1202,6 +1203,7 @@ tbody tr:hover {
 }
 #header .search-box {
   display: inline-block;
+  text-align: left;
   height: 32rem;
   line-height: 32rem;
   background: #f3f3f3;
