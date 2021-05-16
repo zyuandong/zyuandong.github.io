@@ -30,7 +30,7 @@
   <ul class="tag-inline-block p-0 m-b-0">
     {% for tag in trending_tags %}
     <li>
-      <a href="{{ site.baseurl }}/tags#{{ tag | slugify | url_encode }}">
+      <a href="javascript:;" onclick="location.href = `{{ site.baseurl }}/tags#{{ tag | slugify | url_encode }}`">
         <span class="name">{{ tag }}</span>
         <span class="count">{{ site.tags[tag] | size }}</span>
       </a>
