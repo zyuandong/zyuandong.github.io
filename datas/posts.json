@@ -1,5 +1,10 @@
 ---
 ---
+{% assign tags = "" | split: "" %}
+{% for t in site.tags %}
+  {% assign tags = tags | push: t[0] %}
+{% endfor %}
+{% assign sorted_tags = tags | sort_natural %}
 
 {
   "posts": [
@@ -35,14 +40,14 @@
     {% endfor %}
   ],
   "tags": [
-    {% for tag in site.tags %}
+    {% for tag in sorted_tags %}
     {
-      "name": "{{ tag | first }}",
-      "url": "{{ site.baseurl }}/tags#{{ tag | first | slugify | url_encode }}"
+      "name": "{{ tag }}",
+      "url": "{{ site.baseurl }}/tags#{{ tag | slugify | url_encode }}"
       {% comment %}
       ,
       "datas": [
-        {% for post in tag.last %}
+        {% for post in site.tags[tag] %}
         "{{ post.title }}"{% if forloop.last == false %},{% endif %}
         {% endfor %}
       ]
