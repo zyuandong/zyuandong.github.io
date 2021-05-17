@@ -73,5 +73,13 @@ window.onload = () => {
       }, 100)
     }
   })
+  document.querySelector('.search-mask .res-tag-group').addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      setTimeout(() => {
+        const key = location.hash;
+        setActive(key);
+      }, 100)
+    }
+  })
 }
 </script>
