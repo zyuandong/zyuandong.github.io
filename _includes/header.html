@@ -50,6 +50,43 @@
 </div>
 
 <script>
+// 封装过滤方法
+const dataFilter = (type, data, key) => {
+  const typeEnum = {
+    'post': {
+      icon: 'icon-file',
+      class: 'res-post-group'
+    },
+    'category': {
+      icon: 'icon-folder-open',
+      class: 'res-category-group'
+    },
+    'tag': {
+      icon: 'icon-tag',
+      class: 'res-tag-group'
+    }
+  };
+
+  let filteredData = data.filter((item, index) => {
+    const str = item.title || item.name;
+    if (str.toLowerCase().includes(key)) {
+      return item
+    }
+  });
+  let htmlStr = '';
+  filteredData.forEach((item, index) => {
+    if (index < 10) {
+      htmlStr += `<li>
+        <i class="${typeEnum[type].icon}"></i>
+        <a href="${item.url}">${item.title || item.name}</a></li>`;
+    }
+    if (index === 10) {
+      htmlStr += `<li>...</li>`
+    }
+  });
+  document.querySelector(`.${typeEnum[type].class}`).innerHTML = htmlStr || '<li class="no-data">No search results</li>';
+};
+
 const URL = `{{ site.baseurl }}/datas/posts.json`;
 let xhr, res;
 
@@ -81,46 +118,13 @@ $input.addEventListener('input', (e) => {
   const key = $input.value.toLowerCase();
 
   // posts
-  let posts = res.posts.filter((item, index) => index < 11 && item.title.toLowerCase().includes(key));
-  let postsHtml = '';
-  posts.forEach((item, index) => {
-    if (index === 10) {
-      postsHtml += `<li>...</li>`
-    } else {
-      postsHtml += `<li>
-        <i class="icon-file"></i>
-        <a href="${item.url}">${item.title}</a></li>`;
-    }
-  });
-  document.querySelector('.res-post-group').innerHTML = postsHtml || '<li class="no-data">No search results</li>';
+  dataFilter('post', res.posts, key);
 
   // categories
-  let categories = res.categories.filter((item, index) => index < 11 && item.name.toLowerCase().includes(key));
-  let categoriesHtml = '';
-  categories.forEach((item, index) => {
-    if (index === 10) {
-      categoriesHtml += `<li>...</li>`
-    } else {
-      categoriesHtml += `<li>
-        <i class="icon-folder-open"></i>
-        <a href="${item.url}">${item.name}</a></li>`;
-    }
-  });
-  document.querySelector('.res-category-group').innerHTML = categoriesHtml || '<li class="no-data">No search results</li>';
+  dataFilter('category', res.categories, key);
 
   // tags
-  let tags = res.tags.filter((item, index) => index < 11 && item.name.toLowerCase().includes(key));
-  let tagsHtml = '';
-  tags.forEach((item, index) => {
-    if (index === 10) {
-      tagsHtml += `<li>...</li>`
-    } else {
-      tagsHtml += `<li>
-        <i class="icon-tag"></i>
-        <a href="${item.url}">${item.name}</a></li>`;
-    }
-  });
-  document.querySelector('.res-tag-group').innerHTML = tagsHtml || '<li class="no-data">No search results</li>';
+  dataFilter('tag', res.tags, key);
 })
 
 // 关闭搜索面板
