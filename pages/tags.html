@@ -52,18 +52,21 @@ const setActive = (key) => {
   // document.getElementsByClassName('tag-anchor-point').style.color = 'black'
   // el.style.color = 'red';
 }
-window.onload = () => {
-  // 初始化标签
-  const key = location.hash;
-  console.log(key);
-  if (key) setActive(key);
 
-  // 点击标签
-  document.getElementsByClassName('tag-inline-block')[0].addEventListener('click', (e) => {
-    setTimeout(() => {
-      const key = location.hash;
-      setActive(key);
-    }, 100)
-  })
+// 初始化标签
+const key = location.hash;
+console.log(key);
+if (key) setActive(key);
+
+// 点击标签
+document.getElementsByClassName('tag-inline-block')[0].addEventListener('click', (e) => {
+  setTimeout(() => {
+    const key = location.hash;
+    setActive(key);
+  }, 100)
+})
+
+window.onload = () => {
+  
 }
 </script>
