@@ -1,7 +1,7 @@
 ---
 title: 最简图片裁剪-预览-上传
 category: 技术
-tags: [JavaScript, canvas, HTML]
+tags: [JavaScript, Canvas, HTML]
 monthLast: true
 ---
 
