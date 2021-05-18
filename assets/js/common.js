@@ -11,7 +11,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h1">
+            `<li class="li-h1" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -21,7 +21,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h2">
+            `<li class="li-h2" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -31,7 +31,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h3">
+            `<li class="li-h3" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -41,7 +41,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h4">
+            `<li class="li-h4" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -51,7 +51,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h5">
+            `<li class="li-h5" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -61,7 +61,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h6">
+            `<li class="li-h6" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
