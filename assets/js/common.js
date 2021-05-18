@@ -11,73 +11,61 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h1"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h1">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
         case "H2":
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h2"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h2">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
         case "H3":
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h3"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h3">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
         case "H4":
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h4"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h4">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
         case "H5":
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h5"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h5">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
         case "H6":
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            '<li class="li-h6"><a href="#title' +
-            i +
-            '" data-index="' +
-            i +
-            '">' +
-            $(this).text() +
-            "</a></li>";
+            `<li class="li-h6">
+              <a href="javascript:;" data-href="#title${i}" data-index="${i}">
+                ${$(this).text()}
+              </a>
+            </li>`;
           break;
       }
     });
@@ -123,28 +111,57 @@ const closeImageViewer = () => {
   });
 }
 
-// set post menu scroll follower
-const setMenuFollower = () => {
-  $("#site-container .container").scroll(function () {
-    var t = $(this).scrollTop();
 
-    for (var i = topArr.length - 1; i >= 0; i--) {
-      if (t >= topArr[i]) {
-        $(".pin").css("top", i * 24 + 16 + "rem");
-        break;
-      }
+
+// set post menu scroll follower
+const POST_MENU_P_T = 16;
+const POST_MENU_LI_H = 21;
+const menuFollowerCallback = (e) => {
+  const scrollTop = e.target.scrollTop;
+
+  for (var i = topArr.length - 1; i >= 0; i--) {
+    if (scrollTop >= topArr[i]) {
+      $(".pin").css("top", i * POST_MENU_LI_H + POST_MENU_P_T + "rem");
+      $('.sidebar-panel-ul').children().eq(i).addClass('is-active').siblings().removeClass('is-active');
+      break;
     }
-  });
+  }
+}
+const setMenuFollower = () => {
+  document
+  .querySelector('#site-container .container')
+  .addEventListener('scroll', menuFollowerCallback);
 }
 
 // set post menu controller
 const setMenuController = () => {
-  $(".sidebar-panel-ul li a").click(function () {
-    var self = $(this);
-    setTimeout(function () {
-      var index = self.data("index");
-      $(".pin").css("top", index * 24 + 16 + "rem");
-    }, 500);
+  $(".sidebar-panel-ul li a").click(function (e) {
+    // disabled menu scroll follower
+    document
+    .querySelector('#site-container .container')
+    .removeEventListener('scroll', menuFollowerCallback);
+
+    const menuFollowerPromise = () => {
+      return new Promise((resolve, reject) => {
+        const self = $(this);
+        const index = self.data("index");
+        $(".pin").css("top", index * POST_MENU_LI_H + POST_MENU_P_T + "rem");
+  
+        self.parent().addClass('is-active').siblings().removeClass('is-active');
+  
+        const $post = document.querySelector(`#post .post-content ${self.data('href')}`);
+        $post.scrollIntoView({
+          behavior: 'smooth'
+        });
+        setTimeout(() => resolve(true), 750);
+      })
+    }
+
+    // enabled menu scroll follower
+    menuFollowerPromise().then(() => {
+      setMenuFollower()
+    })
+
   });
 }
 
