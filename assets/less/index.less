@@ -12,13 +12,35 @@
 
 @import "utils";
 @import "blog-enter";
-@import "layout"; // aside / header / main(home(pagination) / category / tag / archives) / post(previous-next-post) / footer
+@import "layout";
 
 @import "post-menu";
 
+@import "back2top";
+@import "mask-layer";
 @import "toggle";
 @import "sidebar";
-@import "back2top";
 @import "animation-fade";
-@import "mask-layer";
 @import "media-query";
+
+/**
+layout
+|
+|__ aside
+|__ header
+|__ main
+|     |
+|     |__ home
+|     |     |
+|     |     |__ pagination
+|     |
+|     |__ category
+|     |__ tag
+|     |__ archives
+|
+|__ post
+|     |
+|     |__ previous-next-post
+|  
+|__ footer
+**/
