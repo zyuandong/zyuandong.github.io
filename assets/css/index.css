@@ -1794,15 +1794,17 @@ tbody tr:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#post-menu .sidebar-panel-ul li a:hover,
+#post-menu .sidebar-panel-ul li a:hover {
+  border: none !important;
+}
+#post-menu .sidebar-panel-ul li a:visited,
 #post-menu .sidebar-panel-ul li a:focus,
 #post-menu .sidebar-panel-ul li a:active {
-  font-weight: 600;
-  border: none !important;
+  font-weight: 400;
+  color: #495057;
 }
 #post-menu .sidebar-panel-ul li.is-active a {
   color: #0090bb;
-  font-weight: 600;
 }
 #post-menu .sidebar-panel-ul .li-h3 {
   padding-left: 1em;

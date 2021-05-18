@@ -49,17 +49,20 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
-        &:hover,
+        &:hover {
+          border: none !important;
+        }
+
+        &:visited,
         &:focus,
         &:active {
-          font-weight: 600;
-          border: none !important;
+          font-weight: 400;
+          color: @a-base-color;
         }
       }
 
       &.is-active a {
         color: @blue;
-        font-weight: 600;
       }
     }
 
