@@ -82,10 +82,12 @@ const createMenu = () => {
     });
   if (html.length) {
     $("#post-menu .sidebar-panel-ul").html(html);
-    $("#sidebar-btn, #sidebar-panel").show();
+    // $("#sidebar-btn, #sidebar-panel").show();
+    $("#post-menu").parent().show();
   } else {
     $("#post-menu .sidebar-panel-ul").html("");
-    $("#sidebar-btn, #sidebar-panel").hide();
+    // $("#sidebar-btn, #sidebar-panel").hide();
+    $("#post-menu").parent().hide();
   }
 }
 // createMenu();
