@@ -1,93 +1,93 @@
 /* media query */
 //这个分辨率区间大多为移动设备
-@media screen and (max-width: 640px) {
+// @media screen and (max-width: 640px) {
 
-    #aside {
-        position: absolute;
-        z-index: 3;
-        width: 100%;
+//     #aside {
+//         position: absolute;
+//         z-index: 3;
+//         width: 100%;
 
-        .guid {
-            display: none;
-        }
+//         .guid {
+//             display: none;
+//         }
 
-        .articles-all {
-            width: 100%;
-            background-color: rgba(213, 213, 213, 0.9);//#ccc
+//         .articles-all {
+//             width: 100%;
+//             background-color: rgba(213, 213, 213, 0.9);//#ccc
 
-            .head-img-min {
-                display: block;
-            }
-        }
-    }
+//             .head-img-min {
+//                 display: block;
+//             }
+//         }
+//     }
 
-    #toggle {
-        width: 50px;
-        height: 50px;
-        padding: 19px;
-        opacity: 0.5;
-        border-radius: 0%;
-        position: fixed;
-        top: 0;
-        right: 0;
-    }
+//     #toggle {
+//         width: 50px;
+//         height: 50px;
+//         padding: 19px;
+//         opacity: 0.5;
+//         border-radius: 0%;
+//         position: fixed;
+//         top: 0;
+//         right: 0;
+//     }
 
-    #back2top {
-        position: fixed;
-        right: 0;
-        bottom: 50px;
-    }
+//     #back2top {
+//         position: fixed;
+//         right: 0;
+//         bottom: 50px;
+//     }
     
-    #sidebar-btn {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-    }
-}
+//     #sidebar-btn {
+//         position: fixed;
+//         right: 0;
+//         bottom: 0;
+//     }
+// }
 
 //这个分辨率区间的设备最少（aside可以覆盖contents）
 //大于等于1024px的常见设备有 iPad / iPad mini / PC
-@media screen and (min-width: 641px) and (max-width: 1023px) {
-    #aside {
-        position: absolute;
-        z-index: 3;
-    }
+// @media screen and (min-width: 641px) and (max-width: 1023px) {
+//     #aside {
+//         position: absolute;
+//         z-index: 3;
+//     }
 
-    .page-item {
-        background-color: #f3f3f3;//#ccc
-    }
+//     .page-item {
+//         background-color: #f3f3f3;//#ccc
+//     }
 
-    .contents-box {
-        max-width: 800px;
-    }
-}
+//     .contents-box {
+//         max-width: 800px;
+//     }
+// }
 
 //800px以上给contents-box加一圈边框，突出文章内容
-@media screen and (min-width: 800px) {
-    #contents {
-        //background-color: #eee;
+// @media screen and (min-width: 800px) {
+//     #contents {
+//         //background-color: #eee;
         
-        .contents-box {
-            padding: 0 20px;
-            border: 1px solid #ccc;
-            box-shadow: 1px 1px 5px #bbb;
-        }
+//         .contents-box {
+//             padding: 0 20px;
+//             border: 1px solid #ccc;
+//             box-shadow: 1px 1px 5px #bbb;
+//         }
 
-        .contents-box.fullscreen {
-            max-width: 800px;
-        }
-    }
-}
+//         .contents-box.fullscreen {
+//             max-width: 800px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1024px) {
-    .page-item {
-        opacity: 0.5;
-        background-color: #f9f9f9;
-    }
+// @media screen and (min-width: 1024px) {
+//     .page-item {
+//         opacity: 0.5;
+//         background-color: #f9f9f9;
+//     }
 
-    .page-item:hover {
-        opacity: 1;
-        background-color: #f9f9f9;
-    }
-}
+//     .page-item:hover {
+//         opacity: 1;
+//         background-color: #f9f9f9;
+//     }
+// }
 /* media query end */
