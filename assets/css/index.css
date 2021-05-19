@@ -1259,9 +1259,15 @@ tbody tr:hover {
 #site-container {
   display: flex;
   justify-content: start;
+  max-width: 1440rem;
+  margin: 0 auto;
+}
+#site-container #aside {
+  flex: 1;
+  width: 0;
 }
 #site-container .container {
-  width: 100%;
+  flex: 5;
   height: 100vh;
   overflow: auto;
 }
@@ -1282,7 +1288,7 @@ tbody tr:hover {
   color: rgba(204, 204, 204, 0.6);
 }
 .guid {
-  width: 180px;
+  width: 100%;
   height: 100%;
   float: left;
   color: #ccc;
@@ -1299,6 +1305,7 @@ tbody tr:hover {
   height: 110px;
   text-align: center;
   line-height: 180px;
+  margin: 0 auto;
   border-radius: 50%;
   border: 5px solid #fff;
   box-sizing: border-box;
@@ -1339,7 +1346,8 @@ tbody tr:hover {
   color: #fff;
 }
 #header {
-  width: calc(100% - 180rem);
+  width: calc(100% - (100%/6));
+  max-width: 1200rem;
   height: 50rem;
   line-height: 50rem;
   background-color: #fff;
@@ -2227,6 +2235,12 @@ tbody tr:hover {
 /* fade-out style end */
 /* media query */
 /* media query end */
+/**
+bootstrap:
+extra small ) 576 [ small )  768 [ medium ) 992 [ large ) 1200 [ x-large ) 1400 [ xx-large
+
+-- 768 -- 1200 -- 1440 -- 1920 --
+**/
 /**
 layout
 |

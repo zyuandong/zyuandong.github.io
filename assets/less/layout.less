@@ -1,9 +1,17 @@
 #site-container {
   display: flex;
   justify-content: start;
+  max-width: 1440rem;
+  margin: 0 auto;
+
+  #aside {
+    flex: 1;
+    width: 0;
+  }
 
   .container {
-    width: 100%;
+    flex: 5;
+    // width: 100%;
     height: 100vh;
     overflow: auto;
   }
