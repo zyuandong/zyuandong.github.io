@@ -19,4 +19,6 @@ URL.revokeObjectURL(href);
 
 ## 参考
 
-[javascript如何使用Blob对象下载文件](https://www.yisu.com/zixun/152920.html)
+- [javascript如何使用Blob对象下载文件](https://www.yisu.com/zixun/152920.html)
+- [JS中的Blob对象](https://www.jianshu.com/p/b322c2d5d778)
+- [你不知道的 Blob](http://caibaojian.com/blob.html)
