@@ -8,7 +8,7 @@ author:
   github: https://github.com/zyuandong
 
 # Serving
-baseurl: /simplex
+baseurl: ''
 
 # Plugins
 plugins:
