@@ -1,24 +1,52 @@
 /* media query */
 // 768 以下大多为移动设备
 @media screen and (max-width: 767px) {
-  #aside {
-    position: absolute;
-    z-index: 3;
-    width: 100%;
+  #site-container {
+    display: block;
+    position: relative;
 
-    .guid {
-      display: none;
+    #aside {
+      width: 100vw !important;
+      position: absolute;
+      right: 100vw;
+      // z-index: 3;
+      // width: 100%;
+  
+      // .guid {
+      //   display: none;
+      // }
+  
+      // .articles-all {
+      //   width: 100%;
+      //   background-color: rgba(213, 213, 213, 0.9); //#ccc
+  
+      //   .head-img-min {
+      //     display: block;
+      //   }
+      // }
     }
+  
+    .container {
+      width: 100vw !important;
 
-    .articles-all {
-      width: 100%;
-      background-color: rgba(213, 213, 213, 0.9); //#ccc
+      #header {
+        width: 100%;
 
-      .head-img-min {
-        display: block;
+        .search-mask {
+          .result-box {
+            width: auto;
+            top: 20rem;
+            right: 20rem;
+            bottom: 20rem;
+            left: 20rem;
+          }
+        }
       }
     }
   }
+  
+
+
 
   #toggle {
     width: 50px;

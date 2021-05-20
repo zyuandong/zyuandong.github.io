@@ -2239,20 +2239,27 @@ tbody tr:hover {
 /* fade-out style end */
 /* media query */
 @media screen and (max-width: 767px) {
-  #aside {
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-  }
-  #aside .guid {
-    display: none;
-  }
-  #aside .articles-all {
-    width: 100%;
-    background-color: rgba(213, 213, 213, 0.9);
-  }
-  #aside .articles-all .head-img-min {
+  #site-container {
     display: block;
+    position: relative;
+  }
+  #site-container #aside {
+    width: 100vw !important;
+    position: absolute;
+    right: 100vw;
+  }
+  #site-container .container {
+    width: 100vw !important;
+  }
+  #site-container .container #header {
+    width: 100%;
+  }
+  #site-container .container #header .search-mask .result-box {
+    width: auto;
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
   }
   #toggle {
     width: 50px;
