@@ -1265,11 +1265,11 @@ tbody tr:hover {
 #site-container #aside {
   flex: 1;
   width: 0;
+  position: sticky;
+  top: 0;
 }
 #site-container .container {
   flex: 5;
-  height: 100vh;
-  overflow: auto;
 }
 #page-404 {
   text-align: center;
