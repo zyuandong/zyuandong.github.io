@@ -111,8 +111,6 @@ const closeImageViewer = () => {
   });
 }
 
-
-
 // set post menu scroll follower
 const POST_MENU_P_T = 16;
 const POST_MENU_LI_H = 21;
@@ -129,7 +127,7 @@ const menuFollowerCallback = (e) => {
 }
 const setMenuFollower = () => {
   document
-  .querySelector('#site-container .container')
+  .querySelector('#site-scroll')
   .addEventListener('scroll', menuFollowerCallback);
 }
 
@@ -138,7 +136,7 @@ const setMenuController = () => {
   $(".sidebar-panel-ul li a").click(function (e) {
     // disabled menu scroll follower
     document
-    .querySelector('#site-container .container')
+    .querySelector('#site-scroll')
     .removeEventListener('scroll', menuFollowerCallback);
 
     const menuFollowerPromise = () => {
@@ -167,7 +165,7 @@ const setMenuController = () => {
 
 // show back2top btn
 const showBack2topBtn = () => {
-  $("#site-container .container").scroll(function () {
+  $("#site-scroll").scroll(function () {
     var t = $(this).scrollTop();
     if (t >= 300) {
       if (!$("#back2top").is(":visible")) {
@@ -182,7 +180,7 @@ const showBack2topBtn = () => {
 // back2top controller
 const setBack2topController = () => {
   $("#back2top").click(function () {
-    $("#site-container .container").animate(
+    $("#site-scroll").animate(
       {
         scrollTop: "0"
       },

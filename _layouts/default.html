@@ -27,41 +27,42 @@
     {% assign aside_sticky = "aside-sticky" %}
   {% endif %}
 
-  <div id="site-container">
-    {% include aside.html %}
+  <div id="site-scroll">
+    <div id="site-container">
+      {% include aside.html %}
 
-    <div class="container">
-      {% include header.html %}
+      <div class="container">
+        {% include header.html %}
 
-      <div id="main" class="{{ aside_sticky }}">
-        <div class="main-view card">
-          {{ content }}
+        <div id="main" class="{{ aside_sticky }}">
+          <div class="main-view card">
+            {{ content }}
 
-          {% if page.url contains "posts" %}
-            {% include previous-next-post.html %}
-          {% endif %}
+            {% if page.url contains "posts" %}
+              {% include previous-next-post.html %}
+            {% endif %}
+          </div>
+          <div class="main-aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
+            <div class="card">
+              {% include recent-update.html %}
+            </div>
+            <div class="card">
+              {% include trending-tags.html %}
+            </div>
+            {% if page.url contains "posts" %}
+            <div class="card position-sticky">
+              {% include post-menu.html %}
+            </div>
+            {% endif %}
+          </div>
         </div>
-        <div class="main-aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
-          <div class="card">
-            {% include recent-update.html %}
-          </div>
-          <div class="card">
-            {% include trending-tags.html %}
-          </div>
-          {% if page.url contains "posts" %}
-          <div class="card position-sticky">
-            {% include post-menu.html %}
-          </div>
-          {% endif %}
-        </div>
+
+        {% include footer.html %}
       </div>
-
-      {% include footer.html %}
     </div>
-  </div>
 
-  <!-- {% include toggle.html %} -->
-  {% include back2top.html %}
+    {% include back2top.html %}
+  </div>
 
 </body>
 

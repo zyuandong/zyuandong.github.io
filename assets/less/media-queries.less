@@ -1,0 +1,90 @@
+/* media query */
+// 768 以下大多为移动设备
+@media screen and (max-width: 767px) {
+  #aside {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+
+    .guid {
+      display: none;
+    }
+
+    .articles-all {
+      width: 100%;
+      background-color: rgba(213, 213, 213, 0.9); //#ccc
+
+      .head-img-min {
+        display: block;
+      }
+    }
+  }
+
+  #toggle {
+    width: 50px;
+    height: 50px;
+    padding: 19px;
+    opacity: 0.5;
+    border-radius: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  #back2top {
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+  }
+
+  #sidebar-btn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+
+  #main {
+    .main-view {
+      margin-right: 0;
+    }
+    .main-aside {
+      display: none;
+    }
+  }
+}
+
+//这个分辨率区间的设备最少（aside可以覆盖contents）
+// 768: iPad、iPad mini | 1024: iPad pro
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    .main-view {
+      margin-right: 0;
+    }
+    .main-aside {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1205px) {
+  
+}
+
+@media screen and (min-width: 1441px) {
+  #main {
+    padding-right: 0;
+  }
+
+  #back2top {
+    right: calc((100vw - 1440rem) / 2 + 30rem);
+  }
+}
+/* media query end */
+
+/**
+bootstrap:
+extra small ) 576 [ small )  768 [ medium ) 992 [ large ) 1200 [ x-large ) 1400 [ xx-large
+
+-- 768 -- 1200 -- 1440 -- 1920 --
+**/
