@@ -1,5 +1,7 @@
-#site-container {
+#site-scroll {
   &.show-site-menu {
+    overflow: hidden;
+
     #aside {
       right: 0;
       
@@ -9,7 +11,11 @@
       left: 100%;
       // display: none;
 
-      #mobile-menu-btn {
+      #header {
+        justify-content: flex-end;
+      }
+
+      #site-menu-btn {
         position: fixed;
         top: 0;
         left: 0;

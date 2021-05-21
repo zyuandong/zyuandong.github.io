@@ -1,0 +1,14 @@
+<div id="site-menu-btn">
+  <span class="line line-first"></span>
+  <span class="line line-middle"></span>
+  <span class="line line-last"></span>
+</div>
+
+<script>
+let $$siteScroll = document.getElementById('site-scroll');
+document
+  .getElementById('site-menu-btn')
+  .addEventListener('click', (e) => {
+    $$siteScroll.className = $$siteScroll.className ? '' : 'show-site-menu'
+  })
+</script>
