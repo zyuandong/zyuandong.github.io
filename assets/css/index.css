@@ -19,14 +19,14 @@ a {
   text-decoration: none;
 }
 a:hover,
-a:active,
-a:focus,
-a:visited {
+a:focus {
   color: #0090bb;
   text-decoration: underline;
   outline: none;
 }
-a:link {
+a:link,
+a:active,
+a:visited {
   text-decoration: none;
 }
 /* a tag end */
