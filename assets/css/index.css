@@ -1430,6 +1430,26 @@ tbody tr:hover {
   line-height: 1.5;
   padding-left: 24rem;
 }
+#mobile-menu-btn {
+  display: none;
+  padding: 10rem;
+  line-height: 0;
+  font-size: 0;
+  width: 15rem;
+  box-sizing: content-box;
+}
+#mobile-menu-btn .line {
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background: #000;
+  margin: 2rem 0;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
 #main {
   display: flex;
   padding: 60rem 10rem 0;
@@ -1674,7 +1694,7 @@ tbody tr:hover {
   font-size: 14rem;
 }
 #archives .year {
-  width: 14%;
+  width: 20%;
   text-align: right;
   line-height: 50rem;
   font-size: 24rem;
@@ -1710,7 +1730,7 @@ tbody tr:hover {
   bottom: 18rem;
 }
 #archives .month {
-  width: 14%;
+  width: 20%;
   text-align: right;
   line-height: 50rem;
   font-size: 16rem;
@@ -1747,7 +1767,7 @@ tbody tr:hover {
   font-size: 16rem;
 }
 #archives .day-title .day {
-  width: 14%;
+  width: 20%;
   text-align: right;
   line-height: 50rem;
   display: inline-block;
@@ -1829,6 +1849,20 @@ tbody tr:hover {
 #footer {
   text-align: center;
   padding: 10rem 0;
+}
+#site-container.show-site-menu #aside {
+  right: 0;
+}
+#site-container.show-site-menu .container {
+  left: 100%;
+}
+#site-container.show-site-menu .container #mobile-menu-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#site-container.show-site-menu .container #mobile-menu-btn .line {
+  background: #fff;
 }
 #post-menu {
   font-size: 14rem;
@@ -2247,12 +2281,30 @@ tbody tr:hover {
     width: 100vw !important;
     position: absolute;
     right: 100vw;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
   #site-container .container {
     width: 100vw !important;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
   #site-container .container #header {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #site-container .container #header #mobile-menu-btn {
+    display: inline-block;
+  }
+  #site-container .container #header .search-box {
+    color: #000;
+    background: transparent;
+    border-bottom: none;
+  }
+  #site-container .container #header .search-box input {
+    display: none;
   }
   #site-container .container #header .search-mask .result-box {
     width: auto;
@@ -2260,6 +2312,10 @@ tbody tr:hover {
     right: 20rem;
     bottom: 20rem;
     left: 20rem;
+  }
+  #site-container .container #main {
+    padding-left: 0;
+    padding-right: 0;
   }
   #toggle {
     width: 50px;
@@ -2272,9 +2328,10 @@ tbody tr:hover {
     right: 0;
   }
   #back2top {
+    border-radius: 0;
     position: fixed;
     right: 0;
-    bottom: 50px;
+    bottom: 0;
   }
   #sidebar-btn {
     position: fixed;
