@@ -2287,6 +2287,7 @@ tbody tr:hover {
     width: 100vw !important;
     position: fixed;
     right: 100vw;
+    z-index: 3;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
   #site-container .container {
@@ -2323,32 +2324,21 @@ tbody tr:hover {
     padding-left: 0;
     padding-right: 0;
   }
-  #toggle {
-    width: 50px;
-    height: 50px;
-    padding: 19px;
-    opacity: 0.5;
-    border-radius: 0%;
-    position: fixed;
-    top: 0;
-    right: 0;
+  #site-container .container #main .main-view {
+    margin-right: 0;
+  }
+  #site-container .container #main .main-aside {
+    display: none;
+  }
+  #site-container .container #pagination .total,
+  #site-container .container #pagination .number {
+    display: none;
   }
   #back2top {
     border-radius: 0;
     position: fixed;
     right: 0;
     bottom: 0;
-  }
-  #sidebar-btn {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-  }
-  #main .main-view {
-    margin-right: 0;
-  }
-  #main .main-aside {
-    display: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
