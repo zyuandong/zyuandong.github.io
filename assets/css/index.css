@@ -2275,7 +2275,7 @@ tbody tr:hover {
     display: none;
   }
   #site-container .container #header .search-btn i:not(.icon-file, .icon-folder-open, .icon-tag) {
-    font-size: 17rem;
+    font-size: 18rem;
   }
   #site-container .container #header .search-mask .result-box {
     width: auto;
@@ -2284,7 +2284,11 @@ tbody tr:hover {
     left: 20rem;
   }
   #site-container .container #header .search-mask .result-box input {
-    width: calc(100% - 40rem);
+    width: calc(100% - 47rem);
+  }
+  #site-container .container #header .search-mask .result-box i.search-close-btn {
+    padding: 6rem 5rem;
+    margin-right: -5rem;
   }
   #site-container .container #main {
     padding-left: 0;
