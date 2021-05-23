@@ -1443,12 +1443,15 @@ tbody tr:hover {
   height: 2px;
   display: inline-block;
   background: #000;
-  margin: 2rem 0;
+  margin: 0;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#site-menu-btn .line-middle {
+  margin: 4rem 0;
 }
 #main {
   display: flex;
@@ -1864,11 +1867,27 @@ tbody tr:hover {
 }
 #site-scroll.show-site-menu .container #site-menu-btn {
   position: fixed;
-  top: 0;
+  top: 6rem;
   left: 0;
 }
 #site-scroll.show-site-menu .container #site-menu-btn .line {
   background: #fff;
+}
+#site-scroll.show-site-menu .container #site-menu-btn .line-first {
+  width: 70%;
+  -webkit-transform: translateX(-7rem) translateY(3rem) rotate(-45deg);
+  -moz-transform: translateX(-7rem) translateY(3rem) rotate(-45deg);
+  -ms-transform: translateX(-7rem) translateY(3rem) rotate(-45deg);
+  -o-transform: translateX(-7rem) translateY(3rem) rotate(-45deg);
+  transform: translateX(-7rem) translateY(3rem) rotate(-45deg);
+}
+#site-scroll.show-site-menu .container #site-menu-btn .line-last {
+  width: 70%;
+  -webkit-transform: translateX(-7rem) translateY(-3rem) rotate(45deg);
+  -moz-transform: translateX(-7rem) translateY(-3rem) rotate(45deg);
+  -ms-transform: translateX(-7rem) translateY(-3rem) rotate(45deg);
+  -o-transform: translateX(-7rem) translateY(-3rem) rotate(45deg);
+  transform: translateX(-7rem) translateY(-3rem) rotate(45deg);
 }
 #post-menu {
   font-size: 14rem;
@@ -2041,64 +2060,6 @@ tbody tr:hover {
   transform-origin: 100% 50%;
 }
 /* mask layer end */
-/* toggle btn */
-#toggle {
-  width: 40px;
-  height: 40px;
-  background-color: #0090bb;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 0;
-  box-sizing: border-box;
-  padding: 14px;
-  position: fixed;
-  top: 16px;
-  right: 15px;
-  z-index: 4;
-}
-#toggle .toggle-line {
-  width: 100%;
-  height: 2px;
-  display: inline-block;
-  background-color: #fff;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-}
-#toggle .toggle-line-first {
-  margin-bottom: 4px;
-  -webkit-transform: translateY(1px) rotate(-45deg);
-  -moz-transform: translateY(1px) rotate(-45deg);
-  -ms-transform: translateY(1px) rotate(-45deg);
-  -o-transform: translateY(1px) rotate(-45deg);
-  transform: translateY(1px) rotate(-45deg);
-}
-#toggle .toggle-line-last {
-  margin-top: 4px;
-  -webkit-transform: translateY(-1px) rotate(45deg);
-  -moz-transform: translateY(-1px) rotate(45deg);
-  -ms-transform: translateY(-1px) rotate(45deg);
-  -o-transform: translateY(-1px) rotate(45deg);
-  transform: translateY(-1px) rotate(45deg);
-}
-#toggle.fullscreen .toggle-line-first {
-  -webkit-transform: translateY(1px) rotate(45deg);
-  -moz-transform: translateY(1px) rotate(45deg);
-  -ms-transform: translateY(1px) rotate(45deg);
-  -o-transform: translateY(1px) rotate(45deg);
-  transform: translateY(1px) rotate(45deg);
-}
-#toggle.fullscreen .toggle-line-last {
-  -webkit-transform: translateY(-1px) rotate(-45deg);
-  -moz-transform: translateY(-1px) rotate(-45deg);
-  -ms-transform: translateY(-1px) rotate(-45deg);
-  -o-transform: translateY(-1px) rotate(-45deg);
-  transform: translateY(-1px) rotate(-45deg);
-}
-/* toggle btn end */
 /* sidebar btn */
 #sidebar-btn {
   width: 40px;
@@ -2369,6 +2330,8 @@ layout
 |
 |__ aside
 |__ header
+|     |
+|     |__ site-menu-btn
 |__ main
 |     |
 |     |__ home
@@ -2384,4 +2347,5 @@ layout
 |     |__ previous-next-post
 |  
 |__ footer
+|__ am-site-menu
 **/

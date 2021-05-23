@@ -15,13 +15,30 @@
 
       #site-menu-btn {
         position: fixed;
-        top: 0;
+        top: 6rem;
         left: 0;
 
         .line {
           background: @white;
         }
+
+        .line-first {
+          width: 70%;
+          .line-trf(-7rem, 3rem, -45deg);
+        }
+
+        .line-last {
+          width: 70%;
+          .line-trf(-7rem, -3rem, 45deg);
+        }
       }
     }
   }
+}
+.line-trf(@X, @Y, @rotate) {
+  -webkit-transform: translateX(@X) translateY(@Y) rotate(@rotate);
+  -moz-transform: translateX(@X) translateY(@Y) rotate(@rotate);
+  -ms-transform: translateX(@X) translateY(@Y) rotate(@rotate);
+  -o-transform: translateX(@X) translateY(@Y) rotate(@rotate);
+  transform: translateX(@X) translateY(@Y) rotate(@rotate);
 }
