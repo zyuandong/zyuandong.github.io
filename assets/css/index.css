@@ -2266,20 +2266,25 @@ tbody tr:hover {
   #site-container .container #header #site-menu-btn {
     display: inline-block;
   }
-  #site-container .container #header .search-box {
+  #site-container .container #header .search-btn {
     color: #000;
     background: transparent;
     border-bottom: none;
   }
-  #site-container .container #header .search-box input {
+  #site-container .container #header .search-btn input:not(.search-input) {
     display: none;
+  }
+  #site-container .container #header .search-btn i:not(.icon-file, .icon-folder-open, .icon-tag) {
+    font-size: 17rem;
   }
   #site-container .container #header .search-mask .result-box {
     width: auto;
     top: 20rem;
     right: 20rem;
-    bottom: 20rem;
     left: 20rem;
+  }
+  #site-container .container #header .search-mask .result-box input {
+    width: calc(100% - 40rem);
   }
   #site-container .container #main {
     padding-left: 0;
