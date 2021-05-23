@@ -2268,6 +2268,8 @@ tbody tr:hover {
   }
   #site-container .container #header .search-btn {
     color: #000;
+    height: 34rem;
+    line-height: 40rem;
     background: transparent;
     border-bottom: none;
   }
@@ -2275,7 +2277,7 @@ tbody tr:hover {
     display: none;
   }
   #site-container .container #header .search-btn i:not(.icon-file, .icon-folder-open, .icon-tag) {
-    font-size: 18rem;
+    font-size: 20rem;
   }
   #site-container .container #header .search-mask .result-box {
     width: auto;
@@ -2284,7 +2286,7 @@ tbody tr:hover {
     left: 20rem;
   }
   #site-container .container #header .search-mask .result-box input {
-    width: calc(100% - 47rem);
+    width: calc(100% - 50rem);
   }
   #site-container .container #header .search-mask .result-box i.search-close-btn {
     padding: 6rem 5rem;
