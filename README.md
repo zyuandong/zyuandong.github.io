@@ -7,3 +7,5 @@
 - [ ] [theme]: light or dark
 - [ ] [image]: image viewer
 - [ ] [comment]: add comment system
+- [ ] [pagination]: RWD
+- [ ] [post-menu]: level
