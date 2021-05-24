@@ -28,6 +28,8 @@
       {% endif %}
     {% endfor %}
 
+    <span class="mobile-page-number text-tip only-sm">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+
     {% if paginator.next_page %}
       <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">
         <i class="icon-chevron-right"></i>
@@ -39,5 +41,5 @@
     {% endif %}
   </span>
 
-  <span class="page_number text-tip">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  <span class="page-number text-tip">{{ paginator.page }} / {{ paginator.total_pages }}</span>
 </div>

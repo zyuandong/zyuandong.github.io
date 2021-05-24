@@ -1565,6 +1565,9 @@ tbody tr:hover {
   color: #fff;
   background: #0090bb;
 }
+#pagination .mobile-page-number {
+  display: none;
+}
 #categories .tag-anchor-point {
   padding: 80rem 0 0 0;
   margin: -60rem 0 0 0;
@@ -2305,9 +2308,16 @@ tbody tr:hover {
   #site-container .container #main .main-aside {
     display: none;
   }
-  #site-container .container #pagination .total,
-  #site-container .container #pagination .number {
+  #pagination {
+    justify-content: center;
+  }
+  #pagination .total,
+  #pagination .number,
+  #pagination .page-number {
     display: none;
+  }
+  #pagination .mobile-page-number {
+    display: inline-block;
   }
   #back2top {
     border-radius: 0;
