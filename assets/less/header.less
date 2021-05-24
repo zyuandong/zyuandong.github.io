@@ -59,13 +59,22 @@
       top: 100rem;
       z-index: 10;
 
+      i:not(.icon-file, .icon-folder-open, .icon-tag) {
+        font-size: 20rem;
+      }
+
       .search-box {
         .search-box();
         width: calc(100% - 20rem);
         background: transparent;
 
         input {
-          width: calc(100% - 36rem);
+          width: calc(100% - 50rem);
+        }
+
+        i.search-close-btn {
+          padding: 6rem 5rem;
+          margin-right: -5rem;
         }
       }
 

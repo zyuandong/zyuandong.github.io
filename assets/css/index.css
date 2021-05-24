@@ -1403,6 +1403,9 @@ tbody tr:hover {
   top: 100rem;
   z-index: 10;
 }
+#header .search-box .result-box i:not(.icon-file, .icon-folder-open, .icon-tag) {
+  font-size: 20rem;
+}
 #header .search-box .result-box .search-box {
   height: 32rem;
   line-height: 32rem;
@@ -1419,7 +1422,11 @@ tbody tr:hover {
   background: transparent;
 }
 #header .search-box .result-box .search-box input {
-  width: calc(100% - 36rem);
+  width: calc(100% - 50rem);
+}
+#header .search-box .result-box .search-box i.search-close-btn {
+  padding: 6rem 5rem;
+  margin-right: -5rem;
 }
 #header .search-box .result-box .type {
   padding: 3rem 10rem;
@@ -2305,13 +2312,6 @@ tbody tr:hover {
     top: 20rem;
     right: 20rem;
     left: 20rem;
-  }
-  #site-container .container #header .search-mask .result-box input {
-    width: calc(100% - 50rem);
-  }
-  #site-container .container #header .search-mask .result-box i.search-close-btn {
-    padding: 6rem 5rem;
-    margin-right: -5rem;
   }
   #site-container .container #main {
     padding-left: 0;
