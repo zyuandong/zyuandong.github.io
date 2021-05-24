@@ -1,9 +1,14 @@
 <!-- 分页链接 -->
+{% comment %}
+
 {% assign current_page = page.url | split: "/" | last %}
 {% if current_page contains 'page' %}
-  {% assign current_page = current_page | remove: "page" %}
+  {% assign current_page = current_page | remove: "page" | abs %}
+  {% assign prev_page = current_page | plus: 1 %}
+  {% assign next_page = current_page | minus: 1 %}
 {% else %}
   {% assign current_page = 1 %}
+  {% assign next_page = 2 %}
 {% endif %}
 
 {% assign left_number = "" | split: "" %}
@@ -14,23 +19,43 @@
 {% assign next_more_number = paginator.total_pages %}
 {% assign right_number = "" | split: "" %}
 
-{% comment %}
-  n != 1 && n < current_page - 1 => showPrevMore
-  n != paginator.total_pages && n > current_page + 1 => showNextMore
-{% endcomment %}
-
 {% for n in (1..paginator.total_pages) %}
   
   {% if paginator.total_pages > 5 %}
+    {% if n == 1 or n == prev_page or n == current_page or n == next_page %}
+      {% assign left_number = left_number | push: n %}
+    {% endif %}
+
   {% else %}
     {% assign left_number = left_number | push: n %}
   {% endif %}
 {% endfor %}
 
-left_number: <br />
-{{ left_number }} <br />
+  n != 1 && n < current_page - 1 => showPrevMore
+  n != paginator.total_pages && n > current_page + 1 => showNextMore
 
+left_number:
+{{ left_number }}
+
+<br />
+{{ prev_page }}
+-- 
 {{ current_page }}
+--
+{{ next_page }}
+
+<br/>
+
+total: {{ paginator.total_pages }}
+
+{% assign test = '1'  %}
+{% if 1 == 1 %}
+1
+{% endif %}
+
+{% endcomment %}
+
+
 <div id="pagination" style="text-align: center;">
   <span class="total text-tip">{{ site.posts | size }} Posts</span>
 
