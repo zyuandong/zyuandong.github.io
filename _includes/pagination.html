@@ -1,4 +1,36 @@
 <!-- 分页链接 -->
+{% assign current_page = page.url | split: "/" | last %}
+{% if current_page contains 'page' %}
+  {% assign current_page = current_page | remove: "page" %}
+{% else %}
+  {% assign current_page = 1 %}
+{% endif %}
+
+{% assign left_number = "" | split: "" %}
+{% assign show_prev_more = false %}
+{% assign prev_more_number = 1 %}
+{% assign middle_number = "" | split: "" %}
+{% assign show_next_more = false %}
+{% assign next_more_number = paginator.total_pages %}
+{% assign right_number = "" | split: "" %}
+
+{% comment %}
+  n != 1 && n < current_page - 1 => showPrevMore
+  n != paginator.total_pages && n > current_page + 1 => showNextMore
+{% endcomment %}
+
+{% for n in (1..paginator.total_pages) %}
+  
+  {% if paginator.total_pages > 5 %}
+  {% else %}
+    {% assign left_number = left_number | push: n %}
+  {% endif %}
+{% endfor %}
+
+left_number: <br />
+{{ left_number }} <br />
+
+{{ current_page }}
 <div id="pagination" style="text-align: center;">
   <span class="total text-tip">{{ site.posts | size }} Posts</span>
 
@@ -31,13 +63,13 @@
     <span class="mobile-page-number text-tip only-sm">{{ paginator.page }} / {{ paginator.total_pages }}</span>
 
     {% if paginator.next_page %}
-      <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">
-        <i class="icon-chevron-right"></i>
-      </a>
+    <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">
+      <i class="icon-chevron-right"></i>
+    </a>
     {% else %}
-      <span class="next cursor-not-allowed">
-        <i class="icon-chevron-right"></i>
-      </span>
+    <span class="next cursor-not-allowed">
+      <i class="icon-chevron-right"></i>
+    </span>
     {% endif %}
   </span>
 
