@@ -1430,6 +1430,9 @@ tbody tr:hover {
   line-height: 1.5;
   padding-left: 24rem;
 }
+#header .search-box .result-box ul li {
+  padding-right: 24rem;
+}
 #site-menu-btn {
   display: none;
   padding: 10rem;
@@ -2239,7 +2242,7 @@ tbody tr:hover {
 }
 /* fade-out style end */
 /* media query */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   #site-container {
     display: block;
     position: relative;
@@ -2313,7 +2316,7 @@ tbody tr:hover {
     bottom: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
   #main .main-view {
     margin-right: 0;
   }
@@ -2334,7 +2337,7 @@ tbody tr:hover {
 bootstrap:
 extra small ) 576 [ small )  768 [ medium ) 992 [ large ) 1200 [ x-large ) 1400 [ xx-large
 
--- 768 -- 1200 -- 1440 -- 1920 --
+-sm- 768 -md- 1024 -lg- 1200 -xl- 1440 -xxl- 1920 --
 **/
 /**
 layout
