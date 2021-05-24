@@ -1485,8 +1485,9 @@ tbody tr:hover {
 #main :not(#pagination) > a:hover {
   border-bottom: 1rem solid #0090bb;
 }
-#home .content {
+#home .post-content {
   font-size: 14rem;
+  word-break: break-word;
 }
 #pagination {
   display: flex;

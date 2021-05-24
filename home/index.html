@@ -7,10 +7,10 @@ title: Home
   <!-- 遍历分页后的文章 -->
   {% for post in paginator.posts %}
   <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-  <div class="content">
+  <div class="post-content">
     {{ post.content | strip_html | truncate: 200 }}
   </div>
-  <div class="message text-tip p-t-16">
+  <div class="post-message text-tip p-t-16">
     <span class="date" title="{{ post.date | date: '%Y-%m-%d' }}">
       <i class="icon-calendar-o"></i>
       {{ post.date | date: "%b %e, %Y" }}
