@@ -1718,7 +1718,7 @@ tbody tr:hover {
   font-size: 14rem;
 }
 #archives .year {
-  width: 20%;
+  width: 150rem;
   text-align: right;
   line-height: 50rem;
   font-size: 24rem;
@@ -1754,7 +1754,7 @@ tbody tr:hover {
   bottom: 18rem;
 }
 #archives .month {
-  width: 20%;
+  width: 150rem;
   text-align: right;
   line-height: 50rem;
   font-size: 16rem;
@@ -1791,7 +1791,7 @@ tbody tr:hover {
   font-size: 16rem;
 }
 #archives .day-title .day {
-  width: 20%;
+  width: 150rem;
   text-align: right;
   line-height: 50rem;
   display: inline-block;
@@ -2365,6 +2365,20 @@ tbody tr:hover {
   #tags ul.tag-group .date {
     display: block;
     margin: 0;
+  }
+  #archives .year,
+  #archives .month {
+    width: 90rem;
+  }
+  #archives .day-title {
+    display: flex;
+    align-items: center;
+  }
+  #archives .day-title .day {
+    width: 90rem;
+  }
+  #archives .day-title .title {
+    flex: 1;
   }
   #back2top {
     border-radius: 0;
