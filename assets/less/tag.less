@@ -47,18 +47,26 @@
   }
 
   ul:not(.tag-inline-block) {
-    line-height: 1.8;
+    line-height: 2;
   }
 
-  .tag-group {
+  ul.tag-group {
     padding-left: 150rem;
+
+    .box {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .title {
+      margin-left: 20rem;
+      border-bottom: 1px solid transparent;
+    }
     .date {
       display: inline-block;
       width: 90rem;
       margin-left: -110rem;
-    }
-    .title {
-      margin-left: 30rem;
     }
   }
 }

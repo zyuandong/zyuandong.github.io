@@ -9,7 +9,7 @@ permalink: /categories
 
 <ul class="tabs p-0 m-0">
   {% for c in site.categories %}
-  <li id="#{{ c | first | url_encode }}" class="m-lr-20 cursor-pointer">
+  <li id="#{{ c | first | url_encode }}" class="cursor-pointer">
     <h3 class="p-0 m-0">
       <span>{{ c | first}}</span>
       <span class="text-tip">{{ c | last | size }} Post</span>
@@ -23,17 +23,17 @@ permalink: /categories
   {% assign posts = c | last %}
   {% assign category_group = "" | split: "" %}
 
-  <div class="category-group #{{ category| slugify | url_encode }}">
-    <ul>
-      {% for p in posts %}
-      <li>
-        <span class="date text-tip">{{ p.date | date: "%b %d, %Y" }}</span>
+  <ul class="category-group #{{ category| slugify | url_encode }}">
+    {% for p in posts %}
+    <li>
+      <div class="box">
         <a class="title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
         <span class="line-dashed"></span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        <span class="date text-tip">{{ p.date | date: "%b %d, %Y" }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
 
 </div>

@@ -1569,36 +1569,43 @@ tbody tr:hover {
 #pagination .mobile-page-number {
   display: none;
 }
+#categories ul.tabs {
+  list-style: none;
+  margin-bottom: 30rem;
+}
+#categories ul.tabs li {
+  display: inline-block;
+  margin-right: 40rem;
+  border-bottom: 3rem solid transparent;
+}
+#categories ul.tabs li.is-active {
+  border-bottom: 3px solid #495057;
+}
 #categories .tag-anchor-point {
   padding: 80rem 0 0 0;
   margin: -60rem 0 0 0;
 }
 #categories ul {
-  line-height: 1.8;
+  line-height: 2;
 }
-#categories .tabs {
-  list-style: none;
-  margin-bottom: 30rem;
-}
-#categories .tabs li {
-  display: inline-block;
-}
-#categories .tabs li.is-active {
-  border-bottom: 3px solid #495057;
-}
-#categories .category-group {
+#categories ul.category-group {
   display: none;
-}
-#categories .category-group ul {
   padding-left: 150rem;
 }
-#categories .category-group ul .date {
+#categories ul.category-group .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+#categories ul.category-group .title {
+  margin-left: 20rem;
+  border-bottom: 1px solid transparent;
+}
+#categories ul.category-group .date {
   display: inline-block;
   width: 90rem;
   margin-left: -110rem;
-}
-#categories .category-group ul .title {
-  margin-left: 30rem;
 }
 #category ul {
   line-height: 2;
@@ -1648,18 +1655,25 @@ tbody tr:hover {
   margin: -60rem 0 0 0;
 }
 #tags ul:not(.tag-inline-block) {
-  line-height: 1.8;
+  line-height: 2;
 }
-#tags .tag-group {
+#tags ul.tag-group {
   padding-left: 150rem;
 }
-#tags .tag-group .date {
+#tags ul.tag-group .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+#tags ul.tag-group .title {
+  margin-left: 20rem;
+  border-bottom: 1px solid transparent;
+}
+#tags ul.tag-group .date {
   display: inline-block;
   width: 90rem;
   margin-left: -110rem;
-}
-#tags .tag-group .title {
-  margin-left: 30rem;
 }
 #tag ul {
   line-height: 2;
@@ -2319,6 +2333,38 @@ tbody tr:hover {
   }
   #pagination .mobile-page-number {
     display: inline-block;
+  }
+  #categories ul.category-group {
+    padding-left: 20rem;
+  }
+  #categories ul.category-group .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #categories ul.category-group .title {
+    display: block;
+    margin: 0;
+  }
+  #categories ul.category-group .date {
+    display: block;
+    margin: 0;
+  }
+  #tags ul.tag-group {
+    padding-left: 20rem;
+  }
+  #tags ul.tag-group .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #tags ul.tag-group .title {
+    display: block;
+    margin: 0;
+  }
+  #tags ul.tag-group .date {
+    display: block;
+    margin: 0;
   }
   #back2top {
     border-radius: 0;

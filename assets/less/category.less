@@ -1,19 +1,12 @@
 #categories {
-  .tag-anchor-point {
-    padding: 80rem 0 0 0;
-    margin: -60rem 0 0 0;
-  }
-
-  ul {
-    line-height: 1.8;
-  }
-
-  .tabs {
+  ul.tabs {
     list-style: none;
     margin-bottom: 30rem;
 
     li {
       display: inline-block;
+      margin-right: 40rem;
+      border-bottom: 3rem solid transparent;
 
       &.is-active {
         border-bottom: 3px solid #495057;
@@ -21,18 +14,33 @@
     }
   }
 
-  .category-group {
+  .tag-anchor-point {
+    padding: 80rem 0 0 0;
+    margin: -60rem 0 0 0;
+  }
+
+  ul {
+    line-height: 2;
+  }
+
+  ul.category-group {
     display: none;
-    ul {
-      padding-left: 150rem;
-      .date {
-        display: inline-block;
-        width: 90rem;
-        margin-left: -110rem;
-      }
-      .title {
-        margin-left: 30rem;
-      }
+    padding-left: 150rem;
+
+    .box {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .title {
+      margin-left: 20rem;
+      border-bottom: 1px solid transparent;
+    }
+    .date {
+      display: inline-block;
+      width: 90rem;
+      margin-left: -110rem;
     }
   }
 }

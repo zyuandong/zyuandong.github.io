@@ -93,6 +93,36 @@
     }
   }
 
+  .post-list(@class) {
+    ul.@{class} {
+      padding-left: 20rem;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .title {
+        display: block;
+        margin: 0;
+      }
+
+      .date {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+
+  #categories {
+    .post-list(category-group);
+  }
+
+  #tags {
+    .post-list(tag-group);
+  }
+
   #back2top {
     // width: 50rem;
     // height: 50rem;
