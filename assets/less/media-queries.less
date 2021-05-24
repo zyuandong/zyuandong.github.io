@@ -1,6 +1,7 @@
 /* media query */
-// 768 以下大多为移动设备
-@media screen and (max-width: 767px) {
+// < 768: mobile
+// hide aside
+@media screen and (max-width: 767.98px) {
   #site-container {
     display: block;
     position: relative;
@@ -101,9 +102,9 @@
   // }
 }
 
-//这个分辨率区间的设备最少（aside可以覆盖contents）
-// 768: iPad、iPad mini | 1024: iPad pro
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+// >= 768: iPad、iPad mini | 1024: iPad pro
+// show aside / hide main-aside
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
   #main {
     .main-view {
       margin-right: 0;
@@ -114,11 +115,14 @@
   }
 }
 
-
-@media screen and (min-width: 1205px) {
+// >= 1024：desktop
+// show main-aside
+@media screen and (min-width: 1024px) {
   
 }
 
+// >= 1441
+// limit width 1440
 @media screen and (min-width: 1441px) {
   #main {
     padding-right: 0;
@@ -134,5 +138,5 @@
 bootstrap:
 extra small ) 576 [ small )  768 [ medium ) 992 [ large ) 1200 [ x-large ) 1400 [ xx-large
 
--- 768 -- 1200 -- 1440 -- 1920 --
+-sm- 768 -md- 1024 -lg- 1200 -xl- 1440 -xxl- 1920 --
 **/
