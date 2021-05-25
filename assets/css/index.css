@@ -1523,6 +1523,15 @@ tbody tr:hover {
   color: #ccc;
   background: transparent;
 }
+#pagination .number i {
+  display: none;
+}
+#pagination .number:hover span {
+  display: none;
+}
+#pagination .number:hover i {
+  display: inline-block;
+}
 #pagination .previous {
   display: inline-block;
   width: 30rem;

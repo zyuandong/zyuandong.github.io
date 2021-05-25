@@ -84,9 +84,15 @@
 
     {% if show_prev_more == true %}
       {% if new_prev_page == 1 %}
-      <a href="{{ site.baseurl }}/home" class="number prev-page">...</a>
+      <a href="{{ site.baseurl }}/home" class="number prev-page">
+        <span>...</span>
+        <i class="icon-chevrons-left"></i>
+      </a>
       {% else %}
-      <a href="{{ site.baseurl }}/home/page{{ new_prev_page }}" class="number prev-page">...</a>
+      <a href="{{ site.baseurl }}/home/page{{ new_prev_page }}" class="number prev-page">
+        <span>...</span>
+        <i class="icon-chevrons-left"></i>
+      </a>
       {% endif %}
     {% endif %}
 
@@ -95,8 +101,12 @@
     {% endfor %}
 
     {% if show_next_more == true %}
-    <a href="{{ site.baseurl }}/home/page{{ new_next_page }}" class="number next-page">...</a>
+    <a href="{{ site.baseurl }}/home/page{{ new_next_page }}" class="number next-page">
+      <span>...</span>
+      <i class="icon-chevrons-right"></i>
+    </a>
     {% endif %}
+
     <span class="mobile-page-number text-tip only-sm">{{ paginator.page }} / {{ paginator.total_pages }}</span>
 
     <a href="{{ site.baseurl }}/home/page{{ total_pages }}" class="number {% unless paginator.next_page %}is-active{% endunless %}">{{ total_pages }}</a>
