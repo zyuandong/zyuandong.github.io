@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 
-  .base {
+  .base() {
     display: inline-block;
     width: 30rem;
     height: 30rem;
@@ -14,13 +14,17 @@
     margin: 0 4rem;
 
     &:hover {
-      // background: #f3f3f3;
       color: #fff;
       background: @blue;
       
       a {
         color: #fff;
       }
+    }
+
+    &.btn-not-allowed:hover {
+      color: #ccc;
+      background: transparent;
     }
   }
   .number {
@@ -29,12 +33,10 @@
 
   .previous {
     .base();
-    // padding: 6rem;
   }
 
   .next {
     .base();
-    // padding: 6rem;
   }
 
   .is-active {
@@ -44,5 +46,9 @@
 
   .mobile-page-number {
     display: none;
+  }
+
+  .btn-not-allowed {
+    color: #ccc;
   }
 }

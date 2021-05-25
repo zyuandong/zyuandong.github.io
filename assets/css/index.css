@@ -1502,23 +1502,6 @@ tbody tr:hover {
   justify-content: space-between;
   align-items: center;
 }
-#pagination .base {
-  display: inline-block;
-  width: 30rem;
-  height: 30rem;
-  line-height: 30rem;
-  text-align: center;
-  padding: 0;
-  border-radius: 4rem;
-  margin: 0 4rem;
-}
-#pagination .base:hover {
-  color: #fff;
-  background: #0090bb;
-}
-#pagination .base:hover a {
-  color: #fff;
-}
 #pagination .number {
   display: inline-block;
   width: 30rem;
@@ -1535,6 +1518,10 @@ tbody tr:hover {
 }
 #pagination .number:hover a {
   color: #fff;
+}
+#pagination .number.btn-not-allowed:hover {
+  color: #ccc;
+  background: transparent;
 }
 #pagination .previous {
   display: inline-block;
@@ -1553,6 +1540,10 @@ tbody tr:hover {
 #pagination .previous:hover a {
   color: #fff;
 }
+#pagination .previous.btn-not-allowed:hover {
+  color: #ccc;
+  background: transparent;
+}
 #pagination .next {
   display: inline-block;
   width: 30rem;
@@ -1570,12 +1561,19 @@ tbody tr:hover {
 #pagination .next:hover a {
   color: #fff;
 }
+#pagination .next.btn-not-allowed:hover {
+  color: #ccc;
+  background: transparent;
+}
 #pagination .is-active {
   color: #fff;
   background: #0090bb;
 }
 #pagination .mobile-page-number {
   display: none;
+}
+#pagination .btn-not-allowed {
+  color: #ccc;
 }
 #categories ul.tabs {
   list-style: none;
