@@ -2,10 +2,10 @@
 
 ## TODO
 
-- [ ] [layout]: aside : main container
 - [ ] [posts]: font color / size
 - [ ] [theme]: light or dark
+- [ ] [post-menu]: level
 - [ ] [image]: image viewer
 - [ ] [comment]: add comment system
-- [ ] [pagination]: RWD
-- [ ] [post-menu]: level
+- [x] [pagination]: RWD
+- [x] [layout]: aside : main container
