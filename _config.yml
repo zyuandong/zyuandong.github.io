@@ -12,7 +12,6 @@ baseurl: ''
 
 # Plugins
 plugins:
-  - jekyll-archives
   - jekyll-paginate
 
 # Pagination
@@ -35,14 +34,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-jekyll-archives:
-  enabled:
-    - tags
-    - categories
-  layouts:
-    tag: tag
-    category: category
-  permalinks:
-    tag: tags/:name/
-    category: categories/:name/
