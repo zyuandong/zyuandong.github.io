@@ -92,7 +92,8 @@ p code {
 blockquote {
   background-color: #eee;
   border-left: 5rem solid #ccc;
-  padding: 0.5rem 0;
+  padding: 4rem;
+  margin: 0;
 }
 /* 引用 end */
 /* table */
