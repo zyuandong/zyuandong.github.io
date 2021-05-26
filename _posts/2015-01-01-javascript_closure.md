@@ -42,6 +42,21 @@ fun = null; //a被回收！！
 </script>
 ```
 
+~~~html
+<script>
+function aaa() {
+  var a = 1;
+  return function() {
+    alert(a++)
+  };
+}
+var fun = aaa();
+fun();  // 1 执行后 a++，，然后a还在~
+fun();  // 2
+fun = null; //a被回收！！
+</script>
+~~~
+
 闭包会使变量始终保存在内存中，如果不当使用会增大内存消耗。
 
 ## javascript 的垃圾回收原理
@@ -171,7 +186,7 @@ alert(b);
 //  return age;
 //}
 
-b = null；  //解除引用，等待垃圾回收
+b = null;  //解除引用，等待垃圾回收
 </script>
 ```
 
