@@ -90,7 +90,7 @@ const tagAAttrTarget = () => {
 // code highlight
 const setCodeHighlight = () => {
   $("pre code").each(function (i, block) {
-    hljs.highlightBlock(block);
+    // hljs.highlightBlock(block);
   });
 }
 

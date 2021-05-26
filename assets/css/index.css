@@ -20,7 +20,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0090bb;
+  color: #3390FF;
   text-decoration: underline;
   outline: none;
 }
@@ -97,33 +97,14 @@ blockquote {
 }
 /* 引用 end */
 /* table */
-table {
-  margin-left: 30px;
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-}
-thead {
-  background-color: #ccc;
-}
-tbody {
-  background-color: #eee;
-}
-th,
-td {
-  padding: 6px 12px;
-  border: 1px solid #fff;
-}
-tbody tr:hover {
-  background-color: #ccc;
-}
 /* table end */
 /* selection */
 ::selection {
-  background-color: #0090bb;
+  background-color: #3390FF;
   color: #fff;
 }
 ::-moz-selection {
-  background-color: #0090bb;
+  background-color: #3390FF;
   color: #fff;
 }
 /* selection end */
@@ -1325,7 +1306,7 @@ tbody tr:hover {
   padding: 10px 30px;
   cursor: pointer;
   text-align: center;
-  color: #0090bb;
+  color: #3390FF;
 }
 .guid ul li.guid-item:hover {
   color: #fff;
@@ -1492,7 +1473,7 @@ tbody tr:hover {
   top: 60rem;
 }
 #main :not(#pagination) > a:hover {
-  border-bottom: 1rem solid #0090bb;
+  border-bottom: 1rem solid #3390FF;
 }
 #home .post-content {
   font-size: 14rem;
@@ -1515,7 +1496,7 @@ tbody tr:hover {
 }
 #pagination .number:hover {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 #pagination .number:hover a {
   color: #fff;
@@ -1545,7 +1526,7 @@ tbody tr:hover {
 }
 #pagination .previous:hover {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 #pagination .previous:hover a {
   color: #fff;
@@ -1566,7 +1547,7 @@ tbody tr:hover {
 }
 #pagination .next:hover {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 #pagination .next:hover a {
   color: #fff;
@@ -1577,7 +1558,7 @@ tbody tr:hover {
 }
 #pagination .is-active {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 #pagination .mobile-page-number {
   display: none;
@@ -1852,6 +1833,9 @@ tbody tr:hover {
   max-width: 100%;
   cursor: -webkit-zoom-in;
 }
+#post .post-content a {
+  border-bottom: 1px solid #ccc;
+}
 #previous-next-post {
   display: flex;
   border-top: 1px solid #f3f3f3;
@@ -1867,7 +1851,7 @@ tbody tr:hover {
 }
 .previous:hover {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 .previous:hover a {
   color: #fff;
@@ -1881,7 +1865,7 @@ tbody tr:hover {
 }
 .next:hover {
   color: #fff;
-  background: #0090bb;
+  background: #3390FF;
 }
 .next:hover a {
   color: #fff;
@@ -1974,7 +1958,7 @@ tbody tr:hover {
   color: #495057;
 }
 #post-menu .sidebar-panel-ul li.is-active a {
-  color: #0090bb;
+  color: #3390FF;
 }
 #post-menu .sidebar-panel-ul .li-h3 {
   padding-left: 1em;
@@ -1995,7 +1979,7 @@ tbody tr:hover {
   height: 40px;
   font-size: 0;
   text-align: center;
-  background-color: #0090bb;
+  background-color: #3390FF;
   cursor: pointer;
   position: fixed;
   right: 30px;
@@ -2054,7 +2038,7 @@ tbody tr:hover {
 #mask-layer .mask-layer-btn {
   width: 40px;
   height: 40px;
-  background-color: #0090bb;
+  background-color: #3390FF;
   border-radius: 50%;
   font-size: 0;
   cursor: pointer;
@@ -2393,4 +2377,20 @@ layout
 |  
 |__ footer
 |__ am-site-menu
+**/
+/**
+#f3f3f3
+#ccc
+#fff
+#d14
+#eee
+#495057
+#f9f2f4
+#ebeef5
+
+#868e96
+
+#3390FF
+
+#f1f4f8
 **/
