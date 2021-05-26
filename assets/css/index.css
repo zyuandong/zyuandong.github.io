@@ -100,6 +100,9 @@ code pre {
 .highlight .rouge-code {
   padding-left: 0.5em;
 }
+.highlight .rouge-code pre {
+  white-space: pre;
+}
 /* code inline end */
 /* 引用 */
 blockquote {
