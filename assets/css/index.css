@@ -1882,6 +1882,9 @@ blockquote {
 .previous:hover {
   background: #f1f4f9;
 }
+.previous:hover a {
+  color: #23241f;
+}
 .next {
   flex: 1;
   text-align: center;
@@ -1891,6 +1894,9 @@ blockquote {
 }
 .next:hover {
   background: #f1f4f9;
+}
+.next:hover a {
+  color: #23241f;
 }
 #footer {
   text-align: center;
