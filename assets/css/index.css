@@ -92,6 +92,13 @@ code {
 code pre {
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
+.highlight .rouge-gutter {
+  padding-right: 0.5em;
+  border-right: 1px solid #495057;
+}
+.highlight .rouge-code {
+  padding-left: 0.5em;
+}
 /* code inline end */
 /* 引用 */
 blockquote {
@@ -102,6 +109,24 @@ blockquote {
 }
 /* 引用 end */
 /* table */
+.post-content > table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+.post-content > table thead {
+  background-color: #ccc;
+}
+.post-content > table tbody {
+  background-color: #eee;
+}
+.post-content > table th,
+.post-content > table td {
+  padding: 6px 12px;
+  border: 1px solid #fff;
+}
+.post-content > table tbody tr:hover {
+  background-color: #ccc;
+}
 /* table end */
 /* selection */
 ::selection {
