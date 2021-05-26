@@ -85,6 +85,11 @@ p code {
   padding: 2px 4px;
   background-color: #f9f2f4;
   border-radius: 4px;
+}
+code {
+  font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+}
+code pre {
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 /* code inline end */
@@ -1850,11 +1855,7 @@ blockquote {
   border-radius: 4rem;
 }
 .previous:hover {
-  color: #fff;
-  background: #3390FF;
-}
-.previous:hover a {
-  color: #fff;
+  background: #f1f4f9;
 }
 .next {
   flex: 1;
@@ -1864,11 +1865,7 @@ blockquote {
   border-radius: 4rem;
 }
 .next:hover {
-  color: #fff;
-  background: #3390FF;
-}
-.next:hover a {
-  color: #fff;
+  background: #f1f4f9;
 }
 #footer {
   text-align: center;
