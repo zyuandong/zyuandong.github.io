@@ -1,6 +1,6 @@
 .search-box() {
-  height: 32rem;
-  line-height: 32rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
   background: #f3f3f3;
   border: none;
   border-bottom: 2px solid #ccc;
@@ -15,12 +15,12 @@
 
 #header {
   width: calc(100% - (100%/6));
-  max-width: 1200rem;
-  height: 50rem;
-  line-height: 50rem;
+  max-width: 12rem;
+  height: 0.50rem;
+  line-height: 0.50rem;
   background-color: #fff;
   text-align: right;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   z-index: 10;
@@ -50,46 +50,46 @@
     }
 
     .result-box {
-      font-size: 14rem;
-      width: 600rem;
+      font-size: 0.14rem;
+      width: 6rem;
       background: #fff;
-      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
       position: absolute;
-      left: calc((100% - 600rem) / 2);
-      top: 100rem;
+      left: calc((100% - 6rem) / 2);
+      top: 1rem;
       z-index: 10;
 
       i:not(.icon-file, .icon-folder-open, .icon-tag) {
-        font-size: 20rem;
+        font-size: 0.20rem;
       }
 
       .search-box {
         .search-box();
-        width: calc(100% - 20rem);
+        width: calc(100% - 0.20rem);
         background: transparent;
 
         input {
-          width: calc(100% - 50rem);
+          width: calc(100% - 0.50rem);
         }
 
         i.search-close-btn {
-          padding: 6rem 5rem;
-          margin-right: -5rem;
+          padding: 0.06rem 0.05rem;
+          margin-right: -0.05rem;
         }
       }
 
       .type {
-        padding: 3rem 10rem;
+        padding: 0.03rem 0.10rem;
         background: #f3f3f3;
       }
 
       ul {
         list-style: none;
         line-height: 1.8;
-        padding-left: 24rem;
+        padding-left: 0.24rem;
 
         li {
-          padding-right: 24rem;
+          padding-right: 0.24rem;
         }
       }
     }

@@ -1,69 +1,69 @@
 /* mask layer */
 .mask-layer-line-trf(@rotate) {
-    -webkit-transform: translateX(-3px) rotate(@rotate);
-    -moz-transform: translateX(-3px) rotate(@rotate);
-    -ms-transform: translateX(-3px) rotate(@rotate);
-    -o-transform: translateX(-3px) rotate(@rotate);
-    transform: translateX(-3px) rotate(@rotate);
-    -webkit-transform-origin: 100% 50%;
-    -moz-transform-origin: 100% 50%;
-    -ms-transform-origin: 100% 50%;
-    -o-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
+  -webkit-transform: translateX(-3px) rotate(@rotate);
+  -moz-transform: translateX(-3px) rotate(@rotate);
+  -ms-transform: translateX(-3px) rotate(@rotate);
+  -o-transform: translateX(-3px) rotate(@rotate);
+  transform: translateX(-3px) rotate(@rotate);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
 #mask-layer {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: auto;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  .mask-layer-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+    line-height: 0;
+
+    .mask-layer-img {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .mask-layer-btn {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: @blue;
+    border-radius: 50%;
+    font-size: 0;
+    cursor: pointer;
+    padding: 0.14rem;
+    box-sizing: border-box;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    
-    .mask-layer-box {
-        width: 100%;
-        height: 100%;
-        display: table;
-        line-height: 0;
-        
-        .mask-layer-img {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
+    top: 0.15rem;
+    right: 0.15rem;
+
+    .mask-layer-line {
+      width: 100%;
+      height: 0.02rem;
+      display: inline-block;
+      background-color: @white;
     }
 
-    .mask-layer-btn {
-        width: 40px;
-        height: 40px;
-        background-color: @blue;
-        border-radius: 50%;
-        font-size: 0;
-        cursor: pointer;
-        padding: 13px 11px;
-        box-sizing: border-box;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-
-        .mask-layer-line {
-            width: 100%;
-            height: 2px;
-            display: inline-block;
-            background-color: @white;
-        }
-
-        .mask-layer-line-first {
-            margin-bottom: 5px;
-            .mask-layer-line-trf(-45deg);
-        }
-
-        .mask-layer-line-last {
-            margin-top: 5px;
-            .mask-layer-line-trf(45deg);
-        }
+    .mask-layer-line-first {
+      margin-bottom: 0.05rem;
+      .mask-layer-line-trf(-45deg);
     }
+
+    .mask-layer-line-last {
+      margin-top: 0.05rem;
+      .mask-layer-line-trf(45deg);
+    }
+  }
 }
 /* mask layer end */

@@ -4,12 +4,12 @@
 
 html {
   height: 100%;
-  font-size: 1px;
+  font-size: 100px;
 }
 body {
   height: 100%;
   color: @primary;
-  font-size: 16rem;
+  font-size: 0.16rem;
   line-height: 1.75;
   // font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   font-family: @font-family;
@@ -50,35 +50,35 @@ a {
 h1 {
   .title-h();
   font-weight: 500;
-  font-size: 28rem;
+  font-size: 0.28rem;
   padding: 0;
 }
 h2 {
   .title-h();
-  font-size: 24rem;
+  font-size: 0.24rem;
 }
 h3 {
   .title-h();
-  font-size: 20rem;
+  font-size: 0.20rem;
 }
 h4 {
   .title-h();
-  font-size: 18rem;
+  font-size: 0.18rem;
 }
 h5 {
   .title-h();
-  font-size: 16rem;
+  font-size: 0.16rem;
 }
 h6 {
   .title-h();
-  font-size: 14rem;
+  font-size: 0.14rem;
 }
 /* h1~h6 end */
 
 /* code block */
 pre {
   white-space: pre-wrap;
-  padding: 0px;
+  padding: 0;
 
   code {
     border-radius: 5px;
@@ -92,9 +92,9 @@ li,
 p {
   code {
     color: @code-line-text;
-    padding: 2px 4px;
+    padding: 0.02rem 0.04rem;
     background-color: @code-line-bg;
-    border-radius: 4px;
+    border-radius: 0.04rem;
   }
 }
 code {
@@ -122,8 +122,8 @@ code {
 /* 引用 */
 blockquote {
   background: @bg;
-  border-left: 3rem solid @disabled;
-  padding: 4rem;
+  border-left: 0.03rem solid @disabled;
+  padding: 0.04rem;
   margin: 0;
   // font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
 }
@@ -141,7 +141,7 @@ blockquote {
   }
   th,
   td {
-    padding: 6px 12px;
+    padding: 0.06rem 0.12rem;
     border-bottom: 1px solid @table-border;
   }
   tbody {
@@ -173,25 +173,25 @@ blockquote {
 .card {
   // min-height: 686rem;
   background-color: @white;
-  padding: 16rem;
+  padding: 0.16rem;
   border: 1px solid @border;
-  border-radius: 4rem;
+  border-radius: 0.04rem;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 /* card end */
 
 /* line */
 .line {
-  height: 3rem;
+  height: 0.03rem;
   background-color: @second;
-  margin: calc(14rem * 1.38) 0 calc(14rem * 3);
+  margin: calc(0.14rem * 1.38) 0 calc(0.14rem * 3);
 }
 /* line end */
 
 /* text */
 .text-tip {
   color: @disabled;
-  font-size: 14rem;
+  font-size: 0.14rem;
 }
 /* text end */
 
@@ -207,50 +207,50 @@ blockquote {
 /* Loop */
 .loop_p_m(@number) when (@number <= 20)  {
   .p-@{number} {
-    padding: @number * 1rem;
+    padding: @number * 0.01rem;
   }
   .p-t-@{number} {
-    padding-top: @number * 1rem;
+    padding-top: @number * 0.01rem;
   }
   .p-r-@{number} {
-    padding-right: @number * 1rem;
+    padding-right: @number * 0.01rem;
   }
   .p-b-@{number} {
-    padding-bottom: @number * 1rem;
+    padding-bottom: @number * 0.01rem;
   }
   .p-l-@{number} {
-    padding-left: @number * 1rem;
+    padding-left: @number * 0.01rem;
   }
   .p-tb-@{number} {
-    padding-top: @number * 1rem;
-    padding-bottom: @number * 1rem;
+    padding-top: @number * 0.01rem;
+    padding-bottom: @number * 0.01rem;
   }
   .p-lr-@{number} {
-    padding-left: @number * 1rem;
-    padding-right: @number * 1rem;
+    padding-left: @number * 0.01rem;
+    padding-right: @number * 0.01rem;
   }
   .m-@{number} {
-    margin: @number * 1rem;
+    margin: @number * 0.01rem;
   }
   .m-t-@{number} {
-    margin-top: @number * 1rem;
+    margin-top: @number * 0.01rem;
   }
   .m-r-@{number} {
-    margin-right: @number * 1rem;
+    margin-right: @number * 0.01rem;
   }
   .m-b-@{number} {
-    margin-bottom: @number * 1rem;
+    margin-bottom: @number * 0.01rem;
   }
   .m-l-@{number} {
-    margin-left: @number * 1rem;
+    margin-left: @number * 0.01rem;
   }
   .m-tb-@{number} {
-    margin-top: @number * 1rem;
-    margin-bottom: @number * 1rem;
+    margin-top: @number * 0.01rem;
+    margin-bottom: @number * 0.01rem;
   }
   .m-lr-@{number} {
-    margin-left: @number * 1rem;
-    margin-right: @number * 1rem;
+    margin-left: @number * 0.01rem;
+    margin-right: @number * 0.01rem;
   }
 
   .loop_p_m(@number + 1);
@@ -259,7 +259,7 @@ blockquote {
 
 .loop_f_s(@number) when (@number <= 28) {
   .f-s-@{number} {
-    font-size: @number * 1rem;
+    font-size: @number * 0.01rem;
   }
   .loop_f_s(@number + 2);
 }

@@ -2,7 +2,7 @@ let html = "", topArr = [];
 
 // creat post menu
 const createMenu = () => {
-  $("#post-menu .pin").css("top", "16rem");
+  $("#post-menu .pin").css("top", "0.16rem");
   $("#post .post-content")
     .find("h1,h2,h3,h4,h5,h6")
     .each(function (i) {
@@ -112,8 +112,8 @@ const closeImageViewer = () => {
 }
 
 // set post menu scroll follower
-const POST_MENU_P_T = 16;
-const POST_MENU_LI_H = 24;
+const POST_MENU_P_T = 0.16;
+const POST_MENU_LI_H = 0.24;
 const menuFollowerCallback = (e) => {
   const scrollTop = e.target.scrollTop;
 
