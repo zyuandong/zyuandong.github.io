@@ -10,7 +10,7 @@
       content: "";
       width: 4rem;
       height: 50rem;
-      background: #f3f3f3;
+      background: @divider;
       margin: 0 13rem;
   }
   .circle() {
@@ -20,9 +20,9 @@
       height: 8rem;
       line-height: 1.5;
       margin: 0 11rem;
-      background: #ccc;
+      background: @disabled;
       border-radius: 50%;
-      box-shadow: 0 0 3rem #ccc;
+      box-shadow: 0 0 3rem @disabled;
   }
 
   .year {
@@ -35,8 +35,8 @@
       position: relative;
       width: 6rem;
       height: 6rem;
-      background: #fff;
-      border: 3px solid #ccc;
+      background: @white;
+      border: 3px solid @disabled;
       margin: 0 9rem;
       z-index: 2;
     }
@@ -56,8 +56,8 @@
       .circle();
       width: 4rem;
       height: 4rem;
-      background: #fff;
-      border: 2px solid #ccc;
+      background: @white;
+      border: 2px solid @disabled;
       position: relative;
     }
     .line {

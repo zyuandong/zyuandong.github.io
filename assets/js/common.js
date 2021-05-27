@@ -21,7 +21,7 @@ const createMenu = () => {
           topArr.push($(this).get(0).offsetTop);
           $(this).attr("id", "title" + i);
           html +=
-            `<li class="li-h2" title="${$(this).text()}">
+            `<li class="li-h2 ${i == 0 ? 'is-active' : ''}" title="${$(this).text()}">
               <a href="javascript:;" data-href="#title${i}" data-index="${i}">
                 ${$(this).text()}
               </a>
@@ -113,7 +113,7 @@ const closeImageViewer = () => {
 
 // set post menu scroll follower
 const POST_MENU_P_T = 16;
-const POST_MENU_LI_H = 21;
+const POST_MENU_LI_H = 24;
 const menuFollowerCallback = (e) => {
   const scrollTop = e.target.scrollTop;
 

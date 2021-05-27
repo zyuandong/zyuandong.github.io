@@ -1,0 +1,27 @@
+<span id="theme-btn">
+  <i class="icon-sun cursor-pointer"></i>
+  <i class="icon-moon cursor-pointer"></i>
+</span>
+
+<script>
+const toggleTheme = (type) => {
+  const $theme = document.querySelector(`#theme`)
+  if ($theme) $theme.remove();
+
+  const $link = document.createElement('link');
+  $link.setAttribute('id', 'theme');
+  $link.setAttribute('rel', 'stylesheet');
+  $link.setAttribute('type', 'text/css');
+  $link.setAttribute('href', `{{ site.baseurl }}/assets/css/theme/${type}.css`);
+  document.querySelector('head').append($link);
+}
+document.querySelector('#theme-btn').addEventListener('click', (e) => {
+  const target = e.target;
+  if (target.className.includes('sun')) {
+    toggleTheme('light');
+  }
+  if (target.className.includes('moon')) {
+    toggleTheme('dark');
+  }
+})
+</script>

@@ -1,6 +1,18 @@
 #post {
-  .post-content {
+  .post-message {
+    color: @second;
     font-size: 14rem;
+
+    a {
+      color: @second;
+
+      &:hover {
+        color: @blue;
+      }
+    }
+  }
+
+  .post-content {
 
     h2,h3,h4,h5,h6 {
       padding-top: 80rem;
@@ -14,7 +26,7 @@
     }
 
     a {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid @border;
     }
   }
 }

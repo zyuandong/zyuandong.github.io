@@ -1,3 +1,10 @@
+/**
+functional color
+blue    1890FF   177DDC
+green   52C41A   49AA19
+gold    FAAD14   D89614
+red     FF4D4F   A61D24
+**/
 * {
   box-sizing: border-box;
 }
@@ -7,15 +14,15 @@ html {
 }
 body {
   height: 100%;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.85);
   font-size: 16rem;
-  line-height: 1.5;
+  line-height: 1.75;
   font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background: url("../img/bg-img.jpg");
 }
 /* a tag */
 a {
-  color: #495057;
+  color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
 }
 a:hover,
@@ -32,38 +39,40 @@ a:visited {
 /* a tag end */
 /* h1~h6 */
 h1 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
+  font-weight: 500;
   font-size: 28rem;
+  padding: 0;
 }
 h2 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
   font-size: 24rem;
 }
 h3 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
   font-size: 20rem;
 }
 h4 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
   font-size: 18rem;
 }
 h5 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
   font-size: 16rem;
 }
 h6 {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
   padding-top: 20px;
   font-size: 14rem;
 }
@@ -106,30 +115,29 @@ code pre {
 /* code inline end */
 /* 引用 */
 blockquote {
-  background-color: #eee;
-  border-left: 5rem solid #ccc;
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3rem solid rgba(0, 0, 0, 0.25);
   padding: 4rem;
   margin: 0;
 }
 /* 引用 end */
 /* table */
 .post-content > table {
-  border: 1px solid #ccc;
   border-collapse: collapse;
 }
 .post-content > table thead {
-  background-color: #ccc;
+  background: #fafafa;
 }
 .post-content > table tbody {
-  background-color: #eee;
+  background: #fff;
 }
 .post-content > table th,
 .post-content > table td {
   padding: 6px 12px;
-  border: 1px solid #fff;
+  border-bottom: 1px solid #f0f0f0;
 }
 .post-content > table tbody tr:hover {
-  background-color: #ccc;
+  background: #fafafa;
 }
 /* table end */
 /* selection */
@@ -146,21 +154,21 @@ blockquote {
 .card {
   background-color: #fff;
   padding: 16rem;
-  border: 1px solid #ebeef5;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4rem;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 /* card end */
 /* line */
 .line {
-  height: 1rem;
-  background-color: #f3f3f3;
-  margin: 8rem 0 16rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.45);
+  margin: calc(14rem * 1.38) 0 calc(14rem * 3);
 }
 /* line end */
 /* text */
 .text-tip {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
   font-size: 14rem;
 }
 /* text end */
@@ -1297,74 +1305,64 @@ blockquote {
 #aside {
   height: 100vh;
 }
-#aside ul a {
-  display: inline-block;
-  width: 100%;
-}
 #aside ul .is-active a {
   color: #fff;
 }
 #aside a {
-  color: rgba(204, 204, 204, 0.6);
+  color: rgba(255, 255, 255, 0.45);
 }
-.guid {
+#aside a:hover {
+  color: #fff;
+}
+#aside .guid {
   width: 100%;
   height: 100%;
   float: left;
   color: #ccc;
   position: relative;
-  background-color: #000000;
+  background-color: #000;
 }
-.guid .head-img-box {
+#aside .guid .head-img-box {
   display: block;
-  margin: 50px 20% 20rem;
+  margin: 50rem 20% 30rem;
 }
-.guid .head-img-box .head-img {
+#aside .guid .head-img-box .head-img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 120rem;
+  max-height: 120rem;
   text-align: center;
-  line-height: 180px;
+  line-height: 120rem;
   margin: 0 auto;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 3rem solid #fff;
   box-sizing: border-box;
 }
-.guid ul {
-  margin: 10px 0;
+#aside .guid ul {
+  margin: 10rem 0;
   padding: 0;
   list-style: none;
 }
-.guid ul li.guid-item {
-  padding: 10px 30px;
-  cursor: pointer;
+#aside .guid ul li.guid-item {
+  padding: 10rem 30rem;
   text-align: center;
   color: #3390FF;
 }
-.guid ul li.guid-item:hover {
+#aside .guid ul li.is-active {
   color: #fff;
 }
-.guid ul li.guid-item:hover a {
+#aside .guid ul li.is-active a {
   color: #fff;
 }
-.guid ul li.is-active {
-  color: #fff;
-}
-.guid ul li.is-active a {
-  color: #fff;
-}
-.guid .my-msg {
+#aside .guid .my-msg {
   width: 100%;
   position: absolute;
   bottom: 0;
-  font-size: 20px;
+  font-size: 20rem;
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-}
-.guid .my-msg a:hover {
-  color: #fff;
 }
 #header {
   width: calc(100% - (100%/6));
@@ -1510,8 +1508,13 @@ blockquote {
   border-bottom: 1rem solid #3390FF;
 }
 #home .post-content {
-  font-size: 14rem;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16rem;
   word-break: break-word;
+}
+#home .line {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
 }
 #pagination {
   display: flex;
@@ -1610,7 +1613,7 @@ blockquote {
   border-bottom: 3rem solid transparent;
 }
 #categories ul.tabs li.is-active {
-  border-bottom: 3px solid #495057;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.45);
 }
 #categories .tag-anchor-point {
   padding: 80rem 0 0 0;
@@ -1762,14 +1765,14 @@ blockquote {
   height: 8rem;
   line-height: 1.5;
   margin: 0 11rem;
-  background: #ccc;
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 50%;
-  box-shadow: 0 0 3rem #ccc;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
   position: relative;
   width: 6rem;
   height: 6rem;
   background: #fff;
-  border: 3px solid #ccc;
+  border: 3px solid rgba(0, 0, 0, 0.25);
   margin: 0 9rem;
   z-index: 2;
 }
@@ -1778,7 +1781,7 @@ blockquote {
   content: "";
   width: 4rem;
   height: 50rem;
-  background: #f3f3f3;
+  background: rgba(0, 0, 0, 0.06);
   margin: 0 13rem;
   position: absolute;
   right: 0;
@@ -1798,13 +1801,13 @@ blockquote {
   height: 8rem;
   line-height: 1.5;
   margin: 0 11rem;
-  background: #ccc;
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 50%;
-  box-shadow: 0 0 3rem #ccc;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
   width: 4rem;
   height: 4rem;
   background: #fff;
-  border: 2px solid #ccc;
+  border: 2px solid rgba(0, 0, 0, 0.25);
   position: relative;
 }
 #archives .month .line {
@@ -1812,7 +1815,7 @@ blockquote {
   content: "";
   width: 4rem;
   height: 50rem;
-  background: #f3f3f3;
+  background: rgba(0, 0, 0, 0.06);
   margin: 0 13rem;
   position: absolute;
   right: 0;
@@ -1835,9 +1838,9 @@ blockquote {
   height: 8rem;
   line-height: 1.5;
   margin: 0 11rem;
-  background: #ccc;
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 50%;
-  box-shadow: 0 0 3rem #ccc;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
   position: relative;
 }
 #archives .day-title .day .line {
@@ -1845,14 +1848,21 @@ blockquote {
   content: "";
   width: 4rem;
   height: 50rem;
-  background: #f3f3f3;
+  background: rgba(0, 0, 0, 0.06);
   margin: 0 13rem;
   position: absolute;
   right: 0;
   bottom: 18rem;
 }
-#post .post-content {
+#post .post-message {
+  color: rgba(0, 0, 0, 0.45);
   font-size: 14rem;
+}
+#post .post-message a {
+  color: rgba(0, 0, 0, 0.45);
+}
+#post .post-message a:hover {
+  color: #3390FF;
 }
 #post .post-content h2,
 #post .post-content h3,
@@ -1868,11 +1878,11 @@ blockquote {
   cursor: -webkit-zoom-in;
 }
 #post .post-content a {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 #previous-next-post {
   display: flex;
-  border-top: 1px solid #f3f3f3;
+  border-top: 3px solid rgba(0, 0, 0, 0.45);
   justify-content: space-around;
   margin: 32rem 0 0 0;
 }
@@ -1884,10 +1894,10 @@ blockquote {
   border-radius: 4rem;
 }
 .previous:hover {
-  background: #f1f4f9;
+  background: rgba(0, 0, 0, 0.04);
 }
 .previous:hover a {
-  color: #23241f;
+  color: rgba(0, 0, 0, 0.85);
 }
 .next {
   flex: 1;
@@ -1897,10 +1907,10 @@ blockquote {
   border-radius: 4rem;
 }
 .next:hover {
-  background: #f1f4f9;
+  background: rgba(0, 0, 0, 0.04);
 }
 .next:hover a {
-  color: #23241f;
+  color: rgba(0, 0, 0, 0.85);
 }
 #footer {
   text-align: center;
@@ -1953,9 +1963,9 @@ blockquote {
 }
 #post-menu .pin {
   width: 100%;
-  height: 21px;
-  border-left: 3px solid #495057;
-  background-color: #f3f3f3;
+  height: 24px;
+  border-left: 3px solid #3390FF;
+  background-color: rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   position: absolute;
   left: 0;
