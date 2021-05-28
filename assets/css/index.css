@@ -2009,8 +2009,11 @@ blockquote {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#post-menu .sidebar-panel-ul li a:hover {
-  border: none !important;
+#post-menu .sidebar-panel-ul li a:hover,
+#post-menu .sidebar-panel-ul li a:focus,
+#post-menu .sidebar-panel-ul li a:active,
+#post-menu .sidebar-panel-ul li a:visited {
+  text-decoration: none;
 }
 #post-menu .sidebar-panel-ul li a:visited,
 #post-menu .sidebar-panel-ul li a:focus,

@@ -39,8 +39,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
-        &:hover {
-          border: none !important;
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+          text-decoration: none;
         }
 
         &:visited,
