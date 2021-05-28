@@ -189,6 +189,36 @@ const setBack2topController = () => {
   });
 }
 
+const throttle = () => {}
+
+const debounce = (fn, delay) => {
+  let timer;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, arguments)();
+    }, delay);  
+  }
+}
+
+let scrollTop = 0, $header;
+const toggleHeader = (e) => {
+  const $target = e.target;
+  const newScrollTop = $target.scrollTop;
+  return function() {
+    scrollTop - newScrollTop < 0 ? $header.setAttribute('class', 'show-row-theme') : $header.removeAttribute('class');
+    scrollTop = newScrollTop;
+  }
+}
+
+// toggle header
+const handleScroll = () => {
+  $header = document.querySelector('#header');
+  document
+  .querySelector('#site-scroll')
+  .addEventListener('scroll', debounce(toggleHeader, 150));
+}
+
 $(function () {
 
   // bindActive();
@@ -205,6 +235,8 @@ $(function () {
 
   showBack2topBtn();
   setBack2topController();
+
+  handleScroll();
 });
 
 function pjaxEnd() {

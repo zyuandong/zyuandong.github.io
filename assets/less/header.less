@@ -20,10 +20,30 @@
   line-height: 0.50rem;
   background-color: #fff;
   text-align: right;
+  overflow: hidden;
   box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   z-index: 10;
+
+  &.show-row-theme {
+    .row-control {
+      margin-top: -0.5rem;
+    }
+  }
+
+  .row-control {
+    height: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
 
   .search-box {
     display: inline-block;

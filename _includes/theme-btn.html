@@ -1,9 +1,12 @@
-<span id="theme-btn">
+<span id="theme-btn" class="p-5 m-lr-10">
   <i class="icon-sun cursor-pointer"></i>
   <i class="icon-moon cursor-pointer"></i>
 </span>
 
 <script>
+const $iconSun = document.querySelector('.icon-sun');
+const $iconMoon = document.querySelector('.icon-moon');
+
 const toggleTheme = (type) => {
   const $theme = document.querySelector(`#theme`)
   if ($theme) $theme.remove();
@@ -14,14 +17,31 @@ const toggleTheme = (type) => {
   $link.setAttribute('type', 'text/css');
   $link.setAttribute('href', `{{ site.baseurl }}/assets/css/theme/${type}.css`);
   document.querySelector('head').append($link);
-}
-document.querySelector('#theme-btn').addEventListener('click', (e) => {
-  const target = e.target;
-  if (target.className.includes('sun')) {
-    toggleTheme('light');
+
+  $iconSun.style.display = 'none';
+  $iconMoon.style.display = 'inline';
+  localStorage.removeItem('theme');
+  if (type === 'dark') {
+    $iconSun.style.display = 'inline';
+    $iconMoon.style.display = 'none';
+    localStorage.setItem('theme', 'dark');
   }
-  if (target.className.includes('moon')) {
+}
+
+const theme = localStorage.getItem('theme');
+toggleTheme(theme || 'light')
+
+document.querySelector('#theme-btn').addEventListener('click', (e) => {
+  const $target = e.target;
+  if ($target.className.includes('sun')) {
+    toggleTheme('light');
+    // $target.style.display = 'none';
+    // $target.nextElementSibling.style.display = 'inline';
+  }
+  if ($target.className.includes('moon')) {
     toggleTheme('dark');
+    // $target.style.display = 'none';
+    // $target.previousElementSibling.style.display = 'inline';
   }
 })
 </script>
