@@ -23,18 +23,19 @@ body {
 /* a tag */
 a {
   color: rgba(0, 0, 0, 0.85);
+}
+a:link,
+a:active,
+a:visited {
+  color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
 }
 a:hover,
 a:focus {
   color: #3390FF;
   text-decoration: underline;
+  text-underline-offset: 0.03rem;
   outline: none;
-}
-a:link,
-a:active,
-a:visited {
-  text-decoration: none;
 }
 /* a tag end */
 /* h1~h6 */
@@ -1504,8 +1505,8 @@ blockquote {
   position: sticky;
   top: 0.6rem;
 }
-#main :not(#pagination) > a:hover {
-  border-bottom: 0.01rem solid #3390FF;
+#main #pagination a:hover {
+  text-decoration: none;
 }
 #home .post-content {
   color: rgba(0, 0, 0, 0.85);
@@ -1877,7 +1878,11 @@ blockquote {
   cursor: -webkit-zoom-in;
 }
 #post .post-content a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  text-decoration: underline rgba(0, 0, 0, 0.45);
+  text-underline-offset: 0.03rem;
+}
+#post .post-content a:hover {
+  text-decoration-color: #3390FF;
 }
 #previous-next-post {
   display: flex;

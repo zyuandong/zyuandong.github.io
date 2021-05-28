@@ -26,7 +26,12 @@
     }
 
     a {
-      border-bottom: 1px solid @border;
+      text-decoration: underline @second;
+      text-underline-offset: 0.03rem;
+
+      &:hover {
+        text-decoration-color: @blue;
+      }
     }
   }
 }

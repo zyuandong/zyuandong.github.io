@@ -18,19 +18,21 @@ body {
 /* a tag */
 a {
   color: @primary;
-  text-decoration: none;
+  // text-decoration: none;
+
+  &:link,
+  &:active,
+  &:visited {
+    color: @primary;
+    text-decoration: none;
+  }
 
   &:hover,
   &:focus {
     color: @blue;
     text-decoration: underline;
+    text-underline-offset: 0.03rem;
     outline: none;
-  }
-
-  &:link,
-  &:active,
-  &:visited {
-    text-decoration: none;
   }
 }
 /* a tag end */
