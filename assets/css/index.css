@@ -1314,6 +1314,13 @@ blockquote {
 }
 #aside a:hover {
   color: #fff;
+  text-decoration: none;
+}
+#aside a:hover,
+#aside a:focus,
+#aside a:active,
+#aside a:visited {
+  text-decoration: none;
 }
 #aside .guid {
   width: 100%;
@@ -1367,30 +1374,37 @@ blockquote {
 }
 #header {
   width: calc(100% - (100%/6));
-  max-width: 12rem;
   height: 0.5rem;
   line-height: 0.5rem;
   background-color: #fff;
-  text-align: right;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   z-index: 10;
 }
-#header.show-row-theme .row-control {
+#header.show-row-theme .row-search {
   margin-top: -0.5rem;
 }
-#header .row-control {
+#header .toggle-search-theme {
+  align-self: flex-start;
+}
+#header .row-search {
   height: 0.5rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  line-height: 0.55rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#header .row-theme {
+  height: 0.5rem;
+  line-height: 0.55rem;
+  text-align: right;
 }
 #header .search-box {
   display: inline-block;
@@ -1473,7 +1487,7 @@ blockquote {
 }
 #site-menu-btn {
   display: none;
-  padding: 0.1rem;
+  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
   line-height: 0;
   font-size: 0;
   width: 0.15rem;
@@ -1957,19 +1971,19 @@ blockquote {
 }
 #site-scroll.show-site-menu .container #site-menu-btn .line-first {
   width: 70%;
-  -webkit-transform: translateX(-0.07rem) translateY(0.03rem) rotate(-45deg);
-  -moz-transform: translateX(-0.07rem) translateY(0.03rem) rotate(-45deg);
-  -ms-transform: translateX(-0.07rem) translateY(0.03rem) rotate(-45deg);
-  -o-transform: translateX(-0.07rem) translateY(0.03rem) rotate(-45deg);
-  transform: translateX(-0.07rem) translateY(0.03rem) rotate(-45deg);
+  -webkit-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
+  -moz-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
+  -ms-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
+  -o-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
+  transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
 }
 #site-scroll.show-site-menu .container #site-menu-btn .line-last {
   width: 70%;
-  -webkit-transform: translateX(-0.07rem) translateY(-0.03rem) rotate(45deg);
-  -moz-transform: translateX(-0.07rem) translateY(-0.03rem) rotate(45deg);
-  -ms-transform: translateX(-0.07rem) translateY(-0.03rem) rotate(45deg);
-  -o-transform: translateX(-0.07rem) translateY(-0.03rem) rotate(45deg);
-  transform: translateX(-0.07rem) translateY(-0.03rem) rotate(45deg);
+  -webkit-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+  -moz-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+  -ms-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+  -o-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+  transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
 }
 #post-menu {
   font-size: 0.14rem;
@@ -2290,11 +2304,14 @@ blockquote {
   #site-container .container #header {
     width: 100%;
   }
-  #site-container .container #header .row-control {
-    justify-content: space-between;
-  }
   #site-container .container #header #site-menu-btn {
     display: inline-block;
+  }
+  #site-container .container #header #breadcrumb {
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   #site-container .container #header .search-btn {
     color: #000;
