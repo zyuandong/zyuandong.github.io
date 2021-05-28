@@ -1878,7 +1878,7 @@ blockquote {
   cursor: -webkit-zoom-in;
 }
 #post .post-content a {
-  text-decoration: underline rgba(0, 0, 0, 0.45) !important;
+  text-decoration: underline rgba(0, 0, 0, 0.15);
   text-underline-offset: 0.03rem;
 }
 #post .post-content a:hover {
