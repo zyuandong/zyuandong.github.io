@@ -2283,7 +2283,8 @@ blockquote {
   #site-container .container #header .search-btn input:not(.search-input) {
     display: none;
   }
-  #site-container .container #header .search-btn i:not(.icon-file, .icon-folder-open, .icon-tag) {
+  #site-container .container #header .search-btn i.icon-search,
+  #site-container .container #header .search-btn i.icon-close {
     font-size: 0.2rem;
   }
   #site-container .container #header .search-mask .result-box {
