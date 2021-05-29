@@ -13,7 +13,8 @@ body {
   line-height: 1.75;
   // font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   font-family: @font-family;
-  background: url("../img/bg-img.jpg");
+  // background: url("/assets/img/bg-img.jpg");
+  background: var(--body-bg);
 }
 /* a tag */
 a {
@@ -162,11 +163,11 @@ blockquote {
 
 /* selection */
 ::selection {
-  background-color: @blue;
+  background: @blue;
   color: @white;
 }
 ::-moz-selection {
-  background-color: @blue;
+  background: @blue;
   color: @white;
 }
 /* selection end */
@@ -174,7 +175,7 @@ blockquote {
 /* card */
 .card {
   // min-height: 686rem;
-  background-color: @white;
+  background: var(--card-bg);
   padding: 0.16rem;
   border: 1px solid @border;
   border-radius: 0.04rem;
@@ -185,7 +186,7 @@ blockquote {
 /* line */
 .line {
   height: 0.03rem;
-  background-color: @second;
+  background: @second;
   margin: calc(0.14rem * 1.38) 0 calc(0.14rem * 3);
 }
 /* line end */

@@ -2,12 +2,12 @@
 
 ## TODO
 
-- [ ] [posts]: font color / size
 - [ ] [theme]: light or dark
-- [ ] [post-menu]: level
 - [ ] [image]: image viewer
 - [ ] [comment]: add comment system
-- [ ] [breadcrumb]: header add breadcrumb
+- [ ] [posts]: font color / size
 - [ ] [analyze]: google analytics
+- [ ] [post-menu]: level
+- [x] [breadcrumb]: header add breadcrumb
 - [x] [pagination]: RWD
 - [x] [layout]: aside : main container

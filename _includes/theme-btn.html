@@ -8,15 +8,19 @@ const $iconSun = document.querySelector('.icon-sun');
 const $iconMoon = document.querySelector('.icon-moon');
 
 const toggleTheme = (type) => {
-  const $theme = document.querySelector(`#theme`)
-  if ($theme) $theme.remove();
+  const $theme = document.querySelector(`#theme`);
+  if (type === 'light') {
+    if ($theme) $theme.remove();
+  } else {
+    const $link = document.createElement('link');
+    $link.setAttribute('id', `theme`);
+    $link.setAttribute('rel', 'stylesheet');
+    $link.setAttribute('type', 'text/css');
+    $link.setAttribute('href', `{{ site.baseurl }}/assets/css/theme/${type}.css`);
+    document.querySelector('head').append($link);
 
-  const $link = document.createElement('link');
-  $link.setAttribute('id', 'theme');
-  $link.setAttribute('rel', 'stylesheet');
-  $link.setAttribute('type', 'text/css');
-  $link.setAttribute('href', `{{ site.baseurl }}/assets/css/theme/${type}.css`);
-  document.querySelector('head').append($link);
+    if ($theme) $theme.remove();
+  }
 
   $iconSun.style.display = 'none';
   $iconMoon.style.display = 'inline';

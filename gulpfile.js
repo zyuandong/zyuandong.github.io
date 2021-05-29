@@ -5,16 +5,21 @@ const path = require('path');
 
 
 const cleanTask = () => {
-  return src('./assets/css/index.css', {allowEmpty: true, read: false})
+  return src(['./assets/css/common.css', './assets/css/theme/*.css'], {allowEmpty: true, read: false})
     .pipe(clean());
 }
 
 const lessTask = () => {
-  return src('./assets/less/index.less')
+  return src(['./assets/less/common.less', './assets/less/theme/*.less'])
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(dest('./assets/css/'));
+    .pipe(dest((file) => {
+      if (file.path.includes('theme')) {
+        return './assets/css/theme/';
+      }
+      return './assets/css/';
+    }));
 }
 
 const watchTask = () => {

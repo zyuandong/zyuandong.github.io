@@ -5,6 +5,11 @@ green   52C41A   49AA19
 gold    FAAD14   D89614
 red     FF4D4F   A61D24
 **/
+:root {
+  --body-bg: url("/assets/img/bg-img.jpg");
+  --header-bg: #fff;
+  --card-bg: #fff;
+}
 * {
   box-sizing: border-box;
 }
@@ -18,7 +23,7 @@ body {
   font-size: 0.16rem;
   line-height: 1.75;
   font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  background: url("../img/bg-img.jpg");
+  background: var(--body-bg);
 }
 /* a tag */
 a {
@@ -143,17 +148,17 @@ blockquote {
 /* table end */
 /* selection */
 ::selection {
-  background-color: #3390FF;
+  background: #3390FF;
   color: #fff;
 }
 ::-moz-selection {
-  background-color: #3390FF;
+  background: #3390FF;
   color: #fff;
 }
 /* selection end */
 /* card */
 .card {
-  background-color: #fff;
+  background: var(--card-bg);
   padding: 0.16rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.04rem;
@@ -163,7 +168,7 @@ blockquote {
 /* line */
 .line {
   height: 0.03rem;
-  background-color: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45);
   margin: calc(0.14rem * 1.38) 0 calc(0.14rem * 3);
 }
 /* line end */
@@ -1377,7 +1382,7 @@ blockquote {
   max-width: 12rem;
   height: 0.5rem;
   line-height: 0.5rem;
-  background-color: #fff;
+  background: var(--header-bg);
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -1992,7 +1997,6 @@ blockquote {
   z-index: 1;
 }
 #post-menu .sidebar-panel-box {
-  background-color: #fff;
   background-clip: content-box;
 }
 #post-menu .pin {
