@@ -30,7 +30,7 @@ a {
 
   &:hover,
   &:focus {
-    color: @blue;
+    color: var(--brand);
     text-decoration: underline;
     text-underline-offset: 0.03rem;
     outline: none;
@@ -46,7 +46,7 @@ a {
 
   // &:before {
   //   content: "#";
-  //   color: @blue;
+  //   color: var(--brand);
   //   margin-right: 10px;
   // }
 }
@@ -163,11 +163,11 @@ blockquote {
 
 /* selection */
 ::selection {
-  background: @blue;
+  background: var(--brand);
   color: @white;
 }
 ::-moz-selection {
-  background: @blue;
+  background: var(--brand);
   color: @white;
 }
 /* selection end */
