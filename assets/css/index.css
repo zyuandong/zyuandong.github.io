@@ -1374,6 +1374,7 @@ blockquote {
 }
 #header {
   width: calc(100% - (100%/6));
+  max-width: 12rem;
   height: 0.5rem;
   line-height: 0.5rem;
   background-color: #fff;
