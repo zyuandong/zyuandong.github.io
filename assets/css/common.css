@@ -6,6 +6,20 @@ gold    FAAD14   D89614
 red     FF4D4F   A61D24
 **/
 :root {
+  --title: rgba(0, 0, 0, 0.85);
+  --primary: rgba(0, 0, 0, 0.85);
+  --second: rgba(0, 0, 0, 0.45);
+  --disabled: rgba(0, 0, 0, 0.25);
+  --border: rgba(0, 0, 0, 0.15);
+  --divider: rgba(0, 0, 0, 0.06);
+  --bg: rgba(0, 0, 0, 0.04);
+  --table-header: rgba(0, 0, 0, 0.02);
+  --code-line-text: #d14;
+  --code-line-bg: #f9f2f4;
+  --tag-text-bg: #868e96;
+  --tag-number-bg: #495057;
+  --table-header: #fafafa;
+  --table-border: #f0f0f0;
   --body-bg: url("/assets/img/bg-img.jpg");
   --header-bg: #fff;
   --card-bg: #fff;
@@ -1194,98 +1208,6 @@ blockquote {
 /* 滚动条按钮 */
 /* 滚动条轨道上的滚动角 */
 /* scrollbar end */
-#blog-enter #canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-#blog-enter img {
-  border: 5px solid #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 1.5rem;
-  left: calc(50% - 0.6rem);
-}
-#blog-enter .breathe {
-  width: 1.2rem;
-  height: 1.2rem;
-  box-shadow: 0 0 0.3rem #5bc0de inset;
-  -webkit-animation: ani-breathe 5s infinite;
-  -moz-animation: ani-breathe 5s infinite;
-  -ms-animation: ani-breathe 5s infinite;
-  -o-animation: ani-breathe 5s infinite;
-  animation: ani-breathe 5s infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -ms-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  border-radius: 50%;
-  position: absolute;
-  top: 1.5rem;
-  left: calc(50% - 0.6rem);
-}
-.public-style {
-  border-radius: 50%;
-  position: absolute;
-  top: 1.5rem;
-  left: calc(50% - 0.6rem);
-}
-@-webkit-keyframes ani-breathe {
-  0% {
-    -webkit-transform: scale(1, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-  }
-}
-@-moz-keyframes ani-breathe {
-  0% {
-    -moz-transform: scale(1, 1);
-  }
-  50% {
-    -moz-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -moz-transform: scale(1, 1);
-  }
-}
-@-ms-keyframes ani-breathe {
-  0% {
-    -ms-transform: scale(1, 1);
-  }
-  50% {
-    -ms-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -ms-transform: scale(1, 1);
-  }
-}
-@-o-keyframes ani-breathe {
-  0% {
-    -o-transform: scale(1, 1);
-  }
-  50% {
-    -o-transform: scale(1.5, 1.5);
-  }
-  100% {
-    -o-transform: scale(1, 1);
-  }
-}
-@keyframes ani-breathe {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 #site-scroll {
   height: 100vh;
   overflow: auto;
@@ -1417,17 +1339,11 @@ blockquote {
   text-align: left;
   height: 0.32rem;
   line-height: 0.32rem;
-  background: #f3f3f3;
+  background: var(--bg);
   border: none;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid var(--border);
 }
 #header .search-box input {
-  height: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-#header .search-box .search-btn {
   height: 100%;
   border: none;
   outline: none;
@@ -1447,7 +1363,9 @@ blockquote {
 #header .search-box .result-box {
   font-size: 0.14rem;
   width: 6rem;
-  background: #fff;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.03rem;
   box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   left: calc((100% - 6rem) / 2);
@@ -1460,9 +1378,9 @@ blockquote {
 #header .search-box .result-box .search-box {
   height: 0.32rem;
   line-height: 0.32rem;
-  background: #f3f3f3;
+  background: var(--bg);
   border: none;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid var(--border);
   width: calc(100% - 0.2rem);
   background: transparent;
 }
@@ -1481,7 +1399,7 @@ blockquote {
 }
 #header .search-box .result-box .type {
   padding: 0.03rem 0.1rem;
-  background: #f3f3f3;
+  background: var(--bg);
 }
 #header .search-box .result-box ul {
   list-style: none;
@@ -1937,6 +1855,7 @@ blockquote {
 }
 .previous:hover a {
   color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
 }
 .next {
   flex: 1;
@@ -1950,6 +1869,7 @@ blockquote {
 }
 .next:hover a {
   color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
 }
 #footer {
   text-align: center;
