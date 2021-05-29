@@ -15,8 +15,8 @@ red     FF4D4F   A61D24
   --bg: rgba(255, 255, 255, 0.08);
   --table-header: rgba(255, 255, 255, 0.04);
   --brand: #D89614;
-  --code-line-text: #d14;
-  --code-line-bg: #f9f2f4;
+  --code-inline-text: #d14;
+  --code-inline-bg: rgba(255, 255, 255, 0.08);
   --tag-text-bg: #868e96;
   --tag-number-bg: #495057;
   --table-header: #fafafa;
@@ -111,9 +111,9 @@ pre code {
 /* code inline*/
 li code,
 p code {
-  color: #d14;
+  color: var(--code-inline-text);
   padding: 0.02rem 0.04rem;
-  background-color: #f9f2f4;
+  background-color: var(--code-inline-bg);
   border-radius: 0.04rem;
 }
 code {
