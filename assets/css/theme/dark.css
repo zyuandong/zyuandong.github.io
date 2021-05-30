@@ -1406,7 +1406,7 @@ blockquote {
 }
 #site-menu-btn {
   display: none;
-  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
+  padding: 0.18rem 0.17rem;
   line-height: 0;
   font-size: 0;
   width: 0.15rem;
@@ -1887,7 +1887,7 @@ blockquote {
 }
 #site-scroll.show-site-menu .container #site-menu-btn {
   position: fixed;
-  top: 0.06rem;
+  top: 0;
   left: 0;
 }
 #site-scroll.show-site-menu .container #site-menu-btn .line {
