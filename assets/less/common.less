@@ -1,33 +1,30 @@
-@import "colors";
+@import "color-palette.less";
 
 :root {
-  --title:        @black-8;
-  --primary:      @black-7;
-  --second:       @black-6;
-  --disabled:     @black-5;
-  --border:       @black-4;
-  --divider:      @black-3;
-  --bg:           @black-2;
-  --table-header: @black-1;
+  --brand:       @blue;
+  --primary:     @black-7;
+  --secondary:   @black-6;
+  --white:       @white;
 
-  --brand: @blue;
+  --title:          @black-8;
+  --text-primary:   @black-7;
+  --text-secondary: @black-6;
+  --disabled:       @black-5;
+  --border:         @black-4;
+  --divider:        @black-3;
+  --bg:             @black-2;
+  --table-header:   @black-2;
+  --table-body:     @black-1;
 
-  --text-primary: @black-7;
+  --code-inline:    @code-inline;
+  --code-inline-bg: @code-inline-bg-l;
 
-  --code-inline-text: @red;
-  --code-inline-bg: #f9f2f4;
+  --tag-text-bg:   @tag-text-bg;
+  --tag-number-bg: @tag-number-bg;
 
-  --tag-text-bg: #868e96;
-  --tag-number-bg: #495057;
-
-  --table-header: #fafafa;
-  --table-border: #f0f0f0;
-
-  --body-bg: url("/assets/img/bg-img.jpg");
-  --header-bg: @white;
-  --card-bg: @white;
+  --body-bg:   @body-bg-l;
+  --header-bg: @header-bg-l;
+  --card-bg:   @card-bg-l;
 }
-
-.light();
 
 @import "index";

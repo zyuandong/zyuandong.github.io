@@ -11,7 +11,7 @@
     width: 100%;
     height: 0.24rem;
     border-left: 0.03rem solid var(--brand);
-    background-color: @bg;
+    background-color: var(--bg);
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -34,6 +34,7 @@
       white-space: nowrap;
 
       a {
+        color: var(--text-secondary);
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -49,7 +50,7 @@
         &:focus,
         &:active {
           font-weight: 400;
-          color: @a-base-color;
+          color: var(--text-secondary);
         }
       }
 

@@ -8,23 +8,20 @@ html {
 }
 body {
   height: 100%;
-  color: @primary;
+  color: var(--text-primary);
   font-size: 0.16rem;
   line-height: 1.75;
-  // font-family: Arial, "Microsoft YaHei", Consolas, KaiTi, monospace;
   font-family: @font-family;
-  // background: url("/assets/img/bg-img.jpg");
   background: var(--body-bg);
 }
 /* a tag */
 a {
-  color: @primary;
-  // text-decoration: none;
+  color: var(--text-primary);
 
   &:link,
   &:active,
   &:visited {
-    color: @primary;
+    color: var(--text-primary);
     text-decoration: none;
   }
 
@@ -40,7 +37,7 @@ a {
 
 /* h1~h6 */
 .title-h() {
-  color: @primary;
+  color: var(--title);
   font-weight: 400;
   padding-top: 20px;
 
@@ -85,7 +82,7 @@ pre {
 
   code {
     border-radius: 5px;
-    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+    font-family: @code-font-family;
   }
 }
 /* code block end */
@@ -94,23 +91,23 @@ pre {
 li,
 p {
   code {
-    color: var(--code-inline-text);
+    color: var(--code-inline);
     padding: 0.02rem 0.04rem;
     background-color: var(--code-inline-bg);
     border-radius: 0.04rem;
   }
 }
 code {
-  font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+  font-family: @code-font-family;
   pre {
-    font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+    font-family: @code-font-family;
   }
 }
 .highlight {
   .rouge-gutter {
     text-align: right;
     padding-right: 0.5em;
-    border-right: 1px solid @tag-number-bg;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
   .rouge-code {
     padding-left: 0.5em;
@@ -124,8 +121,8 @@ code {
 
 /* 引用 */
 blockquote {
-  background: @bg;
-  border-left: 0.03rem solid @disabled;
+  background: var(--bg);
+  border-left: 0.03rem solid var(--disabled);
   padding: 0.04rem;
   margin: 0;
   // font-family: "Comic Sans MS", KaiTi, Consolas, "Microsoft YaHei", "Courier New", monospace;
@@ -137,19 +134,19 @@ blockquote {
   border-collapse: collapse;
 
   thead {
-    background: @table-header;
+    background: var(--table-header);
   }
   tbody {
-    background: @white;
+    background: var(--table-body);
   }
   th,
   td {
     padding: 0.06rem 0.12rem;
-    border-bottom: 1px solid @table-border;
+    border-bottom: 1px solid var(--border);
   }
   tbody {
     tr:hover {
-      background: @table-header;
+      background: var(--table-header);
     }
   }
 }
@@ -161,23 +158,12 @@ blockquote {
 }
 /* table end */
 
-/* selection */
-::selection {
-  background: var(--brand);
-  color: @white;
-}
-::-moz-selection {
-  background: var(--brand);
-  color: @white;
-}
-/* selection end */
-
 /* card */
 .card {
   // min-height: 686rem;
   background: var(--card-bg);
   padding: 0.16rem;
-  border: 1px solid @border;
+  border: 1px solid var(--border);
   border-radius: 0.04rem;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -186,14 +172,14 @@ blockquote {
 /* line */
 .line {
   height: 0.03rem;
-  background: @second;
+  background: var(--secondary);
   margin: calc(0.14rem * 1.38) 0 calc(0.14rem * 3);
 }
 /* line end */
 
 /* text */
 .text-tip {
-  color: @disabled;
+  color: var(--disabled);
   font-size: 0.14rem;
 }
 /* text end */
@@ -274,6 +260,17 @@ blockquote {
   text-align: center;
 }
 /* no data end */
+
+/* selection */
+::selection {
+  background: var(--brand);
+  color: @white;
+}
+::-moz-selection {
+  background: var(--brand);
+  color: @white;
+}
+/* selection end */
 
 /* scrollbar */
 /* 滚动条垂直方向的宽度与水平方向的高度 */

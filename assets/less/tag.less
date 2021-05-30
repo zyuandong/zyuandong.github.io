@@ -7,29 +7,29 @@
 
       a {
         display: inline-block;
-        color: #fff;
+        color: var(--white);
         text-decoration: none;
         overflow: hidden;
         border-radius: 0.03rem;
 
         .name {
           float: left;
-          background: #868e96;
+          background: var(--tag-text-bg);
           padding: 0 0.08rem;
         }
 
         .count {
           float: left;
-          background: #495057;
+          background: var(--tag-number-bg);
           padding: 0 0.06rem;
         }
 
         &:hover {
           border: none !important;
-          box-shadow: 0 0 5px #495057;
+          box-shadow: 0 0 5px var(--tag-number-bg);
 
           .name {
-            background: #495057;
+            background: var(--tag-number-bg);
           }
         }
       }

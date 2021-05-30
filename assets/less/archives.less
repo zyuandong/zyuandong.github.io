@@ -10,7 +10,7 @@
       content: "";
       width: 0.04rem;
       height: 0.50rem;
-      background: @divider;
+      background: var(--divider);
       margin: 0 0.13rem;
   }
   .circle() {
@@ -20,9 +20,9 @@
       height: 0.08rem;
       line-height: 1.5;
       margin: 0 0.11rem;
-      background: @disabled;
+      background: var(--disabled);
       border-radius: 50%;
-      box-shadow: 0 0 0.03rem @disabled;
+      box-shadow: 0 0 0.03rem var(--disabled);
   }
 
   .year {
@@ -36,7 +36,7 @@
       width: 0.06rem;
       height: 0.06rem;
       background: @white;
-      border: 3px solid @disabled;
+      border: 3px solid var(--disabled);
       margin: 0 0.09rem;
       z-index: 2;
     }
@@ -57,7 +57,7 @@
       width: 0.04rem;
       height: 0.04rem;
       background: @white;
-      border: 2px solid @disabled;
+      border: 2px solid var(--disabled);
       position: relative;
     }
     .line {
