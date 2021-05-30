@@ -15,6 +15,7 @@ red     FF4D4F   A61D24
   --bg: rgba(255, 255, 255, 0.08);
   --table-header: rgba(255, 255, 255, 0.04);
   --brand: #D89614;
+  --text-primary: rgba(255, 255, 255, 0.85);
   --code-inline-text: #d14;
   --code-inline-bg: rgba(255, 255, 255, 0.08);
   --tag-text-bg: #868e96;
@@ -1323,11 +1324,11 @@ blockquote {
 #header .row-search {
   height: 0.5rem;
   line-height: 0.55rem;
-  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: top 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: top 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: top 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: top 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: top 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 #header .row-theme {
   height: 0.5rem;
@@ -1421,7 +1422,7 @@ blockquote {
   width: 100%;
   height: 0.02rem;
   display: inline-block;
-  background: #000;
+  background: var(--text-primary);
   margin: 0;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -2239,7 +2240,6 @@ blockquote {
     white-space: nowrap;
   }
   #site-container .container #header .search-btn {
-    color: #000;
     height: 0.34rem;
     line-height: 0.4rem;
     background: transparent;
