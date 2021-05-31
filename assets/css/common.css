@@ -2316,6 +2316,7 @@ blockquote {
   }
   #categories ul.category-group .title {
     display: block;
+    line-height: 1;
     margin: 0;
   }
   #categories ul.category-group .date {
@@ -2332,6 +2333,7 @@ blockquote {
   }
   #tags ul.tag-group .title {
     display: block;
+    line-height: 1;
     margin: 0;
   }
   #tags ul.tag-group .date {
