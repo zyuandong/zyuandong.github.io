@@ -1452,6 +1452,10 @@ blockquote {
 #main .main-aside a {
   color: var(--text-secondary);
 }
+#main .main-aside #recent-update a:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
 #main .position-sticky {
   position: sticky;
   top: 0.6rem;
@@ -1951,6 +1955,7 @@ blockquote {
 #post-menu .sidebar-panel-ul li a:focus,
 #post-menu .sidebar-panel-ul li a:active,
 #post-menu .sidebar-panel-ul li a:visited {
+  color: var(--brand);
   text-decoration: none;
 }
 #post-menu .sidebar-panel-ul li a:visited,
