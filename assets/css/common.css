@@ -164,6 +164,7 @@ blockquote {
   border-collapse: collapse;
 }
 .post-content > table thead {
+  white-space: nowrap;
   background: var(--table-header);
 }
 .post-content > table tbody {
