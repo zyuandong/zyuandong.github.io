@@ -20,6 +20,28 @@
   --header-bg: #fff;
   --card-bg: #fff;
 }
+:root[data-theme="dark"] {
+  --brand: #D89614;
+  --primary: rgba(255, 255, 255, 0.85);
+  --secondary: rgba(255, 255, 255, 0.45);
+  --white: #fff;
+  --title: rgba(255, 255, 255, 0.85);
+  --text-primary: rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(255, 255, 255, 0.45);
+  --disabled: rgba(255, 255, 255, 0.3);
+  --border: rgba(255, 255, 255, 0.2);
+  --divider: rgba(255, 255, 255, 0.12);
+  --bg: rgba(255, 255, 255, 0.08);
+  --table-header: rgba(255, 255, 255, 0.08);
+  --table-body: rgba(255, 255, 255, 0.04);
+  --code-inline: #d14;
+  --code-inline-bg: rgba(255, 255, 255, 0.08);
+  --tag-text-bg: #868e96;
+  --tag-number-bg: #495057;
+  --body-bg: #090C10;
+  --header-bg: #161B22;
+  --card-bg: #0D1117;
+}
 * {
   box-sizing: border-box;
 }
