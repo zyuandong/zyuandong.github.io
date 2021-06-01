@@ -237,7 +237,20 @@ $(function () {
   setBack2topController();
 
   handleScroll();
+
+  $('#post .post-content img').each(function() {
+    this.parentElement.classList.add('post-img');
+    const $imgAlt = document.createElement('p');
+    $imgAlt.setAttribute('class', 'img-alt');
+    $imgAlt.innerText = $(this).attr('alt');
+    this.after($imgAlt);
+
+    // TODO
+    // $(this).attr("onerror", "this.classList.add('error');");
+  })
 });
+
+
 
 function pjaxEnd() {
   // menu automatic hide in mobile

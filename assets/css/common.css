@@ -1859,10 +1859,22 @@ blockquote ol {
   padding-top: 0.8rem;
   margin-top: -0.6rem;
 }
+#post .post-content .post-img {
+  text-align: center;
+}
 #post .post-content img {
+  color: var(--disabled);
   width: auto;
   max-width: 100%;
+  background: var(--white);
   cursor: -webkit-zoom-in;
+  padding: 0.1rem;
+  border-radius: 0.03rem;
+}
+#post .post-content img + .img-alt {
+  color: var(--disabled);
+  font-size: 0.14rem;
+  margin-top: 0;
 }
 #post .post-content a {
   text-decoration: underline var(--border);

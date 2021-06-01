@@ -2,11 +2,11 @@
 
 ## TODO
 
-- [ ] [image]: image viewer
 - [ ] [comment]: add comment system
-- [ ] [posts]: font color / size
 - [ ] [analyze]: google analytics
 - [ ] [post-menu]: level
+- [x] [posts]: font color / size
+- [x] [image]: image viewer
 - [x] [theme]: light or dark
 - [x] [breadcrumb]: header add breadcrumb
 - [x] [pagination]: RWD

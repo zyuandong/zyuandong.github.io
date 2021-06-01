@@ -19,10 +19,41 @@
       margin-top: -0.60rem;
     }
 
+    .post-img {
+      text-align: center;
+    }
+
     img {
+      color: var(--disabled);
       width: auto;
       max-width: 100%;
+      background: var(--white);
       cursor: -webkit-zoom-in;
+      padding: 0.1rem;
+      border-radius: 0.03rem;
+
+      & + .img-alt {
+        color: var(--disabled);
+        font-size: 0.14rem;
+        margin-top: 0;
+      }
+
+      // &::after {
+      //   content: attr(alt);
+      //   display: block;
+      //   position: relative;
+      //   left: 0;
+      //   bottom: 0;
+      //   width: 100%;
+      //   line-height: 2;
+      //   background-color: rgba(0,0,0,.5);
+      //   color: white;
+      //   font-size: 12px;
+      //   text-align: center;
+      //   white-space: nowrap;
+      //   overflow: hidden;
+      //   text-overflow: ellipsis;
+      // }
     }
 
     a {
