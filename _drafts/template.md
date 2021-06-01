@@ -2,6 +2,8 @@
 title: Markdown 语法模板
 ---
 
+:camel: :blush: :smile:
+
 > 微信公众号排版工具。问题或建议，请公众号留言。**[程序员翻身](#jump_8)**
 
 建议使用 **Chrome** 浏览器，体验最佳效果。
