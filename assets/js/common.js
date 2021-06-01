@@ -96,7 +96,7 @@ const setCodeHighlight = () => {
 
 // set image viewer
 const imageViewer = () => {
-  $("#contents img").click(function () {
+  $("#post img").click(function () {
     var img = new Image();
     img.src = $(this).attr("src");
     $("#mask-layer").show();

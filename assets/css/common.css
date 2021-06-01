@@ -2055,14 +2055,14 @@ blockquote ol {
 /* mask layer */
 #mask-layer {
   display: none;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow: auto;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 11;
 }
 #mask-layer .mask-layer-box {
   width: 100%;
@@ -2075,6 +2075,11 @@ blockquote ol {
   display: table-cell;
   vertical-align: middle;
 }
+#mask-layer .mask-layer-box .mask-layer-img img {
+  background: var(--white);
+  padding: 0.1rem;
+  border-radius: 0.03rem;
+}
 #mask-layer .mask-layer-btn {
   width: 0.4rem;
   height: 0.4rem;
@@ -2082,11 +2087,11 @@ blockquote ol {
   border-radius: 50%;
   font-size: 0;
   cursor: pointer;
-  padding: 0.14rem;
+  padding: 0.12rem;
   box-sizing: border-box;
   position: fixed;
-  top: 0.15rem;
-  right: 0.15rem;
+  top: 0.3rem;
+  right: 0.3rem;
 }
 #mask-layer .mask-layer-btn .mask-layer-line {
   width: 100%;
@@ -2096,11 +2101,11 @@ blockquote ol {
 }
 #mask-layer .mask-layer-btn .mask-layer-line-first {
   margin-bottom: 0.05rem;
-  -webkit-transform: translateX(-3px) rotate(-45deg);
-  -moz-transform: translateX(-3px) rotate(-45deg);
-  -ms-transform: translateX(-3px) rotate(-45deg);
-  -o-transform: translateX(-3px) rotate(-45deg);
-  transform: translateX(-3px) rotate(-45deg);
+  -webkit-transform: translate(-0.025rem, 0.01rem) rotate(-45deg);
+  -moz-transform: translate(-0.025rem, 0.01rem) rotate(-45deg);
+  -ms-transform: translate(-0.025rem, 0.01rem) rotate(-45deg);
+  -o-transform: translate(-0.025rem, 0.01rem) rotate(-45deg);
+  transform: translate(-0.025rem, 0.01rem) rotate(-45deg);
   -webkit-transform-origin: 100% 50%;
   -moz-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
@@ -2109,11 +2114,11 @@ blockquote ol {
 }
 #mask-layer .mask-layer-btn .mask-layer-line-last {
   margin-top: 0.05rem;
-  -webkit-transform: translateX(-3px) rotate(45deg);
-  -moz-transform: translateX(-3px) rotate(45deg);
-  -ms-transform: translateX(-3px) rotate(45deg);
-  -o-transform: translateX(-3px) rotate(45deg);
-  transform: translateX(-3px) rotate(45deg);
+  -webkit-transform: translate(-0.025rem, 0.005rem) rotate(45deg);
+  -moz-transform: translate(-0.025rem, 0.005rem) rotate(45deg);
+  -ms-transform: translate(-0.025rem, 0.005rem) rotate(45deg);
+  -o-transform: translate(-0.025rem, 0.005rem) rotate(45deg);
+  transform: translate(-0.025rem, 0.005rem) rotate(45deg);
   -webkit-transform-origin: 100% 50%;
   -moz-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
@@ -2370,6 +2375,11 @@ blockquote ol {
     position: fixed;
     right: 0;
     bottom: 0;
+  }
+  #mask-layer .mask-layer-btn {
+    border-radius: 0;
+    top: 0;
+    right: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
