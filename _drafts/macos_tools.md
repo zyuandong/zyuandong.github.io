@@ -31,7 +31,7 @@ Option + f - 后移至下一个空格 (后移至下一个单词开头
 ```
 
 设置映射
-![option_b.png](https://i.loli.net/2021/06/02/xwYO2ZP3Whupytj.png)
-![option_f.png](https://i.loli.net/2021/06/02/bmKEjylAZpYM7wD.png)
-![preferences.png](https://i.loli.net/2021/06/02/QiHPOKGlvIkLX92.png)
-![option_b](https://zyuandong.github.io/blog_imgs/macos_tools/option_b.png)
+
+![Option + b](https://i.loli.net/2021/06/02/xwYO2ZP3Whupytj.png)
+![Option + f](https://i.loli.net/2021/06/02/bmKEjylAZpYM7wD.png)
+![Preferences](https://i.loli.net/2021/06/02/QiHPOKGlvIkLX92.png)
