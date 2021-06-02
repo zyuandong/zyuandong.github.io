@@ -61,6 +61,39 @@ docker container exec -it <container id> /bin/bash
 Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。
 仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull拉取镜像到本地。
 
+## 搭建 Docker 环境
+
+操作系统 CentOS
+
+```
+sudo yum remove docker \
+                docker-client \
+                docker-client-latest \
+                docker-common \
+                docker-latest \
+                docker-latest-logrotate \
+                docker-logrotate \
+                docker-engine
+```
+
+安装 Docker 的依赖库:
+
+`yum install -y yum-utils device-mapper-persistent-data lvm2`
+
+添加 Docker CE 的软件源信息:
+
+`yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
+
+安装 Docker CE:
+
+`yum makecache fast`
+
+`yum -y install docker-ce`
+
+启动 Docker 服务:
+
+`systemctl start docker`
+
 ## 基于 Nginx 部署 Vue 项目
 
 结构说明：
