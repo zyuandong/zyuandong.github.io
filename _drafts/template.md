@@ -89,7 +89,7 @@ Markdown是一种轻量级的「标记语言」。
 
 插入图片，格式如下：
 
-![md_logo](https://zyuandong.github.io/blog_imgs/template/md_logo.png)
+![md_logo.png](https://i.loli.net/2021/06/02/lOUZhg638nMx5w4.png)
 
 支持 jpg、png、gif、svg 等图片格式，**其中 svg 文件仅可在微信公众平台中使用**。
 
