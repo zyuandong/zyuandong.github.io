@@ -1851,6 +1851,9 @@ blockquote ol {
 #post .post-message a:hover {
   color: var(--brand);
 }
+#post .post-content {
+  word-break: break-word;
+}
 #post .post-content h2,
 #post .post-content h3,
 #post .post-content h4,

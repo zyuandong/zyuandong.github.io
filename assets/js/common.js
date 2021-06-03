@@ -287,4 +287,3 @@ if (document.querySelector('#gitalk-container')) {
 
   gitalk.render('gitalk-container')
 }
-
