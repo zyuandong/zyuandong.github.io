@@ -2088,6 +2088,7 @@ blockquote ol {
   vertical-align: middle;
 }
 #mask-layer .mask-layer-box .mask-layer-img img {
+  max-width: calc(90%);
   background: var(--white);
   padding: 0.1rem;
   border-radius: 0.03rem;
