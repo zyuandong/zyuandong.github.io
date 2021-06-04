@@ -2,9 +2,9 @@
 
 ## TODO
 
-- [ ] [comment]: add comment system
 - [ ] [analyze]: google analytics
 - [ ] [post-menu]: level
+- [x] [comment]: add comment system
 - [x] [posts]: font color / size
 - [x] [image]: image viewer
 - [x] [theme]: light or dark
