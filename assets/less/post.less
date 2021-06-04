@@ -66,6 +66,38 @@
       }
     }
   }
+
+  #gitalk-container {
+    .gt-container {
+
+      .gt-ico.gt-ico-arrdown {
+        .gt-svg {
+          overflow: hidden;
+        }
+        svg {
+          filter: drop-shadow(var(--secondary) 0 0.2rem);
+          transform: translateY(-0.23rem);
+        }
+      }
+
+      textarea,
+      .gt-avatar-github,
+      .gt-header-preview.markdown-body {
+        color: var(--primary);
+        background: var(--bg);
+      }
+    }
+
+    .gt-btn.gt-btn-preview {
+      color: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .gt-btn.gt-btn-login {
+      background: var(--brand);
+      border-color: var(--brand);
+    }
+  }
 }
 
 @import "previous-next-post";

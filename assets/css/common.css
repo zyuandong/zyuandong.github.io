@@ -1886,6 +1886,27 @@ blockquote ol {
 #post .post-content a:hover {
   text-decoration-color: var(--brand);
 }
+#post #gitalk-container .gt-container .gt-ico.gt-ico-arrdown .gt-svg {
+  overflow: hidden;
+}
+#post #gitalk-container .gt-container .gt-ico.gt-ico-arrdown svg {
+  filter: drop-shadow(var(--secondary) 0 0.2rem);
+  transform: translateY(-0.23rem);
+}
+#post #gitalk-container .gt-container textarea,
+#post #gitalk-container .gt-container .gt-avatar-github,
+#post #gitalk-container .gt-container .gt-header-preview.markdown-body {
+  color: var(--primary);
+  background: var(--bg);
+}
+#post #gitalk-container .gt-btn.gt-btn-preview {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+#post #gitalk-container .gt-btn.gt-btn-login {
+  background: var(--brand);
+  border-color: var(--brand);
+}
 #previous-next-post {
   display: flex;
   border-top: 0.03rem solid var(--secondary);
