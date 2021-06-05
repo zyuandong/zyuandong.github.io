@@ -1496,7 +1496,7 @@ blockquote ol {
   text-decoration: none;
 }
 #home .post-content {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   word-break: break-word;
 }
 #home .line {
