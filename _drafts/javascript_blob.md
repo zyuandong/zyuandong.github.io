@@ -17,6 +17,8 @@ a.remove();
 URL.revokeObjectURL(href);
 ```
 
+**手机端浏览器此功能不能正常使用，(iOS 除外)**
+
 ## 参考
 
 - [javascript如何使用Blob对象下载文件](https://www.yisu.com/zixun/152920.html)
