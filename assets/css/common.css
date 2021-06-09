@@ -1886,6 +1886,13 @@ blockquote ol {
 #post .post-content a:hover {
   text-decoration-color: var(--brand);
 }
+#post .post-content .task-list {
+  list-style: none;
+  padding-left: 0.2rem;
+}
+#post .post-content .task-list .task-list-item input[type="checkbox"] {
+  margin-right: 0.08rem;
+}
 #post #gitalk-container .gt-container svg {
   fill: var(--secondary);
 }
