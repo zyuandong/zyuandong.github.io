@@ -5,6 +5,22 @@ category:
 tags:
 ---
 
+=== 20210609 update ===
+
+[程序猿DD gitee](https://gitee.com/didispace)
+
+[程序猿DD Blog](https://blog.didispace.com/)
+
+[Mermaid，就像用 Markdown 码字一样，高效制作简易流图](https://sspai.com/post/63055)
+
+[我是如何在 VS Code 上完成写作的](https://sspai.com/post/66883)
+
+[Markdown 的 100 个骚操作（更新 100 年）](https://sspai.com/post/53903)
+
+[MarkDown 标题自动添加编号](https://www.cnblogs.com/Higurashi-kagome/p/12747857.html)
+
+---
+
 === 20210608 update ===
 
 - [Docker--从入门到实践](https://yeasy.gitbook.io/docker_practice/)
