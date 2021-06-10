@@ -1492,6 +1492,9 @@ blockquote ol {
   position: sticky;
   top: 0.6rem;
 }
+#main .position-sticky.card {
+  display: none;
+}
 #main #pagination a:hover {
   text-decoration: none;
 }
@@ -1988,6 +1991,7 @@ blockquote ol {
   transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
 }
 #post-menu {
+  min-height: 0.24rem;
   font-size: 0.14rem;
   overflow-y: auto;
   z-index: 1;
