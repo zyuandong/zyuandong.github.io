@@ -1675,6 +1675,9 @@ blockquote ol {
   padding: 0.8rem 0 0 0;
   margin: -0.6rem 0 0 0;
 }
+#tags .tag-anchor-point.is-active {
+  color: var(--brand);
+}
 #tags ul:not(.tag-inline-block) {
   line-height: 2;
 }

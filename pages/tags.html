@@ -51,9 +51,12 @@ const setActive = (key) => {
   el.scrollIntoView({
     behavior: 'smooth'
   })
-  // TODO active status
-  // document.getElementsByClassName('tag-anchor-point').style.color = 'black'
-  // el.style.color = 'red';
+
+  // toggle tag active status
+  document.querySelectorAll('.tag-anchor-point').forEach(dom => {
+    dom.classList.remove('is-active')
+  });
+  el.classList.add('is-active')
 }
 
 window.onload = () => {
