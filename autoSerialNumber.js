@@ -9,6 +9,17 @@ const resetIndex = (index) => {
   return Array(index || 1).fill(0)
 }
 
+const setNUmber = (indexList, titleArr, line) => {
+  const number = indexList.join('.')+'.';
+  if (titleArr.length >= 3 && typeof parseInt(titleArr[1]) === 'number') {
+    titleArr.splice(1, 1, number)
+  } else {
+    titleArr.splice(1, 0, number);
+  }
+  line = titleArr.join(' ');
+  return line
+}
+
 const serialNumber = (fileList) => {
   const {outputFile: inputFile, inputFile: outputFile} = fileList
   // 读取行，并编号
@@ -25,20 +36,14 @@ const serialNumber = (fileList) => {
       const level = titleArr[0].length-1;
       if (level > indexList.length) {
         indexList.push(1);
-        const number = indexList.join('.')+'.';
-        titleArr.splice(1, 0, number);
-        line = titleArr.join(' ');
+        line = setNUmber(indexList, titleArr, line);
       } else if (level === indexList.length) {
         indexList[level - 1] += 1;
-        const number = indexList.join('.')+'.';
-        titleArr.splice(1, 0, number);
-        line = titleArr.join(' ');
+        line = setNUmber(indexList, titleArr, line);
       } else {
         indexList.splice(level);
         indexList[level - 1] += 1;
-        const number = indexList.join('.')+'.';
-        titleArr.splice(1, 0, number);
-        line = titleArr.join(' ');
+        line = setNUmber(indexList, titleArr, line);
       }
     }
     if (index === 1) {
