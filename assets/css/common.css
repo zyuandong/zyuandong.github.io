@@ -1907,11 +1907,15 @@ blockquote ol {
   color: var(--primary);
   background: var(--bg);
 }
+#post #gitalk-container .gt-ico .gt-ico-text {
+  color: var(--brand);
+}
 #post #gitalk-container .gt-btn.gt-btn-preview {
   color: var(--brand);
   border-color: var(--brand);
 }
-#post #gitalk-container .gt-btn.gt-btn-login {
+#post #gitalk-container .gt-btn.gt-btn-login,
+#post #gitalk-container .gt-btn.gt-btn-public {
   background: var(--brand);
   border-color: var(--brand);
 }
