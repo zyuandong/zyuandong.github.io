@@ -9,7 +9,6 @@ date: 2019-12-29
 
 类似vue的mvvm框架都是数据与视图双向绑定的，而change事件往往用于视图改变的时候去操作数据，这在mvvm框架里面显得多此一举，框架本身已映射视图的变化到数据上，所以绝大部分的change事件监听都是不必要的，对应vue，可改写为methods方法或者computed计算属性。
 
-
 **表单校验，针对number（integer，float）处理方式不同**
 
 integer:
@@ -21,12 +20,15 @@ rules：{
 		[type: 'integer', min: x, max: xx, ...]
 	}
 }
-
 ```
 
 float:
 
 v-model.number 不允许输入小数点，因此对于需要输入小数的情况，建议使用 pattern
+
+`<keep-alive></keep-alive>`
+
+solt
 
 参考：
 
