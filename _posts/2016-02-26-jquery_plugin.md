@@ -11,9 +11,9 @@ monthLast: true
 
 查看 jQuery 插件，我们经常会看到下面这段熟悉的代码：
 
-```
+```javascript
 (functino($) {
-    // ......
+  // ......
 })(jQuery);
 ```
 
@@ -33,15 +33,15 @@ jQuery 提供了两种扩展方法，`jQuery.extend()` 和 `jQuery.fn.extend()`�
 
 `jQuery.extend()` - 是对 jQuery 这个类的扩展。
 
-比如常用的去掉字符串首尾空格的方法 `trim()`这样，我们可以通过 `$` 直接调用此方法，如 `$.trim("   Hello, World   ")`。
+比如常用的去掉字符串首尾空格的方法 `trim()`这样，我们可以通过 `$` 直接调用此方法，如 `$.trim(" Hello, World ")`。
 
 我们就用这种方式扩展一个简单的方法：
 
-```
+```javascript
 jQuery.extend({
-    say: function() {
-        alert('Hello, World');
-    }
+  say: function () {
+    alert('Hello, World');
+  }
 });
 ```
 
@@ -63,211 +63,226 @@ jQuery.extend({
 
 接着，我们先创建一个“外套”，包裹整个插件：
 
-```
-(function($) {
-
-})(jQuery);
+```javascript
+(function ($) {})(jQuery);
 ```
 
 还记得，我们需要给插件设置默认的配置项吧，默认配置有：
 
-```
-(function($) {
-    var defaults = {
-        width: 500,
-        height: 200,
-        direction: 'left', // 默认的滚动方向
-        imgs: [{
-            src: '', // 图片路径，需要依据自己的情况填写
-            link: '' // 图片的链接地址
-        },{
-            src: '',
-            link: ''
-        }]
-    };
+```javascript
+(function ($) {
+  var defaults = {
+    width: 500,
+    height: 200,
+    direction: 'left', // 默认的滚动方向
+    imgs: [
+      {
+        src: '', // 图片路径，需要依据自己的情况填写
+        link: '' // 图片的链接地址
+      },
+      {
+        src: '',
+        link: ''
+      }
+    ]
+  };
 })(jQuery);
 ```
 
 搭建好框架，设置好默认配置项，接着就需要给插件提供对外引用的接口了：
 
-```
-(function($) {
-    var defaults = {
-        width: 500,
-        height: 200,
-        direction: 'left', // 默认的滚动方向
-        imgs: [{
-            src: '', // 图片路径，需要依据自己的情况填写
-            link: '' // 图片的链接地址
-        },{
-            src: '',
-            link: ''
-        }]
-    };
-    
-    // 扩展调用方法名
-    $.fn.slideImg = function(options){
-        options = $.extend({},defaults,options);
-        return this.each(function(){
-            init($(this),options);
-        })
-    };
+```javascript
+(function ($) {
+  var defaults = {
+    width: 500,
+    height: 200,
+    direction: 'left', // 默认的滚动方向
+    imgs: [
+      {
+        src: '', // 图片路径，需要依据自己的情况填写
+        link: '' // 图片的链接地址
+      },
+      {
+        src: '',
+        link: ''
+      }
+    ]
+  };
+
+  // 扩展调用方法名
+  $.fn.slideImg = function (options) {
+    options = $.extend({}, defaults, options);
+    return this.each(function () {
+      init($(this), options);
+    });
+  };
 })(jQuery);
 ```
 
-新加的几行代码也就是插件对外的接口。 `slideImg` 是调用的方法名；  `options` 是引用插件时传进来的外部参数； `return` 则开放了对外访问的接口，也很好的保持了 jQuery 级联操作的特性；`init()` 方法是插件的初始化，接下来，我们就一步步从初始化方法开始，完善我们的插件。
+新加的几行代码也就是插件对外的接口。 `slideImg` 是调用的方法名； `options` 是引用插件时传进来的外部参数； `return` 则开放了对外访问的接口，也很好的保持了 jQuery 级联操作的特性；`init()` 方法是插件的初始化，接下来，我们就一步步从初始化方法开始，完善我们的插件。
 
 到这一步，插件的基本框架已经完成，剩下的工作主要是对插件核心功能的实现。
 
 初始化方法主要是构建好轮播图的 HTML 框架，代码如下
 
-```
-(function($) {
-    var defaults = {
-       // 为展示方便，示例代码省略
-    };
-    
-    // 扩展调用方法名
-    $.fn.slideImg = function(options){
-        options = $.extend({},defaults,options);
-        return this.each(function(){
-            init($(this),options);
-        })
-    };
-    
-    // 初始化方法
-    function init(obj, options){
-        var imgs = "<div class='imgBox'>", // 展示图片的容器
-        tips = "<div class='tipBox'>", // 展示图片对应标记的容器
-        len = options.imgs.length; // 获取展示图片数目
-        
-        // 创建 HTML 结构
-        for(var i = 0; i < len; i++){
-            if(options.imgs[i].link){
-                imgs += "<a href='"+options.imgs[i].link+"'>";
-                imgs += "<img src='"+options.imgs[i].src+"'/>"; 
-                imgs += "</a>";
-            } else {
-                imgs += "<img src='"+options.imgs[i].src+"'/>"; 
-            }
-            tips += "<a href='javascript:void(0)'></a>"
-        }
-        imgs += "</div>";
-        tips += "</div>";
-        
-        // 将插件的 HMTL 结构插入 jQuery 对象中
-        $(obj).append(imgs).append(tips);
-        $('.tipBox a').eq(0).addClass('current');
-        
-        // 设置插件默认样式
-        $(obj).css({
-            'width':options.width,
-            'height':options.height
-        });
-        
-        $('.imgBox a').css({
-            'width':options.width,
-            'height':options.height
-        });
-        
-        $('.imgBox img').css({
-            'width':options.width,
-            'height':options.height
-        });
-        
-        $('.tipBox').css({
-            'left':(options.width - 11 * len - 10) / 2
-        })
-        
-        // 根据滚动方向，调整图片排列方向
-        if(options.direction == 'top' || options.direction == 'bottom'){
-            $('.imgBox a').css({
-                'display':'block'
-            })
-            $('.imgBox').css({
-                'width':'100%',
-                'height':options.height * len
-            })
-        }else{
-            $('.imgBox').css({
-                'width':options.width * len,
-                'height':'100%'
-            })
-        }
-        
-        // 根据图片的滚动方向调用不同滚动方法
-        var dir = options.direction;
-        switch(dir){
-            case 'top':{
-                setInterval(function(){autoSlideTop(options)},3000);
-                break;
-            }
-            case 'right':{
-                setInterval(function(){autoSlideRight(options)},3000);
-                break;
-            }
-            case 'bottom':{
-                setInterval(function(){autoSlideBottom(options)},3000);
-                break;
-            }
-            case 'left':{
-                setInterval(function(){autoSlideLeft(options)},3000);
-                break;  
-            }
-        }
+```javascript
+(function ($) {
+  var defaults = {
+    // 为展示方便，示例代码省略
+  };
+
+  // 扩展调用方法名
+  $.fn.slideImg = function (options) {
+    options = $.extend({}, defaults, options);
+    return this.each(function () {
+      init($(this), options);
+    });
+  };
+
+  // 初始化方法
+  function init(obj, options) {
+    var imgs = "<div class='imgBox'>", // 展示图片的容器
+      tips = "<div class='tipBox'>", // 展示图片对应标记的容器
+      len = options.imgs.length; // 获取展示图片数目
+
+    // 创建 HTML 结构
+    for (var i = 0; i < len; i++) {
+      if (options.imgs[i].link) {
+        imgs += "<a href='" + options.imgs[i].link + "'>";
+        imgs += "<img src='" + options.imgs[i].src + "'/>";
+        imgs += '</a>';
+      } else {
+        imgs += "<img src='" + options.imgs[i].src + "'/>";
+      }
+      tips += "<a href='javascript:void(0)'></a>";
     }
+    imgs += '</div>';
+    tips += '</div>';
+
+    // 将插件的 HMTL 结构插入 jQuery 对象中
+    $(obj).append(imgs).append(tips);
+    $('.tipBox a').eq(0).addClass('current');
+
+    // 设置插件默认样式
+    $(obj).css({
+      width: options.width,
+      height: options.height
+    });
+
+    $('.imgBox a').css({
+      width: options.width,
+      height: options.height
+    });
+
+    $('.imgBox img').css({
+      width: options.width,
+      height: options.height
+    });
+
+    $('.tipBox').css({
+      left: (options.width - 11 * len - 10) / 2
+    });
+
+    // 根据滚动方向，调整图片排列方向
+    if (options.direction == 'top' || options.direction == 'bottom') {
+      $('.imgBox a').css({
+        display: 'block'
+      });
+      $('.imgBox').css({
+        width: '100%',
+        height: options.height * len
+      });
+    } else {
+      $('.imgBox').css({
+        width: options.width * len,
+        height: '100%'
+      });
+    }
+
+    // 根据图片的滚动方向调用不同滚动方法
+    var dir = options.direction;
+    switch (dir) {
+      case 'top': {
+        setInterval(function () {
+          autoSlideTop(options);
+        }, 3000);
+        break;
+      }
+      case 'right': {
+        setInterval(function () {
+          autoSlideRight(options);
+        }, 3000);
+        break;
+      }
+      case 'bottom': {
+        setInterval(function () {
+          autoSlideBottom(options);
+        }, 3000);
+        break;
+      }
+      case 'left': {
+        setInterval(function () {
+          autoSlideLeft(options);
+        }, 3000);
+        break;
+      }
+    }
+  }
 })(jQuery);
 ```
 
 最后我们还剩下图片不同的滚动方法没有完成，下面给出的示例代码只是向左滚动的代码，举一反三，希望大家能自己实现其他方向的滚动方法。
 
-```
-(function($) {
-    var defaults = {
-       // 为展示方便，示例代码省略
-    };
-    
-    // 扩展调用方法名
-    $.fn.slideImg = function(options){
-        options = $.extend({},defaults,options);
-        return this.each(function(){
-            init($(this),options);
-        })
-    };
-    
-    // 初始化方法
-    function init(obj, options){
-        // 为展示方便，示例代码省略
-    }
-    
-    var index = 0;
-    
-    function autoSlideLeft(options){
-        // 当展示最后一张时，会退回到第一张重新向左滚动
-        if($('.imgBox').position().left == -options.width * (options.imgs.length - 1)){
-            index = 0;
-            $('.imgBox').animate({left: '0'},1000);
-            
-            // 展示的当前图片与标记对应
-            $('.tipBox a').each(function(i){
-                if (index == i) {
-                    $(this).addClass('current');
-                }else{
-                    $(this).removeClass('current');     
-                }
-            })
-        }else{
-            index++;
-            $('.imgBox').animate({left: "-="+options.width,},1000);
-            $('.tipBox a').each(function(i){
-                if (index == i) {
-                    $(this).addClass('current');    
-                }else{
-                    $(this).removeClass('current'); 
-                }
-            })
+```javascript
+(function ($) {
+  var defaults = {
+    // 为展示方便，示例代码省略
+  };
+
+  // 扩展调用方法名
+  $.fn.slideImg = function (options) {
+    options = $.extend({}, defaults, options);
+    return this.each(function () {
+      init($(this), options);
+    });
+  };
+
+  // 初始化方法
+  function init(obj, options) {
+    // 为展示方便，示例代码省略
+  }
+
+  var index = 0;
+
+  function autoSlideLeft(options) {
+    // 当展示最后一张时，会退回到第一张重新向左滚动
+    if (
+      $('.imgBox').position().left ==
+      -options.width * (options.imgs.length - 1)
+    ) {
+      index = 0;
+      $('.imgBox').animate({ left: '0' }, 1000);
+
+      // 展示的当前图片与标记对应
+      $('.tipBox a').each(function (i) {
+        if (index == i) {
+          $(this).addClass('current');
+        } else {
+          $(this).removeClass('current');
         }
+      });
+    } else {
+      index++;
+      $('.imgBox').animate({ left: '-=' + options.width }, 1000);
+      $('.tipBox a').each(function (i) {
+        if (index == i) {
+          $(this).addClass('current');
+        } else {
+          $(this).removeClass('current');
+        }
+      });
     }
+  }
 })(jQuery);
 ```
 
