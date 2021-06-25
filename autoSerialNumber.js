@@ -33,17 +33,19 @@ const serialNumber = (fileList) => {
   objReadLine.on('line', (line) => {
     if (line.indexOf("#") === 0) {
       const titleArr = line.split(' ');
-      const level = titleArr[0].length-1;
-      if (level > indexList.length) {
-        indexList.push(1);
-        line = setNUmber(indexList, titleArr, line);
-      } else if (level === indexList.length) {
-        indexList[level - 1] += 1;
-        line = setNUmber(indexList, titleArr, line);
-      } else {
-        indexList.splice(level);
-        indexList[level - 1] += 1;
-        line = setNUmber(indexList, titleArr, line);
+      const level = titleArr[0].length - 1;
+      if (level > 0) {
+        if (level > indexList.length) {
+          indexList.push(1);
+          line = setNUmber(indexList, titleArr, line);
+        } else if (level === indexList.length) {
+          indexList[level - 1] += 1;
+          line = setNUmber(indexList, titleArr, line);
+        } else {
+          indexList.splice(level);
+          indexList[level - 1] += 1;
+          line = setNUmber(indexList, titleArr, line);
+        }
       }
     }
     if (index === 1) {
