@@ -16,7 +16,7 @@ tags 或者 tag 区别
 
 因此我还是统一定为 tags。
 
-## jekyll-archives
+## 1. jekyll-archives
 
 在考虑如何运用 category 和 tag 来丰富站点交互时，发现一个插件 `jekyll-archives`，此插件可以通过配置，自动识别 post 头信息中的 category/categories、tag/tags 生成对应的静态资源，并可以通过类似 `/categories/:name` 这样的地址访问对应类型下的 posts 资源。
 
@@ -50,7 +50,7 @@ jekyll-archives:
 
 考虑成本以及 jekyll 现有的功能，最终还是决定放弃 jekyll-archives，而是使用 jekyll 现有的能力来实现 post、category、tag 的资源关联交互。
 
-## categories 结构、样式
+## 2. 结构、样式
 
 {% raw %}
 
@@ -140,7 +140,7 @@ jekyll-archives:
 
 {% endraw %}
 
-## 参考
+## 3. 参考
 
 + [GitHub Pages](https://pages.github.com/)
 
