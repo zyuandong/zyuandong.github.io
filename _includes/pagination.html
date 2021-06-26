@@ -109,7 +109,9 @@
 
     <span class="mobile-page-number text-tip only-sm">{{ paginator.page }} / {{ paginator.total_pages }}</span>
 
+    {% unless total_pages == 1 %}
     <a href="{{ site.baseurl }}/home/page{{ total_pages }}" class="number {% unless paginator.next_page %}is-active{% endunless %}">{{ total_pages }}</a>
+    {% endunless %}
 
     {% if paginator.next_page %}
     <a href="{{ site.baseurl }}/home/page{{ paginator.next_page }}" class="next">
