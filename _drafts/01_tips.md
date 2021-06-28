@@ -7,7 +7,15 @@ tags:
 
 === 20210628 update ===
 
+[sg:wx Java反射是什么？看这篇绝对会了！](https://mp.weixin.qq.com/s?src=11&timestamp=1624874374&ver=3158&signature=rFU06obhe0XrHLOMlqmB6eif1w96sogY8kDU9eyjeuwQjDhopeCnN3Ja1fefASNYNrhuiODXv8U2NI7rqJ06pnpFokyYvF70xuE2BcXS6JNWSzBVq2VYLDbNY-OJuUmz&new=1)
+
+[sg:wx 详解Java反射操作](https://mp.weixin.qq.com/s?src=11&timestamp=1624873323&ver=3158&signature=FgnNWGqWjZ6TN40kyZG6mnhx9T5pTBbRKXF9B8yG0QO0c2y5TcS-Tt6jrYS-9MF0tILhGb0P1XUntjF9nZAm0-aHGZPmvlNFfZqJGzq-6ki7p80lfeyZE2X5n06GgEXe&new=1)
+
+泛型 (generics)
+
 [sg:wx Java 泛型详解](https://mp.weixin.qq.com/s?src=11&timestamp=1624862177&ver=3157&signature=bkuUzFbq0myRNGekXiqzPO*zqcCqxfUyBHN6gxc2CVEnjo*3SQIg1hSmZK4TRVdPGKxHiykD5JfXGBZNx4bIVtbBiVdGI3W-LuIAQ4L-qc70dOggQ1ilcZrOCELA1CQg&new=1)
+
+[聊一聊-JAVA 泛型中的通配符 T，E，K，V，？](https://zhuanlan.zhihu.com/p/78786948)
 
 === 20210609 update ===
 
