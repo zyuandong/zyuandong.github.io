@@ -5,6 +5,10 @@ category:
 tags:
 ---
 
+=== 20210628 update ===
+
+[sg:wx Java 泛型详解](https://mp.weixin.qq.com/s?src=11&timestamp=1624862177&ver=3157&signature=bkuUzFbq0myRNGekXiqzPO*zqcCqxfUyBHN6gxc2CVEnjo*3SQIg1hSmZK4TRVdPGKxHiykD5JfXGBZNx4bIVtbBiVdGI3W-LuIAQ4L-qc70dOggQ1ilcZrOCELA1CQg&new=1)
+
 === 20210609 update ===
 
 [程序猿DD gitee](https://gitee.com/didispace)
