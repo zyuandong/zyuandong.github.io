@@ -9,12 +9,16 @@ const resetIndex = (index) => {
   return Array(index || 1).fill(0)
 }
 
+const isNaN = (value) => {
+  return value !== value
+}
+
 const setNUmber = (indexList, titleArr, line) => {
   const number = indexList.join('.')+'.';
-  if (titleArr.length >= 3 && typeof parseInt(titleArr[1]) === 'number') {
-    titleArr.splice(1, 1, number)
+  if (isNaN(parseInt(titleArr[1]))) {
+    titleArr.splice(1, 0, number)
   } else {
-    titleArr.splice(1, 0, number);
+    titleArr.splice(1, 1, number)
   }
   line = titleArr.join(' ');
   return line
@@ -72,7 +76,7 @@ const copy = (inputFile) => {
   return new Promise((resolve, reject) => {
     // 复制文件
     const affix = TEST_MD_URL.substring(TEST_MD_URL.lastIndexOf('.'))
-    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf('.')) + `_no_number${affix}`
+    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf('.')) + `_base${affix}`
 
     // fs.createReadStream(TEST_MD_URL).pipe(fs.createWriteStream(outputFile));
     fs.copyFile(TEST_MD_URL, outputFile, (err) => {
