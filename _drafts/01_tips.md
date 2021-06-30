@@ -5,6 +5,40 @@ category:
 tags:
 ---
 
+=== 20210630 update ===
+
+[sg:wx 【Vue3教程】创建你的第一个Vue 3项目](https://mp.weixin.qq.com/s?src=11&timestamp=1625021997&ver=3161&signature=KplS2k0XX3LYNeCo*loh9ANNY1*imwyCAAHpowU7756NY7bEm*VK4FxvF6GmZj5WxklqoLNaqCm7sqvsoxoSfSQI75CG3L9wTobCPleA1Koop1Lg-VPf5r93BKfIVJ*f&new=1)
+
+[Options API 和 Composition API](https://www.jianshu.com/p/3694a9f033f1)
+
+[了解 Vue 的 Compsition API](https://www.cnblogs.com/fehoney/p/14600036.html)
+
+[sg:wx npm init @vitejs/app 到底干了什么](https://mp.weixin.qq.com/s?src=11&timestamp=1625040084&ver=3161&signature=k4T9HVju2tc-DJZ6FOwDM*hYPQeW-Oj57sWNXnReRQEofAp0vm3Fk-Ta0Qj0dggbs9RzwH23RlIAz7PiJgNl0ntHkYN4qNcwIEbDIPeBoePbdWFC85jAqWeLxf*7aJY3&new=1)
+
+[从npm init vite-app <project-name>学到的知识记录](https://www.cnblogs.com/wuzhiquan/p/14183341.html)
+
+[gitee: sihai / datav-vue](https://gitee.com/Sihai1/datav-vue)
+
+[gitee: 奔跑的面条 / vue-big-screen-plugin](https://gitee.com/MTrun/vue-big-screen-plugin#https://gitee.com/MTrun/vue-big-screen-plugin)
+
+[sg:wx 介绍一下 Vue Conf 21 大会上：尤大提到 script setup 语法！](https://mp.weixin.qq.com/s?src=11&timestamp=1625044672&ver=3162&signature=wCvRCuSz5z5fauDbFHrID8b5DpS13K2s5sRT0jM3MU5ddhMMlY4GLaeyOWhCslMCRqfOGpgUs6zvR01bRhYu8Ga-q2R-pvxrumZKFA2NtyIBP0zNGomvbXHV0C3*21qI&new=1)
+
+[stackabuse](https://stackabuse.com/)
+
+[sg:wx Composition API详解](https://mp.weixin.qq.com/s?src=11&timestamp=1625049699&ver=3162&signature=mQxNp8JyE801ifE*Gx6vqEP8WEJseXrJ-xyyErrcZp0DmUw5ishZw*4Uih63FlefPu7*aJNZIvAffyC0As749ceatq7rlJBmkM-baF8abEH4Dheq3KCxPiOg6GIB3gTp&new=1)
+
+[Vue computed 声明类型采坑之路](https://www.cnblogs.com/Leophen/p/14157055.html) blog
+
+[又是一夜，这篇Composition-API实操还觉得短吗](https://juejin.cn/post/6892017198450081800)
+
+[sg:wx vue3中如何使用echarts](https://mp.weixin.qq.com/s?src=11&timestamp=1625050353&ver=3162&signature=55x7BDDvXrzbdTiw9TERMCisMus6aeS64N0Dk-JvqF6FS3Gyz*aUcMRD5CwWYccPSq1xazMkF3gKFBVL-XBUkmo0AJ0dOYElxaHgoMPYo7vrUGBuVZB9YXEgR0uu1J3G&new=1)
+
+[sg:wx 卷死了！再不学vue3就没有人要你了！速来围观vue3新特性](https://mp.weixin.qq.com/s?src=11&timestamp=1625051247&ver=3162&signature=9HcmSHyBV3NkHLaK7-eD7akYoAUH8tT*V0BY0WH1KL2Dyj3rcxQTGFd2MaB5T*vZ8xWJvcuWEqpiLY9m7cVEgOzjMXPAxG1ZGvcFway2vIJQ-LybeeYdfaVzXHClQDDY&new=1)
+
+[sg:wx Vue.use()的用法](https://mp.weixin.qq.com/s?src=11&timestamp=1625051247&ver=3162&signature=K6YcA-jaCh4aEe7LQpqjiO9VTewL7uMs-17V2oJom5ape*FIjHkOalFGeOK-7qdo*qADcwvbZFSLF1h-XiUZ*LrXg131TZhIESAit4dXGf9ygsQupGhI*J92jpJx2O4y&new=1)
+
+[sg:wx vue3 初始化挂载组件流程](https://mp.weixin.qq.com/s?src=11&timestamp=1625051178&ver=3162&signature=iAAXvDt1JmEOiuTPTUwLE1AeWYmN6dYceFxwxsCZuzeyjTFUu3LJNYlFHmmoUI3l2bb8m2MuX0BTxUWT0HHPklqQID1CMa9uoeTj06CD30kOabZ5mIgdV3BIaIMeF7er&new=1)
+
 === 20210628 update ===
 
 [sg:wx Java反射是什么？看这篇绝对会了！](https://mp.weixin.qq.com/s?src=11&timestamp=1624874374&ver=3158&signature=rFU06obhe0XrHLOMlqmB6eif1w96sogY8kDU9eyjeuwQjDhopeCnN3Ja1fefASNYNrhuiODXv8U2NI7rqJ06pnpFokyYvF70xuE2BcXS6JNWSzBVq2VYLDbNY-OJuUmz&new=1)
