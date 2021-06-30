@@ -5,7 +5,7 @@ tags: [算法, JavaScript]
 last_modified_date: 2021-04-14
 ---
 
-## 实现 Array.indexOf() 方法
+## 1. 实现 Array.indexOf() 方法
 
 一个数组，输入数组元素，可以得到对应下标，若没有检索到字符，则返回-1，即实现 indexOf()方法。
 
@@ -31,13 +31,13 @@ Array.prototype.myindexOf = function (num, start) {
 console.log(arr.myindexOf(434)); // >> 6
 ```
 
-## 实现 String.indexOf() 方法
+## 2. 实现 String.indexOf() 方法
 
 ```JavaScript
 // TODO
 ```
 
-## 字符串解码
+## 3. 字符串解码
 
 字母与数字混排的字符串，如“ad2ff3”，编写算法将两个数字之间的字符串以后一个数字的次数重复排列，若开头没有数字，则将第一个数字前的字符串按该数字重复排列。
 
@@ -77,7 +77,7 @@ function getCode(str) {
 console.log(getCode(str));  // >> faAdBfaAdBffffff
 ```
 
-## 文件名后缀
+## 4. 文件名后缀
 
 设计算法，获取文件名后缀。
 
@@ -108,7 +108,7 @@ console.log(getFileType(str)); // >> .txt
 
 - `substring(start,end)` - 按下标取子字符串`[start,end)`，参数为负数便会转换为 0，若`start > end`则先调换参数位置，若`start = end`，返回“”。
 
-## 解析数据生成 HTML 片段
+## 5. 解析数据生成 HTML 片段
 
 遍历数组数据，并将其包裹上 HTML 标签。
 
@@ -164,7 +164,7 @@ function getJsonHTML(item) {
 console.log(getJsonHTML(item));
 ```
 
-## 数组提重
+## 6. 数组提重
 
 取出 js 数组中重复的元素。
 
@@ -231,7 +231,7 @@ function duplicate(source) {
 console.log(duplicate(a));
 ```
 
-## 字符串提重
+## 7. 字符串提重
 
 给定一个字符串，请写一段代码找出这个字符中首先出现两次的那个字符。
 
@@ -257,7 +257,7 @@ function getKey(str) {
 console.log(getKey(str));  // >> 'y'
 ```
 
-## 数组拼接得最小数
+## 8. 数组拼接得最小数
 
 给定一个整型数组，对这个整数数组排序，使得按序拼接数组各元素得到的值最小。示例：[3,83,8,13,1]，被排序后的数组为[1,13,3,83,8]，依次拼接得到的最小数 1133838
 
@@ -265,7 +265,7 @@ console.log(getKey(str));  // >> 'y'
 // TODO
 ```
 
-## 变量式函数与定义式函数
+## 9. 变量式函数与定义式函数
 
 判断一下代码的输出结果
 
@@ -298,7 +298,7 @@ console.log(x);
 
 第一个为“变量式”函数，第二个函数为“定义式”函数，其实 JavaScript 执行引擎并非一行一行地分析和执行程序，而是一段一段地分析和执行的。而且，在同一段程序的分析执行中，定义式的函数会被提取出来优先执行。函数定义执行完之后，才会按顺序执行其他语句代码。
 
-## 判断 this 指向
+## 10. 判断 this 指向
 
 判断以下代码的输出
 
@@ -324,7 +324,7 @@ say();
 - `name2`
 - `name1`
 
-## 解析 url 参数
+## 11. 解析 url 参数
 
 请写一个函数，功能是将 url 中的参数解析出来。
 
@@ -355,7 +355,7 @@ function getParameter(url) {
 console.log(getParameter(url));
 ```
 
-## 日期格式化
+## 12. 日期格式化
 
 请写一个函数，formatDate(date, format)，date 参数为 Date 对象，format 参数为 yyyy,MM,dd 及-的组合，返回格式化后的字符串，考虑各种情况
 
@@ -363,7 +363,7 @@ console.log(getParameter(url));
 // TODO
 ```
 
-## 数组间隔插入空格
+## 13. 数组间隔插入空格
 
 在一个数组里每隔 5 个元素插入一个空字符串，使其成为一个新的数组。
 
@@ -405,15 +405,15 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 // splice()里 +i 真是精髓
 ```
 
-## 不使用 for 循环打印
+## 14. 不使用 for 循环打印
 
 不使用 for 循环，实现打印 1~100
 
-## 数组整理
+## 15. 数组整理
 
 一个数组为 0、1 混乱交叉排列，共 100 个元素，如何在只遍历一次的情况下，整理数组，使之前面所有的数都为 0，后边所有的数都为 1。
 
-## 数组删除
+## 16. 数组删除
 
 请为 Array 增加一个原型方法：该方法的功能是删除数组中索引为 n 的那一项
 
