@@ -16,7 +16,7 @@ last_modified_date: 2021-04-14
 
 实现：
 
-```JavaScript
+```javascript
 var arr = [12, 43, 5, 67, 323, 224, 434, 434];
 
 Array.prototype.myindexOf = function (num, start) {
@@ -33,7 +33,7 @@ console.log(arr.myindexOf(434)); // >> 6
 
 ## 2. 实现 String.indexOf() 方法
 
-```JavaScript
+```javascript
 // TODO
 ```
 
@@ -48,7 +48,7 @@ console.log(arr.myindexOf(434)); // >> 6
 
 实现：
 
-```JavaScript
+```javascript
 var str = "1faAdB2ff3";
 
 function getCode(str) {
@@ -88,7 +88,7 @@ console.log(getCode(str));  // >> faAdBfaAdBffffff
 
 实现：
 
-```JavaScript
+```javascript
 var str = "test.txt";
 
 function getFileType(str) {
@@ -117,7 +117,7 @@ console.log(getFileType(str)); // >> .txt
 - 输入：`[{'children':[{'name':'xx','age':12},{'child':[{'name':'gg','age':11}]}]}]`
 - 输出：
 
-```HTML
+```html
 <ul>
   <li>name</li>
   <li>age</li>
@@ -134,7 +134,7 @@ console.log(getFileType(str)); // >> .txt
 
 实现：
 
-```JavaScript
+```javascript
 var item = [{'children':[{'name':'xx','age':12},{'child':[{'name':'gg','age':11}]}]}];
 
 function getJsonHTML(item) {
@@ -175,7 +175,7 @@ console.log(getJsonHTML(item));
 
 实现一：
 
-```JavaScript
+```javascript
 var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
 Array.prototype.duplicate=function() {
   var tmp = [];
@@ -189,7 +189,7 @@ console.log(a.duplicate());
 
 实现二：
 
-```JavaScript
+```javascript
 //适用基础数据类型（空间换时间的方案）
 function duplicates(list) {
   var cache = {},
@@ -210,7 +210,7 @@ function duplicates(list) {
 
 实现三：
 
-```JavaScript
+```javascript
 var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
 
 function duplicate(source) {
@@ -242,7 +242,7 @@ console.log(duplicate(a));
 
 实现：
 
-```JavaScript
+```javascript
 var str = "qywyer23tdd";
 
 function getKey(str) {
@@ -261,7 +261,7 @@ console.log(getKey(str));  // >> 'y'
 
 给定一个整型数组，对这个整数数组排序，使得按序拼接数组各元素得到的值最小。示例：[3,83,8,13,1]，被排序后的数组为[1,13,3,83,8]，依次拼接得到的最小数 1133838
 
-```JavaScript
+```javascript
 // TODO
 ```
 
@@ -269,7 +269,7 @@ console.log(getKey(str));  // >> 'y'
 
 判断一下代码的输出结果
 
-```JavaScript
+```javascript
 var x = 0;
 
 var f = function() {
@@ -302,7 +302,7 @@ console.log(x);
 
 判断以下代码的输出
 
-```JavaScript
+```javascript
 function say() {
   console.log(this.name);
 }
@@ -335,7 +335,7 @@ say();
 
 实现：
 
-```JavaScript
+```javascript
 var url = "http://www.xxxx.com/?a=1&b=2&city=%E5%8C%97%E4%BA%AC";
 
 function getParameter(url) {
@@ -359,7 +359,7 @@ console.log(getParameter(url));
 
 请写一个函数，formatDate(date, format)，date 参数为 Date 对象，format 参数为 yyyy,MM,dd 及-的组合，返回格式化后的字符串，考虑各种情况
 
-```JavaScript
+```javascript
 // TODO
 ```
 
@@ -374,7 +374,7 @@ console.log(getParameter(url));
 
 实现一：
 
-```JavaScript
+```javascript
 function myNewArr(arr) {
   var res_arr = [];
   for(var i = 0, len = arr.length; i < len; i++) {
@@ -392,7 +392,7 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 
 实现二：
 
-```JavaScript
+```javascript
 function myNewArr(arr) {
   var count = (arr.length/5) | 0;
   for(var i = 0; i < count; i++) {
@@ -419,7 +419,7 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 
 实现：
 
-```JavaScript
+```javascript
 Array.prototype.delKey = function(n) {
   for(var i = n - 1, len = this.length; i < len; i++) {
     this[i] = this[i+1];
