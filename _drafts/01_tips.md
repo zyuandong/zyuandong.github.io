@@ -5,6 +5,17 @@ category:
 tags:
 ---
 
+=== 20210701 update ===
+
+坑：element-plus icon invalid
+
+[icon invalid](https://github.com/element-plus/element-plus/issues/2342)
+
+- Vue-Router V4.0.10
+- Element-Plus V1.0.2-beta.53
+- Axios V0.21.1
+- Mockjs V1.1.0
+
 === 20210630 update ===
 
 [sg:wx 【Vue3教程】创建你的第一个Vue 3项目](https://mp.weixin.qq.com/s?src=11&timestamp=1625021997&ver=3161&signature=KplS2k0XX3LYNeCo*loh9ANNY1*imwyCAAHpowU7756NY7bEm*VK4FxvF6GmZj5WxklqoLNaqCm7sqvsoxoSfSQI75CG3L9wTobCPleA1Koop1Lg-VPf5r93BKfIVJ*f&new=1)
