@@ -121,8 +121,11 @@ pre {
   padding: 0;
 }
 pre code {
-  border-radius: 5px;
+  border-radius: 0.05rem;
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
+}
+pre code table pre.lineno {
+  min-width: 0.18rem;
 }
 /* code block end */
 /* code inline*/
