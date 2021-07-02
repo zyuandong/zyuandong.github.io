@@ -22,9 +22,8 @@ permalink: /categories
 {% for c in site.categories %}
   {% assign category = c | first %}
   {% assign posts = c | last %}
-  {% assign category_group = "" | split: "" %}
 
-  <ul class="category-group #{{ category| slugify | url_encode }}">
+  <ul class="category-group #{{ category | slugify | url_encode }}">
     {% for p in posts %}
     <li>
       <div class="box">
