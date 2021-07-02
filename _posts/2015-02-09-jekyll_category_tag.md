@@ -9,8 +9,8 @@ tags 或者 tag 区别
 
 {% raw %}
 
-+ 生成 post.json 的 `{{ post.tags }}` 能够识别 tags 和 tag；
-+ 但获取文章 tag 的 `{{ page.tags }}` 只能够识别 tags，同理 `{{ page.tag }}` 只能识别 `tag`，但通过 for-in 遍历依然能够获取信息。
+- 生成 post.json 的 `{{ post.tags }}` 能够识别 tags 和 tag；
+- 但获取文章 tag 的 `{{ page.tags }}` 只能够识别 tags，同理 `{{ page.tag }}` 只能识别 `tag`，但通过 for-in 遍历依然能够获取信息。
 
 {% endraw %}
 
@@ -20,7 +20,7 @@ tags 或者 tag 区别
 
 在考虑如何运用 category 和 tag 来丰富站点交互时，发现一个插件 `jekyll-archives`，此插件可以通过配置，自动识别 post 头信息中的 category/categories、tag/tags 生成对应的静态资源，并可以通过类似 `/categories/:name` 这样的地址访问对应类型下的 posts 资源。
 
-其配置简单 .e.g:
+其配置简单：
 
 ```yaml
 # _config.yml
@@ -54,22 +54,32 @@ jekyll-archives:
 
 {% raw %}
 
+实现一：区分一、二级分类
+
 ```html
-<!-- 1 -->
-{% assign sorted_categories = site.categories %}
+{% assign sorted_categories = site.categories | sort_natural %}
 
 {% for c in sorted_categories %}
+  <!-- 开始遍历所有 category -->
   {% assign category = c | first %}
   {% assign posts = c | last %}
   {% assign category_group = "" | split: "" %}
 
   {% for p in posts %}
+    <!-- 遍历 posts，获取当前 category 对应 post 下的所有 categories -->
     {% if category == p.categories[0] %}
       {% assign category_group = category_group | concat: p.categories %}
     {% endif %}
   {% endfor %}
 
+  <!-- 去重 -->
   {% assign uniqed_category_group = category_group | uniq %}
+
+  <!-- 
+    uniqed_category_group 为一组分类, 
+    [0] 为当前组的一级分类
+    [1, .., length-1] 为二级分类
+  -->
   {% for c2 in uniqed_category_group %}
     {% if forloop.first %}
     <li class="level-1{% if uniqed_category_group.size > 1 %} has-level-2{% endif %}">
@@ -86,43 +96,11 @@ jekyll-archives:
     {% endif %}
   {% endfor %}
 {% endfor %}
+```
 
-<!-- 2 -->
-{% for c in sorted_categories_2 %}
-  {% assign category = c | first %}
-  {% assign posts = c | last %}
-  {% assign level_1_category = "" %}
-  {% assign level_2_category_arr = "" | split: "" %}
+实现二：不区分一、二级分类
 
-  {% for p in posts %}
-    {% if p.categories[0] == category %}
-      {% assign level_1_category = category %}
-      {% for sub_c in p.categories %}
-        {% assign level_2_category_str = level_2_category_arr | join: ',' %}
-        {% if sub_c != level_1_category and level_2_category_str contains sub_c %}
-          {% assign level_2_category_arr = level_2_category_arr | push: sub_c %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-
-  {% if level_1_category != "" %}
-  <li class="level-1">
-    <a href="{{ level_1_category | slugify }}">{{ level_1_category }}</a>
-    <sup>{{ site.categories[level_1_category] | size }}</sup>
-  </li>
-    {% for c in level_2_category_arr %}
-    <ul>
-      <li class="level-2">
-        <a href="{{ c | slugify }}">{{ c }}</a>
-        <sup>{{ site.categories[c] | size }}</sup>
-      </li>
-    </ul>
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-
-<!-- 3 -->
+```html
 {% assign categories = "" | split: "" %}
 {% for c in site.categories %}
   {% assign categories = categories | push: c[0] %}
@@ -142,14 +120,14 @@ jekyll-archives:
 
 ## 3. 参考
 
-+ [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-+ [用jekyll和jQuery实现异步加载文章列表](http://yanping.me/cn/blog/2012/10/10/asynchronous-loading-post-list-with-jekyll-and-jQuery/)
+- [用 jekyll 和 jQuery 实现异步加载文章列表](http://yanping.me/cn/blog/2012/10/10/asynchronous-loading-post-list-with-jekyll-and-jQuery/)
 
-+ [用js在jekyll博客中实现标签云和标签页](http://yanping.me/cn/blog/2013/02/13/generate-tags-with-js-in-jekyll-blog/)
+- [用 js 在 jekyll 博客中实现标签云和标签页](http://yanping.me/cn/blog/2013/02/13/generate-tags-with-js-in-jekyll-blog/)
 
-+ [如何使用Jekyll的Category和Tag](http://www.kthinker.com/post/jekyll-category-and-tag/)
+- [如何使用 Jekyll 的 Category 和 Tag](http://www.kthinker.com/post/jekyll-category-and-tag/)
 
-+ [用jekyll生成json](http://yanping.me/cn/blog/2012/04/19/jekyll-with-json/)
+- [用 jekyll 生成 json](http://yanping.me/cn/blog/2012/04/19/jekyll-with-json/)
 
-+ [用jekyll生成包含json变量的js脚本](http://yanping.me/cn/blog/2012/04/20/jekyll-with-js-and-json/)
+- [用 jekyll 生成包含 json 变量的 js 脚本](http://yanping.me/cn/blog/2012/04/20/jekyll-with-js-and-json/)
