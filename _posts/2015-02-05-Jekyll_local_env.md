@@ -4,17 +4,17 @@ category: 随笔
 tags: [Jekyll]
 ---
 
-## 安装 [Ruby Installer](http://rubyinstaller.org/downloads/)
+## 1. 安装 Ruby Installer
 
-下载最新版 `Ruby Installer`, 我的安装 `Ruby 2.2.2 (x64)`,安装的时候记得勾选添加环境变量。我的安装位置c:\Ruby22-x64
+下载最新版 [Ruby Installer](http://rubyinstaller.org/downloads/)， 我的安装 `Ruby 2.2.2 (x64)`，安装的时候记得勾选添加环境变量。我的安装位置 c:\Ruby22-x64
 
-## RubyGems
+## 2. RubyGems
 
 > RubyGems 是 Ruby 的一个包管理器，提供了分发 Ruby 程序和库的标准格式 "gem" ，旨在方便地管理 gem 安装的工具，以及用于分发 gem 的服务器
 
 安装 `Ruby Installer` 之后，就可以使用 gem 相关指令集。
 
-### gem 常用指令
+### 2.1. gem 常用指令
 
 ```shell
 # 更新 gem
@@ -36,7 +36,7 @@ gem sources -a <源地址>
 gem sources --add <源地址>
 ```
 
-### 替换 gem 为国内源
+### 2.2. 替换 gem 为国内源
 
 1）查看当前 gem 源
 
@@ -57,17 +57,17 @@ gem sources --add <源地址>
 
 Ruby China：`gem sources --add https://gems.ruby-china.com/`
 
-## 通过 gem 安装 jekyll
+## 3. 通过 gem 安装 jekyll
 
 `gem install jekyll`
 
-最后一步，cmd打开命令提示符，cd到项目目录下（有_config.yml文件的目录），输入
+最后一步，cmd 打开命令提示符，cd 到项目目录下（有\_config.yml 文件的目录），输入
 
 `jekyll serve`
 
-启动服务后，访问localhost:4000/项目名称/，即可访问
+启动服务后，访问 localhost:4000/项目名称/，即可访问
 
-## markdown 解析器
+## 4. markdown 解析器
 
 - kramdown
 
@@ -77,11 +77,11 @@ Ruby China：`gem sources --add https://gems.ruby-china.com/`
 
 ```yaml
 markdown: kramdown
-kramdown: 
+kramdown:
   input: GFM
 ```
 
-代码块语法可使用 ``` 替换 ```
+代码块语法可使用 `替换`
 
 - redcarpet
 
@@ -93,13 +93,13 @@ kramdown:
 markdown: redcarpet
 ```
 
-## categories / tags 设计
+## 5. categories / tags 设计
 
 [jekyll-archives](https://jekyll.github.io/jekyll-archives/)
 
 category 或 tag 中带有空格、/ 等特殊符号
 
-## 分页功能
+## 6. 分页功能
 
 [jekyll-paginate](https://github.com/jekyll/jekyll-paginate/)
 
@@ -114,7 +114,7 @@ group :jekyll_plugins do
 end
 ```
 
-## 参考资料
+## 7. 参考
 
 [Windows 上安装 Jekyll](http://blog.csdn.net/kong5090041/article/details/38408211)
 
