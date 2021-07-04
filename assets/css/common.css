@@ -125,7 +125,7 @@ pre code {
   font-family: Consolas, "Microsoft YaHei", KaiTi, "Courier New", monospace;
 }
 pre code table pre.lineno {
-  min-width: 0.18rem;
+  min-width: 0.2rem;
 }
 /* code block end */
 /* code inline*/
