@@ -7,7 +7,16 @@
   var mousePos = [0, 0];
 
   var easingFactor = 5.0;
-  var backgroundColor = '#fff';
+  var backgroundColor = '#000';
+  // backgroundColor = ctx.createLinearGradient(0, 0, window.innerWidth, window.innerHeight);
+  // backgroundColor.addColorStop(0, '#609BED')
+  // backgroundColor.addColorStop(1, '#D52DA0')
+
+  // backgroundColor.addColorStop(0, '#2B1F47');
+  // backgroundColor.addColorStop(0.2, '#692A70');
+  // backgroundColor.addColorStop(0.4, '#BF406C');
+  // backgroundColor.addColorStop(0.6, '#EE8F60');
+  // backgroundColor.addColorStop(1, '#F0E675');
   var nodeColor = '#ddd';
   var edgeColor = '#ddd';
 
