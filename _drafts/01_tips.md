@@ -16,6 +16,10 @@ tags:
 - Axios V0.21.1
 - Mockjs V1.1.0
 
+坑：不在使用 `npm init vite-app <project name>` 方式创建项目，改为 `npm init @vitejs/app <project name> --template vue` (--template vue为选项，指明使用 vue 模板创建)
+
+vue3 中文官网未更新，还使用 vite-app 创建项目
+
 === 20210630 update ===
 
 [sg:wx 【Vue3教程】创建你的第一个Vue 3项目](https://mp.weixin.qq.com/s?src=11&timestamp=1625021997&ver=3161&signature=KplS2k0XX3LYNeCo*loh9ANNY1*imwyCAAHpowU7756NY7bEm*VK4FxvF6GmZj5WxklqoLNaqCm7sqvsoxoSfSQI75CG3L9wTobCPleA1Koop1Lg-VPf5r93BKfIVJ*f&new=1)
