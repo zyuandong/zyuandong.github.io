@@ -3,9 +3,10 @@ title: 01 Tips
 date: 2020-07-30
 category:
 tags:
+last_modified_date: 2021-07-04
 ---
 
-=== 20210701 update ===
+## === 20210701 ===
 
 坑：element-plus icon invalid
 
@@ -16,11 +17,13 @@ tags:
 - Axios V0.21.1
 - Mockjs V1.1.0
 
-坑：不在使用 `npm init vite-app <project name>` 方式创建项目，改为 `npm init @vitejs/app <project name> --template vue` (--template vue为选项，指明使用 vue 模板创建)
+坑：
+
+不再使用 `npm init vite-app <project name>` 方式创建项目，改为 `npm init @vitejs/app <project name> --template vue` (--template vue为选项，指明使用 vue 模板创建)
 
 vue3 中文官网未更新，还使用 vite-app 创建项目
 
-=== 20210630 update ===
+## === 20210630 ===
 
 [sg:wx 【Vue3教程】创建你的第一个Vue 3项目](https://mp.weixin.qq.com/s?src=11&timestamp=1625021997&ver=3161&signature=KplS2k0XX3LYNeCo*loh9ANNY1*imwyCAAHpowU7756NY7bEm*VK4FxvF6GmZj5WxklqoLNaqCm7sqvsoxoSfSQI75CG3L9wTobCPleA1Koop1Lg-VPf5r93BKfIVJ*f&new=1)
 
@@ -42,9 +45,9 @@ vue3 中文官网未更新，还使用 vite-app 创建项目
 
 [sg:wx Composition API详解](https://mp.weixin.qq.com/s?src=11&timestamp=1625049699&ver=3162&signature=mQxNp8JyE801ifE*Gx6vqEP8WEJseXrJ-xyyErrcZp0DmUw5ishZw*4Uih63FlefPu7*aJNZIvAffyC0As749ceatq7rlJBmkM-baF8abEH4Dheq3KCxPiOg6GIB3gTp&new=1)
 
-[Vue computed 声明类型采坑之路](https://www.cnblogs.com/Leophen/p/14157055.html) blog
+blog：[Vue computed 声明类型采坑之路](https://www.cnblogs.com/Leophen/p/14157055.html)
 
-[又是一夜，这篇Composition-API实操还觉得短吗](https://juejin.cn/post/6892017198450081800)
+掘金：[又是一夜，这篇Composition-API实操还觉得短吗](https://juejin.cn/post/6892017198450081800)
 
 [sg:wx vue3中如何使用echarts](https://mp.weixin.qq.com/s?src=11&timestamp=1625050353&ver=3162&signature=55x7BDDvXrzbdTiw9TERMCisMus6aeS64N0Dk-JvqF6FS3Gyz*aUcMRD5CwWYccPSq1xazMkF3gKFBVL-XBUkmo0AJ0dOYElxaHgoMPYo7vrUGBuVZB9YXEgR0uu1J3G&new=1)
 
@@ -54,7 +57,7 @@ vue3 中文官网未更新，还使用 vite-app 创建项目
 
 [sg:wx vue3 初始化挂载组件流程](https://mp.weixin.qq.com/s?src=11&timestamp=1625051178&ver=3162&signature=iAAXvDt1JmEOiuTPTUwLE1AeWYmN6dYceFxwxsCZuzeyjTFUu3LJNYlFHmmoUI3l2bb8m2MuX0BTxUWT0HHPklqQID1CMa9uoeTj06CD30kOabZ5mIgdV3BIaIMeF7er&new=1)
 
-=== 20210628 update ===
+## === 20210628 ===
 
 [sg:wx Java反射是什么？看这篇绝对会了！](https://mp.weixin.qq.com/s?src=11&timestamp=1624874374&ver=3158&signature=rFU06obhe0XrHLOMlqmB6eif1w96sogY8kDU9eyjeuwQjDhopeCnN3Ja1fefASNYNrhuiODXv8U2NI7rqJ06pnpFokyYvF70xuE2BcXS6JNWSzBVq2VYLDbNY-OJuUmz&new=1)
 
@@ -66,7 +69,7 @@ vue3 中文官网未更新，还使用 vite-app 创建项目
 
 [聊一聊-JAVA 泛型中的通配符 T，E，K，V，？](https://zhuanlan.zhihu.com/p/78786948)
 
-=== 20210609 update ===
+## === 20210609 ===
 
 [程序猿DD gitee](https://gitee.com/didispace)
 
@@ -80,9 +83,7 @@ vue3 中文官网未更新，还使用 vite-app 创建项目
 
 [MarkDown 标题自动添加编号](https://www.cnblogs.com/Higurashi-kagome/p/12747857.html)
 
----
-
-=== 20210608 update ===
+## === 20210608 ===
 
 - [Docker--从入门到实践](https://yeasy.gitbook.io/docker_practice/)
 

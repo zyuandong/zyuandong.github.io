@@ -11,12 +11,12 @@ tags: [Todo]
 - [ ] Nodejs
 - [ ] Koa / Express
 - [ ] TypeScript
-- [ ] React 16/17
+- [ ] React 16 / 17 / 18
 - [ ] Vue 3
 - [ ] Webpack
-- [ ] vite
+- [ ] Vite
 - [ ] uni-app
 - [ ] Trao
-- [ ] Qiankun
+- [ ] qiankun
 - [ ] Network (protocol)
 - [ ] 算法
