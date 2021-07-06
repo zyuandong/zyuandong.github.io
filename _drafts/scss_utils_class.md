@@ -65,12 +65,16 @@ $placements: 't', 'r', 'b', 'l';
 
 ## 工具
 
-[Sass/SCSS 2 CSS](https://www.sassmeister.com/)
-[CSS 2 Sass/SCSS](http://css2sass.herokuapp.com/)
+- [Sass/SCSS 2 CSS](https://www.sassmeister.com/)
+
+- [CSS 2 Sass/SCSS](http://css2sass.herokuapp.com/)
 
 ## 参考资料
 
-[Less 中文网](http://lesscss.cn/)
-[Less 英文网](https://lesscss.org/)
-[Sass/SCSS 官网](https://sass-lang.com/)
-[记一次vue+element+echarts项目的优化（如何轻松将项目性能提升70%）](https://juejin.cn/post/6844903607985258510)
+- [Less 中文网](http://lesscss.cn/)
+
+- [Less 英文网](https://lesscss.org/)
+
+- [Sass/SCSS 官网](https://sass-lang.com/)
+
+- [记一次vue+element+echarts项目的优化（如何轻松将项目性能提升70%）](https://juejin.cn/post/6844903607985258510)
