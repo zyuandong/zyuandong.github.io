@@ -8,6 +8,9 @@ last_modified_date: 2021-07-05
 
 ## === 20210706 ===
 
+- 坑：axios-mock-adapter 会拦截所有请求，这样会导致原本想获取真实接口的请求也被拦截
+  解决办法：`const adapter = new MockAdapter(axiosInstance, { onNoMatch: 'passthrough' })`，添加配置 `{ onNoMatch: 'passthrough' }`
+
 在 JavaScript 中，如何判断值是否为 NaN
 
 - `window.isNaN()`
