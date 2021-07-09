@@ -1333,7 +1333,7 @@ blockquote ol {
   justify-content: space-around;
 }
 #header {
-  width: calc(100% - (100%/6));
+  width: calc(84%);
   max-width: 12rem;
   height: 0.5rem;
   line-height: 0.5rem;
