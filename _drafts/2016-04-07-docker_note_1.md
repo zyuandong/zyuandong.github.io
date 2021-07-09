@@ -220,15 +220,25 @@ docker run \
 ## 参考
 
 - [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620971083&ver=3067&signature=RlymF*sP*UEbU*eQRpI3coenrhRYMNOtvm*WBw5Km*uadfWKkDAB9w5Rpo0JqQ5zDMb15z4JUMsHsYHUrb1G0Lk5599S2HYT*5qyYUIHJGUjFqIrEw9uhkbKPtJGOHhh&new=1)
+
 - [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
+
 - [Docker部署nginx并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
 
 - [Docker + Nginx 部署 Vue 项目](https://zhuanlan.zhihu.com/p/345622879)
+
 - [[手把手系列之]Docker 部署 vue 项目](https://mp.weixin.qq.com/s?src=11&timestamp=1620971110&ver=3067&signature=FG1qt3ryyKjwm4extLRMUA76XAQ4wQyPPh0WqA7H8lCqgEReI8hm9qSgPkk2ys1fnZ93ur41foA*gLWV-YDiBHICfrhfhNIWaJi6UuP4xaGW-kSJ-iVUP7liS03BJSv*&new=1)
+
 - [Dockerfile 详解，看这一篇就够了](https://mp.weixin.qq.com/s?src=11&timestamp=1620971128&ver=3067&signature=1b8aa4iDOAu3FODtaJsKZMWgS-*WX-9nxBGVHFDejNpnM2AclUsqRfNycnqREx5Oe8atM69zCeu8mJDHlmKF9sWECzQk*kJBWx8Qr*n66gQbaTitw455g15DmJMGCHCi&new=1)
 
 - [使用nginx代理vue项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620971153&ver=3067&signature=EB6NnhoulxyTerTQyTfUc52LXsll-DCaggDZpUj4fnFb55TMvzIwBwAzpef6mBYo5HQUIzREnR--qzU4gV*Y69oukaoEWln2ieF6mY694S7QgR74JOH-gZM*2nvWgSaO&new=1)
+
 - [nginx 基本入门(至今为止见过最好的 nginx 入门文章，没有之一。)](https://www.jianshu.com/p/93ac21161ac6)
+
 - [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/Dhjie_king/article/details/113868250)
+
 - [Nginx部署Vue项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620971170&ver=3067&signature=RnSS4MJkb*h*KIigIsNG3Eg8teAfVyPZM2HDjxch1oi6xAQ2Hvj7ETijUVz1PE3yoTcdchZEiHAjy1Qjkxdx29Lb4MOCf4RYUob1NeH7*MmRHUhEK-cRTlKyUWxvYMmr&new=1)
+
 - [最简单的docker教程：在docker里运行nginx服务器](https://zhuanlan.zhihu.com/p/50918703)
+
+- [sg:wx Docker镜像（image）详解](https://mp.weixin.qq.com/s?src=11&timestamp=1625643229&ver=3175&signature=k*EJ6*IcBmAIpR96dutqsZq1NTAO*Efi8e84r7WSwSdIeGpYX7VQHShceQn4KsaVNpVy4iCHvXqeo-fhbO6Pzbrq9FZ-nvFkSySvxN227xGTCKK8iZP8B6WjVCs4ytJ5&new=1)

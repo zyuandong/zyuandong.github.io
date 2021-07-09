@@ -6,6 +6,10 @@ tags:
 last_modified_date: 2021-07-05
 ---
 
+## === 20210709 ===
+
+[sg:wx JavaScript - parseFloat](https://mp.weixin.qq.com/s?src=11&timestamp=1625644576&ver=3175&signature=YH7cr*8irRJRfE4Xnm26OQA8bo3h4je7uH6P466Wfr4q-g-Fv8GIBACAa*jgRtbDZCVoFNnwxO80hi6tKLuIWaZZX8k*7yNZUcMitYqhwcVmbE*2t4DfZX*OSIVpNoMw&new=1)
+
 ## === 20210706 ===
 
 - 坑：axios-mock-adapter 会拦截所有请求，这样会导致原本想获取真实接口的请求也被拦截
