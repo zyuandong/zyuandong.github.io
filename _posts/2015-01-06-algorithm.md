@@ -1,5 +1,5 @@
 ---
-title: 有趣的算法题
+title: 面试题 01
 category: 技术
 tags: [算法, JavaScript]
 last_modified_date: 2021-04-14
