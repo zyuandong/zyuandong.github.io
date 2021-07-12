@@ -176,7 +176,7 @@ export default {
 
 （2）、（3）与（1）相比，错误信息的提示方式有明显区别，与通常的单输入框错误信息展示一致，用户体验上不存在突兀的感觉。
 
-（3）利用了组件自身的校验机制，样式修改比（2）稍简单，且易维护（e.g. 主题功能下可以统一维护）。
+（3）利用了组件自身的校验机制，样式修改比（2）稍简单，且易维护（e.g. 主题功能下样式的统一维护）。
 
 以下为（3）的简单实现：
 
@@ -227,7 +227,8 @@ export default {
       },
       rules: {
         qzTotal: [
-          // numberRange：
+          // numberRange：用于校验计算值是否在正确范围内，示例中省去具体实现
+          // start、end：结果范围值，在 numberRange(rules, value, callback) 方法中可以通过参数 rules 获取
           { validator: numberRange, start: 0, end: 1, trigger: 'change' }
         ]
       }
