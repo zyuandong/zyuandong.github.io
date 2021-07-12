@@ -49,22 +49,22 @@ console.log(arr.myindexOf(434)); // >> 6
 实现：
 
 ```javascript
-var str = "1faAdB2ff3";
+var str = '1faAdB2ff3';
 
 function getCode(str) {
   var num_arr = str.match(/\d+/g);
   var str_arr = str.match(/[A-z]+/g);
-  var str_res = "";
-  if(str.indexOf(num_arr[0]) === 0) {
+  var str_res = '';
+  if (str.indexOf(num_arr[0]) === 0) {
     //按题意是否需要删除以数字开头的部分
-    for(var i = 0,len = num_arr.length; i < len-1; i++) {
-      num_arr[i] = num_arr[i+1];
+    for (var i = 0, len = num_arr.length; i < len - 1; i++) {
+      num_arr[i] = num_arr[i + 1];
     }
     num_arr.pop();
   }
-  for(var j = 0, str_len = str_arr.length; j < str_len; j++) {
-    if(num_arr[j]) {
-      for(var n = 1; n <= num_arr[j]; n++) {
+  for (var j = 0, str_len = str_arr.length; j < str_len; j++) {
+    if (num_arr[j]) {
+      for (var n = 1; n <= num_arr[j]; n++) {
         str_res += str_arr[j];
       }
     } else {
@@ -74,7 +74,7 @@ function getCode(str) {
   return str_res;
 }
 
-console.log(getCode(str));  // >> faAdBfaAdBffffff
+console.log(getCode(str)); // >> faAdBfaAdBffffff
 ```
 
 ## 4. 文件名后缀
@@ -89,10 +89,10 @@ console.log(getCode(str));  // >> faAdBfaAdBffffff
 实现：
 
 ```javascript
-var str = "test.txt";
+var str = 'test.txt';
 
 function getFileType(str) {
-  var index = str.lastIndexOf(".");
+  var index = str.lastIndexOf('.');
   var str_res = str.substr(index);
   return str_res;
 }
@@ -135,24 +135,40 @@ console.log(getFileType(str)); // >> .txt
 实现：
 
 ```javascript
-var item = [{'children':[{'name':'xx','age':12},{'child':[{'name':'gg','age':11}]}]}];
+var item = [
+  { children: [{ name: 'xx', age: 12 }, { child: [{ name: 'gg', age: 11 }] }] }
+];
 
 function getJsonHTML(item) {
-  var str = "";
-  for(var i = 0,len1 = item.length; i < len1; i ++) {
-    if(item[i].children) {
-      for(var j = 0,len2 = item[i].children.length; j < len2; j++) {
+  var str = '';
+  for (var i = 0, len1 = item.length; i < len1; i++) {
+    if (item[i].children) {
+      for (var j = 0, len2 = item[i].children.length; j < len2; j++) {
         str += '<ul>';
-        if(item[i].children[j].child) {
+        if (item[i].children[j].child) {
           str += '<li><ul>';
-          for(var k = 0,len3 = item[i].children[j].child.length; k < len3; k++) {
-            str += '<li>' + item[i].children[j].child[k].name + '</li>'+
-              '<li>' + item[i].children[j].child[k].age + '</li>';
+          for (
+            var k = 0, len3 = item[i].children[j].child.length;
+            k < len3;
+            k++
+          ) {
+            str +=
+              '<li>' +
+              item[i].children[j].child[k].name +
+              '</li>' +
+              '<li>' +
+              item[i].children[j].child[k].age +
+              '</li>';
           }
           str += '</ul></li>';
-        }else{
-          str += '<li>' + item[i].children[j].name + '</li>'+
-            '<li>' + item[i].children[j].age + '</li>';
+        } else {
+          str +=
+            '<li>' +
+            item[i].children[j].name +
+            '</li>' +
+            '<li>' +
+            item[i].children[j].age +
+            '</li>';
         }
         str += '</ul>';
       }
@@ -177,13 +193,15 @@ console.log(getJsonHTML(item));
 
 ```javascript
 var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
-Array.prototype.duplicate=function() {
+Array.prototype.duplicate = function () {
   var tmp = [];
-  this.concat().sort().sort(function(a,b) {
-    if(a==b && tmp.indexOf(a) === -1) tmp.push(a);
-  });
+  this.concat()
+    .sort()
+    .sort(function (a, b) {
+      if (a == b && tmp.indexOf(a) === -1) tmp.push(a);
+    });
   return tmp;
-}
+};
 console.log(a.duplicate());
 ```
 
@@ -195,9 +213,9 @@ function duplicates(list) {
   var cache = {},
     own = Object.prototype.hasOwnProperty,
     r = [];
-  for (var i = list.length; --i>=0; ) {
+  for (var i = list.length; --i >= 0; ) {
     var item = list[i],
-      key  = item.toString();
+      key = item.toString();
     if (!own.call(cache, key)) {
       cache[key] = 1;
     } else {
@@ -214,16 +232,20 @@ function duplicates(list) {
 var a = [3, 'hello', 5, 6, 4, 3, 'hello'];
 
 function duplicate(source) {
-  var ret = [], cache = [];
-  source.concat().sort().sort(function (a, b) {
-    if (a == b) {
-      var key = typeof(a) + ":" + a;
-      if (!cache[key]) {
-        cache[key] = true;
-        ret.push(a);
+  var ret = [],
+    cache = [];
+  source
+    .concat()
+    .sort()
+    .sort(function (a, b) {
+      if (a == b) {
+        var key = typeof a + ':' + a;
+        if (!cache[key]) {
+          cache[key] = true;
+          ret.push(a);
+        }
       }
-    }
-  });
+    });
   return ret;
 }
 
@@ -243,18 +265,18 @@ console.log(duplicate(a));
 实现：
 
 ```javascript
-var str = "qywyer23tdd";
+var str = 'qywyer23tdd';
 
 function getKey(str) {
-  var str_arr = str.split("");
-  for(var i = 0,len = str_arr.length; i < len; i++) {
-    if(str.indexOf(str_arr[i],i+1) !== -1) {
+  var str_arr = str.split('');
+  for (var i = 0, len = str_arr.length; i < len; i++) {
+    if (str.indexOf(str_arr[i], i + 1) !== -1) {
       return str_arr[i];
     }
   }
 }
 
-console.log(getKey(str));  // >> 'y'
+console.log(getKey(str)); // >> 'y'
 ```
 
 ## 8. 数组拼接得最小数
@@ -272,7 +294,7 @@ console.log(getKey(str));  // >> 'y'
 ```javascript
 var x = 0;
 
-var f = function() {
+var f = function () {
   x = 1;
 };
 
@@ -307,10 +329,10 @@ function say() {
   console.log(this.name);
 }
 
-var name = "name1";
+var name = 'name1';
 
 var person = {
-  name: "name2",
+  name: 'name2',
   say: say
 };
 

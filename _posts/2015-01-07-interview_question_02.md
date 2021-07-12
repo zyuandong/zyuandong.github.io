@@ -17,16 +17,15 @@ last_modified_date: 2021-04-14
 实现：
 
 ```javascript
-var url = "http://www.xxxx.com/?a=1&b=2&city=%E5%8C%97%E4%BA%AC";
+var url = 'http://www.xxxx.com/?a=1&b=2&city=%E5%8C%97%E4%BA%AC';
 
 function getParameter(url) {
-  var url_arr = [],
-      res = {};
-  url = url.substr(url.indexOf("?")+1).replace(/&/g,"=");
-  url_arr = url.split("=");
-  for(var i = 0,len = url_arr.length; i < len; i++) {
-    if(i%2 === 0) {
-      res[url_arr[i]]=url_arr[i+1];
+  var url_arr = [], res = {};
+  url = url.substr(url.indexOf('?') + 1).replace(/&/g, '=');
+  url_arr = url.split('=');
+  for (var i = 0, len = url_arr.length; i < len; i++) {
+    if (i % 2 === 0) {
+      res[url_arr[i]] = url_arr[i + 1];
     }
   }
   res.city = decodeURI(res.city);
@@ -58,16 +57,18 @@ console.log(getParameter(url));
 ```javascript
 function myNewArr(arr) {
   var res_arr = [];
-  for(var i = 0, len = arr.length; i < len; i++) {
+  for (var i = 0, len = arr.length; i < len; i++) {
     res_arr.push(arr[i]);
-    if((i + 1) % 5 === 0) {
-      res_arr.push("");
+    if ((i + 1) % 5 === 0) {
+      res_arr.push('');
     }
   }
   return res_arr;
 }
 
-console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
+console.log(
+  myNewArr([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
+);
 // >> [1, 2, 3, 4, 5, " ", 6, 7, 8, 9, 10, " ", 11, 12, 13, 14, 15, " ", 16, 17]
 ```
 
@@ -75,14 +76,16 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 
 ```javascript
 function myNewArr(arr) {
-  var count = (arr.length/5) | 0;
-  for(var i = 0; i < count; i++) {
-    arr.splice((i+1)*5+i,0,"");
+  var count = (arr.length / 5) | 0;
+  for (var i = 0; i < count; i++) {
+    arr.splice((i + 1) * 5 + i, 0, '');
   }
   return arr;
 }
 
-console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
+console.log(
+  myNewArr([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
+);
 // splice()里 +i 真是精髓
 ```
 
@@ -101,9 +104,9 @@ console.log(myNewArr([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]));
 实现：
 
 ```javascript
-Array.prototype.delKey = function(n) {
-  for(var i = n - 1, len = this.length; i < len; i++) {
-    this[i] = this[i+1];
+Array.prototype.delKey = function (n) {
+  for (var i = n - 1, len = this.length; i < len; i++) {
+    this[i] = this[i + 1];
   }
   this.pop();
   var res = this;
