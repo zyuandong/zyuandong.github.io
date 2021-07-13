@@ -6,6 +6,20 @@ tags:
 last_modified_date: 2021-07-05
 ---
 
+## === 20210713 ===
+
+[sg:wx 总结一下，Vue3 与 Vue2 的Props、全局组件的异同点！](https://mp.weixin.qq.com/s?src=11&timestamp=1626168242&ver=3188&signature=301mQAhB6SHmwp2-T0kU-PAYsz5lckQe3SJSuLRnCVU48ZdwA*B6AGpiZyx90oHDDZrBaTbOCPgtvF6sZi-LXT4JXGZfTdhL2gAXpDs3utk54n*imqoge44qL37wViRF&new=1)
+
+[vue3+typescript+element-plus表单验证(非获取实例)](https://www.cnblogs.com/delgoh/p/14276576.html)
+
+[vue3封装表单组件,不能触发element-plus的form/form-item的验证事件，解决办法](https://blog.csdn.net/u011401390/article/details/116298509)
+
+[重学vue之vue3中compositionAPI](https://blog.csdn.net/qq_45549336/article/details/111034107)
+
+[antd vue表单验证_使用Vue Composition API写出清晰、可扩展的表单](https://blog.csdn.net/weixin_30025473/article/details/112175144)
+
+[Vue3.0系列之表单验证](https://blog.csdn.net/muou_hang/article/details/106147026)
+
 ## === 20210709 ===
 
 [sg:wx JavaScript - parseFloat](https://mp.weixin.qq.com/s?src=11&timestamp=1625644576&ver=3175&signature=YH7cr*8irRJRfE4Xnm26OQA8bo3h4je7uH6P466Wfr4q-g-Fv8GIBACAa*jgRtbDZCVoFNnwxO80hi6tKLuIWaZZX8k*7yNZUcMitYqhwcVmbE*2t4DfZX*OSIVpNoMw&new=1)
