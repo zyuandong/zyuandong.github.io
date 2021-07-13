@@ -1504,6 +1504,13 @@ blockquote ol {
 #main #pagination a:hover {
   text-decoration: none;
 }
+#main #page-404 a {
+  text-decoration: underline var(--border);
+  text-underline-offset: 0.03rem;
+}
+#main #page-404 a:hover {
+  text-decoration-color: var(--brand);
+}
 #home .post-content {
   color: var(--text-secondary);
   word-break: break-word;

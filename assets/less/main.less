@@ -51,6 +51,17 @@
       text-decoration: none;
     }
   }
+
+  #page-404 {
+    a {
+      text-decoration: underline var(--border);
+      text-underline-offset: 0.03rem;
+
+      &:hover {
+        text-decoration-color: var(--brand);
+      }
+    }
+  }
 }
 
 @import "home";
