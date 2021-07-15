@@ -6,6 +6,28 @@ tags:
 last_modified_date: 2021-07-05
 ---
 
+## === 20210715 ===
+
+坑：Vue3.x 子组件使用 reactive() 接收 props 时，字段应相同，e.g.
+
+```javascript
+export default {
+  props: {
+    data: Object
+  },
+  setup(props) {
+    const state = reactive({
+      data: props.data, // ok
+      dataObj: props.data // 有异常
+    })
+  }
+}
+```
+
+当父组件更新 data 对象中的一个字段时，子组件中的 data，dataObj 均能正常更新
+
+当父组件更新整个 data 对象时，子组件中只有 data 能够正常响应更新；dataObj 还是原来的值
+
 ## === 20210714 ===
 
 [sg:wx vue组件之间的传值](https://mp.weixin.qq.com/s?src=11&timestamp=1626312303&ver=3191&signature=Zn6JjM5VfHvI3kUriEXn3bv*EvRGA*cdZlmS61utbfSRnrWI*Vs4QaKf0uVeg6RaJeolEsGEMtZecs8zNBZJqWqSBoFLqYZj4sUM5ydhAVHDybLgvJlJXN6NGJJogOrF&new=1)
