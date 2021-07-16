@@ -6,6 +6,22 @@ tags:
 last_modified_date: 2021-07-05
 ---
 
+## === 20210716 ===
+
+FormData 对象、上传文件
+
+[FormData 对象的使用](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+
+[FormData API](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData)
+
+[关于前端上传文件全面基础扫盲贴(三) ----- FormData](https://segmentfault.com/a/1190000019945843)
+
+[前端用FormData实现文件上传以及图片回显](https://www.jianshu.com/p/05dbd59895b6)
+
+[elementUI实现自定义上传文件并携带参数](https://www.jianshu.com/p/09ea2762eaae)
+
+[如何使用Swagger上传文件](https://www.jb51.net/article/140105.htm)
+
 ## === 20210715 ===
 
 坑：Vue3.x 子组件使用 reactive() 接收 props 时，字段应相同，e.g.
@@ -24,9 +40,11 @@ export default {
 }
 ```
 
-当父组件更新 data 对象中的一个字段时，子组件中的 data，dataObj 均能正常更新
+~~当父组件更新 data 对象中的一个字段时，子组件中的 data，dataObj 均能正常更新~~
 
-当父组件更新整个 data 对象时，子组件中只有 data 能够正常响应更新；dataObj 还是原来的值
+~~当父组件更新整个 data 对象时，子组件中只有 data 能够正常响应更新；dataObj 还是原来的值~~
+
+props 值就是 Proxy 对象，template 模板中可以直接访问，不需要 setup() return
 
 ## === 20210714 ===
 
