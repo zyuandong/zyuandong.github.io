@@ -46,6 +46,29 @@ export default {
 
 props 值就是 Proxy 对象，template 模板中可以直接访问，不需要 setup() return
 
+### Vue3.x watch props
+
+```javascript
+<template>
+  <div>{{ data }}</div>
+</template>
+
+export default {
+  props: {
+    data: Object
+  },
+  setup(props) {
+    watch(() => props.data, (val, oldVal) => {
+      console.log(val, oldVal);
+    });
+
+    return {
+      // ...
+    }
+  }
+}
+```
+
 ## === 20210714 ===
 
 [sg:wx vue组件之间的传值](https://mp.weixin.qq.com/s?src=11&timestamp=1626312303&ver=3191&signature=Zn6JjM5VfHvI3kUriEXn3bv*EvRGA*cdZlmS61utbfSRnrWI*Vs4QaKf0uVeg6RaJeolEsGEMtZecs8zNBZJqWqSBoFLqYZj4sUM5ydhAVHDybLgvJlJXN6NGJJogOrF&new=1)
