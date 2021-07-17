@@ -55,7 +55,7 @@ body {
   font-size: 0.16rem;
   line-height: 1.75;
   font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  background-image: var(--body-bg);
+  background: var(--body-bg);
 }
 /* a tag */
 a {
