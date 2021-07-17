@@ -8,7 +8,7 @@ title: Home
   {% for post in paginator.posts %}
   <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
   <div class="post-content">
-    {{ post.content | strip_html | truncate: 200 }}
+    {{ post.content | strip_html | truncate: 150 }}
   </div>
   <div class="post-message text-tip p-t-16">
     <span class="date" title="{{ post.date | date: '%Y-%m-%d' }}">
