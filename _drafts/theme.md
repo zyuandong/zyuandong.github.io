@@ -69,6 +69,8 @@ html[data-theme="light"] {
 
 css 变量 var();
 
+var() + Less
+
 ```css
 :root {
   --bg: @bg;
@@ -76,6 +78,31 @@ css 变量 var();
 :root[data-theme="dark"] {
   --bg: @bg;
 }
+```
+
+var() + scss
+
+```scss
+$primary: #ccc;
+
+:root {
+  --primary: #{$primary};
+}
+```
+
+或者
+
+```scss
+$dark: (
+  primary: #ccc,
+);
+
+:root {
+  @each $name, $value in $dark {
+    --#{$name}: #{$value};
+  }
+}
+
 ```
 
 // TODO 路由方式控制页面跳转
