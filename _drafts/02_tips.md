@@ -6,6 +6,16 @@ tags:
 last_modified_date: 2021-07-05
 ---
 
+## == 20210720 ===
+
+[sg:wx CSS3实战小技巧--使用CSS变量实现波浪动画](https://mp.weixin.qq.com/s?src=11&timestamp=1626675301&ver=3199&signature=Ajwvf8aIXarpHbOK-Fm0-4KepbxvVTezoaxiGmyNZ9id8KwChJz5InsZn0Xule2*NdxuD7tK7b-b9WPM6fAya39Kusb7yMFasAyfx89loWxP8Vd1QDgQ6f6YZOCOfRYI&new=1)
+
+[vue elementui实现主题色皮肤切换](https://www.jianshu.com/p/199f450e1001)
+
+[vite 下一代前端开发与构建工具(一)](https://juejin.cn/post/6983587446541778957)
+
+[详解利用css3的var()实现运行时改变scss的变量值](https://www.jb51.net/css/765884.html)
+
 ## === 20210716 ===
 
 FormData 对象、上传文件
