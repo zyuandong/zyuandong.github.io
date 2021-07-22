@@ -31,19 +31,19 @@ tags: [macOS, iTerm2]
 
 Mac 默认的终端工具可以通过快捷键 `⌥ + ←` 、 `⌥ + →` 将光标移动至上一个、下一个单词，但在 iTerm2 中只能移动一个字符的位置，效率很低。
 
-但是只需要重新映射之后，便可以在 iTerm2 中使用这两个快捷键，操作如下：
+最后只需要重新设置映射，便可以在 iTerm2 中使用这两个快捷键，操作如下：
 
 - 打开 iTerm2 的快捷键设置：Profiles -> Open Profiles -> Edit Profiles -> Keys
 
-![macos_tools-preferences.png](https://i.loli.net/2021/06/03/oXauYd1iAqDKSwx.png)
+![iTerm2 配置界面](https://i.loli.net/2021/06/03/oXauYd1iAqDKSwx.png)
 
 - 找到 `⌥ + ←`，双击进入设置，Action 选择 “Send Escape Sequence”，然后输入 “b” 即可。
 
-![macos_tools-option_b.png](https://i.loli.net/2021/06/03/aB3PYXEUgAtOemc.png)
+![设置 ⌥ + ← 映射](https://i.loli.net/2021/06/03/aB3PYXEUgAtOemc.png)
 
 - 下一步，找到 `⌥ + →`，执行同样的操作，最后输入 “f” 即可。
 
-![macos_tools-option_f.png](https://i.loli.net/2021/06/03/UJ3bQFNHga6wmkA.png)
+![设置 ⌥ + → 映射](https://i.loli.net/2021/06/03/UJ3bQFNHga6wmkA.png)
 
 ## 启用原生的 NTFS 读写
 
