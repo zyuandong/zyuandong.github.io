@@ -1515,6 +1515,12 @@ blockquote ol {
   color: var(--text-secondary);
   word-break: break-word;
 }
+#home .post-message a {
+  color: var(--disabled);
+}
+#home .post-message a:hover {
+  color: var(--brand);
+}
 #home .line {
   height: 1px;
   background: var(--divider);

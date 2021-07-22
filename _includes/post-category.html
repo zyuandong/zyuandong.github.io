@@ -1,7 +1,13 @@
-{% if page.category and page.categories %}
+{% if post.categories %}
+  {% assign categories = post.categories %}
+{% elsif page.categories %}
+  {% assign categories = page.categories %}
+{% endif %}
+
+{% if categories.size > 0 %}
 <span class="category m-r-16">
   <i class="icon-folder-open"></i>
-  {% for c in page.categories %}
+  {% for c in categories %}
   <a href="{{ site.baseurl }}/categories#{{ c | slugify}}" class="title-category">{{ c }}</a>
   {% unless forloop.last %}、{% endunless %}
   {% endfor %}

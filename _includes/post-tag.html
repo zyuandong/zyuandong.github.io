@@ -1,29 +1,18 @@
-{% if page.tags.size > 0 %}
-  {% capture tags_content %}
-    {% if page.tags.size == 1 %}
-      <i class="icon-tag"></i>
-    {% else %}
-      <i class="icon-tags"></i>
-    {% endif %}
-  {% endcapture %}
-  
-  {% for tag in page.tags %}
-    {% capture tags_content_temp %}
-      {{ tags_content_temp }}
-      <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="title-tag">{{ tag }}</a>
-      {% if forloop.last == false %}、{% endif %}
-    {% endcapture %}
-  {% endfor %}
-  
-  {% capture tags_content_total %}
-    {{ tags_content }} {{ tags_content_temp }}
-  {% endcapture %}
-{% else %}
-  {% assign tags_content_total = '' %}
+{% if post.tags %}
+  {% assign tags = post.tags %}
+{% elsif page.tags %}
+  {% assign tags = page.tags %}
 {% endif %}
 
-{% if page.tags %}
-<span class="tags">
-  {{ tags_content_total }}
-</span>
+{% if tags.size > 0 %}
+  {% if tags.size == 1 %}
+  <i class="icon-tag"></i>
+  {% else %}
+  <i class="icon-tags"></i>
+  {% endif %}
+
+  {% for tag in tags %}
+  <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="title-tag">{{ tag }}</a>
+  {% if forloop.last == false %}、{% endif %}
+  {% endfor %}
 {% endif %}

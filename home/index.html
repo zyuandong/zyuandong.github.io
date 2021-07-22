@@ -11,10 +11,9 @@ title: Home
     {{ post.content | strip_html | truncate: 150 }}
   </div>
   <div class="post-message text-tip p-t-16">
-    <span class="date" title="{{ post.date | date: '%Y-%m-%d' }}">
-      <i class="icon-calendar-o"></i>
-      {{ post.date | date: "%b %e, %Y" }}
-    </span>
+    {% include post-date.html %}
+    {% include post-category.html %}
+    {% include post-tag.html %}
   </div>
   <div class="line"></div>
   {% endfor %}

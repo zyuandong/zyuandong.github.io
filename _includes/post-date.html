@@ -1,6 +1,12 @@
-{% if page.date %}
-<span class="date m-r-16" title="{{ page.date | date: '%Y-%m-%d' }}">
+{% if post.date %}
+  {% assign date = post.date %}
+{% elsif page.date %}
+  {% assign date = page.date %}
+{% endif %}
+
+{% if date %}
+<span class="date m-r-16" title="{{ date | date: '%Y-%m-%d' }}">
   <i class="icon-calendar-o"></i>
-  {{ page.date | date: "%b %e, %Y" }}
+  {{ date | date: "%b %e, %Y" }}
 </span>
 {% endif %}
