@@ -1894,7 +1894,7 @@ blockquote ol {
   color: var(--disabled);
   width: auto;
   max-width: 60%;
-  background: var(--white);
+  background: var(--bg);
   cursor: -webkit-zoom-in;
   padding: 0.1rem;
   border-radius: 0.03rem;
@@ -2145,7 +2145,7 @@ blockquote ol {
 }
 #mask-layer .mask-layer-box .mask-layer-img img {
   max-width: calc(90%);
-  background: var(--white);
+  background: var(--bg);
   padding: 0.1rem;
   border-radius: 0.03rem;
 }
