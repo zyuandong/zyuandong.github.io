@@ -42,11 +42,11 @@ Package Control 可以帮助 Sublime Text 更方便的管理插件，通过简�
 
   2. 进入打开的目录的上层目录，然后再进入 `Installed Packages/` 目录
 
-  3. 下载 Package Control.sublime-package 并复制到 `Installed Packages/` 目录
+  3. 下载 [Package Control.sublime-package](https://sublime.wbond.net/Package%20Control.sublime-package) 并复制到 `Installed Packages/` 目录
 
   4. 重启 Sublime Text
 
-  按下组合件 `Ctrl + Shift + p` 即可调出命令面板，也就意味着 Package Control 安装成功了。
+  按下组合键 `Ctrl + Shift + p` 即可调出命令面板，也就意味着 Package Control 安装成功了。
 
 ## 2. 常用插件介绍
 
@@ -56,17 +56,29 @@ Package Control 可以帮助 Sublime Text 更方便的管理插件，通过简�
 
 ### 2.1. Emmet
 
-简单命令快速编写页面代码
+简单命令快速编写页面代码。
+
+在一个空白的 HTML 文件中，输入 `html:5` 之后按 Tab 键，便能生成包含最基础标签的文本代码。
+
+e.g:
+
+![Emmet 示例](https://i.loli.net/2021/07/22/38rhHRxaqQtPXwE.gif)
 
 详情参照：[语法表](http://docs.emmet.io/cheat-sheet/)
 
 ### 2.2. Color Highlighter
 
-背景显示 16 进制颜色
+代码中出现的色值，底色就是此色值对应的颜色，方便开发者直观的了解此段色值代码对应的真正颜色。
+
+此交互真的很赞，让冰冷的代码有了温度的感觉。
+
+![Color Highlighter 效果展示](https://i.loli.net/2021/07/22/5jGLyrMSVlzB72t.png)
 
 ### 2.3. BracketHighlighter
 
-代码匹配，可以匹配括号，引号等符号内的范围
+代码匹配，可以匹配括号，引号等符号，并通过不同颜色区别展示，方便开发者查看代码块范围。
+
+![BracketHighlighter 效果展示](https://i.loli.net/2021/07/22/2a7vLI5inmCGwu9.png)
 
 ### 2.4. DocBlockr
 
@@ -97,13 +109,17 @@ SideBarEnhancements 是一款很实用的右键菜单增强插件在安装该插
 
 ### 3.2. 显示空格或制表符
 
-Preference -> Setting-User 添加 `"draw_white_space": "all",`
+Preference -> Setting-User 添加
+
+```config
+"draw_white_space": "all",
+```
 
 ### 3.3. 缩进以 4 个空格替换 tab
 
 Preference -> Setting-User 添加
 
-```
+```config
 "tab_size": 4,
 "translate_tabs_to_spaces": true,
 ```
