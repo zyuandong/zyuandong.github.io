@@ -8,9 +8,9 @@ title: Markdown Template
 
 建议使用 **Chrome** 浏览器，体验最佳效果。
 
-使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。
+使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn 编辑器能够解决这个问题。
 
-Markdown是一种轻量级的「标记语言」。
+Markdown 是一种轻量级的「标记语言」。
 
 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
 
@@ -20,12 +20,13 @@ Markdown是一种轻量级的「标记语言」。
 - 支持微信公众号、知乎和稀土掘金
 - 点击右上方对应图标，一键复制到各平台
 
-## 2 Markdown语法教程
+## 2 Markdown 语法教程
 
 ### 2.1 标题
 
-不同数量的`#`可以完成不同的标题，如下：
+不同数量的 `#` 可以完成不同的标题，如下：
 
+```md
 # 一级标题
 
 ## 二级标题
@@ -33,18 +34,19 @@ Markdown是一种轻量级的「标记语言」。
 ### 三级标题
 
 ### 2.2 字体
+```
 
-粗体、斜体、粗体和斜体，删除线，需要在文字前后加不同的标记符号。如下：
+粗体、斜体、粗体加斜体，删除线，需要在文字前后加不同的标记符号。如下：
 
-**这个是粗体**
+粗体：**这个是粗体**
 
-*这个是斜体*
+斜体：*这个是斜体*
 
-***这个是粗体加斜体***
+粗体加斜体：***这个是粗体加斜体***
 
-~这里想用删除线~~
+删除线：~~这里想用删除线~~
 
-注：如果想给字体换颜色、字体或者居中显示，需要使用内嵌HTML来实现。
+注：如果想给字体换颜色、字体或者居中显示，需要使用内嵌 HTML 来实现。
 
 ### 2.3 无序列表
 
@@ -81,7 +83,7 @@ Markdown是一种轻量级的「标记语言」。
 
 ### 2.7 链接
 
-微信公众号仅支持公众号文章链接，即域名为`https://mp.weixin.qq.com/`的合法链接。使用方法如下所示：
+微信公众号仅支持公众号文章链接，即域名为 `https://mp.weixin.qq.com/` 的合法链接。使用方法如下所示：
 
 对于该论述，欢迎读者查阅之前发过的文章，[你是《未来世界的幸存者》么？](https://mp.weixin.qq.com/s/s5IhxV2ooX3JN_X416nidA)
 
@@ -95,7 +97,7 @@ Markdown是一种轻量级的「标记语言」。
 
 支持图片**拖拽和截图粘贴**到编辑器中。
 
-注：支持图片 ***拖拽和截图粘贴*** 到编辑器中，仅支持 https 的图片，图片粘贴到微信时会自动上传微信服务器。
+注：支持图片 **_拖拽和截图粘贴_** 到编辑器中，仅支持 https 的图片，图片粘贴到微信时会自动上传微信服务器。
 
 ### 2.9 分割线
 
@@ -107,10 +109,10 @@ Markdown是一种轻量级的「标记语言」。
 
 可以使用冒号来定义表格的对齐方式，如下：
 
-| 姓名   | 年龄 |     工作 |
-| :----- | :--: | -------: |
-| 小可爱 |  18  | 吃可爱多 |
-| 小小勇敢 |  20  | 爬棵勇敢树 |
+| 姓名       | 年龄 |         工作 |
+| :--------- | :--: | -----------: |
+| 小可爱     |  18  |     吃可爱多 |
+| 小小勇敢   |  20  |   爬棵勇敢树 |
 | 小小小机智 |  22  | 看一本机智书 |
 
 ## 3. 特殊语法
@@ -123,12 +125,12 @@ Markdown是一种轻量级的「标记语言」。
 
 ```markdown
 链接：[文字](链接)
-脚注：[文字](脚注解释 "脚注名字")
+脚注：[文字](脚注解释 '脚注名字')
 ```
 
-有人认为在[大前端时代](https://en.wikipedia.org/wiki/Front-end_web_development "Front-end web development")的背景下，移动端开发（Android、IOS）将逐步退出历史舞台。
+有人认为在[大前端时代](https://en.wikipedia.org/wiki/Front-end_web_development 'Front-end web development')的背景下，移动端开发（Android、IOS）将逐步退出历史舞台。
 
-[全栈工程师](是指掌握多种技能，并能利用多种技能独立完成产品的人。 "什么是全栈工程师")在业务开发流程中起到了至关重要的作用。
+[全栈工程师](是指掌握多种技能，并能利用多种技能独立完成产品的人。 '什么是全栈工程师')在业务开发流程中起到了至关重要的作用。
 
 脚注内容请拉到最下面观看。
 
@@ -190,7 +192,7 @@ diff 不能同时和其他语言的高亮同时显示，且需要调整代码主
 - 删除项
 ```
 
-**其他主题不带行号，可自定义是否换行，代码大小与当前编辑器一致**
+注：**其他主题不带行号，可自定义是否换行，代码大小与当前编辑器一致**
 
 ### 3.3 数学公式
 
@@ -281,11 +283,14 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 ## 5 致谢
 
-- 编程如画 [markdown-nice-docs](https://github.com/mdnice/markdown-nice "插件原作者")
-- 歌词经理 [wechat-fromat](https://github.com/lyricat/wechat-format "灵感来源")
-- 颜家大少 [MD2All](http://md.aclickall.com/ "MdA2All")
+- 编程如画 [markdown-nice-docs](https://github.com/mdnice/markdown-nice '插件原作者')
+- 歌词经理 [wechat-fromat](https://github.com/lyricat/wechat-format '灵感来源')
+- 颜家大少 [MD2All](http://md.aclickall.com/ 'MdA2All')
 
 ## 参考
 
 - [Markdown 语法教程](https://markdown.com.cn/)
+
 - [List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+
+- [vscode markdownlint 插件让你的 markdown 更加规范 -- Rules 规则提示信息](https://yijiebuyi.com/blog/79347d0e8c1739bd1f9d9d7c1dcbcccf.html)
