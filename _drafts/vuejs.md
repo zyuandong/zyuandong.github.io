@@ -30,6 +30,42 @@ v-model.number 不允许输入小数点，因此对于需要输入小数的情�
 
 solt
 
+## Style scoped
+
+因为标签中使用了 scoped ，因此 .is-current 之后的样式无法实现，e.g:
+
+```vue
+<style lang="scss" scoped>
+#test {
+  .el-tree {
+    .is-current {
+      color: blue;
+    }
+  }
+}
+</style>
+```
+
+修改为：
+
+```vue
+<style lang="scss" scoped>
+#test {
+  /deep/ .el-tree {
+    .is-current {
+      color: blue;
+    }
+  }
+}
+</style>
+
+// :deep .el-tree {// ...}
+
+// :deep(.el-tree) {// ...}
+```
+
+[vite中引入less，修改组件样式](https://blog.csdn.net/heixiuheixiu666/article/details/114693881)
+
 参考：
 
 [类型为 number 数字验证不通过的BUG](https://github.com/yiminghe/async-validator/issues/21)
