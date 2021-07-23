@@ -82,21 +82,23 @@ e.g:
 
 ### 2.4. DocBlockr
 
-生成注释模板
+自动快捷生成注释模板，在为方法编写注释时及其方便。
+
+![DocBlockr 示例](https://i.loli.net/2021/07/23/8uaqHBJOT1yDSNU.gif)
 
 ### 2.5. Less
 
-Less 语法高亮
+支持 Less 语法高亮的插件，同样 SCSS 也有对应的高亮插件。
 
 ### 2.6. SideBarEnhancements
 
-SideBarEnhancements 是一款很实用的右键菜单增强插件在安装该插件前，在 Sublime Text 左侧 FOLDERS 栏中点击右键只有寥寥几个简单的功能
+SideBarEnhancements 是一款很实用的右键菜单增强插件在安装该插件前，在 Sublime Text 左侧 FOLDERS 栏中点击右键只有寥寥几个简单的功能。
 
-通过 Package Control 安装 SideBarEnhancements 插件后
+通过 Package Control 安装 SideBarEnhancements 插件后，可通过配置丰富右键菜单的功能。
 
-### 2.7. Markdown Preview
+### 2.7. MarkdownPreview
 
-支持 Markdown 语法，直接生成 HTML 进行预览等功能
+支持 Markdown 语法，直接生成 HTML 进行预览等功能。
 
 ## 3. 其他常用配置
 
