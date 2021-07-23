@@ -1,7 +1,7 @@
 ---
-title: 面试题 01
+title: 算法面试题（一）
 category: 技术
-tags: [Algorithm, JavaScript]
+tags: [算法, JavaScript]
 last_modified_date: 2021-04-14
 ---
 
