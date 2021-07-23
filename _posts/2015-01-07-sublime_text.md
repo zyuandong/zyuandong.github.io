@@ -18,39 +18,39 @@ Package Control 可以帮助用户更方便的管理插件，通过简单的操�
 
 下面提供两种安装 Package Control 的方法：
 
-- 控制台命令安装
+### 1.1. 控制台命令安装
 
-  因为 Sublime Text 3 更新了 Python 的函数，API 不同了，所以 3 与 2 的安装命令也有所不同。
+因为 Sublime Text 3 更新了 Python 的函数，API 不同了，所以 3 与 2 的安装命令也有所不同。
 
-  从菜单 `View` > `Show Control` 或者 `Ctrl + ~` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
+从菜单 `View` > `Show Control` 或者 `Ctrl + ~` ，调出控制台，将以下 Python 代码粘贴进去，并回车执行，既可安装完成。
 
-  Sublime Text 3:
+Sublime Text 3:
 
-  ```python
-  import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
-  ```
+```python
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+```
 
-  Sublime Text 2:
+Sublime Text 2:
 
-  ```python
-  import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
-  ```
+```python
+import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
+```
 
-  最后重启 Sublime Text
+最后重启 Sublime Text
 
-- 手动安装
+### 1.2. 手动安装
 
-  可能由于网络等其他原因，无法使用控制台命令安装，那可以通过以下步骤手动安装 Package Control:
+可能由于网络等其他原因，无法使用控制台命令安装，那可以通过以下步骤手动安装 Package Control:
 
-  1. 点击 `Preferences` > `Browse Packages` 菜单
+1. 点击 `Preferences` > `Browse Packages` 菜单
 
-  2. 进入打开的目录的上层目录，然后再进入 `Installed Packages/` 目录
+2. 进入打开的目录的上层目录，然后再进入 `Installed Packages/` 目录
 
-  3. 下载 [Package Control.sublime-package](https://sublime.wbond.net/Package%20Control.sublime-package) 并复制到 `Installed Packages/` 目录
+3. 下载 [Package Control.sublime-package](https://sublime.wbond.net/Package%20Control.sublime-package) 并复制到 `Installed Packages/` 目录
 
-  4. 重启 Sublime Text
+4. 重启 Sublime Text
 
-  按下组合键 `Ctrl + Shift + p` 即可调出命令面板，也就意味着 Package Control 安装成功了。
+按下组合键 `Ctrl + Shift + p` 即可调出命令面板，也就意味着 Package Control 安装成功了。
 
 ## 2. 常用插件介绍
 
