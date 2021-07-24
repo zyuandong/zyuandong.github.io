@@ -44,4 +44,24 @@ tags: [Todo]
   160130 react demo
   160304 requirejs demo
   160406 seajs demo
-  160802 angular demo
+  160802 angular demo ***
+  160921 d3js demo
+
+  180514 learn java
+  181026 servlet demo
+  181113 spring boot demo
+  181203 java web otw
+
+  190215 learn vue
+  190227 learn typescript
+  190309 learn es6
+  190320 learn webpack
+  190408 owner ui
+
+  200102 learn hibernate
+  200103 learn struts2
+  200109 learn spring
+  200119 learn spring mvc
+  200120 learn mybatis
+  200601 wx app
+  200824 kmsp-api
