@@ -20,7 +20,7 @@ Liquid 代码分为三类：Object、Tags、Filters
 
 ## Object
 
-Object 就是在文档需要展示内容的位置，用双花括号 `{{ }}` 包裹对象或变量名。
+Object 就是在文档需要展示内容的位置，用双花括号 {% raw %}`{{ }}`{% endraw %} 包裹对象或变量名。
 
 数据：
 
