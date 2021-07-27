@@ -26,7 +26,8 @@ last_modified_date: 2021-04-14
 var url = 'http://www.xxxx.com/?a=1&b=2&city=%E5%8C%97%E4%BA%AC';
 
 function getParameter(url) {
-  var url_arr = [], res = {};
+  var url_arr = [];
+  var res = {};
   url = url.substr(url.indexOf('?') + 1).replace(/&/g, '=');
   url_arr = url.split('=');
   for (var i = 0, len = url_arr.length; i < len; i++) {
