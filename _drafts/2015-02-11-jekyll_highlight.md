@@ -5,6 +5,32 @@ tags: [Jekyll]
 last_modified_date: 2021-05-25
 ---
 
+## markdown 解析器
+
+- kramdown
+
+[Github-Page 推荐的解析器](https://help.github.com/articles/migrating-your-pages-site-from-maruku/)
+
+修改配置文件为
+
+```yaml
+markdown: kramdown
+kramdown:
+  input: GFM
+```
+
+代码块语法可使用 `替换`
+
+- redcarpet
+
+执行命令 - `gem install redcarpet`
+
+修改配置文件为
+
+```yaml
+markdown: redcarpet
+```
+
 ```yaml
 markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:

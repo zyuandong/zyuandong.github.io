@@ -5,6 +5,21 @@ tags: [Jekyll]
 last_modified_date: 2021-05-25
 ---
 
+## 7. 分页功能
+
+[jekyll-paginate](https://github.com/jekyll/jekyll-paginate/)
+
+```ruby
+# Gemfile
+# source
+source "https://gems.ruby-china.com/"
+
+group :jekyll_plugins do
+  gem "jekyll-archives"
+  gem "jekyll-paginate"
+end
+```
+
 初始方案：
 
 {% raw %}

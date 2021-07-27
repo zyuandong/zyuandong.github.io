@@ -5,6 +5,12 @@ tags: [Jekyll]
 last_modified_date: 2021-05-12
 ---
 
+## 6. categories / tags 设计
+
+[jekyll-archives](https://jekyll.github.io/jekyll-archives/)
+
+category 或 tag 中带有空格、/ 等特殊符号
+
 tags 或者 tag 区别
 
 {% raw %}
