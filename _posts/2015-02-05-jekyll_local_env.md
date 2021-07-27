@@ -61,7 +61,7 @@ Jekyll 环境搭建完成之后，进入到项目目录下（有 _config.yml 文
 
 ### 4.1. 什么是 RubyGems
 
-> RubyGems 是 Ruby 的一个包管理器，提供了分发 Ruby 程序和库的标准格式（gem），使用它可以方便地下载安装Ruby的软件包到用户的系统。
+> RubyGems 是 Ruby 的一个包管理器，提供了分发 Ruby 程序和库的标准格式（gem），使用它可以方便地下载安装 Ruby 的软件包到用户的系统。
 
 刚刚输入的命令 `gem -v`，用来查看 RubyGems 的版本。
 
