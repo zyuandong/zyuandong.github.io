@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Emoji One Color';
+  src: url('../fonts/EmojiOneColor.otf') format('opentype');
+  font-display: swap;
+}

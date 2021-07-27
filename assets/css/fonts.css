@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?80i0pm');
-  src:  url('../fonts/icomoon.eot?80i0pm#iefix') format('embedded-opentype'),
+  src: url('../fonts/icomoon.eot?80i0pm');
+  src: url('../fonts/icomoon.eot?80i0pm#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.ttf?80i0pm') format('truetype'),
     url('../fonts/icomoon.woff?80i0pm') format('woff'),
     url('../fonts/icomoon.svg?80i0pm#icomoon') format('svg');
@@ -10,7 +10,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,62 +27,62 @@
 }
 
 .icon-chevron-left:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-chevron-right:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-chevrons-left:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-chevrons-right:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-moon:before {
-  content: "\e90a";
+  content: '\e90a';
 }
 .icon-search:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-sun:before {
-  content: "\e90b";
+  content: '\e90b';
 }
 .icon-mail-o:before {
-  content: "\f003";
+  content: '\f003';
 }
 .icon-tag:before {
-  content: "\f02b";
+  content: '\f02b';
 }
 .icon-tags:before {
-  content: "\f02c";
+  content: '\f02c';
 }
 .icon-close:before {
-  content: "\f057";
+  content: '\f057';
 }
 .icon-calendar:before {
-  content: "\f073";
+  content: '\f073';
 }
 .icon-folder:before {
-  content: "\f07b";
+  content: '\f07b';
 }
 .icon-folder-open:before {
-  content: "\f07c";
+  content: '\f07c';
 }
 .icon-github:before {
-  content: "\f09b";
+  content: '\f09b';
 }
 .icon-mail:before {
-  content: "\f0e0";
+  content: '\f0e0';
 }
 .icon-github-alt:before {
-  content: "\f113";
+  content: '\f113';
 }
 .icon-calendar-o:before {
-  content: "\f133";
+  content: '\f133';
 }
 .icon-file:before {
-  content: "\f15b";
+  content: '\f15b';
 }
 .icon-codepen:before {
-  content: "\f1cb";
+  content: '\f1cb';
 }
