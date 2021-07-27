@@ -4,6 +4,20 @@ category: 随笔
 tags: [Jekyll, Liquid]
 ---
 
+Liquid 是一门开源的模板语言，何为模板语言呢？
+
+我的理解是：
+
+在 HTML 的基础之上，通过一些逻辑语法、变量等控制页面上动态变化的部分，最终生成符合预期的静态文件。
+
+举个例子：
+
+模板语言就像一台甜品加工机器，每个模板语言写好的文件就像一个模子，数据就是制作甜品的原材料（面粉、调味剂等）；注入不同的“原材料”，再加上特定的“模子”，最终就能得到一个样子不同内容的甜品啦。:blush::copyright:
+
+:fish::two:
+
+Jekyll 默认使用 Liquid 模板语言，支持所有标准的 Liquid 标签和过滤器。Jekyll 甚至增加了几个过滤器和标签，方便使用。
+
 ## 展示原始内容标签 raw
 
 因为当前博客是基于 Liquid 模板语言解析的，因此当示例代码中包含 Liquid 语言时将会被自动解析，这显然不在我们的预期之内。
@@ -32,14 +46,18 @@ tags: [Jekyll, Liquid]
 
 {% endraw %}
 
-## 参考资料
+## 参考
 
 - [Liquid docs](https://shopify.github.io/liquid/)
 
 - [Liquid 中文网](https://liquid.bootcss.com/)
 
+- ...
+
+{% comment %}
+
 - [liquid 用法笔记](http://blog.csdn.net/dont27/article/details/38097581)
 
 - [JavaScript Liquid 模板引擎 Tinyliquid](http://www.oschina.net/p/tinyliquid)
 
-- [liquid-syntax](http://pexcn.me/blog/2014/09/29/liquid-syntax.html)
+{% endcomment %}
