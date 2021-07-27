@@ -1,5 +1,5 @@
 ---
-title: Jekyll 系列：初识模板语言 Liquid
+title: Jekyll 系列（二）：初识模板语言 Liquid
 category: 随笔
 tags: [Jekyll, Liquid]
 ---
@@ -14,7 +14,7 @@ tags: [Jekyll, Liquid]
 
 用法，其他标签用法一样：
 
-使用 {% raw %}`{%  %}`{% endraw %} 包裹 `raw` 为开始标签；使用 {% raw %}`{%  %}`{% endraw %} 包裹 `endraw` 为结束标签。
+使用 {% raw %}`{% %}`{% endraw %} 包裹 `raw` 为开始标签；使用 {% raw %}`{% %}`{% endraw %} 包裹 `endraw` 为结束标签。
 
 ## 注释标签 comment
 
@@ -38,8 +38,8 @@ tags: [Jekyll, Liquid]
 
 - [Liquid 中文网](https://liquid.bootcss.com/)
 
-- [liquid用法笔记](http://blog.csdn.net/dont27/article/details/38097581)
+- [liquid 用法笔记](http://blog.csdn.net/dont27/article/details/38097581)
 
-- [JavaScript Liquid模板引擎 Tinyliquid](http://www.oschina.net/p/tinyliquid)
+- [JavaScript Liquid 模板引擎 Tinyliquid](http://www.oschina.net/p/tinyliquid)
 
 - [liquid-syntax](http://pexcn.me/blog/2014/09/29/liquid-syntax.html)

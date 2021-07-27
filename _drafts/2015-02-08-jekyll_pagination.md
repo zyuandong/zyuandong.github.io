@@ -1,5 +1,5 @@
 ---
-title: Jekyll 系列：Pagination
+title: Jekyll 系列（四）：Pagination
 category: 随笔
 tags: [Jekyll]
 last_modified_date: 2021-05-25
@@ -24,7 +24,7 @@ end
 
 {% raw %}
 
-``` html
+```liquid
 <span class="pagination-box">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}

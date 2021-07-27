@@ -1,5 +1,5 @@
 ---
-title: Jekyll 系列：Category 和 Tag
+title: Jekyll 系列（三）：Category 和 Tag
 category: 随笔
 tags: [Jekyll]
 last_modified_date: 2021-05-12
@@ -62,7 +62,7 @@ jekyll-archives:
 
 实现一：区分一、二级分类
 
-```html
+```liquid
 {% assign sorted_categories = site.categories | sort_natural %}
 
 {% for c in sorted_categories %}
@@ -81,8 +81,8 @@ jekyll-archives:
   <!-- 去重 -->
   {% assign uniqed_category_group = category_group | uniq %}
 
-  <!-- 
-    uniqed_category_group 为一组分类, 
+  <!--
+    uniqed_category_group 为一组分类,
     [0] 为当前组的一级分类
     [1, .., length-1] 为二级分类
   -->
@@ -106,7 +106,7 @@ jekyll-archives:
 
 实现二：不区分一、二级分类
 
-```html
+```liquid
 {% assign categories = "" | split: "" %}
 {% for c in site.categories %}
   {% assign categories = categories | push: c[0] %}

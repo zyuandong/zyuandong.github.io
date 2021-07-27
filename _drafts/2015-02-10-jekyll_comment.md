@@ -1,5 +1,5 @@
 ---
-title: Jekyll 系列：Comment
+title: Jekyll 系列（六）：Comment
 tags: [Jekyll]
 ---
 

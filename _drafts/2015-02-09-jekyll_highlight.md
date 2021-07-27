@@ -1,5 +1,5 @@
 ---
-title: Jekyll 系列：Hightlight
+title: Jekyll 系列（五）：Hightlight
 category: 随笔
 tags: [Jekyll]
 last_modified_date: 2021-05-25
@@ -32,9 +32,9 @@ markdown: redcarpet
 ```
 
 ```yaml
-markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
+markdown: kramdown # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
-  input:         GFM
+  input: GFM
   extensions:
     - autolink
     - footnotes
@@ -46,9 +46,9 @@ kramdown:
 ```
 
 ```yaml
-markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
+markdown: kramdown # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
-  input:         GFM
+  input: GFM
   syntax_highlighter: rouge # coderay
   syntax_highlighter_opts:
     css_class: highlight
@@ -64,20 +64,20 @@ kramdown:
 
 ```yaml
 kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
   coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
+    coderay_wrap: div
+    coderay_line_numbers: inline
     coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
 ```
 
 ```yaml
