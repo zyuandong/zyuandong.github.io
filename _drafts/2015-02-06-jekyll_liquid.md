@@ -287,59 +287,59 @@ capture 开始与结束标记之间的所有字符串赋值给一个新的变量
 
 使用 {% raw %}`{% %}`{% endraw %} 包裹 `raw` 为开始标签；{% raw %}`{% %}`{% endraw %} 包裹 `endraw` 为结束标签。
 
-❗ **注：但经过实际验证 raw 标签不能嵌套，否则会报出语法错误**
+❗**注：但经过实际验证 raw 标签不能嵌套，否则会报出语法错误**
 
 ## 3. Filters
 
-| 过滤器         | 作用 |
-| :------------- | :--- |
-| abs            | test |
-| append         | xx   |
-| at_least       | xx   |
-| at_most        | xx   |
-| capitalize     | xx   |
-| ceil           | xx   |
-| compact        | xx   |
-| concat         | xx   |
-| date           | --   |
-| default        | --   |
-| divided_by     | --   |
-| downcase       | --   |
-| escape         | --   |
-| escape_once    | --   |
-| first          | --   |
-| floor          | --   |
-| join           | --   |
-| last           | --   |
-| lstrip         | --   |
-| map            | --   |
-| minus          | --   |
-| modulo         | --   |
-| newline_to_br  | --   |
-| plus           | --   |
-| prepend        | --   |
-| remove         | --   |
-| remove_first   | --   |
-| replace        | --   |
-| replace_first  | --   |
-| reverse        | --   |
-| round          | --   |
-| rstrip         | --   |
-| size           | --   |
-| slice          | --   |
-| sort           | --   |
-| sort_natural   | --   |
-| split          | --   |
-| strip          | --   |
-| strip_html     | --   |
-| strip_newlines | --   |
-| times          | --   |
-| truncate       | --   |
-| truncatewords  | --   |
-| uniq           | --   |
-| upcase         | --   |
-| url_decode     | --   |
-| url_encode     | --   |
+| 过滤器         | 描述                                       |
+| :------------- | :----------------------------------------- |
+| abs            | 返回一个数字的绝对值                       |
+| append         | 返回两个字符串拼接之后的值                 |
+| at_least       | 将数字限制在最小值                         |
+| at_most        | 将数字限制在最大值                         |
+| capitalize     | 将字符串首字母转为大写                     |
+| ceil           | 将一个浮点数向上取整并返回一个最接近的整数 |
+| compact        | 删除数组中的所有无用值                     |
+| concat         | xx                                         |
+| date           | --                                         |
+| default        | --                                         |
+| divided_by     | --                                         |
+| downcase       | --                                         |
+| escape         | --                                         |
+| escape_once    | --                                         |
+| first          | --                                         |
+| floor          | --                                         |
+| join           | --                                         |
+| last           | --                                         |
+| lstrip         | --                                         |
+| map            | --                                         |
+| minus          | --                                         |
+| modulo         | --                                         |
+| newline_to_br  | --                                         |
+| plus           | --                                         |
+| prepend        | --                                         |
+| remove         | --                                         |
+| remove_first   | --                                         |
+| replace        | --                                         |
+| replace_first  | --                                         |
+| reverse        | --                                         |
+| round          | --                                         |
+| rstrip         | --                                         |
+| size           | --                                         |
+| slice          | --                                         |
+| sort           | --                                         |
+| sort_natural   | --                                         |
+| split          | --                                         |
+| strip          | --                                         |
+| strip_html     | --                                         |
+| strip_newlines | --                                         |
+| times          | --                                         |
+| truncate       | --                                         |
+| truncatewords  | --                                         |
+| uniq           | --                                         |
+| upcase         | --                                         |
+| url_decode     | --                                         |
+| url_encode     | --                                         |
 
 ## 4. Jekyll 增加的标签和过滤器
 
