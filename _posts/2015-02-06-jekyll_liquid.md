@@ -14,7 +14,7 @@ Liquid 是一门开源的模板语言，何为模板语言呢？
 
 模板语言就像一台甜品加工机器，每个模板语言写好的文件就像一个模子，数据就是制作甜品的原材料；注入不同的 “原材料”，再加上特定的 “模子”，最终就能得到一个特定样式、内容不同的 “甜品” 啦。🎂
 
-Jekyll 默认使用 Liquid 模板语言，支持所有标准的 Liquid 标签和过滤器。Jekyll 甚至增加了几个过滤器和标签，方便使用。
+接下来就大致介绍一下 Liquid。
 
 Liquid 代码分为三类：Object、Tags、Filters。
 
@@ -291,61 +291,81 @@ capture 开始与结束标记之间的所有字符串赋值给一个新的变量
 
 ## 3. Filters
 
-| 过滤器         | 描述                                       |
-| :------------- | :----------------------------------------- |
-| abs            | 返回一个数字的绝对值                       |
-| append         | 返回两个字符串拼接之后的值                 |
-| at_least       | 将数字限制在最小值                         |
-| at_most        | 将数字限制在最大值                         |
-| capitalize     | 将字符串首字母转为大写                     |
-| ceil           | 将一个浮点数向上取整并返回一个最接近的整数 |
-| compact        | 删除数组中的所有无用值                     |
-| concat         | xx                                         |
-| date           | --                                         |
-| default        | --                                         |
-| divided_by     | --                                         |
-| downcase       | --                                         |
-| escape         | --                                         |
-| escape_once    | --                                         |
-| first          | --                                         |
-| floor          | --                                         |
-| join           | --                                         |
-| last           | --                                         |
-| lstrip         | --                                         |
-| map            | --                                         |
-| minus          | --                                         |
-| modulo         | --                                         |
-| newline_to_br  | --                                         |
-| plus           | --                                         |
-| prepend        | --                                         |
-| remove         | --                                         |
-| remove_first   | --                                         |
-| replace        | --                                         |
-| replace_first  | --                                         |
-| reverse        | --                                         |
-| round          | --                                         |
-| rstrip         | --                                         |
-| size           | --                                         |
-| slice          | --                                         |
-| sort           | --                                         |
-| sort_natural   | --                                         |
-| split          | --                                         |
-| strip          | --                                         |
-| strip_html     | --                                         |
-| strip_newlines | --                                         |
-| times          | --                                         |
-| truncate       | --                                         |
-| truncatewords  | --                                         |
-| uniq           | --                                         |
-| upcase         | --                                         |
-| url_decode     | --                                         |
-| url_encode     | --                                         |
+| 过滤器         | 描述                                                                                                                                                     |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| abs            | 返回一个数字的绝对值                                                                                                                                     |
+| append         | 返回两个字符串拼接之后的值                                                                                                                               |
+| at_least       | 将数字限制在最小值                                                                                                                                       |
+| at_most        | 将数字限制在最大值                                                                                                                                       |
+| capitalize     | 将字符串首字母转为大写                                                                                                                                   |
+| ceil           | 将一个浮点数向上取整并返回一个最接近的整数                                                                                                               |
+| compact        | 删除数组中的所有空值                                                                                                                                     |
+| concat         | 返回两个数组合并后的值                                                                                                                                   |
+| date           | 将时间戳转换为指定的日期格式                                                                                                                             |
+| default        | 设定默认值                                                                                                                                               |
+| divided_by     | 返回两个数相除后的结果                                                                                                                                   |
+| downcase       | 返回一个字符串，字符串中的所有字符转为小写形式                                                                                                           |
+| escape         | 返回一个由十六进制转义序列替换的字符串（字符的 16 进制格式值,当该值小于等于 0xFF 时,用一个 2 位转移序列: %xx 表示. 大于的话则使用 4 位序列:%uxxxx 表示） |
+| escape_once    | 转义一个字符串并且不修改已经转义过的实体                                                                                                                 |
+| first          | 返回数组的第一项                                                                                                                                         |
+| floor          | 将一个浮点数通过舍弃小数部分得到最近的整数                                                                                                               |
+| join           | 将数组中的各个字符串合并为一个字符串，并将 split 参数作为字符串之间的分隔符                                                                              |
+| last           | 返回数组中的最后一项                                                                                                                                     |
+| lstrip         | 删除字符串左侧的所有空白符（制表符、空格和换行符）                                                                                                       |
+| map            | 从对象中提取指定名称的属性的值，并用这些值构建一个数组                                                                                                   |
+| minus          | 返回两个数相减后的结果                                                                                                                                   |
+| modulo         | 返回除法运算的余数                                                                                                                                       |
+| newline_to_br  | 将所有换行符(\n) 替换为 HTML 的 `<br>` 标签                                                                                                              |
+| plus           | 返回两个数相加后的结果                                                                                                                                   |
+| prepend        | 在一个字符串前面附加另一个字符串                                                                                                                         |
+| remove         | 从一个字符串中删除所有出现的另一个子字符串                                                                                                               |
+| remove_first   | 从一个字符串中仅仅删除第一次出现的另一个子字符串                                                                                                         |
+| replace        | 将参数中给出的第一个参数全部替换为第二个参数                                                                                                             |
+| replace_first  | 将字符串中出现的第一个参数替换为第二个参数                                                                                                               |
+| reverse        | 将数组中的所有项的顺序反转。reverse 不能操作字符串                                                                                                       |
+| round          | 将浮点数舍入到最近的整数，或者，如果传入的参数是一个数值的话，将浮点数舍入到参数指定的小数位                                                             |
+| rstrip         | 将字符串右侧的所有空白字符（制表符 - tab、空格符 - space 和 回车符 - newline）删除                                                                       |
+| size           | 返回字符串中所包含的字符数或者数组中所包含的条目数量                                                                                                     |
+| slice          | 只传入一个参数时将返回此参数作为下标所对应的单个字符。第二个参数是可选的，用于指定返回的子字符串的长度                                                   |
+| sort           | 对数组中的所有进行排序。排序后的数组是按照区分大小写的顺序排列的                                                                                         |
+| sort_natural   | 对数组进行排序，并且大小写无关                                                                                                                           |
+| split          | 根据参数传入的分隔符将字符串分解为数组                                                                                                                   |
+| strip          | 删除字符串左右两侧的所有空白符号（包括制表符、空格、换行符）                                                                                             |
+| strip_html     | 从字符串中删除所有 HTML 标签                                                                                                                             |
+| strip_newlines | 从字符串中删除所有换行字符                                                                                                                               |
+| times          | 返回两个数相乘后的结果                                                                                                                                   |
+| truncate       | 将字符串截短为指定的字符个数。如果指定的字符数量小于字符串的长度，则会在字符串末尾添加一个省略号(…) 并将此省略号计入字符个数中                           |
+| truncatewords  | 将字符串截短为指定的单词个数。如果指定的单词数量小于字符串中包含的单词个数，则会在字符串末尾添加一个省略号(…)                                            |
+| uniq           | 删除数组中的所有冗余项                                                                                                                                   |
+| upcase         | 返回一个字符串，字符串中的所有字符转为大写形式                                                                                                           |
+| url_decode     | 将字符串中被 url_encode 编码的字符进行解码                                                                                                               |
+| url_encode     | 将字符串中非 URL 安全的字符转换为百分号编码                                                                                                              |
 
 ## 4. Jekyll 增加的标签和过滤器
+
+Jekyll 默认使用 Liquid 模板语言，支持所有标准的 Liquid 标签和过滤器。Jekyll 甚至增加了几个过滤器和标签，方便使用。
 
 ### 4.1. Jekyll Tags
 
 #### 4.1.1. highlight
+
+`highlight` - 用于高亮代码块
+
+代码示例：
+
+{% raw %}
+
+```liquid
+{% highlight ruby linenos %}
+def foo
+puts 'foo'
+end
+{% endhighlight %}
+```
+
+{% endraw %}
+
+效果：
 
 {% highlight ruby linenos %}
 def foo
@@ -355,21 +375,49 @@ end
 
 #### 4.1.2. link
 
-[link]({% link _posts/2015-01-07-sublime_text.md %})
+`link` - 可以正确生成指定路径的永久链接，可以在 Markdown 的链接中使用 `link`。
 
-[link]({% link _drafts/2015-02-07-jekyll_category_tag.md %})
+代码示例：
+
+{% raw %}
+
+```liquid
+{% link _drafts/2015-02-06-jekyll_liquid.md %}
+
+[本文链接]({% link _drafts/2015-02-06-jekyll_liquid.md %})
+```
+
+{% endraw %}
+
+效果：
+
+- {% link _posts/2015-02-06-jekyll_liquid.md %}
+
+- [本文链接]({% link _posts/2015-02-06-jekyll_liquid.md %})
 
 #### 4.1.3. post_url
 
-{% post_url 2015-01-07-sublime_text %}
+`post_url` - 指定已发布的一篇文章生成对应的链接，同样可以在 Markdown 的链接中使用 `post_url`。
+
+代码示例：
+
+{% raw %}
+
+```liquid
+{% post_url 2015-02-06-jekyll_liquid %}
+
+[本文链接]({% post_url 2015-02-06-jekyll_liquid %})
+```
+
+{% endraw %}
+
+效果：
+
+- {% post_url 2015-02-06-jekyll_liquid %}
+
+- [本文链接]({% post_url 2015-02-06-jekyll_liquid %})
 
 ### 4.2. Jekyll Filter
-
-{% raw %}`{{ site.time | date_to_xmlschema }}`{% endraw %}
-
-`2008-11-17T13:07:54-08:00`
-
-{% raw %} {% endraw %}
 
 | 描述                                                     |          过滤器           |                                                  输出                                                  |
 | :------------------------------------------------------- | :-----------------------: | :----------------------------------------------------------------------------------------------------: |
