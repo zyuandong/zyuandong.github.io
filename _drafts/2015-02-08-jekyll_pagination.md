@@ -10,11 +10,11 @@ tags: [Jekyll]
 
 不过也不是没有收获，在 Jekyll 文档中就提到了，可以使用插件 jekyll-paginate 来实现分页功能，并且此插件是被 GitHub Pages 所支持的。🚀
 
-## 开启分页功能
+## 1. 开启分页功能
 
 接下来，就尝试使用 jekyll-paginate 来实现博客的分页功能。
 
-### 安装 jekyll-paginate
+### 1.1. 安装 jekyll-paginate
 
 在本地开发环境中，首先需要安装 jekyll-paginate。因为 jekyll-paginate 和 Jekyll 一样是 Ruby 的 gem 包，因此安装方式也一样：
 
@@ -22,7 +22,7 @@ tags: [Jekyll]
 
 使用命令 `gem list` 可以查看已安装的 gem 包列表，包含 jekyll-paginate 则代表安装成功。
 
-### 配置
+### 1.2. 配置
 
 需要让 jekyll-paginate 生效，还需要在 _config.yml 中加一些配置:
 
@@ -48,11 +48,11 @@ plugins:
 
 这是用来告诉 GitHub Pages，此项目使用了插件 jekyll-paginate，这样分页功能才能生效。
 
-## 生成分页界面
+## 2. 生成分页界面
 
 准备工作完成后，剩下的就是需要实现页面中的分页按钮，点击按钮能够跳转到指定的分页页面。
 
-### 了解 paginator 对象
+### 2.1. paginator 对象
 
 不过在此之前，先了解一下插件 jekyll-paginate 引入的 paginator 对象：
 
@@ -68,14 +68,20 @@ plugins:
 | `paginator.next_page`          | 下一页页码，不存在则无输出 |
 | `paginator.next_page_path`     | 下一页路径，不存在则无输出 |
 
-分页按钮的展示，
+当文章数量很多，分页按钮自然也很多，因此在最终实现分页按钮时还需要考虑折叠一部分按钮，不要让过多的分页按钮超出页面正常展示区域。
 
-### 最终代码实现
+### 2.2. 最终代码实现
 
+因为所有的代码太多，不方便阅读，所以分块展示所有代码。
+
+也可以点击 [此处](https://github.com/zyuandong/zyuandong.github.io/blob/gh-pages/_includes/pagination.html) 查看源代码
 
 {% raw %}
 
+定义公共变量：
+
 ```liquid
+// current_page: 当前页码，通过 URL 获取，用于刷新时保持在当前页
 {% assign current_page = page.url | split: "/" | last %}
 {% if current_page contains 'page' %}
   {% assign current_page = current_page | remove: "page" | abs %}
@@ -83,16 +89,34 @@ plugins:
   {% assign current_page = 1 %}
 {% endif %}
 
+// toatl_pages: 总页数
 {% assign total_pages = paginator.total_pages %}
+
+// pager_count: 最多显示按钮的数量
 {% assign pager_count = 5 %}
+
+// half_pager_count: 最多显示按钮数量的一半
 {% assign half_pager_count = pager_count | minus: 1 | divided_by: 2 | abs %}
+
+// pagers: 包含按钮序列的数组
 {% assign pagers = "" | split: "" %}
 
+// show_prev_more: 
 {% assign show_prev_more = false %}
-{% assign new_prev_page = 1 %}
-{% assign show_next_more = false %}
-{% assign new_next_page = total_pages %}
 
+// new_prev_page:
+{% assign new_prev_page = 1 %}
+
+// show_next_more:
+{% assign show_next_more = false %}
+
+// new_next_page:
+{% assign new_next_page = total_pages %}
+```
+
+折叠分页按钮逻辑：
+
+```liquid
 {% if total_pages > pager_count %}
   {% assign res = pager_count | minus: half_pager_count %}
   {% if current_page > res %}
@@ -137,7 +161,11 @@ plugins:
     {% assign pagers = pagers | push: n %}
   {% endfor %}
 {% endif %}
+```
 
+HTML 部分：
+
+```liquid
 <div id="pagination" style="text-align: center;">
   <span class="total text-tip">{{ site.posts | size }} Posts</span>
 
