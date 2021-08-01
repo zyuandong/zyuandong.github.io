@@ -2,7 +2,6 @@
 title: Jekyll 系列（四）：Pagination
 category: 随笔
 tags: [Jekyll]
-last_modified_date: 2021-05-25
 ---
 
 当博客中的文章达到一定数量时，就会需要分页展示文章列表。
@@ -69,7 +68,10 @@ plugins:
 | `paginator.next_page`          | 下一页页码，不存在则无输出 |
 | `paginator.next_page_path`     | 下一页路径，不存在则无输出 |
 
+分页按钮的展示，
+
 ### 最终代码实现
+
 
 {% raw %}
 
