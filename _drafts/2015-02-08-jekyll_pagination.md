@@ -2,6 +2,7 @@
 title: Jekyll 系列（四）：Pagination
 category: 随笔
 tags: [Jekyll]
+last_modified_date: 2021-08-02
 ---
 
 当博客中的文章达到一定数量时，就会需要分页展示文章列表。
@@ -101,16 +102,16 @@ plugins:
 // pagers: 包含按钮序列的数组
 {% assign pagers = "" | split: "" %}
 
-// show_prev_more: 
+// show_prev_more: 是否折叠当前页码之前的部分按钮
 {% assign show_prev_more = false %}
 
-// new_prev_page:
+// new_prev_page: 点击 “向前跳转更多” 按钮（<<）时，将要跳转的页码
 {% assign new_prev_page = 1 %}
 
-// show_next_more:
+// show_next_more: 是否折叠当前页码之后的部分按钮
 {% assign show_next_more = false %}
 
-// new_next_page:
+// new_next_page: 点击 “向后跳转更多” 按钮（>>）时，将要跳转的页码
 {% assign new_next_page = total_pages %}
 ```
 
