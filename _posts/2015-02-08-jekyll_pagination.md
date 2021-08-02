@@ -2,7 +2,7 @@
 title: Jekyll 系列（四）：Pagination
 category: 随笔
 tags: [Jekyll]
-last_modified_date: 2021-08-02
+last_modified_date: 2021-08-03
 ---
 
 当博客中的文章达到一定数量时，就会需要分页展示文章列表。
@@ -69,11 +69,11 @@ plugins:
 | `paginator.next_page`          | 下一页页码，不存在则无输出 |
 | `paginator.next_page_path`     | 下一页路径，不存在则无输出 |
 
-当文章数量很多，分页按钮自然也很多，因此在最终实现分页按钮时还需要考虑折叠一部分按钮，不要让过多的分页按钮超出页面正常展示区域。
+当文章数量很多时，分页按钮自然也有很多，因此在最终实现分页按钮时还需要考虑折叠一部分按钮，不要让过多的分页按钮超出页面正常展示区域。
 
 ### 2.2. 最终代码实现
 
-因为所有的代码太多，不方便阅读，所以分块展示所有代码。
+因为所有的代码太多，不方便阅读，所以分块展示最终代码。
 
 也可以点击 [此处](https://github.com/zyuandong/zyuandong.github.io/blob/gh-pages/_includes/pagination.html) 查看源代码
 
@@ -99,7 +99,7 @@ plugins:
 // half_pager_count: 最多显示按钮数量的一半
 {% assign half_pager_count = pager_count | minus: 1 | divided_by: 2 | abs %}
 
-// pagers: 包含按钮序列的数组
+// pagers: 需要展示的按钮序列数组
 {% assign pagers = "" | split: "" %}
 
 // show_prev_more: 是否折叠当前页码之前的部分按钮
@@ -118,10 +118,12 @@ plugins:
 折叠分页按钮逻辑：
 
 ```liquid
+// 中页数超出最多显示按钮数量，将会有分页按钮被折叠
 {% if total_pages > pager_count %}
   {% assign res = pager_count | minus: half_pager_count %}
   {% if current_page > res %}
     {% assign show_prev_more = true %}
+    // 根据当前页、最多显示按钮数量，计算得到向前跳转更多的目标页码
     {% assign new_prev_page = current_page | minus: pager_count | plus: 2 %}
     {% if new_prev_page < 1 %}
       {% assign new_prev_page = 1 %}
@@ -131,6 +133,7 @@ plugins:
   {% assign res = total_pages | minus: half_pager_count %}
   {% if current_page < res %}
     {% assign show_next_more = true %}
+    // 根据当前页、最多显示按钮数量，计算得到向后跳转更多的目标页码
     {% assign new_next_page = current_page | plus: pager_count | minus: 2 %}
     {% if new_next_page > total_pages %}
       {% assign new_next_page = total_pages %}
@@ -138,6 +141,7 @@ plugins:
   {% endif %}
 {% endif %}
 
+// 分四种情况计算得到需要展示的按钮序列数组
 {% if show_prev_more == true and show_next_more == false %}
   {% assign start = total_pages | minus: pager_count | plus: 2 %}
   {% assign end = total_pages | minus: 1 %}
@@ -236,3 +240,7 @@ HTML 部分：
 ```
 
 {% endraw %}
+
+### 2.3. 成果展示
+
+![最终效果](https://i.loli.net/2021/08/02/Oz5BRCFKTYI4UXu.gif)
