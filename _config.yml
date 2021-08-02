@@ -22,6 +22,9 @@ paginate_path: "home/page:num"
 # Outputting
 permalink: posts/:title
 
+# Highlight
+highlighter: rouge
+
 # Markdown Processors
 markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
