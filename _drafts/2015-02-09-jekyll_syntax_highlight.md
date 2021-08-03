@@ -9,7 +9,7 @@ last_modified_date: 2021-05-25
 
 本文在 Jekyll 的基础上会逐步给大家介绍：如何让自建博客中的示例代码拥有语法高亮效果，自己总结的经验，避免大家踩同样的坑。
 
-## Markdown 处理器
+## 1. Markdown 处理器
 
 因为本博客的文章都是使用 Markdown 编写的，相信绝大多数小伙伴也都是如此。
 
@@ -25,7 +25,7 @@ Markdown - 技术人员文档之光，简洁的语法立即就能输出格式良
 
 Jekyll 默认的 Markdown 处理器就是 [kramdown](https://kramdown.gettalong.org/)，并且 GitHub Pages 也支持 [kramdown](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll)。
 
-### 配置
+### 1.1. 配置
 
 通过配置 `_config.yml` 文件，我们就可以为 Jekyll 指定 Markdown 处理器，甚至于是自己编写的处理器，这里就使用之前确定好的 kramdown：
 
@@ -68,19 +68,19 @@ kramdown:
 
 这两项配置相关的内容让我踩了不少坑，接下来我就扩展讲一下这个过程。
 
-### GFM
+### 1.2. GFM
 
 首先是 GFM（GitHub Flavored Markdown），这是 GitHub 在 Markdown 标准语法之上的一个扩充，扩充的语法有且不限于：删除线、TODO 列表、以及支撑语法高亮的代码块等。
 
 方便的是 `input: GFM` 就是默认配置，意味着没有这一项，Markdown 的扩展语法也能正常解析。
 
-但由于不熟悉官方文档的原因，我最开始的配置为 `input: Kramdown`，这样就导致刚刚提到的扩展语法全部不能正常解析。
+但由于不熟悉官方文档的原因，我最开始的配置为 `input: Kramdown`，这就导致刚刚提到的扩展语法不能正常解析。
 
 再去阅读文档才发现，如果配置为 `input: Kramdown` 就还需要引入其他的配置，以及为此引入其他 gem。
 
 这个坑也算自己有意去尝试的吧，至少明白了不同配置的差异，最后还是 GFM 香。🌚
 
-### Rouge
+### 1.3. Rouge
 
 [Rouge](http://rouge.jneen.net/) 是使用 Ruby 实现的语法高亮工具，支持 205 种语言，且主题已完全兼容 [Pygments](https://pygments.org/)。
 
@@ -106,19 +106,27 @@ plugins:
 
 无论是使用 Markdown 的代码块语法，还是 Jekyll 的代码块语法：{% raw %}`{% highlight ruby linenos %}//...{% endhighlight %}`{% endraw %}，最终都没有高亮的效果。
 
-## 最终实现
+## 2. 最终实现
 
 其实，之所以没有高亮效果，是因为没有对应的样式文件。查阅文档后，我推荐两种获取样式文件的方式，最后都能得到代码语法高亮的效果。
 
-### Rouge Style
+### 2.1. Rouge Styles
 
-[List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
-`rougify list` - list of supported languages
+`rougify style monokai.sublime > syntax.css`
 
-`rougify help style` - list of styles
+此条命令就是输出主题为 monokai.sublime 的样式代码，在执行命令的当前目录下生成 syntax.css 文件。
 
-### highlight.js
+最后只需要在项目合适的位置引入此样式文件就能实现最终的语法高亮效果。
+
+以下两条常用的命令：
+
+- `rougify list`：查看所有支持的语言
+
+- `rougify help style`：查看所有样式主题
+
+### 2.2. highlight.js
 
 highlight.js
 
@@ -127,7 +135,7 @@ highlight.js
 
 
 
-## 参考
+## 3. 参考
 
 - [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 
@@ -136,6 +144,8 @@ highlight.js
 - [Configuration - Jekyll](https://jekyllrb.com/docs/configuration/)
 
 - [Syntax highlighting - GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting)
+
+- [List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 
 - ...
 
