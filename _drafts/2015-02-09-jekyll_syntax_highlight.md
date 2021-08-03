@@ -5,81 +5,50 @@ tags: [Jekyll]
 last_modified_date: 2021-05-25
 ---
 
-技术类型的博客自然少不了示例代码，
+技术类型的博客自然少不了示例代码，不仅如此，为了优化阅读体验，还需要对示例代码进行语法高亮展示。
 
-## markdown 解析器
+本文在 Jekyll 的基础上会逐步给大家介绍：如何让自建博客中的示例代码拥有语法高亮效果，自己总结的经验，避免大家踩同样的坑。
 
-[kramdown](https://kramdown.gettalong.org/)
+## Markdown 处理器
 
-[Markdown Options](https://jekyllrb.com/docs/configuration/markdown/)
+因为本博客的文章都是使用 Markdown 编写的，相信绝大多数小伙伴也都是如此。
 
-[Default Configuration](https://jekyllrb.com/docs/configuration/default/)
+Markdown - 技术人员文档之光，简洁的语法立即就能输出格式良好的文档，而且跨平台通用，还不会影响结果格式，很好的诠释了它「易读易写」的宗旨。除了图片不能和文档一起离线同步外，再也找不到其他缺点。🚀
 
-### GFM
+说到这里可能会有人提出疑惑：Markdown 并不是 HTML 文件，没法被浏览器直接解析，那如何才能在浏览器中看到 Markdown 文档中的内容呢？
 
-[GFM(GitHub Flavored Markdown)与标准Markdown的语法区别](https://www.cnblogs.com/36bian/p/7568015.html)
+其实 Jekyll 很重要的一个功能就是将 Markdown 转化为 HTML 文件，执行过 `jekyll build` 命令的小伙伴，可以查看一下生成的 `_site` 目录，里面就包含了最终转化后的 HTML 文件。
+
+转化过程中能够正确识别 Markdown 语法，并转化为对应样式的 HTML 标签，这都得依赖于 Markdown 处理器。
+
+由于 Markdown 标准语法支持的样式不多，逐渐地就出现了很多扩展语法（例如 GFM 等），并且标准不统一，因此 Markdown 处理器也有很多：kramdown、maruku、rdiscount、redcarpet 等。
+
+Jekyll 默认的 Markdown 处理器就是 [kramdown](https://kramdown.gettalong.org/)，并且 GitHub Pages 也支持 [kramdown](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll)。
 
 ### 配置
 
-## Rouge
-
-[Rouge](http://rouge.jneen.net/)
-[pygments](https://pygments.org/)
-[List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
-
-`rougify list` - list of supported languages
-`rougify help style` - list of styles
-
-## highlight.js
-
-[highlight.js](https://highlightjs.org/)
-
-- kramdown
-
-[Github-Page 推荐的解析器](https://help.github.com/articles/migrating-your-pages-site-from-maruku/)
-
-修改配置文件为
+通过配置 `_config.yml` 文件，我们就可以为 Jekyll 指定 Markdown 处理器，甚至于是自己编写的处理器，这里就使用之前确定好的 kramdown：
 
 ```yaml
+# _config.yml 文件
+
+# Markdown Processors
+markdown: kramdown
+```
+
+为了最终语法高亮的效果能达到心中的预期，还可以进一步对 kramdown 进行配置。相关部分的所有配置
+
+```yaml
+# _config.yml 文件
+
+# Markdown Processors
 markdown: kramdown
 kramdown:
   input: GFM
-```
-
-代码块语法可使用 `替换`
-
-- redcarpet
-
-执行命令 - `gem install redcarpet`
-
-修改配置文件为
-
-```yaml
-markdown: redcarpet
-```
-
-```yaml
-markdown: kramdown # [ maruku | rdiscount | kramdown | redcarpet ]
-kramdown:
-  input: GFM
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-  use_coderay: true
   syntax_highlighter: rouge
-  # coderay:
-  #   coderay_line_numbers:  nil
-```
-
-```yaml
-markdown: kramdown # [ maruku | rdiscount | kramdown | redcarpet ]
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge # coderay
   syntax_highlighter_opts:
     css_class: highlight
-    # default_lang: console
+    default_lang: console
     span:
       line_numbers: false
     block:
@@ -87,47 +56,95 @@ kramdown:
       start_line: 1
 ```
 
-[Jekyll Markdown](http://jekyllcn.com/docs/configuration/#markdown-options):
+详细配置请参考：[Markdown Options](https://jekyllrb.com/docs/configuration/markdown/)
+
+配置示例中的一些常规配置都比较好理解，例如：是否显示行号、行号开始值、默认语言等。其中有这么两项配置：
 
 ```yaml
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_number_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+  input: GFM
+  syntax_highlighter: rouge
 ```
 
-```yaml
-plugins:
-  - jekyll-paginate
-  - redcarpet
-  - coderay
-  - kramdown-syntax-coderay
-  - rouge
-```
+这两项配置相关的内容让我踩了不少坑，接下来我就扩展讲一下这个过程。
+
+### GFM
+
+首先是 GFM（GitHub Flavored Markdown），这是 GitHub 在 Markdown 标准语法之上的一个扩充，扩充的语法有且不限于：删除线、TODO 列表、以及支撑语法高亮的代码块等。
+
+方便的是 `input: GFM` 就是默认配置，意味着没有这一项，Markdown 的扩展语法也能正常解析。
+
+但由于不熟悉官方文档的原因，我最开始的配置为 `input: Kramdown`，这样就导致刚刚提到的扩展语法全部不能正常解析。
+
+再去阅读文档才发现，如果配置为 `input: Kramdown` 就还需要引入其他的配置，以及为此引入其他 gem。
+
+这个坑也算自己有意去尝试的吧，至少明白了不同配置的差异，最后还是 GFM 香。🌚
+
+### Rouge
+
+[Rouge](http://rouge.jneen.net/) 是使用 Ruby 实现的语法高亮工具，支持 205 种语言，且主题已完全兼容 [Pygments](https://pygments.org/)。
+
+📌 *Pygments 也是优秀的语法高亮工具，较早的资料中都是推荐 Pygments 来解决语法高亮。但它依赖于 Python，在整个 Jekyll 的 Ruby 生态下，显得有点格格不入，直到 Rouge 出现后，就逐渐被替代*
+
+Rouge 已经是 Jekyll、Kramdown 的依赖之一：
 
 ![Rouge](https://i.loli.net/2021/08/02/5XYxo78wnm1MWiy.png)
 
+Rouge 也是 GitHub Pages 推荐的语法高亮工具，但在 Jekyll 文档中是推荐 coderay 做语法高亮：`syntax_highlighter: coderay`。
+
+因为最终是看 GitHub Pages 的效果，为了不出意外，那还是使用 GitHub Pages 推荐的 Rouge 吧，对应的需要再 plugins 初声明一下：
+
+```yaml
+# _config.yml 文件
+
+# Plugins
+plugins:
+  - rouge
+```
+
+到此，我原以为已经能够看到最终语法高亮的效果，但除了代码块内容格式正常之外，并没有高亮的效果。
+
+无论是使用 Markdown 的代码块语法，还是 Jekyll 的代码块语法：{% raw %}`{% highlight ruby linenos %}//...{% endhighlight %}`{% endraw %}，最终都没有高亮的效果。
+
+## 最终实现
+
+其实，之所以没有高亮效果，是因为没有对应的样式文件。查阅文档后，我推荐两种获取样式文件的方式，最后都能得到代码语法高亮的效果。
+
+### Rouge Style
+
+[List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+
+`rougify list` - list of supported languages
+
+`rougify help style` - list of styles
+
+### highlight.js
+
+highlight.js
+
+[highlight.js](https://highlightjs.org/)
+
+
+
+
 ## 参考
 
-- [这是一篇效果示例文章](https://www.yukapril.com/2016/10/19/blog-show.html)
+- [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 
-- [Configuration | Jekyll](https://jekyllrb.com/docs/configuration/)
+- [Markdown Syntax 中文版](http://www.markdown.cn/)
 
-- [Syntax highlighting | GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting)
+- [Configuration - Jekyll](https://jekyllrb.com/docs/configuration/)
+
+- [Syntax highlighting - GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting)
+
+- ...
+
+{% comment %}
 
 - [wx: 学习 jekyll 背后的技术原理（静态网站）](https://mp.weixin.qq.com/s?src=11&timestamp=1622535289&ver=3103&signature=Ugb3Nlzg*4hEd20stLGwLrQufRfwaWWBNyQftc2uWqKeP4Yxk0itXXzlum2PmnEMhkPRdfvHcUlzYv2DwKB6xQ1krLn2sRjX7qkZMqHt6WMEML2u-PQa*o3ESsQTo25K&new=1)
-- [前端小课](https://lefex.github.io/)
-- [Rouge](https://github.com/rouge-ruby/rouge)
-- [jekyll php高亮代码,[Html]Jekyll 代码高亮的几种选择_html/css_WEB-ITnose](https://blog.csdn.net/weixin_34434948/article/details/116058330)
+
+- [jekyll php 高亮代码,[Html]Jekyll 代码高亮的几种选择\_html/css_WEB-ITnose](https://blog.csdn.net/weixin_34434948/article/details/116058330)
+
 - [Jekyll 使用 Rouge 主题](https://www.cnblogs.com/baiyangcao/p/jekyll_rouge.html)
+
+{% endcomment %}
