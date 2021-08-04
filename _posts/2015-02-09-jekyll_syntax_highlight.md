@@ -161,7 +161,7 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
 - [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 
-- [Markdown Syntax 中文版](http://www.markdown.cn/)
+- [Markdown 语法说明](http://www.markdown.cn/)
 
 - [Configuration - Jekyll](https://jekyllrb.com/docs/configuration/)
 
