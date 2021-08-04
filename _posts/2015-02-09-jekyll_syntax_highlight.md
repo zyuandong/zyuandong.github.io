@@ -128,12 +128,34 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
 ### 2.2. highlight.js
 
-highlight.js
+除了使用 Rouge 生成的样式文件，还可以选择 [highlight.js](https://highlightjs.org/)，也是用于页面中的代码语法高亮，主题样式更丰厚，支持语言也很多，并且能与 Rouge、Pygments 完美兼容。
 
-[highlight.js](https://highlightjs.org/)
+使用也很方便：
 
+- 下载
 
+  从 [highlight.js  官网](https://highlightjs.org/download/) 下载资源文件，或者使用 `npm install highlight.js` 安装 node_module 包。
 
+  📌 *下载资源文件时，还能勾选特定支持的语言*
+
+- 引入
+
+  以标签方式引入为例：
+
+  ```html
+  <!-- 样式文件可以根据需求更换为其他样式文件 -->
+  <link rel="stylesheet" href="/path/to/styles/default.css">
+  <script src="/path/to/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  ```
+
+  highlight.js 将查找并高亮显示 `<pre><code>...</code></pre>` 标签内的代码。
+
+  完成以上就能实现代码语法高亮效果。
+
+更多详细使用方式，请查看：[How to use highlight.js](https://highlightjs.org/usage/)。
+
+文中有不足之处，欢迎多多拍砖。🚀
 
 ## 3. 参考
 
