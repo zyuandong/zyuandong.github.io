@@ -1242,6 +1242,12 @@ blockquote ol {
 /* 滚动条按钮 */
 /* 滚动条轨道上的滚动角 */
 /* scrollbar end */
+/* 斜体 */
+/* font-style: italic; */
+em {
+  color: var(--text-secondary);
+}
+/* 斜体 */
 #site-scroll {
   height: 100vh;
   overflow: auto;
