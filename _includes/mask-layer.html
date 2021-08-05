@@ -7,3 +7,9 @@
     <span class="mask-layer-line mask-layer-line-last"></span>
   </div>
 </div>
+
+<script>
+  document.addEventListener('keyup', (e) => {
+    if (e.keyCode === 27) document.querySelector('#mask-layer').style.display = 'none';
+  })
+</script>
