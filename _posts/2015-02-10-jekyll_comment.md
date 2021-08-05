@@ -138,3 +138,11 @@ gitalk.render('gitalk-container');
 - [gitment](https://github.com/imsun/gitment)
 
 - [utterances](https://github.com/utterance/utterances)
+
+- ...
+
+{% comment %}
+
+- [Gitalk评论插件使用教程](https://segmentfault.com/a/1190000018072952)
+
+{% endcomment %}
