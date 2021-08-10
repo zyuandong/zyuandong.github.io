@@ -5,6 +5,12 @@ category:
 tags:
 ---
 
+## === 20210810 ===
+
+- [div或img图片高度随宽度自适应的方法](https://www.jb51.net/html5/712440.html)
+
+- [wx: 响应式设计如何让图片自适应？宽度100%太Low了！](https://mp.weixin.qq.com/s?src=11&timestamp=1628575453&ver=3243&signature=e3ZLazO-l8S8aekpORZWUmV602wzqgyLPUgubBIwOTpdO2h4-5kPbHkuwPkxXxBENVnMo-lMKBofkFqzkk9od7HChFzsrfO6zs8Lkd7NKbrlNPhMiQ028rbMcWCzLYUJ&new=1)
+
 ## === 20210809 ===
 
 - [ioDraw - 免费在线画图，无需注册](https://www.iodraw.com/)
