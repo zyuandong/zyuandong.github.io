@@ -11,6 +11,8 @@ tags:
 
 - [wx: 响应式设计如何让图片自适应？宽度100%太Low了！](https://mp.weixin.qq.com/s?src=11&timestamp=1628575453&ver=3243&signature=e3ZLazO-l8S8aekpORZWUmV602wzqgyLPUgubBIwOTpdO2h4-5kPbHkuwPkxXxBENVnMo-lMKBofkFqzkk9od7HChFzsrfO6zs8Lkd7NKbrlNPhMiQ028rbMcWCzLYUJ&new=1)
 
+- [第一章：(nestjs)NodeJs+VueJs全栈开发《全栈之巅》视频网站+app+小程序](https://www.bilibili.com/video/av73070499)
+
 ## === 20210809 ===
 
 - [ioDraw - 免费在线画图，无需注册](https://www.iodraw.com/)
