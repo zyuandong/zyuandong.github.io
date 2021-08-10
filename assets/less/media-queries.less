@@ -13,7 +13,7 @@
       z-index: 3;
       transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 
-      .head-img-box {
+      .avatar-box {
         margin: 0.5rem 35% 0.20rem;
       }
     }
@@ -166,12 +166,13 @@
 // >= 768: iPad、iPad mini | 1024: iPad pro
 // show aside / hide main-aside
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
-  #main {
-    .main-view {
-      margin-right: 0;
-    }
-    .main-aside {
-      display: none;
+  #aside {
+    .guid {
+      .avatar-box {
+        width: calc(100% - 40%);
+        height: 0;
+        padding-bottom: calc(100% - 40% - 0.04rem);
+      }
     }
   }
 
@@ -185,12 +186,30 @@
       }
     }
   }
+
+  #main {
+    .main-view {
+      margin-right: 0;
+    }
+    .main-aside {
+      display: none;
+    }
+  }
+
 }
 
 // >= 1024：desktop
 // show main-aside
 @media screen and (min-width: 1024px) {
-  
+  #aside {
+    .guid {
+      .avatar-box {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0.5rem auto 0.3rem;
+      }
+    }
+  }
 }
 
 // >= 1441

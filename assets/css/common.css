@@ -1297,21 +1297,22 @@ em {
   position: relative;
   background-color: #000;
 }
-#aside .guid .head-img-box {
+#aside .guid .avatar-box {
   display: block;
+  background-color: var(--disabled);
+  border-radius: 50%;
+  border: 0.02rem solid #fff;
   margin: 0.5rem 20% 0.3rem;
 }
-#aside .guid .head-img-box .head-img {
+#aside .guid .avatar-box .avatar {
   display: block;
   width: 100%;
-  height: 100%;
   max-width: 1.2rem;
   max-height: 1.2rem;
   text-align: center;
   line-height: 1.2rem;
   margin: 0 auto;
   border-radius: 50%;
-  border: 0.03rem solid #fff;
   box-sizing: border-box;
 }
 #aside .guid ul {
@@ -2334,7 +2335,7 @@ em {
     z-index: 3;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  #site-container #aside .head-img-box {
+  #site-container #aside .avatar-box {
     margin: 0.5rem 35% 0.2rem;
   }
   #site-container .container {
@@ -2458,17 +2459,29 @@ em {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
-  #main .main-view {
-    margin-right: 0;
-  }
-  #main .main-aside {
-    display: none;
+  #aside .guid .avatar-box {
+    width: calc(100% - 40%);
+    height: 0;
+    padding-bottom: calc(100% - 40% - 0.04rem);
   }
   #header .search-mask .result-box {
     width: auto;
     top: 0.4rem;
     left: 0.4rem;
     right: 0.4rem;
+  }
+  #main .main-view {
+    margin-right: 0;
+  }
+  #main .main-aside {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #aside .guid .avatar-box {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0.5rem auto 0.3rem;
   }
 }
 @media screen and (min-width: 1441px) {
