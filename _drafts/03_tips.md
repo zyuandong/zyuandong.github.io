@@ -5,6 +5,16 @@ category:
 tags:
 ---
 
+## === 20210811 ===
+
+- [vo、po、dto、bo、pojo、entity、mode如何区分](https://blog.csdn.net/qq_41604862/article/details/79675223)
+
+- [对PO VO BO DTO DAO 和 POJO的理解和区分](https://blog.csdn.net/XING_Gou/article/details/104343635)
+
+- [GitHub右上角Watch、Star和Fork详解](https://zhuanlan.zhihu.com/p/103695781)
+
+- [TypeScript 入门教程](https://ts.xcatliu.com/)
+
 ## === 20210810 ===
 
 - [div或img图片高度随宽度自适应的方法](https://www.jb51.net/html5/712440.html)
@@ -12,6 +22,8 @@ tags:
 - [wx: 响应式设计如何让图片自适应？宽度100%太Low了！](https://mp.weixin.qq.com/s?src=11&timestamp=1628575453&ver=3243&signature=e3ZLazO-l8S8aekpORZWUmV602wzqgyLPUgubBIwOTpdO2h4-5kPbHkuwPkxXxBENVnMo-lMKBofkFqzkk9od7HChFzsrfO6zs8Lkd7NKbrlNPhMiQ028rbMcWCzLYUJ&new=1)
 
 - [第一章：(nestjs)NodeJs+VueJs全栈开发《全栈之巅》视频网站+app+小程序](https://www.bilibili.com/video/av73070499)
+
+- [快速使用 vscode 进行 Java 编程](https://zhuanlan.zhihu.com/p/35176928)
 
 ## === 20210809 ===
 
