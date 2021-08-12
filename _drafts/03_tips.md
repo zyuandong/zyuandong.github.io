@@ -5,6 +5,12 @@ category:
 tags:
 ---
 
+## === 20210812 ===
+
+- [15张图，20分钟吃透Diff算法核心原理，我说的！！！](https://juejin.cn/post/6994959998283907102)
+
+- [Ardor-Zhang](https://arrow.blog.csdn.net/?type=blog)
+
 ## === 20210811 ===
 
 - [vo、po、dto、bo、pojo、entity、mode如何区分](https://blog.csdn.net/qq_41604862/article/details/79675223)
