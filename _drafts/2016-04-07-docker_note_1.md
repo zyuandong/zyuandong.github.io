@@ -71,7 +71,7 @@ Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器�
 
 操作系统 CentOS
 
-```
+```shell
 sudo yum remove docker \
                 docker-client \
                 docker-client-latest \
@@ -135,6 +135,11 @@ server {
   location / {
     root   /usr/share/nginx/html;
     index  index.html index.htm;
+  }
+
+  location /server-manager {
+    rewrite  /api/(.*)  /$1  break;
+    proxy_pass http://192.168.64.20:8888/;
   }
 
   #error_page  404              /404.html;
