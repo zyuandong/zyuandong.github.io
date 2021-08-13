@@ -75,22 +75,6 @@ h6 {
 }
 /* h1~h6 end */
 
-/* code block */
-pre {
-  white-space: pre-wrap;
-  padding: 0;
-
-  code {
-    border-radius: 0.05rem;
-    font-family: @code-font-family;
-
-    table pre.lineno {
-      min-width: 0.20rem;
-    }
-  }
-}
-/* code block end */
-
 /* code inline*/
 li,
 p,
@@ -123,6 +107,32 @@ code {
   }
 }
 /* code inline end */
+
+/* code block */
+pre {
+  white-space: pre-wrap;
+  padding: 0;
+
+  & > code {
+    padding: 0;
+    border-radius: 0.05rem;
+    font-family: @code-font-family;
+
+    table pre.lineno {
+      min-width: 0.20rem;
+    }
+  }
+}
+.highlighter-rouge {
+  .highlight {
+    border-radius: 0.04rem;
+  
+    pre.highlight {
+      border-radius: 0.04rem;
+    }
+  }
+}
+/* code block end */
 
 /* 引用 */
 blockquote {
