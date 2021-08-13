@@ -84,9 +84,10 @@ const tagAAttrTarget = () => {
 
 // code highlight
 const setCodeHighlight = () => {
-  $("pre code").each(function (i, block) {
-    hljs.highlightBlock(block);
-  });
+  // $("pre code").each(function (i, block) {
+  //   hljs.highlightBlock(block);
+  // });
+  return;
 }
 
 // set image viewer
