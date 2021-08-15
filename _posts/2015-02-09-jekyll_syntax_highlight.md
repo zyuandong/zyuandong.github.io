@@ -169,6 +169,10 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
 - [List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 
+- [Rouge](http://rouge.jneen.net/)
+
+- [highlight.js](https://highlightjs.readthedocs.io/en/latest/index.html)
+
 - ...
 
 {% comment %}
