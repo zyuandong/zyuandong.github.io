@@ -5,6 +5,10 @@ category:
 tags:
 ---
 
+## === 20210816 ===
+
+- [我用 Vue 和 React 构建了相同的应用程序，这是他们的差异](https://www.infoq.cn/news/differences-between-react-and-vue?utm_source=related_read_bottom&utm_medium=article)
+
 ## === 20210812 ===
 
 - [15张图，20分钟吃透Diff算法核心原理，我说的！！！](https://juejin.cn/post/6994959998283907102)
