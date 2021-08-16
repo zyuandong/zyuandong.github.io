@@ -222,6 +222,34 @@ docker run \
 
 *最开始 -v 或者 --volume 选项是给单独容器使用， --mount 选项是给集群服务使用。但是从 Docker 17.06 开始，也可以在单独容器上使用 --mount。*
 
+shell 脚本 `runApp.sh`：
+
+```shell
+#!/bin/bash
+
+echo ""
+
+SOURCE_PATH="/home/soft/demo/xxcj"
+
+docker stop news-app
+
+docker rm news-app
+
+docker run \
+-d --name news-app \
+-p 8082:80 \
+-v ${SOURCE_PATH}/dist:/usr/share/nginx/html \
+-v ${SOURCE_PATH}/nginx:/etc/nginx/conf.d \
+nginx-vue-image_1.0
+
+# --mount type=bind,source=${SOURCE_PATH}/dist,target=/usr/share/nginx/html \
+# --mount type=bind,source=${SOURCE_PATH}/nginx,target=/etc/nginx/conf.d \
+```
+
+运行脚本：
+
+`bash runApp.sh` or `./runApp.sh`
+
 ## 参考
 
 - [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620971083&ver=3067&signature=RlymF*sP*UEbU*eQRpI3coenrhRYMNOtvm*WBw5Km*uadfWKkDAB9w5Rpo0JqQ5zDMb15z4JUMsHsYHUrb1G0Lk5599S2HYT*5qyYUIHJGUjFqIrEw9uhkbKPtJGOHhh&new=1)
