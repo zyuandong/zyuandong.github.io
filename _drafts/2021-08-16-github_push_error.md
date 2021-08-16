@@ -24,6 +24,10 @@ ls -al ~/.ssh
 ssh-keygen -t rsa -b 406 -C "de1719@163.com"
 ```
 
+```git
+git remote set-url <name> <newurl>
+```
+
 ## 参考
 
 - [GitHub不再支持密码验证解决方案：SSH免密与Token登录配置](https://www.cnblogs.com/zhoulujun/p/15141608.html)
