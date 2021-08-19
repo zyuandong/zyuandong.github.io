@@ -16,8 +16,8 @@
 #header {
   width: calc(ceil(100% - (100% / 6)));
   max-width: 12rem;
-  height: 0.50rem;
-  line-height: 0.50rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   background: var(--header-bg);
   // text-align: right;
   overflow: hidden;
@@ -61,6 +61,16 @@
     text-align: left;
     .search-box();
 
+    .shortcut-key {
+      padding: 0 0.07rem;
+      border: 1px solid var(--border);
+      border-radius: 0.03rem;
+      font-size: 0.16rem;
+      line-height: 0.2rem;
+      display: inline-block;
+      vertical-align: text-bottom;
+    }
+
     .search-mask {
       display: none;
       position: fixed;
@@ -86,16 +96,16 @@
       z-index: 10;
 
       i:not(.icon-file, .icon-folder-open, .icon-tag) {
-        font-size: 0.20rem;
+        font-size: 0.2rem;
       }
 
       .search-box {
         .search-box();
-        width: calc(100% - 0.20rem);
+        width: calc(100% - 0.2rem);
         background: transparent;
 
         input {
-          width: calc(100% - 0.50rem);
+          width: calc(100% - 0.5rem);
         }
 
         i.search-close-btn {
@@ -105,7 +115,7 @@
       }
 
       .type {
-        padding: 0.03rem 0.10rem;
+        padding: 0.03rem 0.1rem;
         background: var(--bg);
       }
 

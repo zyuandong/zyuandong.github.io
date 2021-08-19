@@ -1396,6 +1396,15 @@ em {
   outline: none;
   background: transparent;
 }
+#header .search-box .shortcut-key {
+  padding: 0 0.07rem;
+  border: 1px solid var(--border);
+  border-radius: 0.03rem;
+  font-size: 0.16rem;
+  line-height: 0.2rem;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
 #header .search-box .search-mask {
   display: none;
   position: fixed;
