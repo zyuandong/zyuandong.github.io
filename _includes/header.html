@@ -67,6 +67,7 @@
   const URL = `{{ site.baseurl }}/datas/posts.json`;
   const $search = document.querySelector('.search-mask');
   const $input = document.querySelector('.search-input');
+  const $btn = $input.nextElementSibling;
 
   // 显示搜索面板
   const showSearchPanel = () => {
@@ -76,6 +77,12 @@
 
   // 隐藏搜索面板
   const hideSearchPanel = () => $search.style.display = 'none';
+
+  // 清空输入框
+  const clearSearchPanel = () => {
+    $input.value = '';
+    doFilter();
+  }
 
   // 封装过滤方法
   const dataFilter = (type, data, key) => {
@@ -94,9 +101,9 @@
       }
     };
 
-    let filteredData = data.filter((item, index) => {
+    const filteredData = data.filter((item, index) => {
       const str = item.title || item.name;
-      if (str.toLowerCase().includes(key)) {
+      if (str.toLowerCase().includes(key.trim())) {
         return item
       }
     });
@@ -112,6 +119,17 @@
       }
     });
     document.querySelector(`.${typeEnum[type].class}`).innerHTML = htmlStr || '<li class="no-data">No search results</li>';
+  };
+
+  const doFilter = (key = '') => {
+    // posts
+    dataFilter('post', res.posts, key);
+
+    // categories
+    dataFilter('category', res.categories, key);
+
+    // tags
+    dataFilter('tag', res.tags, key);
   };
 
   const getDataByAjax = () => {
@@ -145,7 +163,11 @@
   document.querySelector('.search-mask').addEventListener('click', (e) => {
     const $target = e.target;
     if ($target.className.includes('search-close-btn') || $target.className.includes('search-mask') || $target.tagName === 'A') {
+      clearSearchPanel();
       hideSearchPanel();
+    } else if ($target.className.includes('search-clear-btn')) {
+      clearSearchPanel();
+      $target.classList.replace('search-clear-btn', 'search-close-btn');
     }
   })
 
@@ -155,19 +177,18 @@
     // 快捷键 '/' 显示搜索面板
     if (e.keyCode === 191) showSearchPanel();
     // 快捷键 'Esc' 隐藏搜索面板
-    if (e.keyCode === 27) hideSearchPanel();
+    if (e.keyCode === 27) {
+      clearSearchPanel();
+      hideSearchPanel();
+    }
   })
 
   $input.addEventListener('input', (e) => {
+    // 根据输入内容是否为空，切换 ’x‘ 按钮功能
     const key = $input.value.toLowerCase();
+    $btn.classList.replace('search-clear-btn', 'search-close-btn');
+    if (key.length) $btn.classList.replace('search-close-btn', 'search-clear-btn');
 
-    // posts
-    dataFilter('post', res.posts, key);
-
-    // categories
-    dataFilter('category', res.categories, key);
-
-    // tags
-    dataFilter('tag', res.tags, key);
+    doFilter(key);
   })
 </script>

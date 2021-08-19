@@ -1449,9 +1449,12 @@ em {
 #header .search-box .result-box .search-box input {
   width: calc(100% - 0.5rem);
 }
-#header .search-box .result-box .search-box i.search-close-btn {
+#header .search-box .result-box .search-box i.icon-close {
   padding: 0.06rem 0.05rem;
   margin-right: -0.05rem;
+}
+#header .search-box .result-box .search-box i.icon-close.search-clear-btn {
+  color: var(--secondary);
 }
 #header .search-box .result-box .type {
   padding: 0.03rem 0.1rem;
