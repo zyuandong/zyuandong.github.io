@@ -15,7 +15,7 @@ last_modified_date: 2021-08-06
 
 决定了就要马上执行，开始为博客添加评论功能！🚀
 
-## 工具选型
+## 1. 工具选型
 
 在添加评论功能之前先确定一下选型的需求：
 
@@ -57,11 +57,11 @@ GitHub Pages 赋予博客技术属性，面向的读者自然就是技术人员�
 
 综上，最后我选择了使用 gitalk 搭建我的评论服务，大家可以参考我的总结选择自己最喜欢的工具来搭建评论服务。
 
-## 接入评论服务
+## 2. 接入评论服务
 
 如何使用 gitalk 搭建评论服务，其 [README](https://github.com/gitalk/gitalk/blob/master/readme.md) 中已经有详细的描述，并且还有 [中文版说明](https://github.com/gitalk/gitalk/blob/master/readme-cn.md)，我这就针对每个步骤简单说明一下。
 
-### 安装
+### 2.1. 安装
 
 - 直接引入
 
@@ -86,7 +86,7 @@ GitHub Pages 赋予博客技术属性，面向的读者自然就是技术人员�
   import Gitalk from 'gitalk';
   ```
 
-### 使用
+### 2.2. 使用
 
 这一步需要一个公开的 GitHub 仓库，评论数据就存储在这个仓库的 Issues 中。
 
@@ -133,7 +133,7 @@ gitalk.render('gitalk-container');
 
 ![暗黑主题](https://i.loli.net/2021/08/05/DzavpgOEjC9Xyhf.png)
 
-## 参考
+## 3. 参考
 
 - [gitalk](https://github.com/gitalk/gitalk)
 
