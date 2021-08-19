@@ -2378,7 +2378,8 @@ em {
     background: transparent;
     border-bottom: none;
   }
-  #site-container .container #header .search-btn input:not(.search-input) {
+  #site-container .container #header .search-btn input:not(.search-input),
+  #site-container .container #header .search-btn .shortcut-key {
     display: none;
   }
   #site-container .container #header i.icon-search,
