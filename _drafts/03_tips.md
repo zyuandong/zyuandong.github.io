@@ -5,6 +5,14 @@ category:
 tags:
 ---
 
+## === 20210823 ===
+
+- [Vue3](https://vue3js.cn/)
+
+- [面试题库](https://github.com/febobo/web-interview)
+
+- [vite实战：如何指定端口port及自动打开浏览器](http://blog.51weblove.com/397.html)
+
 ## === 20210817 ===
 
 - [前端核心工具：yarn、npm、cnpm三者如何优雅的在一起使用 ？](https://mp.weixin.qq.com/s?src=11&timestamp=1629185372&ver=3257&signature=vx*y*Q49WqeHMfll*a4b0nDDStdzp5C6bMGrJb6GXaIG6QanHOgY1YGNyXUmUt5fw1iqX3F-04FZfpX0ub5hU7afJDUUiEoYPsV2WzNj8nW9WRt5IbssMGo2FZ3ZMhD7&new=1)
