@@ -5,6 +5,30 @@ category:
 tags:
 ---
 
+## === 20210830 ===
+
+- [vue3 addRoute 页面刷新后 路由失效 (Vue Router warn): No match found for location with path](https://blog.csdn.net/weixin_43835425/article/details/116708448)
+
+- [kkfileview：使用SpringBoot打造多格式文件在线预览解决方案](https://zhuanlan.zhihu.com/p/147750515)
+
+- [keking / kkFileView](https://gitee.com/kekingcn/file-online-preview#https://kkfileview.keking.cn)
+
+- [Mysql数据库中有哪些数据类型?](https://zhuanlan.zhihu.com/p/50891083)
+
+- [uuid](https://www.npmjs.com/package/uuid)
+
+- [wx: 唯一识别码之UUID入门与实战](https://mp.weixin.qq.com/s?src=11&timestamp=1629703082&ver=3269&signature=4s1--uSB6W16JNQKksKMZFG-kU1HsiVxrVsjKQWYSp4v**X49KzE7TiVS1GyJXDSU3vgNcCuG3J1JuRlPDCX98sJS9orXvGyxQCTDANDRGkXpTxclA188oOTODhVVk6k&new=1)
+
+- [wx: 据说你想用JS写动画？](https://mp.weixin.qq.com/s?src=11&timestamp=1629791667&ver=3271&signature=J2jeSGGlsz2ROyEHkLVESMj6sjnUHFgleDe5gT5s9jKYb5TpRZCx2mUo*kFnOIVvdrPMHY*x7xYo0Rft6Jgp7q76o*BJhuUnFGEy3VZBrRp50Lw2a5bujaoCJFMxf11i&new=1)
+
+- [JS实现匀速与减速缓慢运动的动画效果封装示例](https://www.yisu.com/zixun/175552.html)
+
+- [js匀速动画&缓动动画](https://blog.csdn.net/qq_42079388/article/details/105465314)
+
+- [如何使用nodejs生成哈希头像---identicons](https://cnodejs.org/topic/5a056bd6ee9b35da75a86a21)
+
+- [stewartlord/identicon.js](https://github.com/stewartlord/identicon.js)
+
 ## === 20210823 ===
 
 - [Vue3](https://vue3js.cn/)

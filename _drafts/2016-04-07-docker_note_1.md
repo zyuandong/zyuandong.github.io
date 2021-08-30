@@ -159,6 +159,10 @@ server {
 
 `docker build -t <image name> .`
 
+查看所有镜像：
+
+`docker images`
+
 启动容器：
 
 `docker run -d --name <container name> -p 8080:80 <image name>`
@@ -171,6 +175,30 @@ server {
 访问地址： http://IP:8080，即可正常访问项目。
 
 IP 地址为宿主机的地址
+
+查看容器：
+
+```sh
+# 所有容器
+docker ps -a
+docker container ls -a
+
+# 运行中容器
+docker ps
+docker container ls
+```
+
+停止容器：
+
+`docker container stop <container ID | container name>`
+
+运行已停止的容器：
+
+`docker container start <container ID | container name>`
+
+删除容器：
+
+`docker container rm <contaienr ID | container name>`
 
 ### 需要修改容器中的配置文件
 
