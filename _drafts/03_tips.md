@@ -5,6 +5,20 @@ category:
 tags:
 ---
 
+## === 20210901 ===
+
+- [使用Node.js实现base64和png文件相互转换的方法](https://www.jb51.net/article/182413.htm)
+
+- [wx: 5分钟学会nodejs文件增删改查](https://mp.weixin.qq.com/s?src=11&timestamp=1630475591&ver=3287&signature=3lRAE214Zcr3qesKtSsx4OyGnTRe5zQLock0IThxvEJH8Kd5TDktYZDzVR1XZjRM5I5ZUNmhTBXonVoB7Fp*eaUTztju*LXIloaye7skFlD3vKH7KJVTgiEWeWPOxzsJ&new=1)
+
+- [js blob与base64互转、以及file和base64的相互转换](http://www.manongjc.com/detail/24-civwrgnuqscbpsp.html)
+
+- [wx: 数据库系列 | MYSQL VARCHAR 类型详解](https://mp.weixin.qq.com/s?src=11&timestamp=1630465628&ver=3287&signature=HohKfgvV9Z8GjYLx-ebGxJf39kxWjhRLepMq3jRGNVKGW6IFVr67c5YavCc7626DIjysHf5vi6crEjyIJ9cQQ6KPeb4Lnmfx-Pk6IzMHL9UC0u2YkJICVK2ULjGCRMV7&new=1)
+
+- 在线格式转换：[aconvert.com](https://www.aconvert.com/cn/)
+
+- [不要把 svg 转成 base64](https://qianduan.net/dont-svg-base64/)
+
 ## === 20210830 ===
 
 - [wx: 用 CSS 实现自定义滚动条样式](https://mp.weixin.qq.com/s?src=11&timestamp=1630290247&ver=3283&signature=OuqnuSjAhm3BkpJrrbjw-RAQ8j5PHX8t3vdG10OEQp4t**1B33O6C0FdVUfRmVFRIfDHkwEmuI5qWodSiLPQfamMCPLfEJglmFK0HH*LgqxZNTy3DtHoxZbosNITegaZ&new=1)
