@@ -5,6 +5,14 @@ category:
 tags:
 ---
 
+## === 20210905 ===
+
+- [使用原生js通过缓动函数实现抽奖转盘动画](https://zhuanlan.zhihu.com/p/372894854)
+
+- [js定时器的时间最小值-setTimeout、setInterval](https://www.cnblogs.com/daysme/p/6207495.html)
+
+- [基本初等函数图形及几种常用曲线](https://blog.csdn.net/hnyy0301/article/details/104150845)
+
 ## === 20210901 ===
 
 - [使用Node.js实现base64和png文件相互转换的方法](https://www.jb51.net/article/182413.htm)
