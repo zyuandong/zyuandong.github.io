@@ -13,6 +13,14 @@ tags:
 
 - [基本初等函数图形及几种常用曲线](https://blog.csdn.net/hnyy0301/article/details/104150845)
 
+- [wx: 18种推荐的CSS命名和书写规范](https://mp.weixin.qq.com/s?src=11&timestamp=1630565697&ver=3289&signature=NXVAM87nMiFP7SipREWYEPJqBnf9-eVzfmKn6nPfDAY6R7ce2EmYOpSnxMCzcnD3N2x87-A7ErtdXBPrY9pgwI9Xf074omF6WUatll*P60iBxWBDoZzWPq-CfrFDn5Yy&new=1)
+
+- [如何规范 CSS 的命名和书写？](https://www.zhihu.com/question/19586885)
+
+- 百度 fex 团队 [fex-team/styleguide](https://github.com/fex-team/styleguide/blob/master/css.md)
+
+- 腾讯 AlloyTeam [Code Guide by @AlloyTeam](http://alloyteam.github.io/CodeGuide/)
+
 ## === 20210901 ===
 
 - [使用Node.js实现base64和png文件相互转换的方法](https://www.jb51.net/article/182413.htm)
