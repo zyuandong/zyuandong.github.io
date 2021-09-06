@@ -5,6 +5,36 @@ category:
 tags:
 ---
 
+## === 20210907 ===
+
+- [如何评价阿里开源的企业级 Node.js 框架 EggJS？](https://www.zhihu.com/question/50526101)
+
+- [Egg.js](https://eggjs.org/zh-cn/)
+
+- [深度对比三种主流微服务配置中心](https://zhuanlan.zhihu.com/p/62191330)
+
+- [nacos入门-nacos简介与启动](http://liflag.cn/post/39)
+
+- [egg中如何使用nacos微服务](https://blog.csdn.net/weixin_40829594/article/details/114111912)
+
+- [注册Vue SSR服务到Nacos服务中心](https://www.yuque.com/samirguo/oboxgd/uy07zz)
+
+- [node.js 调用gRpc服务](https://www.gitmemory.com/issue/alibaba/nacos/5145/803715560)
+
+- [Nacos - 服务端处理实例列表请求](https://segmentfault.com/a/1190000038835528)
+
+- [Node集成到微服务体系](https://juejin.cn/post/6845166890709417991)
+
+- [Node微服务选型设计问题。](https://cnodejs.org/topic/5bbda56837a6965f59052042)
+
+- [NestJS](https://docs.nestjs.cn/)
+
+- [Next.js](https://www.nextjs.cn/)
+
+- [gRPC详解](https://www.jianshu.com/p/9c947d98e192)
+
+- [gRPC](https://www.grpc.io/)
+
 ## === 20210906 ===
 
 - [微服务平台下基于GraphQL构建BFF的实践与思考: GMTC](https://www.infoq.cn/video/H66bxlDNX08wsfxuQgyW)
