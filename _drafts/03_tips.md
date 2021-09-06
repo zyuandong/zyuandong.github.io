@@ -29,7 +29,7 @@ tags:
 
 - [js blob与base64互转、以及file和base64的相互转换](http://www.manongjc.com/detail/24-civwrgnuqscbpsp.html)
 
-- [wx: 数据库系列 | MYSQL VARCHAR 类型详解](https://mp.weixin.qq.com/s?src=11&timestamp=1630465628&ver=3287&signature=HohKfgvV9Z8GjYLx-ebGxJf39kxWjhRLepMq3jRGNVKGW6IFVr67c5YavCc7626DIjysHf5vi6crEjyIJ9cQQ6KPeb4Lnmfx-Pk6IzMHL9UC0u2YkJICVK2ULjGCRMV7&new=1)
+- [wx: 数据库系列：MYSQL VARCHAR 类型详解](https://mp.weixin.qq.com/s?src=11&timestamp=1630465628&ver=3287&signature=HohKfgvV9Z8GjYLx-ebGxJf39kxWjhRLepMq3jRGNVKGW6IFVr67c5YavCc7626DIjysHf5vi6crEjyIJ9cQQ6KPeb4Lnmfx-Pk6IzMHL9UC0u2YkJICVK2ULjGCRMV7&new=1)
 
 - 在线格式转换：[aconvert.com](https://www.aconvert.com/cn/)
 
