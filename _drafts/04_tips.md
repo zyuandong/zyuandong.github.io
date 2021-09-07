@@ -7,6 +7,16 @@ tags:
 
 ## === 20210907 ===
 
+- [【原创】GraphQL学习：分页](https://www.jianshu.com/p/79af61abb4ff)
+
+- [混搭 TypeScript + GraphQL + DI + Decorator 风格写 Node.js 应用](https://mp.weixin.qq.com/s?src=11&timestamp=1630998245&ver=3299&signature=SP-rHF4EMMf2PkAUmnKuNQYAHNiKtiPlESQpj3t3g3aM5pVOt-da2nHSIG9d58Uu-xQ3lIDW9Q5a309wkeUdozgjDkPlAZ*uLoucGuBjhqYpOaaVZpW5lC97J6Rp*5U*&new=1)
+
+- [GraphQL（七）：GraphQL分页及原理分析](https://www.jianshu.com/p/5e37f6528dc4)
+
+- [koa框架使用graphQL管理api](https://blog.csdn.net/qq_40816649/article/details/88419762)
+
+---
+
 - [如何评价阿里开源的企业级 Node.js 框架 EggJS？](https://www.zhihu.com/question/50526101)
 
 - [Egg.js](https://eggjs.org/zh-cn/)
@@ -31,9 +41,17 @@ tags:
 
 - [Next.js](https://www.nextjs.cn/)
 
+- [wx: RPC 发展史](https://mp.weixin.qq.com/s?src=11&timestamp=1630978481&ver=3299&signature=hbioxSQ0clxzq0TJndFIlU-t0doRooniyDQWK7FWBTb6cgx2nadwCjUYBKzgoMbT0ycetcggAjZ4CwEXc32A9FCkL4MGHs3jaqkPI95xYf8H0fPxFK0bD3HS5-KMYHLi&new=1)
+
+- [wx: gRPC入门指南 — 简单RPC（一）](https://mp.weixin.qq.com/s?src=11&timestamp=1630978491&ver=3299&signature=uJUR-NS4j7bZ6exVPeYTzy4yIWYttttd1GHEW4w2RYrTEtNTuKdbJfzRGA8l-SQJkgJTcBh7Fjd-tC00mb8iSWniLZEbUxlfvoL0DFMEYcRd4L16nPlclsik4*CKpk7V&new=1)
+
+- [gRPC 简介及优缺点](https://www.jianshu.com/p/5f664efd5798)
+
 - [gRPC详解](https://www.jianshu.com/p/9c947d98e192)
 
 - [gRPC](https://www.grpc.io/)
+
+- [nodejs负载均衡（一）：服务负载均衡](https://zhuanlan.zhihu.com/p/129838721)
 
 ## === 20210906 ===
 
