@@ -69,6 +69,8 @@ tags:
 
 - [GraphQL及元数据驱动架构在后端BFF中的实践](https://zhuanlan.zhihu.com/p/370436576)
 
+- BFF：[Pattern: Backends For Frontends](https://samnewman.io/patterns/architectural/bff/)
+
 ---
 
 - [dockone.io: Consul](http://dockone.io/topic/Consul)
