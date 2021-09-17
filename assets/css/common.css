@@ -1403,7 +1403,6 @@ em {
   font-size: 0.16rem;
   line-height: 0.2rem;
   display: inline-block;
-  vertical-align: text-bottom;
 }
 #header .search-box .search-mask {
   display: none;
