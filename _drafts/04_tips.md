@@ -5,6 +5,18 @@ category:
 tags:
 ---
 
+## === 20210918 ===
+
+- [HTML5中的data-*自定义属性](https://zhuanlan.zhihu.com/p/94849216)
+
+- [vue 监听路由变化](https://www.cnblogs.com/crazycode2/p/8727410.html)(有大量标签)
+
+- [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
+- [Flex 布局教程：实例篇](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
+
+- [关于nodejs连接MySQL返回的数据有RowDataPacket问题](https://www.cnblogs.com/lanker/p/9321838.html)
+
 ## === 20210910 ===
 
 - [学会这几招,轻松让你的github脱颖而出](https://juejin.cn/post/6997070653010477087)
