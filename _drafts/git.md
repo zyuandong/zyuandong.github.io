@@ -75,7 +75,7 @@ git push origin HEAD --force
 
 ## 省略填写用户名、密码
 
-1. 添加配置：`git config  credential.helper store`，不加 --global
+1. 添加配置：`git config  credential.helper store`，不加 `--global / -g`
 
 2. pull 或 push，输入用户名、密码
 
