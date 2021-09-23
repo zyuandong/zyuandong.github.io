@@ -5,6 +5,18 @@ category:
 tags:
 ---
 
+## === 20210923 ===
+
+- [pdf.js](https://github.com/mozilla/pdf.js) : [Demo](https://mozilla.github.io/pdf.js/web/viewer.html)
+
+- [rkusa/pdfjs](https://github.com/rkusa/pdfjs) : [Demo](http://pdfjs.rkusa.st/)
+
+- [react-pdf-ner-annotator](https://www.npmjs.com/package/react-pdf-ner-annotator) : [Demo](https://react-annotator-demo.netlify.app/)
+
+- [@pdftron/webviewer](https://www.npmjs.com/package/@pdftron/webviewer)
+
+- [@pdftron/pdfjs-express](https://www.npmjs.com/package/@pdftron/pdfjs-express)
+
 ## === 20210918 ===
 
 - [HTML5中的data-*自定义属性](https://zhuanlan.zhihu.com/p/94849216)
