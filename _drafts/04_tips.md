@@ -5,6 +5,16 @@ category:
 tags:
 ---
 
+## === 20210924 ===
+
+问题：
+
+- 微前端接入微应用：
+  - 样式冲突：
+    - 微应用未占满 （calc() 解决
+  - 微应用菜单高亮
+    - ElementUI -> ElMenu 组件设置 :defaultActive 时不能使用全路径匹配，应使用模糊匹配，因为主应用接入微应用时会加一层 context
+
 ## === 20210923 ===
 
 - [pdf.js](https://github.com/mozilla/pdf.js) : [Demo](https://mozilla.github.io/pdf.js/web/viewer.html)

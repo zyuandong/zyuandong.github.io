@@ -4,6 +4,8 @@ category: 技术
 tag: Node.js
 ---
 
-《The Node Beginner Book》中文翻译为《Node 入门》，是由[Manuel Kiessling](https://twitter.com/manuelkiessling)编写的node.js入门书籍。书籍总页数不多，但是作为入门书籍，作者由简单到复杂，逐步加深读者对node的认识，每个例子都非常经典。
+《The Node Beginner Book》中文翻译为《Node 入门》，是由[Manuel Kiessling](https://twitter.com/manuelkiessling)编写的 node.js 入门书籍。书籍总页数不多，但是作为入门书籍，作者由简单到复杂，逐步加深读者对 node 的认识，每个例子都非常经典。
 
-我就将自己通过本书入门node.js的过程记录在本篇文章中。方便以后的回顾与学习。
+我就将自己通过本书入门 node.js 的过程记录在本篇文章中。方便以后的回顾与学习。
+
+- [什么是 Nodejs ?](https://zhuanlan.zhihu.com/p/47822968)
