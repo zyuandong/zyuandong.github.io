@@ -15,6 +15,34 @@ Promise.all([getRuleZyx(), getRuleZh(), getRuleZx(), getRuleZtmc()])
   .catch(() => {});
 ```
 
+所有 promise 全部 resolve:
+
+```js
+const p1 = Promise.resolve(1);
+const p2 = Promise.resolve(2);
+const p3 = Promise.resolve(3);
+Promise.all([p1, p2, p3]).then((res) => {
+  console.log(res); // [1,2,3]
+});
+```
+
+任何 promise 为 reject, 整个 Promise.all 立即终止，并返回此 reject:
+
+```js
+const p1 = Promise.resolve(1);
+const p2 = Promise.reject(2);
+const p3 = Promise.resolve(3);
+Promise.all([p1, p2, p3])
+  .then((res) => {
+    // then 方法不会被执行
+    console.log(res);
+  })
+  .catch((err) => {
+    // catch 方法将会被执行，输出结果为：2
+    console.log(err);
+  });
+```
+
 [JS - Promise 使用详解--摘抄笔记](https://www.cnblogs.com/sweeeper/p/8442613.html)
 
 [Promise](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014345008539155e93fc16046d4bb7854943814c4f9dc2000)
