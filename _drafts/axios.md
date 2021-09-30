@@ -1,6 +1,33 @@
+---
+title: Axios
+---
+
+```js
+import Axios from "axios";
+
+const instance = Axios.create({
+  headers: {},
+  baseURL: "",
+  timeout: 1000,
+});
+
+instance.interceptors.request.use(
+  (config) => config,
+  (error) => Promise.reject(error)
+);
+
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => Promise.reject(error)
+);
+
+export default instance;
+```
+
+## 参考
+
 [axios/zh-cn](http://www.axios-js.com/zh-cn/)
 
 [使用说明](https://www.kancloud.cn/yunye/axios/234845)
 
-[vue axios全攻略](https://www.cnblogs.com/libin-1/p/6607945.html)
-
+[vue axios 全攻略](https://www.cnblogs.com/libin-1/p/6607945.html)
