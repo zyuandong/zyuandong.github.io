@@ -102,7 +102,20 @@ $dark: (
     --#{$name}: #{$value};
   }
 }
-
 ```
 
 // TODO 路由方式控制页面跳转
+
+## 纪念主题
+
+```css
+html {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(1);
+}
+```
