@@ -39,17 +39,20 @@ tags: [Todo]
 
 - 201209-1212 : 1301-201307
 
-  201209 java
+  - Java / data structure
+  - Network / Java OOP
 
 - 201309-1312 : 1401-201407
 
-  1409: interview
+  - DB / Java Web / Network Object
+
+  - interview
 
   1410-1412: shiyanlou
 
 - 201409-1412 : 1501-201507
 
-  ~~150206: jekyll~~
+  - Linux / Git / Jekyll
 
   150827: nodejs blog
 
@@ -63,7 +66,7 @@ tags: [Todo]
 
 - 1607-1907 chinaCloud
 
-  160802 angular demo ***
+  160802 angular demo \*\*\*
 
   160921 d3js demo
 
@@ -85,7 +88,7 @@ tags: [Todo]
 
   190408 owner ui
 
-- 1907-* bkcloud
+- 1907-\* bkcloud
 
   200102 learn hibernate
 
@@ -102,3 +105,5 @@ tags: [Todo]
   200824 kmsp-api
 
   210701 vite vue3 react18
+
+- [大学软件工程课程安排.doc](https://www.docin.com/p-454877706.html)
