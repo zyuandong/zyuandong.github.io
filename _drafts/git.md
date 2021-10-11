@@ -59,15 +59,15 @@ git push origin HEAD --force
 ## 参考
 
 删除本地
-[git怎么删除某一次提交？(Elpie Kay 的回答)](https://www.zhihu.com/question/324710274/answer/685892850)
+[git 怎么删除某一次提交？(Elpie Kay 的回答)](https://www.zhihu.com/question/324710274/answer/685892850)
 
 删除远程
-[清除Github提交历史记录](http://zhuanlan.zhihu.com/p/35078876)
+[清除 Github 提交历史记录](http://zhuanlan.zhihu.com/p/35078876)
 
 其他待验证
-[Git奇技|随意删除某个commit](https://zhuanlan.zhihu.com/p/270033984)
+[Git 奇技|随意删除某个 commit](https://zhuanlan.zhihu.com/p/270033984)
 
-[git revert命令](https://mp.weixin.qq.com/s?src=11&timestamp=1619752860&ver=3039&signature=*tfIdAQRtmiUElxK*N*unQbS1ZXm*Ug92QvtmjYKOAP3H6Yif71l3HQYPPz1gYNypeqfWwoqYU*s09cZutBksc7g*fz20Lna3anrF0-fjuQAVio4prQ6cfi27yjmRdjf&new=1)
+[git revert 命令](https://mp.weixin.qq.com/s?src=11&timestamp=1619752860&ver=3039&signature=*tfIdAQRtmiUElxK*N*unQbS1ZXm*Ug92QvtmjYKOAP3H6Yif71l3HQYPPz1gYNypeqfWwoqYU*s09cZutBksc7g*fz20Lna3anrF0-fjuQAVio4prQ6cfi27yjmRdjf&new=1)
 
 [git 删除远程分支上的某次提交](https://zhuanlan.zhihu.com/p/39645306)
 
@@ -75,12 +75,12 @@ git push origin HEAD --force
 
 ## 省略填写用户名、密码
 
-1. 添加配置：`git config  credential.helper store`，不加 `--global / -g`
+1. 添加配置：`git config credential.helper store`，不加 `--global / -g`
 
 2. pull 或 push，输入用户名、密码
 
 3. 再次 pull 或 push，就不再需要用户名、密码
 
-## 参考2
+## 参考 2
 
-- [git提交时不用输入用户名密码的方法](https://jingyan.baidu.com/article/4b07be3cf27d8148b280f36a.html)
+- [git 提交时不用输入用户名密码的方法](https://jingyan.baidu.com/article/4b07be3cf27d8148b280f36a.html)
