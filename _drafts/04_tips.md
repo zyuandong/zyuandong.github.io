@@ -5,6 +5,14 @@ category:
 tags:
 ---
 
+## === 20211012 ===
+
+- [又拍云](https://www.cnblogs.com/upyun/)
+
+- [袋鼠云数栈前端](https://www.cnblogs.com/dtux/)
+
+- [算法推荐管](https://www.cnblogs.com/cxyxz/)
+
 ## === 20210924 ===
 
 问题：

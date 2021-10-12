@@ -1,6 +1,6 @@
 ---
-title: Todo
-tags: [Todo]
+title: TODO
+tags: [TODO]
 ---
 
 ## TODO
