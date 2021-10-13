@@ -13,6 +13,20 @@ tags:
 
 - [算法推荐管](https://www.cnblogs.com/cxyxz/)
 
+- [解决Vite-React项目中js使用jsx语法报错的问题](https://www.cnblogs.com/roseAT/p/15399197.html)
+
+- [Serverless 工程实践 | 零基础上手 Knative 应用](https://www.cnblogs.com/alisystemsoftware/p/15399346.html)
+
+- [uniapp小程序迁移到TS](https://www.cnblogs.com/WindrunnerMax/p/15399408.html)
+
+- [【Docker】(9)---每天5分钟玩转 Docker 容器技术之镜像](https://www.cnblogs.com/qdhxhz/p/15385917.html)
+
+- [ECMA 2022 (es13) 新特性](https://www.cnblogs.com/guojikun/p/15399917.html)
+
+- [react之组件生命周期](https://www.cnblogs.com/ypSharing/p/15400990.html)
+
+- [函数式编程 —— 将 JS 方法函数化](https://www.cnblogs.com/index-html/p/js-method-functional-style.html)
+
 ## === 20210924 ===
 
 问题：

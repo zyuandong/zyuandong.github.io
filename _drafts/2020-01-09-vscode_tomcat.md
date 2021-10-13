@@ -17,4 +17,6 @@ category: 随笔
 
 ## 参考
 
-- [VsCode 运行Java Web 项目（Tomcat）](https://www.jianshu.com/p/1355b54a5801)
+- [VsCode 运行 Java Web 项目（Tomcat）](https://www.jianshu.com/p/1355b54a5801)
+
+- [Tomcat 基础教程（一）](https://www.cnblogs.com/windy1118/p/TomcatLearning.html)
