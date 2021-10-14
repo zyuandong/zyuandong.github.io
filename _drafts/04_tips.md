@@ -5,6 +5,40 @@ category:
 tags:
 ---
 
+```js
+const oldData = [
+  {id:1,name:'boss',parentId:0},
+  {id:2,name:'lily',parentId:1},
+  {id:3,name:'jack',parentId:1},
+  {id:4,name:'john',parentId:2},
+  {id:5,name:'boss2',parentId:0},
+]
+
+
+function listToTree(oldArr){
+  oldArr.forEach(element => {
+    let parentId = element.parentId;
+    if(parentId !== 0){
+      oldArr.forEach(ele => {
+        if(ele.id == parentId){ //当内层循环的ID== 外层循环的parendId时，（说明有children），需要往该内层id里建个children并push对应的数组；
+          if(!ele.children){
+            ele.children = [];
+          }
+          ele.children.push(element);
+        }
+      });
+    }
+  });
+  console.log(oldArr) //此时的数组是在原基础上补充了children;
+  oldArr = oldArr.filter(ele => ele.parentId === 0); //这一步是过滤，按树展开，将多余的数组剔除；
+  console.log(oldArr)
+  return oldArr;
+}
+listToTree(oldData);
+```
+
+- [js 实现 list转换成tree的方法示例（数组到树）](https://www.jb51.net/article/167897.htm)
+
 ## === 20211012 ===
 
 - [又拍云](https://www.cnblogs.com/upyun/)
