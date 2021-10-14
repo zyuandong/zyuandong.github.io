@@ -27,6 +27,16 @@ tags:
 
 - [函数式编程 —— 将 JS 方法函数化](https://www.cnblogs.com/index-html/p/js-method-functional-style.html)
 
+- [JavaScript算法之递归](https://zhuanlan.zhihu.com/p/60643630)
+
+- [要理解递归就要先理解递归：手把手教你写递归](https://www.cnblogs.com/linj7/p/14154347.html)
+
+- [递归函数的定义和几个小例子](https://www.cnblogs.com/tianyiliang/p/7775071.html)
+
+- [学习 JavaScript Reduce 方法的 10 个例子](https://mp.weixin.qq.com/s?src=11&timestamp=1634191425&ver=3373&signature=Alc8QbFHoqUtXJE4ZJvMtVMdV4W5ApisOh31uY9Y6leZQLBg21ta2ARheiGTjKWxIudS2NW1CHd1v3y-UllsceuvcaiA3XSQ*qmTJXCz9u5wP9jc2l**sj6m0ESDjEFj&new=1)
+
+- [浅谈JS中 reduce() 的用法](https://www.jianshu.com/p/541b84c9df90)
+
 ## === 20210924 ===
 
 问题：
