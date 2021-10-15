@@ -14,7 +14,6 @@ const oldData = [
   {id:5,name:'boss2',parentId:0},
 ]
 
-
 function listToTree(oldArr){
   oldArr.forEach(element => {
     let parentId = element.parentId;

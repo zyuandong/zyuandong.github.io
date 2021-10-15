@@ -119,3 +119,5 @@ html {
   -webkit-filter: grayscale(1);
 }
 ```
+
+- [通过 sass-resources-loader 全局注册 Sass 变量](https://www.jianshu.com/p/5c3d457fbec9)
