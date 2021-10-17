@@ -5,6 +5,10 @@ category:
 tags:
 ---
 
+- [m3u8到底是什么格式？一篇文章搞定m3u8下载](https://zhuanlan.zhihu.com/p/346683119)
+
+- [三段论推理中几种常见的错误形式](https://www.jianshu.com/p/39ad8c87bac6)
+
 ```js
 const oldData = [
   {id:1,name:'boss',parentId:0},

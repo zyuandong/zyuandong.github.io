@@ -16,3 +16,5 @@ title: VS Code & Java
 - Spring Boot Tools
 - Spring Initializr Java Support
 - Spring Boot Dashboard
+
+- [VS Code 运行 SpringBoot 项目](https://cloud.tencent.com/developer/article/1631134)
