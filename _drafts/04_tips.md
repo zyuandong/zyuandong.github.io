@@ -13,9 +13,15 @@ tags:
 
 - [不隐藏滚动条使滚动条不占据位置](https://www.jianshu.com/p/f21463fe9908)
 
-- [wx: position:sticky 粘性定位的几种巧妙应用](https://mp.weixin.qq.com/s?src=11&timestamp=1634797186&ver=3387&signature=0kYmarZQOoOQItZOdFuGYQ24FnJq7TNXS31MSYsOttRVgIgSuiI19Dd6B483Ik-PuiCMcMsWlJMcwbwX-Xxoa*EYePkSydik4TeAYs5Z9yGsmn8*JNK3kupY4QX9gkew&new=1)
+- [wx: position:sticky 粘性定位的几种巧妙应用](https://mp.weixin.qq.com/s/i1tHSfB7iYt2CA3krqU2uA)
 
 - [element 滚动条组件 el-scrollbar 的使用](https://blog.csdn.net/qq_38157825/article/details/114367278)
+
+- [js 中 reduce 用法详解](https://www.cnblogs.com/smallpen/p/10249288.html)
+
+- [Node.js 构建 GraphQL 接口入门](https://zhuanlan.zhihu.com/p/365630784)
+
+- [TypeScript + GraphQL = TypeGraphQL](https://zhuanlan.zhihu.com/p/56516614)
 
 ---
 
