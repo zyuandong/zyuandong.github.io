@@ -5,6 +5,10 @@ category:
 tags:
 ---
 
+## 20211023
+
+`<marquee>` 标签用来插入一段滚动的文字(已弃用)
+
 ## 20211022
 
 - [chrome devTools 调试小技巧](https://www.cnblogs.com/cczlovexw/p/13218565.html)
