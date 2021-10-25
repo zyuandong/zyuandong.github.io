@@ -57,6 +57,8 @@ tags:
 
 - [三段论推理中几种常见的错误形式](https://www.jianshu.com/p/39ad8c87bac6)
 
+## list 2 tree
+
 ```js
 const oldData = [
   { id: 1, name: "boss", parentId: 0 },
