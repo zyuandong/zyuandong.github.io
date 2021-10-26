@@ -5,6 +5,86 @@ category:
 tags:
 ---
 
+## 20211026
+
+### 修改复选框样式
+
+```html
+<label for="auto-login" class="checkbox">
+  <span class="checkbox-input">
+    <input type="checkbox" class="checkbox-original" id="auto-login" />
+    <span class="checkbox-inner"></span>
+  </span>
+  <span class="checkbox-label">自动登录</span>
+</label>
+```
+
+样式:
+
+```scss
+.checkbox {
+  cursor: pointer;
+  position: relative;
+
+  .checkbox-input {
+    line-height: 1;
+    vertical-align: middle;
+    margin: 0 0.08rem 0 0;
+  }
+
+  .checkbox-inner {
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.02rem;
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46), background-color 0.25s
+        cubic-bezier(0.71, -0.46, 0.29, 1.46);
+
+    &:hover {
+      border-color: #1890ff;
+    }
+
+    &::after {
+      content: "";
+      width: 0.04rem;
+      height: 0.08rem;
+      box-sizing: content-box;
+      border: 1px solid #fff;
+      border-top: 0;
+      border-left: 0;
+      position: absolute;
+      top: 1px;
+      left: 0.04rem;
+      transform: rotate(45deg) scaleY(0);
+      transition: transform 0.15s ease-in 0.05s;
+      transform-origin: center;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    z-index: -1;
+
+    &:checked + .checkbox-inner {
+      background-color: #409eff;
+      border-color: #409eff;
+
+      &::after {
+        transform: rotate(45deg) scaleY(1);
+      }
+    }
+  }
+}
+```
+
 ## 20211023
 
 `<marquee>` 标签用来插入一段滚动的文字(已弃用)

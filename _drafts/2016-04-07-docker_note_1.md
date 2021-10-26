@@ -37,6 +37,8 @@ docker image ls
 docker pull nginx
 
 docker run --name nginx-container -p 8080:80 -d nginx
+
+docker image rm <image ID>
 ```
 
 ### 容器
