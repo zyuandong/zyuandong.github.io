@@ -11,22 +11,22 @@ monthLast: true
 
 ---
 
-## Docker概念
+## Docker 概念
 
 ### 容器技术
 
-Linux容器技术很早就有了，比较有名的是被集成到主流Linux内核中的LXC项目。容器通过对操作系统的资源访问进行限制，构建成独立的资源池，让应用运行在一个相对隔离的空间里，同时容器间也可以进行通信。
-容器技术对比虚拟化技术，容器比虚拟化更轻量级，对资源的消耗小很多。容器操作也更快捷，启动和停止都要比虚拟机快。但Docker容器需要与主机共享操作系统内核，不能像虚拟机那样运行独立的内核。
-Docker是一个基于LXC技术构建的容器引擎，基于GO语言开发，遵循Apache2.0协议开源。Docker的发展得益于为使用者提供了更好的容器操作接口。包括一系列的容器，镜像，网络等管理工具，可以让用户简单的创建和使用容器。
-Docker支持将应用打包进一个可以移植的容器中，重新定义了应用开发，测试，部署上线的过程，核心理念就是 Build once, Run anywhere。
-Docker容器技术的典型应用场景是开发运维上提供持续集成和持续部署的服务。
-下面我们开始介绍Docker中的几个基本概念。
+Linux 容器技术很早就有了，比较有名的是被集成到主流 Linux 内核中的 LXC 项目。容器通过对操作系统的资源访问进行限制，构建成独立的资源池，让应用运行在一个相对隔离的空间里，同时容器间也可以进行通信。
+容器技术对比虚拟化技术，容器比虚拟化更轻量级，对资源的消耗小很多。容器操作也更快捷，启动和停止都要比虚拟机快。但 Docker 容器需要与主机共享操作系统内核，不能像虚拟机那样运行独立的内核。
+Docker 是一个基于 LXC 技术构建的容器引擎，基于 GO 语言开发，遵循 Apache2.0 协议开源。Docker 的发展得益于为使用者提供了更好的容器操作接口。包括一系列的容器，镜像，网络等管理工具，可以让用户简单的创建和使用容器。
+Docker 支持将应用打包进一个可以移植的容器中，重新定义了应用开发，测试，部署上线的过程，核心理念就是 Build once, Run anywhere。
+Docker 容器技术的典型应用场景是开发运维上提供持续集成和持续部署的服务。
+下面我们开始介绍 Docker 中的几个基本概念。
 
 ### 镜像
 
-Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。
-镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。
-用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。
+Docker 的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。
+镜像可以基于 Dockerfile 构建，Dockerfile 是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。
+用户可以通过编写 Dockerfile 创建新的镜像，也可以直接从类似 github 的 Docker Hub 上下载镜像使用。
 
 ```cmd
 docker search nginx
@@ -43,8 +43,8 @@ docker image rm <image ID>
 
 ### 容器
 
-Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。
-在Docker容器中，每个容器之间的隔离使用过Linux的 CGroups 和 Namespaces 技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。
+Docker 容器是由 Docker 镜像创建的运行实例。Docker 容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。
+在 Docker 容器中，每个容器之间的隔离使用过 Linux 的 CGroups 和 Namespaces 技术实现的。其中 CGroups 对 CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。
 
 ```cmd
 docker ps
@@ -65,9 +65,9 @@ docker container exec -it <container id> /bin/bash
 
 ### 仓库
 
-如果你使用过 git 和 github 就很容易理解Docker的仓库概念。Docker仓库相当于一个 github 上的代码库。
-Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。
-仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull拉取镜像到本地。
+如果你使用过 git 和 github 就很容易理解 Docker 的仓库概念。Docker 仓库相当于一个 github 上的代码库。
+Docker 仓库是用来包含镜像的位置，Docker 提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同 tag 的镜像。Docker 运行中使用的默认仓库是 Docker Hub 公共仓库。
+仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull 拉取镜像到本地。
 
 ## 搭建 Docker 环境
 
@@ -210,7 +210,7 @@ docker container ls
 
 针对修改 Nginx 配置文件这个例子，进入容器内部:
 
- `docker container exec -it <container name> bash`
+`docker container exec -it <container name> bash`
 
 修改 Nginx 配置文件：
 
@@ -228,7 +228,7 @@ docker container ls
 
 > 映射配置文件：把宿主机上的配置文件映射到启动的容器当中
 
-``` Dockerfile
+```Dockerfile
 docker run \
 -d --name <container name> \
 -p 8080:80 \
@@ -239,7 +239,7 @@ docker run \
 
 or
 
-``` Dockerfile
+```Dockerfile
 docker run \
 -d --name <container name> \
 -p 8080:80 \
@@ -250,7 +250,7 @@ docker run \
 
 这样以后修改了配置文件，只需要重启容器就能使配置文件生效。
 
-*最开始 -v 或者 --volume 选项是给单独容器使用， --mount 选项是给集群服务使用。但是从 Docker 17.06 开始，也可以在单独容器上使用 --mount。*
+_最开始 -v 或者 --volume 选项是给单独容器使用， --mount 选项是给集群服务使用。但是从 Docker 17.06 开始，也可以在单独容器上使用 --mount。_
 
 shell 脚本 `runApp.sh`：
 
@@ -284,9 +284,9 @@ nginx-vue-image_1.0
 
 - [8 个基本的 Docker 容器管理命令](https://mp.weixin.qq.com/s?src=11&timestamp=1620971083&ver=3067&signature=RlymF*sP*UEbU*eQRpI3coenrhRYMNOtvm*WBw5Km*uadfWKkDAB9w5Rpo0JqQ5zDMb15z4JUMsHsYHUrb1G0Lk5599S2HYT*5qyYUIHJGUjFqIrEw9uhkbKPtJGOHhh&new=1)
 
-- [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
+- [docker 上启动 nginx,并配置修改 nginx 的配置文件](https://blog.csdn.net/weixin_45839894/article/details/112269082)
 
-- [Docker部署nginx并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
+- [Docker 部署 nginx 并修改配置文件](https://blog.csdn.net/weixin_34354173/article/details/92726480)
 
 - [Docker + Nginx 部署 Vue 项目](https://zhuanlan.zhihu.com/p/345622879)
 
@@ -294,14 +294,16 @@ nginx-vue-image_1.0
 
 - [Dockerfile 详解，看这一篇就够了](https://mp.weixin.qq.com/s?src=11&timestamp=1620971128&ver=3067&signature=1b8aa4iDOAu3FODtaJsKZMWgS-*WX-9nxBGVHFDejNpnM2AclUsqRfNycnqREx5Oe8atM69zCeu8mJDHlmKF9sWECzQk*kJBWx8Qr*n66gQbaTitw455g15DmJMGCHCi&new=1)
 
-- [使用nginx代理vue项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620971153&ver=3067&signature=EB6NnhoulxyTerTQyTfUc52LXsll-DCaggDZpUj4fnFb55TMvzIwBwAzpef6mBYo5HQUIzREnR--qzU4gV*Y69oukaoEWln2ieF6mY694S7QgR74JOH-gZM*2nvWgSaO&new=1)
+- [使用 nginx 代理 vue 项目静态文件](https://mp.weixin.qq.com/s?src=11&timestamp=1620971153&ver=3067&signature=EB6NnhoulxyTerTQyTfUc52LXsll-DCaggDZpUj4fnFb55TMvzIwBwAzpef6mBYo5HQUIzREnR--qzU4gV*Y69oukaoEWln2ieF6mY694S7QgR74JOH-gZM*2nvWgSaO&new=1)
 
 - [nginx 基本入门(至今为止见过最好的 nginx 入门文章，没有之一。)](https://www.jianshu.com/p/93ac21161ac6)
 
-- [docker上启动nginx,并配置修改nginx的配置文件](https://blog.csdn.net/Dhjie_king/article/details/113868250)
+- [docker 上启动 nginx,并配置修改 nginx 的配置文件](https://blog.csdn.net/Dhjie_king/article/details/113868250)
 
-- [Nginx部署Vue项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620971170&ver=3067&signature=RnSS4MJkb*h*KIigIsNG3Eg8teAfVyPZM2HDjxch1oi6xAQ2Hvj7ETijUVz1PE3yoTcdchZEiHAjy1Qjkxdx29Lb4MOCf4RYUob1NeH7*MmRHUhEK-cRTlKyUWxvYMmr&new=1)
+- [Nginx 部署 Vue 项目实战案例](https://mp.weixin.qq.com/s?src=11&timestamp=1620971170&ver=3067&signature=RnSS4MJkb*h*KIigIsNG3Eg8teAfVyPZM2HDjxch1oi6xAQ2Hvj7ETijUVz1PE3yoTcdchZEiHAjy1Qjkxdx29Lb4MOCf4RYUob1NeH7*MmRHUhEK-cRTlKyUWxvYMmr&new=1)
 
-- [最简单的docker教程：在docker里运行nginx服务器](https://zhuanlan.zhihu.com/p/50918703)
+- [最简单的 docker 教程：在 docker 里运行 nginx 服务器](https://zhuanlan.zhihu.com/p/50918703)
 
-- [sg:wx Docker镜像（image）详解](https://mp.weixin.qq.com/s?src=11&timestamp=1625643229&ver=3175&signature=k*EJ6*IcBmAIpR96dutqsZq1NTAO*Efi8e84r7WSwSdIeGpYX7VQHShceQn4KsaVNpVy4iCHvXqeo-fhbO6Pzbrq9FZ-nvFkSySvxN227xGTCKK8iZP8B6WjVCs4ytJ5&new=1)
+- [sg:wx Docker 镜像（image）详解](https://mp.weixin.qq.com/s?src=11&timestamp=1625643229&ver=3175&signature=k*EJ6*IcBmAIpR96dutqsZq1NTAO*Efi8e84r7WSwSdIeGpYX7VQHShceQn4KsaVNpVy4iCHvXqeo-fhbO6Pzbrq9FZ-nvFkSySvxN227xGTCKK8iZP8B6WjVCs4ytJ5&new=1)
+
+- [Docker 最全教程之使用 Visual Studio Code 玩转 Docker（二十）](https://www.cnblogs.com/codelove/p/10606434.html)
