@@ -116,9 +116,9 @@ h6 {
 }
 /* h1~h6 end */
 /* code inline*/
-li code,
-p code,
-td code {
+li > code,
+p > code,
+td > code {
   color: var(--code-inline);
   padding: 0.02rem 0.04rem;
   background-color: var(--code-inline-bg);

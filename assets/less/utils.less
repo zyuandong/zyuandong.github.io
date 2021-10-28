@@ -59,7 +59,7 @@ h2 {
 }
 h3 {
   .title-h();
-  font-size: 0.20rem;
+  font-size: 0.2rem;
 }
 h4 {
   .title-h();
@@ -79,7 +79,7 @@ h6 {
 li,
 p,
 td {
-  code {
+  & > code {
     color: var(--code-inline);
     padding: 0.02rem 0.04rem;
     background-color: var(--code-inline-bg);
@@ -119,14 +119,14 @@ pre {
     font-family: @code-font-family;
 
     table pre.lineno {
-      min-width: 0.20rem;
+      min-width: 0.2rem;
     }
   }
 }
 .highlighter-rouge {
   .highlight {
     border-radius: 0.04rem;
-  
+
     pre.highlight {
       border-radius: 0.04rem;
     }
@@ -223,7 +223,7 @@ blockquote {
 /* cursor end */
 
 /* Loop */
-.loop_p_m(@number) when (@number <= 20)  {
+.loop_p_m(@number) when (@number <= 20) {
   .p-@{number} {
     padding: @number * 0.01rem;
   }
