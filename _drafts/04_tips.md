@@ -9,6 +9,30 @@ tags:
 
 无感刷新 Token
 
+微前端项目，z-index 一定要编排好，考虑范围：第三方组件库，自身样式
+
+优先级：由高到低
+
+- 消息提示
+- 遮罩层
+- 顶部下拉菜单
+- 固定 banner （fixed / sticky）
+- loading ? 是否遮盖顶部操作按钮，依据需求
+- 常规层级
+
+微前端样式隔离
+
+```scss
+// style/index.scss
+@import './base.scss';
+
+// 添加隔离
+#app.access-distribution-ui {
+  @import './utils.scss';
+  @import './menu.scss';
+}
+```
+
 ## 20211027
 
 - [wx: 使用 Preload&Prefetch 优化前端页面的资源加载](https://mp.weixin.qq.com/s?src=11&timestamp=1635300817&ver=3399&signature=EnHRfXI3ZRu94J3ipXk74BmENCqD81lrrULGPuhHdtWEMPgDG1BFm3ZCZ7D8w7WPez90rq*UV9R5LDVKijrJEOpSQDWdJEBmgXMfI-xLVA9IadT*3YNNFskNSq5nIth7&new=1) 优
