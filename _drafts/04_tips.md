@@ -5,6 +5,13 @@ category:
 tags:
 ---
 
+## 20211104
+
+```js
+// 父组件调用子组件方法
+this.$refs['applyTable'].$refs['applyTable'].clearSelection();
+```
+
 [2020年webpack面试题](https://blog.csdn.net/Aria_Miazzy/article/details/106235716)
 
 [webpack 史上最完整配置](https://blog.csdn.net/qq_40860137/article/details/106404802)
