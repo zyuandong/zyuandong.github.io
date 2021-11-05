@@ -9,10 +9,36 @@ tags:
 
 ```js
 // 父组件调用子组件方法
-this.$refs['applyTable'].$refs['applyTable'].clearSelection();
+this.$refs["applyTable"].$refs["applyTable"].clearSelection();
 ```
 
-[2020年webpack面试题](https://blog.csdn.net/Aria_Miazzy/article/details/106235716)
+```vue
+<!-- 根据状态隐藏多选框 -->
+<template>
+  <el-table :cell-class-name="cellClassName">
+    <el-table-column type="selection" :selectTable="selectTable"></el-table-column>
+  </el-table>
+</template>
+
+<script>
+export default {
+  methods: {
+    // 设置单元格 class
+    cellClassName({ row, columnIndex }) {
+      if (row.status === "success" && columnIndex === 0) {
+        return "hidden-select";
+      }
+    },
+    // 设置复选框是否可勾选
+    selectable(row) {
+      return row.status != "success";
+    },
+  },
+};
+</script>
+```
+
+[2020 年 webpack 面试题](https://blog.csdn.net/Aria_Miazzy/article/details/106235716)
 
 [webpack 史上最完整配置](https://blog.csdn.net/qq_40860137/article/details/106404802)
 
@@ -35,12 +61,12 @@ this.$refs['applyTable'].$refs['applyTable'].clearSelection();
 
 ```scss
 // style/index.scss
-@import './base.scss';
+@import "./base.scss";
 
 // 添加隔离
 #app.access-distribution-ui {
-  @import './utils.scss';
-  @import './menu.scss';
+  @import "./utils.scss";
+  @import "./menu.scss";
 }
 ```
 
@@ -48,14 +74,14 @@ this.$refs['applyTable'].$refs['applyTable'].clearSelection();
 
 - [wx: 使用 Preload&Prefetch 优化前端页面的资源加载](https://mp.weixin.qq.com/s?src=11&timestamp=1635300817&ver=3399&signature=EnHRfXI3ZRu94J3ipXk74BmENCqD81lrrULGPuhHdtWEMPgDG1BFm3ZCZ7D8w7WPez90rq*UV9R5LDVKijrJEOpSQDWdJEBmgXMfI-xLVA9IadT*3YNNFskNSq5nIth7&new=1) 优
 
-- [HTTP请求中的referrer和Referrer-Policy](https://juejin.cn/post/6844903842484600846)
+- [HTTP 请求中的 referrer 和 Referrer-Policy](https://juejin.cn/post/6844903842484600846)
 
 - [wx: cookie 和 session 到底是什么](https://mp.weixin.qq.com/s?src=11&timestamp=1635322323&ver=3399&signature=kApsvWYCeh7*CU-6JVWZLcYBaCGGVjuAr*ZDNfAs7gcHx9x0tpXxAygakkj-mFn0TonDprnzgaoqrcESZyVvu25*-uDQdzX5Q*gd8lXAY8Nb7pxVOi7tsrFmWypGJiw4&new=1)
 
 - [技术周刊（2020-02-11 Chrome 80 禁用第三方 Cookie）](https://zhuanlan.zhihu.com/p/106599285)
 
 - [axios 处理 302 状态码的解决方法](https://www.ddpool.cn/article/56246.html)
-- [彻底解决Webpack打包性能问题](https://zhuanlan.zhihu.com/p/21748318)
+- [彻底解决 Webpack 打包性能问题](https://zhuanlan.zhihu.com/p/21748318)
 
 ## 20211026
 
