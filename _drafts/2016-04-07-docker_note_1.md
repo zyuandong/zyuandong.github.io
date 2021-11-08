@@ -60,6 +60,8 @@ docker start <container name>
 
 docker rm <container name>
 
+docker rm -f <container name | container id>
+
 docker container exec -it <container id> /bin/bash
 ```
 
