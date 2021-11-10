@@ -11,11 +11,11 @@ last_modified_date: 2021-08-04
 
 ## 1. Markdown 处理器
 
-因为本博客的文章都是使用 Markdown 编写的，相信绝大多数小伙伴也都是如此。
+Markdown - 技术人员编写文档利器，简洁的语法立即就能输出格式良好的文档，而且跨平台通用，还不会影响结果格式，很好的诠释了它「易读易写」的宗旨。除了图片不能和文档一起离线同步外，再也找不到其他缺点。🚀
 
-Markdown - 技术人员文档之光，简洁的语法立即就能输出格式良好的文档，而且跨平台通用，还不会影响结果格式，很好的诠释了它「易读易写」的宗旨。除了图片不能和文档一起离线同步外，再也找不到其他缺点。🚀
+因此本博客的文章也都是使用 Markdown 文档编写的，对于格式排版非常方便。
 
-说到这里可能会有人提出疑惑：Markdown 并不是 HTML 文件，没法被浏览器直接解析，那如何才能在浏览器中看到 Markdown 文档中的内容呢？
+说到这里可能会有人提出疑惑：「 Markdown 并不是 HTML 文件，没法被浏览器直接解析，那如何才能在浏览器中看到 Markdown 文档中的内容呢？」
 
 其实 Jekyll 很重要的一个功能就是将 Markdown 转化为 HTML 文件，执行过 `jekyll build` 命令的小伙伴，可以查看一下生成的 `_site` 目录，里面就包含了最终转化后的 HTML 文件。
 
@@ -84,15 +84,15 @@ kramdown:
 
 [Rouge](http://rouge.jneen.net/) 是使用 Ruby 实现的语法高亮工具，支持 205 种语言，且主题已完全兼容 [Pygments](https://pygments.org/)。
 
-📌 *Pygments 也是优秀的语法高亮工具，较早的资料中都是推荐 Pygments 来解决语法高亮。但它依赖于 Python，在整个 Jekyll 的 Ruby 生态下，显得有点格格不入，直到 Rouge 出现后，就逐渐被替代*
+📌 _Pygments 也是优秀的语法高亮工具，较早的资料中都是推荐 Pygments 来解决语法高亮。但它依赖于 Python，在整个 Jekyll 的 Ruby 生态下，显得有点格格不入，直到 Rouge 出现后，就逐渐被替代_
 
 Rouge 已经是 Jekyll、Kramdown 的依赖之一：
 
 ![Rouge](https://i.loli.net/2021/08/02/5XYxo78wnm1MWiy.png)
 
-Rouge 也是 GitHub Pages 推荐的语法高亮工具，但在 Jekyll 文档中是推荐 coderay 做语法高亮：`syntax_highlighter: coderay`。
+Rouge 是 GitHub Pages 推荐的语法高亮工具，而在 Jekyll 文档中是推荐 coderay 做语法高亮：`syntax_highlighter: coderay`。
 
-因为最终是看 GitHub Pages 的效果，为了不出意外，那还是使用 GitHub Pages 推荐的 Rouge 吧，对应的需要再 plugins 初声明一下：
+但因为最终是部署到 GitHub Pages 服务上，为了防止意外发生，还是建议使用 GitHub Pages 推荐的 Rouge 吧，对应的需要在 \_config.yml 文件中修改 plugins 配置项：
 
 ```yaml
 # _config.yml 文件
@@ -134,9 +134,9 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
 - 下载
 
-  从 [highlight.js  官网](https://highlightjs.org/download/) 下载资源文件，或者使用 `npm install highlight.js` 安装 node_module 包。
+  从 [highlight.js 官网](https://highlightjs.org/download/) 下载资源文件，或者使用 `npm install highlight.js` 安装 node_module 包。
 
-  📌 *下载资源文件时，还能勾选特定支持的语言*
+  📌 _下载资源文件时，还能勾选特定支持的语言_
 
 - 引入
 
@@ -144,9 +144,11 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 
   ```html
   <!-- 样式文件可以根据需求更换为其他样式文件 -->
-  <link rel="stylesheet" href="/path/to/styles/default.css">
+  <link rel="stylesheet" href="/path/to/styles/default.css" />
   <script src="/path/to/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script>
+    hljs.highlightAll();
+  </script>
   ```
 
   highlight.js 将查找并高亮显示 `<pre><code>...</code></pre>` 标签内的代码。
