@@ -3,9 +3,10 @@ title: formdata
 ---
 
 ```html
-//表单示例
+<!-- 表单示例 -->
 <form id="myForm" action="" method="post">
-  <input type="text" name="name" />名字 <input type="password" name="psw" />密码
+  <input type="text" name="name" />名字 
+  <input type="password" name="psw" />密码
   <input type="submit" value="提交" />
 </form>
 
