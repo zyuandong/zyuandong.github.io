@@ -5,6 +5,72 @@ category:
 tags:
 ---
 
+## 20111130
+
+- [js 如何完整的显示较长的数字](https://blog.csdn.net/SHY15651907150/article/details/101747665)
+
+- [js 实现万级数字转汉字显示](https://blog.csdn.net/weixin_33767813/article/details/87946470)
+
+- [js 数字 转换 百 千 万 亿显示](https://blog.csdn.net/qq_36595944/article/details/118342955)
+
+- [递归基础](https://www.cnblogs.com/ygunoil/p/12524806.html)
+
+```js
+var obj = {
+  id: 1,
+  name: 1,
+  children: [
+    {
+      id: 11,
+      name: 11,
+    },
+    {
+      id: 12,
+      name: 12,
+      children: [
+        {
+          id: 121,
+          name: 121,
+        },
+      ],
+    },
+    {
+      id: 13,
+      name: 13,
+      children: [
+        {
+          id: 131,
+          name: 131,
+          children: [
+            {
+              id: 1311,
+              name: 1311,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+getIdList = (obj, idList) => {
+  if (!obj.children) {
+    return idList;
+  }
+
+  return obj.children
+    .map((item) => {
+      idList = [...idList, item.id];
+      return getIdList(item, idList);
+    })
+    .flat();
+};
+
+var ids = getIdList(obj, [obj.id]);
+console.log(ids);
+console.log(Array.from(new Set(ids.flat(Infinity))));
+```
+
 ## 20211104
 
 ```js
