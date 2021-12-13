@@ -5,7 +5,39 @@ category:
 tags:
 ---
 
-## 20111130
+## a,b 数组比较，重复的删除
+
+```js
+let [addOrgList, removeBusinessOrgIds] = [[], []];
+
+addOrgList = b.reduce((res, cur) => {
+  if (a.filter((item) => item.businessOrganizationId === cur.id).length) {
+    a.filter((item, index) => {
+      if (item.businessOrganizationId === cur.id) {
+        a.splice(index, 1);
+      }
+    });
+  } else {
+    res.push({
+      dataPermissionId: this.data.id,
+      businessOrganizationId: cur.id,
+      businessOrganizationName: cur.name,
+    });
+    return res;
+  }
+  return res;
+}, []);
+
+removeBusinessOrgIds = a.map((item) => item.businessOrganizationId);
+```
+
+## 20211206
+
+- [Typora 收费了，你还会继续选择使用它吗？](https://www.zhihu.com/question/501813614/answer/2245234916)
+
+- [js 中的遍历和跳出遍历](https://www.cnblogs.com/yangai/p/13841490.html)
+
+## 20211130
 
 - [js 如何完整的显示较长的数字](https://blog.csdn.net/SHY15651907150/article/details/101747665)
 
