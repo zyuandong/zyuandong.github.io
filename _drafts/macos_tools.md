@@ -6,6 +6,49 @@ tags: [macOS, iTerm2]
 
 ## iTerm2
 
+### 设置 HotKey Window
+
+设置方式：
+
+iTerm2 > Preferences... > Profiles > '+' 创建一个新窗口 > General (重命名为 Hotkey Window) > Keys (勾选 'A hotkey opens a dedicated window with this profile') > 新弹出的窗口中设置快捷键 （Option + Space）> Ok
+
+优化样式：
+
+- 透明度 （Window > Transparency）
+- 尺寸：（Window > Style > 选择 'Full-Width Top of Screen'）
+
+### oh-m-zsh
+
+#### 安装方式
+
+- curl
+
+  `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+- wget
+
+  `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+- fetch
+
+  `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+#### 主题
+
+在 `~/.zshrc` 下 `ZSH_THEME="dst"`
+
+### 终端使用自动补全时忽略大小写
+
+旧方法：（macOS 新版本默认使用 zsh 后，设置 ~/.inputrc 失效）
+
+`echo "set completion-ignore-case on" >> ~/.inputrc`
+
+新方法：
+
+- [忽略大小写\_Mac 终端 zsh 忽略大小写](https://blog.csdn.net/weixin_39802784/article/details/112669288)
+
+- 安装 oh-m-zsh 后有此效果
+
 ### 快捷键
 
 - ⇧: Shift
