@@ -5,6 +5,12 @@ category:
 tags:
 ---
 
+大于 `Math.pow(2, 53)` 的数 (9007199254740992)，精度丢失
+
+[讲一讲JS 能表示的最大数值及JS Number类型数字位数及IEEE754标准](https://blog.csdn.net/qq_42209411/article/details/88597306)
+
+---
+
 ## 阶段
 
 阶段一：不知道自己不知道(Unconscious incompetence)
