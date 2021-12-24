@@ -9,3 +9,5 @@ tags:
 [Snap.svg 基本知识入门](https://segmentfault.com/a/1190000006961922)
 
 [使用 Snap.svg 来实现一个具有 morphing 动画效果的按钮动效](https://segmentfault.com/a/1190000006975681)
+
+[SVGGraphicsElement - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/SVGGraphicsElement)

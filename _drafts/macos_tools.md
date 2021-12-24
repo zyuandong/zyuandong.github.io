@@ -118,3 +118,5 @@ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk2s1 ~/ntfs-volume
 `command + shift + 4` - 捕捉所选部分
 
 `command + shift + 5` - 捕捉所选窗口
+
+- [在 Mac 上如何更改用户名或用户帐户/个人文件夹的名称？](https://zhuanlan.zhihu.com/p/361131804)
