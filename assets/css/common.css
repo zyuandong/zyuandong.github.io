@@ -2067,6 +2067,7 @@ em {
   margin: 0;
 }
 #post-menu .sidebar-panel-ul li {
+  height: 0.24rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
