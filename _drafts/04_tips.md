@@ -5,9 +5,17 @@ category:
 tags:
 ---
 
+[Vue 字符串模板 dom 模板](https://segmentfault.com/a/1190000014888725)
+
+[vue 中涉及的字符串模板与 dom 模板](https://www.jianshu.com/p/8c63c93a346b)
+
+[使用 require.context 实现前端工程自动化](https://www.jianshu.com/p/c894ea00dfec)
+
+[require.context 妙用-实现前端自动引入同一文件夹下多个文件（替代 import）](https://segmentfault.com/a/1190000019922344)
+
 大于 `Math.pow(2, 53)` 的数 (9007199254740992)，精度丢失
 
-[讲一讲JS 能表示的最大数值及JS Number类型数字位数及IEEE754标准](https://blog.csdn.net/qq_42209411/article/details/88597306)
+[讲一讲 JS 能表示的最大数值及 JS Number 类型数字位数及 IEEE754 标准](https://blog.csdn.net/qq_42209411/article/details/88597306)
 
 ---
 
