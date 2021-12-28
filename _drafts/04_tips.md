@@ -5,6 +5,16 @@ category:
 tags:
 ---
 
+---
+
+[dayjs](https://www.npmjs.com/package/dayjs)
+
+[Vue CountTo](http://panjiachen.github.io/countTo/demo/)
+
+[Fuse.js](https://fusejs.io/)
+
+---
+
 [Vue 字符串模板 dom 模板](https://segmentfault.com/a/1190000014888725)
 
 [vue 中涉及的字符串模板与 dom 模板](https://www.jianshu.com/p/8c63c93a346b)
