@@ -22,6 +22,16 @@ date: 2021-04-29
 
 ## forEach
 
+`forEach()` 方法对数组的每个元素执行一次给定的函数。
+
+语法：`arr.forEach(callback(currentValue [, index [, array]])[, thisArg])`
+
+`forEach()` 为每个数组元素执行一次 callback 函数；与 `map()` 或者 `reduce()` 不同的是，它总是返回 undefined 值，并且不可链式调用。其典型用例是在一个调用链的最后执行副作用（side effects，函数式编程上，指函数进行 返回结果值 以外的操作）。
+
+`forEach()` 被调用时，不会改变原数组，也就是调用它的数组（尽管 callback 函数在被调用时可能会改变原数组）。（译注：此处说法可能不够明确，具体可参考 EMCA 语言规范：'forEach does not directly mutate the object on which it is called but the object may be mutated by the calls to callbackfn.'，即 forEach 不会直接改变调用它的对象，但是那个对象可能会被 callback 函数改变。）
+
+[Array.prototype.forEach() - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
 只能使用使用抛出异常的方式跳出 forEach
 
 ```javascript
@@ -50,6 +60,20 @@ try {
 [Js 中 for in 和 for of 的区别](https://mp.weixin.qq.com/s?src=11&timestamp=1619683880&ver=3037&signature=7*qHANfmtUWzMBn8MQjxmeXLOm-Hs1ypRICgTyv44Sxfl38ip1K5lL4m7nvJzrpi9bJO07fpU94jSMA*jAf-PklsVr1soF9-8O3PCXJwCkDtdE5UgOQfmMy89ZNZGCT4&new=1)
 
 ## map
+
+`map()` 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。
+
+语法：
+
+```js
+var new_array = arr.map(function callback(currentValue[, index[, array]]) {
+ // Return element for new_array
+}[, thisArg])
+```
+
+返回一个新数组
+
+[Array.prototype.map() - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## every
 
