@@ -12,8 +12,3 @@
 - [x] [pagination]: RWD
 - [x] [layout]: aside : main container
 
-$2^n$
-
-`$2^n$`
-
-$`2^n`$
