@@ -197,6 +197,7 @@ blockquote ol {
 }
 .post-content > table th,
 .post-content > table td {
+  text-align: left;
   padding: 0.06rem 0.12rem;
   border-bottom: 1px solid var(--border);
 }
