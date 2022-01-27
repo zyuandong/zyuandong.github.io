@@ -78,39 +78,38 @@ a:focus {
 /* h1~h6 */
 h1 {
   color: var(--title);
-  font-weight: 400;
-  padding-top: 20px;
   font-weight: 500;
+  padding-top: 20px;
   font-size: 0.28rem;
   padding: 0;
 }
 h2 {
   color: var(--title);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 0.24rem;
 }
 h3 {
   color: var(--title);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 0.2rem;
 }
 h4 {
   color: var(--title);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 0.18rem;
 }
 h5 {
   color: var(--title);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 0.16rem;
 }
 h6 {
   color: var(--title);
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 0.14rem;
 }
