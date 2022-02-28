@@ -94,3 +94,5 @@ var new_array = arr.map(function callback(currentValue[, index[, array]]) {
 [循环与迭代](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 [js 中的遍历和跳出遍历](https://www.cnblogs.com/yangai/p/13841490.html)
+
+[js 中的 for in 和 for of 的区别](https://blog.csdn.net/m0_37686205/article/details/89162049)
