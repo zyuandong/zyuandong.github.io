@@ -16,6 +16,10 @@ title: Vue 3.x
 
 [使用 VCA(Vue Composition API)抽离出的通用逻辑应该叫什么？](https://www.zhihu.com/question/412605622)
 
+[vuejs/vitepress/tree/main/src/client/app](https://github.com/vuejs/vitepress/tree/main/src/client/app)
+
+[Vue3.0 Composition API 提取公共逻辑](https://ljylk.cn/?p=762)
+
 ## Vue 3.x + Vite + ESLint + Prettier
 
 [vite vue3 项目配置 eslint、prettier](https://talktocomputer.site/blogs/152/)
@@ -27,3 +31,7 @@ title: Vue 3.x
 [Parsing error: ImportDeclaration should appear when the mode is ES6 and in the module context.](https://www.cnblogs.com/notfound/p/12377684.html)
 
 [eslint-plugin-vue](https://eslint.vuejs.org/rules/multi-word-component-names.html)
+
+## Vue 3.x 开源项目
+
+[newbee-ltd/newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)
