@@ -2,6 +2,50 @@
 title: Vue 3.x
 ---
 
+## Setup
+
+```js
+export default {
+  components: {},
+  props: {},
+  emits: [],
+  watch: {},
+  expose: {},
+
+  setup(props, { atts, slots, emit, expose }) {
+    onBeforeMounted();
+
+    onMounted(() => {
+      console.log("mounted!");
+    });
+
+    onBeforeUpdate();
+
+    onUpdated(() => {
+      console.log("updated!");
+    });
+
+    onBeforeUnmount();
+
+    onUnmounted(() => {
+      console.log("unmounted!");
+    });
+
+    onErrorCaptured();
+
+    onRenderTracked();
+
+    onRenderTriggered();
+
+    onActivated();
+
+    onDeactivated();
+
+    return {};
+  },
+};
+```
+
 ## Volar
 
 [johnsoncodehk/volar](https://github.com/johnsoncodehk/volar)
