@@ -54,3 +54,5 @@ Promise.all([p1, p2, p3])
 [Javascript：Promise 对象基础](https://www.jianshu.com/p/82237a7ca6e5)
 
 [［ES6］Promise 对象 Promise.all()方法的使用](https://itbilu.com/javascript/js/41KMSZ9a.html)
+
+[Promise 的 fulfill 和 resolve 为啥要用两个词?](https://www.zhihu.com/question/34445479)
