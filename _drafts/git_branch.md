@@ -14,6 +14,8 @@ title: Git - branch
 
 ## 本地分支提交到远程库
 
+`git push origin <branch name>`
+
 ## 修改本地分支名称
 
 `git branch -m <old name> <new name>`
@@ -35,6 +37,10 @@ title: Git - branch
    或者
    `git branch --set-upstream-to=origin/<branch> <new name>`
 
+## 本地分支与远程分支取消关联
+
+`git branch --unset-upstream`
+
 ## 删除本地分支
 
 `git branch -d <branch name>`
@@ -47,7 +53,7 @@ title: Git - branch
 
 或者
 
-`git push origin :<branch name>` (需要先删除本地分支)
+`git push origin :<branch name>` （需要先删除本地分支）（也有说法是推送新的空分支，所以需要本地无此分支）
 
 当存在相同名称的标签和分支时，使用一下命名删除远程分支
 
