@@ -8,6 +8,10 @@ title: Git - branch
 
 `git checkout -b <branch name>`
 
+或者
+
+`git switch -c <branch name>`
+
 ## 查看所有分支
 
 `git branch -a`
@@ -31,7 +35,7 @@ title: Git - branch
 3. 提交新命名的分支：
    `git push origin <new name>`
    或者
-   `git push --set-upstream origin <new name>`
+   `git push --set-upstream origin <new name>` （提交并关联）
 4. 把修改后的本地分支与远程分支关联：
    `git branch --set-upstream-to origin/<new name>`
    或者
