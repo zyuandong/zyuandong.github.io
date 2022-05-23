@@ -79,3 +79,47 @@ export default {
 ## Vue 3.x 开源项目
 
 [newbee-ltd/newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)
+
+## Vue2 prototype & Vue3 globalProperties
+
+Vue 2
+
+```js
+Vue.prototype.$test = "test";
+
+this.$test; // 'test'
+```
+
+Vue 3
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+
+const app = createApp(App);
+app.config.globalProperties.$test = "test";
+
+import { getCurrentInstance } from "vue";
+
+const instance = getCurrentInstance();
+instance.config.globalProperties.$test; // 'test'
+```
+
+通过 provide 注入也可以实现全局变量
+
+与在 2.x 根实例中使用 provide 选项类似，Vue 3 应用实例也提供了可被应用内任意组件注入的依赖项：
+
+```js
+// 主入口
+app.provide("guide", "Vue 3 Guide");
+
+// 子组件
+export default {
+  inject: {
+    book: {
+      from: "guide",
+    },
+  },
+  template: `<div>{{ book }}</div>`,
+};
+```
