@@ -42,7 +42,7 @@ locatin /proxy/ {
 
 ```nginx
 location /websocket/ {
-  proxy_set_header Upgrade &http_upgrade; # 必须
+  proxy_set_header Upgrade $http_upgrade; # 必须
   proxy_set_header Connection "upgrade"; # 必须
   proxy_http_version 1.1;
   proxy_read_timeout 6000s; # 超时时间
