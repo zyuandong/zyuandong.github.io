@@ -1,42 +1,43 @@
 // import * as fs from 'fs/promises'
-const fs = require('fs');
-const path = require('path');
-const readline = require('readline');
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
 
-let TEST_MD_URL = `${__dirname}/_drafts/markdown_template.md`;
+// let TEST_MD_URL = `${__dirname}/_drafts/markdown_template.md`;
+let TEST_MD_URL = `${__dirname}/_drafts/test_serial_number.md`;
 
 const resetIndex = (index) => {
-  return Array(index || 1).fill(0)
-}
+  return Array(index || 1).fill(0);
+};
 
 const isNaN = (value) => {
-  return value !== value
-}
+  return value !== value;
+};
 
 const setNUmber = (indexList, titleArr, line) => {
-  const number = indexList.join('.')+'.';
+  const number = indexList.join(".") + ".";
   if (isNaN(parseInt(titleArr[1]))) {
-    titleArr.splice(1, 0, number)
+    titleArr.splice(1, 0, number);
   } else {
-    titleArr.splice(1, 1, number)
+    titleArr.splice(1, 1, number);
   }
-  line = titleArr.join(' ');
-  return line
-}
+  line = titleArr.join(" ");
+  return line;
+};
 
 const serialNumber = (fileList) => {
-  const {outputFile: inputFile, inputFile: outputFile} = fileList
+  const { outputFile: inputFile, inputFile: outputFile } = fileList;
   // 读取行，并编号
   var fRead = fs.createReadStream(inputFile);
   var objReadLine = readline.createInterface({
-    input: fRead
+    input: fRead,
   });
 
   let index = 1;
   let indexList = resetIndex();
-  objReadLine.on('line', (line) => {
+  objReadLine.on("line", (line) => {
     if (line.indexOf("#") === 0) {
-      const titleArr = line.split(' ');
+      const titleArr = line.split(" ");
       const level = titleArr[0].length - 1;
       if (level > 0) {
         if (level > indexList.length) {
@@ -53,56 +54,55 @@ const serialNumber = (fileList) => {
       }
     }
     if (index === 1) {
-      fs.writeFileSync(TEST_MD_URL, line + '\n');
+      fs.writeFileSync(TEST_MD_URL, line + "\n");
     } else {
-      fs.appendFileSync(TEST_MD_URL, line + '\n', 'utf8', (err) => {
+      fs.appendFileSync(TEST_MD_URL, line + "\n", "utf8", (err) => {
         if (err) {
           console.log(err);
         }
-      })
+      });
     }
 
-    index++
+    index++;
   });
 
-  objReadLine.on('close', (err) => {
+  objReadLine.on("close", (err) => {
     if (err) return console.log(err);
-    console.log('auto serial number success!');
-  })
-}
+    console.log("auto serial number success!");
+  });
+};
 
 const copy = (inputFile) => {
   TEST_MD_URL = inputFile ? inputFile : TEST_MD_URL;
   return new Promise((resolve, reject) => {
     // 复制文件
-    const affix = TEST_MD_URL.substring(TEST_MD_URL.lastIndexOf('.'))
-    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf('.')) + `_base${affix}`
+    const affix = TEST_MD_URL.substring(TEST_MD_URL.lastIndexOf("."));
+    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf(".")) + `_origin${affix}`;
 
     // fs.createReadStream(TEST_MD_URL).pipe(fs.createWriteStream(outputFile));
     fs.copyFile(TEST_MD_URL, outputFile, (err) => {
       if (err) {
         console.log(err);
       } else {
-        resolve({inputFile: TEST_MD_URL, outputFile});
+        resolve({ inputFile: TEST_MD_URL, outputFile });
       }
-    })
-
-  })
-}
+    });
+  });
+};
 
 // 实现
 const main = () => {
-  let inputFile = '';
+  let inputFile = "";
   if (process.argv.length > 2) {
     inputFile = process.argv.splice(2)[0];
     inputFile = path.resolve(inputFile);
   }
 
   copy(inputFile)
-    .then(res => {
-      serialNumber(res)
+    .then((res) => {
+      serialNumber(res);
     })
-    .catch(() => {})
-}
+    .catch(() => {});
+};
 
-main()
+main();
