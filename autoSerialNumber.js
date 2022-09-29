@@ -16,7 +16,7 @@ const isNaN = (value) => {
 
 const setNumber = (indexList, titleArr, line) => {
   const number = indexList.join(".") + ".";
-  if (isNaN(parseInt(titleArr[1]))) {
+  if (isNaN(+titleArr[1])) {
     titleArr.splice(1, 0, number);
   } else {
     titleArr.splice(1, 1, number);
