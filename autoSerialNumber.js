@@ -4,7 +4,7 @@ const path = require("path");
 const readline = require("readline");
 
 // let TEST_MD_URL = `${__dirname}/_drafts/markdown_template.md`;
-let TEST_MD_URL = `${__dirname}/_drafts/test_serial_number.md`;
+let TEST_MD_URL = `${__dirname}/_drafts/01_test_serial_number.md`;
 
 const resetIndex = (index) => {
   return Array(index || 1).fill(0);
@@ -14,7 +14,7 @@ const isNaN = (value) => {
   return value !== value;
 };
 
-const setNUmber = (indexList, titleArr, line) => {
+const setNumber = (indexList, titleArr, line) => {
   const number = indexList.join(".") + ".";
   if (isNaN(parseInt(titleArr[1]))) {
     titleArr.splice(1, 0, number);
@@ -25,6 +25,7 @@ const setNUmber = (indexList, titleArr, line) => {
   return line;
 };
 
+// 设置编号
 const serialNumber = (fileList) => {
   const { outputFile: inputFile, inputFile: outputFile } = fileList;
   // 读取行，并编号
@@ -33,26 +34,33 @@ const serialNumber = (fileList) => {
     input: fRead,
   });
 
+  let isCodeBlock = false;
   let index = 1;
   let indexList = resetIndex();
   objReadLine.on("line", (line) => {
-    if (line.indexOf("#") === 0) {
+    if (line.indexOf("```") === 0) {
+      isCodeBlock = !isCodeBlock;
+    }
+
+    // 代码块中的 # 无需编号
+    if (line.indexOf("#") === 0 && !isCodeBlock) {
       const titleArr = line.split(" ");
       const level = titleArr[0].length - 1;
       if (level > 0) {
         if (level > indexList.length) {
           indexList.push(1);
-          line = setNUmber(indexList, titleArr, line);
+          line = setNumber(indexList, titleArr, line);
         } else if (level === indexList.length) {
           indexList[level - 1] += 1;
-          line = setNUmber(indexList, titleArr, line);
+          line = setNumber(indexList, titleArr, line);
         } else {
           indexList.splice(level);
           indexList[level - 1] += 1;
-          line = setNUmber(indexList, titleArr, line);
+          line = setNumber(indexList, titleArr, line);
         }
       }
     }
+
     if (index === 1) {
       fs.writeFileSync(TEST_MD_URL, line + "\n");
     } else {
