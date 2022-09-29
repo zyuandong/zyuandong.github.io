@@ -12,3 +12,10 @@
 - [x] [pagination]: RWD
 - [x] [layout]: aside : main container
 
+## 本地启动预览
+
+`jekyll s` 或者 `jekyll s --drafts`
+
+## 文档标题自动排序
+
+`node autoSerialNumber.js <fileName?>`
