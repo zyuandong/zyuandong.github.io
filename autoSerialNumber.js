@@ -1,7 +1,7 @@
 // import * as fs from 'fs/promises'
-const fs = require("fs");
-const path = require("path");
-const readline = require("readline");
+const fs = require('fs');
+const path = require('path');
+const readline = require('readline');
 
 // let TEST_MD_URL = `${__dirname}/_drafts/markdown_template.md`;
 let TEST_MD_URL = `${__dirname}/_drafts/01_test_serial_number.md`;
@@ -15,13 +15,13 @@ const isNaN = (value) => {
 };
 
 const setNumber = (indexList, titleArr, line) => {
-  const number = indexList.join(".") + ".";
+  const number = indexList.join('.') + '.';
   if (isNaN(+titleArr[1])) {
     titleArr.splice(1, 0, number);
   } else {
     titleArr.splice(1, 1, number);
   }
-  line = titleArr.join(" ");
+  line = titleArr.join(' ');
   return line;
 };
 
@@ -37,14 +37,14 @@ const serialNumber = (fileList) => {
   let isCodeBlock = false;
   let index = 1;
   let indexList = resetIndex();
-  objReadLine.on("line", (line) => {
-    if (line.indexOf("```") === 0) {
+  objReadLine.on('line', (line) => {
+    if (line.indexOf('```') === 0) {
       isCodeBlock = !isCodeBlock;
     }
 
     // 代码块中的 # 无需编号
-    if (line.indexOf("#") === 0 && !isCodeBlock) {
-      const titleArr = line.split(" ");
+    if (line.indexOf('#') === 0 && !isCodeBlock) {
+      const titleArr = line.split(' ');
       const level = titleArr[0].length - 1;
       if (level > 0) {
         if (level > indexList.length) {
@@ -62,9 +62,9 @@ const serialNumber = (fileList) => {
     }
 
     if (index === 1) {
-      fs.writeFileSync(TEST_MD_URL, line + "\n");
+      fs.writeFileSync(TEST_MD_URL, line + '\n');
     } else {
-      fs.appendFileSync(TEST_MD_URL, line + "\n", "utf8", (err) => {
+      fs.appendFileSync(TEST_MD_URL, line + '\n', 'utf8', (err) => {
         if (err) {
           console.log(err);
         }
@@ -74,9 +74,9 @@ const serialNumber = (fileList) => {
     index++;
   });
 
-  objReadLine.on("close", (err) => {
+  objReadLine.on('close', (err) => {
     if (err) return console.log(err);
-    console.log("auto serial number success!");
+    console.log('auto serial number success!');
   });
 };
 
@@ -84,8 +84,8 @@ const copy = (inputFile) => {
   TEST_MD_URL = inputFile ? inputFile : TEST_MD_URL;
   return new Promise((resolve, reject) => {
     // 复制文件
-    const affix = TEST_MD_URL.substring(TEST_MD_URL.lastIndexOf("."));
-    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf(".")) + `_origin${affix}`;
+    const affix = TEST_MD_URL.substring(TEST_MD_URL.lastIndexOf('.'));
+    const outputFile = TEST_MD_URL.substring(0, TEST_MD_URL.lastIndexOf('.')) + `_origin${affix}`;
 
     // fs.createReadStream(TEST_MD_URL).pipe(fs.createWriteStream(outputFile));
     fs.copyFile(TEST_MD_URL, outputFile, (err) => {
@@ -100,7 +100,7 @@ const copy = (inputFile) => {
 
 // 实现
 const main = () => {
-  let inputFile = "";
+  let inputFile = '';
   if (process.argv.length > 2) {
     inputFile = process.argv.splice(2)[0];
     inputFile = path.resolve(inputFile);
