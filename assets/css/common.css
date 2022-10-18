@@ -1255,6 +1255,9 @@ em {
   color: var(--text-secondary);
 }
 /* 斜体 */
+.flex-box {
+  display: flex;
+}
 #site-scroll {
   height: 100vh;
   overflow: auto;
@@ -1536,6 +1539,10 @@ em {
 #main #page-404 a:hover {
   text-decoration-color: var(--brand);
 }
+#home .post-item .left img {
+  width: 1.94rem;
+  height: 1.2rem;
+}
 #home .post-content {
   color: var(--text-secondary);
   word-break: break-word;
@@ -1549,6 +1556,7 @@ em {
 #home .line {
   height: 1px;
   background: var(--divider);
+  margin: 0.16rem 0;
 }
 #pagination {
   display: flex;
