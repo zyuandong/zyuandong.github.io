@@ -116,7 +116,9 @@ blog：[Vue computed 声明类型采坑之路](https://www.cnblogs.com/Leophen/p
 - [script 标签中的 defer 和 async](https://www.jianshu.com/p/70a2b6fde667)
 - [Web 性能优化-CSS 和 js 的装载与执行](https://www.jianshu.com/p/cd7de34a759d)
 
-- [CSS 改变 SVG 颜色](https://mp.weixin.qq.com/s?src=11&timestamp=1622770653&ver=3109&signature=zIdjQ0x5VgT5ViFy45vRxPaB9UuYd75pCB3Oy9*sm140H9FQaLxT5S*iFOBB*oMQpYpQ32vgGuZSMFpRi24Xl*e*Y7pL15LZvMxZYy*Ce4k*vR3YBXwDYYKrow9A2Yyo&new=1)
+- [CSS 改变 SVG 颜色](https://mp.weixin.qq.com/s/x8Q9KzYEK_v51SXctF-wBQ)
+
+SVG 改变颜色方案
 
 - [FastStone Capture 使用注册码激活教程](https://www.5down.net/article/6581.html)
 
