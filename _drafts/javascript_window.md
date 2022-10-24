@@ -1,5 +1,5 @@
 ---
-title: JavaScript: window
+title: JavaScript - window
 ---
 
 [window.addEventListener()/window.postMessage(”text“, '\*')](https://blog.csdn.net/weixin_34278190/article/details/93884188)

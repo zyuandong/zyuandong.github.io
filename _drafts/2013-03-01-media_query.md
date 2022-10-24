@@ -1,5 +1,5 @@
 ---
-title: 详解media query媒体查询
+title: 详解 media query 媒体查询
 category: 技术
 tags: [CSS, media query]
 ---
@@ -17,3 +17,7 @@ tags: [CSS, media query]
 [segmentfault-1](http://segmentfault.com/q/1010000000333168#a-1020000000333198)
 
 [segmentfault-2](http://segmentfault.com/q/1010000000466132)
+
+[CSS 媒体查询 media](https://www.csdn.net/tags/MtTaEg0sNzEyMjIzLWJsb2cO0O0O.html)
+
+[总结 CSS3 新特性(媒体查询篇)](https://blog.csdn.net/qq_45670012/article/details/102558917)
