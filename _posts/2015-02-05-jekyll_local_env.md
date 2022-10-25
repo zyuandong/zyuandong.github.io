@@ -47,13 +47,13 @@ RubyInstaller 是一个基于 Windows 的安装程序，包括了 Ruby、运行�
 
 ## 3. 启动 Jekyll 服务
 
-Jekyll 环境搭建完成之后，进入到项目目录下（有 _config.yml 文件的目录），
+Jekyll 环境搭建完成之后，进入到项目目录下（有 \_config.yml 文件的目录），
 
 输入启动命令：`jekyll serve` 或者 `jekyll s`。
 
 若没有异常，启动服务后的默认端口为 4000，浏览器地址栏输入 `localhost:4000` 即可访问。
 
-启动服务时使用命令：`jekyll s --drafts`，可以同时访问草稿（_drafts）目录下的文章。
+启动服务时使用命令：`jekyll s --drafts`，可以同时访问草稿（\_drafts）目录下的文章。
 
 ## 4. 补充
 
@@ -112,15 +112,15 @@ gem sources --add <source URL>
 ## 5. 参考
 
 - [Jekyll](https://jekyllrb.com/)
-
 - [Jekyll 中文网](http://jekyllcn.com/)
-
+- [How to install jekyll on Apple M1 Macbook](http://www.earthinversion.com/blogging/how-to-install-jekyll-on-appple-m1-macbook)
+- [Error installing jekyll: Failed to build gem native extension](https://www.rubyonmac.dev/error-error-installing-jekyll-error-failed-to-build-gem-native-extension)
+- [Install Ruby on Mac. The Definitive Guide for 2022.](https://www.moncefbelyamani.com/the-definitive-guide-to-installing-ruby-gems-on-a-mac/)
 - ...
 
 {% comment %}
 
 - [Windows 上安装 Jekyll](http://blog.csdn.net/kong5090041/article/details/38408211)
-
 - [Github+Jekyll 搭建个人网站详细教程](https://www.jianshu.com/p/9f71e260925d)
 
 {% endcomment %}
