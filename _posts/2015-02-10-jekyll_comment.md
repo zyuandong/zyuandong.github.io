@@ -119,7 +119,7 @@ var gitalk = new Gitalk({
   repo: 'zyuandong.github.io', // 存储评论数据的仓库名
   owner: 'zyuandong', // 仓库的拥有者
   admin: ['zyuandong'], // 仓库的拥有者
-  id: location.pathname // 用于标记需要评论的页面
+  id: location.pathname, // 用于标记需要评论的页面
 });
 
 gitalk.render('gitalk-container');
@@ -136,15 +136,12 @@ gitalk.render('gitalk-container');
 ## 3. 参考
 
 - [gitalk](https://github.com/gitalk/gitalk)
-
 - [gitment](https://github.com/imsun/gitment)
-
 - [utterances](https://github.com/utterance/utterances)
-
 - ...
 
 {% comment %}
 
-- [Gitalk评论插件使用教程](https://segmentfault.com/a/1190000018072952)
+- [Gitalk 评论插件使用教程](https://segmentfault.com/a/1190000018072952)
 
 {% endcomment %}
