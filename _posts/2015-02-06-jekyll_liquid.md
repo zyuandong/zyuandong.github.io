@@ -419,35 +419,33 @@ end
 
 ### 4.2. Jekyll Filter
 
-| 描述                                                     |          过滤器           |                                                  输出                                                  |
-| :------------------------------------------------------- | :-----------------------: | :----------------------------------------------------------------------------------------------------: |
-| 将日期转化为 XML 模式 (ISO 8601) 的格式                  | {% raw %}`{{ site.time | date_to_xmlschema }}`{% endraw %} |     `2008-11-17T13:07:54-08:00`                                       |
-| 将日期转化为 RFC-822 格式                                | {% raw %}`{{ site.time | date_to_rfc822 }}`{% endraw %} |       `Mon, 17 Nov 2008 13:07:54 -0800`                                    |
-| 将日期转化为短格式                                       | {% raw %}`{{ site.time | date_to_string }}`{% endraw %} |             `17 Nov 2008`                                              |
-| 将日期转化为长格式                                       | {% raw %}`{{ site.time | date_to_long_string }}`{% endraw %} |        `17 November 2008`                                           |
-| 选取键值对应的所有对象，返回一个数组                     | {% raw %}`{{ site.members | where:"graduation_year","2014" }}`{% endraw %} |                                                       |
-| 选取表达式正确的所有对象，返回一个数组  | {% raw %}`{{ site.members | where_exp:"item","item.graduation_year == 2014" }}` / `{{ site.members | where_exp:"item","item.projects contains 'foo'" }}`{% endraw %} |   |
-| 根据所给属性将对象分组，返回一个数组                     | {% raw %}`{{ site.members | group_by:"graduation_year" }}`{% endraw %} |     `[{"name"=>"2013", "items"=>[...]},{"name"=>"2014", "items"=>[...]}]`     |
-| 对一些字符串转码，已方便显示在 XML                       | {% raw %}`{{ page.content | xml_escape }}`{% endraw %} |                                                                          |
-| CGI 转码，用于 URL 中，将所有的特殊字符转化为 %XX 的形式 | {% raw %}`{{ “foo,bar;baz?” | cgi_escape }}`{% endraw %} |        `foo%2Cbar%3Bbaz%3F`                                          |
-| URI 转码                                                 | {% raw %}`{{ “'foo, bar \\baz?'” | uri_escape }}`{% endraw %} |   `foo,%20bar%20%5Cbaz?`                                         |
-| 统计文章中的字数                                         | {% raw %}`{{ page.content | number_of_words }}`{% endraw %} |            `1337`                                                 |
-| 将数组转换为句子，列举标签时尤其有用                     | {% raw %}`{{ page.tags | array_to_sentence_string }}`{% endraw %} |       `foo, bar, and baz`                                        |
-| 将 Markdown 格式的字符串转换为 HTML                      | {% raw %}`{{ page.excerpt | markdownify }}`{% endraw %} |                                                                          |
-| 将 Sass / SCSS 格式的字符串转换为 CSS                    | {% raw %}`{{ some_scss | scssify }}` / `{{ some_sass | sassify }}`{% endraw %} |                                                     |
-| 将字符串转换为小写字母 URL “slug”          | {% raw %}`{{ "The _config.yml file" | slugify }}` / `{{ "The _config.yml file" | slugify: 'pretty' }}`{% endraw %} | `the-config-yml-file` / `the-_config.yml-file` |
-| 将 Hash / 数组 格式的字符串转换为 JSON                   | {% raw %}`{{ site.data.projects | jsonify }}`{% endraw %} |                                                                |
-| 对数组排序，可选参数为：1.排序属性；2.顺序（正序或倒序） | {% raw %}`{{ page.tags | sort }}` / `{{ site.posts | sort: 'author' }}` / `{{ site.pages | sort: 'title', 'last' }}`{% endraw %} |                  |
-| 从数组中选取一个随意值。可选参数为：选取个数             | {% raw %}`{{ site.pages | sample }}` / `{{ site.pages | sample:2 }}`{% endraw %} |                                                        |
-| 从一个数组中 Push, pop, shift, and unshift 元素       | {% raw %}`{{ page.tags | push: 'Spokane' }}` / `{{ page.tags | pop }}` / `{{ page.tags | shift }}` / `{{ page.tags | unshift: "Olympia" }}`{% endraw %}      |       `['Seattle', 'Tacoma', 'Spokane']` / `['Seattle']` / `['Tacoma']` / `['Olympia', 'Seattle', 'Tacoma']`   |
-| 将对象转换为其字符串表示形式，用于调试                   | {% raw %}`{{ some_var | inspect }}`{% endraw %} |                                                                                                        |
+| 描述                                                     |                过滤器                |                                 输出                                 |
+| :------------------------------------------------------- | :----------------------------------: | :------------------------------------------------------------------: | --------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| 将日期转化为 XML 模式 (ISO 8601) 的格式                  |        {% raw %}`{{ site.time        |                  date_to_xmlschema }}`{% endraw %}                   | `2008-11-17T13:07:54-08:00`                                           |
+| 将日期转化为 RFC-822 格式                                |        {% raw %}`{{ site.time        |                    date_to_rfc822 }}`{% endraw %}                    | `Mon, 17 Nov 2008 13:07:54 -0800`                                     |
+| 将日期转化为短格式                                       |        {% raw %}`{{ site.time        |                    date_to_string }}`{% endraw %}                    | `17 Nov 2008`                                                         |
+| 将日期转化为长格式                                       |        {% raw %}`{{ site.time        |                 date_to_long_string }}`{% endraw %}                  | `17 November 2008`                                                    |
+| 选取键值对应的所有对象，返回一个数组                     |      {% raw %}`{{ site.members       |            where:"graduation_year","2014" }}`{% endraw %}            |                                                                       |
+| 选取表达式正确的所有对象，返回一个数组                   |      {% raw %}`{{ site.members       | where_exp:"item","item.graduation_year == 2014" }}`/`{{ site.members | where_exp:"item","item.projects contains 'foo'" }}`{% endraw %}       |                                                |
+| 根据所给属性将对象分组，返回一个数组                     |      {% raw %}`{{ site.members       |              group_by:"graduation_year" }}`{% endraw %}              | `[{"name"=>"2013", "items"=>[...]},{"name"=>"2014", "items"=>[...]}]` |
+| 对一些字符串转码，已方便显示在 XML                       |      {% raw %}`{{ page.content       |                      xml_escape }}`{% endraw %}                      |                                                                       |
+| CGI 转码，用于 URL 中，将所有的特殊字符转化为 %XX 的形式 |     {% raw %}`{{ “foo,bar;baz?”      |                      cgi_escape }}`{% endraw %}                      | `foo%2Cbar%3Bbaz%3F`                                                  |
+| URI 转码                                                 |   {% raw %}`{{ “'foo, bar \\baz?'”   |                      uri_escape }}`{% endraw %}                      | `foo,%20bar%20%5Cbaz?`                                                |
+| 统计文章中的字数                                         |      {% raw %}`{{ page.content       |                   number_of_words }}`{% endraw %}                    | `1337`                                                                |
+| 将数组转换为句子，列举标签时尤其有用                     |        {% raw %}`{{ page.tags        |               array_to_sentence_string }}`{% endraw %}               | `foo, bar, and baz`                                                   |
+| 将 Markdown 格式的字符串转换为 HTML                      |      {% raw %}`{{ page.excerpt       |                     markdownify }}`{% endraw %}                      |                                                                       |
+| 将 Sass / SCSS 格式的字符串转换为 CSS                    |        {% raw %}`{{ some_scss        |                      scssify }}`/`{{ some_sass                       | sassify }}`{% endraw %}                                               |                                                |
+| 将字符串转换为小写字母 URL “slug”                        | {% raw %}`{{ "The \_config.yml file" |               slugify }}`/`{{ "The \_config.yml file"                | slugify: 'pretty' }}`{% endraw %}                                     | `the-config-yml-file` / `the-_config.yml-file` |
+| 将 Hash / 数组 格式的字符串转换为 JSON                   |   {% raw %}`{{ site.data.projects    |                       jsonify }}`{% endraw %}                        |                                                                       |
+| 对数组排序，可选参数为：1.排序属性；2.顺序（正序或倒序） |        {% raw %}`{{ page.tags        |                       sort }}`/`{{ site.posts                        | sort: 'author' }}`/`{{ site.pages                                     | sort: 'title', 'last' }}`{% endraw %}          |                                    |
+| 从数组中选取一个随意值。可选参数为：选取个数             |       {% raw %}`{{ site.pages        |                      sample }}`/`{{ site.pages                       | sample:2 }}`{% endraw %}                                              |                                                |
+| 从一个数组中 Push, pop, shift, and unshift 元素          |        {% raw %}`{{ page.tags        |                  push: 'Spokane' }}`/`{{ page.tags                   | pop }}`/`{{ page.tags                                                 | shift }}`/`{{ page.tags                        | unshift: "Olympia" }}`{% endraw %} | `['Seattle', 'Tacoma', 'Spokane']` / `['Seattle']` / `['Tacoma']` / `['Olympia', 'Seattle', 'Tacoma']` |
+| 将对象转换为其字符串表示形式，用于调试                   |        {% raw %}`{{ some_var         |                       inspect }}`{% endraw %}                        |                                                                       |
 
 ## 5. 参考
 
 - [Liquid docs](https://shopify.github.io/liquid/)
-
 - [Liquid 中文网](https://liquid.bootcss.com/)
-
 - ...
 
 {% comment %}
