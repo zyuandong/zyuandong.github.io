@@ -1,14 +1,14 @@
 ---
-title: 算法面试题（一）
+title: JavaScript 基础练习（一）
 category: 技术
-tags: [算法, JavaScript]
+tags: [JavaScript]
 ---
 
-日常的工作、学习中，经常会遇到一些有趣的面试题，刚开始的时候还没体会到题解的精妙，但通过与其他人讨论解题思路时就会发现其中有很多闪光点。
+本文记录了我刚学习 JavaScript 时遇到的一些练习题，第一眼看到可能感觉很基础，但其中包含了一些容易被忽视的知识点，也从另一个方面体现了基础对于程序员是多么重要。
 
-以下是我收集到的一些编码题，以及部分解题思路，方便多回顾，多反思。
+练习题的解答大多是我自己的理解，可能会存在思考不足的情况，或许有其他更优的解答，热烈欢迎大家拍砖指教。
 
-因为收集到的题目数量稍多，我分成了两部分，此为第一部分，点击 [此处]({% link _posts/2015-01-07-interview_question_02.md %}) 跳转至第二部分。
+因为练习题数量较多，篇幅太长不方便阅读，所以我分成了几个部分，跳转链接放在本文最后。
 
 ## 1. 实现 Array.indexOf() 方法
 
@@ -140,9 +140,7 @@ console.log(getFileType(str)); // >> .txt
 实现：
 
 ```javascript
-var item = [
-  { children: [{ name: 'xx', age: 12 }, { child: [{ name: 'gg', age: 11 }] }] }
-];
+var item = [{ children: [{ name: 'xx', age: 12 }, { child: [{ name: 'gg', age: 11 }] }] }];
 
 function getJsonHTML(item) {
   var str = '';
@@ -152,11 +150,7 @@ function getJsonHTML(item) {
         str += '<ul>';
         if (item[i].children[j].child) {
           str += '<li><ul>';
-          for (
-            var k = 0, len3 = item[i].children[j].child.length;
-            k < len3;
-            k++
-          ) {
+          for (var k = 0, len3 = item[i].children[j].child.length; k < len3; k++) {
             str +=
               '<li>' +
               item[i].children[j].child[k].name +
@@ -338,7 +332,7 @@ var name = 'name1';
 
 var person = {
   name: 'name2',
-  say: say
+  say: say,
 };
 
 person.say();
@@ -350,3 +344,8 @@ say();
 
 - `name2`
 - `name1`
+
+## 文章链接
+
+- [JavaScript 基础练习（一）]({% link _posts/2015-01-06-interview_question_01.md %})
+- [JavaScript 基础练习（二）]({% link _posts/2015-01-07-interview_question_02.md %})
