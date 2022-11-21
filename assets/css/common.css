@@ -1319,6 +1319,7 @@ em {
 #aside .guid .avatar-box {
   display: block;
   background-color: var(--disabled);
+  border-radius: 50%;
   margin: 0.5rem 20% 0.3rem;
 }
 #aside .guid .avatar-box .avatar {
@@ -1905,6 +1906,9 @@ em {
   position: absolute;
   right: 0;
   bottom: 0.18rem;
+}
+#post .post-header h1 {
+  margin-top: 0;
 }
 #post .post-message {
   color: var(--disabled);
