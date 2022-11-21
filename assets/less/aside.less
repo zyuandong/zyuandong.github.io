@@ -1,5 +1,6 @@
 #aside {
   height: 100vh;
+  z-index: 2;
 
   ul {
     .is-active {
@@ -38,8 +39,6 @@
     .avatar-box {
       display: block;
       background-color: var(--disabled);
-      border-radius: 50%;
-      border: 0.02rem solid @white;
       margin: 0.5rem 20% 0.3rem;
 
       .avatar {
@@ -51,6 +50,7 @@
         line-height: 1.2rem;
         margin: 0 auto;
         border-radius: 50%;
+        border: 0.02rem solid @white;
         box-sizing: border-box;
       }
     }

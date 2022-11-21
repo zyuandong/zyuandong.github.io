@@ -10,21 +10,13 @@ title: Home
 
     <h1 class="m-t-0 m-b-8"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-    <div class="flex-box">
-      <div class="left">
-        <img src="/assets/img/bg-img.jpg" alt="">
-      </div>
-
-      <div class="right m-l-16">
-        <div class="post-content">
-          {{ post.content | strip_html | truncate: 100 }}
-        </div>
-        <div class="post-message text-tip p-t-16 p-b-0">
-          {% include post-date.html %}
-          {% include post-category.html %}
-          {% include post-tag.html %}
-        </div>
-      </div>
+    <div class="post-content">
+      {{ post.content | strip_html | truncate: 100 }}
+    </div>
+    <div class="post-message text-tip p-t-16 p-b-0">
+      {% include post-date.html %}
+      {% include post-category.html %}
+      {% include post-tag.html %}
     </div>
 
   </div>
