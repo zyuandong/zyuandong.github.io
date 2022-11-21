@@ -8,19 +8,23 @@ permalink: /categories
 <div id="categories">
   <!-- <h1>分类</h1> -->
 
-<ul class="tabs p-0 m-0">
-  {% for c in site.categories %}
-  <li id="#{{ c | first | url_encode }}" class="cursor-pointer">
-    <h3 class="p-0 m-0">
-      <span>{{ c | first}}</span>
-      <span class="text-tip">{{ c | last | size }} Post</span>
-    </h3>
-  </li>
-  {% endfor %}
-</ul>
+  <ul class="tabs p-0 m-0">
+    {% for c in site.categories %}
+    <li id="#{{ c | first | url_encode }}" class="cursor-pointer">
+      <h3 class="p-0 m-0">
+        <span>{{ c | first}}</span>
+        <span class="text-tip">{{ c | last | size }}</span>
+      </h3>
+    </li>
+    {% endfor %}
+  </ul>
 
-{% for c in site.categories %}
+  {% for c in site.categories %}
+
+  <!-- 分类名称 -->
   {% assign category = c | first %}
+
+  <!-- 分类下文章集合 -->
   {% assign posts = c | last %}
 
   <ul class="category-group #{{ category | slugify | url_encode }}">
@@ -34,46 +38,44 @@ permalink: /categories
     </li>
     {% endfor %}
   </ul>
-{% endfor %}
-
+  {% endfor %}
 </div>
 
 <script>
-const findTarget = (el) => {
-  if (el.tagName === "LI") {
-    return el;
-  }
-  return findTarget(el.parentNode);
-}
-
-window.onload = () => {
-  // 初始化选项
-  const key = location.hash;
-  if (!key) {
-    document.querySelector(".tabs").firstElementChild.className += " is-active";
-  } else {
-    document.getElementById(key).className += " is-active";
-  }
-  document.getElementsByClassName(key || 'category-group')[0].style.display = "block";
-
-  // 点击切换选项
-  document.querySelector('.tabs').addEventListener('click', function(e) {
-    console.log(e.target.tagName);
-    let idStr = null;
-    let targetEl = null;
-    if (e.target.tagName === 'SPAN' || e.target.tagName === 'H3') {
-      targetEl = findTarget(e.target);
-      idStr = targetEl.id;
-    } else {
-      console.log(e.id);
-      idStr = e.id
+  const findTarget = (el) => {
+    if (el.tagName === 'LI') {
+      return el;
     }
-    // TODO active status
-    $('.category-group').hide();
-    $('.tabs li').removeClass("is-active");
-    targetEl.className += ' is-active';
-    document.getElementsByClassName(idStr)[0].style.display = "block";
+    return findTarget(el.parentNode);
+  };
 
-  })
-}
+  window.onload = () => {
+    // 初始化选项
+    const key = location.hash;
+    if (!key) {
+      document.querySelector('.tabs').firstElementChild.className += ' is-active';
+    } else {
+      document.getElementById(key).className += ' is-active';
+    }
+    document.getElementsByClassName(key || 'category-group')[0].style.display = 'block';
+
+    // 点击切换选项
+    document.querySelector('.tabs').addEventListener('click', function (e) {
+      // console.log(e.target.tagName);
+      let idStr = null;
+      let targetEl = null;
+      if (e.target.tagName === 'SPAN' || e.target.tagName === 'H3') {
+        targetEl = findTarget(e.target);
+        idStr = targetEl.id;
+      } else {
+        console.log(e.id);
+        idStr = e.id;
+      }
+      // TODO active status
+      $('.category-group').hide();
+      $('.tabs li').removeClass('is-active');
+      targetEl.className += ' is-active';
+      document.getElementsByClassName(idStr)[0].style.display = 'block';
+    });
+  };
 </script>

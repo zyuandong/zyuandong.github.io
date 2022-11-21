@@ -1729,16 +1729,21 @@ em {
   background: var(--tag-number-bg);
 }
 #tags .tag-anchor-point {
+  display: none;
   padding: 0.8rem 0 0 0;
   margin: -0.6rem 0 0 0;
 }
 #tags .tag-anchor-point.is-active {
-  color: var(--brand);
+  display: block;
+}
+#tags .tag-anchor-point.is-active + .tag-group {
+  display: block;
 }
 #tags ul:not(.tag-inline-block) {
   line-height: 2;
 }
 #tags ul.tag-group {
+  display: none;
   padding-left: 1.5rem;
 }
 #tags ul.tag-group .box {

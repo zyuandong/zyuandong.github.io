@@ -42,11 +42,16 @@
   .tag-inline-block();
 
   .tag-anchor-point {
+    display: none;
     padding: 0.80rem 0 0 0;
     margin: -0.60rem 0 0 0;
 
     &.is-active {
-      color: var(--brand);
+      display: block;
+
+      &+.tag-group {
+        display: block;
+      }
     }
   }
 
@@ -55,6 +60,7 @@
   }
 
   ul.tag-group {
+    display: none;
     padding-left: 1.50rem;
 
     .box {
