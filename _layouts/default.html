@@ -1,92 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>{{ page.title }} | zyuandong's Blog</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <script async>
+      const $html = document.querySelector('html');
+      $html.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+    </script>
 
-<head>
-  <title>{{ page.title }} | zyuandong's Blog</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <script async>
-    const $html = document.querySelector('html');
-    $html.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
-  </script>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/emoji.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/highlight/styles/monokai_sublime.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/rouge/styles/base16.monokai.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/assets/rouge/styles/monokai.sublime.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/rouge/styles/github.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/nprogress.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/common.css" />
+    <link
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+      href="{{ site.baseurl }}/assets/img/coding.ico"
+    />
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/emoji.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/highlight/styles/monokai_sublime.css" /> -->
-  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/rouge/styles/base16.monokai.css" /> -->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/rouge/styles/monokai.sublime.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/rouge/styles/github.css" /> -->
-  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/nprogress.css" /> -->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/common.css" />
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ site.baseurl }}/assets/img/coding.ico" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gitalk.css" />
+    <script src="{{ site.baseurl }}/assets/js/gitalk.min.js"></script>
+    <script
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+      type="text/javascript"
+    ></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$']]
+        }
+      });
+    </script>
+  </head>
 
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gitalk.css">
-  <script src="{{ site.baseurl }}/assets/js/gitalk.min.js"></script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-      }
-    });
-  </script>
-
-</head>
-
-<body>
-  {% if page.url contains "posts" %}
+  <body>
+    {% if page.url contains "posts" %}
+    <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
     {% assign aside_sticky = "" %}
-  {% else %}
+    <!-- else -->
+    {% else %}
+    <!-- 非文章详情页面，右侧边栏所有卡片弹性置顶 -->
     {% assign aside_sticky = "aside-sticky" %}
-  {% endif %}
+    <!-- endif -->
+    {% endif %}
 
-  <div id="header-bg"></div>
+    <!-- include -->
+    {% include header.html %}
 
-  <div id="site-scroll">
-    <div id="site-container">
-      {% include aside.html %}
-
-      <div class="container">
-        {% include header.html %}
-
-        <div id="main" class="{{ aside_sticky }}">
-          <div class="main-view card">
-            {{ content }}
+    <div id="site-scroll">
+      <div id="site-container">
+        <div class="container">
+          <div id="main" class="{{ aside_sticky }}">
+            <div class="main-view card">{{ content }}</div>
+            <div
+              class="main-aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}"
+            >
+              <div class="card">{% include search-box.html %}</div>
+              <div class="card">{% include recent-update.html %}</div>
+              <div class="card">{% include trending-tags.html %}</div>
+              {% if page.url contains "posts" %}
+              <div class="card position-sticky">{% include post-menu.html %}</div>
+              {% endif %}
+            </div>
           </div>
-          <div class="main-aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}">
-            <div class="card">
-              {% include recent-update.html %}
-            </div>
-            <div class="card">
-              {% include trending-tags.html %}
-            </div>
-            {% if page.url contains "posts" %}
-            <div class="card position-sticky">
-              {% include post-menu.html %}
-            </div>
-            {% endif %}
-          </div>
+
+          {% include footer.html %}
         </div>
-
-        {% include footer.html %}
       </div>
+
+      {% include back2top.html %} {% include mask-layer.html %}
     </div>
 
-    {% include back2top.html %}
-    {% include mask-layer.html %}
-  </div>
-
-  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-1.11.3.min.js"></script>
-  <!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/highlight/highlight.pack.js"></script> -->
-  <!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/highlight/highlight.min.js"></script> -->
-  <!-- <script async type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.pjax.js"></script> -->
-  <!-- <script async type="text/javascript" src="{{ site.baseurl }}/assets/js/nprogress.js"></script> -->
-  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
-</body>
-
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/highlight/highlight.pack.js"></script> -->
+    <!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/highlight/highlight.min.js"></script> -->
+    <!-- <script async type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.pjax.js"></script> -->
+    <!-- <script async type="text/javascript" src="{{ site.baseurl }}/assets/js/nprogress.js"></script> -->
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
+  </body>
 </html>

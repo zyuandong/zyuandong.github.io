@@ -1,11 +1,3 @@
-#header-bg {
-  width: 100%;
-  height: 0.5rem;
-  background-color: var(--header-bg);
-  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  z-index: 1;
-}
 #site-scroll {
   height: 100vh;
   overflow: auto;
@@ -13,7 +5,7 @@
 #site-container {
   display: flex;
   justify-content: start;
-  max-width: 14.40rem;
+  max-width: 14.4rem;
   margin: 0 auto;
 
   #aside {
@@ -25,9 +17,6 @@
 
   .container {
     flex: 5;
-    // width: 100%;
-    // height: 100vh;
-    // overflow: auto;
   }
 }
 
@@ -35,9 +24,10 @@
   text-align: center;
 }
 
-@import "aside";
-@import "header";
-@import "main";
-@import "post";
-@import "footer";
-@import "am-site-menu.less";
+@import 'aside';
+@import 'header';
+@import 'main';
+@import 'post';
+@import 'footer';
+@import 'am-site-menu';
+@import 'search-box';

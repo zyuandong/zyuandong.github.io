@@ -1258,14 +1258,6 @@ em {
 .flex-box {
   display: flex;
 }
-#header-bg {
-  width: 100%;
-  height: 0.5rem;
-  background-color: var(--header-bg);
-  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  z-index: 1;
-}
 #site-scroll {
   height: 100vh;
   overflow: auto;
@@ -1359,124 +1351,39 @@ em {
   justify-content: space-around;
 }
 #header {
-  width: calc(84%);
-  max-width: 12rem;
+  width: 100%;
   height: 0.5rem;
   line-height: 0.5rem;
   background: var(--header-bg);
   overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 11;
 }
 #header.show-row-theme .row-search {
   margin-top: -0.5rem;
 }
-#header .toggle-search-theme {
-  align-self: flex-start;
+#header .header-container {
+  max-width: 14.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.1rem;
+  margin: 0 auto;
 }
-#header .row-search {
-  height: 0.5rem;
-  line-height: 0.55rem;
-  -webkit-transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-}
-#header .row-theme {
-  height: 0.5rem;
-  line-height: 0.55rem;
-  text-align: right;
-}
-#header .search-box {
-  display: inline-block;
-  text-align: left;
-  height: 0.32rem;
-  line-height: 0.32rem;
-  background: var(--bg);
-  border: none;
-  border-bottom: 2px solid var(--border);
-}
-#header .search-box input {
-  height: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-#header .search-box .shortcut-key {
-  padding: 0 0.07rem;
-  border: 1px solid var(--border);
-  border-radius: 0.03rem;
-  font-size: 0.16rem;
-  line-height: 0.2rem;
-  display: inline-block;
-}
-#header .search-box .search-mask {
-  display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-}
-#header .search-box .result-box {
-  font-size: 0.14rem;
-  width: 6rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 0.03rem;
-  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
-  position: absolute;
-  left: calc((100% - 6rem) / 2);
-  top: 1rem;
-  z-index: 10;
-}
-#header .search-box .result-box i:not(.icon-file, .icon-folder-open, .icon-tag) {
-  font-size: 0.2rem;
-}
-#header .search-box .result-box .search-box {
-  height: 0.32rem;
-  line-height: 0.32rem;
-  background: var(--bg);
-  border: none;
-  border-bottom: 2px solid var(--border);
-  width: calc(100% - 0.2rem);
-  background: transparent;
-}
-#header .search-box .result-box .search-box input {
-  height: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-#header .search-box .result-box .search-box input {
-  width: calc(100% - 0.5rem);
-}
-#header .search-box .result-box .search-box i.icon-close {
-  padding: 0.06rem 0.05rem;
-  margin-right: -0.05rem;
-}
-#header .search-box .result-box .search-box i.icon-close.search-clear-btn {
-  color: var(--secondary);
-}
-#header .search-box .result-box .type {
-  padding: 0.03rem 0.1rem;
-  background: var(--bg);
-}
-#header .search-box .result-box ul {
+#header ul.site-menu {
   list-style: none;
-  line-height: 1.8;
-  padding-left: 0.24rem;
+  padding: 0;
+  margin: 0;
 }
-#header .search-box .result-box ul li {
-  padding-right: 0.24rem;
+#header ul.site-menu li {
+  display: inline-block;
+  margin-right: 0.1rem;
+}
+#header #theme-btn {
+  font-size: 0.2rem;
+  display: flex;
 }
 #site-menu-btn {
   display: none;
@@ -1503,7 +1410,7 @@ em {
 }
 #main {
   display: flex;
-  padding: 0.6rem 0.1rem 0;
+  padding: 0.6rem 0 0;
   justify-content: flex-start;
 }
 #main.aside-sticky {
@@ -2056,6 +1963,92 @@ em {
   -ms-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
   -o-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
   transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+}
+#search-box .search-box {
+  display: inline-block;
+  text-align: left;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  background: var(--bg);
+  border: none;
+  border-bottom: 2px solid var(--border);
+}
+#search-box .search-box input {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#search-box .search-box .shortcut-key {
+  padding: 0 0.07rem;
+  border: 1px solid var(--border);
+  border-radius: 0.03rem;
+  font-size: 0.16rem;
+  line-height: 0.2rem;
+  display: inline-block;
+}
+#search-box .search-box .search-mask {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+}
+#search-box .search-box .result-box {
+  font-size: 0.14rem;
+  width: 6rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.03rem;
+  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: calc((100% - 6rem) / 2);
+  top: 1rem;
+  z-index: 10;
+}
+#search-box .search-box .result-box i:not(.icon-file, .icon-folder-open, .icon-tag) {
+  font-size: 0.2rem;
+}
+#search-box .search-box .result-box .search-box {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  background: var(--bg);
+  border: none;
+  border-bottom: 2px solid var(--border);
+  width: calc(100% - 0.2rem);
+  background: transparent;
+}
+#search-box .search-box .result-box .search-box input {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#search-box .search-box .result-box .search-box input {
+  width: calc(100% - 0.5rem);
+}
+#search-box .search-box .result-box .search-box i.icon-close {
+  padding: 0.06rem 0.05rem;
+  margin-right: -0.05rem;
+}
+#search-box .search-box .result-box .search-box i.icon-close.search-clear-btn {
+  color: var(--secondary);
+}
+#search-box .search-box .result-box .type {
+  padding: 0.03rem 0.1rem;
+  background: var(--bg);
+}
+#search-box .search-box .result-box ul {
+  list-style: none;
+  line-height: 1.8;
+  padding-left: 0.24rem;
+}
+#search-box .search-box .result-box ul li {
+  padding-right: 0.24rem;
 }
 #post-menu {
   min-height: 0.24rem;
