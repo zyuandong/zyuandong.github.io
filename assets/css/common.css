@@ -1372,6 +1372,14 @@ em {
   padding: 0 0.1rem;
   margin: 0 auto;
 }
+#header .header-container .center {
+  width: calc(100% - 1.2rem);
+  display: none;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 #header ul.site-menu {
   list-style: none;
   padding: 0;
@@ -1387,7 +1395,7 @@ em {
 }
 #site-menu-btn {
   display: none;
-  padding: 0.18rem 0.17rem;
+  padding: 0.18rem 0.175rem;
   line-height: 0;
   font-size: 0;
   width: 0.15rem;
@@ -2355,59 +2363,37 @@ em {
 /* fade-out style end */
 /* media query */
 @media screen and (max-width: 767.98px) {
+  #header {
+    width: 100%;
+  }
+  #header .header-container {
+    padding: 0;
+  }
+  #header .header-container .center {
+    display: inline-block;
+  }
+  #header #site-menu-btn {
+    display: inline-block;
+  }
+  #header #theme-btn {
+    padding: 0.15rem;
+  }
+  #header .site-menu {
+    display: none;
+  }
+  #header i.icon-sun,
+  #header i.icon-moon {
+    font-size: 0.2rem;
+  }
   #site-container {
     display: block;
     position: relative;
-  }
-  #site-container #aside {
-    width: 100vw !important;
-    position: fixed;
-    right: 100vw;
-    z-index: 3;
-    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  #site-container #aside .avatar-box {
-    margin: 0.5rem 35% 0.2rem;
   }
   #site-container .container {
     width: 100vw !important;
     position: absolute;
     left: 0;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  #site-container .container #header {
-    width: 100%;
-  }
-  #site-container .container #header #site-menu-btn {
-    display: inline-block;
-  }
-  #site-container .container #header #breadcrumb {
-    padding: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  #site-container .container #header .search-btn {
-    height: 0.34rem;
-    line-height: 0.4rem;
-    background: transparent;
-    border-bottom: none;
-  }
-  #site-container .container #header .search-btn input:not(.search-input),
-  #site-container .container #header .search-btn .shortcut-key {
-    display: none;
-  }
-  #site-container .container #header i.icon-search,
-  #site-container .container #header i.icon-close,
-  #site-container .container #header i.icon-sun,
-  #site-container .container #header i.icon-moon {
-    font-size: 0.2rem;
-  }
-  #site-container .container #header .search-mask .result-box {
-    width: auto;
-    top: 0.2rem;
-    right: 0.2rem;
-    left: 0.2rem;
   }
   #site-container .container #main {
     padding-left: 0;

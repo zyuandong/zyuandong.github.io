@@ -22,6 +22,10 @@
       </ul>
     </div>
 
+    <div class="center">
+      {% if page.alias %} {{ page.alias }} {% else %} {{ page.title }} {% endif %}
+    </div>
+
     <div class="right">{% include theme-btn.html %}</div>
   </div>
 </div>
