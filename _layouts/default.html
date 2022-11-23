@@ -71,7 +71,7 @@
             <div
               class="main-aside {% unless page.url contains 'posts' %}position-sticky{% endunless %}"
             >
-              <div class="card">{% include search-box.html %}</div>
+              <div class="card search-card">{% include search-box.html %}</div>
               <div class="card">{% include recent-update.html %}</div>
               <div class="card">{% include trending-tags.html %}</div>
               {% if page.url contains "posts" %}

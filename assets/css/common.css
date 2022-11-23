@@ -209,6 +209,9 @@ blockquote ol {
   border-radius: 0.04rem;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
+.card.search-card {
+  padding: 0.04rem;
+}
 /* card end */
 /* line */
 .line {
@@ -1975,14 +1978,15 @@ em {
 #search-box .search-box {
   display: inline-block;
   text-align: left;
+  width: 100%;
   height: 0.32rem;
   line-height: 0.32rem;
-  background: var(--bg);
+  background-color: var(--card-bg);
   border: none;
-  border-bottom: 2px solid var(--border);
 }
 #search-box .search-box input {
   height: 100%;
+  width: calc(100% - 0.47rem);
   border: none;
   outline: none;
   background: transparent;
@@ -1998,7 +2002,7 @@ em {
 #search-box .search-box .search-mask {
   display: none;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
   top: 0;
   right: 0;
@@ -2022,16 +2026,17 @@ em {
   font-size: 0.2rem;
 }
 #search-box .search-box .result-box .search-box {
+  width: 100%;
   height: 0.32rem;
   line-height: 0.32rem;
-  background: var(--bg);
+  background-color: var(--card-bg);
   border: none;
-  border-bottom: 2px solid var(--border);
   width: calc(100% - 0.2rem);
   background: transparent;
 }
 #search-box .search-box .result-box .search-box input {
   height: 100%;
+  width: calc(100% - 0.47rem);
   border: none;
   outline: none;
   background: transparent;

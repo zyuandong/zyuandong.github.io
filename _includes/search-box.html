@@ -1,57 +1,55 @@
 <div id="search-box">
-  <div class="row-search">
-    <div class="search-box search-btn m-lr-10 p-lr-5">
-      <i class="icon-search"></i>
-      <input type="text" class="p-0" placeholder="..." />
-      <span class="shortcut-key">/</span>
-      <div class="search-mask">
-        <div class="result-box">
-          <div class="search-box m-10 p-lr-5">
-            <i class="icon-search"></i>
-            <input type="text" class="search-input p-0" placeholder="..." />
-            <i class="icon-close search-close-btn cursor-pointer"></i>
-          </div>
-          <div class="type">文章</div>
-          <ul class="res-post-group m-tb-8">
-            {% for post in site.posts limit: 5 %}
-            <li>
-              <i class="icon-file"></i>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-            <li>...</li>
-          </ul>
-          <div class="type">分类</div>
-          <ul class="res-category-group m-tb-8">
-            {% for category in site.categories %}
-            <li>
-              <i class="icon-folder-open"></i>
-              <a href="{{ site.baseurl }}/categories#{{ category | first | slugify }}">
-                {{ category | first }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-          <div class="type">标签</div>
-          <ul class="res-tag-group m-tb-8">
-            {% assign tags = "" | split: "" %}
-
-            <!-- 遍历站点标签，并暂存为一个新集合 -->
-            {% for t in site.tags %} {% assign tags = tags | push: t[0] %} {% endfor %}
-
-            <!-- 标签排序 -->
-            {% assign sorted_tags = tags | sort_natural %}
-
-            <!-- 渲染前五个标签 -->
-            {% for tag in sorted_tags | limit: 5 %}
-            <li>
-              <i class="icon-tag"></i>
-              <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}">{{ tag }}</a>
-            </li>
-            {% endfor %}
-            <li>...</li>
-          </ul>
+  <div class="search-box search-btn">
+    <i class="icon-search"></i>
+    <input type="text" class="p-0" placeholder="..." />
+    <span class="shortcut-key">/</span>
+    <div class="search-mask">
+      <div class="result-box">
+        <div class="search-box m-10 p-lr-5">
+          <i class="icon-search"></i>
+          <input type="text" class="search-input p-0" placeholder="..." />
+          <i class="icon-close search-close-btn cursor-pointer"></i>
         </div>
+        <div class="type">文章</div>
+        <ul class="res-post-group m-tb-8">
+          {% for post in site.posts limit: 5 %}
+          <li>
+            <i class="icon-file"></i>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+          <li>...</li>
+        </ul>
+        <div class="type">分类</div>
+        <ul class="res-category-group m-tb-8">
+          {% for category in site.categories %}
+          <li>
+            <i class="icon-folder-open"></i>
+            <a href="{{ site.baseurl }}/categories#{{ category | first | slugify }}">
+              {{ category | first }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="type">标签</div>
+        <ul class="res-tag-group m-tb-8">
+          {% assign tags = "" | split: "" %}
+
+          <!-- 遍历站点标签，并暂存为一个新集合 -->
+          {% for t in site.tags %} {% assign tags = tags | push: t[0] %} {% endfor %}
+
+          <!-- 标签排序 -->
+          {% assign sorted_tags = tags | sort_natural %}
+
+          <!-- 渲染前五个标签 -->
+          {% for tag in sorted_tags | limit: 5 %}
+          <li>
+            <i class="icon-tag"></i>
+            <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}">{{ tag }}</a>
+          </li>
+          {% endfor %}
+          <li>...</li>
+        </ul>
       </div>
     </div>
   </div>
