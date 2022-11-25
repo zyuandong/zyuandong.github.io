@@ -23,6 +23,11 @@
     padding: 0 0.1rem;
     margin: 0 auto;
 
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
     .center {
       width: calc(100% - 1.2rem);
       display: none;
@@ -30,6 +35,22 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+  }
+
+  .avatar-box {
+    width: 0.4rem;
+    height: 0.4rem;
+    display: inline-block;
+    background-color: var(--disabled);
+    border-radius: 50%;
+    margin-right: 0.2rem;
+
+    .avatar {
+      width: 100%;
+      text-align: center;
+      border-radius: 50%;
+      box-sizing: border-box;
     }
   }
 
