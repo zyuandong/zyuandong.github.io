@@ -1,0 +1,192 @@
+<div id="search-result-box">
+  <div class="search-mask">
+    <div class="result-box">
+      <div class="search-box m-10">
+        <!-- <i class="icon-search"></i> -->
+        <input type="text" class="search-input p-0" placeholder="搜索..." />
+        <i class="icon-close search-close-btn cursor-pointer"></i>
+      </div>
+      <div class="type">文章</div>
+      <ul class="res-post-group m-tb-8">
+        {% for post in site.posts limit: 5 %}
+        <li>
+          <i class="icon-file"></i>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        <li>...</li>
+      </ul>
+      <div class="type">分类</div>
+      <ul class="res-category-group m-tb-8">
+        {% for category in site.categories %}
+        <li>
+          <i class="icon-folder-open"></i>
+          <a href="{{ site.baseurl }}/categories#{{ category | first | slugify }}">
+            {{ category | first }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="type">标签</div>
+      <ul class="res-tag-group m-tb-8">
+        {% assign tags = "" | split: "" %}
+
+        <!-- 遍历站点标签，并暂存为一个新集合 -->
+        {% for t in site.tags %} {% assign tags = tags | push: t[0] %} {% endfor %}
+
+        <!-- 标签排序 -->
+        {% assign sorted_tags = tags | sort_natural %}
+
+        <!-- 渲染前五个标签 -->
+        {% for tag in sorted_tags | limit: 5 %}
+        <li>
+          <i class="icon-tag"></i>
+          <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}">{{ tag }}</a>
+        </li>
+        {% endfor %}
+        <li>...</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  let xhr, res;
+  const URL = `{{ site.baseurl }}/datas/posts.json`;
+  const $search = document.querySelector('.search-mask');
+  const $input = document.querySelector('.search-input');
+  const $btn = $input.nextElementSibling;
+
+  // 显示搜索面板
+  const showSearchPanel = () => {
+    $search.style.display = 'block';
+    $input.focus();
+  };
+
+  // 隐藏搜索面板
+  const hideSearchPanel = () => ($search.style.display = 'none');
+
+  // 清空输入框
+  const clearSearchPanel = () => {
+    $input.value = '';
+    doFilter();
+  };
+
+  // 封装过滤方法
+  const dataFilter = (type, data, key) => {
+    const typeEnum = {
+      post: {
+        icon: 'icon-file',
+        class: 'res-post-group',
+      },
+      category: {
+        icon: 'icon-folder-open',
+        class: 'res-category-group',
+      },
+      tag: {
+        icon: 'icon-tag',
+        class: 'res-tag-group',
+      },
+    };
+
+    const filteredData = data.filter((item, index) => {
+      const str = item.title || item.name;
+      if (str.toLowerCase().includes(key.trim())) {
+        return item;
+      }
+    });
+    let htmlStr = '';
+    filteredData.forEach((item, index) => {
+      if (index < 10) {
+        htmlStr += `<li>
+        <i class="${typeEnum[type].icon}"></i>
+        <a href="${item.url}">${item.title || item.name}</a></li>`;
+      }
+      if (index === 10) {
+        htmlStr += `<li>...</li>`;
+      }
+    });
+    document.querySelector(`.${typeEnum[type].class}`).innerHTML =
+      htmlStr || '<li class="no-data">暂无搜索结果...</li>';
+  };
+
+  const doFilter = (key = '') => {
+    // posts
+    dataFilter('post', res.posts, key);
+
+    // categories
+    dataFilter('category', res.categories, key);
+
+    // tags
+    dataFilter('tag', res.tags, key);
+  };
+
+  const getDataByAjax = () => {
+    if (window.XMLHttpRequest) {
+      xhr = new XMLHttpRequest();
+    } else {
+      // code for IE6, IE5
+      xhr = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    xhr.open('GET', URL, true);
+    xhr.send();
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        res = JSON.parse(xhr.responseText);
+      }
+    };
+  };
+  getDataByAjax();
+
+  // 触发显示搜索面板
+  document.querySelectorAll('.search-btn').forEach(function (el) {
+    el.addEventListener('click', (e) => {
+      const $target = e.target;
+      if (
+        $target.tagName === 'INPUT' ||
+        ($target.tagName === 'I' && $target.className.includes('icon-search'))
+      ) {
+        showSearchPanel();
+      }
+    });
+  });
+
+  // 触发隐藏搜索面板
+  $search.addEventListener('click', (e) => {
+    const $target = e.target;
+    if (
+      $target.className.includes('search-close-btn') ||
+      $target.className.includes('search-mask') ||
+      $target.tagName === 'A'
+    ) {
+      clearSearchPanel();
+      hideSearchPanel();
+    } else if ($target.className.includes('search-clear-btn')) {
+      clearSearchPanel();
+      $target.classList.replace('search-clear-btn', 'search-close-btn');
+    }
+  });
+
+  // 快捷键方式显示、隐藏搜索面板
+  document.addEventListener('keyup', (e) => {
+    // console.log(e.keyCode);
+    // 快捷键 '/' 显示搜索面板
+    if (e.keyCode === 191) showSearchPanel();
+    // 快捷键 'Esc' 隐藏搜索面板
+    if (e.keyCode === 27) {
+      clearSearchPanel();
+      hideSearchPanel();
+    }
+  });
+
+  $input.addEventListener('input', (e) => {
+    // 根据输入内容是否为空，切换 ’x‘ 按钮功能
+    const key = $input.value.toLowerCase();
+    $btn.classList.replace('search-clear-btn', 'search-close-btn');
+    if (key.length) $btn.classList.replace('search-close-btn', 'search-clear-btn');
+
+    doFilter(key);
+  });
+</script>

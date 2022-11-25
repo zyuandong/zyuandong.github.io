@@ -14,7 +14,8 @@
     }
 
     .avatar-box,
-    .site-menu {
+    .site-menu,
+    #search-box {
       display: none;
     }
 
@@ -137,32 +138,18 @@
       right: 0;
     }
   }
+
+  #search-result-box {
+    .result-box {
+      width: 90vw;
+      left: calc((100% - 90vw) / 2);
+    }
+  }
 }
 
 // >= 768: iPad、iPad mini | 1024: iPad pro
 // show aside / hide main-aside
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
-  #aside {
-    .guid {
-      .avatar-box {
-        width: calc(100% - 40%);
-        height: 0;
-        padding-bottom: calc(100% - 40% - 0.04rem);
-      }
-    }
-  }
-
-  #header {
-    .search-mask {
-      .result-box {
-        width: auto;
-        top: 0.4rem;
-        left: 0.4rem;
-        right: 0.4rem;
-      }
-    }
-  }
-
   #main {
     .main-view {
       margin-right: 0;
@@ -176,13 +163,9 @@
 // >= 1024：desktop
 // show main-aside
 @media screen and (min-width: 1024px) {
-  #aside {
-    .guid {
-      .avatar-box {
-        width: 1.2rem;
-        height: 1.2rem;
-        margin: 0.5rem auto 0.3rem;
-      }
+  #header {
+    #search-box {
+      display: none;
     }
   }
 }
