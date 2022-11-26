@@ -1355,12 +1355,13 @@ em {
   display: flex;
 }
 #site-menu-btn {
+  width: 0.16rem;
   display: none;
-  padding: 0.18rem 0.175rem;
   line-height: 0;
   font-size: 0;
-  width: 0.15rem;
   box-sizing: content-box;
+  cursor: pointer;
+  padding: 0.17rem;
 }
 #site-menu-btn .line {
   width: 100%;
@@ -1368,14 +1369,25 @@ em {
   display: inline-block;
   background: var(--text-primary);
   margin: 0;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#site-menu-btn .line-first {
+  margin-top: 1px;
 }
 #site-menu-btn .line-middle {
   margin: 0.04rem 0;
+}
+#site-menu-btn .line-last {
+  margin-bottom: 1px;
 }
 #main {
   display: flex;
@@ -1897,41 +1909,32 @@ em {
   text-align: center;
   padding: 0.1rem 0;
 }
-#site-scroll.show-site-menu {
-  overflow: hidden;
+#header.show-site-menu #site-menu-btn .line-first {
+  -webkit-transform: translateX(-0.02rem) translateY(0.003rem) rotate(-45deg);
+  -moz-transform: translateX(-0.02rem) translateY(0.003rem) rotate(-45deg);
+  -ms-transform: translateX(-0.02rem) translateY(0.003rem) rotate(-45deg);
+  -o-transform: translateX(-0.02rem) translateY(0.003rem) rotate(-45deg);
+  transform: translateX(-0.02rem) translateY(0.003rem) rotate(-45deg);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
-#site-scroll.show-site-menu #aside {
-  right: 0;
+#header.show-site-menu #site-menu-btn .line-last {
+  -webkit-transform: translateX(-0.02rem) translateY(-0.003rem) rotate(45deg);
+  -moz-transform: translateX(-0.02rem) translateY(-0.003rem) rotate(45deg);
+  -ms-transform: translateX(-0.02rem) translateY(-0.003rem) rotate(45deg);
+  -o-transform: translateX(-0.02rem) translateY(-0.003rem) rotate(45deg);
+  transform: translateX(-0.02rem) translateY(-0.003rem) rotate(45deg);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
-#site-scroll.show-site-menu .container {
-  left: 100%;
-}
-#site-scroll.show-site-menu .container #header {
-  justify-content: flex-end;
-}
-#site-scroll.show-site-menu .container #site-menu-btn {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-#site-scroll.show-site-menu .container #site-menu-btn .line {
-  background: #fff;
-}
-#site-scroll.show-site-menu .container #site-menu-btn .line-first {
-  width: 70%;
-  -webkit-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
-  -moz-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
-  -ms-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
-  -o-transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
-  transform: translateX(-0.03rem) translateY(0.03rem) rotate(-45deg);
-}
-#site-scroll.show-site-menu .container #site-menu-btn .line-last {
-  width: 70%;
-  -webkit-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
-  -moz-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
-  -ms-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
-  -o-transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
-  transform: translateX(-0.03rem) translateY(-0.03rem) rotate(45deg);
+#header.show-site-menu #site-menu-btn .line-middle {
+  background-color: transparent;
 }
 #search-box .search-box {
   display: inline-block;
@@ -2208,131 +2211,8 @@ em {
   transform-origin: 100% 50%;
 }
 /* mask layer end */
-/* use animation */
-#contents.fade-in {
-  -webkit-animation: fade-in 0.3s;
-  -moz-animation: fade-in 0.3s;
-  -ms-animation: fade-in 0.3s;
-  -o-animation: fade-in 0.3s;
-  animation: fade-in 0.3s;
-}
-#contents.fade-out {
-  -webkit-animation: fade-out 0.2s;
-  -moz-animation: fade-out 0.2s;
-  -ms-animation: fade-out 0.2s;
-  -o-animation: fade-out 0.2s;
-  animation: fade-out 0.2s;
-}
-/* use animation end */
-/* fade-in style */
-@-webkit-keyframes fade-in {
-  from {
-    -webkit-transform: translateY(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-moz-keyframes fade-in {
-  from {
-    -moz-transform: translateY(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-ms-keyframes fade-in {
-  from {
-    -ms-transform: translateY(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -ms-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-o-keyframes fade-in {
-  from {
-    -o-transform: translateY(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  from {
-    transform: translateY(0.3rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* fade-in style end */
-/* fade-out style */
-@-webkit-keyframes fade-out {
-  from {
-    -webkit-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translateY(-0.3rem);
-    opacity: 0;
-  }
-}
-@-moz-keyframes fade-out {
-  from {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -moz-transform: translateY(-0.3rem);
-    opacity: 0;
-  }
-}
-@-ms-keyframes fade-out {
-  from {
-    -ms-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -ms-transform: translateY(-0.3rem);
-    opacity: 0;
-  }
-}
-@-o-keyframes fade-out {
-  from {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -o-transform: translateY(-0.3rem);
-    opacity: 0;
-  }
-}
-@keyframes fade-out {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-0.3rem);
-    opacity: 0;
-  }
-}
-/* fade-out style end */
 /* media query */
 @media screen and (max-width: 767.98px) {
-  #header {
-    width: 100%;
-  }
   #header .header-container {
     padding: 0;
   }

@@ -1,44 +1,30 @@
-#site-scroll {
+#header {
   &.show-site-menu {
-    overflow: hidden;
-
-    #aside {
-      right: 0;
-    }
-
-    .container {
-      left: 100%;
-
-      #header {
-        justify-content: flex-end;
+    #site-menu-btn {
+      .line-first {
+        .close-trf(-0.02rem, 0.003rem, -45deg);
       }
 
-      #site-menu-btn {
-        position: fixed;
-        top: 0;
-        left: 0;
+      .line-last {
+        .close-trf(-0.02rem, -0.003rem, 45deg);
+      }
 
-        .line {
-          background: @white;
-        }
-
-        .line-first {
-          width: 70%;
-          .line-trf(-0.03rem, 0.03rem, -45deg);
-        }
-
-        .line-last {
-          width: 70%;
-          .line-trf(-0.03rem, -0.03rem, 45deg);
-        }
+      .line-middle {
+        background-color: transparent;
       }
     }
   }
 }
-.line-trf(@X, @Y, @rotate) {
+
+.close-trf(@X, @Y, @rotate) {
   -webkit-transform: translateX(@X) translateY(@Y) rotate(@rotate);
   -moz-transform: translateX(@X) translateY(@Y) rotate(@rotate);
   -ms-transform: translateX(@X) translateY(@Y) rotate(@rotate);
   -o-transform: translateX(@X) translateY(@Y) rotate(@rotate);
   transform: translateX(@X) translateY(@Y) rotate(@rotate);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
 }
