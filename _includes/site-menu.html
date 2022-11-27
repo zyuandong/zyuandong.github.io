@@ -1,0 +1,23 @@
+<!-- page_title -->
+{% assign page_title = page.title | downcase %}
+
+<!-- page_url -->
+{% assign page_url = page.url | downcase %}
+
+<ul class="site-menu">
+  <li class="guid-item {% if page_title == 'home' %}is-active{% endif %}">
+    <a href="{{ site.baseurl }}/home">首页</a>
+  </li>
+  <li class="guid-item {% if page_url contains 'categories' %}is-active{% endif %}">
+    <a href="{{ site.baseurl }}/categories">分类</a>
+  </li>
+  <li class="guid-item {% if page_url contains 'tags' %}is-active{% endif %}">
+    <a href="{{ site.baseurl }}/tags">标签</a>
+  </li>
+  <li class="guid-item {% if page_title == 'archives' %}is-active{% endif %}">
+    <a href="{{ site.baseurl }}/archives">归档</a>
+  </li>
+  <li class="guid-item {% if page_title == 'about' %}is-active{% endif %}">
+    <a href="{{ site.baseurl }}/about">关于</a>
+  </li>
+</ul>

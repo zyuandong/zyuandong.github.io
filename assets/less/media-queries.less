@@ -51,6 +51,11 @@
         .main-aside {
           display: none;
         }
+
+        .card {
+          border: none;
+          border-radius: 0;
+        }
       }
     }
   }
@@ -121,8 +126,6 @@
   }
 
   #back2top {
-    // width: 50rem;
-    // height: 50rem;
     border-radius: 0;
     position: fixed;
     right: 0;
@@ -156,6 +159,11 @@
       display: none;
     }
   }
+  #header.show-site-menu {
+    .site-menu-container {
+      display: none;
+    }
+  }
 }
 
 // >= 1024：desktop
@@ -164,6 +172,12 @@
   #header {
     #search-box {
       display: none;
+    }
+
+    &.show-site-menu {
+      .site-menu-container {
+        display: none;
+      }
     }
   }
 }

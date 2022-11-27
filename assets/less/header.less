@@ -2,18 +2,11 @@
   width: 100%;
   height: 0.5rem;
   line-height: 0.5rem;
-  background: var(--header-bg);
-  overflow: hidden;
-  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--header-bg);
+  box-shadow: var(--shadow);
   position: fixed;
   top: 0;
   z-index: 11;
-
-  &.show-row-theme {
-    .row-search {
-      margin-top: -0.5rem;
-    }
-  }
 
   .header-container {
     max-width: 14.4rem;
@@ -62,6 +55,12 @@
     li {
       display: inline-block;
       margin: 0 0.15rem;
+
+      &.is-active {
+        a {
+          color: var(--brand);
+        }
+      }
     }
   }
 

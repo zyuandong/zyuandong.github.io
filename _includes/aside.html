@@ -1,38 +1,26 @@
-{% assign page_title = page.title | downcase %}
-{% assign page_url = page.url | downcase %}
-
 <div id="aside">
-  <div class="guid">
-    <a href="{{ site.baseurl }}/" class="avatar-box">
-      <img src="{{ site.baseurl }}/assets/img/header-img.jpg" class="avatar">
-    </a>
-    <ul>
-      <li class="guid-item {% if page_title == 'home' %}is-active{% endif %}">
-        <a href="{{ site.baseurl }}/home">首页</a>
-      </li>
-      <li class="guid-item {% if page_url contains 'categories' %}is-active{% endif %}">
-        <a href="{{ site.baseurl }}/categories">分类</a>
-      </li>
-      <li class="guid-item {% if page_url contains 'tags' %}is-active{% endif %}">
-        <a href="{{ site.baseurl }}/tags">标签</a>
-      </li>
-      <li class="guid-item {% if page_title == 'archives' %}is-active{% endif %}">
-        <a href="{{ site.baseurl }}/archives">归档</a>
-      </li>
-      <li class="guid-item {% if page_title == 'about' %}is-active{% endif %}">
-        <a href="{{ site.baseurl }}/about">关于</a>
-      </li>
-    </ul>
-    <div class="my-msg">
-      <a href="https://github.com/zyuandong" target="_blank">
-        <i class="icon-github"></i>
+  <div class="aside-mask">
+    <div class="guid">
+      <a href="{{ site.baseurl }}/" class="avatar-box">
+        <img src="{{ site.baseurl }}/assets/img/header-img.jpg" class="avatar" />
       </a>
-      <a href="http://codepen.io/dongyao" target="_blank">
-        <i class="icon-codepen"></i>
-      </a>
-      <a href="mailto:de1719@163.com">
-        <i class="icon-mail-o"></i>
-      </a>
+
+      {% include site-menu.html %}
+
+      <!-- include -->
+      {% include search-box.html %}
+
+      <div class="my-msg">
+        <a href="https://github.com/zyuandong" target="_blank">
+          <i class="icon-github"></i>
+        </a>
+        <a href="http://codepen.io/dongyao" target="_blank">
+          <i class="icon-codepen"></i>
+        </a>
+        <a href="mailto:de1719@163.com">
+          <i class="icon-mail-o"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>

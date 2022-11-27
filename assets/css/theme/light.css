@@ -1,0 +1,23 @@
+:root {
+  --brand: #3390ff;
+  --primary: rgba(0, 0, 0, 0.85);
+  --secondary: rgba(0, 0, 0, 0.45);
+  --white: #fff;
+  --title: rgba(0, 0, 0, 0.85);
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.45);
+  --disabled: rgba(0, 0, 0, 0.25);
+  --border: rgba(0, 0, 0, 0.15);
+  --divider: rgba(0, 0, 0, 0.06);
+  --bg: rgba(0, 0, 0, 0.04);
+  --table-header: rgba(0, 0, 0, 0.04);
+  --table-body: rgba(0, 0, 0, 0.02);
+  --code-inline: #d14;
+  --code-inline-bg: #f9f2f4;
+  --tag-text-bg: #868e96;
+  --tag-number-bg: #495057;
+  --body-bg: url('/assets/img/bg-img.jpg');
+  --header-bg: #fff;
+  --card-bg: #fff;
+  --shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}

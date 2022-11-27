@@ -1,38 +1,26 @@
 #aside {
   height: 100vh;
-  z-index: 2;
+  position: fixed;
+  top: 0;
 
-  ul {
-    .is-active {
-      a {
-        color: @white;
-      }
-    }
-  }
-
-  a {
-    color: rgba(@white, 0.45);
-
-    &:hover {
-      color: @white;
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited {
-      text-decoration: none;
-    }
+  .aside-mask {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
   }
 
   .guid {
-    width: 100%;
+    width: 80vw;
     height: 100%;
     float: left;
     color: #ccc;
     position: relative;
-    background-color: @black;
+    background-color: var(--header-bg);
     //  background: -webkit-linear-gradient(left top, #86ed7b, #064065);
     //  background: -webkit-linear-gradient(left top, #737373, #000000);
 
@@ -40,7 +28,7 @@
       display: block;
       background-color: var(--disabled);
       border-radius: 50%;
-      margin: 0.5rem 20% 0.3rem;
+      margin: 0.5rem auto 0.3rem;
 
       .avatar {
         display: block;
@@ -61,16 +49,12 @@
       padding: 0;
       list-style: none;
 
-      li.guid-item {
-        padding: 0.1rem 0.3rem;
-        text-align: center;
-      }
+      li {
+        display: block;
 
-      li.is-active {
-        color: @white;
-
-        a {
-          color: @white;
+        &.guid-item {
+          padding: 0.1rem 0.3rem;
+          text-align: center;
         }
       }
     }

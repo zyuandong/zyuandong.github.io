@@ -1,6 +1,8 @@
 #header {
   &.show-site-menu {
     #site-menu-btn {
+      z-index: 1;
+
       .line-first {
         .close-trf(-0.02rem, 0.003rem, -45deg);
       }
@@ -12,6 +14,22 @@
       .line-middle {
         background-color: transparent;
       }
+    }
+
+    .site-menu-container {
+      display: block;
+    }
+  }
+
+  .site-menu-container {
+    display: none;
+
+    .site-menu {
+      display: block;
+    }
+    #search-box {
+      display: block;
+      margin: 0 0.1rem;
     }
   }
 }

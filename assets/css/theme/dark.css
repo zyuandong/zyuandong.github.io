@@ -1,5 +1,5 @@
-:root[data-theme="dark"] {
-  --brand: #D89614;
+:root[data-theme='dark'] {
+  --brand: #d89614;
   --primary: rgba(255, 255, 255, 0.85);
   --secondary: rgba(255, 255, 255, 0.45);
   --white: #fff;
@@ -16,7 +16,8 @@
   --code-inline-bg: rgba(255, 255, 255, 0.08);
   --tag-text-bg: #868e96;
   --tag-number-bg: #495057;
-  --body-bg: #090C10;
-  --header-bg: #161B22;
-  --card-bg: #0D1117;
+  --body-bg: #090c10;
+  --header-bg: #272727;
+  --card-bg: #1e1e1e;
+  --shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.1);
 }
