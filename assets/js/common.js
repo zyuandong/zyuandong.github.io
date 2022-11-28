@@ -193,7 +193,7 @@ const debounce = (fn, delay) => {
 };
 
 let scrollTop = 0,
-  $header;
+  $header = document.querySelector('#header');
 const toggleHeader = (e) => {
   const $target = e.target;
   const newScrollTop = $target.scrollTop;
@@ -207,11 +207,21 @@ const toggleHeader = (e) => {
 
 // toggle header
 // const handleScroll = () => {
-//   $header = document.querySelector('#header');
 //   document
 //   .querySelector('#site-scroll')
 //   .addEventListener('scroll', debounce(toggleHeader, 150));
 // }
+
+// 展开、收起侧边栏
+const toggleAside = () => {
+  document.getElementById('site-menu-btn').addEventListener('click', (e) => {
+    $header.className = $header.className ? '' : 'show-site-menu';
+  });
+
+  document.querySelector('#aside .aside-mask').addEventListener('click', () => {
+    $header.className = $header.className ? '' : 'show-site-menu';
+  });
+};
 
 $(function () {
   // bindActive();
@@ -230,6 +240,8 @@ $(function () {
   setBack2topController();
 
   // handleScroll();
+
+  toggleAside();
 
   $('#post .post-content img').each(function () {
     this.parentElement.classList.add('post-img');
