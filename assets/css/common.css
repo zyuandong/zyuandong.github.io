@@ -126,21 +126,11 @@ td > code {
   border-radius: 0.04rem;
 }
 code {
-  font-family: Consolas, 'Microsoft YaHei', KaiTi, 'Courier New', monospace;
+  font-size: 0.14rem;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, 'Microsoft YaHei', KaiTi;
 }
 code pre {
-  font-family: Consolas, 'Microsoft YaHei', KaiTi, 'Courier New', monospace;
-}
-.highlight .rouge-gutter {
-  text-align: right;
-  padding-right: 0.5em;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-.highlight .rouge-code {
-  padding-left: 0.5em;
-}
-.highlight .rouge-code pre {
-  white-space: pre;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, 'Microsoft YaHei', KaiTi;
 }
 /* code inline end */
 /* code block */
@@ -151,16 +141,30 @@ pre {
 pre > code {
   padding: 0;
   border-radius: 0.05rem;
-  font-family: Consolas, 'Microsoft YaHei', KaiTi, 'Courier New', monospace;
-}
-pre > code table pre.lineno {
-  min-width: 0.2rem;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, 'Microsoft YaHei', KaiTi;
 }
 .highlighter-rouge .highlight {
   border-radius: 0.04rem;
 }
 .highlighter-rouge .highlight pre.highlight {
   border-radius: 0.04rem;
+}
+.highlight td.rouge-gutter {
+  background-color: #171717;
+  text-align: right;
+  padding-right: 0.5em;
+  position: sticky;
+  left: 0;
+}
+.highlight td.rouge-gutter .lineno {
+  min-width: 0.2rem;
+  color: #656565;
+}
+.highlight td.rouge-code {
+  padding-left: 0.5em;
+}
+.highlight td.rouge-code pre {
+  white-space: pre;
 }
 /* code block end */
 /* 引用 */

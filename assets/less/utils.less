@@ -86,23 +86,10 @@ td {
   }
 }
 code {
+  font-size: 0.14rem;
   font-family: @code-font-family;
   pre {
     font-family: @code-font-family;
-  }
-}
-.highlight {
-  .rouge-gutter {
-    text-align: right;
-    padding-right: 0.5em;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  .rouge-code {
-    padding-left: 0.5em;
-
-    pre {
-      white-space: pre;
-    }
   }
 }
 /* code inline end */
@@ -116,10 +103,6 @@ pre {
     padding: 0;
     border-radius: 0.05rem;
     font-family: @code-font-family;
-
-    table pre.lineno {
-      min-width: 0.2rem;
-    }
   }
 }
 .highlighter-rouge {
@@ -128,6 +111,28 @@ pre {
 
     pre.highlight {
       border-radius: 0.04rem;
+    }
+  }
+}
+.highlight {
+  td.rouge-gutter {
+    background-color: #171717;
+    text-align: right;
+    padding-right: 0.5em;
+    position: sticky;
+    left: 0;
+
+    .lineno {
+      min-width: 0.2rem;
+      color: #656565;
+    }
+  }
+
+  td.rouge-code {
+    padding-left: 0.5em;
+
+    pre {
+      white-space: pre;
     }
   }
 }
