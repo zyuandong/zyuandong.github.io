@@ -1,18 +1,22 @@
 ---
-title: Mac / Windows 下安装不同版本的 JDK
+title: Mac / Windows 下安装多种版本的 JDK
 category: 工具
 tags: [Java, Mac, Windows]
 ---
 
-## Windows
+## 前言
 
-```shell
-JAVA_HOME=%JAVA8_HOME%
-JAVA8_HOME=c:\...\...\jdk1.8
-JAVA11_HOME=c:\...\...\jdk_11
-Path=%JAVA_HOME%\lib;%JAVA_HOME%\jre\bin;
-CLASSPATH=%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;
-```
+常用的版本为 JAVA 8，但是 VSCode 中的插件需要使用的版本至少为 11，因此需要安装不同版本的 JDK
+
+## JDK 下载地址
+
+[官网 JDK](https://www.oracle.com/java/technologies/downloads/)
+
+[injdk.cn](https://www.injdk.cn/)
+
+M1 芯片 arm 架构
+
+[azul.com](https://www.azul.com/downloads/)
 
 ## Mac OS
 
@@ -33,16 +37,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Hom
 
 `source ~/.base_profile`
 
-## 20221127
-
-[官网 JDK](https://www.oracle.com/java/technologies/downloads/)
-
-[injdk.cn](https://www.injdk.cn/)
-
-M1 芯片 arm 架构
-
-[azul.com](https://www.azul.com/downloads/)
-
 ```shell
 # 查看 JDK 安装路径
 $ /usr/libexec/java_home -V
@@ -58,6 +52,18 @@ $ /usr/libexec/java_home -v 1.8
 $ /usr/libexec/java_home -v 11
 /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 ```
+
+## Windows
+
+```shell
+JAVA_HOME=%JAVA8_HOME%
+JAVA8_HOME=c:\...\...\jdk1.8
+JAVA11_HOME=c:\...\...\jdk_11
+Path=%JAVA_HOME%\lib;%JAVA_HOME%\jre\bin;
+CLASSPATH=%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;
+```
+
+切换版本时需要修改环境变量中 `JAVA_HOME` 的值
 
 ## 参考
 
