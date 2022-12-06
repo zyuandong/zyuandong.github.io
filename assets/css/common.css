@@ -20,6 +20,7 @@
   --header-bg: #fff;
   --card-bg: #fff;
   --shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --code-block-gutter-bg: #ececec;
 }
 :root[data-theme='dark'] {
   --brand: #d89614;
@@ -43,6 +44,7 @@
   --header-bg: #272727;
   --card-bg: #1e1e1e;
   --shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.1);
+  --code-block-gutter-bg: #323232;
 }
 html[data-theme='dark'] .highlight table td {
   padding: 5px;
@@ -268,7 +270,9 @@ body {
   color: var(--text-primary);
   font-size: 0.16rem;
   line-height: 1.75;
-  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background: var(--body-bg);
 }
 /* a tag */
@@ -362,7 +366,7 @@ pre > code {
   border-radius: 0.04rem;
 }
 .highlight td.rouge-gutter {
-  background-color: var(--bg);
+  background-color: var(--code-block-gutter-bg);
   text-align: right;
   padding-right: 0.5em;
   position: sticky;
@@ -1978,7 +1982,7 @@ em {
 }
 #archives .year::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -1996,7 +2000,7 @@ em {
 }
 #archives .year .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2014,7 +2018,7 @@ em {
 }
 #archives .month::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2030,7 +2034,7 @@ em {
 }
 #archives .month .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2051,7 +2055,7 @@ em {
 }
 #archives .day-title .day::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2063,7 +2067,7 @@ em {
 }
 #archives .day-title .day .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2124,7 +2128,7 @@ em {
   list-style: none;
   padding-left: 0.2rem;
 }
-#post .post-content .task-list .task-list-item input[type="checkbox"] {
+#post .post-content .task-list .task-list-item input[type='checkbox'] {
   margin-right: 0.08rem;
 }
 #post #gitalk-container .gt-container svg {

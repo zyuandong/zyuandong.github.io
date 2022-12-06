@@ -20,6 +20,7 @@
   --header-bg: #272727;
   --card-bg: #1e1e1e;
   --shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.1);
+  --code-block-gutter-bg: #323232;
 }
 html[data-theme='dark'] .highlight table td {
   padding: 5px;
