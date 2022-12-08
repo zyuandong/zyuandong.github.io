@@ -30,13 +30,13 @@ last_modified_date: 2021-05-11
 ```js
 function aaa() {
   var a = 1;
-  return function() {
-    alert(a++)
+  return function () {
+    alert(a++);
   };
 }
 var fun = aaa();
-fun();  // 1 执行后 a++，，然后a还在~
-fun();  // 2
+fun(); // 1 执行后 a++，，然后a还在~
+fun(); // 2
 fun = null; //a被回收！！
 ```
 
@@ -63,8 +63,8 @@ function abc() {
   a++;
   alert(a);
 }
-abc();  //2
-abc();  //3
+abc(); //2
+abc(); //3
 ```
 
 ### 5.2. 局部变量
@@ -75,8 +75,8 @@ function abc() {
   a++;
   alert(a);
 }
-abc();  //2
-abc();  //2
+abc(); //2
+abc(); //2
 ```
 
 那么怎么才能做到变量 a 既是局部变量又可以累加呢？
@@ -85,35 +85,37 @@ abc();  //2
 
 ```js
 function outer() {
-  var x=10;
-  return function() {  //函数嵌套函数
+  var x = 10;
+  return function () {
+    //函数嵌套函数
     x++;
     alert(x);
-  }
+  };
 }
-var y = outer();    //外部函数赋给变量y;
-y();    //y函数调用一次，结果为11，相当于outer()()；
-y();    //y函数调用第二次，结果为12，实现了累加
+var y = outer(); //外部函数赋给变量y;
+y(); //y函数调用一次，结果为11，相当于outer()()；
+y(); //y函数调用第二次，结果为12，实现了累加
 ```
 
 ### 5.4. 模块化代码，减少全局变量的污染
 
 ```js
-var abc = (function() {  //abc为外部匿名函数的返回值
+var abc = (function () {
+  //abc为外部匿名函数的返回值
   var a = 1;
-  return function() {
+  return function () {
     a++;
     alert(a);
-  }
+  };
 })();
-abc();  //2 ；调用一次abc函数，其实是调用里面内部函数的返回值
-abc();  //3
+abc(); //2 ；调用一次abc函数，其实是调用里面内部函数的返回值
+abc(); //3
 ```
 
 ### 5.5. 私有成员的存在
 
 ```js
-var aaa = (function() {
+var aaa = (function () {
   var a = 1;
   function bbb() {
     a++;
@@ -124,12 +126,12 @@ var aaa = (function() {
     alert(a);
   }
   return {
-    b:bbb,  //json结构
-    c:ccc
-  }
+    b: bbb, //json结构
+    c: ccc,
+  };
 })();
-aaa.b();    //2
-aaa.c();    //3
+aaa.b(); //2
+aaa.c(); //3
 ```
 
 ### 5.6. 使用匿名函数实现累加
@@ -139,14 +141,15 @@ aaa.c();    //3
 ```js
 function box() {
   var age = 100;
-  return function() { //匿名函数
+  return function () {
+    //匿名函数
     age++;
     return age;
   };
 }
 var b = box();
 alert(b());
-alert(b());    //即alert(box()())；
+alert(b()); //即alert(box()())；
 alert(b());
 alert(b);
 //function () {
@@ -154,7 +157,7 @@ alert(b);
 //  return age;
 //}
 
-b = null;  //解除引用，等待垃圾回收
+b = null; //解除引用，等待垃圾回收
 ```
 
 过度使用闭包会导致性能的下降。函数里放匿名函数，则产生了闭包
@@ -164,28 +167,29 @@ b = null;  //解除引用，等待垃圾回收
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <title></title>
-  <script>
-  window.onload = function() {
-    var aLi = document.getElementsByTagName('li');
-    for (var i=0;i<aLi.length;i++) {
-      aLi[i].onclick = function() {        //当点击时for循环已经结束
-        alert(i);
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <script>
+      window.onload = function () {
+        var aLi = document.getElementsByTagName('li');
+        for (var i = 0; i < aLi.length; i++) {
+          aLi[i].onclick = function () {
+            //当点击时for循环已经结束
+            alert(i);
+          };
+        }
       };
-    }
-  }
-  </script>
-</head>
-<body>
-  <ul>
-    <li>123</li>
-    <li>456</li>
-    <li>789</li>
-    <li>010</li>
-  </ul>
-</body>
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>123</li>
+      <li>456</li>
+      <li>789</li>
+      <li>010</li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -195,29 +199,29 @@ b = null;  //解除引用，等待垃圾回收
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <title></title>
-  <script>
-  window.onload = function() {
-    var aLi = document.getElementsByTagName('li');
-    for (var i=0;i<aLi.length;i++) {
-      (function(i){
-        aLi[i].onclick = function() {
-          alert(i);
-        };
-      })(i);
-    }
-  };
-  </script>
-</head>
-<body>
-  <ul>
-    <li>123</li>
-    <li>456</li>
-    <li>789</li>
-  </ul>
-</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <script>
+      window.onload = function () {
+        var aLi = document.getElementsByTagName('li');
+        for (var i = 0; i < aLi.length; i++) {
+          (function (i) {
+            aLi[i].onclick = function () {
+              alert(i);
+            };
+          })(i);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>123</li>
+      <li>456</li>
+      <li>789</li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -229,7 +233,7 @@ b = null;  //解除引用，等待垃圾回收
 function closure() {
   var oDiv = document.getElementById('oDiv'); //oDiv用完之后一直驻留在内存中
   oDiv.onclick = function () {
-    alert('oDiv.innerHTML');    //这里用oDiv导致内存泄露
+    alert('oDiv.innerHTML'); //这里用oDiv导致内存泄露
   };
 }
 closure();
@@ -239,7 +243,7 @@ closure();
 
 ```js
 function closure() {
-  var oDiv = document.getElementById("oDiv");
+  var oDiv = document.getElementById('oDiv');
   var test = oDiv.innerHTML;
   oDiv.onclick = function () {
     alert(test);
@@ -266,7 +270,7 @@ abc();
 ```js
 (function () {
   alert(123);
-})();   //然后通过()直接调用前面的表达式即可，因此函数可以不必写名字；
+})(); //然后通过()直接调用前面的表达式即可，因此函数可以不必写名字；
 ```
 
 ## 参考
