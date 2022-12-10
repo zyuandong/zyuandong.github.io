@@ -1,6 +1,6 @@
 ---
 title: 提高效率，拒绝拖延
-category: 生活
+category: 随笔
 tags: []
 ---
 

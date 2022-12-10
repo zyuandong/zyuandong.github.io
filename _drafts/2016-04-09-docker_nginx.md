@@ -1,5 +1,6 @@
 ---
 title: Docker 使用 Nginx 镜像部署前端
+category: 工具
 ---
 
 ## 上传打包后的代码至服务器
@@ -75,9 +76,9 @@ tag 可以看做版本号，如果不加 `:<tag>`，则默认 tag 为 latest
 
 ```sh
 docker run -d \
---name lottery-web_v1 \ 
--p 3001:80 \ 
--v /root/<project name>/nginx:/etc/nginx/conf.d \ 
+--name lottery-web_v1 \
+-p 3001:80 \
+-v /root/<project name>/nginx:/etc/nginx/conf.d \
 -v /root/<project name>/dist:/usr/share/nginx/html \
 lottery-web
 ```

@@ -1,6 +1,6 @@
 ---
 title: VS Code 下如何使用 Tomcat
-category: 随笔
+category: 工具
 ---
 
 1. VS Code 安装插件 Tomcat for Java
