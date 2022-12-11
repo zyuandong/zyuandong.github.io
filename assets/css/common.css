@@ -2118,11 +2118,8 @@ em {
   margin-top: 0;
 }
 #post .post-content a {
-  text-decoration: underline var(--border);
+  color: var(--brand);
   text-underline-offset: 0.03rem;
-}
-#post .post-content a:hover {
-  text-decoration-color: var(--brand);
 }
 #post .post-content .task-list {
   list-style: none;
