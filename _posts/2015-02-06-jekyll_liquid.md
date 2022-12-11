@@ -451,7 +451,6 @@ end
 {% comment %}
 
 - [liquid 用法笔记](http://blog.csdn.net/dont27/article/details/38097581)
-
 - [JavaScript Liquid 模板引擎 Tinyliquid](http://www.oschina.net/p/tinyliquid)
 
 {% endcomment %}

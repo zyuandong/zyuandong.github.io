@@ -133,5 +133,4 @@ Preference -> Setting-User 添加
 ## 4. 参考
 
 - [Sublime Text](https://www.sublimetext.com/)
-
 - [Package Control](https://packagecontrol.io/)

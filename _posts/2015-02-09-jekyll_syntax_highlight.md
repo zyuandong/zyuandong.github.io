@@ -162,27 +162,18 @@ Rouge 可以通过命令行的方式，输出指定主题的样式文件：
 ## 3. 参考
 
 - [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
-
 - [Markdown 语法说明](http://www.markdown.cn/)
-
 - [Configuration - Jekyll](https://jekyllrb.com/docs/configuration/)
-
 - [Syntax highlighting - GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting)
-
 - [List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
-
 - [Rouge](http://rouge.jneen.net/)
-
 - [highlight.js](https://highlightjs.readthedocs.io/en/latest/index.html)
-
 - ...
 
 {% comment %}
 
 - [wx: 学习 jekyll 背后的技术原理（静态网站）](https://mp.weixin.qq.com/s?src=11&timestamp=1622535289&ver=3103&signature=Ugb3Nlzg*4hEd20stLGwLrQufRfwaWWBNyQftc2uWqKeP4Yxk0itXXzlum2PmnEMhkPRdfvHcUlzYv2DwKB6xQ1krLn2sRjX7qkZMqHt6WMEML2u-PQa*o3ESsQTo25K&new=1)
-
 - [jekyll php 高亮代码,[Html]Jekyll 代码高亮的几种选择\_html/css_WEB-ITnose](https://blog.csdn.net/weixin_34434948/article/details/116058330)
-
 - [Jekyll 使用 Rouge 主题](https://www.cnblogs.com/baiyangcao/p/jekyll_rouge.html)
 
 {% endcomment %}
