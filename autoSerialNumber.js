@@ -14,12 +14,18 @@ const isNaN = (value) => {
   return value !== value;
 };
 
+const isIndex = (val) => {
+  // *.*.*. 或者 *.*.*
+  const reg = /^(\d+\.)*\d+\.?$/;
+  return reg.test(val);
+};
+
 const setNumber = (indexList, titleArr, line) => {
-  const number = indexList.join('.') + '.';
-  if (isNaN(+titleArr[1])) {
-    titleArr.splice(1, 0, number);
+  const index = indexList.join('.') + '.';
+  if (isIndex(titleArr[1])) {
+    titleArr.splice(1, 1, index);
   } else {
-    titleArr.splice(1, 1, number);
+    titleArr.splice(1, 0, index);
   }
   line = titleArr.join(' ');
   return line;
