@@ -1,6 +1,6 @@
 ---
 title: 使用 VS Code 进行 Debug
-category: 随笔
+category: 工具
 ---
 
 ## 前端
