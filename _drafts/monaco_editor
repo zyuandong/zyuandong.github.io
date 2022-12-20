@@ -1,0 +1,19 @@
+---
+title: 编辑器 Monaco Editor
+---
+
+[microsoft/monaco-editor](https://github.com/microsoft/monaco-editor)
+[nmanumr/monaco-basic](https://github.com/nmanumr/monaco-basic)
+[Vue 引入代码代码编辑器 monaco-editor 并自定义语法提示](https://www.cnblogs.com/wangjiahui/p/15524189.html)
+[在 Monaco 编辑器中对自定义语言进行语法验证](https://www.thinbug.com/q/39957140)
+[Vite+Vue3+Typescript 对于 MonacoEditor 的实践(慢更)](https://blog.csdn.net/heer_kaisair/article/details/123493429)
+[matt-oconnell/vue-monaco-editor](https://github.com/matt-oconnell/vue-monaco-editor)
+[Vue 引入代码代码编辑器 monacoeditor 并自定义语法提示](http://t.zoukankan.com/wangjiahui-p-15524189.htmls)
+[工作中的 Monaco Editor 使用经验总结](https://segmentfault.com/a/1190000042292716)
+[vue 使用 monaco-editor 实现在线编辑器](https://www.cnblogs.com/clownblogs/p/16535457.html)
+
+---
+
+[Ace Editor](https://ace.c9.io/)
+[CodeMirror](https://codemirror.net/)
+[vue-codemirror 代码编辑器使用心得和踩坑](https://blog.csdn.net/xujingyiss/article/details/118992763)
