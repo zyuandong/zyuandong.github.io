@@ -1,5 +1,6 @@
 ---
 title: VS Code & Java
+category: 工具
 ---
 
 ## Extension Pack for Java
