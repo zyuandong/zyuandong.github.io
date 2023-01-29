@@ -76,6 +76,14 @@ monaco.editor.create(this.$refs.editor, {
 
 [vue-codemirror 代码编辑器使用心得和踩坑](https://blog.csdn.net/xujingyiss/article/details/118992763)
 
+[闲谈 Monaco Editor-基本使用](https://zhuanlan.zhihu.com/p/47746336?from=singlemessage)
+
+[vue3+vite+ts 使用 monaco-editor 编辑器](https://blog.csdn.net/weixin_43909743/article/details/127633552)
+
+[monaco-editor 基本使用以及 monaco-editor 封装成 vue 组件](https://blog.csdn.net/m0_47659279/article/details/127437709)
+
+[Vue3+Vite+ElementPlus 中安装使用 MonacoEditor(自定义语言,自定义高亮，自定义鼠标悬浮提示，自定义工具栏)](https://blog.csdn.net/qq_54123885/article/details/125843129)
+
 ## 父组件获取编辑器的实时修改
 
 ### ref 组件实例 + defineExpose
