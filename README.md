@@ -19,9 +19,3 @@
 ## 文档标题自动排序
 
 `node autoSerialNumber.js <fileName?>`
-
-## gh-pages commit
-
-gh-pages
-
-## test commit
