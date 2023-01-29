@@ -19,7 +19,3 @@
 ## 文档标题自动排序
 
 `node autoSerialNumber.js <fileName?>`
-
-fix commit
-
-test
