@@ -1,4 +1,5 @@
 _site/
+_drafts/
 
 .DS_store
 .idea/
@@ -6,3 +7,4 @@ _site/
 node_modules/
 
 package-lock.json
+Gemfile.lock
