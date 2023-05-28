@@ -6,8 +6,9 @@
   var ctx = canvasEl.getContext('2d');
   var mousePos = [0, 0];
 
+  var theme = localStorage.getItem('theme');
   var easingFactor = 5.0;
-  var backgroundColor = '#000';
+  var backgroundColor = theme === 'dark' ? '#0d1117' : '#d8d9dd';
   // backgroundColor = ctx.createLinearGradient(0, 0, window.innerWidth, window.innerHeight);
   // backgroundColor.addColorStop(0, '#609BED')
   // backgroundColor.addColorStop(1, '#D52DA0')
@@ -17,8 +18,8 @@
   // backgroundColor.addColorStop(0.4, '#BF406C');
   // backgroundColor.addColorStop(0.6, '#EE8F60');
   // backgroundColor.addColorStop(1, '#F0E675');
-  var nodeColor = '#ddd';
-  var edgeColor = '#ddd';
+  var nodeColor = theme === 'dark' ? '#ddd' : '#333';
+  var edgeColor = theme === 'dark' ? '#ddd' : '#333';
 
   var nodes = [];
   var edges = [];
@@ -31,7 +32,7 @@
         y: Math.random() * canvasEl.height,
         vx: Math.random() * 1 - 0.5,
         vy: Math.random() * 1 - 0.5,
-        radius: Math.random() > 0.9 ? 3 + Math.random() * 3 : 1 + Math.random() * 3
+        radius: Math.random() > 0.9 ? 3 + Math.random() * 3 : 1 + Math.random() * 3,
       };
 
       nodes.push(node);
@@ -45,8 +46,8 @@
 
         var edge = {
           from: e,
-          to: e2
-        }
+          to: e2,
+        };
 
         addEdge(edge);
       });
@@ -92,12 +93,12 @@
 
       if (e.x <= 0 || e.x >= canvasEl.width) {
         e.vx *= -1;
-        e.x = clamp(0, canvasEl.width, e.x)
+        e.x = clamp(0, canvasEl.width, e.x);
       }
 
       if (e.y <= 0 || e.y >= canvasEl.height) {
         e.vy *= -1;
-        e.y = clamp(0, canvasEl.height, e.y)
+        e.y = clamp(0, canvasEl.height, e.y);
       }
     });
 
@@ -112,7 +113,7 @@
   }
 
   function lengthOfEdge(edge) {
-    return Math.sqrt(Math.pow((edge.from.x - edge.to.x), 2) + Math.pow((edge.from.y - edge.to.y), 2));
+    return Math.sqrt(Math.pow(edge.from.x - edge.to.x, 2) + Math.pow(edge.from.y - edge.to.y, 2));
   }
 
   function render() {
@@ -163,7 +164,7 @@
   window.onmousemove = function (e) {
     mousePos[0] = e.clientX;
     mousePos[1] = e.clientY;
-  }
+  };
 
   window.onresize(); // trigger the event manually.
   window.requestAnimationFrame(step);
