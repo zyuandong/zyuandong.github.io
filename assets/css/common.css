@@ -19,6 +19,7 @@
   --body-bg: url('/assets/img/bg-img.jpg');
   --header-bg: #fff;
   --card-bg: #fff;
+  --card-border: #fff;
   --shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   --code-block-gutter-bg: #ececec;
 }
@@ -40,10 +41,11 @@
   --code-inline-bg: rgba(255, 255, 255, 0.08);
   --tag-text-bg: #868e96;
   --tag-number-bg: #495057;
-  --body-bg: #090c10;
-  --header-bg: #272727;
-  --card-bg: #1e1e1e;
-  --shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.1);
+  --body-bg: #0d1117;
+  --header-bg: #161b22;
+  --card-bg: #161b22;
+  --card-border: #161b22;
+  --shadow: 0 2px 12px 0 rgba(13, 17, 23, 0.7);
   --code-block-gutter-bg: #323232;
 }
 html[data-theme='dark'] .highlight table td {
@@ -270,9 +272,7 @@ body {
   color: var(--text-primary);
   font-size: 0.16rem;
   line-height: 1.75;
-  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background: var(--body-bg);
 }
 /* a tag */
@@ -427,7 +427,7 @@ blockquote ol {
 .card {
   background-color: var(--card-bg);
   padding: 0.16rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--card-border);
   border-radius: 0.04rem;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1982,7 +1982,7 @@ em {
 }
 #archives .year::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2000,7 +2000,7 @@ em {
 }
 #archives .year .line {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2018,7 +2018,7 @@ em {
 }
 #archives .month::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2034,7 +2034,7 @@ em {
 }
 #archives .month .line {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2055,7 +2055,7 @@ em {
 }
 #archives .day-title .day::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2067,7 +2067,7 @@ em {
 }
 #archives .day-title .day .line {
   display: inline-block;
-  content: '';
+  content: "";
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);

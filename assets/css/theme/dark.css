@@ -16,10 +16,11 @@
   --code-inline-bg: rgba(255, 255, 255, 0.08);
   --tag-text-bg: #868e96;
   --tag-number-bg: #495057;
-  --body-bg: #090c10;
-  --header-bg: #272727;
-  --card-bg: #1e1e1e;
-  --shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.1);
+  --body-bg: #0d1117;
+  --header-bg: #161b22;
+  --card-bg: #161b22;
+  --card-border: #161b22;
+  --shadow: 0 2px 12px 0 rgba(13, 17, 23, 0.7);
   --code-block-gutter-bg: #323232;
 }
 html[data-theme='dark'] .highlight table td {
