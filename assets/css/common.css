@@ -1672,7 +1672,7 @@ em {
 }
 #main {
   display: flex;
-  padding: 0.6rem 0 0;
+  padding: 0.66rem 0 0;
   justify-content: flex-start;
 }
 #main.aside-sticky {
@@ -1680,16 +1680,16 @@ em {
 }
 #main .main-view {
   flex: 1;
-  min-height: calc(100vh - 1.04rem);
+  min-height: calc(100vh - 2px - 0.66rem - 0.685rem);
   width: 0;
-  margin: 0 0.05rem 0 0;
+  margin: 0 0.08rem 0 0;
 }
 #main .main-aside {
   width: 3rem;
-  margin: 0 0 0 0.05rem;
+  margin: 0 0 0 0.08rem;
 }
 #main .main-aside .card:not(:last-child) {
-  margin: 0 0 0.1rem 0;
+  margin: 0 0 0.16rem 0;
 }
 #main .main-aside a {
   color: var(--text-secondary);
@@ -1700,7 +1700,7 @@ em {
 }
 #main .position-sticky {
   position: sticky;
-  top: 0.6rem;
+  top: 0.66rem;
 }
 #main .position-sticky.card {
   display: none;
@@ -2185,7 +2185,7 @@ em {
 #footer {
   font-size: 0.14rem;
   text-align: center;
-  padding: 0.1rem 0;
+  padding: 0.22rem 0;
 }
 #header.show-site-menu #site-menu-btn {
   z-index: 1;
