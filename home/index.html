@@ -7,22 +7,24 @@ alias: 首页
 <div id="home">
   <!-- 遍历分页后的文章 -->
   {% for post in paginator.posts %}
-  <div class="post-item">
-    <h1 class="m-t-0 m-b-8"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  <div class="card m-b-16">
+    <div class="post-item">
+      <h1 class="m-t-0 m-b-8"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-    <div class="post-content">{{ post.content | strip_html | truncate: 200 }}</div>
-    <div class="post-message text-tip p-t-16 p-b-0">
-      <!-- include -->
-      {% include post-date.html %}
+      <div class="post-content">{{ post.content | strip_html | truncate: 150 }}</div>
+      <div class="post-message text-tip p-t-16 p-b-0">
+        <!-- include -->
+        {% include post-date.html %}
 
-      <!-- include -->
-      {% include post-category.html %}
+        <!-- include -->
+        {% include post-category.html %}
 
-      <!-- include -->
-      {% include post-tag.html %}
+        <!-- include -->
+        {% include post-tag.html %}
+      </div>
     </div>
+    <!-- <div class="line"></div> -->
   </div>
-  <div class="line"></div>
   {% endfor %}
 
   <!-- include -->

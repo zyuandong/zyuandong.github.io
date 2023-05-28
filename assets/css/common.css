@@ -1680,9 +1680,11 @@ em {
 }
 #main .main-view {
   flex: 1;
-  min-height: calc(100vh - 2px - 0.66rem - 0.685rem);
   width: 0;
   margin: 0 0.08rem 0 0;
+}
+#main .main-view .h-fill {
+  min-height: calc(100vh - 2px - 0.66rem - 0.685rem);
 }
 #main .main-aside {
   width: 3rem;
