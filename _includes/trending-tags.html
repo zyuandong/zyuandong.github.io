@@ -1,5 +1,5 @@
 <div id="trending-tags">
-  <h4 class="p-0 m-0 m-b-16">标签排行</h4>
+  <h4 class="p-0 m-0 m-b-8">标签排行</h4>
   {% assign tag_size_list = "" | split: "" %}
   {% assign size_list = "" | split: "" %}
 
@@ -27,7 +27,7 @@
     {% endfor %}
   {% endfor %}
 
-  <ul class="tag-inline-block p-0 m-b-0">
+  <ul class="tag-inline-block p-0 m-0">
     {% for tag in trending_tags %}
     <li>
       <a href="{{ site.baseurl }}/tags#{{ tag | slugify | url_encode }}">

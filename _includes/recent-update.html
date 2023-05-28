@@ -1,5 +1,5 @@
 <div id="recent-update">
-  <h4 class="p-0 m-0 m-b-16">最近更新</h4>
+  <h4 class="p-0 m-0 m-b-8">最近更新</h4>
   {% assign posts = '' | split: '' %}
   {% assign modified_posts = '' | split: '' %}
 
@@ -12,8 +12,11 @@
   {% endfor %}
 
   {% assign recent_update = modified_posts | sort: 'last_modified_date' | reverse | concat: posts %}
-  {% for post in recent_update limit: 5 %}
-  <a href="{{ site.baseurl }}{{ post.url }}" class="f-s-14">{{ post.title }}</a>
-  <br />
-  {% endfor %}
+  <ul class="p-0 m-0">
+    {% for post in recent_update limit: 5 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="f-s-14">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

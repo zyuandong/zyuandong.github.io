@@ -1694,6 +1694,9 @@ em {
 #main .main-aside a {
   color: var(--text-secondary);
 }
+#main .main-aside #recent-update ul {
+  list-style: none;
+}
 #main .main-aside #recent-update a:hover {
   color: var(--brand);
   text-decoration: underline;
