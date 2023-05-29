@@ -272,7 +272,9 @@ body {
   color: var(--text-primary);
   font-size: 0.16rem;
   line-height: 1.75;
-  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: -apple-system, 'Helvetica Neue', BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Emoji One Color',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background: var(--body-bg);
 }
 /* a tag */
@@ -1987,7 +1989,7 @@ em {
 }
 #archives .year::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2005,7 +2007,7 @@ em {
 }
 #archives .year .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2023,7 +2025,7 @@ em {
 }
 #archives .month::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2039,7 +2041,7 @@ em {
 }
 #archives .month .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2060,7 +2062,7 @@ em {
 }
 #archives .day-title .day::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.08rem;
   height: 0.08rem;
   line-height: 1.5;
@@ -2072,7 +2074,7 @@ em {
 }
 #archives .day-title .day .line {
   display: inline-block;
-  content: "";
+  content: '';
   width: 0.04rem;
   height: 0.5rem;
   background: var(--divider);
@@ -2155,37 +2157,14 @@ em {
 }
 #previous-next-post {
   display: flex;
-  border-top: 0.03rem solid var(--secondary);
-  justify-content: space-around;
-  margin: 0.32rem 0 0 0;
+  margin: 0.16rem 0;
 }
-.previous {
-  flex: 1;
-  text-align: center;
-  padding: 0.1rem;
-  margin: 0.16rem 0.08rem;
-  border-radius: 0.04rem;
-}
-.previous:hover {
-  background: var(--bg);
-}
-.previous:hover a {
-  color: var(--text-primary);
-  text-decoration: none;
-}
+.previous,
 .next {
-  flex: 1;
+  flex: 1 0 calc(50% - 0.08rem);
   text-align: center;
-  padding: 0.1rem;
-  margin: 0.16rem 0.08rem;
+  padding: 0.16rem;
   border-radius: 0.04rem;
-}
-.next:hover {
-  background: var(--bg);
-}
-.next:hover a {
-  color: var(--text-primary);
-  text-decoration: none;
 }
 #footer {
   font-size: 0.14rem;
